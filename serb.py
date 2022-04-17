@@ -41,103 +41,112 @@ class Header:
     def resetYield(self):
         self.cursor = 0
 
-def loadHeadered(filename: str, theWords: list[Word]):
-    with io.open(filename, encoding='utf-8') as f:
-        data = f.readlines()
-        data = data[2:] # todo `header`
+def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: list[Word]):        
+    headerLines = 0
+    headerRed = False
+    
+    header = Header()
+    
+    #header read
+    for l in data:
+        if l.startswith('-'):
+            headerRed = True
+            continue
         
-        headerLines = 0
-        headerRed = False
-        
-        header = Header()
-        
-        #header read
-        for l in data:
-            if l.startswith('-'):
-                headerRed = True
-                continue
-            
-            if not headerRed:
-                headerLines = headerLines + 1
-                continue
-        
-        header.parseHeader(SpeechPart.noun, data[:headerLines])
-        
-        # read data
-        data = data[headerLines+1:]
-        data = ConvertLinesToTokens(data)
+        if not headerRed:
+            headerLines = headerLines + 1
+            continue
+    
+    header.parseHeader(speechPart, data[:headerLines])
+    
+    # read data
+    data = data[headerLines+1:]
+    data = ConvertLinesToTokens(data)
 
-        firstTitle = ""
-        if len(data):
-            firstTitle = data[0].split('/')[0]
-        
-        noun = Word.MakeTitled(SpeechPart.noun, firstTitle)
+    firstTitle = ""
+    if len(data):
+        firstTitle = data[0].split('/')[0]
+    
+    theWord = Word.MakeTitled(speechPart, firstTitle)
 
-        for wordPair in data:
-            words = wordPair.split('/')
+    for wordPair in data:
+        words = wordPair.split('/')
+        rus = words[0]
+        serb = words[1]
+
+        form = header.yieldDeclination()
+        if form == None:
+            theWords.append(theWord)
+
+            # new theWord
+            theWord = Word.MakeTitled(speechPart, rus)
+
+            header.resetYield()
+            form = header.yieldDeclination()
+        
+        theWord.forms.append(DeclinedWord.Make(form, rus, serb))
+        
+    theWords.append(theWord)
+    theWord = Word()
+    theWord.forms = {}
+    
+    for occ in theWords:
+        print(occ.toString())
+
+def loadFixed(data: list[str], theWord: Word):
+    # read data
+    data = ConvertLinesToTokens(data)
+
+    title = ""
+    if len(data):
+        p = data[0].split('/')
+        title = p[0] if len(p[0]) else p[1]
+    
+    theWord.title = title
+    
+    declinationTime = False
+    rus = ""
+    serb = ""
+
+    for w in data:
+        if declinationTime:
+            declinationTime = False
+            declinedWord = DeclinedWord.Make(Declination.Make(SpeechPart.tobe, w), rus, serb)
+            theWord.forms.append(declinedWord)
+        else:
+            declinationTime = True
+
+            words = w.split('/')
             rus = words[0]
             serb = words[1]
+            continue
+    
+    theWord.normalize()
 
-            form = header.yieldDeclination()
-            if form == None:
-                theWords.append(noun)
-
-                # new Noun
-                noun = Word.MakeTitled(SpeechPart.noun, rus)
-
-                header.resetYield()
-                form = header.yieldDeclination()
-            
-            noun.forms.append(DeclinedWord.Make(form, rus, serb))
-         
-        theWords.append(noun)
-        noun = Word()
-        noun.forms = {}
-        
-        for occ in theWords:
-            print(occ.toString())
-
-def loadFixed(filename: str, theWord: Word):
+def loadFile(filename: str):
     with io.open(filename, encoding='utf-8') as f:
         data = f.readlines()
-        data = data[2:] # todo `fixed`
-                
-        # read data
-        data = ConvertLinesToTokens(data)
-
-        title = ""
-        if len(data):
-            p = data[0].split('/')
-            title = p[0] if len(p[0]) else p[1]
+        if not len(data):
+            return
         
-        theWord.title = title
-        
-        declinationTime = False
-        rus = ""
-        serb = ""
+        headerP = data[0].strip().split(' ')
+        headerType = headerP[0]
+        speechPart = SpeechPart[headerP[1]]
 
-        for w in data:
-            if declinationTime:
-                declinationTime = False
-                declinedWord = DeclinedWord.Make(Declination.Make(SpeechPart.tobe, w), rus, serb)
-                theWord.forms.append(declinedWord)
-            else:
-                declinationTime = True
+        data = data[2:]
 
-                words = w.split('/')
-                rus = words[0]
-                serb = words[1]
-                continue
-        
-        theWord.normalize()
+        if headerType == 'header':
+            theWords: list[Word] = []
+            loadHeadered(data, speechPart, theWords)
+            return theWords
+        elif headerType == 'fixed':
+            theWord = Word.Make(speechPart)
+            loadFixed(data, theWord)
+            return theWord
 
-occupations: list[Word] = []
-pronoun = Word.Make(SpeechPart.pronoun)
-tobe = Word.Make(SpeechPart.tobe)
-
-loadHeadered('data/occupations.txt', occupations)
-loadFixed('data/pronouns.txt', pronoun)
-loadFixed('data/tobe.txt', tobe)
+occupations = loadFile('data/occupations.txt')
+pronoun = loadFile('data/pronouns.txt')
+tobe = loadFile('data/tobe.txt')
 
 for occ in occupations:
     print(occ.toString())
