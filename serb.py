@@ -2,6 +2,8 @@ import io
 import sys
 #import re
 from code.core_types import *
+import glob
+import os
 
 sys.stdin.reconfigure(encoding='utf-8')
 sys.stdout.reconfigure(encoding='utf-8')
@@ -41,7 +43,7 @@ class Header:
     def resetYield(self):
         self.cursor = 0
 
-def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: list[Word]):        
+def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):        
     headerLines = 0
     headerRed = False
     
@@ -76,7 +78,7 @@ def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: list[Word]):
 
         form = header.yieldDeclination()
         if form == None:
-            theWords.append(theWord)
+            theWords.words.append(theWord)
 
             # new theWord
             theWord = Word.MakeTitled(speechPart, rus)
@@ -86,12 +88,7 @@ def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: list[Word]):
         
         theWord.forms.append(DeclinedWord.Make(form, rus, serb))
         
-    theWords.append(theWord)
-    theWord = Word()
-    theWord.forms = {}
-    
-    for occ in theWords:
-        print(occ.toString())
+    theWords.words.append(theWord)
 
 def loadFixed(data: list[str], theWord: Word):
     # read data
@@ -136,7 +133,7 @@ def loadFile(filename: str):
         data = data[2:]
 
         if headerType == 'header':
-            theWords: list[Word] = []
+            theWords = WordList()
             loadHeadered(data, speechPart, theWords)
             return theWords
         elif headerType == 'fixed':
@@ -144,16 +141,22 @@ def loadFile(filename: str):
             loadFixed(data, theWord)
             return theWord
 
-occupations = loadFile('data/occupations.txt')
-personal_pronouns = loadFile('data/pronouns/personal_pronouns.txt')
-tobe = loadFile('data/tobe/tobe.txt')
-positive_tobe = loadFile('data/tobe/positive_tobe.txt')
-negative_tobe = loadFile('data/tobe/negative_tobe.txt')
-question_tobe = loadFile('data/tobe/question_tobe.txt')
+vocabulary = {}
 
-for occ in occupations:
-    print(occ.toString())
+for f in glob.glob('**/*.txt', recursive=True):
+    collectionName = os.path.splitext(os.path.basename(f))[0]
+    data = loadFile(f)
+    vocabulary[collectionName] = data
 
+# shortcuts
+occupations       = vocabulary['occupations']
+personal_pronouns = vocabulary['personal_pronouns']
+tobe              = vocabulary['tobe']
+positive_tobe     = vocabulary['positive_tobe']
+negative_tobe     = vocabulary['negative_tobe']
+question_tobe     = vocabulary['question_tobe']
+
+print(occupations.toString())
 print(personal_pronouns.toString())
 print(tobe.toString())
 print(positive_tobe.toString())

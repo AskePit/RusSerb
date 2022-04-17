@@ -148,7 +148,18 @@ class Word:
 
         self.forms = self.forms + new_forms
 
+class WordList:
+    words: list[Word]
 
+    def __init__(self):
+        self.words = []
+    
+    def toString(self):
+        res = ""
+        for word in self.words:
+            res = res + word.toString() + '\n'
+        
+        return res
 
 
 
