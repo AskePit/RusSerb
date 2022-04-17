@@ -143,15 +143,8 @@ def loadFile(filename: str):
 
 vocabulary = {}
 
-for f in glob.glob('**/*.txt', recursive=True):
-    collectionName = os.path.splitext(os.path.basename(f))[0]
-    data = loadFile(f)
-    vocabulary[collectionName] = data
-
-# shortcuts
-occupations       = vocabulary['occupations']
-personal_pronouns = vocabulary['personal_pronouns']
-tobe              = vocabulary['tobe']
-positive_tobe     = vocabulary['positive_tobe']
-negative_tobe     = vocabulary['negative_tobe']
-question_tobe     = vocabulary['question_tobe']
+def LoadVocabulary():
+    for f in glob.glob('**/*.txt', recursive=True):
+        collectionName = os.path.splitext(os.path.basename(f))[0]
+        data = loadFile(f)
+        vocabulary[collectionName] = data
