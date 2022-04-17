@@ -145,7 +145,7 @@ def loadFile(filename: str):
             return theWord
 
 occupations = loadFile('data/occupations.txt')
-pronoun = loadFile('data/pronouns.txt')
+personal_pronouns = loadFile('data/pronouns/personal_pronouns.txt')
 tobe = loadFile('data/tobe/tobe.txt')
 positive_tobe = loadFile('data/tobe/positive_tobe.txt')
 negative_tobe = loadFile('data/tobe/negative_tobe.txt')
@@ -154,7 +154,7 @@ question_tobe = loadFile('data/tobe/question_tobe.txt')
 for occ in occupations:
     print(occ.toString())
 
-print(pronoun.toString())
+print(personal_pronouns.toString())
 print(tobe.toString())
 print(positive_tobe.toString())
 print(negative_tobe.toString())
