@@ -1,133 +1,10 @@
 import io
 import sys
 #import re
-from enum import Enum
+from code.core_types import *
 
 sys.stdin.reconfigure(encoding='utf-8')
 sys.stdout.reconfigure(encoding='utf-8')
-
-class SpeechPart(Enum):
-    noun = 0,
-    pronoun = 1
-    tobe = 2
-    verb = 3
-    adjective = 4
-    proverb = 5
-    particle = 6
-
-class Gender(Enum):
-    male = 0
-    fem = 1
-    neu = 2
-    unisex = 3
-    
-class Number(Enum):
-    sing = 0
-    plur = 1
-    
-class Case(Enum):
-    nom = 0
-    gen = 1
-    dat = 2
-    aku = 3
-    vok = 4
-    lok = 5
-    inst = 6
-
-class Person(Enum):
-    first = 0
-    second = 1
-    third = 2
-
-class Declination:
-    speechPart: SpeechPart
-    
-    person: Person
-    gender: Gender
-    number: Number
-    case: Case
-    
-    def make(speechPart: SpeechPart, form: str):
-        res = Declination()
-        res.speechPart = speechPart
-
-        words = form.split('-')
-        
-        for word in words:
-            try:
-                res.person = Person[word]
-            except:
-                try:
-                    res.number = Number[word]
-                except:
-                    try:
-                        res.gender = Gender[word]
-                    except:
-                        try:
-                            res.case = Case[word]
-                        except:
-                            raise Exception("Could not parse Declination!")
-        return res
-    
-    def toString(self):
-        first = True
-        
-        res = ""
-
-        if hasattr(self, 'person'):
-            if first:
-                first = False
-            else:
-                res = res + '-'
-            res = res + self.person.name
-            
-        if hasattr(self, 'gender'):
-            if first:
-                first = False
-            else:
-                res = res + '-'
-            res = res + self.gender.name
-            
-        if hasattr(self, 'number'):
-            if first:
-                first = False
-            else:
-                res = res + '-'
-            res = res + self.number.name
-
-        if hasattr(self, 'case'):
-            if first:
-                first = False
-            else:
-                res = res + '-'
-            res = res + self.case.name
-        
-        return res
-
-class Word:
-    declination: Declination
-    rus: str
-    serb: str
-
-class Noun:
-    title: str
-    forms: list[Word]
-    
-    def toString(self):
-        res = self.title + '\n'
-        for word in self.forms:
-            res = res + word.declination.toString() + ': ' + word.rus + '/' + word.serb +'\n'
-        return res
-
-class Pronoun:    
-    title: str
-    forms: list[Word]
-    
-    def toString(self):
-        res = self.title + '\n'
-        for word in self.forms:
-            res = res + word.declination.toString() + ': ' + word.rus + '/' + word.serb +'\n'
-        return res
 
 SEPARATORS_REGEXP: str = '\n'
 
@@ -148,7 +25,7 @@ class Header:
         
         parseSequence = ConvertLinesToTokens(lines)
         for seq in parseSequence:
-            self.formsSequence.append(Declination.make(speechPart, seq))
+            self.formsSequence.append(Declination.Make(speechPart, seq))
         
     def yieldDeclination(self) -> Declination:
         if len(self.formsSequence) == 0:
@@ -164,10 +41,8 @@ class Header:
     def resetYield(self):
         self.cursor = 0
 
-occupations: list[Noun] = []
-
-def loadOccupations():
-    with io.open('data/occupations.txt', encoding='utf-8') as f:
+def loadHeadered(filename: str, theWords: list[Word]):
+    with io.open(filename, encoding='utf-8') as f:
         data = f.readlines()
         data = data[2:] # todo `header`
         
@@ -192,11 +67,11 @@ def loadOccupations():
         data = data[headerLines+1:]
         data = ConvertLinesToTokens(data)
 
-        noun = Noun()
-        noun.forms = []
-
+        firstTitle = ""
         if len(data):
-            noun.title = data[0].split('/')[0]
+            firstTitle = data[0].split('/')[0]
+        
+        noun = Word.MakeTitled(SpeechPart.noun, firstTitle)
 
         for wordPair in data:
             words = wordPair.split('/')
@@ -205,56 +80,67 @@ def loadOccupations():
 
             form = header.yieldDeclination()
             if form == None:
-                occupations.append(noun)
+                theWords.append(noun)
 
                 # new Noun
-                noun = Noun()
-                noun.forms = []
-                noun.title = rus
+                noun = Word.MakeTitled(SpeechPart.noun, rus)
 
                 header.resetYield()
                 form = header.yieldDeclination()
             
-            word = Word()
-            word.declination = form
-            word.rus = rus
-            word.serb = serb
-            
-            noun.forms.append(word)
+            noun.forms.append(DeclinedWord.Make(form, rus, serb))
          
-        occupations.append(noun)
-        noun = Noun()
+        theWords.append(noun)
+        noun = Word()
         noun.forms = {}
         
-        for occ in occupations:
+        for occ in theWords:
             print(occ.toString())
 
-'''         
-pronoun = Pronoun()
-
-def loadPronouns():
-    with io.open('data/pronouns.txt', encoding='utf-8') as f:
+def loadFixed(filename: str, theWord: Word):
+    with io.open(filename, encoding='utf-8') as f:
         data = f.readlines()
         data = data[2:] # todo `fixed`
                 
         # read data
         data = ConvertLinesToTokens(data)
 
-        pronoun = Pronoun()
+        title = ""
+        if len(data):
+            p = data[0].split('/')
+            title = p[0] if len(p[0]) else p[1]
         
-        for word in data:
-            if pronoun.orig == None:
-                pronoun.orig = word
+        theWord.title = title
+        
+        declinationTime = False
+        rus = ""
+        serb = ""
+
+        for w in data:
+            if declinationTime:
+                declinationTime = False
+                declinedWord = DeclinedWord.Make(Declination.Make(SpeechPart.tobe, w), rus, serb)
+                theWord.forms.append(declinedWord)
+            else:
+                declinationTime = True
+
+                words = w.split('/')
+                rus = words[0]
+                serb = words[1]
                 continue
-                
-         
-        occupations.append(pronoun)
-        pronoun = pronoun()
-        pronoun.forms = {}
         
-        for p in pronouns:
-            print(p.toString())
-'''
-            
-loadOccupations()
-#loadPronouns()
+        theWord.normalize()
+
+occupations: list[Word] = []
+pronoun = Word.Make(SpeechPart.pronoun)
+tobe = Word.Make(SpeechPart.tobe)
+
+loadHeadered('data/occupations.txt', occupations)
+loadFixed('data/pronouns.txt', pronoun)
+loadFixed('data/tobe.txt', tobe)
+
+for occ in occupations:
+    print(occ.toString())
+
+print(pronoun.toString())
+print(tobe.toString())

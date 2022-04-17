@@ -1,0 +1,19 @@
+fixed tobe
+
+/sam
+first-sing-unisex-nom
+
+/si
+second-sing-unisex-nom
+
+/je
+third-sing-unisex-nom
+
+/smo
+first-plur-unisex-nom
+
+/ste
+second-plur-unisex-nom
+
+/su
+third-plur-unisex-nom
