@@ -1,5 +1,8 @@
 from code.core_types import *
 import random
+from typing import Callable
+
+# NOTE: each excercise should return `ExcerciseYield` object
 
 class ExcerciseYield:
     title: str
@@ -11,14 +14,21 @@ class ExcerciseYield:
         self.question = q
         self.answer = a
 
-def ToBeEx() -> ExcerciseYield:
-    # Переведите на сербский:
-    # Я студент (student)
-    # Ja sam student
+ExcerciseName = str
+ExcerciseFuncType = Callable[[], ExcerciseYield]
+excercises: list[(ExcerciseFuncType, ExcerciseName)] = []
 
-    # Переведите на сербский:
-    # Вы не пенсионерки (penzionerke)
-    # Vi niste penzionerke
+def RegExcercise(ex: ExcerciseFuncType, name: ExcerciseName):
+    excercises.append((ex, name))
+
+def ToBeEx() -> ExcerciseYield:
+    # title:    Переведите на сербский:
+    # question: Я студент (student)
+    # answer:   Ja sam student
+
+    # title:    Переведите на сербский:
+    # question: Вы не пенсионерки (penzionerke)
+    # answer:   Vi niste penzionerke
 
     gendersMaleFemale = list(Gender)
     gendersMaleFemale.remove(Gender.unisex)
@@ -48,15 +58,16 @@ def ToBeEx() -> ExcerciseYield:
     answer = pronoun.serb.capitalize() + ' ' + tb.serb + ' ' + occ.serb + '.'
 
     return ExcerciseYield(title, question, answer)
+RegExcercise(ToBeEx, 'To be')
 
 def ToBeEx2() -> ExcerciseYield:
-    # Переведите на сербский в форме `Da li ...?`
-    # Ты студент (student)?
-    # Da li si ti student?
+    # title:    Переведите на сербский в форме `Da li ...?`
+    # question: Ты студент (student)?
+    # answer:   Da li si ti student?
 
-    # Переведите на сербский в форме `Je.. li ...?`
-    # Вы врачи (lekari)?
-    # Jeste li vi lekari?
+    # title:    Переведите на сербский в форме `Je.. li ...?`
+    # question: Вы врачи (lekari)?
+    # answer:   Jeste li vi lekari?
 
     gendersMaleFemale = list(Gender)
     gendersMaleFemale.remove(Gender.unisex)
@@ -92,15 +103,16 @@ def ToBeEx2() -> ExcerciseYield:
         answer = tb.serb.capitalize() + ' li ' + pronoun.serb + ' ' + occ.serb + '?'
 
     return ExcerciseYield(title, question, answer)
+RegExcercise(ToBeEx2, 'To be вопросы')
 
 def ToBeEx3() -> ExcerciseYield:
-    # Ответьте на вопрос в короткой форме:
-    # Ты студент (student)?
-    # Jesam
+    # title:    Ответьте на вопрос в короткой форме:
+    # question: Ты студент (student)?
+    # answer:   Jesam
 
-    # Ответьте на вопрос в полной форме:
-    # Вы врачи (lekari)?
-    # Mi smo lekari
+    # title:    Ответьте на вопрос в полной форме:
+    # question: Вы врачи (lekari)?
+    # answer:   Mi smo lekari
 
     gendersMaleFemale = list(Gender)
     gendersMaleFemale.remove(Gender.unisex)
@@ -144,15 +156,16 @@ def ToBeEx3() -> ExcerciseYield:
         answer = aPronoun.serb.capitalize() + ' ' + aTb.serb + ' ' + occ.serb + '.'
 
     return ExcerciseYield(title, question, answer)
+RegExcercise(ToBeEx3, 'To be ответы')
 
 def GreetingsEx() -> ExcerciseYield:
-    # Переведите на сербский:
-    # доброе утро
-    # dobro jutro
+    # title:    Переведите на сербский:
+    # question: Доброе утро
+    # answer:   Dobro jutro
 
-    # Переведите на русский:
-    # vrlo dobro
-    # очень хорошо
+    # title:    Переведите на русский:
+    # question: Vrlo dobro
+    # answer:   Очень хорошо
 
     lang = random.randint(0, 1)
     greeting = GetVocabulary('greetings').phrases[random.randint(0, len(GetVocabulary('greetings').phrases)-1)]
@@ -165,3 +178,4 @@ def GreetingsEx() -> ExcerciseYield:
     answer = [serb, rus][lang]
 
     return ExcerciseYield(title, question, answer)
+RegExcercise(GreetingsEx, 'Фразы приветствия')

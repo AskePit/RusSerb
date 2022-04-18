@@ -31,27 +31,31 @@ def ExecuteExcercise(exFunc):
 
 def main():
     LoadVocabulary()
+
     while True:
         ClrScr()
+
         print('\n' + PAD + '.........................\n')
         print(PAD + 'Выберите упражнение:')
-        print(PAD + '1. To be')
-        print(PAD + '2. To be вопросы')
-        print(PAD + '3. To be ответы')
-        print(PAD + '4. Фразы приветствия')
+
+        i = 0
+
+        exKeys: dict[str, ExcerciseFuncType] = {}
+
+        for ex, name in excercises:
+            num = str(i+1)
+            print(PAD + num + '. ' + name)
+
+            exKeys[num] = ex
+
+            i = i + 1
         print('\n' + PAD + 'q. Выход')
         
         ans = input()
         if IsExit(ans):
             break
-        elif ans == '1':
-            ExecuteExcercise(ToBeEx)
-        elif ans == '2':
-            ExecuteExcercise(ToBeEx2)
-        elif ans == '3':
-            ExecuteExcercise(ToBeEx3)
-        elif ans == '4':
-            ExecuteExcercise(GreetingsEx)
+        elif ans in exKeys:
+            ExecuteExcercise(exKeys[ans])
         else:
             continue
 
