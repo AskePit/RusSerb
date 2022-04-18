@@ -50,7 +50,7 @@ class Header:
             res = res + decl.toString() + '\n'
         return res
 
-def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList): 
+def LoadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList): 
     headerLines = 0
     headerRed = False
     
@@ -98,7 +98,7 @@ def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):
     theWord.normalize()
     theWords.words.append(theWord)
 
-def loadFixed(data: list[str], theWord: Word):
+def LoadFixed(data: list[str], theWord: Word):
     # read data
     data = ConvertLinesToTokens(data)
 
@@ -128,7 +128,7 @@ def loadFixed(data: list[str], theWord: Word):
     
     theWord.normalize()
 
-def loadPhrases(title: str, data: list[str], thePhrases: PhrasesList):
+def LoadPhrases(title: str, data: list[str], thePhrases: PhrasesList):
     # read data
     data = ConvertLinesToTokens(data)
     
@@ -138,7 +138,7 @@ def loadPhrases(title: str, data: list[str], thePhrases: PhrasesList):
         words = w.split(INLINE_SEPARATOR)
         thePhrases.phrases.append(Phrase(words[0], words[1]))
 
-def loadFile(filename: str, title: str):
+def LoadFile(filename: str, title: str):
     with io.open(filename, encoding='utf-8') as f:
         data = f.readlines()
         if not len(data):
@@ -154,19 +154,19 @@ def loadFile(filename: str, title: str):
 
         if headerType == 'header':
             theWords = WordList()
-            loadHeadered(data, speechPart, theWords)
+            LoadHeadered(data, speechPart, theWords)
             return theWords
         elif headerType == 'fixed':
             theWord = Word.Make(speechPart)
-            loadFixed(data, theWord)
+            LoadFixed(data, theWord)
             return theWord
         elif headerType == 'phrases':
             thePhrases = PhrasesList()
-            loadPhrases(title, data, thePhrases)
+            LoadPhrases(title, data, thePhrases)
             return thePhrases
 
 def LoadVocabulary():
     for f in glob.glob('**/*.txt', recursive=True):
         collectionName = os.path.splitext(os.path.basename(f))[0]
-        data = loadFile(f, collectionName)
+        data = LoadFile(f, collectionName)
         vocabulary[collectionName] = data
