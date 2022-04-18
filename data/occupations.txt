@@ -6,72 +6,72 @@ fem-sing-nom
 fem-plur-nom
 ---
 
-ученик/učenik
-ученики/učenici
-ученица/učenica
-ученицы/učenice
+ученик|učenik
+ученики|učenici
+ученица|učenica
+ученицы|učenice
 
-гражданин/građanin
-граждане/građani
-гражданка/građanka
-гражданки/građanke
+гражданин|građanin
+граждане|građani
+гражданка|građanka
+гражданки|građanke
 
-цыган/Ciganin
-цыгане/Cigani
-цыганка/Ciganka
-цыганки/Ciganke
+цыган|Ciganin
+цыгане|Cigani
+цыганка|Ciganka
+цыганки|Ciganke
 
-студент/student
-студенты/studenti
-студентка/studentica
-студентки/studentice
+студент|student
+студенты|studenti
+студентка|studentica
+студентки|studentice
 
-начальник/šef
-начальники/šefovi
-начальница/šefica
-начальницы/šefice
+начальник|šef
+начальники|šefovi
+начальница|šefica
+начальницы|šefice
 
-юрист/pravnik
-юристы/pravnici
-юристка/pravnica
-юристки/pravnice
+юрист|pravnik
+юристы|pravnici
+юристка|pravnica
+юристки|pravnice
 
-менеджер/menadžer
-менеджеры/menadžeri
-менеджер/menadžer
-менеджеры/menadžeri
+менеджер|menadžer
+менеджеры|menadžeri
+менеджер|menadžer
+менеджеры|menadžeri
 
-учитель/profesor
-учителя/profesori
-учительница/profesorica
-учительницы/profesorice
+учитель|profesor
+учителя|profesori
+учительница|profesorica
+учительницы|profesorice
 
-врач/lekar
-врачи/lekari
-врач/lekarka
-врачи/lekarke
+врач|lekar
+врачи|lekari
+врач|lekarka
+врачи|lekarke
 
-сосед/sused
-соседи/susedi
-соседка/sused
-соседки/susedi
+сосед|sused
+соседи|susedi
+соседка|sused
+соседки|susedi
 
-приятель/prijatelj
-приятели/prijatelji
-приятельница/prijateljica
-приятельницы/prijateljice
+приятель|prijatelj
+приятели|prijatelji
+приятельница|prijateljica
+приятельницы|prijateljice
 
-пенсионер/penzioner
-пенсионеры/penzioneri
-пенсионерка/penzionerka
-пенсионерки/penzionerke
+пенсионер|penzioner
+пенсионеры|penzioneri
+пенсионерка|penzionerka
+пенсионерки|penzionerke
 
-турист/turista
-туристы/turisti
-турист/turista
-туристы/turisti
+турист|turista
+туристы|turisti
+турист|turista
+туристы|turisti
 
-русский/Rus
-русские/Rusi
-русская/Ruskinja
-русские/Ruskinje
+русский|Rus
+русские|Rusi
+русская|Ruskinja
+русские|Ruskinje

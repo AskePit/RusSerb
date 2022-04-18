@@ -175,9 +175,12 @@ def GreetingsEx():
     lang = random.randint(0, 1)
     greeting = greetings.phrases[random.randint(0, len(greetings.phrases)-1)]
 
+    rus = greeting.rus.capitalize()
+    serb = greeting.serb.capitalize()
+
     title = ['Переведите на сербский', 'Переведите на русский'][lang]
-    question = [greeting.rus, greeting.serb][lang]
-    answer = [greeting.serb, greeting.rus][lang]
+    question = [rus, serb][lang]
+    answer = [serb, rus][lang]
 
     return ExcerciseYield(title, question, answer)
 

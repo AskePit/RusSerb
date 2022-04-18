@@ -1,19 +1,19 @@
 fixed tobe
 
-/nisam
+|nisam
 first-sing-unisex-nom
 
-/nisi
+|nisi
 second-sing-unisex-nom
 
-/nije
+|nije
 third-sing-unisex-nom
 
-/nismo
+|nismo
 first-plur-unisex-nom
 
-/niste
+|niste
 second-plur-unisex-nom
 
-/nisu
+|nisu
 third-plur-unisex-nom

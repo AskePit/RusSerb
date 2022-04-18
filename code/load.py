@@ -9,6 +9,7 @@ sys.stdin.reconfigure(encoding='utf-8')
 sys.stdout.reconfigure(encoding='utf-8')
 
 SEPARATORS_REGEXP: str = '\n'
+INLINE_SEPARATOR: str = '|'
 
 def ConvertLinesToTokens(lines: list[str]) -> list[str]:
     megaLine = ''.join(lines)
@@ -49,7 +50,7 @@ class Header:
             res = res + decl.toString() + '\n'
         return res
 
-def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):        
+def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList): 
     headerLines = 0
     headerRed = False
     
@@ -73,12 +74,12 @@ def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):
 
     firstTitle = ""
     if len(data):
-        firstTitle = data[0].split('/')[0]
+        firstTitle = data[0].split(INLINE_SEPARATOR)[0]
     
     theWord = Word.MakeTitled(speechPart, firstTitle)
 
     for wordPair in data:
-        words = wordPair.split('/')
+        words = wordPair.split(INLINE_SEPARATOR)
         rus = words[0]
         serb = words[1]
 
@@ -103,7 +104,7 @@ def loadFixed(data: list[str], theWord: Word):
 
     title = ""
     if len(data):
-        p = data[0].split('/')
+        p = data[0].split(INLINE_SEPARATOR)
         title = p[0] if len(p[0]) else p[1]
     
     theWord.title = title
@@ -120,7 +121,7 @@ def loadFixed(data: list[str], theWord: Word):
         else:
             declinationTime = True
 
-            words = w.split('/')
+            words = w.split(INLINE_SEPARATOR)
             rus = words[0]
             serb = words[1]
             continue
@@ -134,7 +135,7 @@ def loadPhrases(title: str, data: list[str], thePhrases: PhrasesList):
     thePhrases.title = title
     
     for w in data:
-        words = w.split('/')
+        words = w.split(INLINE_SEPARATOR)
         thePhrases.phrases.append(Phrase(words[0], words[1]))
 
 def loadFile(filename: str, title: str):

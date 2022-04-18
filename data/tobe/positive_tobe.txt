@@ -1,19 +1,19 @@
 fixed tobe
 
-/jesam
+|jesam
 first-sing-unisex-nom
 
-/jesi
+|jesi
 second-sing-unisex-nom
 
-/jeste
+|jeste
 third-sing-unisex-nom
 
-/jesmo
+|jesmo
 first-plur-unisex-nom
 
-/jeste
+|jeste
 second-plur-unisex-nom
 
-/jesu
+|jesu
 third-plur-unisex-nom

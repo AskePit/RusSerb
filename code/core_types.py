@@ -172,7 +172,7 @@ class Word:
     def toString(self):
         res = self.speechPart.name + ' ' + self.title + '\n'
         for word in self.forms:
-            res = res + word.declination.toString() + ': ' + word.rus + '/' + word.serb +'\n'
+            res = res + word.declination.toString() + ': ' + word.rus + '|' + word.serb +'\n'
         return res
     
     def normalize(self):
@@ -211,7 +211,7 @@ class Phrase:
         self.serb = serb
 
     def toString(self):
-        return self.rus + '/' + self.serb
+        return self.rus + '|' + self.serb
 
 class PhrasesList:    
     title: str = ''
