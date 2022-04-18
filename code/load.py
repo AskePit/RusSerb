@@ -42,6 +42,12 @@ class Header:
     
     def resetYield(self):
         self.cursor = 0
+    
+    def toString(self):
+        res = ""
+        for decl in self.formsSequence:
+            res = res + decl.toString() + '\n'
+        return res
 
 def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):        
     headerLines = 0
@@ -77,7 +83,7 @@ def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):
         serb = words[1]
 
         form = header.yieldDeclination()
-        if form == None:
+        if form is None:
             theWords.words.append(theWord)
 
             # new theWord
@@ -85,7 +91,7 @@ def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):
 
             header.resetYield()
             form = header.yieldDeclination()
-        
+
         theWord.forms.append(DeclinedWord.Make(form, rus, serb))
         
     theWords.words.append(theWord)

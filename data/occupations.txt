@@ -43,8 +43,8 @@ fem-plur-nom
 
 учитель/profesor
 учителя/profesori
-учителница/profesorica
-учителницы/profesorice
+учительница/profesorica
+учительницы/profesorice
 
 врач/lekar
 врачи/lekari
@@ -65,3 +65,13 @@ fem-plur-nom
 пенсионеры/penzioneri
 пенсионерка/penzionerka
 пенсионерки/penzionerke
+
+турист/turista
+туристы/turisti
+турист/turista
+туристы/turisti
+
+русский/Rus
+русские/Rusi
+русская/Ruskinja
+русские/Ruskinje

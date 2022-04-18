@@ -34,6 +34,13 @@ class Person(Enum):
     second = 1
     third = 2
 
+    def getOpposite(self):
+        if self.value == 0:
+            return Person.second
+        if self.value == 1:
+            return Person.first
+        return Person.third
+
 class Declination:
     speechPart: SpeechPart
     
@@ -41,7 +48,35 @@ class Declination:
     gender: Gender
     number: Number
     case: Case
+
+    def __eq__(self, other: object) -> bool:
+        for a in ['person', 'gender', 'number', 'case']:
+            if hasattr(other, a) and hasattr(self, a):
+                if getattr(self, a) != getattr(other, a):
+                    return False
+
+        return True
     
+    def setSpeechPart(self, speechPart):
+        self.speechPart = speechPart
+        return self
+
+    def setPerson(self, person):
+        self.person = person
+        return self
+
+    def setGender(self, gender):
+        self.gender = gender
+        return self
+
+    def setNumber(self, number):
+        self.number = number
+        return self
+
+    def setCase(self, case):
+        self.case = case
+        return self
+
     def Make(speechPart: SpeechPart, form: str):
         res = Declination()
         res.speechPart = speechPart
@@ -128,6 +163,12 @@ class Word:
         res.title = title
         return res
 
+    def get(self, declination: Declination):
+        for word in self.forms:
+            if word.declination == declination:
+                return word
+        return None
+
     def toString(self):
         res = self.speechPart.name + ' ' + self.title + '\n'
         for word in self.forms:
@@ -160,24 +201,3 @@ class WordList:
             res = res + word.toString() + '\n'
         
         return res
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
