@@ -136,7 +136,7 @@ def LoadPhrases(title: str, data: list[str], thePhrases: PhrasesList):
     
     for w in data:
         words = w.split(INLINE_SEPARATOR)
-        thePhrases.phrases.append(Phrase(words[0], words[1]))
+        thePhrases.phrases.append(Phrase(words[0], words[1], words[2] if len(words) > 2 else None))
 
 def LoadFile(filename: str, title: str):
     with io.open(filename, encoding='utf-8') as f:

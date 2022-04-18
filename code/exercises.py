@@ -197,3 +197,53 @@ RegExcercise(TimeEx, 'Время')
 def NumbersEx() -> ExcerciseYield:
     return PhrasesEx('numbers')
 RegExcercise(NumbersEx, 'Числа')
+
+
+def NumbersGeneratorEx() -> ExcerciseYield:
+    # title:    Напишите число на сербском:
+    # question: 2 804
+    # answer:   dve hiljade osamsto četiri
+
+    # title:    Напишите число на сербском:
+    # question: 61
+    # answer:   šezdeset jedan
+
+    numDict: dict[int, str] = {}
+    for n in GetVocabulary('numbers').phrases:
+        numDict[int(n.aux)] = n.serb
+    
+    '''
+    be100000 = random.randint(0, 1)
+    be10000 = random.randint(0, 1)
+    be1000 = random.randint(0, 1)
+    '''
+
+    be100 = random.randint(0, 1)
+    be10 = random.randint(0, 1)
+    be1 = random.randint(0, 1)
+
+    num100 = (random.randint(1, 9) if be100 else 0)*100
+    num10 = (random.randint(1, 9) if be10 else 0)*10
+    num1 = random.randint(1, 9) if be1 else 0
+
+    number = num100 + num10 + num1
+
+    title = 'Напишите число на сербском'
+    question = str(number)
+
+    answer = ''
+    if number == 0:
+        answer = numDict[number]
+    else:
+        nonFirstWord = False
+
+        for n in [num100, num10, num1]:
+            if n > 0:
+                if nonFirstWord:
+                    answer = answer + ' '
+                else:
+                    nonFirstWord = True
+                answer = answer + numDict[n]
+
+    return ExcerciseYield(title, question, answer)
+RegExcercise(NumbersGeneratorEx, 'Генератор чисел')

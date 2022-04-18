@@ -205,13 +205,19 @@ class WordList:
 class Phrase:
     rus: str
     serb: str
+    aux: str
 
-    def __init__(self, rus, serb):
+    def __init__(self, rus, serb, aux=None):
         self.rus = rus
         self.serb = serb
+        if not aux is None:
+            self.aux = aux
 
     def toString(self):
-        return self.rus + '|' + self.serb
+        res = self.rus + '|' + self.serb
+        if hasattr(self, 'aux'):
+            res = res + '|' + self.aux
+        return res
 
 class PhrasesList:    
     title: str = ''
