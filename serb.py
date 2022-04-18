@@ -29,7 +29,7 @@ class ExcerciseYield:
         self.question = q
         self.answer = a
 
-def ToBeEx():
+def ToBeEx() -> ExcerciseYield:
     # Переведите на сербский:
     # Я студент (student)
     # Ja sam student
@@ -62,12 +62,12 @@ def ToBeEx():
 
     title = 'Переведите на сербский'
     rusNoParticle = [' ', ' не '][negative] 
-    question = pronoun.rus.title() + rusNoParticle + occ.rus + ' (' + occ.serb + ').'
-    answer = pronoun.serb.title() + ' ' + tb.serb + ' ' + occ.serb + '.'
+    question = pronoun.rus.capitalize() + rusNoParticle + occ.rus + ' (' + occ.serb + ').'
+    answer = pronoun.serb.capitalize() + ' ' + tb.serb + ' ' + occ.serb + '.'
 
     return ExcerciseYield(title, question, answer)
 
-def ToBeEx2():
+def ToBeEx2() -> ExcerciseYield:
     # Переведите на сербский в форме `Da li ...?`
     # Ты студент (student)?
     # Da li si ti student?
@@ -102,16 +102,16 @@ def ToBeEx2():
         'Переведите на сербский в форме `Da li ...?`',
         'Переведите на сербский в форме `Je.. li ...?`'
     ][form]
-    question = pronoun.rus.title() + ' ' + occ.rus + ' (' + occ.serb + ')?'
+    question = pronoun.rus.capitalize() + ' ' + occ.rus + ' (' + occ.serb + ')?'
 
     if form == 0:
         answer = 'Da li ' + tb.serb + ' ' + pronoun.serb + ' ' + occ.serb + '?'
     else:
-        answer = tb.serb.title() + ' li ' + pronoun.serb + ' ' + occ.serb + '?'
+        answer = tb.serb.capitalize() + ' li ' + pronoun.serb + ' ' + occ.serb + '?'
 
     return ExcerciseYield(title, question, answer)
 
-def ToBeEx3():
+def ToBeEx3() -> ExcerciseYield:
     # Ответьте на вопрос в короткой форме:
     # Ты студент (student)?
     # Jesam
@@ -154,16 +154,16 @@ def ToBeEx3():
         'Ответьте на вопрос в короткой форме',
         'Ответьте на вопрос в полной форме'
     ][form]
-    question = qPronoun.rus.title() + ' ' + occ.rus + ' (' + occ.serb + ')?'
+    question = qPronoun.rus.capitalize() + ' ' + occ.rus + ' (' + occ.serb + ')?'
 
     if form == 0:
-        answer = aTb.serb.title() + '.'
+        answer = aTb.serb.capitalize() + '.'
     else:
-        answer = aPronoun.serb.title() + ' ' + aTb.serb + ' ' + occ.serb + '.'
+        answer = aPronoun.serb.capitalize() + ' ' + aTb.serb + ' ' + occ.serb + '.'
 
     return ExcerciseYield(title, question, answer)
 
-def GreetingsEx():
+def GreetingsEx() -> ExcerciseYield:
     # Переведите на сербский:
     # доброе утро
     # dobro jutro
