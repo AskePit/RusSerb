@@ -222,3 +222,8 @@ class PhrasesList:
         for phrase in self.phrases:
             res = res + phrase.toString() + '\n'
         return res
+
+vocabulary = {}
+
+def GetVocabulary(name: str):
+    return vocabulary[name]

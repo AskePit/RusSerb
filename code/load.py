@@ -1,7 +1,7 @@
+from code.core_types import *
 import io
 import sys
 #import re
-from code.core_types import *
 import glob
 import os
 
@@ -164,8 +164,6 @@ def loadFile(filename: str, title: str):
             thePhrases = PhrasesList()
             loadPhrases(title, data, thePhrases)
             return thePhrases
-
-vocabulary = {}
 
 def LoadVocabulary():
     for f in glob.glob('**/*.txt', recursive=True):
