@@ -201,3 +201,24 @@ class WordList:
             res = res + word.toString() + '\n'
         
         return res
+
+class Phrase:
+    rus: str
+    serb: str
+
+    def __init__(self, rus, serb):
+        self.rus = rus
+        self.serb = serb
+
+    def toString(self):
+        return self.rus + '/' + self.serb
+
+class PhrasesList:    
+    title: str = ''
+    phrases: list[Phrase] = []
+
+    def toString(self):
+        res = ''
+        for phrase in self.phrases:
+            res = res + phrase.toString() + '\n'
+        return res

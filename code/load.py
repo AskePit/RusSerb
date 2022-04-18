@@ -93,7 +93,8 @@ def loadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):
             form = header.yieldDeclination()
 
         theWord.forms.append(DeclinedWord.Make(form, rus, serb))
-        
+    
+    theWord.normalize()
     theWords.words.append(theWord)
 
 def loadFixed(data: list[str], theWord: Word):
@@ -126,7 +127,17 @@ def loadFixed(data: list[str], theWord: Word):
     
     theWord.normalize()
 
-def loadFile(filename: str):
+def loadPhrases(title: str, data: list[str], thePhrases: PhrasesList):
+    # read data
+    data = ConvertLinesToTokens(data)
+    
+    thePhrases.title = title
+    
+    for w in data:
+        words = w.split('/')
+        thePhrases.phrases.append(Phrase(words[0], words[1]))
+
+def loadFile(filename: str, title: str):
     with io.open(filename, encoding='utf-8') as f:
         data = f.readlines()
         if not len(data):
@@ -134,7 +145,9 @@ def loadFile(filename: str):
         
         headerP = data[0].strip().split(' ')
         headerType = headerP[0]
-        speechPart = SpeechPart[headerP[1]]
+
+        if len(headerP) > 1:
+            speechPart = SpeechPart[headerP[1]]
 
         data = data[2:]
 
@@ -146,11 +159,15 @@ def loadFile(filename: str):
             theWord = Word.Make(speechPart)
             loadFixed(data, theWord)
             return theWord
+        elif headerType == 'phrases':
+            thePhrases = PhrasesList()
+            loadPhrases(title, data, thePhrases)
+            return thePhrases
 
 vocabulary = {}
 
 def LoadVocabulary():
     for f in glob.glob('**/*.txt', recursive=True):
         collectionName = os.path.splitext(os.path.basename(f))[0]
-        data = loadFile(f)
+        data = loadFile(f, collectionName)
         vocabulary[collectionName] = data

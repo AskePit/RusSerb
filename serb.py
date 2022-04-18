@@ -11,6 +11,8 @@ positive_tobe     = vocabulary['positive_tobe']
 negative_tobe     = vocabulary['negative_tobe']
 question_tobe     = vocabulary['question_tobe']
 
+greetings         = vocabulary['greetings']
+
 def IsExit(anykey):
     return anykey == 'q' or anykey == 'Q' or anykey == 'й' or anykey == 'Й'
 
@@ -161,6 +163,24 @@ def ToBeEx3():
 
     return ExcerciseYield(title, question, answer)
 
+def GreetingsEx():
+    # Переведите на сербский:
+    # доброе утро
+    # dobro jutro
+
+    # Переведите на русский:
+    # vrlo dobro
+    # очень хорошо
+
+    lang = random.randint(0, 1)
+    greeting = greetings.phrases[random.randint(0, len(greetings.phrases)-1)]
+
+    title = ['Переведите на сербский', 'Переведите на русский'][lang]
+    question = [greeting.rus, greeting.serb][lang]
+    answer = [greeting.serb, greeting.rus][lang]
+
+    return ExcerciseYield(title, question, answer)
+
 PAD = '  '
 
 def ExecuteExcercise(exFunc):
@@ -191,7 +211,8 @@ def main():
         print(PAD + '1. To be')
         print(PAD + '2. To be вопросы')
         print(PAD + '3. To be ответы')
-        print(PAD + 'q. Выход')
+        print(PAD + '4. Фразы приветствия')
+        print('\n' + PAD + 'q. Выход')
         
         ans = input()
         if IsExit(ans):
@@ -202,6 +223,8 @@ def main():
             ExecuteExcercise(ToBeEx2)
         elif ans == '3':
             ExecuteExcercise(ToBeEx3)
+        elif ans == '4':
+            ExecuteExcercise(GreetingsEx)
         else:
             continue
 
