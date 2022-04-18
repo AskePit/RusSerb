@@ -21,6 +21,30 @@ excercises: list[(ExcerciseFuncType, ExcerciseName)] = []
 def RegExcercise(ex: ExcerciseFuncType, name: ExcerciseName):
     excercises.append((ex, name))
 
+# generic for every phrases vocabulary
+def PhrasesEx(vocabularyTopic: str) -> ExcerciseYield:
+    # title:    Переведите на сербский:
+    # question: Доброе утро
+    # answer:   Dobro jutro
+
+    # title:    Переведите на русский:
+    # question: Vrlo dobro
+    # answer:   Очень хорошо
+
+    lang = random.randint(0, 1)
+    phrases = GetVocabulary(vocabularyTopic).phrases
+    greetingIndex = random.randint(0, len(phrases)-1)
+    greeting = phrases[greetingIndex]
+
+    rus = greeting.rus.capitalize()
+    serb = greeting.serb.capitalize()
+
+    title = ['Переведите на сербский', 'Переведите на русский'][lang]
+    question = [rus, serb][lang]
+    answer = [serb, rus][lang]
+
+    return ExcerciseYield(title, question, answer)
+
 def ToBeEx() -> ExcerciseYield:
     # title:    Переведите на сербский:
     # question: Я студент (student)
@@ -159,23 +183,17 @@ def ToBeEx3() -> ExcerciseYield:
 RegExcercise(ToBeEx3, 'To be ответы')
 
 def GreetingsEx() -> ExcerciseYield:
-    # title:    Переведите на сербский:
-    # question: Доброе утро
-    # answer:   Dobro jutro
-
-    # title:    Переведите на русский:
-    # question: Vrlo dobro
-    # answer:   Очень хорошо
-
-    lang = random.randint(0, 1)
-    greeting = GetVocabulary('greetings').phrases[random.randint(0, len(GetVocabulary('greetings').phrases)-1)]
-
-    rus = greeting.rus.capitalize()
-    serb = greeting.serb.capitalize()
-
-    title = ['Переведите на сербский', 'Переведите на русский'][lang]
-    question = [rus, serb][lang]
-    answer = [serb, rus][lang]
-
-    return ExcerciseYield(title, question, answer)
+    return PhrasesEx('greetings')
 RegExcercise(GreetingsEx, 'Фразы приветствия')
+
+def CafeEx() -> ExcerciseYield:
+    return PhrasesEx('cafe')
+RegExcercise(CafeEx, 'Кафе')
+
+def TimeEx() -> ExcerciseYield:
+    return PhrasesEx('time')
+RegExcercise(TimeEx, 'Время')
+
+def NumbersEx() -> ExcerciseYield:
+    return PhrasesEx('numbers')
+RegExcercise(NumbersEx, 'Числа')

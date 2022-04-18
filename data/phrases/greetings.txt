@@ -29,3 +29,16 @@ phrases
 усу сербский|učim srpski
 пожалуйста, повторите|molim vas, ponovite.
 я хорошо|ja sam dobro / dobro sam
+паспорт|pasoš
+ваш паспорт, пожалуйста|vaš pasoš, molim
+немного говорю|govorim malo
+господин|gospodin
+госпожа|gospođa
+муж|muž
+мало|malo
+много|mnogo
+повторите|ponovite
+язык|jezik
+плохо|loš
+очень|vrlo
+жена|žena

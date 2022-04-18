@@ -217,6 +217,10 @@ class PhrasesList:
     title: str = ''
     phrases: list[Phrase] = []
 
+    def __init__(self):
+        self.title = ""
+        self.phrases = []
+
     def toString(self):
         res = ''
         for phrase in self.phrases:
