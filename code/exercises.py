@@ -212,21 +212,17 @@ def NumbersGeneratorEx() -> ExcerciseYield:
     for n in GetVocabulary('numbers').phrases:
         numDict[int(n.aux)] = n.serb
     
-    '''
-    be100000 = random.randint(0, 1)
-    be10000 = random.randint(0, 1)
     be1000 = random.randint(0, 1)
-    '''
-
     be100 = random.randint(0, 1)
     be10 = random.randint(0, 1)
     be1 = random.randint(0, 1)
 
+    num1000 = (random.randint(1, 9) if be1000 else 0)*1000
     num100 = (random.randint(1, 9) if be100 else 0)*100
     num10 = (random.randint(1, 9) if be10 else 0)*10
     num1 = random.randint(1, 9) if be1 else 0
 
-    number = num100 + num10 + num1
+    number = num1000 + num100 + num10 + num1
 
     title = 'Напишите число на сербском'
     question = str(number)
@@ -237,7 +233,7 @@ def NumbersGeneratorEx() -> ExcerciseYield:
     else:
         nonFirstWord = False
 
-        for n in [num100, num10, num1]:
+        for n in [num1000, num100, num10, num1]:
             if n > 0:
                 if nonFirstWord:
                     answer = answer + ' '
