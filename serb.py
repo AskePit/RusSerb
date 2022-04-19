@@ -9,9 +9,9 @@ def ClrScr():
 
 PAD = '  '
 
-def ExecuteExcercise(exFunc):
+def ExecuteExcercise(exFuncName):
     while True:
-        exYield: ExcerciseYield = exFunc()
+        exYield: ExcerciseYield = eval('%s()' % exFuncName)
 
         ClrScr()
         print('\n' + PAD + '.........................\n')
@@ -34,14 +34,14 @@ def main():
     LoadExcercises()
 
     while True:
-        #ClrScr()
+        ClrScr()
 
         print('\n' + PAD + '.........................\n')
         print(PAD + 'Выберите упражнение:')
 
         i = 0
 
-        exKeys: dict[str, ExcerciseFuncType] = {}
+        exKeys: dict[str, str] = {}
 
         for ex, name in excercises_old:
             num = str(i+1)

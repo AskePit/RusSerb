@@ -211,7 +211,6 @@ def LoadExcercises():
             return data[0] if len(data) else ''
 
     excercises = LoadDir('excercises')
-    print(excercises.toString())
 
 def LoadCustomExcercise(name: str, funcName: str) -> Excercise:
     return Excercise.MakeCustomEx(name, funcName)
