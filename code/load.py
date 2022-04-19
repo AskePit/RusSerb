@@ -165,8 +165,12 @@ def LoadFile(filename: str, title: str):
             LoadPhrases(title, data, thePhrases)
             return thePhrases
 
+VOCABULARY_EXT = 'voc'
+EXCERCISE_EXT = 'exc'
+
 def LoadVocabulary():
-    for f in glob.glob('**/*.txt', recursive=True):
+    vocRegex = '**/*.%s' % (VOCABULARY_EXT)
+    for f in glob.glob(vocRegex, recursive=True):
         collectionName = os.path.splitext(os.path.basename(f))[0]
         data = LoadFile(f, collectionName)
         vocabulary[collectionName] = data

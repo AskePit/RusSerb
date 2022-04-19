@@ -198,7 +198,6 @@ def NumbersEx() -> ExcerciseYield:
     return PhrasesEx('numbers')
 RegExcercise(NumbersEx, 'Числа')
 
-
 def NumbersGeneratorEx() -> ExcerciseYield:
     # title:    Напишите число на сербском:
     # question: 2 804
