@@ -1,5 +1,4 @@
 from code.load import *
-from code.exercises import *
 
 def IsExit(anykey):
     return anykey == 'q' or anykey == 'Q' or anykey == 'й' or anykey == 'Й'
@@ -31,7 +30,10 @@ def ExecuteExcercise(exFuncName):
 
 def main():
     LoadVocabulary()
-    LoadExcercises()
+    excercises = LoadExcercises()
+
+    #print(excercises)
+    #print(excercises.toString())
 
     while True:
         ClrScr()
@@ -51,7 +53,7 @@ def main():
 
             i = i + 1
         print('\n' + PAD + 'q. Выход')
-        
+
         ans = input()
         if IsExit(ans):
             break

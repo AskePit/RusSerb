@@ -1,6 +1,5 @@
 from code.core_types import *
 import random
-from typing import Callable
 
 # NOTE: each excercise should return `ExcerciseYield` object
 
@@ -15,7 +14,6 @@ class ExcerciseYield:
         self.answer = a
 
 ExcerciseName = str
-ExcerciseFuncType = Callable[[], ExcerciseYield]
 excercises_old: list[(str, ExcerciseName)] = []
 
 class ExcerciseType(Enum):
@@ -68,9 +66,6 @@ class ExcercisesDir:
         for ch in self.children:
             res = res + '\n' + ch.toString()
         return res
-
-
-excercises: ExcercisesDir = ExcercisesDir()
 
 def RegExcercise(funcName: str, name: ExcerciseName):
     excercises_old.append((funcName, name))
