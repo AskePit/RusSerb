@@ -31,9 +31,10 @@ def ExecuteExcercise(exFunc):
 
 def main():
     LoadVocabulary()
+    LoadExcercises()
 
     while True:
-        ClrScr()
+        #ClrScr()
 
         print('\n' + PAD + '.........................\n')
         print(PAD + 'Выберите упражнение:')
@@ -42,7 +43,7 @@ def main():
 
         exKeys: dict[str, ExcerciseFuncType] = {}
 
-        for ex, name in excercises:
+        for ex, name in excercises_old:
             num = str(i+1)
             print(PAD + num + '. ' + name)
 

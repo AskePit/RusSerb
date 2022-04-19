@@ -16,10 +16,64 @@ class ExcerciseYield:
 
 ExcerciseName = str
 ExcerciseFuncType = Callable[[], ExcerciseYield]
-excercises: list[(ExcerciseFuncType, ExcerciseName)] = []
+excercises_old: list[(ExcerciseFuncType, ExcerciseName)] = []
+
+class ExcerciseType(Enum):
+    phrases = 0
+    custom = 1
+
+class Excercise:
+    name: str
+    type: ExcerciseType
+
+    def __init__(self):
+        self.name = ''
+    
+    def MakePhrasesEx(name: str, voc: str):
+        ex = Excercise()
+        ex.name = name
+        ex.type = ExcerciseType.phrases
+        ex.phrasesVoc = voc
+        return ex
+
+    def MakeCustomEx(name: str, funcName):
+        ex = Excercise()
+        ex.name = name
+        ex.type = ExcerciseType.custom
+        ex.customFunction = funcName
+        return ex
+
+    def toString(self):
+        res = self.name
+        if self.type == ExcerciseType.phrases:
+            res = res + ' <-> ' + self.phrasesVoc
+        elif self.type == ExcerciseType.custom:
+            res = res + ' <-> ' + self.customFunction
+        return res
+
+class ExcercisesDir:
+    name: str
+    children = [] # list[ExcercisesDir]
+    excercises = [] # list[Excercise]
+
+    def __init__(self):
+        self.name = ''
+        self.children = []
+        self.excercises = []
+    
+    def toString(self):
+        res = self.name + '\n'
+        for ex in self.excercises:
+            res = res + '\n  ' + ex.toString()
+        for ch in self.children:
+            res = res + '\n' + ch.toString()
+        return res
+
+
+excercises: ExcercisesDir = ExcercisesDir()
 
 def RegExcercise(ex: ExcerciseFuncType, name: ExcerciseName):
-    excercises.append((ex, name))
+    excercises_old.append((ex, name))
 
 # generic for every phrases vocabulary
 def PhrasesEx(vocabularyTopic: str) -> ExcerciseYield:

@@ -1,4 +1,5 @@
 from code.core_types import *
+from code.exercises import *
 import io
 import sys
 #import re
@@ -167,6 +168,7 @@ def LoadFile(filename: str, title: str):
 
 VOCABULARY_EXT = 'voc'
 EXCERCISE_EXT = 'exc'
+EXCERCISE_TITLE_FILENAME = '_title'
 
 def LoadVocabulary():
     vocRegex = '**/*.%s' % (VOCABULARY_EXT)
@@ -174,3 +176,42 @@ def LoadVocabulary():
         collectionName = os.path.splitext(os.path.basename(f))[0]
         data = LoadFile(f, collectionName)
         vocabulary[collectionName] = data
+
+def LoadExcercises():
+    def LoadDir(dirname) -> ExcercisesDir:
+        excDir = ExcercisesDir()
+
+        for f in glob.glob('%s/**' % dirname):
+            if os.path.isdir(f):
+                excDir.children.append(LoadDir(f))
+            elif os.path.isfile(f):
+                if os.path.basename(f) == EXCERCISE_TITLE_FILENAME:
+                    excDir.name = LoadTitle(f)
+                else:
+                    excDir.excercises.append(LoadExcercise(f))
+        return excDir
+
+    def LoadExcercise(filename) -> Excercise:
+        with io.open(filename, encoding='utf-8') as f:
+            data = f.readlines()
+
+            name = data[0].strip()
+            type = ExcerciseType[data[1].strip()]
+
+            if type == ExcerciseType.phrases:
+                voc = data[2].strip()
+                return Excercise.MakePhrasesEx(name, voc)
+            else:
+                funcName = data[2].strip()
+                return LoadCustomExcercise(name, funcName)
+    
+    def LoadTitle(filename) -> str:
+        with io.open(filename, encoding='utf-8') as f:
+            data = f.readlines()
+            return data[0] if len(data) else ''
+
+    excercises = LoadDir('excercises')
+    print(excercises.toString())
+
+def LoadCustomExcercise(name: str, funcName: str) -> Excercise:
+    return Excercise.MakeCustomEx(name, funcName)
