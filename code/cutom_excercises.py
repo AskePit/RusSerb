@@ -112,6 +112,12 @@ def NumbersGeneratorEx() -> ExcerciseYield:
     num10 = (random.randint(1, 9) if be10 else 0)*10
     num1 = random.randint(1, 9) if be1 else 0
 
+    # 11 12 13 14 15 16 17 18 19 are special
+    # and have their own word for both 10 and 1 ranks
+    if num10 == 10:
+        num10 += num1
+        num1 = 0
+
     number = num1000 + num100 + num10 + num1
 
     title = 'Напишите число на сербском'
