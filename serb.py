@@ -1,4 +1,6 @@
 from code.load import *
+from code.excercise_types import *
+from code.cutom_excercises import *
 
 def IsExit(anykey):
     return anykey == 'q' or anykey == 'Q' or anykey == 'й' or anykey == 'Й'

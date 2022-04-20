@@ -1,5 +1,5 @@
 from code.core_types import *
-from code.exercises import *
+from code.excercise_types import *
 import io
 import sys
 #import re
