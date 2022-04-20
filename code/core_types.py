@@ -74,9 +74,10 @@ class Declination:
     def Make(form: str):
         res = Declination()
 
-        words = form.split('-')
+        words = form.split('&')
         
         for word in words:
+            word = word.strip()
             try:
                 res.person = Person[word]
             except:
