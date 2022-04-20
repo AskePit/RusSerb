@@ -178,20 +178,20 @@ def LoadVocabulary():
         vocabulary[collectionName] = data
 
 def LoadExcercises():
-    def LoadDir(dirname) -> ExcercisesDir:
-        excDir = ExcercisesDir()
+    def LoadDir(dirname, parent: ExcercisesDir) -> ExcercisesDir:
+        excDir = ExcercisesDir(parent)
 
         for f in glob.glob('%s/**' % dirname):
             if os.path.isdir(f):
-                excDir.children.append(LoadDir(f))
+                excDir.children.append(LoadDir(f, excDir))
             elif os.path.isfile(f):
                 if os.path.basename(f) == EXCERCISE_TITLE_FILENAME:
                     excDir.name = LoadTitle(f)
                 else:
-                    excDir.excercises.append(LoadExcercise(f))
+                    excDir.excercises.append(LoadExcercise(f, excDir))
         return excDir
 
-    def LoadExcercise(filename) -> Excercise:
+    def LoadExcercise(filename, parent: ExcercisesDir) -> Excercise:
         with io.open(filename, encoding='utf-8') as f:
             data = f.readlines()
 
@@ -200,17 +200,15 @@ def LoadExcercises():
 
             if type == ExcerciseType.phrases:
                 voc = data[2].strip()
-                return Excercise.MakePhrasesEx(name, voc)
+                return Excercise.MakePhrasesEx(name, voc, parent)
             else:
                 funcName = data[2].strip()
-                return LoadCustomExcercise(name, funcName)
+                return Excercise.MakeCustomEx(name, funcName, parent)
     
     def LoadTitle(filename) -> str:
         with io.open(filename, encoding='utf-8') as f:
             data = f.readlines()
             return data[0] if len(data) else ''
 
-    return LoadDir('excercises')
+    return LoadDir('excercises', None)
 
-def LoadCustomExcercise(name: str, funcName: str) -> Excercise:
-    return Excercise.MakeCustomEx(name, funcName)

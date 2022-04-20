@@ -32,7 +32,6 @@ def main():
     LoadVocabulary()
     excercises = LoadExcercises()
 
-    #print(excercises)
     #print(excercises.toString())
 
     while True:
