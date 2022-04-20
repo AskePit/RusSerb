@@ -9,24 +9,10 @@ def ToBeEx() -> ExcerciseYield:
     # question: Вы не пенсионерки (penzionerke)
     # answer:   Vi niste penzionerke
 
-    gendersMaleFemale = list(Gender)
-    gendersMaleFemale.remove(Gender.unisex)
-    gendersMaleFemale.remove(Gender.neu)
+    decl = Declination.Make('male|fem & first|second|third & sing|plur & nom')
 
-    person = random.choice(list(Person))
-    gender = random.choice(gendersMaleFemale)
-    number = random.choice(list(Number))
     occupation = random.choice(GetVocabulary('occupations').words)
     negative = random.randint(0, 1)
-
-    decl = Declination()\
-        .setCase(Case.nom)\
-        .setPerson(person)\
-        .setGender(gender)\
-        .setNumber(number)
-
-    #print(decl.toString())
-
     pronoun = GetVocabulary('personal_pronouns').get(decl)
     tb = [GetVocabulary('tobe'), GetVocabulary('negative_tobe')][negative].get(decl)
     occ = occupation.get(decl)
@@ -47,24 +33,10 @@ def ToBeEx2() -> ExcerciseYield:
     # question: Вы врачи (lekari)?
     # answer:   Jeste li vi lekari?
 
-    gendersMaleFemale = list(Gender)
-    gendersMaleFemale.remove(Gender.unisex)
-    gendersMaleFemale.remove(Gender.neu)
+    decl = Declination.Make('male|fem & first|second|third & sing|plur & nom')
 
-    person = random.choice(list(Person))
-    gender = random.choice(gendersMaleFemale)
-    number = random.choice(list(Number))
     occupation = random.choice(GetVocabulary('occupations').words)
     form = random.randint(0, 1)
-
-    decl = Declination()\
-        .setCase(Case.nom)\
-        .setPerson(person)\
-        .setGender(gender)\
-        .setNumber(number)
-
-    #print(decl.toString())
-
     pronoun = GetVocabulary('personal_pronouns').get(decl)
     tb = [GetVocabulary('tobe'), GetVocabulary('question_tobe')][form].get(decl)
     occ = occupation.get(decl)
@@ -91,31 +63,14 @@ def ToBeEx3() -> ExcerciseYield:
     # question: Вы врачи (lekari)?
     # answer:   Mi smo lekari
 
-    gendersMaleFemale = list(Gender)
-    gendersMaleFemale.remove(Gender.unisex)
-    gendersMaleFemale.remove(Gender.neu)
+    qDecl = Declination.Make('male|fem & first|second|third & sing|plur & nom')
+    aDecl = copy.deepcopy(qDecl).mirrorPerson()
 
-    qPerson = random.choice(list(Person))
-    aPerson = qPerson.getOpposite()
-    gender = random.choice(gendersMaleFemale)
-    number = random.choice(list(Number))
+    #print(qDecl.toString())
+    #print(aDecl.toString())
+
     occupation = random.choice(GetVocabulary('occupations').words)
     form = random.randint(0, 1)
-
-    qDecl = Declination()\
-        .setCase(Case.nom)\
-        .setPerson(qPerson)\
-        .setGender(gender)\
-        .setNumber(number)
-
-    aDecl = Declination()\
-        .setCase(Case.nom)\
-        .setPerson(aPerson)\
-        .setGender(gender)\
-        .setNumber(number)
-
-    #print(decl.toString())
-
     qPronoun = GetVocabulary('personal_pronouns').get(qDecl)
     aPronoun = GetVocabulary('personal_pronouns').get(aDecl)
     aTb = [GetVocabulary('positive_tobe'), GetVocabulary('tobe')][form].get(aDecl)

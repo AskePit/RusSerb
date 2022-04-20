@@ -1,5 +1,6 @@
 from enum import Enum
 import copy
+import random
 
 class SpeechPart(Enum):
     noun = 0,
@@ -70,25 +71,35 @@ class Declination:
     def setCase(self, case):
         self.case = case
         return self
+    
+    def mirrorPerson(self):
+        if hasattr(self, 'person') and self.person != None:
+            self.person = self.person.getOpposite()
+        return self
 
+    # male|fem & first|second|third & sing|plur & nom
+    # & is for combination
+    # | is for random probability
     def Make(form: str):
         res = Declination()
 
-        words = form.split('&')
-        
-        for word in words:
-            word = word.strip()
+        components = form.split('&')
+
+        for component in components:
+            variants = component.split('|')
+            choice = random.choice(variants).strip()
+
             try:
-                res.person = Person[word]
+                res.person = Person[choice]
             except:
                 try:
-                    res.number = Number[word]
+                    res.number = Number[choice]
                 except:
                     try:
-                        res.gender = Gender[word]
+                        res.gender = Gender[choice]
                     except:
                         try:
-                            res.case = Case[word]
+                            res.case = Case[choice]
                         except:
                             raise Exception("Could not parse Declination!")
         return res
@@ -102,28 +113,28 @@ class Declination:
             if first:
                 first = False
             else:
-                res = res + '-'
+                res = res + ' & '
             res = res + self.person.name
             
         if hasattr(self, 'gender'):
             if first:
                 first = False
             else:
-                res = res + '-'
+                res = res + ' & '
             res = res + self.gender.name
             
         if hasattr(self, 'number'):
             if first:
                 first = False
             else:
-                res = res + '-'
+                res = res + ' & '
             res = res + self.number.name
 
         if hasattr(self, 'case'):
             if first:
                 first = False
             else:
-                res = res + '-'
+                res = res + ' & '
             res = res + self.case.name
         
         return res
