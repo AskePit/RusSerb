@@ -2,7 +2,6 @@ from code.core_types import *
 from code.excercise_types import *
 import io
 import sys
-#import re
 import glob
 import os
 
@@ -14,7 +13,6 @@ INLINE_SEPARATOR: str = '|'
 
 def ConvertLinesToTokens(lines: list[str]) -> list[str]:
     megaLine = ''.join(lines)
-    #res = re.split(SEPARATORS_REGEXP, megaLine)
     res = megaLine.split(SEPARATORS_REGEXP)
     res[:] = [x for x in res if x]
     return res
@@ -29,7 +27,7 @@ class Header:
         
         parseSequence = ConvertLinesToTokens(lines)
         for seq in parseSequence:
-            self.formsSequence.append(Declination.Make(speechPart, seq))
+            self.formsSequence.append(Declination.Make(seq))
         
     def yieldDeclination(self) -> Declination:
         if len(self.formsSequence) == 0:
@@ -117,7 +115,7 @@ def LoadFixed(data: list[str], theWord: Word):
     for w in data:
         if declinationTime:
             declinationTime = False
-            declinedWord = DeclinedWord.Make(Declination.Make(SpeechPart.tobe, w), rus, serb)
+            declinedWord = DeclinedWord.Make(Declination.Make(w), rus, serb)
             theWord.forms.append(declinedWord)
         else:
             declinationTime = True

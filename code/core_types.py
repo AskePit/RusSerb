@@ -42,8 +42,6 @@ class Person(Enum):
         return Person.third
 
 class Declination:
-    speechPart: SpeechPart
-    
     person: Person
     gender: Gender
     number: Number
@@ -56,10 +54,6 @@ class Declination:
                     return False
 
         return True
-    
-    def setSpeechPart(self, speechPart):
-        self.speechPart = speechPart
-        return self
 
     def setPerson(self, person):
         self.person = person
@@ -77,9 +71,8 @@ class Declination:
         self.case = case
         return self
 
-    def Make(speechPart: SpeechPart, form: str):
+    def Make(form: str):
         res = Declination()
-        res.speechPart = speechPart
 
         words = form.split('-')
         
