@@ -8,9 +8,16 @@ def ClrScr():
 
 PAD = '  '
 
-def ExecuteExcercise(exFuncName):
+def ExecuteExcercise(exc: Excercise):
+    excCall = ''
+
+    if exc.type == ExcerciseType.phrases:
+        excCall = 'PhrasesEx(\'%s\')' % exc.phrasesVoc
+    elif exc.type == ExcerciseType.custom:
+        excCall = '%s()' % exc.customFunction
+
     while True:
-        exYield: ExcerciseYield = eval('%s()' % exFuncName)
+        exYield: ExcerciseYield = eval(excCall)
 
         ClrScr()
         print('\n' + PAD + '.........................\n')
@@ -32,7 +39,7 @@ def main():
     LoadVocabulary()
     excercises = LoadExcercises()
 
-    #print(excercises.toString())
+    currentDir = excercises
 
     while True:
         ClrScr()
@@ -42,22 +49,38 @@ def main():
 
         i = 0
 
-        exKeys: dict[str, str] = {}
+        #[num, exc]
+        dirKeys: dict[str, ExcercisesDir] = {}
+        excKeys: dict[str, Excercise] = {}
 
-        for ex, name in excercises_old:
+        for d in currentDir.children:
             num = str(i+1)
-            print(PAD + num + '. ' + name)
+            print(PAD + num + '. ' + d.name)
 
-            exKeys[num] = ex
+            dirKeys[num] = d
 
             i = i + 1
+
+        for e in currentDir.excercises:
+            num = str(i+1)
+            print(PAD + num + '. ' + e.name)
+
+            excKeys[num] = e
+
+            i = i + 1
+
         print('\n' + PAD + 'q. Выход')
 
         ans = input()
         if IsExit(ans):
-            break
-        elif ans in exKeys:
-            ExecuteExcercise(exKeys[ans])
+            if (not hasattr(currentDir, 'parent')) or currentDir.parent == None:
+                break
+            else:
+                currentDir = currentDir.parent
+        elif ans in dirKeys:
+            currentDir = dirKeys[ans]
+        elif ans in excKeys:
+            ExecuteExcercise(excKeys[ans])
         else:
             continue
 

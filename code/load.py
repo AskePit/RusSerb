@@ -211,4 +211,3 @@ def LoadExcercises():
             return data[0] if len(data) else ''
 
     return LoadDir('excercises', None)
-

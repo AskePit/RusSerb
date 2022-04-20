@@ -13,9 +13,6 @@ class ExcerciseYield:
         self.question = q
         self.answer = a
 
-ExcerciseName = str
-excercises_old: list[(str, ExcerciseName)] = []
-
 class ExcerciseType(Enum):
     phrases = 0
     custom = 1
@@ -74,9 +71,6 @@ class ExcercisesDir:
         for ch in self.children:
             res = res + '\n' + ch.toString()
         return res
-
-def RegExcercise(funcName: str, name: ExcerciseName):
-    excercises_old.append((funcName, name))
 
 # generic for every phrases vocabulary
 def PhrasesEx(vocabularyTopic: str) -> ExcerciseYield:
@@ -139,7 +133,6 @@ def ToBeEx() -> ExcerciseYield:
     answer = pronoun.serb.capitalize() + ' ' + tb.serb + ' ' + occ.serb + '.'
 
     return ExcerciseYield(title, question, answer)
-RegExcercise('ToBeEx', 'To be')
 
 def ToBeEx2() -> ExcerciseYield:
     # title:    Переведите на сербский в форме `Da li ...?`
@@ -184,7 +177,6 @@ def ToBeEx2() -> ExcerciseYield:
         answer = tb.serb.capitalize() + ' li ' + pronoun.serb + ' ' + occ.serb + '?'
 
     return ExcerciseYield(title, question, answer)
-RegExcercise('ToBeEx2', 'To be вопросы')
 
 def ToBeEx3() -> ExcerciseYield:
     # title:    Ответьте на вопрос в короткой форме:
@@ -237,23 +229,6 @@ def ToBeEx3() -> ExcerciseYield:
         answer = aPronoun.serb.capitalize() + ' ' + aTb.serb + ' ' + occ.serb + '.'
 
     return ExcerciseYield(title, question, answer)
-RegExcercise('ToBeEx3', 'To be ответы')
-
-def GreetingsEx() -> ExcerciseYield:
-    return PhrasesEx('greetings')
-RegExcercise('GreetingsEx', 'Фразы приветствия')
-
-def CafeEx() -> ExcerciseYield:
-    return PhrasesEx('cafe')
-RegExcercise('CafeEx', 'Кафе')
-
-def TimeEx() -> ExcerciseYield:
-    return PhrasesEx('time')
-RegExcercise('TimeEx', 'Время')
-
-def NumbersEx() -> ExcerciseYield:
-    return PhrasesEx('numbers')
-RegExcercise('NumbersEx', 'Числа')
 
 def NumbersGeneratorEx() -> ExcerciseYield:
     # title:    Напишите число на сербском:
@@ -298,4 +273,4 @@ def NumbersGeneratorEx() -> ExcerciseYield:
                 answer = answer + numDict[n]
 
     return ExcerciseYield(title, question, answer)
-RegExcercise('NumbersGeneratorEx', 'Генератор чисел')
+    
