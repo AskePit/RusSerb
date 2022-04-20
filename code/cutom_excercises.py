@@ -11,6 +11,8 @@ def ToBeEx() -> ExcerciseYield:
 
     decl = Declination.Make('male|fem & first|second|third & sing|plur & nom')
 
+    #print(decl.toString())
+
     occupation = random.choice(GetVocabulary('occupations').words)
     negative = random.randint(0, 1)
     pronoun = GetVocabulary('personal_pronouns').get(decl)
@@ -18,9 +20,9 @@ def ToBeEx() -> ExcerciseYield:
     occ = occupation.get(decl)
 
     title = 'Переведите на сербский'
-    rusNoParticle = [' ', ' не '][negative] 
-    question = pronoun.rus.capitalize() + rusNoParticle + occ.rus + ' (' + occ.serb + ').'
-    answer = pronoun.serb.capitalize() + ' ' + tb.serb + ' ' + occ.serb + '.'
+    rusNoParticle = [' ', ' не '][negative]
+    question = '%s%s%s (%s).' % (pronoun.rus.capitalize(), rusNoParticle, occ.rus, occ.serb)
+    answer = '%s %s %s.' % (pronoun.serb.capitalize(), tb.serb, occ.serb)
 
     return ExcerciseYield(title, question, answer)
 
@@ -45,12 +47,12 @@ def ToBeEx2() -> ExcerciseYield:
         'Переведите на сербский в форме `Da li ...?`',
         'Переведите на сербский в форме `Je.. li ...?`'
     ][form]
-    question = pronoun.rus.capitalize() + ' ' + occ.rus + ' (' + occ.serb + ')?'
+    question = '%s %s (%s)?' % (pronoun.rus.capitalize(), occ.rus, occ.serb)
 
     if form == 0:
-        answer = 'Da li ' + tb.serb + ' ' + pronoun.serb + ' ' + occ.serb + '?'
+        answer = 'Da li %s %s %s?' % (tb.serb, pronoun.serb, occ.serb)
     else:
-        answer = tb.serb.capitalize() + ' li ' + pronoun.serb + ' ' + occ.serb + '?'
+        answer = '%s li %s %s?' % (tb.serb.capitalize(), pronoun.serb, occ.serb)
 
     return ExcerciseYield(title, question, answer)
 
@@ -80,12 +82,12 @@ def ToBeEx3() -> ExcerciseYield:
         'Ответьте на вопрос в короткой форме',
         'Ответьте на вопрос в полной форме'
     ][form]
-    question = qPronoun.rus.capitalize() + ' ' + occ.rus + ' (' + occ.serb + ')?'
+    question = '%s %s (%s)?' % (qPronoun.rus.capitalize(), occ.rus, occ.serb)
 
     if form == 0:
         answer = aTb.serb.capitalize() + '.'
     else:
-        answer = aPronoun.serb.capitalize() + ' ' + aTb.serb + ' ' + occ.serb + '.'
+        answer = '%s %s %s.' % (aPronoun.serb.capitalize(), aTb.serb, occ.serb)
 
     return ExcerciseYield(title, question, answer)
 
@@ -132,9 +134,9 @@ def NumbersGeneratorEx() -> ExcerciseYield:
         for n in [num1000, num100, num10, num1]:
             if n > 0:
                 if nonFirstWord:
-                    answer = answer + ' '
+                    answer += ' '
                 else:
                     nonFirstWord = True
-                answer = answer + numDict[n]
+                answer += numDict[n]
 
     return ExcerciseYield(title, question, answer)

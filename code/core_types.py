@@ -113,29 +113,29 @@ class Declination:
             if first:
                 first = False
             else:
-                res = res + ' & '
-            res = res + self.person.name
+                res += ' & '
+            res += self.person.name
             
         if hasattr(self, 'gender'):
             if first:
                 first = False
             else:
-                res = res + ' & '
-            res = res + self.gender.name
+                res += ' & '
+            res += self.gender.name
             
         if hasattr(self, 'number'):
             if first:
                 first = False
             else:
-                res = res + ' & '
-            res = res + self.number.name
+                res += ' & '
+            res += self.number.name
 
         if hasattr(self, 'case'):
             if first:
                 first = False
             else:
-                res = res + ' & '
-            res = res + self.case.name
+                res += ' & '
+            res += self.case.name
         
         return res
 
@@ -175,9 +175,9 @@ class Word:
         return None
 
     def toString(self):
-        res = self.speechPart.name + ' ' + self.title + '\n'
+        res = '%s %s\n' % (self.speechPart.name, self.title)
         for word in self.forms:
-            res = res + word.declination.toString() + ': ' + word.rus + '|' + word.serb +'\n'
+            res += '%s: %s|%s\n' % (word.declination.toString(), word.rus, word.serb)
         return res
     
     def normalize(self):
@@ -192,7 +192,7 @@ class Word:
                     new_form.declination.gender = gender
                     new_forms.append(new_form)
 
-        self.forms = self.forms + new_forms
+        self.forms += new_forms
 
 class WordList:
     words: list[Word]
@@ -203,7 +203,7 @@ class WordList:
     def toString(self):
         res = ""
         for word in self.words:
-            res = res + word.toString() + '\n'
+            res += word.toString() + '\n'
         
         return res
 
@@ -221,7 +221,7 @@ class Phrase:
     def toString(self):
         res = self.rus + '|' + self.serb
         if hasattr(self, 'aux'):
-            res = res + '|' + self.aux
+            res += '|' + self.aux
         return res
 
 class PhrasesList:    
@@ -235,7 +235,7 @@ class PhrasesList:
     def toString(self):
         res = ''
         for phrase in self.phrases:
-            res = res + phrase.toString() + '\n'
+            res += phrase.toString() + '\n'
         return res
 
 vocabulary = {}

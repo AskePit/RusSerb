@@ -46,9 +46,9 @@ class Excercise:
         res = 'parent: ' + (self.parent.name if self.parent != None else '<None>') + '\n'
         res = self.name
         if self.type == ExcerciseType.phrases:
-            res = res + ' <-> ' + self.phrasesVoc
+            res += ' <-> ' + self.phrasesVoc
         elif self.type == ExcerciseType.custom:
-            res = res + ' <-> ' + self.customFunction
+            res += ' <-> ' + self.customFunction
         return res
 
 class ExcercisesDir:
@@ -65,11 +65,11 @@ class ExcercisesDir:
     
     def toString(self):
         res = self.name + '\n'
-        res = res + 'parent: ' + (self.parent.name if self.parent != None else '<None>') + '\n'
+        res += 'parent: ' + (self.parent.name if self.parent != None else '<None>') + '\n'
         for ex in self.excercises:
-            res = res + '\n  ' + ex.toString()
+            res += '\n  ' + ex.toString()
         for ch in self.children:
-            res = res + '\n' + ch.toString()
+            res += '\n' + ch.toString()
         return res
 
 # generic for every phrases vocabulary

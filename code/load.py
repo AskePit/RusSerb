@@ -37,7 +37,7 @@ class Header:
             return None
         
         res = self.formsSequence[self.cursor]
-        self.cursor = self.cursor + 1
+        self.cursor += 1
         return res
     
     def resetYield(self):
@@ -46,7 +46,7 @@ class Header:
     def toString(self):
         res = ""
         for decl in self.formsSequence:
-            res = res + decl.toString() + '\n'
+            res += decl.toString() + '\n'
         return res
 
 def LoadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList): 
@@ -62,7 +62,7 @@ def LoadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):
             continue
         
         if not headerRed:
-            headerLines = headerLines + 1
+            headerLines += 1
             continue
     
     header.parseHeader(speechPart, data[:headerLines])

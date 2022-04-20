@@ -22,17 +22,17 @@ def ExecuteExcercise(exc: Excercise):
         exYield: ExcerciseYield = eval(excCall)
 
         ClrScr()
-        print('\n' + PAD + '.........................\n')
-        print(PAD + exYield.title + ':\n')
-        print(PAD + exYield.question, end='')
+        print('\n%s.........................\n' % PAD)
+        print('%s%s:\n' % (PAD, exYield.title))
+        print('%s%s' % (PAD, exYield.question), end='')
 
         ans = input()
 
         if IsExit(ans):
             break
         else:
-            print(PAD + exYield.answer)
-            print('\n' + PAD + '.........................\n')
+            print('%s%s' % (PAD, exYield.answer))
+            print('\n%s.........................\n' % PAD)
             ans = input()
             if IsExit(ans):
                 break
@@ -46,8 +46,8 @@ def main():
     while True:
         ClrScr()
 
-        print('\n' + PAD + '.........................\n')
-        print(PAD + 'Выберите упражнение:')
+        print('\n%s.........................\n' % PAD)
+        print('%sВыберите упражнение:' % PAD)
 
         i = 0
 
@@ -57,21 +57,21 @@ def main():
 
         for d in currentDir.children:
             num = str(i+1)
-            print(PAD + num + '. ' + d.name)
+            print('%s%s. %s' % (PAD, num, d.name))
 
             dirKeys[num] = d
 
-            i = i + 1
+            i += 1
 
         for e in currentDir.excercises:
             num = str(i+1)
-            print(PAD + num + '. ' + e.name)
+            print('%s%s. %s' % (PAD, num, e.name))
 
             excKeys[num] = e
 
-            i = i + 1
+            i += 1
 
-        print('\n' + PAD + 'q. Выход')
+        print('\n%sq. Выход' % PAD)
 
         ans = input()
         if IsExit(ans):
