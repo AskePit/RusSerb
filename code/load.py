@@ -73,14 +73,14 @@ def LoadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):
 
     firstTitle = ""
     if len(data):
-        firstTitle = data[0].split(INLINE_SEPARATOR)[0]
+        firstTitle = data[0].split(INLINE_SEPARATOR)[0].strip()
     
     theWord = Word.MakeTitled(speechPart, firstTitle)
 
     for wordPair in data:
         words = wordPair.split(INLINE_SEPARATOR)
-        rus = words[0]
-        serb = words[1]
+        rus = words[0].strip()
+        serb = words[1].strip()
 
         form = header.yieldDeclination()
         if form is None:
@@ -104,7 +104,7 @@ def LoadFixed(data: list[str], theWord: Word):
     title = ""
     if len(data):
         p = data[0].split(INLINE_SEPARATOR)
-        title = p[0] if len(p[0]) else p[1]
+        title = p[0].strip() if len(p[0]) else p[1].strip()
     
     theWord.title = title
     
@@ -121,8 +121,8 @@ def LoadFixed(data: list[str], theWord: Word):
             declinationTime = True
 
             words = w.split(INLINE_SEPARATOR)
-            rus = words[0]
-            serb = words[1]
+            rus = words[0].strip()
+            serb = words[1].strip()
             continue
     
     theWord.normalize()
@@ -135,7 +135,10 @@ def LoadPhrases(title: str, data: list[str], thePhrases: PhrasesList):
     
     for w in data:
         words = w.split(INLINE_SEPARATOR)
-        thePhrases.phrases.append(Phrase(words[0], words[1], words[2] if len(words) > 2 else None))
+        rus = words[0].strip()
+        serb = words[1].strip()
+        aux = words[2].strip() if len(words) > 2 else None
+        thePhrases.phrases.append(Phrase(rus, serb, aux))
 
 def LoadFile(filename: str, title: str):
     with io.open(filename, encoding='utf-8') as f:

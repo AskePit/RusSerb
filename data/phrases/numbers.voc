@@ -1,58 +1,57 @@
 phrases
 
-ноль|nula|0
-один|jedan|1
-два|dva|2
-три|tri|3
-четыре|četiri|4
-пять|pet|5
-шесть|šest|6
-семь|sedam|7
-восемь|osam|8
-девять|devet|9
-десять|deset|10
+ноль | nula | 0
+один | jedan | 1
+два | dva | 2
+три | tri | 3
+четыре | četiri | 4
+пять | pet | 5
+шесть | šest | 6
+семь | sedam | 7
+восемь | osam | 8
+девять | devet | 9
+десять | deset | 10
 
-одиннадцать|jedanaest|11
-двеннадцать|dvanaest|12
-тринадцать|trinaest|13
-четрнадцать|četrnaest|14
-пятнадцать|petnaest|15
-шестнадцать|šesnaest|16
-семнадцать|sedamnaest|17
-восемнадцать|osamnaest|18
-девятнадцать|devetnaest|19
+одиннадцать | jedanaest | 11
+двеннадцать | dvanaest | 12
+тринадцать | trinaest | 13
+четрнадцать | četrnaest | 14
+пятнадцать | petnaest | 15
+шестнадцать | šesnaest | 16
+семнадцать | sedamnaest | 17
+восемнадцать | osamnaest | 18
+девятнадцать | devetnaest | 19
 
-двадцать|dvadeset|20
-тридцать|trideset|30
-сорок|četrdeset|40
-пятьдесят|pedeset|50
-шестьдесят|šezdeset|60
-семьдесят|sedamdeset|70
-восемьдесят|osamdeset|80
-девяносто|devedeset|90
+двадцать | dvadeset | 20
+тридцать | trideset | 30
+сорок | četrdeset | 40
+пятьдесят | pedeset | 50
+шестьдесят | šezdeset | 60
+семьдесят | sedamdeset | 70
+восемьдесят | osamdeset | 80
+девяносто | devedeset | 90
 
-сто|sto|100
-двести|dvesta|200
-триста|trista|300
-четыреста|četiristo|400
-пятьсот|petsto|500
-шестьсот|šeststo|600
-семьсот|sedamsto|700
-восемьсот|osamsto|800
-девятьсот|devetsto|900
+сто | sto | 100
+двести | dvesta | 200
+триста | trista | 300
+четыреста | četiristo | 400
+пятьсот | petsto | 500
+шестьсот | šeststo | 600
+семьсот | sedamsto | 700
+восемьсот | osamsto | 800
+девятьсот | devetsto | 900
 
-тысяча|hiljadu|1000
-одна тысяча|jedna hiljada|1000
-две тысячи|dve hiljade|2000
-три тысячи|tri hiljade|3000
-четыре тысячи|četiri hiljade|4000
-пять тысяч|pet hiljada|5000
-шесть тысяч|šest hiljada|6000
-семь тысяч|sedam hiljada|7000
-восемь тысяч|osam hiljada|8000
-девять тысяч|devet hiljada|9000
-десять тысяч|deset hiljada|10000
+тысяча | hiljadu | 1000
+две тысячи | dve hiljade | 2000
+три тысячи | tri hiljade | 3000
+четыре тысячи | četiri hiljade | 4000
+пять тысяч | pet hiljada | 5000
+шесть тысяч | šest hiljada | 6000
+семь тысяч | sedam hiljada | 7000
+восемь тысяч | osam hiljada | 8000
+девять тысяч | devet hiljada | 9000
+десять тысяч | deset hiljada | 10000
 
-миллион|milion|1000000
-один миллион|jedan milion|1000000
-два миллиона|dva miliona|2000000
+миллион | milion | 1000000
+один миллион | jedan milion | 1000000
+два миллиона | dva miliona | 2000000
