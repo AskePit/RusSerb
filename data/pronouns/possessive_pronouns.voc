@@ -1,0 +1,55 @@
+fixed pronoun
+
+мой|moj
+first & sing & male & nom
+
+моя|moja
+first & sing & fem & nom
+
+моё|moje
+first & sing & neu & nom
+
+твой|tvoj
+second & sing & male & nom
+
+твоя|tvoja
+second & sing & fem & nom
+
+твоё|tvoje
+second & sing & neu & nom
+
+его|njegov
+third & sing & male & nom
+
+её|njegova
+third & sing & fem & nom
+
+его|njegovo
+third & sing & neu & nom
+
+наш|naš
+first & plur & male & nom
+
+наша|naša
+first & plur & fem & nom
+
+наше|naše
+first & plur & neu & nom
+
+ваш|vaš
+second & plur & male & nom
+
+ваша|vaša
+second & plur & fem & nom
+
+ваше|vaše
+second & plur & neu & nom
+
+их|
+third & plur & male & nom
+
+их|
+third & plur & fem & nom
+
+их|
+third & plur & neu & nom

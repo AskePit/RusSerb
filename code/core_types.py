@@ -101,7 +101,7 @@ class Declination:
                         try:
                             res.case = Case[choice]
                         except:
-                            raise Exception("Could not parse Declination!")
+                            raise Exception("Could not parse Declination %s!" % form)
         return res
     
     def toString(self):
