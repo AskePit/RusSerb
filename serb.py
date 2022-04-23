@@ -14,25 +14,25 @@ def ExecuteExcercise(exc: Excercise):
     excCall = ''
 
     if exc.type == ExcerciseType.phrases:
-        excCall = 'PhrasesEx(\'%s\')' % exc.phrasesVoc
+        excCall = 'PhrasesEx(\'{}\')'.format(exc.phrasesVoc)
     elif exc.type == ExcerciseType.custom:
-        excCall = '%s()' % exc.customFunction
+        excCall = '{}()'.format(exc.customFunction)
 
     while True:
         exYield: ExcerciseYield = eval(excCall)
 
         ClrScr()
-        print('\n%s.........................\n' % PAD)
-        print('%s%s:\n' % (PAD, exYield.title))
-        print('%s%s' % (PAD, exYield.question), end='')
+        print('\n{}.........................\n'.format(PAD))
+        print('{}{}:\n'.format(PAD, exYield.title))
+        print('{}{}'.format(PAD, exYield.question), end='')
 
         ans = input()
 
         if IsExit(ans):
             break
         else:
-            print('%s%s' % (PAD, exYield.answer))
-            print('\n%s.........................\n' % PAD)
+            print('{}{}'.format(PAD, exYield.answer))
+            print('\n{}.........................\n'.format(PAD))
             ans = input()
             if IsExit(ans):
                 break
@@ -46,8 +46,8 @@ def main():
     while True:
         ClrScr()
 
-        print('\n%s.........................\n' % PAD)
-        print('%sВыберите упражнение:' % PAD)
+        print('\n{}.........................\n'.format(PAD))
+        print('{}Выберите упражнение:'.format(PAD))
 
         i = 0
 
@@ -57,7 +57,7 @@ def main():
 
         for d in currentDir.children:
             num = str(i+1)
-            print('%s%s. %s' % (PAD, num, d.name))
+            print('{}{}. {}'.format(PAD, num, d.name))
 
             dirKeys[num] = d
 
@@ -65,13 +65,13 @@ def main():
 
         for e in currentDir.excercises:
             num = str(i+1)
-            print('%s%s. %s' % (PAD, num, e.name))
+            print('{}{}. {}'.format(PAD, num, e.name))
 
             excKeys[num] = e
 
             i += 1
 
-        print('\n%sq. Выход' % PAD)
+        print('\n{}q. Выход'.format(PAD))
 
         ans = input()
         if IsExit(ans):

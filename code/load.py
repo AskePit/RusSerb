@@ -169,7 +169,7 @@ EXCERCISE_EXT = 'exc'
 EXCERCISE_TITLE_FILENAME = '_title'
 
 def LoadVocabulary():
-    vocRegex = '**/*.%s' % (VOCABULARY_EXT)
+    vocRegex = '**/*.{}'.format(VOCABULARY_EXT)
     for f in glob.glob(vocRegex, recursive=True):
         collectionName = os.path.splitext(os.path.basename(f))[0]
         data = LoadFile(f, collectionName)
@@ -179,7 +179,7 @@ def LoadExcercises():
     def LoadDir(dirname, parent: ExcercisesDir) -> ExcercisesDir:
         excDir = ExcercisesDir(parent)
 
-        for f in glob.glob('%s/**' % dirname):
+        for f in glob.glob('{}/**'.format(dirname)):
             if os.path.isdir(f):
                 excDir.children.append(LoadDir(f, excDir))
             elif os.path.isfile(f):

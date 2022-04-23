@@ -101,7 +101,7 @@ class Declination:
                         try:
                             res.case = Case[choice]
                         except:
-                            raise Exception("Could not parse Declination %s!" % form)
+                            raise Exception("Could not parse Declination {}!".format(form))
         return res
     
     def toString(self):
@@ -175,9 +175,9 @@ class Word:
         return None
 
     def toString(self):
-        res = '%s %s\n' % (self.speechPart.name, self.title)
+        res = '{} {}\n'.format(self.speechPart.name, self.title)
         for word in self.forms:
-            res += '%s: %s|%s\n' % (word.declination.toString(), word.rus, word.serb)
+            res += '{}: {}|{}\n'.format(word.declination.toString(), word.rus, word.serb)
         return res
     
     def normalize(self):

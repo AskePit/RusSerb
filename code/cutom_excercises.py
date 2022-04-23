@@ -21,8 +21,8 @@ def ToBeEx() -> ExcerciseYield:
 
     title = 'Переведите на сербский'
     rusNoParticle = [' ', ' не '][negative]
-    question = '%s%s%s (%s).' % (pronoun.rus.capitalize(), rusNoParticle, occ.rus, occ.serb)
-    answer = '%s %s %s.' % (pronoun.serb.capitalize(), tb.serb, occ.serb)
+    question = '{}{}{} ({}).'.format(pronoun.rus.capitalize(), rusNoParticle, occ.rus, occ.serb)
+    answer = '{} {} {}.'.format(pronoun.serb.capitalize(), tb.serb, occ.serb)
 
     return ExcerciseYield(title, question, answer)
 
@@ -47,12 +47,12 @@ def ToBeEx2() -> ExcerciseYield:
         'Переведите на сербский в форме `Da li ...?`',
         'Переведите на сербский в форме `Je.. li ...?`'
     ][form]
-    question = '%s %s (%s)?' % (pronoun.rus.capitalize(), occ.rus, occ.serb)
+    question = '{} {} ({})?'.format(pronoun.rus.capitalize(), occ.rus, occ.serb)
 
     if form == 0:
-        answer = 'Da li %s %s %s?' % (tb.serb, pronoun.serb, occ.serb)
+        answer = 'Da li {} {} {}?'.format(tb.serb, pronoun.serb, occ.serb)
     else:
-        answer = '%s li %s %s?' % (tb.serb.capitalize(), pronoun.serb, occ.serb)
+        answer = '{} li {} {}?'.format(tb.serb.capitalize(), pronoun.serb, occ.serb)
 
     return ExcerciseYield(title, question, answer)
 
@@ -82,12 +82,12 @@ def ToBeEx3() -> ExcerciseYield:
         'Ответьте на вопрос в короткой форме',
         'Ответьте на вопрос в полной форме'
     ][form]
-    question = '%s %s (%s)?' % (qPronoun.rus.capitalize(), occ.rus, occ.serb)
+    question = '{} {} ({})?'.format(qPronoun.rus.capitalize(), occ.rus, occ.serb)
 
     if form == 0:
         answer = aTb.serb.capitalize() + '.'
     else:
-        answer = '%s %s %s.' % (aPronoun.serb.capitalize(), aTb.serb, occ.serb)
+        answer = '{} {} {}.'.format(aPronoun.serb.capitalize(), aTb.serb, occ.serb)
 
     return ExcerciseYield(title, question, answer)
 
