@@ -6,71 +6,99 @@ fem & sing & nom
 fem & plur & nom
 ---
 
+ученик
+none
 ученик|učenik
 ученики|učenici
 ученица|učenica
 ученицы|učenice
 
+гражданин
+none
 гражданин|građanin
 граждане|građani
 гражданка|građanka
 гражданки|građanke
 
+цыган
+none
 цыган|Ciganin
 цыгане|Cigani
 цыганка|Ciganka
 цыганки|Ciganke
 
+студент
+none
 студент|student
 студенты|studenti
 студентка|studentica
 студентки|studentice
 
+начальник
+none
 начальник|šef
 начальники|šefovi
 начальница|šefica
 начальницы|šefice
 
+юрист
+none
 юрист|pravnik
 юристы|pravnici
 юристка|pravnica
 юристки|pravnice
 
+менеджер
+none
 менеджер|menadžer
 менеджеры|menadžeri
 менеджер|menadžer
 менеджеры|menadžeri
 
+учитель
+none
 учитель|profesor
 учителя|profesori
 учительница|profesorica
 учительницы|profesorice
 
+врач
+none
 врач|lekar
 врачи|lekari
 врач|lekarka
 врачи|lekarke
 
+сосед
+none
 сосед|sused
 соседи|susedi
 соседка|sused
 соседки|susedi
 
+приятель
+none
 приятель|prijatelj
 приятели|prijatelji
 приятельница|prijateljica
 приятельницы|prijateljice
 
+пенсионер
+none
 пенсионер|penzioner
 пенсионеры|penzioneri
 пенсионерка|penzionerka
 пенсионерки|penzionerke
 
+турист
+none
 турист|turista
 туристы|turisti
 турист|turista
 туристы|turisti
 
+русский
+none
 русский|Rus
 русские|Rusi
 русская|Ruskinja

@@ -88,3 +88,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+    #res = LoadFile('data/pronouns/personal_pronouns.voc', 'personal_pronouns')
+    #print(res.toString())
+

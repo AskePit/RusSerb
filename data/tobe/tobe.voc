@@ -1,19 +1,13 @@
 fixed tobe
 
-|sam
-first & sing & unisex & nom
+sam
+none
 
-|si
-second & sing & unisex & nom
+first  & sing & unisex & nom: |sam
+second & sing & unisex & nom: |si
+third  & sing & unisex & nom: |je
+first  & plur & unisex & nom: |smo
+second & plur & unisex & nom: |ste
+third  & plur & unisex & nom: |su
 
-|je
-third & sing & unisex & nom
-
-|smo
-first & plur & unisex & nom
-
-|ste
-second & plur & unisex & nom
-
-|su
-third & plur & unisex & nom
+---

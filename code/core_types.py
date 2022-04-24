@@ -27,8 +27,8 @@ class Case(Enum):
     dat = 2
     aku = 3
     vok = 4
-    lok = 5
-    inst = 6
+    inst = 5
+    lok = 6
 
 class Person(Enum):
     first = 0
@@ -52,7 +52,10 @@ class Declination:
         for a in ['person', 'gender', 'number', 'case']:
             if hasattr(other, a) and hasattr(self, a):
                 if getattr(self, a) != getattr(other, a):
-                    return False
+                    if a == 'gender' and (getattr(self, a) == Gender.unisex or getattr(other, a) == Gender.unisex):
+                        pass
+                    else:
+                        return False
 
         return True
 
@@ -80,7 +83,7 @@ class Declination:
     # male|fem & first|second|third & sing|plur & nom
     # & is for combination
     # | is for random probability
-    def Make(form: str):
+    def Make(form: str): # Declination
         res = Declination()
 
         components = form.split('&')
@@ -102,6 +105,68 @@ class Declination:
                             res.case = Case[choice]
                         except:
                             raise Exception("Could not parse Declination {}!".format(form))
+        return res
+
+    # male|fem & first & sing|plur & nom
+    # & is for combination
+    # | is for variability
+    # result list:
+    #     male & first & sing & nom
+    #     fem  & first & sing & nom
+    #     male & first & plur & nom
+    #     fem  & first & plur & nom
+    #
+    # unisex expands to male|fem|neu
+    def MakeList(form: str): # list[Declination]
+        res: list[Declination] = []
+
+        # `None` is a fake element to force combinatority even if list is empty
+        persons: list[Person] = [None]
+        numbers: list[Number] = [None]
+        genders: list[Gender] = [None]
+        cases: list[Case] = [None]
+
+        components = form.split('&')
+
+        for component in components:
+            variants = component.split('|')
+            
+            for variant in variants:
+                try:
+                    persons.append(Person[variant])
+                except:
+                    try:
+                        numbers.append(Number[variant])
+                    except:
+                        try:
+                            genders.append(Gender[variant])
+                        except:
+                            try:
+                                cases.append(Case[variant])
+                            except:
+                                raise Exception("Could not parse Declination {}!".format(form))
+        
+        if Gender.unisex in genders:
+            genders.remove(Gender.unisex)
+            genders.append(Gender.male)
+            genders.append(Gender.fem)
+            genders.append(Gender.neu)
+        
+        for person in persons:
+            for number in numbers:
+                for gender in genders:
+                    for case in cases:
+                        decl: Declination = Declination()
+                        if person != None:
+                            decl.person = person
+                        if number != None:
+                            decl.number = number
+                        if gender != None:
+                            decl.gender = gender
+                        if case != None:
+                            decl.case = case
+                        res.append(decl)
+
         return res
     
     def toString(self):
@@ -154,6 +219,7 @@ class DeclinedWord:
 class Word:
     speechPart: SpeechPart
     title: str
+    metaDeclination: Declination
     forms: list[DeclinedWord]
     
     def Make(speechPart: SpeechPart):
@@ -176,6 +242,7 @@ class Word:
 
     def toString(self):
         res = '{} {}\n'.format(self.speechPart.name, self.title)
+        res += '{}\n'.format(self.metaDeclination.toString())
         for word in self.forms:
             res += '{}: {}|{}\n'.format(word.declination.toString(), word.rus, word.serb)
         return res
@@ -206,6 +273,18 @@ class WordList:
             res += word.toString() + '\n'
         
         return res
+    
+    def get(self, declination: Declination):
+        for word in self.words:
+            if word.metaDeclination == declination:
+                return word
+        return None
+
+    def tryUnwrap(self) -> Word:
+        if len(self.words) == 1:
+            return self.words[0]
+        else:
+            return None
 
 class Phrase:
     rus: str

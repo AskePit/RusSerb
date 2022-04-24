@@ -1,19 +1,13 @@
 fixed tobe
 
-|jesam
-first & sing & unisex & nom
+jesam
+none
 
-|jesi
-second & sing & unisex & nom
+first  & sing & unisex & nom: |jesam
+second & sing & unisex & nom: |jesi
+third  & sing & unisex & nom: |je
+first  & plur & unisex & nom: |jesmo
+second & plur & unisex & nom: |jeste
+third  & plur & unisex & nom: |jesu
 
-|je
-third & sing & unisex & nom
-
-|jesmo
-first & plur & unisex & nom
-
-|jeste
-second & plur & unisex & nom
-
-|jesu
-third & plur & unisex & nom
+---

@@ -21,7 +21,12 @@ class Header:
     speechPart = SpeechPart.noun
     formsSequence: list[Declination] = []
     cursor = 0
-            
+
+    def __init__(self) -> None:
+        self.speechPart = SpeechPart.noun
+        self.formsSequence = []
+        self.cursor = 0
+
     def parseHeader(self, speechPart: SpeechPart, lines: list[str]):
         self.speechPart = speechPart
         
@@ -49,7 +54,7 @@ class Header:
             res += decl.toString() + '\n'
         return res
 
-def LoadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList): 
+def LoadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):
     headerLines = 0
     headerRed = False
     
@@ -70,62 +75,79 @@ def LoadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):
     # read data
     data = data[headerLines+1:]
     data = ConvertLinesToTokens(data)
-
-    firstTitle = ""
-    if len(data):
-        firstTitle = data[0].split(INLINE_SEPARATOR)[0].strip()
     
-    theWord = Word.MakeTitled(speechPart, firstTitle)
+    theWord = Word.Make(speechPart)
 
-    for wordPair in data:
-        words = wordPair.split(INLINE_SEPARATOR)
-        rus = words[0].strip()
-        serb = words[1].strip()
+    stage = 0
 
-        form = header.yieldDeclination()
-        if form is None:
-            theWords.words.append(theWord)
-
-            # new theWord
-            theWord = Word.MakeTitled(speechPart, rus)
-
-            header.resetYield()
+    for l in data:
+        if stage == 0:
+            # title
+            theWord.title = l.strip()
+            stage += 1
+        elif stage == 1:
+            # metaDeclination
+            if l.strip() != 'none':
+                theWord.metaDeclination = Declination.Make(l.strip())
+            stage += 1
+        elif stage == 2:
+            # forms
             form = header.yieldDeclination()
+            if form is None:
+                theWords.words.append(theWord)
 
-        theWord.forms.append(DeclinedWord.Make(form, rus, serb))
+                # new theWord
+                theWord = Word.Make(speechPart)
+                theWord.title = l.strip()
+                stage = 1
+
+                header.resetYield()
+            else:
+                words = l.split(INLINE_SEPARATOR)
+                rus = words[0].strip()
+                serb = words[1].strip()
+
+                theWord.forms.append(DeclinedWord.Make(form, rus, serb))
     
     theWord.normalize()
     theWords.words.append(theWord)
 
-def LoadFixed(data: list[str], theWord: Word):
+def LoadFixed(data: list[str], speechPart: SpeechPart, theWords: WordList):
     # read data
     data = ConvertLinesToTokens(data)
-
-    title = ""
-    if len(data):
-        p = data[0].split(INLINE_SEPARATOR)
-        title = p[0].strip() if len(p[0]) else p[1].strip()
     
-    theWord.title = title
-    
-    declinationTime = False
-    rus = ""
-    serb = ""
+    stage = 0
+    theWord = Word.Make(speechPart)
 
-    for w in data:
-        if declinationTime:
-            declinationTime = False
-            declinedWord = DeclinedWord.Make(Declination.Make(w), rus, serb)
-            theWord.forms.append(declinedWord)
-        else:
-            declinationTime = True
+    for l in data:
+        if l.startswith('-'):
+            # word end
+            theWord.normalize()
+            theWords.words.append(theWord)
+            theWord = Word.Make(speechPart)
+            stage = 0
+        elif stage == 0:
+            # title
+            theWord.title = l.strip()
+            stage += 1
+        elif stage == 1:
+            # metaDeclination
+            if l.strip() != 'none':
+                theWord.metaDeclination = Declination.Make(l.strip())
+            stage += 1
+        elif stage == 2:
+            # declinations and forms
+            declWriting = l.split(':')
 
-            words = w.split(INLINE_SEPARATOR)
+            decl = declWriting[0].strip()
+            writing = declWriting[1].strip()
+            
+            words = writing.split(INLINE_SEPARATOR)
             rus = words[0].strip()
             serb = words[1].strip()
-            continue
-    
-    theWord.normalize()
+
+            declinedWord = DeclinedWord.Make(Declination.Make(decl), rus, serb)
+            theWord.forms.append(declinedWord)
 
 def LoadPhrases(title: str, data: list[str], thePhrases: PhrasesList):
     # read data
@@ -159,9 +181,9 @@ def LoadFile(filename: str, title: str):
             LoadHeadered(data, speechPart, theWords)
             return theWords
         elif headerType == 'fixed':
-            theWord = Word.Make(speechPart)
-            LoadFixed(data, theWord)
-            return theWord
+            theWords = WordList()
+            LoadFixed(data, speechPart, theWords)
+            return theWords
         elif headerType == 'phrases':
             thePhrases = PhrasesList()
             LoadPhrases(title, data, thePhrases)
@@ -176,6 +198,12 @@ def LoadVocabulary():
     for f in glob.glob(vocRegex, recursive=True):
         collectionName = os.path.splitext(os.path.basename(f))[0]
         data = LoadFile(f, collectionName)
+
+        if isinstance(data, WordList):
+            unwrapped = data.tryUnwrap()
+            if unwrapped != None:
+                data = unwrapped
+
         vocabulary[collectionName] = data
 
 def LoadExcercises():

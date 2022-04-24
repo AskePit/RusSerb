@@ -1,31 +1,110 @@
-fixed pronoun
+header pronoun
 
-я | ja
-first & sing & unisex & nom
+nom
+gen
+dat
+aku
+vok
+inst
+lok
+---
 
-ты | ti
-second & sing & unisex & nom
+я
+first & sing & unisex
+я    | ja
+меня | mene
+мне  | meni
+меня | mene
+     |
+мной | mnom
+мне  | meni
 
-он | on
-third & sing & male & nom
+ты
+second & sing & unisex
+ты    | ti
+тебя  | tebe
+тебе  | tebi
+тебя  | tebe
+ты    | ti
+тобой | tobom
+тебе  | tebi
 
+он
+third & sing & male
+он  | on
+его | njega
+ему | njemu
+его | njega
+    |
+им  | njim
+нем | njemu
+
+она
+third & sing & fem
 она | ona
-third & sing & fem & nom
+её  | nje
+ей  | njoj
+её  | nju
+    |
+ей  | njom
+ней | njoj
 
+оно
+third & sing & neu
 оно | ono
-third & sing & neu & nom
+его | njega
+ему | njemu
+его | njega
+    |
+им  | njim
+нем | njemu
 
-мы | mi
-first & plur & unisex & nom
+мы
+first & plur & unisex
+мы   | mi
+нас  | nas
+нам  | nama
+нас  | nas
+     |
+нами | nama
+нас  | nama
 
-вы | vi
-second & plur & unisex & nom
+вы
+second & plur & unisex
+вы   | vi
+вас  | vas
+вам  | vama
+вас  | vas
+вы   | vi
+вами | vama
+вас  | vama
 
+они (муж.)
+third & plur & male
 они | oni
-third & plur & male & nom
+их  | njih
+им  | njma
+их  | njih
+    |
+ими | njima
+них | njima
 
+они (жен.)
+third & plur & fem
 они | one
-third & plur & fem & nom
+их  | njih
+им  | njma
+их  | njih
+    |
+ими | njima
+них | njima
 
-они | ona
-third & plur & neu & nom
+они (ср.)
+third & plur & neu
+она | ona
+их  | njih
+им  | njma
+их  | njih
+    |
+ими | njima
+них | njima
