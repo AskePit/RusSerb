@@ -234,7 +234,7 @@ class Word:
         res.title = title
         return res
 
-    def get(self, declination: Declination):
+    def get(self, declination: Declination) -> DeclinedWord:
         for word in self.forms:
             if word.declination == declination:
                 return word
@@ -274,10 +274,16 @@ class WordList:
         
         return res
     
-    def get(self, declination: Declination):
+    def getWord(self, declination: Declination) -> Word:
         for word in self.words:
             if word.metaDeclination == declination:
                 return word
+        return None
+
+    def getWordForm(self, declination: Declination) -> DeclinedWord:
+        for word in self.words:
+            if word.metaDeclination == declination:
+                return word.get(declination)
         return None
 
     def tryUnwrap(self) -> Word:

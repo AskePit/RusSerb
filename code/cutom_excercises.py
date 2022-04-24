@@ -13,7 +13,7 @@ def ToBeEx() -> ExcerciseYield:
 
     occupation = random.choice(GetVocabulary('occupations').words)
     negative = random.randint(0, 1)
-    pronoun = GetVocabulary('personal_pronouns').get(decl).get(decl)
+    pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
     tb = [GetVocabulary('tobe'), GetVocabulary('negative_tobe')][negative].get(decl)
     occ = occupation.get(decl)
 
@@ -37,7 +37,7 @@ def ToBeEx2() -> ExcerciseYield:
 
     occupation = random.choice(GetVocabulary('occupations').words)
     form = random.randint(0, 1)
-    pronoun = GetVocabulary('personal_pronouns').get(decl).get(decl)
+    pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
     tb = [GetVocabulary('tobe'), GetVocabulary('question_tobe')][form].get(decl)
     occ = occupation.get(decl)
 
@@ -71,8 +71,8 @@ def ToBeEx3() -> ExcerciseYield:
 
     occupation = random.choice(GetVocabulary('occupations').words)
     form = random.randint(0, 1)
-    qPronoun = GetVocabulary('personal_pronouns').get(qDecl).get(qDecl)
-    aPronoun = GetVocabulary('personal_pronouns').get(aDecl).get(aDecl)
+    qPronoun = GetVocabulary('personal_pronouns').getWordForm(qDecl)
+    aPronoun = GetVocabulary('personal_pronouns').getWordForm(aDecl)
     aTb = [GetVocabulary('positive_tobe'), GetVocabulary('tobe')][form].get(aDecl)
     occ = occupation.get(aDecl)
 
