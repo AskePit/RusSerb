@@ -322,6 +322,12 @@ class PhrasesList:
         for phrase in self.phrases:
             res += phrase.toString() + '\n'
         return res
+    
+    def Merge(lists): # PhrasesList
+        res = PhrasesList()
+        for l in lists:
+            res.phrases.extend(l.phrases)
+        return res
 
 vocabulary = {}
 

@@ -82,8 +82,17 @@ def PhrasesEx(vocabularyTopic: str) -> ExcerciseYield:
     # question: Vrlo dobro
     # answer:   Очень хорошо
 
+    def CollectPhrases(topic: str) -> PhrasesList:
+        lists: list[PhrasesList] = []
+        vocs = topic.split(' ')
+
+        for voc in vocs:
+            lists.append(GetVocabulary(voc.strip()))
+        
+        return PhrasesList.Merge(lists)
+
     lang = random.randint(0, 1)
-    phrases = GetVocabulary(vocabularyTopic).phrases
+    phrases = CollectPhrases(vocabularyTopic).phrases
     greetingIndex = random.randint(0, len(phrases)-1)
     greeting = phrases[greetingIndex]
 
