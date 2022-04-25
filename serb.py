@@ -49,25 +49,24 @@ def main():
         print('\n{}.........................\n'.format(PAD))
         print('{}Выберите упражнение:'.format(PAD))
 
-        i = 0
-
-        #[num, exc]
-        dirKeys: dict[str, ExcercisesDir] = {}
-        excKeys: dict[str, Excercise] = {}
+        files = []
 
         for d in currentDir.children:
-            num = str(i+1)
-            print('{}{}. {}'.format(PAD, num, d.name))
-
-            dirKeys[num] = d
-
-            i += 1
+            files.append(d)
 
         for e in currentDir.excercises:
-            num = str(i+1)
-            print('{}{}. {}'.format(PAD, num, e.name))
+            files.append(e)
+        
+        files.sort(key=lambda x: x.serialNumber)
 
-            excKeys[num] = e
+        i = 0
+        numToEx = {}
+
+        for f in files:
+            num = str(i+1)
+            print('{}{}. {}'.format(PAD, num, f.name))
+
+            numToEx[num] = f
 
             i += 1
 
@@ -79,15 +78,15 @@ def main():
                 break
             else:
                 currentDir = currentDir.parent
-        elif ans in dirKeys:
-            currentDir = dirKeys[ans]
-        elif ans in excKeys:
-            ExecuteExcercise(excKeys[ans])
         else:
-            continue
+            exc = numToEx[ans]
+            if isinstance(exc, ExcercisesDir):
+                currentDir = exc
+            elif isinstance(exc, Excercise):
+                ExecuteExcercise(exc)
+            else:
+                continue
 
 if __name__ == "__main__":
     main()
-    #res = LoadFile('data/pronouns/personal_pronouns.voc', 'personal_pronouns')
-    #print(res.toString())
 

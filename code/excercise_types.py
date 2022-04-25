@@ -20,24 +20,27 @@ class ExcerciseType(Enum):
 class Excercise:
     name: str
     parent = None # ExcercisesDir
+    serialNumber: int
     type: ExcerciseType
 
     def __init__(self):
         self.name = ''
         self.parent = None
     
-    def MakePhrasesEx(name: str, voc: str, parent):
+    def MakePhrasesEx(name: str, voc: str, parent, number: int):
         ex = Excercise()
         ex.name = name
         ex.parent = parent
+        ex.serialNumber = number
         ex.type = ExcerciseType.phrases
         ex.phrasesVoc = voc
         return ex
 
-    def MakeCustomEx(name: str, funcName, parent):
+    def MakeCustomEx(name: str, funcName, parent, number: int):
         ex = Excercise()
         ex.name = name
         ex.parent = parent
+        ex.serialNumber = number
         ex.type = ExcerciseType.custom
         ex.customFunction = funcName
         return ex
@@ -54,12 +57,14 @@ class Excercise:
 class ExcercisesDir:
     name: str
     parent = None # ExcercisesDir
+    serialNumber: int
     children = [] # list[ExcercisesDir]
     excercises = [] # list[Excercise]
 
-    def __init__(self, parent):
+    def __init__(self, parent, number: int):
         self.name = ''
         self.parent = parent
+        self.serialNumber = number
         self.children = []
         self.excercises = []
     

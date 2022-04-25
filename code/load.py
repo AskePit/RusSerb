@@ -208,7 +208,8 @@ def LoadVocabulary():
 
 def LoadExcercises():
     def LoadDir(dirname, parent: ExcercisesDir) -> ExcercisesDir:
-        excDir = ExcercisesDir(parent)
+        number = GetSerialNumber(dirname)
+        excDir = ExcercisesDir(parent, number)
 
         for f in glob.glob('{}/**'.format(dirname)):
             if os.path.isdir(f):
@@ -222,6 +223,7 @@ def LoadExcercises():
 
     def LoadExcercise(filename, parent: ExcercisesDir) -> Excercise:
         with io.open(filename, encoding='utf-8') as f:
+            number = GetSerialNumber(filename)
             data = f.readlines()
 
             name = data[0].strip()
@@ -229,14 +231,21 @@ def LoadExcercises():
 
             if type == ExcerciseType.phrases:
                 voc = data[2].strip()
-                return Excercise.MakePhrasesEx(name, voc, parent)
+                return Excercise.MakePhrasesEx(name, voc, parent, number)
             else:
                 funcName = data[2].strip()
-                return Excercise.MakeCustomEx(name, funcName, parent)
+                return Excercise.MakeCustomEx(name, funcName, parent, number)
     
     def LoadTitle(filename) -> str:
         with io.open(filename, encoding='utf-8') as f:
             data = f.readlines()
             return data[0] if len(data) else ''
+
+    def GetSerialNumber(filename: str):
+        f = os.path.basename(filename)
+
+        if ' ' in f:
+            return int(f.split(' ')[0].strip())
+        return 0
 
     return LoadDir('excercises', None)
