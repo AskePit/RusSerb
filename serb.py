@@ -78,7 +78,7 @@ def main():
                 break
             else:
                 currentDir = currentDir.parent
-        else:
+        elif ans in numToEx:
             exc = numToEx[ans]
             if isinstance(exc, ExcercisesDir):
                 currentDir = exc
