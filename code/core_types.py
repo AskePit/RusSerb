@@ -47,15 +47,20 @@ class Distance(Enum):
     far = 1
     off= 2
 
+DeclinationAttributesMap = {
+    'person': Person,
+    'gender': Gender,
+    'number': Number,
+    'case': Case,
+    'distance': Distance,
+}
+
 class Declination:
-    person: Person
-    gender: Gender
-    number: Number
-    case: Case
-    distance: Distance
+    # possible fields:
+    # any key from `DeclinationAttributesMap`
 
     def __eq__(self, other: object) -> bool:
-        for a in ['person', 'gender', 'number', 'case', 'distance']:
+        for a in DeclinationAttributesMap:
             if hasattr(other, a) and hasattr(self, a):
                 if getattr(self, a) != getattr(other, a):
                     if a == 'gender' and (getattr(self, a) == Gender.unisex or getattr(other, a) == Gender.unisex):
@@ -82,22 +87,19 @@ class Declination:
             variants = component.split('|')
             choice = random.choice(variants).strip()
 
-            try:
-                res.person = Person[choice]
-            except:
+            got = False
+            for attrName, E in DeclinationAttributesMap.items():
                 try:
-                    res.number = Number[choice]
+                    setattr(res, attrName, E[choice])
                 except:
-                    try:
-                        res.gender = Gender[choice]
-                    except:
-                        try:
-                            res.case = Case[choice]
-                        except:
-                            try:
-                                res.distance = Distance[choice]
-                            except:
-                                raise Exception("Could not parse Declination {}!".format(form))
+                    pass
+                else:
+                    got = True
+                    break
+        
+            if not got:
+                raise Exception("Could not parse Declination {}!".format(form))
+
         return res
 
     # male|fem & first & sing|plur & nom
@@ -113,68 +115,83 @@ class Declination:
     def MakeList(form: str): # list[Declination]
         res: list[Declination] = []
 
-        # `None` is a fake element to force combinatority even if list is empty
-        persons: list[Person] = [None]
-        numbers: list[Number] = [None]
-        genders: list[Gender] = [None]
-        cases: list[Case] = [None]
-        distances: list[Distance] = [None]
-
+        attrs = {} # <AttrName, list[AttrEnum]>
         components = form.split('&')
 
         for component in components:
             variants = component.split('|')
             
             for variant in variants:
-                try:
-                    persons.append(Person[variant])
-                except:
+                variant = variant.strip()
+                got = False
+
+                for attrName, E in DeclinationAttributesMap.items():
                     try:
-                        numbers.append(Number[variant])
+                        val = E[variant]
+                        attrs.setdefault(attrName, [])
+                        attrs[attrName].append(val)
                     except:
-                        try:
-                            genders.append(Gender[variant])
-                        except:
-                            try:
-                                cases.append(Case[variant])
-                            except:
-                                try:
-                                    distances.append(Distance[variant])
-                                except:
-                                    raise Exception("Could not parse Declination {}!".format(form))
+                        pass
+                    else:
+                        got = True
+                        break
+                    pass
+
+                if not got:
+                    raise Exception("Could not parse Declination {}!".format(form))
         
-        if Gender.unisex in genders:
-            genders.remove(Gender.unisex)
-            genders.append(Gender.male)
-            genders.append(Gender.fem)
-            genders.append(Gender.neu)
+        if 'gender' in attrs:
+            genders = attrs['gender']
+            if Gender.unisex in genders:
+                genders.remove(Gender.unisex)
+                genders.append(Gender.male)
+                genders.append(Gender.fem)
+                genders.append(Gender.neu)
         
-        for person in persons:
-            for number in numbers:
-                for gender in genders:
-                    for case in cases:
-                        for dist in distances:
-                            decl: Declination = Declination()
-                            if person != None:
-                                decl.person = person
-                            if number != None:
-                                decl.number = number
-                            if gender != None:
-                                decl.gender = gender
-                            if case != None:
-                                decl.case = case
-                            if dist != None:
-                                decl.distance = dist
-                            res.append(decl)
+        comb_list: list[int] = []
+        for a in attrs:
+            comb_list.append(0)
+        
+        while True:
+            # form declination
+            decl: Declination = Declination()
+
+            i = 0
+            for a, vals in attrs.items():
+                val = DeclinationAttributesMap[a](vals[comb_list[i]])
+                setattr(decl, a, val)
+                
+                i += 1
+            
+            # append declination
+            res.append(decl)
+            
+            # yield another combination
+            i = 0
+            for a, vals in attrs.items():
+                exit = True
+
+                if comb_list[i] == len(vals) - 1:
+                    comb_list[i] = 0
+                    exit = False
+                else:
+                    comb_list[i] = comb_list[i] + 1
+
+                if exit:
+                    break
+
+                i += 1
+            
+            if i == len(comb_list):
+                break
 
         return res
     
     def toString(self):
         first = True
-        
         res = ""
 
-        for a in ['person', 'gender', 'number', 'case', 'distance']:
+        for a in DeclinationAttributesMap:
             if hasattr(self, a):
                 if first:
                     first = False
