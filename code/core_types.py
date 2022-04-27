@@ -42,14 +42,20 @@ class Person(Enum):
             return Person.first
         return Person.third
 
+class Distance(Enum):
+    close = 0
+    far = 1
+    off= 2
+
 class Declination:
     person: Person
     gender: Gender
     number: Number
     case: Case
+    distance: Distance
 
     def __eq__(self, other: object) -> bool:
-        for a in ['person', 'gender', 'number', 'case']:
+        for a in ['person', 'gender', 'number', 'case', 'distance']:
             if hasattr(other, a) and hasattr(self, a):
                 if getattr(self, a) != getattr(other, a):
                     if a == 'gender' and (getattr(self, a) == Gender.unisex or getattr(other, a) == Gender.unisex):
@@ -58,22 +64,6 @@ class Declination:
                         return False
 
         return True
-
-    def setPerson(self, person):
-        self.person = person
-        return self
-
-    def setGender(self, gender):
-        self.gender = gender
-        return self
-
-    def setNumber(self, number):
-        self.number = number
-        return self
-
-    def setCase(self, case):
-        self.case = case
-        return self
     
     def mirrorPerson(self):
         if hasattr(self, 'person') and self.person != None:
@@ -104,7 +94,10 @@ class Declination:
                         try:
                             res.case = Case[choice]
                         except:
-                            raise Exception("Could not parse Declination {}!".format(form))
+                            try:
+                                res.distance = Distance[choice]
+                            except:
+                                raise Exception("Could not parse Declination {}!".format(form))
         return res
 
     # male|fem & first & sing|plur & nom
@@ -125,6 +118,7 @@ class Declination:
         numbers: list[Number] = [None]
         genders: list[Gender] = [None]
         cases: list[Case] = [None]
+        distances: list[Distance] = [None]
 
         components = form.split('&')
 
@@ -144,7 +138,10 @@ class Declination:
                             try:
                                 cases.append(Case[variant])
                             except:
-                                raise Exception("Could not parse Declination {}!".format(form))
+                                try:
+                                    distances.append(Distance[variant])
+                                except:
+                                    raise Exception("Could not parse Declination {}!".format(form))
         
         if Gender.unisex in genders:
             genders.remove(Gender.unisex)
@@ -156,16 +153,19 @@ class Declination:
             for number in numbers:
                 for gender in genders:
                     for case in cases:
-                        decl: Declination = Declination()
-                        if person != None:
-                            decl.person = person
-                        if number != None:
-                            decl.number = number
-                        if gender != None:
-                            decl.gender = gender
-                        if case != None:
-                            decl.case = case
-                        res.append(decl)
+                        for dist in distances:
+                            decl: Declination = Declination()
+                            if person != None:
+                                decl.person = person
+                            if number != None:
+                                decl.number = number
+                            if gender != None:
+                                decl.gender = gender
+                            if case != None:
+                                decl.case = case
+                            if dist != None:
+                                decl.distance = dist
+                            res.append(decl)
 
         return res
     
@@ -174,34 +174,13 @@ class Declination:
         
         res = ""
 
-        if hasattr(self, 'person'):
-            if first:
-                first = False
-            else:
-                res += ' & '
-            res += self.person.name
-            
-        if hasattr(self, 'gender'):
-            if first:
-                first = False
-            else:
-                res += ' & '
-            res += self.gender.name
-            
-        if hasattr(self, 'number'):
-            if first:
-                first = False
-            else:
-                res += ' & '
-            res += self.number.name
-
-        if hasattr(self, 'case'):
-            if first:
-                first = False
-            else:
-                res += ' & '
-            res += self.case.name
-        
+        for a in ['person', 'gender', 'number', 'case', 'distance']:
+            if hasattr(self, a):
+                if first:
+                    first = False
+                else:
+                    res += ' & '
+                res += getattr(self, a).name
         return res
 
 class DeclinedWord:
