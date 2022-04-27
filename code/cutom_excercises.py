@@ -138,3 +138,52 @@ def NumbersGeneratorEx() -> ExcerciseYield:
                 answer += numDict[n]
 
     return ExcerciseYield(title, question, answer)
+
+def PointingEx() -> ExcerciseYield:
+    # title:    Переведите на сербский:
+    # question: Эта умная кошка моя
+    # answer:   Ta pametna mačka je moja
+
+    # title:    Переведите на русский:
+    # question: To crveno vino je tvoje 
+    # answer:   То красное вино твое
+
+    lang = random.randint(0, 1)
+
+    num = random.choice(list(Number))
+    distance = random.choice(list(Distance))
+
+    nounGen = random.choice(GetVocabulary('random_nouns').words)
+    gender = nounGen.metaDeclination.gender
+
+    decl = Declination()
+    decl.gender = gender
+    decl.case = Case.nom
+    decl.number = num
+    decl.distance = distance
+    decl.person = Person.third
+    noun = nounGen.get(decl)
+    adj = random.choice(GetVocabulary('random_adjectives').words).get(decl)
+
+    pointDecl = Declination()
+    pointDecl.distance = distance
+    pointDecl.person = Person.third
+    point = GetVocabulary('pointing_pronouns').getWordForm(decl)
+
+    tobe = GetVocabulary('tobe').get(decl)
+    possess = GetVocabulary('possessive_pronouns').getWordForm(decl)
+
+    distClarif = ''
+    if distance == Distance.far:
+        distClarif = '(близ.)'
+    elif distance == Distance.off:
+        distClarif = '(дальн.)'
+
+    title = ['Переведите на сербский', 'Переведите на русский'][lang]
+    question = '{}{} {} {} - {}.'.format(point.rus.capitalize(), distClarif, adj.rus, noun.rus, possess.rus)
+    answer = '{} {} {} {} {}.'.format(point.serb.capitalize(), adj.serb, noun.serb, tobe.serb, possess.serb)
+
+    if lang:
+        question, answer = answer, question
+
+    return ExcerciseYield(title, question, answer)
