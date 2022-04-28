@@ -156,22 +156,18 @@ def PointingEx() -> ExcerciseYield:
     nounGen = random.choice(GetVocabulary('random_nouns').words)
     gender = nounGen.metaDeclination.gender
 
-    decl = Declination()
-    decl.gender = gender
-    decl.case = Case.nom
-    decl.number = num
-    decl.distance = distance
-    decl.person = Person.third
+    decl = Declination.Make('{} & {} & {} & {} & {}'.format(gender.name, Case.nom.name, num.name, distance.name, Person.third.name))
     noun = nounGen.get(decl)
     adj = random.choice(GetVocabulary('random_adjectives').words).get(decl)
 
-    pointDecl = Declination()
-    pointDecl.distance = distance
-    pointDecl.person = Person.third
     point = GetVocabulary('pointing_pronouns').getWordForm(decl)
 
     tobe = GetVocabulary('tobe').get(decl)
-    possess = GetVocabulary('possessive_pronouns').getWordForm(decl)
+
+    possessDecl = copy.deepcopy(decl)
+    possessDecl.number = random.choice(list(Number))
+    possessDecl.gender = random.choice(list(Gender))
+    possess = GetVocabulary('possessive_pronouns').getWord(possessDecl).get(decl)
 
     distClarif = ''
     if distance == Distance.far:
