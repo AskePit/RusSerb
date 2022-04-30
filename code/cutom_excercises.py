@@ -93,6 +93,64 @@ class ToBeEx3(Excercise):
         return ExcerciseYield(title, question, answer)
 
 class NumbersGeneratorEx(Excercise):
+    numDict: dict[int, str]
+    usedPool: list[int]
+    
+    def __init__(self):
+        super().__init__()
+
+        self.usedPool = []
+        self.numDict = {}
+
+        for n in GetVocabulary('numbers').phrases:
+            self.numDict[int(n.aux)] = n.serb
+
+    def yieldNumber(self) -> tuple[int, str]:
+        while True:
+            be1000 = random.randint(0, 1)
+            be100 = random.randint(0, 1)
+            be10 = random.randint(0, 1)
+            be1 = random.randint(0, 1)
+
+            num1000 = (random.randint(1, 9) if be1000 else 0)*1000
+            num100 = (random.randint(1, 9) if be100 else 0)*100
+            num10 = (random.randint(1, 9) if be10 else 0)*10
+            num1 = random.randint(1, 9) if be1 else 0
+
+            number = num1000 + num100 + num10 + num1
+            if number in self.usedPool:
+                # interrupt and generate number again
+                continue
+
+            # 11 12 13 14 15 16 17 18 19 are special
+            # and have their own word for both 10 and 1 ranks
+            if num10 == 10:
+                num10 += num1
+                num1 = 0
+
+            break
+
+        if len(self.usedPool) >= 256:
+            self.usedPool.clear()
+
+        self.usedPool.append(number)
+
+        numberStr = ''
+        if number == 0:
+            numberStr = self.numDict[number]
+        else:
+            nonFirstWord = False
+
+            for n in [num1000, num100, num10, num1]:
+                if n > 0:
+                    if nonFirstWord:
+                        numberStr += ' '
+                    else:
+                        nonFirstWord = True
+                    numberStr += self.numDict[n]
+
+        return (number, numberStr)
+
     def __call__(self) -> ExcerciseYield:
         # title:    Напишите число на сербском:
         # question: 2 804
@@ -102,44 +160,10 @@ class NumbersGeneratorEx(Excercise):
         # question: 61
         # answer:   šezdeset jedan
 
-        numDict: dict[int, str] = {}
-        for n in GetVocabulary('numbers').phrases:
-            numDict[int(n.aux)] = n.serb
-        
-        be1000 = random.randint(0, 1)
-        be100 = random.randint(0, 1)
-        be10 = random.randint(0, 1)
-        be1 = random.randint(0, 1)
-
-        num1000 = (random.randint(1, 9) if be1000 else 0)*1000
-        num100 = (random.randint(1, 9) if be100 else 0)*100
-        num10 = (random.randint(1, 9) if be10 else 0)*10
-        num1 = random.randint(1, 9) if be1 else 0
-
-        # 11 12 13 14 15 16 17 18 19 are special
-        # and have their own word for both 10 and 1 ranks
-        if num10 == 10:
-            num10 += num1
-            num1 = 0
-
-        number = num1000 + num100 + num10 + num1
+        number, answer = self.yieldNumber()
 
         title = 'Напишите число на сербском'
         question = str(number)
-
-        answer = ''
-        if number == 0:
-            answer = numDict[number]
-        else:
-            nonFirstWord = False
-
-            for n in [num1000, num100, num10, num1]:
-                if n > 0:
-                    if nonFirstWord:
-                        answer += ' '
-                    else:
-                        nonFirstWord = True
-                    answer += numDict[n]
 
         return ExcerciseYield(title, question, answer)
 
