@@ -82,7 +82,7 @@ class Excercise:
         pass
 
 # generic for every phrases vocabulary
-class PhrasesEx:
+class PhrasesEx(Excercise):
     phrases: list[Phrase]
 
     def __init__(self, vocabularyTopic: str):

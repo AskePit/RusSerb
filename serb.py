@@ -15,14 +15,11 @@ def ExecuteExcercise(exc: ExcerciseDesc):
 
     if exc.type == ExcerciseType.phrases:
         excObject = PhrasesEx(exc.phrasesVoc)
+    elif exc.type == ExcerciseType.custom:
+        excObject = eval('{}()'.format(exc.customFunction))
 
     while True:
-        exYield: ExcerciseYield
-
-        if exc.type == ExcerciseType.phrases:
-            exYield = excObject()
-        elif exc.type == ExcerciseType.custom:
-            exYield = eval('{}()'.format(exc.customFunction))
+        exYield: ExcerciseYield = excObject()
 
         ClrScr()
         print('\n{}.........................\n'.format(PAD))
