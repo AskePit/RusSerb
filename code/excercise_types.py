@@ -77,6 +77,28 @@ class ExcerciseDescsDir:
             res += '\n' + ch.toString()
         return res
 
+class RandomPool:
+    origN: int = 0
+    pool: list[int]
+    lastIndex: int = None
+
+    def __init__(self, origList):
+        self.origN = len(origList)
+        self.refill()
+    
+    def refill(self):
+        self.pool = list(range(0, self.origN))
+        random.shuffle(self.pool)
+        if self.lastIndex and self.pool[-1] == self.lastIndex:
+            self.pool[-1], self.pool[0] = self.pool[0], self.pool[-1]
+
+    def yieldIndex(self) -> int:
+        if len(self.pool) == 0:
+            self.refill()
+
+        self.lastIndex = self.pool.pop()
+        return self.lastIndex
+
 class Excercise:
     def __call__(self) -> ExcerciseYield:
         pass
@@ -84,6 +106,7 @@ class Excercise:
 # generic for every phrases vocabulary
 class PhrasesEx(Excercise):
     phrases: list[Phrase]
+    random_pool: RandomPool
 
     def __init__(self, vocabularyTopic: str):
         lists: list[PhrasesList] = []
@@ -93,6 +116,11 @@ class PhrasesEx(Excercise):
             lists.append(GetVocabulary(voc.strip()))
         
         self.phrases = PhrasesList.Merge(lists).phrases
+        self.random_pool = RandomPool(self.phrases)
+
+    def yieldRandomPhrase(self):
+        phraseIndex = self.random_pool.yieldIndex()
+        return self.phrases[phraseIndex]
 
     def __call__(self) -> ExcerciseYield:
         # title:    Переведите на сербский:
@@ -104,12 +132,10 @@ class PhrasesEx(Excercise):
         # answer:   Очень хорошо
 
         lang = random.randint(0, 1)
-        phrases = self.phrases
-        greetingIndex = random.randint(0, len(phrases)-1)
-        greeting = phrases[greetingIndex]
+        phrase = self.yieldRandomPhrase()
 
-        rus = greeting.rus.capitalize()
-        serb = greeting.serb.capitalize()
+        rus = phrase.rus.capitalize()
+        serb = phrase.serb.capitalize()
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
         question = [rus, serb][lang]
