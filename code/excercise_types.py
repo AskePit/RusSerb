@@ -78,26 +78,26 @@ class ExcerciseDescsDir:
         return res
 
 class RandomPool:
-    origN: int = 0
+    origList: list
     pool: list[int]
     lastIndex: int = None
 
     def __init__(self, origList):
-        self.origN = len(origList)
+        self.origList = origList
         self.refill()
     
     def refill(self):
-        self.pool = list(range(0, self.origN))
+        self.pool = list(range(0, len(self.origList)))
         random.shuffle(self.pool)
         if self.lastIndex and self.pool[-1] == self.lastIndex:
             self.pool[-1], self.pool[0] = self.pool[0], self.pool[-1]
 
-    def yieldIndex(self) -> int:
+    def yieldElem(self):
         if len(self.pool) == 0:
             self.refill()
         
         self.lastIndex = self.pool.pop()
-        return self.lastIndex
+        return self.origList[self.lastIndex]
 
 class Excercise:
     def __call__(self) -> ExcerciseYield:
@@ -134,7 +134,7 @@ class PhrasesEx(Excercise):
         # answer:   Очень хорошо
 
         lang = random.randint(0, 1)
-        phrase = self.yieldRandomPhrase()
+        phrase = self.randomPool.yieldElem()
 
         rus = phrase.rus.capitalize()
         serb = phrase.serb.capitalize()
