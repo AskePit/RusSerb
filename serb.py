@@ -10,16 +10,19 @@ def ClrScr():
 
 PAD = '  '
 
-def ExecuteExcercise(exc: Excercise):
-    excCall = ''
+def ExecuteExcercise(exc: ExcerciseDesc):
+    excObject = None
 
     if exc.type == ExcerciseType.phrases:
-        excCall = 'PhrasesEx(\'{}\')'.format(exc.phrasesVoc)
-    elif exc.type == ExcerciseType.custom:
-        excCall = '{}()'.format(exc.customFunction)
+        excObject = PhrasesEx(exc.phrasesVoc)
 
     while True:
-        exYield: ExcerciseYield = eval(excCall)
+        exYield: ExcerciseYield
+
+        if exc.type == ExcerciseType.phrases:
+            exYield = excObject()
+        elif exc.type == ExcerciseType.custom:
+            exYield = eval('{}()'.format(exc.customFunction))
 
         ClrScr()
         print('\n{}.........................\n'.format(PAD))
@@ -80,9 +83,9 @@ def main():
                 currentDir = currentDir.parent
         elif ans in numToEx:
             exc = numToEx[ans]
-            if isinstance(exc, ExcercisesDir):
+            if isinstance(exc, ExcerciseDescsDir):
                 currentDir = exc
-            elif isinstance(exc, Excercise):
+            elif isinstance(exc, ExcerciseDesc):
                 ExecuteExcercise(exc)
             else:
                 continue

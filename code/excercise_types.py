@@ -17,7 +17,7 @@ class ExcerciseType(Enum):
     phrases = 0
     custom = 1
 
-class Excercise:
+class ExcerciseDesc:
     name: str
     parent = None # ExcercisesDir
     serialNumber: int
@@ -28,7 +28,7 @@ class Excercise:
         self.parent = None
     
     def MakePhrasesEx(name: str, voc: str, parent, number: int):
-        ex = Excercise()
+        ex = ExcerciseDesc()
         ex.name = name
         ex.parent = parent
         ex.serialNumber = number
@@ -37,7 +37,7 @@ class Excercise:
         return ex
 
     def MakeCustomEx(name: str, funcName, parent, number: int):
-        ex = Excercise()
+        ex = ExcerciseDesc()
         ex.name = name
         ex.parent = parent
         ex.serialNumber = number
@@ -54,7 +54,7 @@ class Excercise:
             res += ' <-> ' + self.customFunction
         return res
 
-class ExcercisesDir:
+class ExcerciseDescsDir:
     name: str
     parent = None # ExcercisesDir
     serialNumber: int
@@ -77,36 +77,42 @@ class ExcercisesDir:
             res += '\n' + ch.toString()
         return res
 
+class Excercise:
+    def __call__(self) -> ExcerciseYield:
+        pass
+
 # generic for every phrases vocabulary
-def PhrasesEx(vocabularyTopic: str) -> ExcerciseYield:
-    # title:    Переведите на сербский:
-    # question: Доброе утро
-    # answer:   Dobro jutro
+class PhrasesEx:
+    phrases: list[Phrase]
 
-    # title:    Переведите на русский:
-    # question: Vrlo dobro
-    # answer:   Очень хорошо
-
-    def CollectPhrases(topic: str) -> PhrasesList:
+    def __init__(self, vocabularyTopic: str):
         lists: list[PhrasesList] = []
-        vocs = topic.split(' ')
+        vocs = vocabularyTopic.split(' ')
 
         for voc in vocs:
             lists.append(GetVocabulary(voc.strip()))
         
-        return PhrasesList.Merge(lists)
+        self.phrases = PhrasesList.Merge(lists).phrases
 
-    lang = random.randint(0, 1)
-    phrases = CollectPhrases(vocabularyTopic).phrases
-    greetingIndex = random.randint(0, len(phrases)-1)
-    greeting = phrases[greetingIndex]
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский:
+        # question: Доброе утро
+        # answer:   Dobro jutro
 
-    rus = greeting.rus.capitalize()
-    serb = greeting.serb.capitalize()
+        # title:    Переведите на русский:
+        # question: Vrlo dobro
+        # answer:   Очень хорошо
 
-    title = ['Переведите на сербский', 'Переведите на русский'][lang]
-    question = [rus, serb][lang]
-    answer = [serb, rus][lang]
+        lang = random.randint(0, 1)
+        phrases = self.phrases
+        greetingIndex = random.randint(0, len(phrases)-1)
+        greeting = phrases[greetingIndex]
 
-    return ExcerciseYield(title, question, answer)
-    
+        rus = greeting.rus.capitalize()
+        serb = greeting.serb.capitalize()
+
+        title = ['Переведите на сербский', 'Переведите на русский'][lang]
+        question = [rus, serb][lang]
+        answer = [serb, rus][lang]
+
+        return ExcerciseYield(title, question, answer)

@@ -207,9 +207,9 @@ def LoadVocabulary():
         vocabulary[collectionName] = data
 
 def LoadExcercises():
-    def LoadDir(dirname, parent: ExcercisesDir) -> ExcercisesDir:
+    def LoadDir(dirname, parent: ExcerciseDescsDir) -> ExcerciseDescsDir:
         number = GetSerialNumber(dirname)
-        excDir = ExcercisesDir(parent, number)
+        excDir = ExcerciseDescsDir(parent, number)
 
         for f in glob.glob('{}/**'.format(dirname)):
             if os.path.isdir(f):
@@ -221,7 +221,7 @@ def LoadExcercises():
                     excDir.excercises.append(LoadExcercise(f, excDir))
         return excDir
 
-    def LoadExcercise(filename, parent: ExcercisesDir) -> Excercise:
+    def LoadExcercise(filename, parent: ExcerciseDescsDir) -> ExcerciseDesc:
         with io.open(filename, encoding='utf-8') as f:
             number = GetSerialNumber(filename)
             data = f.readlines()
@@ -231,10 +231,10 @@ def LoadExcercises():
 
             if type == ExcerciseType.phrases:
                 voc = data[2].strip()
-                return Excercise.MakePhrasesEx(name, voc, parent, number)
+                return ExcerciseDesc.MakePhrasesEx(name, voc, parent, number)
             else:
                 funcName = data[2].strip()
-                return Excercise.MakeCustomEx(name, funcName, parent, number)
+                return ExcerciseDesc.MakeCustomEx(name, funcName, parent, number)
     
     def LoadTitle(filename) -> str:
         with io.open(filename, encoding='utf-8') as f:
