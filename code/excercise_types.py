@@ -101,7 +101,7 @@ class RandomPool:
 
 class Excercise:
     def __call__(self) -> ExcerciseYield:
-        pass
+        return ExcerciseYield()
 
 # generic for every phrases vocabulary
 class PhrasesEx(Excercise):
