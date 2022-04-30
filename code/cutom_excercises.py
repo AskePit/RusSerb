@@ -1,6 +1,15 @@
 from code.excercise_types import *
 
 class ToBeEx(Excercise):
+    occupationsList: list[Word]
+    randomPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        self.occupationsList = GetVocabulary('occupations').words
+        self.randomPool = RandomPool(self.occupationsList)
+
     def __call__(self) -> ExcerciseYield:
         # title:    Переведите на сербский:
         # question: Я студент (student)
@@ -12,7 +21,7 @@ class ToBeEx(Excercise):
 
         decl = Declination.Make('male|fem & first|second|third & sing|plur & nom')
 
-        occupation = random.choice(GetVocabulary('occupations').words)
+        occupation = self.occupationsList[self.randomPool.yieldIndex()]
         negative = random.randint(0, 1)
         pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
         tb = [GetVocabulary('tobe'), GetVocabulary('negative_tobe')][negative].get(decl)
@@ -26,6 +35,15 @@ class ToBeEx(Excercise):
         return ExcerciseYield(title, question, answer)
 
 class ToBeEx2(Excercise):
+    occupationsList: list[Word]
+    randomPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        self.occupationsList = GetVocabulary('occupations').words
+        self.randomPool = RandomPool(self.occupationsList)
+
     def __call__(self) -> ExcerciseYield:
         # title:    Переведите на сербский в форме `Da li ...?`
         # question: Ты студент (student)?
@@ -37,7 +55,7 @@ class ToBeEx2(Excercise):
 
         decl = Declination.Make('male|fem & first|second|third & sing|plur & nom')
 
-        occupation = random.choice(GetVocabulary('occupations').words)
+        occupation = self.occupationsList[self.randomPool.yieldIndex()]
         form = random.randint(0, 1)
         pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
         tb = [GetVocabulary('tobe'), GetVocabulary('question_tobe')][form].get(decl)
@@ -57,6 +75,15 @@ class ToBeEx2(Excercise):
         return ExcerciseYield(title, question, answer)
 
 class ToBeEx3(Excercise):
+    occupationsList: list[Word]
+    randomPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        self.occupationsList = GetVocabulary('occupations').words
+        self.randomPool = RandomPool(self.occupationsList)
+
     def __call__(self) -> ExcerciseYield:
         # title:    Ответьте на вопрос в короткой форме:
         # question: Ты студент (student)?
@@ -72,7 +99,7 @@ class ToBeEx3(Excercise):
         #print(qDecl.toString())
         #print(aDecl.toString())
 
-        occupation = random.choice(GetVocabulary('occupations').words)
+        occupation = self.occupationsList[self.randomPool.yieldIndex()]
         form = random.randint(0, 1)
         qPronoun = GetVocabulary('personal_pronouns').getWordForm(qDecl)
         aPronoun = GetVocabulary('personal_pronouns').getWordForm(aDecl)
@@ -121,14 +148,13 @@ class NumbersGeneratorEx(Excercise):
             if number in self.usedPool:
                 # interrupt and generate number again
                 continue
-
-            # 11 12 13 14 15 16 17 18 19 are special
-            # and have their own word for both 10 and 1 ranks
-            if num10 == 10:
-                num10 += num1
-                num1 = 0
-
             break
+
+        # 11 12 13 14 15 16 17 18 19 are special
+        # and have their own word for both 10 and 1 ranks
+        if num10 == 10:
+            num10 += num1
+            num1 = 0
 
         if len(self.usedPool) >= 256:
             self.usedPool.clear()
@@ -168,6 +194,15 @@ class NumbersGeneratorEx(Excercise):
         return ExcerciseYield(title, question, answer)
 
 class PointingEx(Excercise):
+    nounsList: list[Word]
+    randomPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        self.nounsList = GetVocabulary('random_nouns').words
+        self.randomPool = RandomPool(self.nounsList)
+
     def __call__(self) -> ExcerciseYield:
         # title:    Переведите на сербский:
         # question: Эта умная кошка моя
@@ -182,7 +217,7 @@ class PointingEx(Excercise):
         num = random.choice(list(Number))
         distance = random.choice(list(Distance))
 
-        nounGen = random.choice(GetVocabulary('random_nouns').words)
+        nounGen = self.nounsList[self.randomPool.yieldIndex()]
         gender = nounGen.metaDeclination.gender
 
         decl = Declination.Make('{} & {} & {} & {} & {}'.format(gender.name, Case.nom.name, num.name, distance.name, Person.third.name))

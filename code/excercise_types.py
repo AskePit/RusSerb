@@ -95,7 +95,7 @@ class RandomPool:
     def yieldIndex(self) -> int:
         if len(self.pool) == 0:
             self.refill()
-
+        
         self.lastIndex = self.pool.pop()
         return self.lastIndex
 
@@ -106,9 +106,11 @@ class Excercise:
 # generic for every phrases vocabulary
 class PhrasesEx(Excercise):
     phrases: list[Phrase]
-    random_pool: RandomPool
+    randomPool: RandomPool
 
     def __init__(self, vocabularyTopic: str):
+        super().__init__()
+
         lists: list[PhrasesList] = []
         vocs = vocabularyTopic.split(' ')
 
@@ -116,10 +118,10 @@ class PhrasesEx(Excercise):
             lists.append(GetVocabulary(voc.strip()))
         
         self.phrases = PhrasesList.Merge(lists).phrases
-        self.random_pool = RandomPool(self.phrases)
+        self.randomPool = RandomPool(self.phrases)
 
     def yieldRandomPhrase(self):
-        phraseIndex = self.random_pool.yieldIndex()
+        phraseIndex = self.randomPool.yieldIndex()
         return self.phrases[phraseIndex]
 
     def __call__(self) -> ExcerciseYield:
