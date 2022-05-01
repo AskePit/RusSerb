@@ -3,37 +3,40 @@ import copy
 import random
 
 class SpeechPart(Enum):
-    noun = 0,
-    pronoun = 1
-    tobe = 2
-    verb = 3
-    adjective = 4
-    proverb = 5
-    particle = 6
+    noun      = 0 # существительное
+    pronoun   = 1 # местоимение
+    tobe      = 2 # быть
+    verb      = 3 # глагол
+    adjective = 4 # прилагательное
+    adverb    = 5 # наречие
+    particle  = 6 # частица
+
+class ExclusiveForm(Enum):
+    inf = 0 # infinitive
 
 class Gender(Enum):
-    male = 0
-    fem = 1
-    neu = 2
-    unisex = 3
+    male   = 0 # male
+    fem    = 1 # feminitive
+    neu    = 2 # neutral
+    unisex = 3 # all genders
     
 class Number(Enum):
-    sing = 0
-    plur = 1
+    sing = 0 # singular / ед.ч.
+    plur = 1 # plural   / мн.ч.
     
 class Case(Enum):
-    nom = 0
-    gen = 1
-    dat = 2
-    aku = 3
-    vok = 4
-    inst = 5
-    lok = 6
+    nom  = 0 # nominative   / именительный
+    gen  = 1 # genitive     / родительный
+    dat  = 2 # dative       / дательный
+    aku  = 3 # akuzative    / винительный
+    vok  = 4 # vokative     / ---
+    inst = 5 # instrumental / творительный
+    lok  = 6 # lokative     / предложный
 
 class Person(Enum):
-    first = 0
-    second = 1
-    third = 2
+    first  = 0 # первое лицо
+    second = 1 # второе лицо
+    third  = 2 # третье лицо
 
     def getOpposite(self):
         if self.value == 0:
@@ -42,10 +45,25 @@ class Person(Enum):
             return Person.first
         return Person.third
 
+class Time(Enum):
+    present   = 0
+    perfect   = 1
+    imperfect = 2
+    futur     = 3
+
+    def isPresent(self):
+        return self.value == 0
+    
+    def isPast(self):
+        return self.value == 1 or self.value == 2
+
+    def isFuture(self):
+        return self.value == 3
+
 class Distance(Enum):
-    close = 0
-    far = 1
-    off= 2
+    close = 0 # этот
+    far   = 1 # тот
+    off   = 2 # тот очень далекий
 
 DeclinationAttributesMap = {
     'person': Person,
@@ -53,6 +71,8 @@ DeclinationAttributesMap = {
     'number': Number,
     'case': Case,
     'distance': Distance,
+    'exclusive': ExclusiveForm,
+    'time': Time
 }
 
 class Declination:
@@ -186,6 +206,9 @@ class Declination:
                 break
 
         return res
+
+    def isInfinitive(self) -> bool:
+        return hasattr(self, 'exclusive') and self.exclusive == ExclusiveForm.inf
     
     def toString(self):
         first = True
