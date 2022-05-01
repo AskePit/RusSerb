@@ -1,6 +1,21 @@
 from code.core_types import *
 import random
 
+class LangMode(Enum):
+    rusSerb = 0,
+    serbRus = 1,
+    random = 2
+
+    def GetLangBit():
+        if LANG_MODE == LangMode.rusSerb:
+            return 0
+        elif LANG_MODE == LangMode.serbRus:
+            return 1
+        else:
+            return random.randint(0, 1)
+
+LANG_MODE = LangMode.rusSerb
+
 # NOTE: each excercise should return `ExcerciseYield` object
 
 class ExcerciseYield:
@@ -133,7 +148,7 @@ class PhrasesEx(Excercise):
         # question: Vrlo dobro
         # answer:   Очень хорошо
 
-        lang = random.randint(0, 1)
+        lang = LangMode.GetLangBit()
         phrase = self.randomPool.yieldElem()
 
         rus = phrase.rus.capitalize()

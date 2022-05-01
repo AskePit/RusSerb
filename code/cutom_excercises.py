@@ -200,7 +200,7 @@ class PointingEx(Excercise):
         # question: To crveno vino je tvoje 
         # answer:   То красное вино твое
 
-        lang = random.randint(0, 1)
+        lang = LangMode.GetLangBit()
 
         num = random.choice(list(Number))
         distance = random.choice(list(Distance))
