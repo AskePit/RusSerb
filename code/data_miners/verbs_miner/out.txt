@@ -1,0 +1,1022 @@
+fixed verb
+
+misliti
+none
+
+inf:  | misliti
+
+present & sing & first:  | mislim
+present & sing & second:  | misliš
+present & sing & third:  | misli
+present & plur & first:  | mislimo
+present & plur & second:  | mislite
+present & plur & third:  | misle
+
+futur & sing & first:  | misliću
+futur & sing & second:  | mislićeš
+futur & sing & third:  | misliće
+futur & plur & first:  | mislićemo
+futur & plur & second:  | mislićete
+futur & plur & third:  | misliće
+
+perfect & sing & first:  | mislio sam
+perfect & sing & second:  | mislio si
+perfect & sing & third:  | mislio je
+perfect & plur & first:  | mislili smo
+perfect & plur & second:  | mislili ste
+perfect & plur & third:  | mislili su
+
+imperfect & sing & first:  | mišljah
+imperfect & sing & second:  | mišljaše
+imperfect & sing & third:  | mišljaše
+imperfect & plur & first:  | mišljasmo
+imperfect & plur & second:  | mišljaste
+imperfect & plur & third:  | mišljahu
+
+# participle & present:  | mȉslēći
+# participle & past:  | 
+# noun:  | mȉšljēnje
+
+# futur & sing & first:  | mislit ću
+# futur & sing & second:  | mislit ćeš
+# futur & sing & third:  | mislit će
+# futur & plur & first:  | mislit ćemo
+# futur & plur & second:  | mislit ćete
+# futur & plur & third:  | mislit će
+
+# futur2 & sing & first:  | budem mislio
+# futur2 & sing & second:  | budeš mislio
+# futur2 & sing & third:  | bude mislio
+# futur2 & plur & first:  | budemo mislili
+# futur2 & plur & second:  | budete mislili
+# futur2 & plur & third:  | budu mislili
+
+# pluskvamperfekt & sing & first:  | bio sam mislio
+# pluskvamperfekt & sing & second:  | bio si mislio
+# pluskvamperfekt & sing & third:  | bio je mislio
+# pluskvamperfekt & plur & first:  | bili smo mislili
+# pluskvamperfekt & plur & second:  | bili ste mislili
+# pluskvamperfekt & plur & third:  | bili su mislili
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | mislio bih
+# cond1 & sing & second:  | mislio bi
+# cond1 & sing & third:  | mislio bi
+# cond1 & plur & first:  | mislili bismo
+# cond1 & plur & second:  | mislili biste
+# cond1 & plur & third:  | mislili bi
+
+# cond2 & sing & first:  | bio bih mislio
+# cond2 & sing & second:  | bio bi mislio
+# cond2 & sing & third:  | bio bi mislio
+# cond2 & plur & first:  | bili bismo mislili
+# cond2 & plur & second:  | bili biste mislili
+# cond2 & plur & third:  | bili bi mislili
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | misli
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | mislimo
+# imperativ & plur & second:  | mislite
+# imperativ & plur & third:  | 
+
+# active & sing & m:  | mislio
+# active & sing & f:  | mislila
+# active & sing & n:  | mislilo
+# active & plur & m:  | mislili
+# active & plur & f:  | mislile
+# active & plur & n:  | mislila
+
+# passive & sing & m:  | mišljen
+# passive & sing & f:  | mišljena
+# passive & sing & n:  | mišljeno
+# passive & plur & m:  | mišljeni
+# passive & plur & f:  | mišljene
+# passive & plur & n:  | mišljena
+
+---
+
+čitati
+none
+
+inf:  | čitati
+
+present & sing & first:  | čitam
+present & sing & second:  | čitaš
+present & sing & third:  | čita
+present & plur & first:  | čitamo
+present & plur & second:  | čitate
+present & plur & third:  | čitaju
+
+futur & sing & first:  | čitaću
+futur & sing & second:  | čitaćeš
+futur & sing & third:  | čitaće
+futur & plur & first:  | čitaćemo
+futur & plur & second:  | čitaćete
+futur & plur & third:  | čitaće
+
+perfect & sing & first:  | čitao sam
+perfect & sing & second:  | čitao si
+perfect & sing & third:  | čitao je
+perfect & plur & first:  | čitali smo
+perfect & plur & second:  | čitali ste
+perfect & plur & third:  | čitali su
+
+imperfect & sing & first:  | čitah
+imperfect & sing & second:  | čitaše
+imperfect & sing & third:  | čitaše
+imperfect & plur & first:  | čitasmo
+imperfect & plur & second:  | čitaste
+imperfect & plur & third:  | čitahu
+
+# participle & present:  | čìtajūći
+# participle & past:  | 
+# noun:  | čìtānje
+
+# futur & sing & first:  | čitat ću
+# futur & sing & second:  | čitat ćeš
+# futur & sing & third:  | čitat će
+# futur & plur & first:  | čitat ćemo
+# futur & plur & second:  | čitat ćete
+# futur & plur & third:  | čitat će
+
+# futur2 & sing & first:  | budem čitao
+# futur2 & sing & second:  | budeš čitao
+# futur2 & sing & third:  | bude čitao
+# futur2 & plur & first:  | budemo čitali
+# futur2 & plur & second:  | budete čitali
+# futur2 & plur & third:  | budu čitali
+
+# pluskvamperfekt & sing & first:  | bio sam čitao
+# pluskvamperfekt & sing & second:  | bio si čitao
+# pluskvamperfekt & sing & third:  | bio je čitao
+# pluskvamperfekt & plur & first:  | bili smo čitali
+# pluskvamperfekt & plur & second:  | bili ste čitali
+# pluskvamperfekt & plur & third:  | bili su čitali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | čitao bih
+# cond1 & sing & second:  | čitao bi
+# cond1 & sing & third:  | čitao bi
+# cond1 & plur & first:  | čitali bismo
+# cond1 & plur & second:  | čitali biste
+# cond1 & plur & third:  | čitali bi
+
+# cond2 & sing & first:  | bio bih čitao
+# cond2 & sing & second:  | bio bi čitao
+# cond2 & sing & third:  | bio bi čitao
+# cond2 & plur & first:  | bili bismo čitali
+# cond2 & plur & second:  | bili biste čitali
+# cond2 & plur & third:  | bili bi čitali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | čitaj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | čitajmo
+# imperativ & plur & second:  | čitajte
+# imperativ & plur & third:  | 
+
+# active & sing & m:  | čitao
+# active & sing & f:  | čitala
+# active & sing & n:  | čitalo
+# active & plur & m:  | čitali
+# active & plur & f:  | čitale
+# active & plur & n:  | čitala
+
+# passive & sing & m:  | čitan
+# passive & sing & f:  | čitana
+# passive & sing & n:  | čitano
+# passive & plur & m:  | čitani
+# passive & plur & f:  | čitane
+# passive & plur & n:  | čitana
+
+---
+
+gledati
+none
+
+inf:  | gledati
+
+present & sing & first:  | gledam
+present & sing & second:  | gledaš
+present & sing & third:  | gleda
+present & plur & first:  | gledamo
+present & plur & second:  | gledate
+present & plur & third:  | gledaju
+
+futur & sing & first:  | gledaću
+futur & sing & second:  | gledaćeš
+futur & sing & third:  | gledaće
+futur & plur & first:  | gledaćemo
+futur & plur & second:  | gledaćete
+futur & plur & third:  | gledaće
+
+perfect & sing & first:  | gledao sam
+perfect & sing & second:  | gledao si
+perfect & sing & third:  | gledao je
+perfect & plur & first:  | gledali smo
+perfect & plur & second:  | gledali ste
+perfect & plur & third:  | gledali su
+
+imperfect & sing & first:  | gledah
+imperfect & sing & second:  | gledaše
+imperfect & sing & third:  | gledaše
+imperfect & plur & first:  | gledasmo
+imperfect & plur & second:  | gledaste
+imperfect & plur & third:  | gledahu
+
+# participle & present:  | glédajūći
+# participle & past:  | 
+# noun:  | glédānje
+
+# futur & sing & first:  | gledat ću
+# futur & sing & second:  | gledat ćeš
+# futur & sing & third:  | gledat će
+# futur & plur & first:  | gledat ćemo
+# futur & plur & second:  | gledat ćete
+# futur & plur & third:  | gledat će
+
+# futur2 & sing & first:  | budem gledao
+# futur2 & sing & second:  | budeš gledao
+# futur2 & sing & third:  | bude gledao
+# futur2 & plur & first:  | budemo gledali
+# futur2 & plur & second:  | budete gledali
+# futur2 & plur & third:  | budu gledali
+
+# pluskvamperfekt & sing & first:  | bio sam gledao
+# pluskvamperfekt & sing & second:  | bio si gledao
+# pluskvamperfekt & sing & third:  | bio je gledao
+# pluskvamperfekt & plur & first:  | bili smo gledali
+# pluskvamperfekt & plur & second:  | bili ste gledali
+# pluskvamperfekt & plur & third:  | bili su gledali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | gledao bih
+# cond1 & sing & second:  | gledao bi
+# cond1 & sing & third:  | gledao bi
+# cond1 & plur & first:  | gledali bismo
+# cond1 & plur & second:  | gledali biste
+# cond1 & plur & third:  | gledali bi
+
+# cond2 & sing & first:  | bio bih gledao
+# cond2 & sing & second:  | bio bi gledao
+# cond2 & sing & third:  | bio bi gledao
+# cond2 & plur & first:  | bili bismo gledali
+# cond2 & plur & second:  | bili biste gledali
+# cond2 & plur & third:  | bili bi gledali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | gledaj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | gledajmo
+# imperativ & plur & second:  | gledajte
+# imperativ & plur & third:  | 
+
+# active & sing & m:  | gledao
+# active & sing & f:  | gledala
+# active & sing & n:  | gledalo
+# active & plur & m:  | gledali
+# active & plur & f:  | gledale
+# active & plur & n:  | gledala
+
+# passive & sing & m:  | gledan
+# passive & sing & f:  | gledana
+# passive & sing & n:  | gledano
+# passive & plur & m:  | gledani
+# passive & plur & f:  | gledane
+# passive & plur & n:  | gledana
+
+---
+
+čekati
+none
+
+inf:  | čekati
+
+present & sing & first:  | čekam
+present & sing & second:  | čekaš
+present & sing & third:  | čeka
+present & plur & first:  | čekamo
+present & plur & second:  | čekate
+present & plur & third:  | čekaju
+
+futur & sing & first:  | čekaću
+futur & sing & second:  | čekaćeš
+futur & sing & third:  | čekaće
+futur & plur & first:  | čekaćemo
+futur & plur & second:  | čekaćete
+futur & plur & third:  | čekaće
+
+perfect & sing & first:  | čekao sam
+perfect & sing & second:  | čekao si
+perfect & sing & third:  | čekao je
+perfect & plur & first:  | čekali smo
+perfect & plur & second:  | čekali ste
+perfect & plur & third:  | čekali su
+
+imperfect & sing & first:  | čekah
+imperfect & sing & second:  | čekaše
+imperfect & sing & third:  | čekaše
+imperfect & plur & first:  | čekasmo
+imperfect & plur & second:  | čekaste
+imperfect & plur & third:  | čekahu
+
+# participle & present:  | čȅkajūći
+# participle & past:  | 
+# noun:  | čȅkānje
+
+# futur & sing & first:  | čekat ću
+# futur & sing & second:  | čekat ćeš
+# futur & sing & third:  | čekat će
+# futur & plur & first:  | čekat ćemo
+# futur & plur & second:  | čekat ćete
+# futur & plur & third:  | čekat će
+
+# futur2 & sing & first:  | budem čekao
+# futur2 & sing & second:  | budeš čekao
+# futur2 & sing & third:  | bude čekao
+# futur2 & plur & first:  | budemo čekali
+# futur2 & plur & second:  | budete čekali
+# futur2 & plur & third:  | budu čekali
+
+# pluskvamperfekt & sing & first:  | bio sam čekao
+# pluskvamperfekt & sing & second:  | bio si čekao
+# pluskvamperfekt & sing & third:  | bio je čekao
+# pluskvamperfekt & plur & first:  | bili smo čekali
+# pluskvamperfekt & plur & second:  | bili ste čekali
+# pluskvamperfekt & plur & third:  | bili su čekali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | čekao bih
+# cond1 & sing & second:  | čekao bi
+# cond1 & sing & third:  | čekao bi
+# cond1 & plur & first:  | čekali bismo
+# cond1 & plur & second:  | čekali biste
+# cond1 & plur & third:  | čekali bi
+
+# cond2 & sing & first:  | bio bih čekao
+# cond2 & sing & second:  | bio bi čekao
+# cond2 & sing & third:  | bio bi čekao
+# cond2 & plur & first:  | bili bismo čekali
+# cond2 & plur & second:  | bili biste čekali
+# cond2 & plur & third:  | bili bi čekali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | čekaj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | čekajmo
+# imperativ & plur & second:  | čekajte
+# imperativ & plur & third:  | 
+
+# active & sing & m:  | čekao
+# active & sing & f:  | čekala
+# active & sing & n:  | čekalo
+# active & plur & m:  | čekali
+# active & plur & f:  | čekale
+# active & plur & n:  | čekala
+
+# passive & sing & m:  | čekan
+# passive & sing & f:  | čekana
+# passive & sing & n:  | čekano
+# passive & plur & m:  | čekani
+# passive & plur & f:  | čekane
+# passive & plur & n:  | čekana
+
+---
+
+pričati
+none
+
+inf:  | pričati
+
+present & sing & first:  | pričam
+present & sing & second:  | pričaš
+present & sing & third:  | priča
+present & plur & first:  | pričamo
+present & plur & second:  | pričate
+present & plur & third:  | pričaju
+
+futur & sing & first:  | pričaću
+futur & sing & second:  | pričaćeš
+futur & sing & third:  | pričaće
+futur & plur & first:  | pričaćemo
+futur & plur & second:  | pričaćete
+futur & plur & third:  | pričaće
+
+perfect & sing & first:  | pričao sam
+perfect & sing & second:  | pričao si
+perfect & sing & third:  | pričao je
+perfect & plur & first:  | pričali smo
+perfect & plur & second:  | pričali ste
+perfect & plur & third:  | pričali su
+
+imperfect & sing & first:  | pričah
+imperfect & sing & second:  | pričaše
+imperfect & sing & third:  | pričaše
+imperfect & plur & first:  | pričasmo
+imperfect & plur & second:  | pričaste
+imperfect & plur & third:  | pričahu
+
+# participle & present:  | príčajūći
+# participle & past:  | 
+# noun:  | príčānje
+
+# futur & sing & first:  | pričat ću
+# futur & sing & second:  | pričat ćeš
+# futur & sing & third:  | pričat će
+# futur & plur & first:  | pričat ćemo
+# futur & plur & second:  | pričat ćete
+# futur & plur & third:  | pričat će
+
+# futur2 & sing & first:  | budem pričao
+# futur2 & sing & second:  | budeš pričao
+# futur2 & sing & third:  | bude pričao
+# futur2 & plur & first:  | budemo pričali
+# futur2 & plur & second:  | budete pričali
+# futur2 & plur & third:  | budu pričali
+
+# pluskvamperfekt & sing & first:  | bio sam pričao
+# pluskvamperfekt & sing & second:  | bio si pričao
+# pluskvamperfekt & sing & third:  | bio je pričao
+# pluskvamperfekt & plur & first:  | bili smo pričali
+# pluskvamperfekt & plur & second:  | bili ste pričali
+# pluskvamperfekt & plur & third:  | bili su pričali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | pričao bih
+# cond1 & sing & second:  | pričao bi
+# cond1 & sing & third:  | pričao bi
+# cond1 & plur & first:  | pričali bismo
+# cond1 & plur & second:  | pričali biste
+# cond1 & plur & third:  | pričali bi
+
+# cond2 & sing & first:  | bio bih pričao
+# cond2 & sing & second:  | bio bi pričao
+# cond2 & sing & third:  | bio bi pričao
+# cond2 & plur & first:  | bili bismo pričali
+# cond2 & plur & second:  | bili biste pričali
+# cond2 & plur & third:  | bili bi pričali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | pričaj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | pričajmo
+# imperativ & plur & second:  | pričajte
+# imperativ & plur & third:  | 
+
+# active & sing & m:  | pričao
+# active & sing & f:  | pričala
+# active & sing & n:  | pričalo
+# active & plur & m:  | pričali
+# active & plur & f:  | pričale
+# active & plur & n:  | pričala
+
+# passive & sing & m:  | pričan
+# passive & sing & f:  | pričana
+# passive & sing & n:  | pričano
+# passive & plur & m:  | pričani
+# passive & plur & f:  | pričane
+# passive & plur & n:  | pričana
+
+---
+
+spavati
+none
+
+inf:  | spavati
+
+present & sing & first:  | spavam
+present & sing & second:  | spavaš
+present & sing & third:  | spava
+present & plur & first:  | spavamo
+present & plur & second:  | spavate
+present & plur & third:  | spavaju
+
+futur & sing & first:  | spavaću
+futur & sing & second:  | spavaćeš
+futur & sing & third:  | spavaće
+futur & plur & first:  | spavaćemo
+futur & plur & second:  | spavaćete
+futur & plur & third:  | spavaće
+
+perfect & sing & first:  | spavao sam
+perfect & sing & second:  | spavao si
+perfect & sing & third:  | spavao je
+perfect & plur & first:  | spavali smo
+perfect & plur & second:  | spavali ste
+perfect & plur & third:  | spavali su
+
+imperfect & sing & first:  | spavah
+imperfect & sing & second:  | spavaše
+imperfect & sing & third:  | spavaše
+imperfect & plur & first:  | spavasmo
+imperfect & plur & second:  | spavaste
+imperfect & plur & third:  | spavahu
+
+# participle & present:  | spávajūći
+# participle & past:  | 
+# noun:  | spávānje
+
+# futur & sing & first:  | spavat ću
+# futur & sing & second:  | spavat ćeš
+# futur & sing & third:  | spavat će
+# futur & plur & first:  | spavat ćemo
+# futur & plur & second:  | spavat ćete
+# futur & plur & third:  | spavat će
+
+# futur2 & sing & first:  | budem spavao
+# futur2 & sing & second:  | budeš spavao
+# futur2 & sing & third:  | bude spavao
+# futur2 & plur & first:  | budemo spavali
+# futur2 & plur & second:  | budete spavali
+# futur2 & plur & third:  | budu spavali
+
+# pluskvamperfekt & sing & first:  | bio sam spavao
+# pluskvamperfekt & sing & second:  | bio si spavao
+# pluskvamperfekt & sing & third:  | bio je spavao
+# pluskvamperfekt & plur & first:  | bili smo spavali
+# pluskvamperfekt & plur & second:  | bili ste spavali
+# pluskvamperfekt & plur & third:  | bili su spavali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | spavao bih
+# cond1 & sing & second:  | spavao bi
+# cond1 & sing & third:  | spavao bi
+# cond1 & plur & first:  | spavali bismo
+# cond1 & plur & second:  | spavali biste
+# cond1 & plur & third:  | spavali bi
+
+# cond2 & sing & first:  | bio bih spavao
+# cond2 & sing & second:  | bio bi spavao
+# cond2 & sing & third:  | bio bi spavao
+# cond2 & plur & first:  | bili bismo spavali
+# cond2 & plur & second:  | bili biste spavali
+# cond2 & plur & third:  | bili bi spavali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | spavaj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | spavajmo
+# imperativ & plur & second:  | spavajte
+# imperativ & plur & third:  | 
+
+# active & sing & m:  | spavao
+# active & sing & f:  | spavala
+# active & sing & n:  | spavalo
+# active & plur & m:  | spavali
+# active & plur & f:  | spavale
+# active & plur & n:  | spavala
+
+# passive & sing & m:  | 
+# passive & sing & f:  | 
+# passive & sing & n:  | 
+# passive & plur & m:  | 
+# passive & plur & f:  | 
+# passive & plur & n:  | 
+
+---
+
+slušati
+none
+
+inf:  | slušati
+
+present & sing & first:  | slušam
+present & sing & second:  | slušaš
+present & sing & third:  | sluša
+present & plur & first:  | slušamo
+present & plur & second:  | slušate
+present & plur & third:  | slušaju
+
+futur & sing & first:  | slušaću
+futur & sing & second:  | slušaćeš
+futur & sing & third:  | slušaće
+futur & plur & first:  | slušaćemo
+futur & plur & second:  | slušaćete
+futur & plur & third:  | slušaće
+
+perfect & sing & first:  | slušao sam
+perfect & sing & second:  | slušao si
+perfect & sing & third:  | slušao je
+perfect & plur & first:  | slušali smo
+perfect & plur & second:  | slušali ste
+perfect & plur & third:  | slušali su
+
+imperfect & sing & first:  | slušah
+imperfect & sing & second:  | slušaše
+imperfect & sing & third:  | slušaše
+imperfect & plur & first:  | slušasmo
+imperfect & plur & second:  | slušaste
+imperfect & plur & third:  | slušahu
+
+# participle & present:  | slȕšajūći
+# participle & past:  | 
+# noun:  | slȕšānje
+
+# futur & sing & first:  | slušat ću
+# futur & sing & second:  | slušat ćeš
+# futur & sing & third:  | slušat će
+# futur & plur & first:  | slušat ćemo
+# futur & plur & second:  | slušat ćete
+# futur & plur & third:  | slušat će
+
+# futur2 & sing & first:  | budem slušao
+# futur2 & sing & second:  | budeš slušao
+# futur2 & sing & third:  | bude slušao
+# futur2 & plur & first:  | budemo slušali
+# futur2 & plur & second:  | budete slušali
+# futur2 & plur & third:  | budu slušali
+
+# pluskvamperfekt & sing & first:  | bio sam slušao
+# pluskvamperfekt & sing & second:  | bio si slušao
+# pluskvamperfekt & sing & third:  | bio je slušao
+# pluskvamperfekt & plur & first:  | bili smo slušali
+# pluskvamperfekt & plur & second:  | bili ste slušali
+# pluskvamperfekt & plur & third:  | bili su slušali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | slušao bih
+# cond1 & sing & second:  | slušao bi
+# cond1 & sing & third:  | slušao bi
+# cond1 & plur & first:  | slušali bismo
+# cond1 & plur & second:  | slušali biste
+# cond1 & plur & third:  | slušali bi
+
+# cond2 & sing & first:  | bio bih slušao
+# cond2 & sing & second:  | bio bi slušao
+# cond2 & sing & third:  | bio bi slušao
+# cond2 & plur & first:  | bili bismo slušali
+# cond2 & plur & second:  | bili biste slušali
+# cond2 & plur & third:  | bili bi slušali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | slušaj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | slušajmo
+# imperativ & plur & second:  | slušajte
+# imperativ & plur & third:  | 
+
+# active & sing & m:  | slušao
+# active & sing & f:  | slušala
+# active & sing & n:  | slušalo
+# active & plur & m:  | slušali
+# active & plur & f:  | slušale
+# active & plur & n:  | slušala
+
+# passive & sing & m:  | slušan
+# passive & sing & f:  | slušana
+# passive & sing & n:  | slušano
+# passive & plur & m:  | slušani
+# passive & plur & f:  | slušane
+# passive & plur & n:  | slušana
+
+---
+
+morati
+none
+
+inf:  | morati
+
+present & sing & first:  | moram
+present & sing & second:  | moraš
+present & sing & third:  | mora
+present & plur & first:  | moramo
+present & plur & second:  | morate
+present & plur & third:  | moraju
+
+futur & sing & first:  | moraću
+futur & sing & second:  | moraćeš
+futur & sing & third:  | moraće
+futur & plur & first:  | moraćemo
+futur & plur & second:  | moraćete
+futur & plur & third:  | moraće
+
+perfect & sing & first:  | morao sam
+perfect & sing & second:  | morao si
+perfect & sing & third:  | morao je
+perfect & plur & first:  | morali smo
+perfect & plur & second:  | morali ste
+perfect & plur & third:  | morali su
+
+imperfect & sing & first:  | morah
+imperfect & sing & second:  | moraše
+imperfect & sing & third:  | moraše
+imperfect & plur & first:  | morasmo
+imperfect & plur & second:  | moraste
+imperfect & plur & third:  | morahu
+
+# participle & present:  | mórajūći
+# participle & past:  | 
+# noun:  | mórānje
+
+# futur & sing & first:  | morat ću
+# futur & sing & second:  | morat ćeš
+# futur & sing & third:  | morat će
+# futur & plur & first:  | morat ćemo
+# futur & plur & second:  | morat ćete
+# futur & plur & third:  | morat će
+
+# futur2 & sing & first:  | budem morao
+# futur2 & sing & second:  | budeš morao
+# futur2 & sing & third:  | bude morao
+# futur2 & plur & first:  | budemo morali
+# futur2 & plur & second:  | budete morali
+# futur2 & plur & third:  | budu morali
+
+# pluskvamperfekt & sing & first:  | bio sam morao
+# pluskvamperfekt & sing & second:  | bio si morao
+# pluskvamperfekt & sing & third:  | bio je morao
+# pluskvamperfekt & plur & first:  | bili smo morali
+# pluskvamperfekt & plur & second:  | bili ste morali
+# pluskvamperfekt & plur & third:  | bili su morali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | morao bih
+# cond1 & sing & second:  | morao bi
+# cond1 & sing & third:  | morao bi
+# cond1 & plur & first:  | morali bismo
+# cond1 & plur & second:  | morali biste
+# cond1 & plur & third:  | morali bi
+
+# cond2 & sing & first:  | bio bih morao
+# cond2 & sing & second:  | bio bi morao
+# cond2 & sing & third:  | bio bi morao
+# cond2 & plur & first:  | bili bismo morali
+# cond2 & plur & second:  | bili biste morali
+# cond2 & plur & third:  | bili bi morali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | moraj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | morajmo
+# imperativ & plur & second:  | morajte
+# imperativ & plur & third:  | 
+
+# active & sing & m:  | morao
+# active & sing & f:  | morala
+# active & sing & n:  | moralo
+# active & plur & m:  | morali
+# active & plur & f:  | morale
+# active & plur & n:  | morala
+
+# passive & sing & m:  | 
+# passive & sing & f:  | 
+# passive & sing & n:  | 
+# passive & plur & m:  | 
+# passive & plur & f:  | 
+# passive & plur & n:  | 
+
+---
+
+moći
+none
+
+inf:  | moći
+
+present & sing & first:  | mògu (impf.)  mognem (pf.)
+present & sing & second:  | možeš (impf.)  mogneš (pf.)
+present & sing & third:  | može (impf.)  mogne (pf.)
+present & plur & first:  | možemo (impf.)  mognemo (pf.)
+present & plur & second:  | možete (impf.)  mognete (pf.)
+present & plur & third:  | mògū (impf.)  mognu (pf.)
+
+futur & sing & first:  | ću moći
+futur & sing & second:  | ćeš moći
+futur & sing & third:  | će moći
+futur & plur & first:  | ćemo moći
+futur & plur & second:  | ćete moći
+futur & plur & third:  | ćē moći
+
+perfect & sing & first:  | mogao/la/lo sam
+perfect & sing & second:  | mogao/la/lo si
+perfect & sing & third:  | mogao/la/lo je
+perfect & plur & first:  | mogli/e/a smo
+perfect & plur & second:  | mogli/e/a ste
+perfect & plur & third:  | mogli/e/a su
+
+imperfect & sing & first:  | mogāh
+imperfect & sing & second:  | mogāše
+imperfect & sing & third:  | mogāše
+imperfect & plur & first:  | mogāsmo
+imperfect & plur & second:  | mogāste
+imperfect & plur & third:  | mogāhū
+
+# participle & present:  | 
+# participle & past:  | 
+# noun:  | 
+
+# futur & sing & first:  | moći ću
+# futur & sing & second:  | moći ćeš
+# futur & sing & third:  | moći će
+# futur & plur & first:  | moći ćemo
+# futur & plur & second:  | moći ćete
+# futur & plur & third:  | moći ćē
+
+# futur2 & sing & first:  | budem mogao  budem mogla  budem moglo
+# futur2 & sing & second:  | budeš mogao/la/lo
+# futur2 & sing & third:  | bude mogao/la/lo
+# futur2 & plur & first:  | budemo mogli  budemo mogle  budemo mogla
+# futur2 & plur & second:  | budete mogli/e/a
+# futur2 & plur & third:  | budu mogli/e/a
+
+# pluskvamperfekt & sing & first:  | a) bio/la/lo sam mogao/la/lo  b) bijah mogao/la/lo
+# pluskvamperfekt & sing & second:  | a) bio/la/lo si mogao/la/lo  b) bijaše mogao/la/lo
+# pluskvamperfekt & sing & third:  | a) bio/la/lo je mogao/la/lo  b) bijaše mogao/la/lo
+# pluskvamperfekt & plur & first:  | a) bili/e/a smo mogli/e/a  b) bijasmo mogli/e/a
+# pluskvamperfekt & plur & second:  | a) bili/e/a ste mogli/e/a  b) bijaste mogli/e/a
+# pluskvamperfekt & plur & third:  | a) bili/e/a su mogli/e/a  b) bijahu mogli/e/a
+
+# aorist & sing & first:  | mogoh
+# aorist & sing & second:  | može
+# aorist & sing & third:  | može
+# aorist & plur & first:  | mogosmo
+# aorist & plur & second:  | mogoste
+# aorist & plur & third:  | mogošē
+
+# cond1 & sing & first:  | mogao/la/lo bih
+# cond1 & sing & second:  | mogao/la/lo bi
+# cond1 & sing & third:  | mogao/la/lo bi
+# cond1 & plur & first:  | mogli/e/a bismo
+# cond1 & plur & second:  | mogli/e/a biste
+# cond1 & plur & third:  | mogli/e/a bi
+
+# cond2 & sing & first:  | bio/la/lo bih mogao/la/lo
+# cond2 & sing & second:  | bio/la/lo bi mogao/la/lo
+# cond2 & sing & third:  | bio/la/lo bi mogao/la/lo
+# cond2 & plur & first:  | bili/e/a bismo mogli/e/a
+# cond2 & plur & second:  | bili/e/a biste mogli/e/a
+# cond2 & plur & third:  | bili/e/a bi mogli/e/a
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | mogni!
+# imperativ & sing & third:  | (neka mognē!)
+# imperativ & plur & first:  | mognimo!
+# imperativ & plur & second:  | mognite!
+# imperativ & plur & third:  | (neka mognū!)
+
+# active & sing & m:  | 
+# active & sing & f:  | 
+# active & sing & n:  | 
+# active & plur & m:  | 
+# active & plur & f:  | 
+# active & plur & n:  | 
+
+# passive & sing & m:  | 
+# passive & sing & f:  | 
+# passive & sing & n:  | 
+# passive & plur & m:  | 
+# passive & plur & f:  | 
+# passive & plur & n:  | 
+
+---
+
+znati
+none
+
+inf:  | znati
+
+present & sing & first:  | znam / znadem
+present & sing & second:  | znaš / znadeš
+present & sing & third:  | zna / znade
+present & plur & first:  | znamo / znademo
+present & plur & second:  | znate / znadete
+present & plur & third:  | znaju / znadu
+
+futur & sing & first:  | znaću
+futur & sing & second:  | znaćeš
+futur & sing & third:  | znaće
+futur & plur & first:  | znaćemo
+futur & plur & second:  | znaćete
+futur & plur & third:  | znaće
+
+perfect & sing & first:  | znao sam
+perfect & sing & second:  | znao si
+perfect & sing & third:  | znao je
+perfect & plur & first:  | znali smo
+perfect & plur & second:  | znali ste
+perfect & plur & third:  | znali su
+
+imperfect & sing & first:  | znah / znadijah
+imperfect & sing & second:  | znaše / znadijaše
+imperfect & sing & third:  | znaše / znadijaše
+imperfect & plur & first:  | znasmo / znadijasmo
+imperfect & plur & second:  | znaste / znadijaste
+imperfect & plur & third:  | znahu / znadijahu
+
+# participle & present:  | znȁjūći/znádūći
+# participle & past:  | 
+# noun:  | 
+
+# futur & sing & first:  | znat ću
+# futur & sing & second:  | znat ćeš
+# futur & sing & third:  | znat će
+# futur & plur & first:  | znat ćemo
+# futur & plur & second:  | znat ćete
+# futur & plur & third:  | znat će
+
+# futur2 & sing & first:  | budem znao
+# futur2 & sing & second:  | budeš znao
+# futur2 & sing & third:  | bude znao
+# futur2 & plur & first:  | budemo znali
+# futur2 & plur & second:  | budete znali
+# futur2 & plur & third:  | budu znali
+
+# pluskvamperfekt & sing & first:  | bio sam znao
+# pluskvamperfekt & sing & second:  | bio si znao
+# pluskvamperfekt & sing & third:  | bio je znao
+# pluskvamperfekt & plur & first:  | bili smo znali
+# pluskvamperfekt & plur & second:  | bili ste znali
+# pluskvamperfekt & plur & third:  | bili su znali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | znao bih
+# cond1 & sing & second:  | znao bi
+# cond1 & sing & third:  | znao bi
+# cond1 & plur & first:  | znali bismo
+# cond1 & plur & second:  | znali biste
+# cond1 & plur & third:  | znali bi
+
+# cond2 & sing & first:  | bio bih znao
+# cond2 & sing & second:  | bio bi znao
+# cond2 & sing & third:  | bio bi znao
+# cond2 & plur & first:  | bili bismo znali
+# cond2 & plur & second:  | bili biste znali
+# cond2 & plur & third:  | bili bi znali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | znaj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | znajmo
+# imperativ & plur & second:  | znajte
+# imperativ & plur & third:  | 
+
+# active & sing & m:  | znao
+# active & sing & f:  | znala
+# active & sing & n:  | znalo
+# active & plur & m:  | znali
+# active & plur & f:  | znale
+# active & plur & n:  | znala
+
+# passive & sing & m:  | znan
+# passive & sing & f:  | znana
+# passive & sing & n:  | znano
+# passive & plur & m:  | znani
+# passive & plur & f:  | znane
+# passive & plur & n:  | znana
+
+---
+

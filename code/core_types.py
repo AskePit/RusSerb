@@ -49,16 +49,17 @@ class Time(Enum):
     present   = 0
     perfect   = 1
     imperfect = 2
-    futur     = 3
+    aorist    = 3
+    futur     = 4
 
     def isPresent(self):
         return self.value == 0
     
     def isPast(self):
-        return self.value == 1 or self.value == 2
+        return self.value == 1 or self.value == 2 or self.value == 3
 
     def isFuture(self):
-        return self.value == 3
+        return self.value == 4
 
 class Distance(Enum):
     close = 0 # этот
