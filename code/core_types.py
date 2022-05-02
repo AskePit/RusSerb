@@ -89,6 +89,12 @@ class Declination:
                     else:
                         return False
 
+        if hasattr(self, 'exclusive'):
+            if not hasattr(other, 'exclusive'):
+                return False
+            elif getattr(self, 'exclusive') != getattr(other, 'exclusive'):
+                return False
+
         return True
     
     def mirrorPerson(self):
@@ -294,6 +300,12 @@ class WordList:
         
         return res
     
+    def getWordByKey(self, key: str):
+        for w in self.words:
+            if w.title == key:
+                return w
+        return None
+
     def getWord(self, declination: Declination) -> Word:
         for word in self.words:
             if word.metaDeclination == declination:

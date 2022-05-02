@@ -1,20 +1,58 @@
-header noun
-
-sing & nom
-plur & nom
----
+fixed noun
 
 кошка
 fem
-кошка|mačka
-кошки|mačke
+
+sing & nom: кошка | mačka
+sing & gen: кошки | mačke
+sing & aku: кошку | mačku
+plur & nom: кошки | mačke
+plur & gen: кошек | mačaka
+plur & aku: кошек | mačke
+
+---
 
 пёс
 male
-пёс|pas
-псы|psi
+
+sing & nom: пёс  | pas
+sing & gen: пса  | psa
+sing & aku: пса  | psa
+plur & nom: псы  | psi
+plur & gen: псов | pasa
+plur & aku: псов | pse
+
+---
 
 яйцо
 neu
-яйцо|jaje
-яйца|jaja
+
+sing & nom: яйцо | jaje
+sing & gen: яйца | jajeta
+sing & aku: яйцо | jaje
+plur & nom: яйца | jaja
+plur & gen: яиц  | jaja
+plur & aku: яйца | jaja
+
+---
+
+брат
+male
+
+sing & nom:  брат   | brat
+sing & gen:  брата  | brat
+sing & dat:  брату  | brat
+sing & aku:  брата  | brat
+sing & vok:  брат   | brat
+sing & inst: братом | brat
+sing & lok:  брате  | brat
+
+plur & nom:  братья | braća
+plur & gen:  братья | braće
+plur & dat:  братья | braći
+plur & aku:  братья | braću
+plur & vok:  братья | braćo
+plur & inst: братья | braćom
+plur & lok:  братья | braći
+
+---

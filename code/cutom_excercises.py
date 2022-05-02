@@ -235,3 +235,54 @@ class PointingEx(Excercise):
             question, answer = answer, question
 
         return ExcerciseYield(title, question, answer)
+
+class ImatiEx(Excercise):
+    randomNounsPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+        self.randomNounsPool = RandomPool(GetVocabulary('random_nouns').words)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский:
+        # question: Я студент (student)
+        # answer:   Ja sam student
+
+        # title:    Переведите на сербский:
+        # question: Вы не пенсионерки (penzionerke)
+        # answer:   Vi niste penzionerke
+
+        negative = random.randint(0, 1)
+
+        rusPronounDecl = Declination.Make('male|fem & first|second|third & sing|plur & gen')
+        serbImatiDecl = copy.deepcopy(rusPronounDecl)
+        serbImatiDecl.case = Case.nom
+        serbImatiDecl.time = Time.present
+
+        serbNounDecl = Declination.Make('sing|plur & aku')
+        rusNounDecl = copy.deepcopy(serbNounDecl)
+        rusNounDecl.case = Case.gen if negative else Case.nom
+
+        nounNonDeclined = self.randomNounsPool.yieldElem()
+
+        rusPronoun = GetVocabulary('personal_pronouns').getWordForm(rusPronounDecl)
+        rusNoun = nounNonDeclined.get(rusNounDecl)
+
+        serbImati = GetVocabulary('verbs').getWordByKey('imati').get(serbImatiDecl)
+        serbNoun = nounNonDeclined.get(serbNounDecl)
+
+        rusPronounCorrected = rusPronoun.rus
+        if rusPronounCorrected == 'их' or rusPronounCorrected == 'его':
+            rusPronounCorrected = 'н' + rusPronounCorrected
+        
+        imatiCorrected = serbImati.serb
+        if negative:
+            imatiCorrected = imatiCorrected[1:]
+            imatiCorrected = 'ne' + imatiCorrected
+
+        title = 'Переведите на сербский'
+        rusParticle = ['есть', 'нет'][negative]
+        question = 'У {} {} {}.'.format(rusPronounCorrected, rusParticle, rusNoun.rus)
+        answer = '{} {}.'.format(imatiCorrected.capitalize(), serbNoun.serb)
+
+        return ExcerciseYield(title, question, answer)
