@@ -175,6 +175,7 @@ def LoadFile(filename: str, title: str):
             speechPart = SpeechPart[headerP[1]]
 
         data = data[2:]
+        data = [l for l in data if not l.startswith('#')]
 
         if headerType == 'header':
             theWords = WordList()
