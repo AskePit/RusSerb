@@ -9,18 +9,9 @@ sys.stdin.reconfigure(encoding='utf-8')
 sys.stdout.reconfigure(encoding='utf-8')
 
 verbs = [
-    'misliti',
-    'čitati',
-    'gledati',
-    'čekati',
-    'pričati',
-    'spavati',
-    'slušati',
 ]
 
 nonTabledVerbs = [
-    'kuvati',
-    'pevati',
 ]
 
 modalVerbs = [
@@ -353,7 +344,7 @@ def generateVerb(verb: str):
 with io.open('out.txt', 'w', encoding='utf-8') as o:
     o.write('fixed verb\n\n')
 
-for verb in verbs + nonTabledVerbs + modalVerbs:
+for verb in verbs:
     status = downloadVerb(verb)
 
     if status == DownloadStatus.NoUrl:
