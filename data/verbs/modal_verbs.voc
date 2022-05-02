@@ -3,35 +3,65 @@ fixed verb
 morati
 none
 
-inf:  | morati
+inf: должен | morati
 
-present & sing & first:  | moram
-present & sing & second:  | moraš
-present & sing & third:  | mora
-present & plur & first:  | moramo
-present & plur & second:  | morate
-present & plur & third:  | moraju
+present & sing & first  & male: должен | moram
+present & sing & first  & fem:  должна | moram
+present & sing & first  & neu:  должно | moram
+present & sing & second & male: должен | moraš
+present & sing & second & fem:  должна | moraš
+present & sing & second & neu:  должно | moraš
+present & sing & third  & male: должен | mora
+present & sing & third  & fem:  должна | mora
+present & sing & third  & neu:  должно | mora
+present & plur & first:         должны | moramo
+present & plur & second:        должны | morate
+present & plur & third:         должны | moraju
 
-futur & sing & first:  | moraću
-futur & sing & second:  | moraćeš
-futur & sing & third:  | moraće
-futur & plur & first:  | moraćemo
-futur & plur & second:  | moraćete
-futur & plur & third:  | moraće
+futur & sing & first  & male: буду должен   | moraću
+futur & sing & first  & fem:  буду должна   | moraću
+futur & sing & first  & neu:  буду должно   | moraću
+futur & sing & second & male: будешь должен | moraćeš
+futur & sing & second & fem:  будешь должна | moraćeš
+futur & sing & second & neu:  будешь должно | moraćeš
+futur & sing & third  & male: будет должен  | moraće
+futur & sing & third  & fem:  будет должна  | moraće
+futur & sing & third  & neu:  будет должно  | moraće
+futur & plur & first:         будем должны  | moraćemo
+futur & plur & second:        будете должны | moraćete
+futur & plur & third:         будут должны  | moraće
 
-perfect & sing & first:  | morao sam
-perfect & sing & second:  | morao si
-perfect & sing & third:  | morao je
-perfect & plur & first:  | morali smo
-perfect & plur & second:  | morali ste
-perfect & plur & third:  | morali su
+perfect & sing & first  & male: должен был  | morao sam
+perfect & sing & first  & fem:  должна была | morala sam
+perfect & sing & first  & neu:  должно было | moralo sam
+perfect & sing & second & male: должен был  | morao si
+perfect & sing & second & male: должна была | morala si
+perfect & sing & second & male: должно было | moralo si
+perfect & sing & third  & male: должен был  | morao je
+perfect & sing & third  & fem:  должна была | morala je
+perfect & sing & third  & neu:  должно было | moralo je
+perfect & plur & first  & male: должны были | morali smo
+perfect & plur & first  & fem:  должны были | morale smo
+perfect & plur & first  & neu:  должны были | morala smo
+perfect & plur & second & male: должны были | morali ste
+perfect & plur & second & fem:  должны были | morale ste
+perfect & plur & second & neu:  должны были | morala ste
+perfect & plur & third  & male: должны были | morali su
+perfect & plur & third  & fem:  должны были | morale su
+perfect & plur & third  & neu:  должны были | morala su
 
-imperfect & sing & first:  | morah
-imperfect & sing & second:  | moraše
-imperfect & sing & third:  | moraše
-imperfect & plur & first:  | morasmo
-imperfect & plur & second:  | moraste
-imperfect & plur & third:  | morahu
+imperfect & sing & first  & male: должен был  | morah
+imperfect & sing & first  & fem:  должна была | morah
+imperfect & sing & first  & neu:  должно было | morah
+imperfect & sing & second & male: должен был  | moraše
+imperfect & sing & second & fem:  должна была | moraše
+imperfect & sing & second & neu:  должно было | moraše
+imperfect & sing & third  & male: должен был  | moraše
+imperfect & sing & third  & fem:  должна была | moraše
+imperfect & sing & third  & neu:  должно было | moraše
+imperfect & plur & first:         должны были | morasmo
+imperfect & plur & second:        должны были | moraste
+imperfect & plur & third:         должны были | morahu
 
 # participle & present:  | mórajūći
 # participle & past:  | 
@@ -105,35 +135,53 @@ imperfect & plur & third:  | morahu
 moći
 none
 
-inf:  | moći
+inf: мочь | moći
 
-present & sing & first:  | mògu (impf.)  mognem (pf.)
-present & sing & second:  | možeš (impf.)  mogneš (pf.)
-present & sing & third:  | može (impf.)  mogne (pf.)
-present & plur & first:  | možemo (impf.)  mognemo (pf.)
-present & plur & second:  | možete (impf.)  mognete (pf.)
-present & plur & third:  | mògū (impf.)  mognu (pf.)
+present & sing & first:  могу   | mògu
+present & sing & second: можешь | možeš
+present & sing & third:  может  | može
+present & plur & first:  можем  | možemo
+present & plur & second: можете | možete
+present & plur & third:  могут  | mògū
 
-futur & sing & first:  | ću moći
-futur & sing & second:  | ćeš moći
-futur & sing & third:  | će moći
-futur & plur & first:  | ćemo moći
-futur & plur & second:  | ćete moći
-futur & plur & third:  | ćē moći
+futur & sing & first:  смогу   | ću moći
+futur & sing & second: сможешь | ćeš moći
+futur & sing & third:  сможет  | će moći
+futur & plur & first:  сможем  | ćemo moći
+futur & plur & second: сможете | ćete moći
+futur & plur & third:  смогут  | ćē moći
 
-perfect & sing & first:  | mogao/la/lo sam
-perfect & sing & second:  | mogao/la/lo si
-perfect & sing & third:  | mogao/la/lo je
-perfect & plur & first:  | mogli/e/a smo
-perfect & plur & second:  | mogli/e/a ste
-perfect & plur & third:  | mogli/e/a su
+perfect & sing & first  & male: мог   | mogao sam
+perfect & sing & first  & fem:  могла | mogala sam
+perfect & sing & first  & neu:  могло | mogalo sam
+perfect & sing & second & male: мог   | mogao si
+perfect & sing & second & fem:  могла | mogala si
+perfect & sing & second & neu:  могло | mogalo si
+perfect & sing & third  & male: мог   | mogao je
+perfect & sing & third  & fem:  могла | mogala je
+perfect & sing & third  & neu:  могло | mogalo je
+perfect & plur & first  & male: могли | mogli smo
+perfect & plur & first  & fem:  могли | mogle smo
+perfect & plur & first  & neu:  могли | mogla smo
+perfect & plur & second & male: могли | mogli ste
+perfect & plur & second & fem:  могли | mogle ste
+perfect & plur & second & neu:  могли | mogla ste
+perfect & plur & third  & male: могли | mogli su
+perfect & plur & third  & fem:  могли | mogle su
+perfect & plur & third  & neu:  могли | mogla su
 
-imperfect & sing & first:  | mogāh
-imperfect & sing & second:  | mogāše
-imperfect & sing & third:  | mogāše
-imperfect & plur & first:  | mogāsmo
-imperfect & plur & second:  | mogāste
-imperfect & plur & third:  | mogāhū
+imperfect & sing & first  & male: мог   | mogāh
+imperfect & sing & first  & fem:  могла | mogāh
+imperfect & sing & first  & neu:  могло | mogāh
+imperfect & sing & second & male: мог   | mogāše
+imperfect & sing & second & fem:  могла | mogāše
+imperfect & sing & second & neu:  могло | mogāše
+imperfect & sing & third  & male: мог   | mogāše
+imperfect & sing & third  & fem:  могла | mogāše
+imperfect & sing & third  & neu:  могло | mogāše
+imperfect & plur & first:         могли | mogāsmo
+imperfect & plur & second:        могли | mogāste
+imperfect & plur & third:         могли | mogāhū
 
 # participle & present:  | 
 # participle & past:  | 
@@ -207,28 +255,34 @@ imperfect & plur & third:  | mogāhū
 znati
 none
 
-inf:  | znati
+inf: уметь | znati
 
-present & sing & first:  | znam / znadem
-present & sing & second:  | znaš / znadeš
-present & sing & third:  | zna / znade
-present & plur & first:  | znamo / znademo
-present & plur & second:  | znate / znadete
-present & plur & third:  | znaju / znadu
+present & sing & first:  умею   | znam
+present & sing & second: умешь  | znaš
+present & sing & third:  умеет  | zna
+present & plur & first:  умеем  | znamo
+present & plur & second: умеете | znate
+present & plur & third:  умеют  | znaju
 
-futur & sing & first:  | znaću
-futur & sing & second:  | znaćeš
-futur & sing & third:  | znaće
-futur & plur & first:  | znaćemo
-futur & plur & second:  | znaćete
-futur & plur & third:  | znaće
+futur & sing & first:  буду уметь   | znaću
+futur & sing & second: будешь уметь | znaćeš
+futur & sing & third:  будет уметь  | znaće
+futur & plur & first:  будем уметь  | znaćemo
+futur & plur & second: будете уметь | znaćete
+futur & plur & third:  будут уметь  | znaće
 
-perfect & sing & first:  | znao sam
-perfect & sing & second:  | znao si
-perfect & sing & third:  | znao je
-perfect & plur & first:  | znali smo
-perfect & plur & second:  | znali ste
-perfect & plur & third:  | znali su
+perfect & sing & first  & male: умел | znao sam
+perfect & sing & first  & fem:  умела | znao sam
+perfect & sing & first  & neu:  умело | znao sam
+perfect & sing & second & male: умел | znao si
+perfect & sing & second & fem:  умела | znao si
+perfect & sing & second & neu:  умело | znao si
+perfect & sing & third  & male: умел | znao je
+perfect & sing & third  & fem:  умела | znao je
+perfect & sing & third  & neu:  умело | znao je
+perfect & plur & first:         умели | znali smo
+perfect & plur & second:        умели | znali ste
+perfect & plur & third:         умели | znali su
 
 imperfect & sing & first:  | znah / znadijah
 imperfect & sing & second:  | znaše / znadijaše
@@ -309,28 +363,28 @@ imperfect & plur & third:  | znahu / znadijahu
 smeti
 none
 
-inf:  | smeti
+inf: мочь | smeti
 
-present & sing & first:  | smem
-present & sing & second:  | smeš
-present & sing & third:  | sme
-present & plur & first:  | smemo
-present & plur & second:  | smete
-present & plur & third:  | smeju
+present & sing & first:  могу   | smem
+present & sing & second: можешь | smeš
+present & sing & third:  может  | sme
+present & plur & first:  можем  | smemo
+present & plur & second: можете | smete
+present & plur & third:  могут  | smeju
 
 ---
 
 umeti
 none
 
-inf:  | umeti
+inf: уметь | umeti
 
-present & sing & first:  | umem
-present & sing & second:  | umeš
-present & sing & third:  | ume
-present & plur & first:  | umemo
-present & plur & second:  | umete
-present & plur & third:  | umeju
+present & sing & first:  умею   | umem
+present & sing & second: умешь  | umeš
+present & sing & third:  умеет  | ume
+present & plur & first:  умеем  | umemo
+present & plur & second: умеете | umete
+present & plur & third:  умеют  | umeju
 
 ---
 
@@ -339,53 +393,53 @@ none
 
 inf:  | želeti
 
-present & sing & first:  | želim
-present & sing & second:  | želiš
-present & sing & third:  | želi
-present & plur & first:  | želimo
-present & plur & second:  | želite
-present & plur & third:  | žele
+present & sing & first:  хочу   | želim
+present & sing & second: хочешь | želiš
+present & sing & third:  хочет  | želi
+present & plur & first:  хотим  | želimo
+present & plur & second: хотите | želite
+present & plur & third:  хотят  | žele
 
 ---
 
 voleti
 none
 
-inf:  | voleti
+inf: любить | voleti
 
-present & sing & first:  | volim
-present & sing & second:  | voliš
-present & sing & third:  | voli
-present & plur & first:  | volimo
-present & plur & second:  | volite
-present & plur & third:  | vole
+present & sing & first:  люблю  | volim
+present & sing & second: любишь | voliš
+present & sing & third:  любит  | voli
+present & plur & first:  любим  | volimo
+present & plur & second: любете | volite
+present & plur & third:  любят  | vole
 
 ---
 
 treba
 none
 
-inf:  | treba
+inf: надо | treba
 
-present & sing & first:  | treba
-present & sing & second:  | treba
-present & sing & third:  | treba
-present & plur & first:  | treba
-present & plur & second:  | treba
-present & plur & third:  | treba
+present & sing & first:  надо | treba
+present & sing & second: надо | treba
+present & sing & third:  надо | treba
+present & plur & first:  надо | treba
+present & plur & second: надо | treba
+present & plur & third:  надо | treba
 
 ---
 
 hteti
 none
 
-inf:  | hteti
+inf: хотеть | hteti
 
-present & sing & first:  | hoću
-present & sing & second:  | hoćeš
-present & sing & third:  | hoće
-present & plur & first:  | hoćemo
-present & plur & second:  | hoćete
-present & plur & third:  | hoće
+present & sing & first: хочу | hoću
+present & sing & second: хочешь | hoćeš
+present & sing & third: хочет | hoće
+present & plur & first: хотим | hoćemo
+present & plur & second: хотите | hoćete
+present & plur & third: хотят | hoće
 
 ---
