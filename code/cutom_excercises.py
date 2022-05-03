@@ -256,7 +256,7 @@ class ImatiEx(Excercise):
 
         negative = random.randint(0, 1)
 
-        rusPronounDecl = Declination.Make('male|fem & first|second|third & sing|plur & gen')
+        rusPronounDecl = Declination.Make('male|fem|neu & first|second|third & sing|plur & gen')
         serbImatiDecl = copy.deepcopy(rusPronounDecl)
         serbImatiDecl.case = Case.nom
         serbImatiDecl.time = Time.present
@@ -318,7 +318,7 @@ class VerbsEx(Excercise):
 
         negative = random.randint(0, 1)
 
-        decl = Declination.Make('present & male|fem & first|second|third & sing|plur & nom & a')
+        decl = Declination.Make('present & male|fem|neu & first|second|third & sing|plur & nom')
         pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
         verb = self.randomVerbsPool.yieldElem().get(decl)
 
@@ -343,3 +343,40 @@ class EVerbsEx(VerbsEx):
 class AIEVerbsEx(VerbsEx):
     def __init__(self):
         super().__init__('a | i | e')
+
+class ModalVerbsEx(Excercise):
+    randomModalVerbsPool: RandomPool
+    randomVerbsPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+        self.randomModalVerbsPool = RandomPool(GetVocabulary('modal_verbs').words)
+        self.randomVerbsPool = RandomPool(GetVocabulary('verbs').words)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский:
+        # question: Я должен читать
+        # answer:   Ja moram da čitam
+
+        negative = random.randint(0, 1)
+
+        decl = Declination.Make('present & male|fem|neu & first|second|third & sing|plur & nom')
+        pronouns = GetVocabulary('personal_pronouns')
+        modal = self.randomModalVerbsPool.yieldElem().get(decl)
+
+        verb = self.randomVerbsPool.yieldElem()
+        serbVerb = verb.get(decl)
+        rusVerb = verb.get(Declination.Make('inf'))
+
+        if modal.serb == 'treba':
+            dative = copy.deepcopy(decl)
+            dative.case = Case.dat
+            rusPronoun = pronouns.getWordForm(dative)
+        else:
+            rusPronoun = pronouns.getWordForm(decl)
+
+        title = 'Переведите на сербский'
+        question = '{}{}{} {}.'.format(rusPronoun.rus.capitalize(), [' ', ' не '][negative], modal.rus, rusVerb.rus)
+        answer = '{}{} da {}.'.format(['', 'Ne '][negative], [modal.serb.capitalize(), modal.serb][negative], serbVerb.serb)
+
+        return ExcerciseYield(title, question, answer)
