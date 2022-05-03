@@ -40,12 +40,12 @@ plur & aku: яйца | jaja
 male
 
 sing & nom:  брат   | brat
-sing & gen:  брата  | brat
-sing & dat:  брату  | brat
-sing & aku:  брата  | brat
-sing & vok:  брат   | brat
-sing & inst: братом | brat
-sing & lok:  брате  | brat
+sing & gen:  брата  | brata
+sing & dat:  брату  | bratu
+sing & aku:  брата  | brata
+sing & vok:  брат   | brate
+sing & inst: братом | bratu
+sing & lok:  брате  | bratom
 
 plur & nom:  братья | braća
 plur & gen:  братья | braće

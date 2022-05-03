@@ -1,7 +1,7 @@
 fixed verb
 
 misliti
-none
+i
 
 inf: думать | misliti
 
@@ -10,7 +10,7 @@ present & sing & second: думаешь | misliš
 present & sing & third:  думает  | misli
 present & plur & first:  думаем  | mislimo
 present & plur & second: думаете | mislite
-present & plur & third:  дукмают | misle
+present & plur & third:  думают  | misle
 
 futur & sing & first:  | misliću
 futur & sing & second:  | mislićeš
@@ -103,7 +103,7 @@ imperfect & plur & third:  | mišljahu
 ---
 
 čitati
-none
+a
 
 inf: читать | čitati
 
@@ -205,7 +205,7 @@ imperfect & plur & third:  | čitahu
 ---
 
 gledati
-none
+a
 
 inf: смотреть | gledati
 
@@ -307,7 +307,7 @@ imperfect & plur & third:  | gledahu
 ---
 
 čekati
-none
+a
 
 inf: ждать | čekati
 
@@ -409,7 +409,7 @@ imperfect & plur & third:  | čekahu
 ---
 
 pričati
-none
+a
 
 inf: разговаривать | pričati
 
@@ -511,7 +511,7 @@ imperfect & plur & third:  | pričahu
 ---
 
 spavati
-none
+a
 
 inf: спать | spavati
 
@@ -613,7 +613,7 @@ imperfect & plur & third:  | spavahu
 ---
 
 slušati
-none
+a
 
 inf: слушать | slušati
 
@@ -714,110 +714,8 @@ imperfect & plur & third:  | slušahu
 
 ---
 
-imati
-none
-
-inf: иметь | imati
-
-present & sing & first:  имею   | imam
-present & sing & second: имеешь | imaš
-present & sing & third:  имеет  | ima
-present & plur & first:  имеем  | imamo
-present & plur & second: имеете | imate
-present & plur & third:  имеют  | imaju
-
-futur & sing & first:  | imaću
-futur & sing & second:  | imaćeš
-futur & sing & third:  | imaće
-futur & plur & first:  | imaćemo
-futur & plur & second:  | imaćete
-futur & plur & third:  | imaće
-
-perfect & sing & first:  | imao sam
-perfect & sing & second:  | imao si
-perfect & sing & third:  | imao je
-perfect & plur & first:  | imali smo
-perfect & plur & second:  | imali ste
-perfect & plur & third:  | imali su
-
-imperfect & sing & first:  | imah
-imperfect & sing & second:  | imaše
-imperfect & sing & third:  | imaše
-imperfect & plur & first:  | imasmo
-imperfect & plur & second:  | imaste
-imperfect & plur & third:  | imahu
-
-# participle & present:  | ìmajūći
-# participle & past:  | 
-# noun:  | ìmānje
-
-# futur & sing & first:  | imat ću
-# futur & sing & second:  | imat ćeš
-# futur & sing & third:  | imat će
-# futur & plur & first:  | imat ćemo
-# futur & plur & second:  | imat ćete
-# futur & plur & third:  | imat će
-
-# futur2 & sing & first:  | budem imao
-# futur2 & sing & second:  | budeš imao
-# futur2 & sing & third:  | bude imao
-# futur2 & plur & first:  | budemo imali
-# futur2 & plur & second:  | budete imali
-# futur2 & plur & third:  | budu imali
-
-# pluskvamperfekt & sing & first:  | bio sam imao
-# pluskvamperfekt & sing & second:  | bio si imao
-# pluskvamperfekt & sing & third:  | bio je imao
-# pluskvamperfekt & plur & first:  | bili smo imali
-# pluskvamperfekt & plur & second:  | bili ste imali
-# pluskvamperfekt & plur & third:  | bili su imali
-
-# aorist & sing & first:  | 
-# aorist & sing & second:  | 
-# aorist & sing & third:  | 
-# aorist & plur & first:  | 
-# aorist & plur & second:  | 
-# aorist & plur & third:  | 
-
-# cond1 & sing & first:  | imao bih
-# cond1 & sing & second:  | imao bi
-# cond1 & sing & third:  | imao bi
-# cond1 & plur & first:  | imali bismo
-# cond1 & plur & second:  | imali biste
-# cond1 & plur & third:  | imali bi
-
-# cond2 & sing & first:  | bio bih imao
-# cond2 & sing & second:  | bio bi imao
-# cond2 & sing & third:  | bio bi imao
-# cond2 & plur & first:  | bili bismo imali
-# cond2 & plur & second:  | bili biste imali
-# cond2 & plur & third:  | bili bi imali
-
-# imperativ & sing & first:  | 
-# imperativ & sing & second:  | imaj
-# imperativ & sing & third:  | 
-# imperativ & plur & first:  | imajmo
-# imperativ & plur & second:  | imajte
-# imperativ & plur & third:  | 
-
-# active & sing & m:  | imao
-# active & sing & f:  | imala
-# active & sing & n:  | imalo
-# active & plur & m:  | imali
-# active & plur & f:  | imale
-# active & plur & n:  | imala
-
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
-
----
-
 raditi
-none
+i
 
 inf: делать | raditi
 
@@ -918,110 +816,8 @@ imperfect & plur & third:  | rađahu
 
 ---
 
-čitati
-none
-
-inf: читать | čitati
-
-present & sing & first:  читаю   | čitam
-present & sing & second: читаешь | čitaš
-present & sing & third:  читает  | čita
-present & plur & first:  читаем  | čitamo
-present & plur & second: читаете | čitate
-present & plur & third:  читают  | čitaju
-
-futur & sing & first:  | čitaću
-futur & sing & second:  | čitaćeš
-futur & sing & third:  | čitaće
-futur & plur & first:  | čitaćemo
-futur & plur & second:  | čitaćete
-futur & plur & third:  | čitaće
-
-perfect & sing & first:  | čitao sam
-perfect & sing & second:  | čitao si
-perfect & sing & third:  | čitao je
-perfect & plur & first:  | čitali smo
-perfect & plur & second:  | čitali ste
-perfect & plur & third:  | čitali su
-
-imperfect & sing & first:  | čitah
-imperfect & sing & second:  | čitaše
-imperfect & sing & third:  | čitaše
-imperfect & plur & first:  | čitasmo
-imperfect & plur & second:  | čitaste
-imperfect & plur & third:  | čitahu
-
-# participle & present:  | čìtajūći
-# participle & past:  | 
-# noun:  | čìtānje
-
-# futur & sing & first:  | čitat ću
-# futur & sing & second:  | čitat ćeš
-# futur & sing & third:  | čitat će
-# futur & plur & first:  | čitat ćemo
-# futur & plur & second:  | čitat ćete
-# futur & plur & third:  | čitat će
-
-# futur2 & sing & first:  | budem čitao
-# futur2 & sing & second:  | budeš čitao
-# futur2 & sing & third:  | bude čitao
-# futur2 & plur & first:  | budemo čitali
-# futur2 & plur & second:  | budete čitali
-# futur2 & plur & third:  | budu čitali
-
-# pluskvamperfekt & sing & first:  | bio sam čitao
-# pluskvamperfekt & sing & second:  | bio si čitao
-# pluskvamperfekt & sing & third:  | bio je čitao
-# pluskvamperfekt & plur & first:  | bili smo čitali
-# pluskvamperfekt & plur & second:  | bili ste čitali
-# pluskvamperfekt & plur & third:  | bili su čitali
-
-# aorist & sing & first:  | 
-# aorist & sing & second:  | 
-# aorist & sing & third:  | 
-# aorist & plur & first:  | 
-# aorist & plur & second:  | 
-# aorist & plur & third:  | 
-
-# cond1 & sing & first:  | čitao bih
-# cond1 & sing & second:  | čitao bi
-# cond1 & sing & third:  | čitao bi
-# cond1 & plur & first:  | čitali bismo
-# cond1 & plur & second:  | čitali biste
-# cond1 & plur & third:  | čitali bi
-
-# cond2 & sing & first:  | bio bih čitao
-# cond2 & sing & second:  | bio bi čitao
-# cond2 & sing & third:  | bio bi čitao
-# cond2 & plur & first:  | bili bismo čitali
-# cond2 & plur & second:  | bili biste čitali
-# cond2 & plur & third:  | bili bi čitali
-
-# imperativ & sing & first:  | 
-# imperativ & sing & second:  | čitaj
-# imperativ & sing & third:  | 
-# imperativ & plur & first:  | čitajmo
-# imperativ & plur & second:  | čitajte
-# imperativ & plur & third:  | 
-
-# active & sing & m:  | čitao
-# active & sing & f:  | čitala
-# active & sing & n:  | čitalo
-# active & plur & m:  | čitali
-# active & plur & f:  | čitale
-# active & plur & n:  | čitala
-
-# passive & sing & m:  | čitan
-# passive & sing & f:  | čitana
-# passive & sing & n:  | čitano
-# passive & plur & m:  | čitani
-# passive & plur & f:  | čitane
-# passive & plur & n:  | čitana
-
----
-
 trčati
-none
+i
 
 inf: бежать | trčati
 
@@ -1123,7 +919,7 @@ imperfect & plur & third:  | trčahu
 ---
 
 igrati
-none
+a
 
 inf: играть | igrati
 
@@ -1225,7 +1021,7 @@ imperfect & plur & third:  | igrahu
 ---
 
 plivati
-none
+a
 
 inf: плавать | plivati
 
@@ -1327,7 +1123,7 @@ imperfect & plur & third:  | plivaše
 ---
 
 kopati
-none
+a
 
 inf: копать | kopati
 
@@ -1429,7 +1225,7 @@ imperfect & plur & third:  | kopahu
 ---
 
 učiti
-none
+i
 
 inf: учить | učiti
 
@@ -1531,7 +1327,7 @@ imperfect & plur & third:  | učahu
 ---
 
 prati
-none
+e
 
 inf: стирать | prati
 
@@ -1633,7 +1429,7 @@ imperfect & plur & third:  | prahu
 ---
 
 voziti
-none
+i
 
 inf: водить | voziti
 
@@ -1735,7 +1531,7 @@ imperfect & plur & third:  | vožahu
 ---
 
 ležati
-none
+i
 
 inf: лежать | ležati
 
@@ -1837,7 +1633,7 @@ imperfect & plur & third:  | ležahu
 ---
 
 stajati
-none
+i
 
 inf: стоять | stajati
 
@@ -1939,7 +1735,7 @@ imperfect & plur & third:  | stajahu
 ---
 
 razmišljati
-none
+a
 
 inf: думать | razmišljati
 
@@ -2041,7 +1837,7 @@ imperfect & plur & third:  | razmišljahu
 ---
 
 pisati
-none
+e
 
 inf: писать | pisati
 
@@ -2143,7 +1939,7 @@ imperfect & plur & third:  | pisahu
 ---
 
 jesti
-none
+e
 
 inf: есть | jesti
 
@@ -2245,7 +2041,7 @@ imperfect & plur & third:  | jedijahu
 ---
 
 govoriti
-none
+i
 
 inf: говорить | govoriti
 
@@ -2347,7 +2143,7 @@ imperfect & plur & third:  | govorahu
 ---
 
 hodati
-none
+a
 
 inf: ходить | hodati
 
@@ -2449,7 +2245,7 @@ imperfect & plur & third:  | hodahu
 ---
 
 kuvati
-none
+a
 
 inf: готовить | kuvati
 
@@ -2463,7 +2259,7 @@ present & plur & third:  готовят  | kuvaju
 ---
 
 pevati
-none
+a
 
 inf: петь | pevati
 
@@ -2477,7 +2273,7 @@ present & plur & third:  поют  | pevaju
 ---
 
 živeti
-none
+i
 
 inf: жить | živeti
 
@@ -2491,7 +2287,7 @@ present & plur & third:  живут  | žive
 ---
 
 raditi
-none
+i
 
 inf: работать | raditi
 
@@ -2505,7 +2301,7 @@ present & plur & third:  работают  | rade
 ---
 
 skakati
-none
+e
 
 inf: прыгать | skakati
 
@@ -2607,7 +2403,7 @@ imperfect & plur & third:  | skakahu
 ---
 
 kazati
-none
+e
 
 inf: сказать | kazati
 
@@ -2709,7 +2505,7 @@ imperfect & plur & third:  |
 ---
 
 putovati
-none
+e
 
 inf: путешествовать | putovati
 
@@ -2811,7 +2607,7 @@ imperfect & plur & third:  | putovahu
 ---
 
 kupovati
-none
+e
 
 inf: покупать | kupovati
 
@@ -2913,7 +2709,7 @@ imperfect & plur & third:  | kupovahu
 ---
 
 psovati
-none
+e
 
 inf: ругаться | psovati
 
@@ -3015,7 +2811,7 @@ imperfect & plur & third:  | psovahu
 ---
 
 doručkovati
-none
+e
 
 inf: завтракать | doručkovati
 
@@ -3117,7 +2913,7 @@ imperfect & plur & third:  | doručkovahu
 ---
 
 ići
-none
+e
 
 inf: идти | ići
 
@@ -3219,7 +3015,7 @@ imperfect & plur & third:  | iđahu
 ---
 
 doći
-none
+e
 
 inf: прийти | doći
 
@@ -3321,7 +3117,7 @@ imperfect & plur & third:  |
 ---
 
 zvati
-none
+e
 
 inf: звать | zvati
 
@@ -3423,7 +3219,7 @@ imperfect & plur & third:  | zvahu
 ---
 
 piti
-none
+i
 
 inf: пить | piti
 
@@ -3525,7 +3321,7 @@ imperfect & plur & third:  | pijahu
 ---
 
 čuti
-none
+e
 
 inf: слышать | čuti
 
@@ -3627,7 +3423,7 @@ imperfect & plur & third:  | čuše
 ---
 
 prodavati
-none
+e
 
 inf: продавать | prodavati
 

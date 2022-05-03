@@ -66,6 +66,11 @@ class Distance(Enum):
     far   = 1 # тот
     off   = 2 # тот очень далекий
 
+class VerbСonjugation(Enum):
+    a = 0
+    i = 1
+    e = 2
+
 DeclinationAttributesMap = {
     'person': Person,
     'gender': Gender,
@@ -73,7 +78,8 @@ DeclinationAttributesMap = {
     'case': Case,
     'distance': Distance,
     'exclusive': ExclusiveForm,
-    'time': Time
+    'time': Time,
+    'verbСonjugation': VerbСonjugation
 }
 
 class Declination:

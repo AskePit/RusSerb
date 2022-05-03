@@ -238,19 +238,21 @@ class PointingEx(Excercise):
 
 class ImatiEx(Excercise):
     randomNounsPool: RandomPool
+    imati: Word
 
     def __init__(self):
         super().__init__()
+        self.imati = GetVocabulary('imati')
         self.randomNounsPool = RandomPool(GetVocabulary('random_nouns').words)
 
     def __call__(self) -> ExcerciseYield:
         # title:    Переведите на сербский:
-        # question: Я студент (student)
-        # answer:   Ja sam student
+        # question: У вас нет кошки
+        # answer:   Nemate mačku
 
         # title:    Переведите на сербский:
-        # question: Вы не пенсионерки (penzionerke)
-        # answer:   Vi niste penzionerke
+        # question: У неё есть брат
+        # answer:   Ima brata
 
         negative = random.randint(0, 1)
 
@@ -268,11 +270,11 @@ class ImatiEx(Excercise):
         rusPronoun = GetVocabulary('personal_pronouns').getWordForm(rusPronounDecl)
         rusNoun = nounNonDeclined.get(rusNounDecl)
 
-        serbImati = GetVocabulary('verbs').getWordByKey('imati').get(serbImatiDecl)
+        serbImati = self.imati.get(serbImatiDecl)
         serbNoun = nounNonDeclined.get(serbNounDecl)
 
         rusPronounCorrected = rusPronoun.rus
-        if rusPronounCorrected == 'их' or rusPronounCorrected == 'его':
+        if rusPronounCorrected == 'их' or rusPronounCorrected == 'его' or rusPronounCorrected == 'её':
             rusPronounCorrected = 'н' + rusPronounCorrected
         
         imatiCorrected = serbImati.serb
@@ -286,3 +288,58 @@ class ImatiEx(Excercise):
         answer = '{} {}.'.format(imatiCorrected.capitalize(), serbNoun.serb)
 
         return ExcerciseYield(title, question, answer)
+
+class VerbsEx(Excercise):
+    verbsList: list[Word]
+    randomVerbsPool: RandomPool
+
+    def __init__(self, verbTypes: str): # verbTypes: `a`, `i`, `e`, `a | e | i` etc
+        super().__init__()
+
+        conjDecls = Declination.MakeList(verbTypes)
+
+        self.verbsList = []
+
+        for verb in GetVocabulary('verbs').words:
+            for conj in conjDecls:
+                if verb.metaDeclination == conj:
+                    self.verbsList.append(verb)
+
+        self.randomVerbsPool = RandomPool(self.verbsList)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский:
+        # question: Я бегу
+        # answer:   Ja trčim
+
+        # title:    Переведите на сербский:
+        # question: Они не читают
+        # answer:   Oni ne čitaju
+
+        negative = random.randint(0, 1)
+
+        decl = Declination.Make('present & male|fem & first|second|third & sing|plur & nom & a')
+        pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
+        verb = self.randomVerbsPool.yieldElem().get(decl)
+
+        title = 'Переведите на сербский'
+        question = '{}{}{}.'.format(pronoun.rus.capitalize(), [' ', ' не '][negative], verb.rus)
+        answer = '{}{}{}.'.format(pronoun.serb.capitalize(), [' ', ' ne '][negative], verb.serb)
+
+        return ExcerciseYield(title, question, answer)
+
+class AVerbsEx(VerbsEx):
+    def __init__(self):
+        super().__init__('a')
+
+class IVerbsEx(VerbsEx):
+    def __init__(self):
+        super().__init__('i')
+
+class EVerbsEx(VerbsEx):
+    def __init__(self):
+        super().__init__('e')
+
+class AIEVerbsEx(VerbsEx):
+    def __init__(self):
+        super().__init__('a | i | e')
