@@ -1,7 +1,7 @@
 fixed verb
 
 morati
-none
+a
 
 inf: должен | morati
 
@@ -133,7 +133,7 @@ imperfect & plur & third:         должны были | morahu
 ---
 
 moći
-none
+e
 
 inf: мочь | moći
 
@@ -253,7 +253,7 @@ imperfect & plur & third:         могли | mogāhū
 ---
 
 znati
-none
+a
 
 inf: уметь | znati
 
@@ -361,7 +361,7 @@ imperfect & plur & third:  | znahu / znadijahu
 ---
 
 smeti
-none
+e
 
 inf: иметь возможность | smeti
 
@@ -375,7 +375,7 @@ present & plur & third:  имеют возможность  | smeju
 ---
 
 umeti
-none
+e
 
 inf: уметь | umeti
 
@@ -389,7 +389,7 @@ present & plur & third:  умеют  | umeju
 ---
 
 želeti
-none
+i
 
 inf: желать | želeti
 
@@ -403,7 +403,7 @@ present & plur & third:  желают  | žele
 ---
 
 voleti
-none
+i
 
 inf: любить | voleti
 
@@ -417,7 +417,7 @@ present & plur & third:  любят  | vole
 ---
 
 treba
-none
+a
 
 inf: надо | treba
 
@@ -431,7 +431,7 @@ present & plur & third:  надо | treba
 ---
 
 hteti
-none
+e
 
 inf: хотеть | hteti
 
