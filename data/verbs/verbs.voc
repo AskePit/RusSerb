@@ -1737,14 +1737,14 @@ imperfect & plur & third:  | stajahu
 razmišljati
 a
 
-inf: думать | razmišljati
+inf: мыслить | razmišljati
 
-present & sing & first:  думаю   | razmišljam
-present & sing & second: думаешь | razmišljaš
-present & sing & third:  думает  | razmišlja
-present & plur & first:  думаем  | razmišljamo
-present & plur & second: думаете | razmišljate
-present & plur & third:  думают  | razmišljaju
+present & sing & first:  мыслю   | razmišljam
+present & sing & second: мыслишь | razmišljaš
+present & sing & third:  мыслит  | razmišlja
+present & plur & first:  мыслим  | razmišljamo
+present & plur & second: мыслите | razmišljate
+present & plur & third:  мыслят  | razmišljaju
 
 futur & sing & first:  | razmišljaću
 futur & sing & second:  | razmišljaćeš
@@ -3219,7 +3219,7 @@ imperfect & plur & third:  | zvahu
 ---
 
 piti
-i
+e
 
 inf: пить | piti
 

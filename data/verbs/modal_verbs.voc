@@ -363,14 +363,14 @@ imperfect & plur & third:  | znahu / znadijahu
 smeti
 none
 
-inf: мочь | smeti
+inf: иметь возможность | smeti
 
-present & sing & first:  могу   | smem
-present & sing & second: можешь | smeš
-present & sing & third:  может  | sme
-present & plur & first:  можем  | smemo
-present & plur & second: можете | smete
-present & plur & third:  могут  | smeju
+present & sing & first:  имею возможность   | smem
+present & sing & second: имеешь возможность | smeš
+present & sing & third:  имеет возможность  | sme
+present & plur & first:  имеем возможность  | smemo
+present & plur & second: имеете возможность | smete
+present & plur & third:  имеют возможность  | smeju
 
 ---
 
@@ -391,14 +391,14 @@ present & plur & third:  умеют  | umeju
 želeti
 none
 
-inf:  | želeti
+inf: желать | želeti
 
-present & sing & first:  хочу   | želim
-present & sing & second: хочешь | želiš
-present & sing & third:  хочет  | želi
-present & plur & first:  хотим  | želimo
-present & plur & second: хотите | želite
-present & plur & third:  хотят  | žele
+present & sing & first:  желаю   | želim
+present & sing & second: желаешь | želiš
+present & sing & third:  желает  | želi
+present & plur & first:  желаем  | želimo
+present & plur & second: желаете | želite
+present & plur & third:  желают  | žele
 
 ---
 
@@ -435,11 +435,11 @@ none
 
 inf: хотеть | hteti
 
-present & sing & first: хочу | hoću
+present & sing & first: хочу    | hoću
 present & sing & second: хочешь | hoćeš
-present & sing & third: хочет | hoće
-present & plur & first: хотим | hoćemo
+present & sing & third: хочет   | hoće
+present & plur & first: хотим   | hoćemo
 present & plur & second: хотите | hoćete
-present & plur & third: хотят | hoće
+present & plur & third: хотят   | hoće
 
 ---
