@@ -19,6 +19,11 @@ class Gender(Enum):
     fem    = 1 # feminitive
     neu    = 2 # neutral
     unisex = 3 # all genders
+
+class RuGender(Enum):
+    ru_male   = 0 # male
+    ru_fem    = 1 # feminitive
+    ru_neu    = 2 # neutral
     
 class Number(Enum):
     sing = 0 # singular / ед.ч.
@@ -66,7 +71,7 @@ class Distance(Enum):
     far   = 1 # тот
     off   = 2 # тот очень далекий
 
-class VerbСonjugation(Enum):
+class VerbConjugation(Enum):
     a = 0
     i = 1
     e = 2
@@ -74,12 +79,13 @@ class VerbСonjugation(Enum):
 DeclinationAttributesMap = {
     'person': Person,
     'gender': Gender,
+    'ruGender': RuGender,
     'number': Number,
     'case': Case,
     'distance': Distance,
     'exclusive': ExclusiveForm,
     'time': Time,
-    'verbСonjugation': VerbСonjugation
+    'verbConjugation': VerbConjugation
 }
 
 class Declination:

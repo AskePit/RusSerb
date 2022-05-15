@@ -59,7 +59,6 @@ nouns = [
     ('bundeva', 'тыква'),
     ('krastavac', 'огурец'),
     ('paradajz', 'помидор'),
-    ('karfiol', 'цветная капуста'),
     ('celer', 'сельдерей'),
     ('spanać', 'шпинат'),
     ('salata', 'салат'),
@@ -69,9 +68,7 @@ nouns = [
     ('praziluk', 'лук-порей'),
     ('artičoka', 'артишок'),
     ('špargla', 'спаржа'),
-    ('prokelj', 'брюссельская капуста'),
     ('brokoli', 'брокколи'),
-    ('ljuta papričica', 'перец чили'),
     ('čaj', 'чай'),
     ('kafa', 'кофе'),
     ('voda', 'вода'),
@@ -230,20 +227,36 @@ def downloadNoun(nounPair: tuple[str, str]) -> DownloadStatus:
             txt = txt.strip()
             cells.append(txt)
 
-        gender = 'none'
-        genderSpans = soup.find_all('span', {'class': 'gender'})
-        for genderSpan in genderSpans:
-            if genderSpan != None:
-                abbr = genderSpan.find_all('abbr')[0]
-                if abbr != None:
-                    txt = abbr.get_text()
-                    if txt == 'm':
-                        gender = 'male'
-                    elif txt == 'f':
-                        gender = 'fem'
-                    elif txt == 'n':
-                        gender = 'neu'
-                break
+        gender = None
+
+        if 'sh.' in urlBase: # serb page
+            genderSpans = soup.find_all('span', {'class': 'gender'})
+            for genderSpan in genderSpans:
+                if genderSpan != None:
+                    abbr = genderSpan.find_all('abbr')[0]
+                    if abbr != None:
+                        txt = abbr.get_text()
+                        if txt == 'm':
+                            gender = 'male'
+                        elif txt == 'f':
+                            gender = 'fem'
+                        elif txt == 'n':
+                            gender = 'neu'
+                    break
+        else: # ru page
+            ruText = soup.find_all('div', {'class': 'mw-parser-output'})[0]
+            if ruText != None:
+                ps = ruText.find_all('p')
+                for p in ps:
+                    if 'мужской род' in p.get_text():
+                        gender = 'ru_male'
+                        break
+                    elif 'женский род' in p.get_text():
+                        gender = 'ru_fem'
+                        break
+                    elif 'средний род' in p.get_text():
+                        gender = 'ru_neu'
+                        break
 
         return (DownloadStatus.Ok, DeclTable(cells, gender))
     
@@ -293,7 +306,14 @@ def downloadNoun(nounPair: tuple[str, str]) -> DownloadStatus:
 
         o.write(serbNoun)
         endl()
-        o.write(serbTable.gender)
+        if serbTable != None and serbTable.gender != None and rusTable != None and rusTable.gender != None:
+            o.write('{} & {}'.format(serbTable.gender, rusTable.gender))
+        elif serbTable != None and serbTable.gender != None:
+            o.write(serbTable.gender)
+        elif rusTable != None and rusTable.gender != None:
+            o.write(rusTable.gender)
+        else:
+            o.write('none')
         endl()
         endl()
         
