@@ -3,14 +3,14 @@ fixed verb
 misliti
 i
 
-inf: думать | misliti
+inf: думать(misliti) | misliti
 
-present & sing & first:  думаю   | mislim
-present & sing & second: думаешь | misliš
-present & sing & third:  думает  | misli
-present & plur & first:  думаем  | mislimo
-present & plur & second: думаете | mislite
-present & plur & third:  думают  | misle
+present & sing & first:  думаю(misliti)   | mislim
+present & sing & second: думаешь(misliti) | misliš
+present & sing & third:  думает(misliti)  | misli
+present & plur & first:  думаем(misliti)  | mislimo
+present & plur & second: думаете(misliti) | mislite
+present & plur & third:  думают(misliti)  | misle
 
 futur & sing & first:  | misliću
 futur & sing & second:  | mislićeš
@@ -1737,14 +1737,14 @@ imperfect & plur & third:  | stajahu
 razmišljati
 a
 
-inf: мыслить | razmišljati
+inf: думать(razmišljati) | razmišljati
 
-present & sing & first:  мыслю   | razmišljam
-present & sing & second: мыслишь | razmišljaš
-present & sing & third:  мыслит  | razmišlja
-present & plur & first:  мыслим  | razmišljamo
-present & plur & second: мыслите | razmišljate
-present & plur & third:  мыслят  | razmišljaju
+present & sing & first:  думаю(razmišljati)   | razmišljam
+present & sing & second: думаешь(razmišljati) | razmišljaš
+present & sing & third:  думает(razmišljati)  | razmišlja
+present & plur & first:  думаем(razmišljati)  | razmišljamo
+present & plur & second: думаете(razmišljati) | razmišljate
+present & plur & third:  думают(razmišljati)  | razmišljaju
 
 futur & sing & first:  | razmišljaću
 futur & sing & second:  | razmišljaćeš
@@ -2043,14 +2043,14 @@ imperfect & plur & third:  | jedijahu
 govoriti
 i
 
-inf: говорить | govoriti
+inf: говорить(govoriti) | govoriti
 
-present & sing & first:  говорю   | govorim
-present & sing & second: говоришь | govoriš
-present & sing & third:  говорит  | govori
-present & plur & first:  говорим  | govorimo
-present & plur & second: говорите | govorite
-present & plur & third:  говорят  | govore
+present & sing & first:  говорю(govoriti)   | govorim
+present & sing & second: говоришь(govoriti) | govoriš
+present & sing & third:  говорит(govoriti)  | govori
+present & plur & first:  говорим(govoriti)  | govorimo
+present & plur & second: говорите(govoriti) | govorite
+present & plur & third:  говорят(govoriti)  | govore
 
 futur & sing & first:  | govoriću
 futur & sing & second:  | govorićeš
@@ -2405,14 +2405,14 @@ imperfect & plur & third:  | skakahu
 kazati
 e
 
-inf: сказать | kazati
+inf: говорить(kazati) | kazati
 
-present & sing & first: говорю | kažem
-present & sing & second: говоришь | kažeš
-present & sing & third: говорит | kaže
-present & plur & first: говорим | kažemo
-present & plur & second: говорите | kažete
-present & plur & third: говорят | kažu
+present & sing & first: говорю(kazati) | kažem
+present & sing & second: говоришь(kazati) | kažeš
+present & sing & third: говорит(kazati) | kaže
+present & plur & first: говорим(kazati) | kažemo
+present & plur & second: говорите(kazati) | kažete
+present & plur & third: говорят(kazati) | kažu
 
 futur & sing & first:  | kazaću
 futur & sing & second:  | kazaćeš
