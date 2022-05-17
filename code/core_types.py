@@ -280,6 +280,8 @@ class Declination:
                 res += getattr(self, a).name
         return res
 
+Infinitive = Declination.Parse('inf')
+
 class DeclinedWord:
     declination: Declination
     rus: str

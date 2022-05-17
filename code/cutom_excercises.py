@@ -368,7 +368,7 @@ class ModalVerbsEx(Excercise):
 
         verb = self.randomVerbsPool.yieldElem()
         serbVerb = verb.get(decl)
-        rusVerb = verb.get(Declination.Parse('inf'))
+        rusVerb = verb.get(Infinitive)
 
         if modal.serb == 'treba':
             dative = decl.clone().parseOverride('dat')
