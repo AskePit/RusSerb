@@ -97,24 +97,10 @@ DeclinationAttributesMap = {
 class Declination:
     # possible fields:
     # any key from `DeclinationAttributesMap`
-
-    def __eq__(self, other: object) -> bool:
-        for a in DeclinationAttributesMap:
-            if hasattr(other, a) and hasattr(self, a):
-                if getattr(self, a) != getattr(other, a):
-                    if a == 'gender' and (getattr(self, a) == Gender.unisex or getattr(other, a) == Gender.unisex):
-                        pass
-                    else:
-                        return False
-
-        if hasattr(self, 'exclusive'):
-            if not hasattr(other, 'exclusive'):
-                return False
-            elif getattr(self, 'exclusive') != getattr(other, 'exclusive'):
-                return False
-
-        return True
     
+    def getAttrs(self):
+        return [attr for attr in dir(self) if not callable(getattr(self, attr)) and not attr.startswith("__")]
+
     def mirrorPerson(self):
         if hasattr(self, 'person') and self.person != None:
             self.person = self.person.getOpposite()
@@ -266,6 +252,50 @@ class Declination:
 
     def isInfinitive(self) -> bool:
         return hasattr(self, 'exclusive') and self.exclusive == ExclusiveForm.inf
+
+    def isSimilarTo(self, other: object) -> bool:
+        for attrName in DeclinationAttributesMap:
+            if hasattr(self, attrName) != hasattr(other, attrName):
+                return False
+        return True
+    
+    def isEqualTo(self, other: object) -> bool:
+        if not self.isSimilarTo(other):
+            return False
+        
+        for attr in self.getAttrs():
+            if getattr(self, attr) != getattr(other, attr):
+                return False
+        return True
+
+    def intersects(self, other: object) -> bool:
+        for a in DeclinationAttributesMap:
+            if hasattr(other, a) and hasattr(self, a):
+                if getattr(self, a) != getattr(other, a):
+                    if a == 'gender' and (getattr(self, a) == Gender.unisex or getattr(other, a) == Gender.unisex):
+                        pass
+                    else:
+                        return False
+
+        if hasattr(self, 'exclusive'):
+            if not hasattr(other, 'exclusive'):
+                return False
+            elif getattr(self, 'exclusive') != getattr(other, 'exclusive'):
+                return False
+
+        return True
+    
+    def includes(self, other) -> bool:
+        for attr in self.getAttrs():
+            if not hasattr(other, attr):
+                return False
+
+            if getattr(self, attr) != getattr(other, attr):
+                return False
+        return True
+    
+    def isIncludedIn(self, other) -> bool:
+        return other.includes(self)
     
     def toString(self):
         first = True
@@ -314,7 +344,7 @@ class Word:
 
     def get(self, declination: Declination) -> DeclinedWord:
         for word in self.forms:
-            if word.declination == declination:
+            if word.declination.intersects(declination):
                 return word
         return None
 
@@ -360,13 +390,13 @@ class WordList:
 
     def getWord(self, declination: Declination) -> Word:
         for word in self.words:
-            if word.metaDeclination == declination:
+            if word.metaDeclination.intersects(declination):
                 return word
         return None
 
     def getWordForm(self, declination: Declination) -> DeclinedWord:
         for word in self.words:
-            if word.metaDeclination == declination:
+            if word.metaDeclination.intersects(declination):
                 return word.get(declination)
         return None
 
