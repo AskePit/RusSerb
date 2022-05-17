@@ -32,7 +32,7 @@ class Header:
         
         parseSequence = ConvertLinesToTokens(lines)
         for seq in parseSequence:
-            self.formsSequence.append(Declination.Make(seq))
+            self.formsSequence.append(Declination.Parse(seq))
         
     def yieldDeclination(self) -> Declination:
         if len(self.formsSequence) == 0:
@@ -88,7 +88,7 @@ def LoadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):
         elif stage == 1:
             # metaDeclination
             if l.strip() != 'none':
-                theWord.metaDeclination = Declination.Make(l.strip())
+                theWord.metaDeclination = Declination.Parse(l.strip())
             stage += 1
         elif stage == 2:
             # forms
@@ -133,7 +133,7 @@ def LoadFixed(data: list[str], speechPart: SpeechPart, theWords: WordList):
         elif stage == 1:
             # metaDeclination
             if l.strip() != 'none':
-                theWord.metaDeclination = Declination.Make(l.strip())
+                theWord.metaDeclination = Declination.Parse(l.strip())
             stage += 1
         elif stage == 2:
             # declinations and forms
@@ -146,7 +146,7 @@ def LoadFixed(data: list[str], speechPart: SpeechPart, theWords: WordList):
             rus = words[0].strip()
             serb = words[1].strip()
 
-            declinedWord = DeclinedWord.Make(Declination.Make(decl), rus, serb)
+            declinedWord = DeclinedWord.Make(Declination.Parse(decl), rus, serb)
             theWord.forms.append(declinedWord)
 
 def LoadPhrases(title: str, data: list[str], thePhrases: PhrasesList):

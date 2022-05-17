@@ -16,7 +16,7 @@ class ToBeEx(Excercise):
         # question: Вы не пенсионерки (penzionerke)
         # answer:   Vi niste penzionerke
 
-        decl = Declination.Make('male|fem & first|second|third & sing|plur & nom')
+        decl = Declination.Parse('male|fem & first|second|third & sing|plur & nom')
 
         occupation = self.randomOccupationsPool.yieldElem()
         negative = random.randint(0, 1)
@@ -47,7 +47,7 @@ class ToBeEx2(Excercise):
         # question: Вы врачи (lekari)?
         # answer:   Jeste li vi lekari?
 
-        decl = Declination.Make('male|fem & first|second|third & sing|plur & nom')
+        decl = Declination.Parse('male|fem & first|second|third & sing|plur & nom')
 
         occupation = self.randomOccupationsPool.yieldElem()
         form = random.randint(0, 1)
@@ -84,8 +84,8 @@ class ToBeEx3(Excercise):
         # question: Вы врачи (lekari)?
         # answer:   Mi smo lekari
 
-        qDecl = Declination.Make('male|fem & first|second|third & sing|plur & nom')
-        aDecl = copy.deepcopy(qDecl).mirrorPerson()
+        qDecl = Declination.Parse('male|fem & first|second|third & sing|plur & nom')
+        aDecl = qDecl.clone().mirrorPerson()
 
         #print(qDecl.toString())
         #print(aDecl.toString())
@@ -197,8 +197,8 @@ class PointingEx(Excercise):
         # answer:   Ta pametna mačka je moja
 
         # title:    Переведите на русский:
-        # question: To crveno vino je tvoje 
-        # answer:   То красное вино твое
+        # question: Taj veliki kukuruz je njihov
+        # answer:   Та большая кукуруза - их
 
         lang = LangMode.GetLangBit()
 
@@ -206,20 +206,25 @@ class PointingEx(Excercise):
         distance = random.choice(list(Distance))
 
         nounGen = self.randomNounsPool.yieldElem()
-        gender = nounGen.metaDeclination.gender
+        serbGender = nounGen.metaDeclination.gender
+        rusGender = nounGen.metaDeclination.ruGender
 
-        decl = Declination.Make('{} & {} & {} & {} & {}'.format(gender.name, Case.nom.name, num.name, distance.name, Person.third.name))
-        noun = nounGen.get(decl)
-        adj = random.choice(GetVocabulary('random_adjectives').words).get(decl)
+        serbDecl = Declination.Make(serbGender, Case.nom, num, distance, Person.third)
+        rusDecl = serbDecl.clone().override(rusGender.toGender())
 
-        point = GetVocabulary('pointing_pronouns').getWordForm(decl)
+        noun = nounGen.get(serbDecl)
+        adj = random.choice(GetVocabulary('random_adjectives').words)
+        serbAdj = adj.get(serbDecl)
+        rusAdj = adj.get(rusDecl)
 
-        tobe = GetVocabulary('tobe').get(decl)
+        point = GetVocabulary('pointing_pronouns')
+        serbPoint = point.getWordForm(serbDecl)
+        rusPoint = point.getWordForm(rusDecl)
 
-        possessDecl = copy.deepcopy(decl)
-        possessDecl.number = random.choice(list(Number))
-        possessDecl.gender = random.choice(list(Gender))
-        possess = GetVocabulary('possessive_pronouns').getWord(possessDecl).get(decl)
+        tobe = GetVocabulary('tobe').get(serbDecl)
+
+        possessDecl = serbDecl.clone().override(random.choice(list(Number)), random.choice(list(Gender)))
+        possess = GetVocabulary('possessive_pronouns').getWord(possessDecl).get(serbDecl)
 
         distClarif = ''
         if distance == Distance.far:
@@ -228,8 +233,8 @@ class PointingEx(Excercise):
             distClarif = '(дальн.)'
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
-        question = '{}{} {} {} - {}.'.format(point.rus.capitalize(), distClarif, adj.rus, noun.rus, possess.rus)
-        answer = '{} {} {} {} {}.'.format(point.serb.capitalize(), adj.serb, noun.serb, tobe.serb, possess.serb)
+        question = '{}{} {} {} - {}.'.format(rusPoint.rus.capitalize(), distClarif, rusAdj.rus, noun.rus, possess.rus)
+        answer = '{} {} {} {} {}.'.format(serbPoint.serb.capitalize(), serbAdj.serb, noun.serb, tobe.serb, possess.serb)
 
         if lang:
             question, answer = answer, question
@@ -256,14 +261,11 @@ class ImatiEx(Excercise):
 
         negative = random.randint(0, 1)
 
-        rusPronounDecl = Declination.Make('male|fem|neu & first|second|third & sing|plur & gen')
-        serbImatiDecl = copy.deepcopy(rusPronounDecl)
-        serbImatiDecl.case = Case.nom
-        serbImatiDecl.time = Time.present
+        rusPronounDecl = Declination.Parse('male|fem|neu & first|second|third & sing|plur & gen')
+        serbImatiDecl = rusPronounDecl.clone().parseOverride('nom & present')
 
-        serbNounDecl = Declination.Make('sing|plur & aku')
-        rusNounDecl = copy.deepcopy(serbNounDecl)
-        rusNounDecl.case = Case.gen if negative else Case.nom
+        serbNounDecl = Declination.Parse('sing|plur & aku')
+        rusNounDecl = serbNounDecl.clone().override(Case.gen if negative else Case.nom)
 
         nounNonDeclined = self.randomNounsPool.yieldElem()
 
@@ -296,7 +298,7 @@ class VerbsEx(Excercise):
     def __init__(self, verbTypes: str): # verbTypes: `a`, `i`, `e`, `a | e | i` etc
         super().__init__()
 
-        conjDecls = Declination.MakeList(verbTypes)
+        conjDecls = Declination.ParseList(verbTypes)
 
         self.verbsList = []
 
@@ -318,7 +320,7 @@ class VerbsEx(Excercise):
 
         negative = random.randint(0, 1)
 
-        decl = Declination.Make('present & male|fem|neu & first|second|third & sing|plur & nom')
+        decl = Declination.Parse('present & male|fem|neu & first|second|third & sing|plur & nom')
         pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
         verb = self.randomVerbsPool.yieldElem().get(decl)
 
@@ -360,17 +362,16 @@ class ModalVerbsEx(Excercise):
 
         negative = random.randint(0, 1)
 
-        decl = Declination.Make('present & male|fem|neu & first|second|third & sing|plur & nom')
+        decl = Declination.Parse('present & male|fem|neu & first|second|third & sing|plur & nom')
         pronouns = GetVocabulary('personal_pronouns')
         modal = self.randomModalVerbsPool.yieldElem().get(decl)
 
         verb = self.randomVerbsPool.yieldElem()
         serbVerb = verb.get(decl)
-        rusVerb = verb.get(Declination.Make('inf'))
+        rusVerb = verb.get(Declination.Parse('inf'))
 
         if modal.serb == 'treba':
-            dative = copy.deepcopy(decl)
-            dative.case = Case.dat
+            dative = decl.clone().parseOverride('dat')
             rusPronoun = pronouns.getWordForm(dative)
         else:
             rusPronoun = pronouns.getWordForm(decl)

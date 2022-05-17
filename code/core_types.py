@@ -20,10 +20,16 @@ class Gender(Enum):
     neu    = 2 # neutral
     unisex = 3 # all genders
 
+    def toRuGender(self):
+        return RuGender(self.value)
+
 class RuGender(Enum):
     ru_male   = 0 # male
     ru_fem    = 1 # feminitive
     ru_neu    = 2 # neutral
+
+    def toGender(self) -> Gender:
+        return Gender(self.value)
     
 class Number(Enum):
     sing = 0 # singular / ед.ч.
@@ -117,7 +123,7 @@ class Declination:
     # male|fem & first|second|third & sing|plur & nom
     # & is for combination
     # | is for random probability
-    def Make(form: str): # Declination
+    def Parse(form: str): # Declination
         res = Declination()
 
         components = form.split('&')
@@ -151,7 +157,7 @@ class Declination:
     #     fem  & first & plur & nom
     #
     # unisex expands to male|fem|neu
-    def MakeList(form: str): # list[Declination]
+    def ParseList(form: str): # list[Declination]
         res: list[Declination] = []
 
         attrs = {} # <AttrName, list[AttrEnum]>
@@ -225,6 +231,38 @@ class Declination:
                 break
 
         return res
+    
+    def Make(*argv): # Declination
+        res = Declination()
+
+        for arg in argv:
+            got = False
+            for attrName, E in DeclinationAttributesMap.items():
+                if isinstance(arg, E):
+                    setattr(res, attrName, arg)
+                    got = True
+                    break
+        
+            if not got:
+                raise Exception("Could not set variable {}!".format(arg))
+        return res
+
+    def clone(self):
+        return copy.deepcopy(self)
+
+    def overrideByDelc(self, overrideDecl):
+        for a in DeclinationAttributesMap:
+            if hasattr(overrideDecl, a):
+                setattr(self, a, getattr(overrideDecl, a))
+        return self
+    
+    def override(self, *overrideArgs):
+        declOverride = Declination.Make(*overrideArgs)
+        return self.overrideByDelc(declOverride)
+
+    def parseOverride(self, overrideForm: str):
+        declOverride = Declination.Parse(overrideForm)
+        return self.overrideByDelc(declOverride)
 
     def isInfinitive(self) -> bool:
         return hasattr(self, 'exclusive') and self.exclusive == ExclusiveForm.inf
