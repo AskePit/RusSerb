@@ -27,6 +27,7 @@ class RuGender(Enum):
     ru_male   = 0 # male
     ru_fem    = 1 # feminitive
     ru_neu    = 2 # neutral
+    ru_unisex = 3 # all genders
 
     def toGender(self) -> Gender:
         return Gender(self.value)
@@ -131,7 +132,7 @@ class Declination:
             if not got:
                 raise Exception("Could not parse Declination {}!".format(form))
 
-        return res
+        return res.normalize()
 
     # male|fem & first & sing|plur & nom
     # & is for combination
@@ -195,7 +196,7 @@ class Declination:
                 i += 1
             
             # append declination
-            res.append(decl)
+            res.append(decl.normalize())
             
             # yield another combination
             i = 0
@@ -231,7 +232,7 @@ class Declination:
         
             if not got:
                 raise Exception("Could not set variable {}!".format(arg))
-        return res
+        return res.normalize()
 
     def clone(self):
         return copy.deepcopy(self)
@@ -240,7 +241,7 @@ class Declination:
         for a in DeclinationAttributesMap:
             if hasattr(overrideDecl, a):
                 setattr(self, a, getattr(overrideDecl, a))
-        return self
+        return self.normalize()
     
     def override(self, *overrideArgs):
         declOverride = Declination.Make(*overrideArgs)
@@ -297,6 +298,28 @@ class Declination:
     def isIncludedIn(self, other) -> bool:
         return other.includes(self)
     
+    def normalize(self):
+        #return self
+
+        # cleanup None
+        for a in DeclinationAttributesMap:
+            if hasattr(self, a) and getattr(self, a) == None:
+                delattr(self, a)
+        
+        # exclusive case
+        if hasattr(self, 'exclusive'):
+            for a in DeclinationAttributesMap:
+                if a == 'exclusive':
+                    continue
+                if hasattr(self, a):
+                    delattr(self, a)
+        
+        # gender and ruGender case
+        if hasattr(self, 'ruGender') and not hasattr(self, 'gender'):
+            setattr(self, 'gender', getattr(self, 'ruGender').toGender())
+        return self
+        
+    
     def toString(self):
         first = True
         res = ""
@@ -318,7 +341,7 @@ class DeclinedWord:
     serb: str
 
     def Make(declination, rus, serb):
-        res = Declination()
+        res = DeclinedWord()
         res.declination = declination
         res.rus = rus
         res.serb = serb

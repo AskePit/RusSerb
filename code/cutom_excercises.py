@@ -377,6 +377,7 @@ class ModalVerbsEx(Excercise):
             rusPronoun = pronouns.getWordForm(decl)
 
         title = 'Переведите на сербский'
+
         question = '{}{}{} {}.'.format(rusPronoun.rus.capitalize(), [' ', ' не '][negative], modal.rus, rusVerb.rus)
         answer = '{}{} da {}.'.format(['', 'Ne '][negative], [modal.serb.capitalize(), modal.serb][negative], serbVerb.serb)
 
