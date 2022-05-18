@@ -304,9 +304,9 @@ class VerbsEx(Excercise):
 
         for verb in GetVocabulary('verbs').words:
             for conj in conjDecls:
-                if verb.metaDeclination == conj:
+                if verb.metaDeclination.intersects(conj):
                     self.verbsList.append(verb)
-
+        
         self.randomVerbsPool = RandomPool(self.verbsList)
 
     def __call__(self) -> ExcerciseYield:
