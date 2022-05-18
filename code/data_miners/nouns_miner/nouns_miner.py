@@ -345,7 +345,7 @@ def generateNoun(noun: tuple[str, str]):
     pass
 
 with io.open('out.txt', 'w', encoding='utf-8') as o:
-    o.write('fixed noun\n\n')
+    o.write('declined noun\n\n')
 
 for noun in nouns:
     status = downloadNoun(noun)

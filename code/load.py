@@ -54,7 +54,7 @@ class Header:
             res += decl.toString() + '\n'
         return res
 
-def LoadFixed(data: list[str], speechPart: SpeechPart, theWords: WordList):
+def LoadDeclined(data: list[str], speechPart: SpeechPart, theWords: WordList):
     # read data
     data = ConvertLinesToTokens(data)
     
@@ -119,9 +119,9 @@ def LoadFile(filename: str, title: str):
         data = data[2:]
         data = [l for l in data if not l.startswith('#')]
 
-        if headerType == 'fixed':
+        if headerType == 'declined':
             theWords = WordList()
-            LoadFixed(data, speechPart, theWords)
+            LoadDeclined(data, speechPart, theWords)
             return theWords
         elif headerType == 'phrases':
             thePhrases = PhrasesList()

@@ -342,7 +342,7 @@ def generateVerb(verb: str):
     pass
 
 with io.open('out.txt', 'w', encoding='utf-8') as o:
-    o.write('fixed verb\n\n')
+    o.write('declined verb\n\n')
 
 for verb in verbs:
     status = downloadVerb(verb)
