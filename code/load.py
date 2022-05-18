@@ -58,7 +58,11 @@ def LoadDeclined(data: list[str], speechPart: SpeechPart, theWords: WordList):
     # read data
     data = ConvertLinesToTokens(data)
     
-    stage = 0
+    TITLE = 0
+    META_DECL = 1
+    DECL = 2
+
+    stage = TITLE
     theWord = Word.Make(speechPart)
 
     for l in data:
@@ -67,17 +71,17 @@ def LoadDeclined(data: list[str], speechPart: SpeechPart, theWords: WordList):
             theWord.normalize()
             theWords.words.append(theWord)
             theWord = Word.Make(speechPart)
-            stage = 0
-        elif stage == 0:
+            stage = TITLE
+        elif stage == TITLE:
             # title
             theWord.title = l.strip()
-            stage += 1
-        elif stage == 1:
+            stage = META_DECL
+        elif stage == META_DECL:
             # metaDeclination
             if l.strip() != 'none':
                 theWord.metaDeclination = Declination.Parse(l.strip())
-            stage += 1
-        elif stage == 2:
+            stage = DECL
+        elif stage == DECL:
             # declinations and forms
             declWriting = l.split(':')
 
