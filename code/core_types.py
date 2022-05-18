@@ -335,6 +335,7 @@ class Declination:
 
 Infinitive = Declination.Parse('inf')
 
+# exact declination of `Word` in both languages
 class DeclinedWord:
     declination: Declination
     rus: str
@@ -346,6 +347,57 @@ class DeclinedWord:
         res.rus = rus
         res.serb = serb
         return res
+
+# pair of serb and rus words in two different declinations
+# stores deep copies of declinations and strings, so you can play
+# with it as you like
+class DeclinedPair:
+    serbDeclination: Declination
+    rusDeclination: Declination
+    rus: str
+    serb: str
+
+    def Make(declinedWord: DeclinedWord): # -> DeclinedPair
+        res = DeclinedPair()
+        res.serbDeclination = declinedWord.declination.clone()
+        res.rusDeclination = declinedWord.declination.clone()
+        res.rus = copy.deepcopy(declinedWord.rus)
+        res.serb = copy.deepcopy(declinedWord.serb)
+        return res
+    
+    def clone(self):
+        return copy.deepcopy(self)
+    
+    def setWord(self, word):
+        self.serb = word.get(self.serbDeclination).serb
+        self.rus = word.get(self.rusDeclination).rus
+        return self
+        
+    def cloneRusToSerbDecl(self, *overrideArgs):
+        self.serbDeclination = self.rusDeclination.clone().override(*overrideArgs)
+        return self
+
+    def cloneRusToSerbDeclParse(self, overrideForm: str):
+        self.serbDeclination = self.rusDeclination.clone().parseOverride(overrideForm)
+        return self
+    
+    def cloneSerbToRusDecl(self, *overrideArgs):
+        self.rusDeclination = self.serbDeclination.clone().override(*overrideArgs)
+        return self
+
+    def cloneSerbToRusDeclParse(self, overrideForm: str):
+        self.rusDeclination = self.serbDeclination.clone().parseOverride(overrideForm)
+        return self
+    
+    def overrideDeclinations(self, *overrideArgs):
+        self.serbDeclination.override(*overrideArgs)
+        self.rusDeclination.override(*overrideArgs)
+        return self
+
+    def overrideDeclinationsParse(self, overrideForms: str):
+        self.serbDeclination.parseOverride(overrideForms)
+        self.rusDeclination.parseOverride(overrideForms)
+        return self
 
 class Word:
     speechPart: SpeechPart
@@ -391,6 +443,25 @@ class Word:
                     new_forms.append(new_form)
 
         self.forms += new_forms
+    
+    def makeNounGenderPair(self, *declinationArgs) -> DeclinedPair:
+        if self.speechPart != SpeechPart.noun:
+            return None
+
+        if not hasattr(self.metaDeclination, 'gender'):
+            return None
+
+        if not hasattr(self.metaDeclination, 'ruGender'):
+            self.metaDeclination.ruGender = self.metaDeclination.gender.toRuGender()
+
+        pair = DeclinedPair()
+        pair.serbDeclination = Declination.Make(self.metaDeclination.gender, *declinationArgs)
+        pair.rusDeclination = Declination.Make(self.metaDeclination.ruGender.toGender(), *declinationArgs)
+        pair.setWord(self)
+        return pair
+    
+    def makeSimilarPair(self, pair: DeclinedPair) -> DeclinedPair:
+        return pair.clone().setWord(self)
 
 class WordList:
     words: list[Word]
@@ -422,6 +493,12 @@ class WordList:
             if word.metaDeclination.intersects(declination):
                 return word.get(declination)
         return None
+    
+    def makeSimilarPair(self, pair: DeclinedPair) -> DeclinedPair:
+        res = pair.clone()
+        res.serb = self.getWordForm(pair.serbDeclination).serb
+        res.rus = self.getWordForm(pair.rusDeclination).rus
+        return res
 
     def tryUnwrap(self) -> Word:
         if len(self.words) == 1:

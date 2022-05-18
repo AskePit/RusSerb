@@ -186,10 +186,12 @@ class NumbersGeneratorEx(Excercise):
 
 class PointingEx(Excercise):
     randomNounsPool: RandomPool
+    randomAdjectivesPool: RandomPool
 
     def __init__(self):
         super().__init__()
         self.randomNounsPool = RandomPool(GetVocabulary('random_nouns').words)
+        self.randomAdjectivesPool = RandomPool(GetVocabulary('random_adjectives').words)
 
     def __call__(self) -> ExcerciseYield:
         # title:    Переведите на сербский:
@@ -205,26 +207,13 @@ class PointingEx(Excercise):
         num = random.choice(list(Number))
         distance = random.choice(list(Distance))
 
-        nounGen = self.randomNounsPool.yieldElem()
-        serbGender = nounGen.metaDeclination.gender
-        rusGender = nounGen.metaDeclination.ruGender
+        noun = self.randomNounsPool.yieldElem().makeNounGenderPair(Case.nom, num, distance, Person.third)
+        adj = self.randomAdjectivesPool.yieldElem().makeSimilarPair(noun)
+        point = GetVocabulary('pointing_pronouns').makeSimilarPair(noun)
+        tobe = GetVocabulary('tobe').makeSimilarPair(noun)
 
-        serbDecl = Declination.Make(serbGender, Case.nom, num, distance, Person.third)
-        rusDecl = serbDecl.clone().override(rusGender.toGender())
-
-        noun = nounGen.get(serbDecl)
-        adj = random.choice(GetVocabulary('random_adjectives').words)
-        serbAdj = adj.get(serbDecl)
-        rusAdj = adj.get(rusDecl)
-
-        point = GetVocabulary('pointing_pronouns')
-        serbPoint = point.getWordForm(serbDecl)
-        rusPoint = point.getWordForm(rusDecl)
-
-        tobe = GetVocabulary('tobe').get(serbDecl)
-
-        possessDecl = serbDecl.clone().override(random.choice(list(Number)), random.choice(list(Gender)))
-        possess = GetVocabulary('possessive_pronouns').getWord(possessDecl).get(serbDecl)
+        possessDecl = noun.serbDeclination.clone().override(random.choice(list(Number)), random.choice(list(Gender)))
+        possess = GetVocabulary('possessive_pronouns').getWord(possessDecl).makeSimilarPair(noun)
 
         distClarif = ''
         if distance == Distance.far:
@@ -233,8 +222,8 @@ class PointingEx(Excercise):
             distClarif = '(дальн.)'
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
-        question = '{}{} {} {} - {}.'.format(rusPoint.rus.capitalize(), distClarif, rusAdj.rus, noun.rus, possess.rus)
-        answer = '{} {} {} {} {}.'.format(serbPoint.serb.capitalize(), serbAdj.serb, noun.serb, tobe.serb, possess.serb)
+        question = '{}{} {} {} - {}.'.format(point.rus.capitalize(), distClarif, adj.rus, noun.rus, possess.rus)
+        answer = '{} {} {} {} {}.'.format(point.serb.capitalize(), adj.serb, noun.serb, tobe.serb, possess.serb)
 
         if lang:
             question, answer = answer, question
