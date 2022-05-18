@@ -19,12 +19,12 @@ futur & plur & first:  | mislićemo
 futur & plur & second:  | mislićete
 futur & plur & third:  | misliće
 
-perfect & sing & first:  | mislio sam
-perfect & sing & second:  | mislio si
-perfect & sing & third:  | mislio je
-perfect & plur & first:  | mislili smo
-perfect & plur & second:  | mislili ste
-perfect & plur & third:  | mislili su
+# perfect & sing & first:  | mislio sam
+# perfect & sing & second:  | mislio si
+# perfect & sing & third:  | mislio je
+# perfect & plur & first:  | mislili smo
+# perfect & plur & second:  | mislili ste
+# perfect & plur & third:  | mislili su
 
 imperfect & sing & first:  | mišljah
 imperfect & sing & second:  | mišljaše
@@ -86,19 +86,19 @@ imperfect & plur & third:  | mišljahu
 # imperativ & plur & second:  | mislite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | mislio
-# active & sing & f:  | mislila
-# active & sing & n:  | mislilo
-# active & plur & m:  | mislili
-# active & plur & f:  | mislile
-# active & plur & n:  | mislila
+perfect & sing & male: мыслил | mislio
+perfect & sing & fem: мыслила | mislila
+perfect & sing & neu: мыслило | mislilo
+perfect & plur & male: мыслили | mislili
+perfect & plur & fem: мыслили | mislile
+perfect & plur & neu: мыслили | mislila
 
-# passive & sing & m:  | mišljen
-# passive & sing & f:  | mišljena
-# passive & sing & n:  | mišljeno
-# passive & plur & m:  | mišljeni
-# passive & plur & f:  | mišljene
-# passive & plur & n:  | mišljena
+# passive & sing & male:  | mišljen
+# passive & sing & fem:  | mišljena
+# passive & sing & neu:  | mišljeno
+# passive & plur & male:  | mišljeni
+# passive & plur & fem:  | mišljene
+# passive & plur & neu:  | mišljena
 
 ---
 
@@ -121,12 +121,12 @@ futur & plur & first:  | čitaćemo
 futur & plur & second:  | čitaćete
 futur & plur & third:  | čitaće
 
-perfect & sing & first:  | čitao sam
-perfect & sing & second:  | čitao si
-perfect & sing & third:  | čitao je
-perfect & plur & first:  | čitali smo
-perfect & plur & second:  | čitali ste
-perfect & plur & third:  | čitali su
+# perfect & sing & first:  | čitao sam
+# perfect & sing & second:  | čitao si
+# perfect & sing & third:  | čitao je
+# perfect & plur & first:  | čitali smo
+# perfect & plur & second:  | čitali ste
+# perfect & plur & third:  | čitali su
 
 imperfect & sing & first:  | čitah
 imperfect & sing & second:  | čitaše
@@ -188,19 +188,19 @@ imperfect & plur & third:  | čitahu
 # imperativ & plur & second:  | čitajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | čitao
-# active & sing & f:  | čitala
-# active & sing & n:  | čitalo
-# active & plur & m:  | čitali
-# active & plur & f:  | čitale
-# active & plur & n:  | čitala
+perfect & sing & male: читал | čitao
+perfect & sing & fem: читала | čitala
+perfect & sing & neu: читало | čitalo
+perfect & plur & male: читали | čitali
+perfect & plur & fem: читали | čitale
+perfect & plur & neu: читали | čitala
 
-# passive & sing & m:  | čitan
-# passive & sing & f:  | čitana
-# passive & sing & n:  | čitano
-# passive & plur & m:  | čitani
-# passive & plur & f:  | čitane
-# passive & plur & n:  | čitana
+# passive & sing & male:  | čitan
+# passive & sing & fem:  | čitana
+# passive & sing & neu:  | čitano
+# passive & plur & male:  | čitani
+# passive & plur & fem:  | čitane
+# passive & plur & neu:  | čitana
 
 ---
 
@@ -223,12 +223,12 @@ futur & plur & first:  | gledaćemo
 futur & plur & second:  | gledaćete
 futur & plur & third:  | gledaće
 
-perfect & sing & first:  | gledao sam
-perfect & sing & second:  | gledao si
-perfect & sing & third:  | gledao je
-perfect & plur & first:  | gledali smo
-perfect & plur & second:  | gledali ste
-perfect & plur & third:  | gledali su
+# perfect & sing & first:  | gledao sam
+# perfect & sing & second:  | gledao si
+# perfect & sing & third:  | gledao je
+# perfect & plur & first:  | gledali smo
+# perfect & plur & second:  | gledali ste
+# perfect & plur & third:  | gledali su
 
 imperfect & sing & first:  | gledah
 imperfect & sing & second:  | gledaše
@@ -290,19 +290,19 @@ imperfect & plur & third:  | gledahu
 # imperativ & plur & second:  | gledajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | gledao
-# active & sing & f:  | gledala
-# active & sing & n:  | gledalo
-# active & plur & m:  | gledali
-# active & plur & f:  | gledale
-# active & plur & n:  | gledala
+perfect & sing & male: смотрел | gledao
+perfect & sing & fem: смотрела | gledala
+perfect & sing & neu: смотрело | gledalo
+perfect & plur & male: смотрели | gledali
+perfect & plur & fem: смотрели | gledale
+perfect & plur & neu: смотрели | gledala
 
-# passive & sing & m:  | gledan
-# passive & sing & f:  | gledana
-# passive & sing & n:  | gledano
-# passive & plur & m:  | gledani
-# passive & plur & f:  | gledane
-# passive & plur & n:  | gledana
+# passive & sing & male:  | gledan
+# passive & sing & fem:  | gledana
+# passive & sing & neu:  | gledano
+# passive & plur & male:  | gledani
+# passive & plur & fem:  | gledane
+# passive & plur & neu:  | gledana
 
 ---
 
@@ -325,12 +325,12 @@ futur & plur & first:  | čekaćemo
 futur & plur & second:  | čekaćete
 futur & plur & third:  | čekaće
 
-perfect & sing & first:  | čekao sam
-perfect & sing & second:  | čekao si
-perfect & sing & third:  | čekao je
-perfect & plur & first:  | čekali smo
-perfect & plur & second:  | čekali ste
-perfect & plur & third:  | čekali su
+# perfect & sing & first:  | čekao sam
+# perfect & sing & second:  | čekao si
+# perfect & sing & third:  | čekao je
+# perfect & plur & first:  | čekali smo
+# perfect & plur & second:  | čekali ste
+# perfect & plur & third:  | čekali su
 
 imperfect & sing & first:  | čekah
 imperfect & sing & second:  | čekaše
@@ -392,19 +392,19 @@ imperfect & plur & third:  | čekahu
 # imperativ & plur & second:  | čekajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | čekao
-# active & sing & f:  | čekala
-# active & sing & n:  | čekalo
-# active & plur & m:  | čekali
-# active & plur & f:  | čekale
-# active & plur & n:  | čekala
+perfect & sing & male: ждал | čekao
+perfect & sing & fem: ждала | čekala
+perfect & sing & neu: ждало | čekalo
+perfect & plur & male: ждали | čekali
+perfect & plur & fem: ждали | čekale
+perfect & plur & neu: ждали | čekala
 
-# passive & sing & m:  | čekan
-# passive & sing & f:  | čekana
-# passive & sing & n:  | čekano
-# passive & plur & m:  | čekani
-# passive & plur & f:  | čekane
-# passive & plur & n:  | čekana
+# passive & sing & male:  | čekan
+# passive & sing & fem:  | čekana
+# passive & sing & neu:  | čekano
+# passive & plur & male:  | čekani
+# passive & plur & fem:  | čekane
+# passive & plur & neu:  | čekana
 
 ---
 
@@ -427,12 +427,12 @@ futur & plur & first:  | pričaćemo
 futur & plur & second:  | pričaćete
 futur & plur & third:  | pričaće
 
-perfect & sing & first:  | pričao sam
-perfect & sing & second:  | pričao si
-perfect & sing & third:  | pričao je
-perfect & plur & first:  | pričali smo
-perfect & plur & second:  | pričali ste
-perfect & plur & third:  | pričali su
+# perfect & sing & first:  | pričao sam
+# perfect & sing & second:  | pričao si
+# perfect & sing & third:  | pričao je
+# perfect & plur & first:  | pričali smo
+# perfect & plur & second:  | pričali ste
+# perfect & plur & third:  | pričali su
 
 imperfect & sing & first:  | pričah
 imperfect & sing & second:  | pričaše
@@ -494,19 +494,19 @@ imperfect & plur & third:  | pričahu
 # imperativ & plur & second:  | pričajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | pričao
-# active & sing & f:  | pričala
-# active & sing & n:  | pričalo
-# active & plur & m:  | pričali
-# active & plur & f:  | pričale
-# active & plur & n:  | pričala
+perfect & sing & male: разговаривал | pričao
+perfect & sing & fem: разговаривала | pričala
+perfect & sing & neu: разговаривало | pričalo
+perfect & plur & male: разговаривали | pričali
+perfect & plur & fem: разговаривали | pričale
+perfect & plur & neu: разговаривали | pričala
 
-# passive & sing & m:  | pričan
-# passive & sing & f:  | pričana
-# passive & sing & n:  | pričano
-# passive & plur & m:  | pričani
-# passive & plur & f:  | pričane
-# passive & plur & n:  | pričana
+# passive & sing & male:  | pričan
+# passive & sing & fem:  | pričana
+# passive & sing & neu:  | pričano
+# passive & plur & male:  | pričani
+# passive & plur & fem:  | pričane
+# passive & plur & neu:  | pričana
 
 ---
 
@@ -529,12 +529,12 @@ futur & plur & first:  | spavaćemo
 futur & plur & second:  | spavaćete
 futur & plur & third:  | spavaće
 
-perfect & sing & first:  | spavao sam
-perfect & sing & second:  | spavao si
-perfect & sing & third:  | spavao je
-perfect & plur & first:  | spavali smo
-perfect & plur & second:  | spavali ste
-perfect & plur & third:  | spavali su
+# perfect & sing & first:  | spavao sam
+# perfect & sing & second:  | spavao si
+# perfect & sing & third:  | spavao je
+# perfect & plur & first:  | spavali smo
+# perfect & plur & second:  | spavali ste
+# perfect & plur & third:  | spavali su
 
 imperfect & sing & first:  | spavah
 imperfect & sing & second:  | spavaše
@@ -596,19 +596,19 @@ imperfect & plur & third:  | spavahu
 # imperativ & plur & second:  | spavajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | spavao
-# active & sing & f:  | spavala
-# active & sing & n:  | spavalo
-# active & plur & m:  | spavali
-# active & plur & f:  | spavale
-# active & plur & n:  | spavala
+perfect & sing & male: спал | spavao
+perfect & sing & fem: спала | spavala
+perfect & sing & neu: спало | spavalo
+perfect & plur & male: спали | spavali
+perfect & plur & fem: спали | spavale
+perfect & plur & neu: спали | spavala
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -631,12 +631,12 @@ futur & plur & first:  | slušaćemo
 futur & plur & second:  | slušaćete
 futur & plur & third:  | slušaće
 
-perfect & sing & first:  | slušao sam
-perfect & sing & second:  | slušao si
-perfect & sing & third:  | slušao je
-perfect & plur & first:  | slušali smo
-perfect & plur & second:  | slušali ste
-perfect & plur & third:  | slušali su
+# perfect & sing & first:  | slušao sam
+# perfect & sing & second:  | slušao si
+# perfect & sing & third:  | slušao je
+# perfect & plur & first:  | slušali smo
+# perfect & plur & second:  | slušali ste
+# perfect & plur & third:  | slušali su
 
 imperfect & sing & first:  | slušah
 imperfect & sing & second:  | slušaše
@@ -698,19 +698,19 @@ imperfect & plur & third:  | slušahu
 # imperativ & plur & second:  | slušajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | slušao
-# active & sing & f:  | slušala
-# active & sing & n:  | slušalo
-# active & plur & m:  | slušali
-# active & plur & f:  | slušale
-# active & plur & n:  | slušala
+perfect & sing & male: слушал | slušao
+perfect & sing & fem: слушала | slušala
+perfect & sing & neu: слушало | slušalo
+perfect & plur & male: слушали | slušali
+perfect & plur & fem: слушали | slušale
+perfect & plur & neu: слушали | slušala
 
-# passive & sing & m:  | slušan
-# passive & sing & f:  | slušana
-# passive & sing & n:  | slušano
-# passive & plur & m:  | slušani
-# passive & plur & f:  | slušane
-# passive & plur & n:  | slušana
+# passive & sing & male:  | slušan
+# passive & sing & fem:  | slušana
+# passive & sing & neu:  | slušano
+# passive & plur & male:  | slušani
+# passive & plur & fem:  | slušane
+# passive & plur & neu:  | slušana
 
 ---
 
@@ -733,12 +733,12 @@ futur & plur & first:  | radićemo
 futur & plur & second:  | radićete
 futur & plur & third:  | radiće
 
-perfect & sing & first:  | radio sam
-perfect & sing & second:  | radio si
-perfect & sing & third:  | radio je
-perfect & plur & first:  | radili smo
-perfect & plur & second:  | radili ste
-perfect & plur & third:  | radili su
+# perfect & sing & first:  | radio sam
+# perfect & sing & second:  | radio si
+# perfect & sing & third:  | radio je
+# perfect & plur & first:  | radili smo
+# perfect & plur & second:  | radili ste
+# perfect & plur & third:  | radili su
 
 imperfect & sing & first:  | rađah
 imperfect & sing & second:  | rađaše
@@ -800,19 +800,19 @@ imperfect & plur & third:  | rađahu
 # imperativ & plur & second:  | radite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | radio
-# active & sing & f:  | radila
-# active & sing & n:  | radilo
-# active & plur & m:  | radili
-# active & plur & f:  | radile
-# active & plur & n:  | radila
+perfect & sing & male: делал | radio
+perfect & sing & fem: делала | radila
+perfect & sing & neu: делало | radilo
+perfect & plur & male: делали | radili
+perfect & plur & fem: делали | radile
+perfect & plur & neu: делали | radila
 
-# passive & sing & m:  | rađen
-# passive & sing & f:  | rađena
-# passive & sing & n:  | rađeno
-# passive & plur & m:  | rađeni
-# passive & plur & f:  | rađene
-# passive & plur & n:  | rađena
+# passive & sing & male:  | rađen
+# passive & sing & fem:  | rađena
+# passive & sing & neu:  | rađeno
+# passive & plur & male:  | rađeni
+# passive & plur & fem:  | rađene
+# passive & plur & neu:  | rađena
 
 ---
 
@@ -835,12 +835,12 @@ futur & plur & first:  | trčaćemo
 futur & plur & second:  | trčaćete
 futur & plur & third:  | trčaće
 
-perfect & sing & first:  | trčao sam
-perfect & sing & second:  | trčao si
-perfect & sing & third:  | trčao je
-perfect & plur & first:  | trčali smo
-perfect & plur & second:  | trčali ste
-perfect & plur & third:  | trčali su
+# perfect & sing & first:  | trčao sam
+# perfect & sing & second:  | trčao si
+# perfect & sing & third:  | trčao je
+# perfect & plur & first:  | trčali smo
+# perfect & plur & second:  | trčali ste
+# perfect & plur & third:  | trčali su
 
 imperfect & sing & first:  | trčah
 imperfect & sing & second:  | trčaše
@@ -902,19 +902,19 @@ imperfect & plur & third:  | trčahu
 # imperativ & plur & second:  | trčite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | trčao
-# active & sing & f:  | trčala
-# active & sing & n:  | trčalo
-# active & plur & m:  | trčali
-# active & plur & f:  | trčale
-# active & plur & n:  | trčala
+perfect & sing & male: бежал | trčao
+perfect & sing & fem: бежала | trčala
+perfect & sing & neu: бежало | trčalo
+perfect & plur & male: бежали | trčali
+perfect & plur & fem: бежали | trčale
+perfect & plur & neu: бежали | trčala
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -937,12 +937,12 @@ futur & plur & first:  | igraćemo
 futur & plur & second:  | igraćete
 futur & plur & third:  | igraće
 
-perfect & sing & first:  | igrao sam
-perfect & sing & second:  | igrao si
-perfect & sing & third:  | igrao je
-perfect & plur & first:  | igrali smo
-perfect & plur & second:  | igrali ste
-perfect & plur & third:  | igrali su
+# perfect & sing & first:  | igrao sam
+# perfect & sing & second:  | igrao si
+# perfect & sing & third:  | igrao je
+# perfect & plur & first:  | igrali smo
+# perfect & plur & second:  | igrali ste
+# perfect & plur & third:  | igrali su
 
 imperfect & sing & first:  | igrah
 imperfect & sing & second:  | igraše
@@ -1004,19 +1004,19 @@ imperfect & plur & third:  | igrahu
 # imperativ & plur & second:  | igrajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | igrao
-# active & sing & f:  | igrala
-# active & sing & n:  | igralo
-# active & plur & m:  | igrali
-# active & plur & f:  | igrale
-# active & plur & n:  | igrala
+perfect & sing & male: играл | igrao
+perfect & sing & fem: играла | igrala
+perfect & sing & neu: играло | igralo
+perfect & plur & male: играли | igrali
+perfect & plur & fem: играли | igrale
+perfect & plur & neu: играли | igrala
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -1039,12 +1039,12 @@ futur & plur & first:  | plivaćemo
 futur & plur & second:  | plivaćete
 futur & plur & third:  | plivaće
 
-perfect & sing & first:  | plivao sam
-perfect & sing & second:  | plivao si
-perfect & sing & third:  | plivao je
-perfect & plur & first:  | plivali smo
-perfect & plur & second:  | plivali ste
-perfect & plur & third:  | plivali su
+# perfect & sing & first:  | plivao sam
+# perfect & sing & second:  | plivao si
+# perfect & sing & third:  | plivao je
+# perfect & plur & first:  | plivali smo
+# perfect & plur & second:  | plivali ste
+# perfect & plur & third:  | plivali su
 
 imperfect & sing & first:  | plivah
 imperfect & sing & second:  | pliva
@@ -1106,19 +1106,19 @@ imperfect & plur & third:  | plivaše
 # imperativ & plur & second:  | plivajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | plivao
-# active & sing & f:  | plivala
-# active & sing & n:  | plivalo
-# active & plur & m:  | plivali
-# active & plur & f:  | plivale
-# active & plur & n:  | plivala
+perfect & sing & male: плавал | plivao
+perfect & sing & fem: плавала | plivala
+perfect & sing & neu: плавало | plivalo
+perfect & plur & male: плавали | plivali
+perfect & plur & fem: плавали | plivale
+perfect & plur & neu: плавали | plivala
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -1141,12 +1141,12 @@ futur & plur & first:  | kopaćemo
 futur & plur & second:  | kopaćete
 futur & plur & third:  | kopaće
 
-perfect & sing & first:  | kopao sam
-perfect & sing & second:  | kopao si
-perfect & sing & third:  | kopao je
-perfect & plur & first:  | kopali smo
-perfect & plur & second:  | kopali ste
-perfect & plur & third:  | kopali su
+# perfect & sing & first:  | kopao sam
+# perfect & sing & second:  | kopao si
+# perfect & sing & third:  | kopao je
+# perfect & plur & first:  | kopali smo
+# perfect & plur & second:  | kopali ste
+# perfect & plur & third:  | kopali su
 
 imperfect & sing & first:  | kopah
 imperfect & sing & second:  | kopaše
@@ -1208,19 +1208,19 @@ imperfect & plur & third:  | kopahu
 # imperativ & plur & second:  | kopajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | kopao
-# active & sing & f:  | kopala
-# active & sing & n:  | kopalo
-# active & plur & m:  | kopali
-# active & plur & f:  | kopale
-# active & plur & n:  | kopala
+perfect & sing & male: копал | kopao
+perfect & sing & fem: копала | kopala
+perfect & sing & neu: копало | kopalo
+perfect & plur & male: копали | kopali
+perfect & plur & fem: копали | kopale
+perfect & plur & neu: копали | kopala
 
-# passive & sing & m:  | kopan
-# passive & sing & f:  | kopana
-# passive & sing & n:  | kopano
-# passive & plur & m:  | kopani
-# passive & plur & f:  | kopane
-# passive & plur & n:  | kopana
+# passive & sing & male:  | kopan
+# passive & sing & fem:  | kopana
+# passive & sing & neu:  | kopano
+# passive & plur & male:  | kopani
+# passive & plur & fem:  | kopane
+# passive & plur & neu:  | kopana
 
 ---
 
@@ -1243,12 +1243,12 @@ futur & plur & first:  | učićemo
 futur & plur & second:  | učićete
 futur & plur & third:  | učiće
 
-perfect & sing & first:  | učio sam
-perfect & sing & second:  | učio si
-perfect & sing & third:  | učio je
-perfect & plur & first:  | učili smo
-perfect & plur & second:  | učili ste
-perfect & plur & third:  | učili su
+# perfect & sing & first:  | učio sam
+# perfect & sing & second:  | učio si
+# perfect & sing & third:  | učio je
+# perfect & plur & first:  | učili smo
+# perfect & plur & second:  | učili ste
+# perfect & plur & third:  | učili su
 
 imperfect & sing & first:  | učah
 imperfect & sing & second:  | učaše
@@ -1310,19 +1310,19 @@ imperfect & plur & third:  | učahu
 # imperativ & plur & second:  | učite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | učio
-# active & sing & f:  | učila
-# active & sing & n:  | učilo
-# active & plur & m:  | učili
-# active & plur & f:  | učile
-# active & plur & n:  | učila
+perfect & sing & male: учил | učio
+perfect & sing & fem: учила | učila
+perfect & sing & neu: учило | učilo
+perfect & plur & male: учили | učili
+perfect & plur & fem: учили | učile
+perfect & plur & neu: учили | učila
 
-# passive & sing & m:  | učen
-# passive & sing & f:  | učena
-# passive & sing & n:  | učeno
-# passive & plur & m:  | učeni
-# passive & plur & f:  | učene
-# passive & plur & n:  | učena
+# passive & sing & male:  | učen
+# passive & sing & fem:  | učena
+# passive & sing & neu:  | učeno
+# passive & plur & male:  | učeni
+# passive & plur & fem:  | učene
+# passive & plur & neu:  | učena
 
 ---
 
@@ -1345,12 +1345,12 @@ futur & plur & first:  | praćemo
 futur & plur & second:  | praćete
 futur & plur & third:  | praće
 
-perfect & sing & first:  | prao sam
-perfect & sing & second:  | prao si
-perfect & sing & third:  | prao je
-perfect & plur & first:  | prali smo
-perfect & plur & second:  | prali ste
-perfect & plur & third:  | prali su
+# perfect & sing & first:  | prao sam
+# perfect & sing & second:  | prao si
+# perfect & sing & third:  | prao je
+# perfect & plur & first:  | prali smo
+# perfect & plur & second:  | prali ste
+# perfect & plur & third:  | prali su
 
 imperfect & sing & first:  | prah
 imperfect & sing & second:  | praše
@@ -1412,19 +1412,19 @@ imperfect & plur & third:  | prahu
 # imperativ & plur & second:  | perite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | prao
-# active & sing & f:  | prala
-# active & sing & n:  | pralo
-# active & plur & m:  | prali
-# active & plur & f:  | prale
-# active & plur & n:  | prala
+perfect & sing & male: стирал | prao
+perfect & sing & fem: стирала | prala
+perfect & sing & neu: стирало | pralo
+perfect & plur & male: стирали | prali
+perfect & plur & fem: стирали | prale
+perfect & plur & neu: стирали | prala
 
-# passive & sing & m:  | pran
-# passive & sing & f:  | prana
-# passive & sing & n:  | prano
-# passive & plur & m:  | prani
-# passive & plur & f:  | prane
-# passive & plur & n:  | prana
+# passive & sing & male:  | pran
+# passive & sing & fem:  | prana
+# passive & sing & neu:  | prano
+# passive & plur & male:  | prani
+# passive & plur & fem:  | prane
+# passive & plur & neu:  | prana
 
 ---
 
@@ -1447,12 +1447,12 @@ futur & plur & first:  | vozićemo
 futur & plur & second:  | vozićete
 futur & plur & third:  | voziće
 
-perfect & sing & first:  | vozio sam
-perfect & sing & second:  | vozio si
-perfect & sing & third:  | vozio je
-perfect & plur & first:  | vozili smo
-perfect & plur & second:  | vozili ste
-perfect & plur & third:  | vozili su
+# perfect & sing & first:  | vozio sam
+# perfect & sing & second:  | vozio si
+# perfect & sing & third:  | vozio je
+# perfect & plur & first:  | vozili smo
+# perfect & plur & second:  | vozili ste
+# perfect & plur & third:  | vozili su
 
 imperfect & sing & first:  | vožah
 imperfect & sing & second:  | vožaše
@@ -1514,19 +1514,19 @@ imperfect & plur & third:  | vožahu
 # imperativ & plur & second:  | vozite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | vozio
-# active & sing & f:  | vozila
-# active & sing & n:  | vozilo
-# active & plur & m:  | vozili
-# active & plur & f:  | vozile
-# active & plur & n:  | vozila
+perfect & sing & male: водил | vozio
+perfect & sing & fem: водила | vozila
+perfect & sing & neu: водило | vozilo
+perfect & plur & male: водили | vozili
+perfect & plur & fem: водили | vozile
+perfect & plur & neu: водили | vozila
 
-# passive & sing & m:  | vožen
-# passive & sing & f:  | vožena
-# passive & sing & n:  | voženo
-# passive & plur & m:  | voženi
-# passive & plur & f:  | vožene
-# passive & plur & n:  | vožena
+# passive & sing & male:  | vožen
+# passive & sing & fem:  | vožena
+# passive & sing & neu:  | voženo
+# passive & plur & male:  | voženi
+# passive & plur & fem:  | vožene
+# passive & plur & neu:  | vožena
 
 ---
 
@@ -1549,12 +1549,12 @@ futur & plur & first:  | ležaćemo
 futur & plur & second:  | ležaćete
 futur & plur & third:  | ležaće
 
-perfect & sing & first:  | ležao sam
-perfect & sing & second:  | ležao si
-perfect & sing & third:  | ležao je
-perfect & plur & first:  | ležali smo
-perfect & plur & second:  | ležali ste
-perfect & plur & third:  | ležali su
+# perfect & sing & first:  | ležao sam
+# perfect & sing & second:  | ležao si
+# perfect & sing & third:  | ležao je
+# perfect & plur & first:  | ležali smo
+# perfect & plur & second:  | ležali ste
+# perfect & plur & third:  | ležali su
 
 imperfect & sing & first:  | ležah
 imperfect & sing & second:  | ležaše
@@ -1616,19 +1616,19 @@ imperfect & plur & third:  | ležahu
 # imperativ & plur & second:  | ležite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | ležao
-# active & sing & f:  | ležala
-# active & sing & n:  | ležalo
-# active & plur & m:  | ležali
-# active & plur & f:  | ležale
-# active & plur & n:  | ležala
+perfect & sing & male: лежал | ležao
+perfect & sing & fem: лежала | ležala
+perfect & sing & neu: лежало | ležalo
+perfect & plur & male: лежали | ležali
+perfect & plur & fem: лежали | ležale
+perfect & plur & neu: лежали | ležala
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -1651,12 +1651,12 @@ futur & plur & first:  | stajaćemo
 futur & plur & second:  | stajaćete
 futur & plur & third:  | stajaće
 
-perfect & sing & first:  | stajao sam
-perfect & sing & second:  | stajao si
-perfect & sing & third:  | stajao je
-perfect & plur & first:  | stajali smo
-perfect & plur & second:  | stajali ste
-perfect & plur & third:  | stajali su
+# perfect & sing & first:  | stajao sam
+# perfect & sing & second:  | stajao si
+# perfect & sing & third:  | stajao je
+# perfect & plur & first:  | stajali smo
+# perfect & plur & second:  | stajali ste
+# perfect & plur & third:  | stajali su
 
 imperfect & sing & first:  | stajah
 imperfect & sing & second:  | stajaše
@@ -1718,19 +1718,19 @@ imperfect & plur & third:  | stajahu
 # imperativ & plur & second:  | stojte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | stajao
-# active & sing & f:  | stajala
-# active & sing & n:  | stajalo
-# active & plur & m:  | stajali
-# active & plur & f:  | stajale
-# active & plur & n:  | stajala
+perfect & sing & male: стоял | stajao
+perfect & sing & fem: стояла | stajala
+perfect & sing & neu: стояло | stajalo
+perfect & plur & male: стояли | stajali
+perfect & plur & fem: стояли | stajale
+perfect & plur & neu: стояли | stajala
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -1753,12 +1753,12 @@ futur & plur & first:  | razmišljaćemo
 futur & plur & second:  | razmišljaćete
 futur & plur & third:  | razmišljaće
 
-perfect & sing & first:  | razmišljao sam
-perfect & sing & second:  | razmišljao si
-perfect & sing & third:  | razmišljao je
-perfect & plur & first:  | razmišljali smo
-perfect & plur & second:  | razmišljali ste
-perfect & plur & third:  | razmišljali su
+# perfect & sing & first:  | razmišljao sam
+# perfect & sing & second:  | razmišljao si
+# perfect & sing & third:  | razmišljao je
+# perfect & plur & first:  | razmišljali smo
+# perfect & plur & second:  | razmišljali ste
+# perfect & plur & third:  | razmišljali su
 
 imperfect & sing & first:  | razmišljah
 imperfect & sing & second:  | razmišljaše
@@ -1820,19 +1820,19 @@ imperfect & plur & third:  | razmišljahu
 # imperativ & plur & second:  | razmišljajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | razmišljao
-# active & sing & f:  | razmišljala
-# active & sing & n:  | razmišljalo
-# active & plur & m:  | razmišljali
-# active & plur & f:  | razmišljale
-# active & plur & n:  | razmišljala
+perfect & sing & male: думал(razmišljati) | razmišljao
+perfect & sing & fem: думала(razmišljati) | razmišljala
+perfect & sing & neu: думало(razmišljati) | razmišljalo
+perfect & plur & male: думали(razmišljati) | razmišljali
+perfect & plur & fem: думали(razmišljati) | razmišljale
+perfect & plur & neu: думали(razmišljati) | razmišljala
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -1855,12 +1855,12 @@ futur & plur & first:  | pisaćemo
 futur & plur & second:  | pisaćete
 futur & plur & third:  | pisaće
 
-perfect & sing & first:  | pisao sam
-perfect & sing & second:  | pisao si
-perfect & sing & third:  | pisao je
-perfect & plur & first:  | pisali smo
-perfect & plur & second:  | pisali ste
-perfect & plur & third:  | pisali su
+# perfect & sing & first:  | pisao sam
+# perfect & sing & second:  | pisao si
+# perfect & sing & third:  | pisao je
+# perfect & plur & first:  | pisali smo
+# perfect & plur & second:  | pisali ste
+# perfect & plur & third:  | pisali su
 
 imperfect & sing & first:  | pisah
 imperfect & sing & second:  | pisaše
@@ -1922,19 +1922,19 @@ imperfect & plur & third:  | pisahu
 # imperativ & plur & second:  | pišite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | pisao
-# active & sing & f:  | pisala
-# active & sing & n:  | pisalo
-# active & plur & m:  | pisali
-# active & plur & f:  | pisale
-# active & plur & n:  | pisala
+perfect & sing & male: писал | pisao
+perfect & sing & fem: писала | pisala
+perfect & sing & neu: писало | pisalo
+perfect & plur & male: писали | pisali
+perfect & plur & fem: писали | pisale
+perfect & plur & neu: писали | pisala
 
-# passive & sing & m:  | pisan
-# passive & sing & f:  | pisana
-# passive & sing & n:  | pisano
-# passive & plur & m:  | pisani
-# passive & plur & f:  | pisane
-# passive & plur & n:  | pisana
+# passive & sing & male:  | pisan
+# passive & sing & fem:  | pisana
+# passive & sing & neu:  | pisano
+# passive & plur & male:  | pisani
+# passive & plur & fem:  | pisane
+# passive & plur & neu:  | pisana
 
 ---
 
@@ -1957,12 +1957,12 @@ futur & plur & first:  | ješćemo
 futur & plur & second:  | ješćete
 futur & plur & third:  | ješće
 
-perfect & sing & first:  | jeo sam
-perfect & sing & second:  | jeo si
-perfect & sing & third:  | jeo je
-perfect & plur & first:  | jeli smo
-perfect & plur & second:  | jeli ste
-perfect & plur & third:  | jeli su
+# perfect & sing & first:  | jeo sam
+# perfect & sing & second:  | jeo si
+# perfect & sing & third:  | jeo je
+# perfect & plur & first:  | jeli smo
+# perfect & plur & second:  | jeli ste
+# perfect & plur & third:  | jeli su
 
 imperfect & sing & first:  | jedijah
 imperfect & sing & second:  | jedijaše
@@ -2024,19 +2024,19 @@ imperfect & plur & third:  | jedijahu
 # imperativ & plur & second:  | jedite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | jeo
-# active & sing & f:  | jela
-# active & sing & n:  | jelo
-# active & plur & m:  | jeli
-# active & plur & f:  | jele
-# active & plur & n:  | jela
+perfect & sing & male: ел | jeo
+perfect & sing & fem: ела | jela
+perfect & sing & neu: ело | jelo
+perfect & plur & male: ели | jeli
+perfect & plur & fem: ели | jele
+perfect & plur & neu: ели | jela
 
-# passive & sing & m:  | jeden
-# passive & sing & f:  | jedena
-# passive & sing & n:  | jedeno
-# passive & plur & m:  | jedeni
-# passive & plur & f:  | jedene
-# passive & plur & n:  | jedena
+# passive & sing & male:  | jeden
+# passive & sing & fem:  | jedena
+# passive & sing & neu:  | jedeno
+# passive & plur & male:  | jedeni
+# passive & plur & fem:  | jedene
+# passive & plur & neu:  | jedena
 
 ---
 
@@ -2059,12 +2059,12 @@ futur & plur & first:  | govorićemo
 futur & plur & second:  | govorićete
 futur & plur & third:  | govoriće
 
-perfect & sing & first:  | govorio sam
-perfect & sing & second:  | govorio si
-perfect & sing & third:  | govorio je
-perfect & plur & first:  | govorili smo
-perfect & plur & second:  | govorili ste
-perfect & plur & third:  | govorili su
+# perfect & sing & first:  | govorio sam
+# perfect & sing & second:  | govorio si
+# perfect & sing & third:  | govorio je
+# perfect & plur & first:  | govorili smo
+# perfect & plur & second:  | govorili ste
+# perfect & plur & third:  | govorili su
 
 imperfect & sing & first:  | govorah
 imperfect & sing & second:  | govoraše
@@ -2126,19 +2126,19 @@ imperfect & plur & third:  | govorahu
 # imperativ & plur & second:  | govorite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | govorio
-# active & sing & f:  | govorila
-# active & sing & n:  | govorilo
-# active & plur & m:  | govorili
-# active & plur & f:  | govorile
-# active & plur & n:  | govorila
+perfect & sing & male: говорил(govoriti) | govorio
+perfect & sing & fem: говорила(govoriti) | govorila
+perfect & sing & neu: говорило(govoriti) | govorilo
+perfect & plur & male: говорили(govoriti) | govorili
+perfect & plur & fem: говорили(govoriti) | govorile
+perfect & plur & neu: говорили(govoriti) | govorila
 
-# passive & sing & m:  | govoren
-# passive & sing & f:  | govorena
-# passive & sing & n:  | govoreno
-# passive & plur & m:  | govoreni
-# passive & plur & f:  | govorene
-# passive & plur & n:  | govorena
+# passive & sing & male:  | govoren
+# passive & sing & fem:  | govorena
+# passive & sing & neu:  | govoreno
+# passive & plur & male:  | govoreni
+# passive & plur & fem:  | govorene
+# passive & plur & neu:  | govorena
 
 ---
 
@@ -2161,12 +2161,12 @@ futur & plur & first:  | hodaćemo
 futur & plur & second:  | hodaćete
 futur & plur & third:  | hodaće
 
-perfect & sing & first:  | hodao sam
-perfect & sing & second:  | hodao si
-perfect & sing & third:  | hodao je
-perfect & plur & first:  | hodali smo
-perfect & plur & second:  | hodali ste
-perfect & plur & third:  | hodali su
+# perfect & sing & first:  | hodao sam
+# perfect & sing & second:  | hodao si
+# perfect & sing & third:  | hodao je
+# perfect & plur & first:  | hodali smo
+# perfect & plur & second:  | hodali ste
+# perfect & plur & third:  | hodali su
 
 imperfect & sing & first:  | hodah
 imperfect & sing & second:  | hodaše
@@ -2228,19 +2228,19 @@ imperfect & plur & third:  | hodahu
 # imperativ & plur & second:  | hodajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | hodao
-# active & sing & f:  | hodala
-# active & sing & n:  | hodalo
-# active & plur & m:  | hodali
-# active & plur & f:  | hodale
-# active & plur & n:  | hodala
+perfect & sing & male: ходил | hodao
+perfect & sing & fem: ходила | hodala
+perfect & sing & neu: ходило | hodalo
+perfect & plur & male: ходили | hodali
+perfect & plur & fem: ходили | hodale
+perfect & plur & neu: ходили | hodala
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -2256,6 +2256,13 @@ present & plur & first:  готовим  | kuvamo
 present & plur & second: готовите | kuvate
 present & plur & third:  готовят  | kuvaju
 
+perfect & sing & male: готовил | kuvao
+perfect & sing & fem: готовила | kuvala
+perfect & sing & neu: готовило | kuvalo
+perfect & plur & male: готовили | kuvali
+perfect & plur & fem: готовили | kuvale
+perfect & plur & neu: готовили | kuvala
+
 ---
 
 pevati
@@ -2269,6 +2276,13 @@ present & sing & third:  поёт  | peva
 present & plur & first:  поём  | pevamo
 present & plur & second: поёте | pevate
 present & plur & third:  поют  | pevaju
+
+perfect & sing & male: пел | pevao
+perfect & sing & fem: пела | pevala
+perfect & sing & neu: пело | pevalo
+perfect & plur & male: пели | pevali
+perfect & plur & fem: пели | pevale
+perfect & plur & neu: пели | pevala
 
 ---
 
@@ -2284,6 +2298,13 @@ present & plur & first:  живём  | živimo
 present & plur & second: живёте | živite
 present & plur & third:  живут  | žive
 
+perfect & sing & male: жил | živeo
+perfect & sing & fem: жила | živela
+perfect & sing & neu: жило | živelo
+perfect & plur & male: жили | živeli
+perfect & plur & fem: жили | živele
+perfect & plur & neu: жили | živela
+
 ---
 
 raditi
@@ -2297,6 +2318,13 @@ present & sing & third:  работает  | radi
 present & plur & first:  работаем  | radimo
 present & plur & second: работаете | radite
 present & plur & third:  работают  | rade
+
+perfect & sing & male: работал | radio
+perfect & sing & fem: работала | radila
+perfect & sing & neu: работало | radilo
+perfect & plur & male: работали | radili
+perfect & plur & fem: работали | radile
+perfect & plur & neu: работали | radila
 
 ---
 
@@ -2319,12 +2347,12 @@ futur & plur & first:  | skakaćemo
 futur & plur & second:  | skakaćete
 futur & plur & third:  | skakaće
 
-perfect & sing & first:  | skakao sam
-perfect & sing & second:  | skakao si
-perfect & sing & third:  | skakao je
-perfect & plur & first:  | skakali smo
-perfect & plur & second:  | skakali ste
-perfect & plur & third:  | skakali su
+# perfect & sing & first:  | skakao sam
+# perfect & sing & second:  | skakao si
+# perfect & sing & third:  | skakao je
+# perfect & plur & first:  | skakali smo
+# perfect & plur & second:  | skakali ste
+# perfect & plur & third:  | skakali su
 
 imperfect & sing & first:  | skakah
 imperfect & sing & second:  | skakaše
@@ -2386,19 +2414,19 @@ imperfect & plur & third:  | skakahu
 # imperativ & plur & second:  | skačite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | skakao
-# active & sing & f:  | skakala
-# active & sing & n:  | skakalo
-# active & plur & m:  | skakali
-# active & plur & f:  | skakale
-# active & plur & n:  | skakala
+perfect & sing & male: прыгал | skakao
+perfect & sing & fem: прыгала | skakala
+perfect & sing & neu: прыгало | skakalo
+perfect & plur & male: прыгали | skakali
+perfect & plur & fem: прыгали | skakale
+perfect & plur & neu: прыгали | skakala
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -2421,12 +2449,12 @@ futur & plur & first:  | kazaćemo
 futur & plur & second:  | kazaćete
 futur & plur & third:  | kazaće
 
-perfect & sing & first:  | kazao sam
-perfect & sing & second:  | kazao si
-perfect & sing & third:  | kazao je
-perfect & plur & first:  | kazali smo
-perfect & plur & second:  | kazali ste
-perfect & plur & third:  | kazali su
+# perfect & sing & first:  | kazao sam
+# perfect & sing & second:  | kazao si
+# perfect & sing & third:  | kazao je
+# perfect & plur & first:  | kazali smo
+# perfect & plur & second:  | kazali ste
+# perfect & plur & third:  | kazali su
 
 imperfect & sing & first:  | 
 imperfect & sing & second:  | 
@@ -2488,19 +2516,19 @@ imperfect & plur & third:  |
 # imperativ & plur & second:  | kažite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | kazao
-# active & sing & f:  | kazala
-# active & sing & n:  | kazalo
-# active & plur & m:  | kazali
-# active & plur & f:  | kazale
-# active & plur & n:  | kazala
+perfect & sing & male: говорил(kazati) | kazao
+perfect & sing & fem: говорила(kazati) | kazala
+perfect & sing & neu: говорило(kazati) | kazalo
+perfect & plur & male: говорили(kazati) | kazali
+perfect & plur & fem: говорили(kazati) | kazale
+perfect & plur & neu: говорили(kazati) | kazala
 
-# passive & sing & m:  | kazan
-# passive & sing & f:  | kazana
-# passive & sing & n:  | kazano
-# passive & plur & m:  | kazani
-# passive & plur & f:  | kazane
-# passive & plur & n:  | kazana
+# passive & sing & male:  | kazan
+# passive & sing & fem:  | kazana
+# passive & sing & neu:  | kazano
+# passive & plur & male:  | kazani
+# passive & plur & fem:  | kazane
+# passive & plur & neu:  | kazana
 
 ---
 
@@ -2523,12 +2551,12 @@ futur & plur & first:  | putovaćemo
 futur & plur & second:  | putovaćete
 futur & plur & third:  | putovaće
 
-perfect & sing & first:  | putovao sam
-perfect & sing & second:  | putovao si
-perfect & sing & third:  | putovao je
-perfect & plur & first:  | putovali smo
-perfect & plur & second:  | putovali ste
-perfect & plur & third:  | putovali su
+# perfect & sing & first:  | putovao sam
+# perfect & sing & second:  | putovao si
+# perfect & sing & third:  | putovao je
+# perfect & plur & first:  | putovali smo
+# perfect & plur & second:  | putovali ste
+# perfect & plur & third:  | putovali su
 
 imperfect & sing & first:  | putovah
 imperfect & sing & second:  | putovaše
@@ -2590,19 +2618,19 @@ imperfect & plur & third:  | putovahu
 # imperativ & plur & second:  | putujte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | putovao
-# active & sing & f:  | putovala
-# active & sing & n:  | putovalo
-# active & plur & m:  | putovali
-# active & plur & f:  | putovale
-# active & plur & n:  | putovala
+perfect & sing & male: путешествовал | putovao
+perfect & sing & fem: путешествовала | putovala
+perfect & sing & neu: путешествовало | putovalo
+perfect & plur & male: путешествовали | putovali
+perfect & plur & fem: путешествовали | putovale
+perfect & plur & neu: путешествовали | putovala
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -2625,12 +2653,12 @@ futur & plur & first:  | kupovaćemo
 futur & plur & second:  | kupovaćete
 futur & plur & third:  | kupovaće
 
-perfect & sing & first:  | kupovao sam
-perfect & sing & second:  | kupovao si
-perfect & sing & third:  | kupovao je
-perfect & plur & first:  | kupovali smo
-perfect & plur & second:  | kupovali ste
-perfect & plur & third:  | kupovali su
+# perfect & sing & first:  | kupovao sam
+# perfect & sing & second:  | kupovao si
+# perfect & sing & third:  | kupovao je
+# perfect & plur & first:  | kupovali smo
+# perfect & plur & second:  | kupovali ste
+# perfect & plur & third:  | kupovali su
 
 imperfect & sing & first:  | kupovah
 imperfect & sing & second:  | kupovaše
@@ -2692,19 +2720,19 @@ imperfect & plur & third:  | kupovahu
 # imperativ & plur & second:  | kupujte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | kupovao
-# active & sing & f:  | kupovala
-# active & sing & n:  | kupovalo
-# active & plur & m:  | kupovali
-# active & plur & f:  | kupovale
-# active & plur & n:  | kupovala
+perfect & sing & male: покупал | kupovao
+perfect & sing & fem: покупала | kupovala
+perfect & sing & neu: покупало | kupovalo
+perfect & plur & male: покупали | kupovali
+perfect & plur & fem: покупали | kupovale
+perfect & plur & neu: покупали | kupovala
 
-# passive & sing & m:  | kupovan
-# passive & sing & f:  | kupovana
-# passive & sing & n:  | kupovano
-# passive & plur & m:  | kupovani
-# passive & plur & f:  | kupovane
-# passive & plur & n:  | kupovana
+# passive & sing & male:  | kupovan
+# passive & sing & fem:  | kupovana
+# passive & sing & neu:  | kupovano
+# passive & plur & male:  | kupovani
+# passive & plur & fem:  | kupovane
+# passive & plur & neu:  | kupovana
 
 ---
 
@@ -2727,12 +2755,12 @@ futur & plur & first:  | psovaćemo
 futur & plur & second:  | psovaćete
 futur & plur & third:  | psovaće
 
-perfect & sing & first:  | psovao sam
-perfect & sing & second:  | psovao si
-perfect & sing & third:  | psovao je
-perfect & plur & first:  | psovali smo
-perfect & plur & second:  | psovali ste
-perfect & plur & third:  | psovali su
+# perfect & sing & first:  | psovao sam
+# perfect & sing & second:  | psovao si
+# perfect & sing & third:  | psovao je
+# perfect & plur & first:  | psovali smo
+# perfect & plur & second:  | psovali ste
+# perfect & plur & third:  | psovali su
 
 imperfect & sing & first:  | psovah
 imperfect & sing & second:  | psovaše
@@ -2794,19 +2822,19 @@ imperfect & plur & third:  | psovahu
 # imperativ & plur & second:  | psujte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | psovao
-# active & sing & f:  | psovala
-# active & sing & n:  | psovalo
-# active & plur & m:  | psovali
-# active & plur & f:  | psovale
-# active & plur & n:  | psovala
+perfect & sing & male: ругался | psovao
+perfect & sing & fem: ругалась | psovala
+perfect & sing & neu: ругалось | psovalo
+perfect & plur & male: ругались | psovali
+perfect & plur & fem: ругались | psovale
+perfect & plur & neu: ругались | psovala
 
-# passive & sing & m:  | psovan
-# passive & sing & f:  | psovana
-# passive & sing & n:  | psovano
-# passive & plur & m:  | psovani
-# passive & plur & f:  | psovane
-# passive & plur & n:  | psovana
+# passive & sing & male:  | psovan
+# passive & sing & fem:  | psovana
+# passive & sing & neu:  | psovano
+# passive & plur & male:  | psovani
+# passive & plur & fem:  | psovane
+# passive & plur & neu:  | psovana
 
 ---
 
@@ -2829,12 +2857,12 @@ futur & plur & first:  | doručkovaćemo
 futur & plur & second:  | doručkovaćete
 futur & plur & third:  | doručkovaće
 
-perfect & sing & first:  | doručkovao sam
-perfect & sing & second:  | doručkovao si
-perfect & sing & third:  | doručkovao je
-perfect & plur & first:  | doručkovali smo
-perfect & plur & second:  | doručkovali ste
-perfect & plur & third:  | doručkovali su
+# perfect & sing & first:  | doručkovao sam
+# perfect & sing & second:  | doručkovao si
+# perfect & sing & third:  | doručkovao je
+# perfect & plur & first:  | doručkovali smo
+# perfect & plur & second:  | doručkovali ste
+# perfect & plur & third:  | doručkovali su
 
 imperfect & sing & first:  | doručkovah
 imperfect & sing & second:  | doručkovaše
@@ -2896,19 +2924,19 @@ imperfect & plur & third:  | doručkovahu
 # imperativ & plur & second:  | doručkujte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | doručkovao
-# active & sing & f:  | doručkovala
-# active & sing & n:  | doručkovalo
-# active & plur & m:  | doručkovali
-# active & plur & f:  | doručkovale
-# active & plur & n:  | doručkovala
+perfect & sing & male: завтракал | doručkovao
+perfect & sing & fem: завтракала | doručkovala
+perfect & sing & neu: завтракало | doručkovalo
+perfect & plur & male: завтракали | doručkovali
+perfect & plur & fem: завтракали | doručkovale
+perfect & plur & neu: завтракали | doručkovala
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -2931,12 +2959,12 @@ futur & plur & first:  |
 futur & plur & second:  | 
 futur & plur & third:  | 
 
-perfect & sing & first:  | išao sam
-perfect & sing & second:  | išao si
-perfect & sing & third:  | išao je
-perfect & plur & first:  | išli smo
-perfect & plur & second:  | išli ste
-perfect & plur & third:  | išli su
+# perfect & sing & first:  | išao sam
+# perfect & sing & second:  | išao si
+# perfect & sing & third:  | išao je
+# perfect & plur & first:  | išli smo
+# perfect & plur & second:  | išli ste
+# perfect & plur & third:  | išli su
 
 imperfect & sing & first:  | iđah
 imperfect & sing & second:  | iđaše
@@ -2998,19 +3026,19 @@ imperfect & plur & third:  | iđahu
 # imperativ & plur & second:  | idite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | išao
-# active & sing & f:  | išla
-# active & sing & n:  | išlo
-# active & plur & m:  | išli
-# active & plur & f:  | išle
-# active & plur & n:  | išla
+perfect & sing & male: шёл | išao
+perfect & sing & fem: шла | išla
+perfect & sing & neu: шло | išlo
+perfect & plur & male: шли | išli
+perfect & plur & fem: шли | išle
+perfect & plur & neu: шли | išla
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -3033,12 +3061,12 @@ futur & plur & first:  |
 futur & plur & second:  | 
 futur & plur & third:  | 
 
-perfect & sing & first:  | došao sam
-perfect & sing & second:  | došao si
-perfect & sing & third:  | došao je
-perfect & plur & first:  | došli smo
-perfect & plur & second:  | došli ste
-perfect & plur & third:  | došli su
+# perfect & sing & first:  | došao sam
+# perfect & sing & second:  | došao si
+# perfect & sing & third:  | došao je
+# perfect & plur & first:  | došli smo
+# perfect & plur & second:  | došli ste
+# perfect & plur & third:  | došli su
 
 imperfect & sing & first:  | 
 imperfect & sing & second:  | 
@@ -3100,19 +3128,19 @@ imperfect & plur & third:  |
 # imperativ & plur & second:  | dođite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | došao
-# active & sing & f:  | došla
-# active & sing & n:  | došlo
-# active & plur & m:  | došli
-# active & plur & f:  | došle
-# active & plur & n:  | došla
+perfect & sing & male: пришёл | došao
+perfect & sing & fem: пришла | došla
+perfect & sing & neu: пришло | došlo
+perfect & plur & male: пришли | došli
+perfect & plur & fem: пришли | došle
+perfect & plur & neu: пришли | došla
 
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -3135,12 +3163,12 @@ futur & plur & first:  | zvaćemo
 futur & plur & second:  | zvaćete
 futur & plur & third:  | zvaće
 
-perfect & sing & first:  | zvao sam
-perfect & sing & second:  | zvao si
-perfect & sing & third:  | zvao je
-perfect & plur & first:  | zvali smo
-perfect & plur & second:  | zvali ste
-perfect & plur & third:  | zvali su
+# perfect & sing & first:  | zvao sam
+# perfect & sing & second:  | zvao si
+# perfect & sing & third:  | zvao je
+# perfect & plur & first:  | zvali smo
+# perfect & plur & second:  | zvali ste
+# perfect & plur & third:  | zvali su
 
 imperfect & sing & first:  | zvah
 imperfect & sing & second:  | zvaše
@@ -3202,19 +3230,19 @@ imperfect & plur & third:  | zvahu
 # imperativ & plur & second:  | zovite
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | zvao
-# active & sing & f:  | zvala
-# active & sing & n:  | zvalo
-# active & plur & m:  | zvali
-# active & plur & f:  | zvale
-# active & plur & n:  | zvala
+perfect & sing & male: звал | zvao
+perfect & sing & fem: звала | zvala
+perfect & sing & neu: звало | zvalo
+perfect & plur & male: звали | zvali
+perfect & plur & fem: звали | zvale
+perfect & plur & neu: звали | zvala
 
-# passive & sing & m:  | zvan
-# passive & sing & f:  | zvana
-# passive & sing & n:  | zvano
-# passive & plur & m:  | zvani
-# passive & plur & f:  | zvane
-# passive & plur & n:  | zvana
+# passive & sing & male:  | zvan
+# passive & sing & fem:  | zvana
+# passive & sing & neu:  | zvano
+# passive & plur & male:  | zvani
+# passive & plur & fem:  | zvane
+# passive & plur & neu:  | zvana
 
 ---
 
@@ -3237,12 +3265,12 @@ futur & plur & first:  | pićemo
 futur & plur & second:  | pićete
 futur & plur & third:  | piće
 
-perfect & sing & first:  | pio sam
-perfect & sing & second:  | pio si
-perfect & sing & third:  | pio je
-perfect & plur & first:  | pili smo
-perfect & plur & second:  | pili ste
-perfect & plur & third:  | pili su
+# perfect & sing & first:  | pio sam
+# perfect & sing & second:  | pio si
+# perfect & sing & third:  | pio je
+# perfect & plur & first:  | pili smo
+# perfect & plur & second:  | pili ste
+# perfect & plur & third:  | pili su
 
 imperfect & sing & first:  | pijah
 imperfect & sing & second:  | pijaše
@@ -3304,19 +3332,19 @@ imperfect & plur & third:  | pijahu
 # imperativ & plur & second:  | pijte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | pio
-# active & sing & f:  | pila
-# active & sing & n:  | pilo
-# active & plur & m:  | pili
-# active & plur & f:  | pile
-# active & plur & n:  | pila
+perfect & sing & male: пил | pio
+perfect & sing & fem: пила | pila
+perfect & sing & neu: пило | pilo
+perfect & plur & male: пили | pili
+perfect & plur & fem: пили | pile
+perfect & plur & neu: пили | pila
 
-# passive & sing & m:  | pi
-# passive & sing & f:  | pit
-# passive & sing & n:  | pije
-# passive & plur & m:  | pij
-# passive & plur & f:  | piti
-# passive & plur & n:  | pije
+# passive & sing & male:  | pi
+# passive & sing & fem:  | pit
+# passive & sing & neu:  | pije
+# passive & plur & male:  | pij
+# passive & plur & fem:  | piti
+# passive & plur & neu:  | pije
 
 ---
 
@@ -3339,12 +3367,12 @@ futur & plur & first:  | čućemo
 futur & plur & second:  | čućete
 futur & plur & third:  | čuće
 
-perfect & sing & first:  | čuo sam
-perfect & sing & second:  | čuo si
-perfect & sing & third:  | čuo je
-perfect & plur & first:  | čuli smo
-perfect & plur & second:  | čuli ste
-perfect & plur & third:  | čuli su
+# perfect & sing & first:  | čuo sam
+# perfect & sing & second:  | čuo si
+# perfect & sing & third:  | čuo je
+# perfect & plur & first:  | čuli smo
+# perfect & plur & second:  | čuli ste
+# perfect & plur & third:  | čuli su
 
 imperfect & sing & first:  | čuh
 imperfect & sing & second:  | ču
@@ -3406,19 +3434,19 @@ imperfect & plur & third:  | čuše
 # imperativ & plur & second:  | čujte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | čuo
-# active & sing & f:  | čula
-# active & sing & n:  | čulo
-# active & plur & m:  | čuli
-# active & plur & f:  | čule
-# active & plur & n:  | čula
+perfect & sing & male: слышал | čuo
+perfect & sing & fem: слышала | čula
+perfect & sing & neu: слышало | čulo
+perfect & plur & male: слышали | čuli
+perfect & plur & fem: слышали | čule
+perfect & plur & neu: слышали | čula
 
-# passive & sing & m:  | ču
-# passive & sing & f:  | čut
-# passive & sing & n:  | čuve
-# passive & plur & m:  | čuv
-# passive & plur & f:  | čuti
-# passive & plur & n:  | čuve
+# passive & sing & male:  | ču
+# passive & sing & fem:  | čut
+# passive & sing & neu:  | čuve
+# passive & plur & male:  | čuv
+# passive & plur & fem:  | čuti
+# passive & plur & neu:  | čuve
 
 ---
 
@@ -3441,12 +3469,12 @@ futur & plur & first:  | prodavaćemo
 futur & plur & second:  | prodavaćete
 futur & plur & third:  | prodavaće
 
-perfect & sing & first:  | prodavao sam
-perfect & sing & second:  | prodavao si
-perfect & sing & third:  | prodavao je
-perfect & plur & first:  | prodavali smo
-perfect & plur & second:  | prodavali ste
-perfect & plur & third:  | prodavali su
+# perfect & sing & first:  | prodavao sam
+# perfect & sing & second:  | prodavao si
+# perfect & sing & third:  | prodavao je
+# perfect & plur & first:  | prodavali smo
+# perfect & plur & second:  | prodavali ste
+# perfect & plur & third:  | prodavali su
 
 imperfect & sing & first:  | prodavah
 imperfect & sing & second:  | prodavaše
@@ -3508,18 +3536,18 @@ imperfect & plur & third:  | prodavahu
 # imperativ & plur & second:  | prodajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | prodavao
-# active & sing & f:  | prodavala
-# active & sing & n:  | prodavalo
-# active & plur & m:  | prodavali
-# active & plur & f:  | prodavale
-# active & plur & n:  | prodavala
+perfect & sing & male: продавал | prodavao
+perfect & sing & fem: продавала | prodavala
+perfect & sing & neu: продавало | prodavalo
+perfect & plur & male: продавали | prodavali
+perfect & plur & fem: продавали | prodavale
+perfect & plur & neu: продавали | prodavala
 
-# passive & sing & m:  | prodavan
-# passive & sing & f:  | prodavana
-# passive & sing & n:  | prodavano
-# passive & plur & m:  | prodavani
-# passive & plur & f:  | prodavane
-# passive & plur & n:  | prodavana
+# passive & sing & male:  | prodavan
+# passive & sing & fem:  | prodavana
+# passive & sing & neu:  | prodavano
+# passive & plur & male:  | prodavani
+# passive & plur & fem:  | prodavane
+# passive & plur & neu:  | prodavana
 
 ---

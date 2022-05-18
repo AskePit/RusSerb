@@ -371,3 +371,56 @@ class ModalVerbsEx(Excercise):
         answer = '{}{} da {}.'.format(['', 'Ne '][negative], [modal.serb.capitalize(), modal.serb][negative], serbVerb.serb)
 
         return ExcerciseYield(title, question, answer)
+
+class PerfectPositiveEx(Excercise):
+    randomVerbsPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        # combine verbs and modal_verbs and exclude `treba`
+        l = GetVocabulary('verbs').words + GetVocabulary('modal_verbs').words
+        l = [w for w in l if w.title != 'treba']
+
+        self.randomVerbsPool = RandomPool(l)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский с местоимением:
+        # question: Я читал.
+        # answer:   Ja sam čitao.
+
+        # title:    Переведите на сербский без местоимения:
+        # question: Я читал.
+        # answer:   Čitao sam.
+
+        form = random.randint(0, 1)
+        negative = random.randint(0, 1)
+
+        decl = Declination.Parse('perfect & male|fem|neu & first|second|third & sing|plur & nom')
+
+        pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
+        tb = [GetVocabulary('tobe'), GetVocabulary('negative_tobe')][negative].get(decl)
+        verb = self.randomVerbsPool.yieldElem().get(decl)
+
+        title = ['Переведите на сербский с местоимением', 'Переведите на сербский без местоимения'][form]
+
+        needClarify = decl.number == Number.plur
+        clarification = ''
+        if needClarify:
+            if decl.gender == Gender.male:
+                clarification = '(муж.)'
+            elif decl.gender == Gender.fem:
+                clarification = '(жен.)'
+            elif decl.gender == Gender.neu:
+                clarification = '(ср.)'
+
+        question = '{}{}{}{}.'.format(pronoun.rus.capitalize(), clarification,  [' ', ' не '][negative], verb.rus)
+        if form == 0:
+            answer = '{} {} {}.'.format(pronoun.serb.capitalize(), tb.serb, verb.serb)
+        else:
+            if negative:
+                answer = '{} {}.'.format(tb.serb.capitalize(), verb.serb)
+            else:
+                answer = '{} {}.'.format(verb.serb.capitalize(), tb.serb)
+
+        return ExcerciseYield(title, question, answer)
