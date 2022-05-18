@@ -54,64 +54,6 @@ class Header:
             res += decl.toString() + '\n'
         return res
 
-def LoadHeadered(data: list[str], speechPart: SpeechPart, theWords: WordList):
-    headerLines = 0
-    headerRed = False
-    
-    header = Header()
-    
-    #header read
-    for l in data:
-        if l.startswith('-'):
-            headerRed = True
-            continue
-        
-        if not headerRed:
-            headerLines += 1
-            continue
-    
-    header.parseHeader(speechPart, data[:headerLines])
-    
-    # read data
-    data = data[headerLines+1:]
-    data = ConvertLinesToTokens(data)
-    
-    theWord = Word.Make(speechPart)
-
-    stage = 0
-
-    for l in data:
-        if stage == 0:
-            # title
-            theWord.title = l.strip()
-            stage += 1
-        elif stage == 1:
-            # metaDeclination
-            if l.strip() != 'none':
-                theWord.metaDeclination = Declination.Parse(l.strip())
-            stage += 1
-        elif stage == 2:
-            # forms
-            form = header.yieldDeclination()
-            if form is None:
-                theWords.words.append(theWord)
-
-                # new theWord
-                theWord = Word.Make(speechPart)
-                theWord.title = l.strip()
-                stage = 1
-
-                header.resetYield()
-            else:
-                words = l.split(INLINE_SEPARATOR)
-                rus = words[0].strip()
-                serb = words[1].strip()
-
-                theWord.forms.append(DeclinedWord.Make(form, rus, serb))
-    
-    theWord.normalize()
-    theWords.words.append(theWord)
-
 def LoadFixed(data: list[str], speechPart: SpeechPart, theWords: WordList):
     # read data
     data = ConvertLinesToTokens(data)
@@ -177,11 +119,7 @@ def LoadFile(filename: str, title: str):
         data = data[2:]
         data = [l for l in data if not l.startswith('#')]
 
-        if headerType == 'header':
-            theWords = WordList()
-            LoadHeadered(data, speechPart, theWords)
-            return theWords
-        elif headerType == 'fixed':
+        if headerType == 'fixed':
             theWords = WordList()
             LoadFixed(data, speechPart, theWords)
             return theWords

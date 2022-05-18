@@ -1,105 +1,127 @@
-header noun
-
-male & sing & nom
-male & plur & nom
-fem & sing & nom
-fem & plur & nom
----
+fixed noun
 
 ученик
 none
-ученик|učenik
-ученики|učenici
-ученица|učenica
-ученицы|učenice
+male & sing & nom: ученик  | učenik
+male & plur & nom: ученики | učenici
+fem  & sing & nom: ученица | učenica
+fem  & plur & nom: ученицы | učenice
+
+---
 
 гражданин
 none
-гражданин|građanin
-граждане|građani
-гражданка|građanka
-гражданки|građanke
+male & sing & nom: гражданин | građanin
+male & plur & nom: граждане  | građani
+fem  & sing & nom: гражданка | građanka
+fem  & plur & nom: гражданки | građanke
+
+---
 
 цыган
 none
-цыган|Ciganin
-цыгане|Cigani
-цыганка|Ciganka
-цыганки|Ciganke
+male & sing & nom: цыган   | Ciganin
+male & plur & nom: цыгане  | Cigani
+fem  & sing & nom: цыганка | Ciganka
+fem  & plur & nom: цыганки | Ciganke
+
+---
 
 студент
 none
-студент|student
-студенты|studenti
-студентка|studentica
-студентки|studentice
+male & sing & nom: студент   | student
+male & plur & nom: студенты  | studenti
+fem  & sing & nom: студентка | studentica
+fem  & plur & nom: студентки | studentice
+
+---
 
 начальник
 none
-начальник|šef
-начальники|šefovi
-начальница|šefica
-начальницы|šefice
+male & sing & nom: начальник  | šef
+male & plur & nom: начальники | šefovi
+fem  & sing & nom: начальница | šefica
+fem  & plur & nom: начальницы | šefice
+
+---
 
 юрист
 none
-юрист|pravnik
-юристы|pravnici
-юристка|pravnica
-юристки|pravnice
+male & sing & nom: юрист   | pravnik
+male & plur & nom: юристы  | pravnici
+fem  & sing & nom: юристка | pravnica
+fem  & plur & nom: юристки | pravnice
+
+---
 
 менеджер
 none
-менеджер|menadžer
-менеджеры|menadžeri
-менеджер|menadžer
-менеджеры|menadžeri
+male & sing & nom: менеджер  | menadžer
+male & plur & nom: менеджеры | menadžeri
+fem  & sing & nom: менеджер  | menadžer
+fem  & plur & nom: менеджеры | menadžeri
+
+---
 
 учитель
 none
-учитель|profesor
-учителя|profesori
-учительница|profesorica
-учительницы|profesorice
+male & sing & nom: учитель     | profesor
+male & plur & nom: учителя     | profesori
+fem  & sing & nom: учительница | profesorica
+fem  & plur & nom: учительницы | profesorice
+
+---
 
 врач
 none
-врач|lekar
-врачи|lekari
-врач|lekarka
-врачи|lekarke
+male & sing & nom: врач  | lekar
+male & plur & nom: врачи | lekari
+fem  & sing & nom: врач  | lekarka
+fem  & plur & nom: врачи | lekarke
+
+---
 
 сосед
 none
-сосед|sused
-соседи|susedi
-соседка|sused
-соседки|susedi
+male & sing & nom: сосед   | sused
+male & plur & nom: соседи  | susedi
+fem  & sing & nom: соседка | sused
+fem  & plur & nom: соседки | susedi
+
+---
 
 приятель
 none
-приятель|prijatelj
-приятели|prijatelji
-приятельница|prijateljica
-приятельницы|prijateljice
+male & sing & nom: приятель     | prijatelj
+male & plur & nom: приятели     | prijatelji
+fem  & sing & nom: приятельница | prijateljica
+fem  & plur & nom: приятельницы | prijateljice
+
+---
 
 пенсионер
 none
-пенсионер|penzioner
-пенсионеры|penzioneri
-пенсионерка|penzionerka
-пенсионерки|penzionerke
+male & sing & nom: пенсионер   | penzioner
+male & plur & nom: пенсионеры  | penzioneri
+fem  & sing & nom: пенсионерка | penzionerka
+fem  & plur & nom: пенсионерки | penzionerke
+
+---
 
 турист
 none
-турист|turista
-туристы|turisti
-турист|turista
-туристы|turisti
+male & sing & nom: турист  | turista
+male & plur & nom: туристы | turisti
+fem  & sing & nom: турист  | turista
+fem  & plur & nom: туристы | turisti
+
+---
 
 русский
 none
-русский|Rus
-русские|Rusi
-русская|Ruskinja
-русские|Ruskinje
+male & sing & nom: русский | Rus
+male & plur & nom: русские | Rusi
+fem  & sing & nom: русская | Ruskinja
+fem  & plur & nom: русские | Ruskinje
+
+---
