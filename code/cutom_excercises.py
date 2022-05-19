@@ -374,6 +374,7 @@ class ModalVerbsEx(Excercise):
 
 class PerfectPositiveEx(Excercise):
     randomVerbsPool: RandomPool
+    randomOccupationsPool: RandomPool
 
     def __init__(self):
         super().__init__()
@@ -383,6 +384,7 @@ class PerfectPositiveEx(Excercise):
         l = [w for w in l if w.title != 'treba']
 
         self.randomVerbsPool = RandomPool(l)
+        self.randomOccupationsPool = RandomPool(GetVocabulary('occupations').words)
 
     def __call__(self) -> ExcerciseYield:
         # title:    Переведите на сербский с местоимением:
@@ -395,14 +397,20 @@ class PerfectPositiveEx(Excercise):
 
         form = random.randint(0, 1)
         negative = random.randint(0, 1)
+        withOccupation = random.randint(0, 10) > 7
 
         decl = Declination.Parse('perfect & male|fem|neu & first|second|third & sing|plur & nom')
 
-        pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
+        if withOccupation:
+            decl.parseOverride('male|fem & third')
+            subject = self.randomOccupationsPool.yieldElem().get(decl)
+        else:
+            subject = GetVocabulary('personal_pronouns').getWordForm(decl)
+
         tb = [GetVocabulary('tobe'), GetVocabulary('negative_tobe')][negative].get(decl)
         verb = self.randomVerbsPool.yieldElem().get(decl)
 
-        title = ['Переведите на сербский с местоимением', 'Переведите на сербский без местоимения'][form]
+        title = 'Переведите на сербский' if withOccupation else ['Переведите на сербский с местоимением', 'Переведите на сербский без местоимения'][form]
 
         needClarify = decl.number == Number.plur
         clarification = ''
@@ -414,9 +422,9 @@ class PerfectPositiveEx(Excercise):
             elif decl.gender == Gender.neu:
                 clarification = '(ср.)'
 
-        question = '{}{}{}{}.'.format(pronoun.rus.capitalize(), clarification,  [' ', ' не '][negative], verb.rus)
-        if form == 0:
-            answer = '{} {} {}.'.format(pronoun.serb.capitalize(), tb.serb, verb.serb)
+        question = '{}{}{}{}.'.format(subject.rus.capitalize(), clarification,  [' ', ' не '][negative], verb.rus)
+        if form == 0 or withOccupation:
+            answer = '{} {} {}.'.format(subject.serb.capitalize(), tb.serb, verb.serb)
         else:
             if negative:
                 answer = '{} {}.'.format(tb.serb.capitalize(), verb.serb)
