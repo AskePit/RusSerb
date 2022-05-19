@@ -2,7 +2,10 @@ from code.load import *
 from code.excercise_types import *
 from code.cutom_excercises import *
 
-def IsExit(anykey):
+def TryExit(anykey):
+    term = anykey == 'x' or anykey == 'X' or anykey == 'ч' or anykey == 'Ч'
+    if term:
+        quit()
     return anykey == 'q' or anykey == 'Q' or anykey == 'й' or anykey == 'Й'
 
 def ClrScr():
@@ -28,13 +31,13 @@ def ExecuteExcercise(exc: ExcerciseDesc):
 
         ans = input()
 
-        if IsExit(ans):
+        if TryExit(ans):
             break
         else:
             print('{}{}'.format(PAD, exYield.answer))
             print('\n{}.........................\n'.format(PAD))
             ans = input()
-            if IsExit(ans):
+            if TryExit(ans):
                 break
 
 def main():
@@ -73,7 +76,7 @@ def main():
         print('\n{}q. Выход'.format(PAD))
 
         ans = input()
-        if IsExit(ans):
+        if TryExit(ans):
             if (not hasattr(currentDir, 'parent')) or currentDir.parent == None:
                 break
             else:
