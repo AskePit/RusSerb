@@ -1,18 +1,14 @@
-from enum import Enum
-from urllib.request import urlopen
-from urllib import parse
-import io
+import os
 import sys
-from bs4 import BeautifulSoup
-
-sys.stdin.reconfigure(encoding='utf-8')
-sys.stdout.reconfigure(encoding='utf-8')
+sys.path.append(os.path.abspath('../'))
+from miner_common import *
 
 nouns = [
     ('muzej', 'музей'),
     ('mačka', 'кошка'),
     ('pas', 'пёс'),
     ('jaje', 'яйцо'),
+    '''
     ('grožđa', 'виноград'),
     ('jabuka', 'яблоко'),
     ('maline', 'малина'),
@@ -155,82 +151,15 @@ nouns = [
     ('zet', 'шурин'),
     ('snaja', 'золовка'),
     ('rođak', 'родственник'),
+    '''
 ]
 
-class DownloadStatus(Enum):
-    Ok = 0,
-    NoUrl = 1
-    NoDeclTable = 2
-    Fatal = 3
-
-def downloadNoun(nounPair: tuple[str, str]) -> DownloadStatus:
-
-    class DeclTable():
-        cells: list[str]
-
-        def __init__(self, cells: list[str], gender: str) -> None:
-            self.cells = cells
-            self.gender = gender
-        
-        def extractCell(self, idx: int):
-            if idx >= len(self.cells):
-                return ''
-            return self.cells[idx]
-        
-        def findCell(self, pattern: str):
-            index = 0
-            for cell in self.cells:
-                if pattern in cell:
-                    if pattern[-1] == 'I' and pattern[-2] != 'I' and 'II' in cell:
-                        continue
-                    return index
-                index += 1
-            return None
-        
-        def getHeaderCell(self, headerIndex: int, cellIndex: int):
-            if headerIndex == None:
-                return ''
-            else:
-                return self.extractCell(headerIndex + cellIndex + 1)
-
-        def getRow(self, header: str, count: int) -> list[str]:
-            res = []
-
-            headerIdx = self.findCell(header)
-            for i in range(count):
-                res.append(self.getHeaderCell(headerIdx, i))
-            return res
-
-    def getDeclinationTable(noun: str, urlBase: str, tag: str, tagClass: str) -> tuple[DownloadStatus, DeclTable]:
-        try:
-            url = "{}/{}".format(urlBase, noun)
-            url = parse.urlparse(url)
-            url = url.scheme + "://" + url.netloc + parse.quote(url.path)
-            pagecontent = urlopen(url).read()
-            soup = BeautifulSoup(pagecontent, features="html.parser")
-        except:
-            return (DownloadStatus.NoUrl, None)
-
-        tableTag = soup.find_all(tag, {'class': tagClass})
-
-        if len(tableTag) == 0:
-            return (DownloadStatus.NoDeclTable, None)
-        if len(tableTag) > 1:
-            print('multiple tables for `{}`! choosing the first one'.format(noun))
-
-        cells = []
-        for c in tableTag[0].find_all("td"):
-            txt = c.get_text()
-            txt = txt.replace('1', '')
-            txt = txt.replace('2', '')
-            txt = txt.replace('-', '')
-            txt = txt.strip()
-            cells.append(txt)
-
+class NounDownloader(TableDownloader):
+    def loadCustom(self) -> DownloadStatus:
         gender = None
 
-        if 'sh.' in urlBase: # serb page
-            genderSpans = soup.find_all('span', {'class': 'gender'})
+        if 'sh.' in self.urlBase: # serb page
+            genderSpans = self.soup.find_all('span', {'class': 'gender'})
             for genderSpan in genderSpans:
                 if genderSpan != None:
                     abbr = genderSpan.find_all('abbr')[0]
@@ -244,7 +173,7 @@ def downloadNoun(nounPair: tuple[str, str]) -> DownloadStatus:
                             gender = 'neu'
                     break
         else: # ru page
-            ruText = soup.find_all('div', {'class': 'mw-parser-output'})[0]
+            ruText = self.soup.find_all('div', {'class': 'mw-parser-output'})[0]
             if ruText != None:
                 ps = ruText.find_all('p')
                 for p in ps:
@@ -257,86 +186,56 @@ def downloadNoun(nounPair: tuple[str, str]) -> DownloadStatus:
                     elif 'средний род' in p.get_text():
                         gender = 'ru_neu'
                         break
+        
+        self.table.gender = gender
+        return DownloadStatus.Ok
 
-        return (DownloadStatus.Ok, DeclTable(cells, gender))
-    
+def downloadNoun(nounPair: tuple[str, str]) -> DownloadStatus:
     print(nounPair)
 
     serbNoun, rusNoun = nounPair
 
-    serbOk, serbTable = getDeclinationTable(serbNoun, 'https://sh.wiktionary.org/wiki', 'table', 'inflection-table')
-    rusOk, rusTable  = getDeclinationTable(rusNoun, 'https://ru.wiktionary.org/wiki', 'table', 'morfotable ru')
+    serbOk, serb = NounDownloader(serbNoun, 'https://sh.wiktionary.org/wiki', 'table', 'inflection-table')()
+    rusOk, rus   = NounDownloader(rusNoun, 'https://ru.wiktionary.org/wiki', 'table', 'morfotable ru')()
 
     if serbOk != DownloadStatus.Ok:
         return serbOk
 
-    def getRowOrEmpty(table, header):
-        if table != None:
-            return table.getRow(header, 2)
-        else:
-            return ['', '']
+    o = Writer('out.txt', serb, rus)
 
-    serbNom  = getRowOrEmpty(serbTable, 'nominativ')
-    serbGen  = getRowOrEmpty(serbTable, 'genitiv')
-    serbDat  = getRowOrEmpty(serbTable, 'dativ')
-    serbAku  = getRowOrEmpty(serbTable, 'akuzativ')
-    serbVok  = getRowOrEmpty(serbTable, 'vokativ')
-    serbInst = getRowOrEmpty(serbTable, 'instrumental')
-    serbLok  = getRowOrEmpty(serbTable, 'lokativ')
+    o.write(serbNoun)
+    o.endl()
+    if serb != None and serb.gender != None and rus != None and rus.gender != None:
+        o.write('{} & {}'.format(serb.gender, rus.gender))
+    elif serb != None and serb.gender != None:
+        o.write(serb.gender)
+    elif rus != None and rus.gender != None:
+        o.write(rus.gender)
+    else:
+        o.write('none')
+    o.endl()
+    o.endl()
+    
+    Sing = 0
+    Plur = 1
 
-    rusNom  = getRowOrEmpty(rusTable, 'Им.')
-    rusGen  = getRowOrEmpty(rusTable, 'Р.')
-    rusDat  = getRowOrEmpty(rusTable, 'Д.')
-    rusAku  = getRowOrEmpty(rusTable, 'В.')
-    rusVok  = rusNom
-    rusInst = getRowOrEmpty(rusTable, 'Тв.')
-    rusLok  = getRowOrEmpty(rusTable, 'Пр.')
+    o.writeDecl('sing & nom',  Cell('Им.', Sing), Cell('nominativ', Sing))
+    o.writeDecl('sing & gen',  Cell('Р.', Sing),  Cell('genitiv', Sing))
+    o.writeDecl('sing & dat',  Cell('Д.', Sing),  Cell('dativ', Sing))
+    o.writeDecl('sing & aku',  Cell('В.', Sing),  Cell('akuzativ', Sing))
+    o.writeDecl('sing & vok',  Cell('Им.', Sing), Cell('vokativ', Sing))
+    o.writeDecl('sing & inst', Cell('Тв.', Sing), Cell('instrumental', Sing))
+    o.writeDecl('sing & lok',  Cell('Пр.', Sing), Cell('lokativ', Sing))
+    o.endl()
 
-    with io.open('out.txt', 'a', encoding='utf-8') as o:
-        def endl():
-            o.write('\n')
-
-        def finish():
-            o.write('\n---\n\n')
-
-        def writeLine(template, rusForm, serbForm):
-            if rusForm == None:
-                rusForm = ''
-            o.write('{}: {} | {}\n'.format(template, rusForm, serbForm))
-
-        o.write(serbNoun)
-        endl()
-        if serbTable != None and serbTable.gender != None and rusTable != None and rusTable.gender != None:
-            o.write('{} & {}'.format(serbTable.gender, rusTable.gender))
-        elif serbTable != None and serbTable.gender != None:
-            o.write(serbTable.gender)
-        elif rusTable != None and rusTable.gender != None:
-            o.write(rusTable.gender)
-        else:
-            o.write('none')
-        endl()
-        endl()
-        
-        Sing = 0
-        Plur = 1
-
-        writeLine('sing & nom',  rusNom[Sing],  serbNom[Sing])
-        writeLine('sing & gen',  rusGen[Sing],  serbGen[Sing])
-        writeLine('sing & dat',  rusDat[Sing],  serbDat[Sing])
-        writeLine('sing & aku',  rusAku[Sing],  serbAku[Sing])
-        writeLine('sing & vok',  rusVok[Sing],  serbVok[Sing])
-        writeLine('sing & inst', rusInst[Sing], serbInst[Sing])
-        writeLine('sing & lok',  rusLok[Sing],  serbLok[Sing])
-        endl()
-
-        writeLine('plur & nom',  rusNom[Plur],  serbNom[Plur])
-        writeLine('plur & gen',  rusGen[Plur],  serbGen[Plur])
-        writeLine('plur & dat',  rusDat[Plur],  serbDat[Plur])
-        writeLine('plur & aku',  rusAku[Plur],  serbAku[Plur])
-        writeLine('plur & vok',  rusVok[Plur],  serbVok[Plur])
-        writeLine('plur & inst', rusInst[Plur], serbInst[Plur])
-        writeLine('plur & lok',  rusLok[Plur],  serbLok[Plur])
-        finish()
+    o.writeDecl('sing & nom',  Cell('Им.', Plur), Cell('nominativ', Plur))
+    o.writeDecl('sing & gen',  Cell('Р.', Plur),  Cell('genitiv', Plur))
+    o.writeDecl('sing & dat',  Cell('Д.', Plur),  Cell('dativ', Plur))
+    o.writeDecl('sing & aku',  Cell('В.', Plur),  Cell('akuzativ', Plur))
+    o.writeDecl('sing & vok',  Cell('Им.', Plur), Cell('vokativ', Plur))
+    o.writeDecl('sing & inst', Cell('Тв.', Plur), Cell('instrumental', Plur))
+    o.writeDecl('sing & lok',  Cell('Пр.', Plur), Cell('lokativ', Plur))
+    o.finish()
 
     return DownloadStatus.Ok
 
@@ -344,18 +243,4 @@ def generateNoun(noun: tuple[str, str]):
     print('{} generation'.format(noun))
     pass
 
-with io.open('out.txt', 'w', encoding='utf-8') as o:
-    o.write('declined noun\n\n')
-
-for noun in nouns:
-    status = downloadNoun(noun)
-
-    if status == DownloadStatus.NoUrl:
-        print('ERROR: no URL for `{}`'.format(noun))
-    elif status == DownloadStatus.NoDeclTable:
-        print('ERROR: no declination table for `{}`'.format(noun))
-    elif status == DownloadStatus.Fatal:
-        print('ERROR: FATAL for `{}`'.format(noun))
-
-    if not status == DownloadStatus.Ok:
-        generateNoun(noun)
+ExecuteMiner('noun', nouns, downloadNoun, generateNoun, 'out.txt')

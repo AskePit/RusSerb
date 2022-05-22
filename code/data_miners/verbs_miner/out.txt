@@ -1,0 +1,178 @@
+declined verb
+
+morati
+none
+
+inf: должен | morati
+
+present & sing & first:  | moram
+present & sing & second:  | moraš
+present & sing & third:  | mora
+present & plur & first:  | moramo
+present & plur & second:  | morate
+present & plur & third:  | moraju
+
+perfect & sing & male:  | morao
+perfect & sing & fem:  | morala
+perfect & sing & neu:  | moralo
+perfect & plur & male:  | morali
+perfect & plur & fem:  | morale
+perfect & plur & neu:  | morala
+
+futur & sing & first:  | moraću
+futur & sing & second:  | moraćeš
+futur & sing & third:  | moraće
+futur & plur & first:  | moraćemo
+futur & plur & second:  | moraćete
+futur & plur & third:  | moraće
+
+imperfect & sing & first:  | morah
+imperfect & sing & second:  | moraše
+imperfect & sing & third:  | moraše
+imperfect & plur & first:  | morasmo
+imperfect & plur & second:  | moraste
+imperfect & plur & third:  | morahu
+
+# participle & present:  | mórajūći
+# participle & past:  | 
+# noun:  | mórānje
+
+# futur & sing & first:  | morat ću
+# futur & sing & second:  | morat ćeš
+# futur & sing & third:  | morat će
+# futur & plur & first:  | morat ćemo
+# futur & plur & second:  | morat ćete
+# futur & plur & third:  | morat će
+
+# futur2 & sing & first:  | budem morao
+# futur2 & sing & second:  | budeš morao
+# futur2 & sing & third:  | bude morao
+# futur2 & plur & first:  | budemo morali
+# futur2 & plur & second:  | budete morali
+# futur2 & plur & third:  | budu morali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | morao bih
+# cond1 & sing & second:  | morao bi
+# cond1 & sing & third:  | morao bi
+# cond1 & plur & first:  | morali bismo
+# cond1 & plur & second:  | morali biste
+# cond1 & plur & third:  | morali bi
+
+# cond2 & sing & first:  | bio bih morao
+# cond2 & sing & second:  | bio bi morao
+# cond2 & sing & third:  | bio bi morao
+# cond2 & plur & first:  | bili bismo morali
+# cond2 & plur & second:  | bili biste morali
+# cond2 & plur & third:  | bili bi morali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | moraj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | morajmo
+# imperativ & plur & second:  | morajte
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
+
+---
+
+moći
+none
+
+inf: мочь | moći
+
+present & sing & first: могу́ | mogu
+present & sing & second: мо́жешь | možeš
+present & sing & third: мо́жет | može
+present & plur & first: мо́жем | možemo
+present & plur & second: мо́жешь | možete
+present & plur & third: мо́гут | mogu
+
+perfect & sing & male: мо́г | mogao
+perfect & sing & fem: могла́ | mogla
+perfect & sing & neu: могло́ | moglo
+perfect & plur & male: могли́ | mogli
+perfect & plur & fem: могли́ | mogle
+perfect & plur & neu: могли́ | mogla
+
+futur & sing & first:  | 
+futur & sing & second:  | 
+futur & sing & third:  | 
+futur & plur & first:  | 
+futur & plur & second:  | 
+futur & plur & third:  | 
+
+imperfect & sing & first: мо́г | mogah
+imperfect & sing & second: могла́ | mogaše
+imperfect & sing & third: могло́ | mogaše
+imperfect & plur & first: могли́ | mogasmo
+imperfect & plur & second: могли́ | mogaste
+imperfect & plur & third: могли́ | mogahu
+
+# participle & present:  | mȍgūći
+# participle & past:  | mȍgāvši
+# noun:  | 
+
+# futur & sing & first:  | moći ću
+# futur & sing & second:  | moći ćeš
+# futur & sing & third:  | moći će
+# futur & plur & first:  | moći ćemo
+# futur & plur & second:  | moći ćete
+# futur & plur & third:  | moći će
+
+# futur2 & sing & first:  | budem mogao
+# futur2 & sing & second:  | budeš mogao
+# futur2 & sing & third:  | bude mogao
+# futur2 & plur & first:  | budemo mogli
+# futur2 & plur & second:  | budete mogli
+# futur2 & plur & third:  | budu mogli
+
+# aorist & sing & first:  | mogoh
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | mogao bih
+# cond1 & sing & second:  | mogao bi
+# cond1 & sing & third:  | mogao bi
+# cond1 & plur & first:  | mogli bismo
+# cond1 & plur & second:  | mogli biste
+# cond1 & plur & third:  | mogli bi
+
+# cond2 & sing & first:  | bio bih mogao
+# cond2 & sing & second:  | bio bi mogao
+# cond2 & sing & third:  | bio bi mogao
+# cond2 & plur & first:  | bili bismo mogli
+# cond2 & plur & second:  | bili biste mogli
+# cond2 & plur & third:  | bili bi mogli
+
+# imperativ & sing & first: — | 
+# imperativ & sing & second: *моги́ | mozi / mogni
+# imperativ & sing & third: — | 
+# imperativ & plur & first: — | mozimo / mognimo
+# imperativ & plur & second: *моги́те | mozite / mognite
+# imperativ & plur & third: — | 
+
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
+
+---
+
