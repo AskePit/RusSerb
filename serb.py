@@ -9,7 +9,7 @@ def TryExit(anykey):
     return anykey == 'q' or anykey == 'Q' or anykey == 'й' or anykey == 'Й'
 
 def ClrScr():
-    os.system('clear')
+    os.system('cls')
 
 PAD = '  '
 
