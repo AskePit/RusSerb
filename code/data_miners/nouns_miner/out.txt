@@ -1,23 +1,23 @@
 declined noun
 
-muzej
-male & ru_male
+jaje
+neu & ru_neu
 
-sing & nom: музе́й | muzej
-sing & gen: музе́я | muzeja
-sing & dat: музе́ю | muzeju
-sing & aku: музе́й | muzej
-sing & vok: музе́й | muzeju
-sing & inst: музе́ем | muzejom
-sing & lok: музе́е | muzeju
+sing & nom: яйцо́ | jaje
+sing & gen: яйца́ | jajeta
+sing & dat: яйцу́ | jajetu
+sing & aku: яйцо́ | jaje
+sing & vok: яйцо́ | jaje
+sing & inst: яйцо́м | jajetom
+sing & lok: яйце́ | jajetu
 
-sing & nom: музе́и | muzeji
-sing & gen: музе́ев | muzeja
-sing & dat: музе́ям | muzejima
-sing & aku: музе́и | muzeje
-sing & vok: музе́и | muzeji
-sing & inst: музе́ями | muzejima
-sing & lok: музе́ях | muzejima
+sing & nom: я́йца | jaja
+sing & gen: яи́ц | jaja
+sing & dat: я́йцам | jajima
+sing & aku: я́йца | jaja
+sing & vok: я́йца | jaja
+sing & inst: я́йцами | jajima
+sing & lok: я́йцах | jajima
 
 ---
 
@@ -42,6 +42,27 @@ sing & lok: ко́шках | mačkima
 
 ---
 
+muzej
+male & ru_male
+
+sing & nom: музе́й | muzej
+sing & gen: музе́я | muzeja
+sing & dat: музе́ю | muzeju
+sing & aku: музе́й | muzej
+sing & vok: музе́й | muzeju
+sing & inst: музе́ем | muzejom
+sing & lok: музе́е | muzeju
+
+sing & nom: музе́и | muzeji
+sing & gen: музе́ев | muzeja
+sing & dat: музе́ям | muzejima
+sing & aku: музе́и | muzeje
+sing & vok: музе́и | muzeji
+sing & inst: музе́ями | muzejima
+sing & lok: музе́ях | muzejima
+
+---
+
 pas
 male & ru_male
 
@@ -60,27 +81,6 @@ sing & aku: псов | pse
 sing & vok: псы | psi
 sing & inst: пса́ми | psima
 sing & lok: псах | psima
-
----
-
-jaje
-neu & ru_neu
-
-sing & nom: яйцо́ | jaje
-sing & gen: яйца́ | jajeta
-sing & dat: яйцу́ | jajetu
-sing & aku: яйцо́ | jaje
-sing & vok: яйцо́ | jaje
-sing & inst: яйцо́м | jajetom
-sing & lok: яйце́ | jajetu
-
-sing & nom: я́йца | jaja
-sing & gen: яи́ц | jaja
-sing & dat: я́йцам | jajima
-sing & aku: я́йца | jaja
-sing & vok: я́йца | jaja
-sing & inst: я́йцами | jajima
-sing & lok: я́йцах | jajima
 
 ---
 

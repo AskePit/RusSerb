@@ -163,6 +163,10 @@ class Writer:
         se = self.serb.get(serbCell) if self.serb != None else ''
 
         self.writeLine(decl, ru, se)
+    
+    def dumpText(self, text: list[str]):
+        for l in text:
+            self.file.write(l)
 
     def finishWord(self):
         self.file.write('\n---\n\n')
@@ -172,13 +176,60 @@ class Writer:
         self.file.flush()
         self.file.close()
 
+def LoadDataFile(filename: str) -> dict[str, list[str]]: # word name -> file piece
+    voc = {}
+
+    with io.open(filename, encoding='utf-8') as f:
+        data = f.readlines()
+        if not len(data):
+            return
+
+        # read data
+        data = data[2:]
+        
+        TITLE = 0
+        BODY = 1
+        SPACE = 2
+
+        stage = TITLE
+
+        key: str = ''
+        theWord: list[str] = []
+
+        for l in data:
+            if stage == SPACE:
+                stage = TITLE
+                continue
+
+            theWord.append(l)
+
+            if l.startswith('-'):
+                # word end
+                theWord.append('\n')
+                voc[key] = copy.deepcopy(theWord)
+                theWord = []
+                stage = SPACE
+            elif stage == TITLE:
+                # title
+                if l.isspace():
+                    continue
+                key = l.strip()                
+                stage = BODY
+    return voc
+
 def ExecuteMiner(speechPart: SpeechPart, wordsList, downloadFunc, generateFunc, outFile: str):
-    LoadVocabulary('../../../data/')
+    data = LoadDataFile(outFile)
+
+    wordsList.sort(key=lambda tup: tup[0])
 
     o = Writer(outFile)
     o.file.write('declined {}\n\n'.format(speechPart.name))
 
     for word in wordsList:
+        if word[0] in data:
+            o.dumpText(data[word[0]])
+            continue
+
         status = downloadFunc(word, o)
 
         if status == DownloadStatus.NoUrl:

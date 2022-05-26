@@ -12,15 +12,13 @@ nonTabledVerbs = [
 modalVerbs = [
     ('morati', 'должен'),
     ('moći', 'мочь'),
-    '''
-    ('treba', 'надо'),
-    ('znati', 'уметь'),
-    ('umeti', 'уметь'),
-    ('smeti', 'мочь'),
-    ('želeti', 'желать'),
-    ('voleti', 'любить'),
-    ('hteti', 'хотеть'),
-    '''
+    # ('treba', 'надо'),
+    # ('znati', 'уметь'),
+    # ('umeti', 'уметь'),
+    # ('smeti', 'мочь'),
+    # ('želeti', 'желать'),
+    # ('voleti', 'любить'),
+    # ('hteti', 'хотеть'),
 ]
 
 class VerbDownloader(TableDownloader):

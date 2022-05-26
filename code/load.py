@@ -80,6 +80,8 @@ def LoadDeclined(data: list[str], speechPart: SpeechPart, theWords: WordList):
             # metaDeclination
             if l.strip() != 'none':
                 theWord.metaDeclination = Declination.Parse(l.strip())
+            else:
+                theWord.metaDeclination = Declination()
             stage = DECL
         elif stage == DECL:
             # declinations and forms
