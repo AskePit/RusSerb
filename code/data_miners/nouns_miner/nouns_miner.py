@@ -190,7 +190,7 @@ class NounDownloader(TableDownloader):
         self.table.gender = gender
         return DownloadStatus.Ok
 
-def downloadNoun(nounPair: tuple[str, str]) -> DownloadStatus:
+def downloadNoun(nounPair: tuple[str, str], o: Writer) -> DownloadStatus:
     print(nounPair)
 
     serbNoun, rusNoun = nounPair
@@ -201,7 +201,7 @@ def downloadNoun(nounPair: tuple[str, str]) -> DownloadStatus:
     if serbOk != DownloadStatus.Ok:
         return serbOk
 
-    o = Writer('out.txt', serb, rus)
+    o.setTables(serb, rus)
 
     o.write(serbNoun)
     o.endl()
@@ -235,7 +235,7 @@ def downloadNoun(nounPair: tuple[str, str]) -> DownloadStatus:
     o.writeDecl('sing & vok',  Cell('Им.', Plur), Cell('vokativ', Plur))
     o.writeDecl('sing & inst', Cell('Тв.', Plur), Cell('instrumental', Plur))
     o.writeDecl('sing & lok',  Cell('Пр.', Plur), Cell('lokativ', Plur))
-    o.finish()
+    o.finishWord()
 
     return DownloadStatus.Ok
 

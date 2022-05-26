@@ -136,10 +136,12 @@ class TableDownloader:
         return (res, self.table)
 
 class Writer:
-    def __init__(self, file: str, serbTable: DeclTable, rusTable: DeclTable) -> None:
+    def __init__(self, file: str) -> None:
+        self.file = io.open(file, 'w', encoding='utf-8')
+
+    def setTables(self, serbTable: DeclTable, rusTable: DeclTable):
         self.serb = serbTable
         self.rus = rusTable
-        self.file = io.open(file, 'a', encoding='utf-8')
 
     def write(self, s: str):
         self.file.write(s)
@@ -154,23 +156,25 @@ class Writer:
     def endl(self):
         self.file.write('\n')
 
-    def finish(self):
-        self.file.write('\n---\n\n')
-        self.file.flush()
-        self.file.close()
-
     def writeDecl(self, decl: str, rusCell: Cell, serbCell: Cell):
         ru = self.rus.get(rusCell) if self.rus != None else ''
         se = self.serb.get(serbCell) if self.serb != None else ''
 
         self.writeLine(decl, ru, se)
 
+    def finishWord(self):
+        self.file.write('\n---\n\n')
+
+    def finish(self):
+        self.file.flush()
+        self.file.close()
+
 def ExecuteMiner(speechPart: str, wordsList, downloadFunc, generateFunc, outFile: str):
-    with io.open(outFile, 'w', encoding='utf-8') as o:
-        o.write('declined {}\n\n'.format(speechPart))
+    o = Writer(outFile)
+    o.file.write('declined {}\n\n'.format(speechPart))
 
     for word in wordsList:
-        status = downloadFunc(word)
+        status = downloadFunc(word, o)
 
         if status == DownloadStatus.NoUrl:
             print('ERROR: no URL for `{}`'.format(word))
@@ -181,3 +185,5 @@ def ExecuteMiner(speechPart: str, wordsList, downloadFunc, generateFunc, outFile
 
         if not status == DownloadStatus.Ok:
             generateFunc(word)
+    
+    o.finish()

@@ -27,7 +27,7 @@ class VerbDownloader(TableDownloader):
     def loadCustom(self) -> DownloadStatus:
         return DownloadStatus.Ok
 
-def downloadVerb(verbPair: tuple[str, str]) -> DownloadStatus:
+def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
     print(verbPair)
 
     serbVerb, rusVerb = verbPair
@@ -54,7 +54,7 @@ def downloadVerb(verbPair: tuple[str, str]) -> DownloadStatus:
     Female = 1
     Neutral = 2
 
-    o = Writer('out.txt', serb, rus)
+    o.setTables(serb, rus)
     o.write(serbVerb)
     o.write('\nnone\n\n')
 
@@ -180,7 +180,7 @@ def downloadVerb(verbPair: tuple[str, str]) -> DownloadStatus:
     o.writeDecl('# passive & plur & male', None, Cell('Glagolski pridjev trpni', 1, SplitParticiple, Male))
     o.writeDecl('# passive & plur & fem',  None, Cell('Glagolski pridjev trpni', 1, SplitParticiple, Female))
     o.writeDecl('# passive & plur & neu',  None, Cell('Glagolski pridjev trpni', 1, SplitParticiple, Neutral))
-    o.finish()
+    o.finishWord()
 
     return DownloadStatus.Ok
 

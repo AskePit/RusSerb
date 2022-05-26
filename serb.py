@@ -10,6 +10,7 @@ def TryExit(anykey):
 
 def ClrScr():
     os.system('cls')
+    os.system('clear')
 
 PAD = '  '
 
