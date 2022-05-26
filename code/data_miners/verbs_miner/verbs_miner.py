@@ -1,7 +1,7 @@
 import os
 import sys
-sys.path.append(os.path.abspath('../'))
-from miner_common import *
+sys.path.insert(0, '../../../')
+from code.data_miners.miner_common import *
 
 verbs = [
 ]
@@ -188,4 +188,4 @@ def generateVerb(verb: str):
     print('{} generation'.format(verb))
     pass
 
-ExecuteMiner('verb', verbs+modalVerbs+nonTabledVerbs, downloadVerb, generateVerb, 'out.txt')
+ExecuteMiner(SpeechPart.verb, verbs+modalVerbs+nonTabledVerbs, downloadVerb, generateVerb, 'out.txt')

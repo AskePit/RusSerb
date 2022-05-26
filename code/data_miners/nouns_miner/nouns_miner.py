@@ -1,7 +1,7 @@
 import os
 import sys
-sys.path.append(os.path.abspath('../'))
-from miner_common import *
+sys.path.insert(0, '../../../')
+from code.data_miners.miner_common import *
 
 nouns = [
     ('muzej', 'музей'),
@@ -202,7 +202,6 @@ def downloadNoun(nounPair: tuple[str, str], o: Writer) -> DownloadStatus:
         return serbOk
 
     o.setTables(serb, rus)
-
     o.write(serbNoun)
     o.endl()
     if serb != None and serb.gender != None and rus != None and rus.gender != None:
@@ -243,4 +242,4 @@ def generateNoun(noun: tuple[str, str]):
     print('{} generation'.format(noun))
     pass
 
-ExecuteMiner('noun', nouns, downloadNoun, generateNoun, 'out.txt')
+ExecuteMiner(SpeechPart.noun, nouns, downloadNoun, generateNoun, 'out.txt')

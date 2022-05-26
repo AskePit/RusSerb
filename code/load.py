@@ -136,8 +136,8 @@ VOCABULARY_EXT = 'voc'
 EXCERCISE_EXT = 'exc'
 EXCERCISE_TITLE_FILENAME = '_title'
 
-def LoadVocabulary():
-    vocRegex = '**/*.{}'.format(VOCABULARY_EXT)
+def LoadVocabulary(path='.'):
+    vocRegex = '{}/**/*.{}'.format(path, VOCABULARY_EXT)
     for f in glob.glob(vocRegex, recursive=True):
         collectionName = os.path.splitext(os.path.basename(f))[0]
         data = LoadFile(f, collectionName)

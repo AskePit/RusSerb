@@ -6,6 +6,8 @@ import io
 import sys
 from bs4 import BeautifulSoup
 
+from code.load import *
+
 sys.stdin.reconfigure(encoding='utf-8')
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -164,14 +166,17 @@ class Writer:
 
     def finishWord(self):
         self.file.write('\n---\n\n')
+        self.file.flush()
 
     def finish(self):
         self.file.flush()
         self.file.close()
 
-def ExecuteMiner(speechPart: str, wordsList, downloadFunc, generateFunc, outFile: str):
+def ExecuteMiner(speechPart: SpeechPart, wordsList, downloadFunc, generateFunc, outFile: str):
+    LoadVocabulary('../../../data/')
+
     o = Writer(outFile)
-    o.file.write('declined {}\n\n'.format(speechPart))
+    o.file.write('declined {}\n\n'.format(speechPart.name))
 
     for word in wordsList:
         status = downloadFunc(word, o)
