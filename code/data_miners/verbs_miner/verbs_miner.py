@@ -12,13 +12,13 @@ nonTabledVerbs = [
 modalVerbs = [
     ('morati', 'должен'),
     ('moći', 'мочь'),
-    # ('treba', 'надо'),
-    # ('znati', 'уметь'),
-    # ('umeti', 'уметь'),
-    # ('smeti', 'мочь'),
-    # ('želeti', 'желать'),
-    # ('voleti', 'любить'),
-    # ('hteti', 'хотеть'),
+    ('treba', 'надо'),
+    ('znati', 'уметь'),
+    ('umeti', 'уметь'),
+    ('smeti', 'мочь'),
+    ('želeti', 'желать'),
+    ('voleti', 'любить'),
+    ('hteti', 'хотеть'),
 ]
 
 class VerbDownloader(TableDownloader):
@@ -186,4 +186,4 @@ def generateVerb(verbPair: tuple[str, str], o: Writer):
     print('{} generation'.format(verbPair))
     pass
 
-ExecuteMiner(SpeechPart.verb, verbs+modalVerbs+nonTabledVerbs, downloadVerb, generateVerb, 'out.txt')
+ExecuteMiner('verb', verbs+modalVerbs+nonTabledVerbs, downloadVerb, generateVerb, 'out.txt')

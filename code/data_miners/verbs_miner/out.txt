@@ -176,3 +176,91 @@ imperfect & plur & third: могли́ | mogahu
 
 ---
 
+znati
+none
+
+inf: уметь | znati
+
+present & sing & first: уме́ю | znam / znadem
+present & sing & second: уме́ешь | znaš / znadeš
+present & sing & third: уме́ет | zna / znade
+present & plur & first: уме́ем | znamo / znademo
+present & plur & second: уме́ешь | znate / znadete
+present & plur & third: уме́ют | znaju / znadu
+
+perfect & sing & male: уме́ | znao
+perfect & sing & fem: луме́л | znala
+perfect & sing & neu: ауме́ло | znalo
+perfect & plur & male: уме́ли | znali
+perfect & plur & fem: уме́ли | znale
+perfect & plur & neu: уме́ли | znala
+
+futur & sing & first:  | znaću
+futur & sing & second:  | znaćeš
+futur & sing & third:  | znaće
+futur & plur & first:  | znaćemo
+futur & plur & second:  | znaćete
+futur & plur & third:  | znaće
+
+imperfect & sing & first: уме́ | znah / znadijah
+imperfect & sing & second: луме́л | znaše / znadijaše
+imperfect & sing & third: ауме́ло | znaše / znadijaše
+imperfect & plur & first: уме́ли | znasmo / znadijasmo
+imperfect & plur & second: уме́ли | znaste / znadijaste
+imperfect & plur & third: уме́ли | znahu / znadijahu
+
+# participle & present:  | znȁjūći/znádūći
+# participle & past:  | 
+# noun:  | 
+
+# futur & sing & first:  | znat ću
+# futur & sing & second:  | znat ćeš
+# futur & sing & third:  | znat će
+# futur & plur & first:  | znat ćemo
+# futur & plur & second:  | znat ćete
+# futur & plur & third:  | znat će
+
+# futur2 & sing & first:  | budem znao
+# futur2 & sing & second:  | budeš znao
+# futur2 & sing & third:  | bude znao
+# futur2 & plur & first:  | budemo znali
+# futur2 & plur & second:  | budete znali
+# futur2 & plur & third:  | budu znali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | znao bih
+# cond1 & sing & second:  | znao bi
+# cond1 & sing & third:  | znao bi
+# cond1 & plur & first:  | znali bismo
+# cond1 & plur & second:  | znali biste
+# cond1 & plur & third:  | znali bi
+
+# cond2 & sing & first:  | bio bih znao
+# cond2 & sing & second:  | bio bi znao
+# cond2 & sing & third:  | bio bi znao
+# cond2 & plur & first:  | bili bismo znali
+# cond2 & plur & second:  | bili biste znali
+# cond2 & plur & third:  | bili bi znali
+
+# imperativ & sing & first: — | 
+# imperativ & sing & second: уме́й | znaj
+# imperativ & sing & third: — | 
+# imperativ & plur & first: — | znajmo
+# imperativ & plur & second: уме́йте | znajte
+# imperativ & plur & third: — | 
+
+# passive & sing & male:  | znan
+# passive & sing & fem:  | znana
+# passive & sing & neu:  | znano
+# passive & plur & male:  | znani
+# passive & plur & fem:  | znane
+# passive & plur & neu:  | znana
+
+---
+

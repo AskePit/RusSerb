@@ -6,8 +6,6 @@ import io
 import sys
 from bs4 import BeautifulSoup
 
-from code.load import *
-
 sys.stdin.reconfigure(encoding='utf-8')
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -182,7 +180,7 @@ def LoadExistedData(filename: str) -> dict[str, list[str]]: # word name -> file 
     with io.open(filename, encoding='utf-8') as f:
         data = f.readlines()
         if not len(data):
-            return
+            return voc
 
         # read data
         data = data[2:]
@@ -218,7 +216,7 @@ def LoadExistedData(filename: str) -> dict[str, list[str]]: # word name -> file 
     return voc
 
 def ExecuteMiner(
-    speechPart: SpeechPart,
+    speechPart: str,
     desired: list[tuple[str, str]],
     downloadFunc: Callable[[tuple[str, str], Writer], DownloadStatus],
     generateFunc: Callable[[tuple[str, str], Writer], None],
@@ -243,7 +241,7 @@ def ExecuteMiner(
     desired.sort(key=lambda tup: tup[0])
 
     o = Writer(file)
-    o.file.write('declined {}\n\n'.format(speechPart.name))
+    o.file.write('declined {}\n\n'.format(speechPart))
 
     for word in desired:
         if word[0] in existed:

@@ -240,4 +240,4 @@ def generateNoun(nounPair: tuple[str, str], o: Writer):
     print('{} generation'.format(nounPair))
     pass
 
-ExecuteMiner(SpeechPart.noun, nouns, downloadNoun, generateNoun, 'out.txt')
+ExecuteMiner('noun', nouns, downloadNoun, generateNoun, 'out.txt')
