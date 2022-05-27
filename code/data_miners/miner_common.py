@@ -4,6 +4,7 @@ from urllib.request import urlopen
 from urllib import parse
 import io
 import sys
+import copy
 from bs4 import BeautifulSoup
 
 sys.stdin.reconfigure(encoding='utf-8')
@@ -35,6 +36,14 @@ class DeclTable():
     
     def findCell(self, pattern: str):
         index = 0
+
+        for cell in self.cells:
+            if pattern == cell:
+                return index
+            index += 1
+        
+        index = 0
+
         for cell in self.cells:
             if pattern in cell:
                 if pattern[-1] == 'I' and pattern[-2] != 'I' and 'II' in cell:
