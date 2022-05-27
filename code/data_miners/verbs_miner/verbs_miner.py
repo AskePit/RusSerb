@@ -182,8 +182,8 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
 
     return DownloadStatus.Ok
 
-def generateVerb(verb: str):
-    print('{} generation'.format(verb))
+def generateVerb(verbPair: tuple[str, str], o: Writer):
+    print('{} generation'.format(verbPair))
     pass
 
 ExecuteMiner(SpeechPart.verb, verbs+modalVerbs+nonTabledVerbs, downloadVerb, generateVerb, 'out.txt')

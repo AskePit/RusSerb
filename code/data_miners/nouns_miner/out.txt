@@ -1,44 +1,23 @@
 declined noun
 
-jaje
-neu & ru_neu
+jabuka
+fem & ru_neu
 
-sing & nom: яйцо́ | jaje
-sing & gen: яйца́ | jajeta
-sing & dat: яйцу́ | jajetu
-sing & aku: яйцо́ | jaje
-sing & vok: яйцо́ | jaje
-sing & inst: яйцо́м | jajetom
-sing & lok: яйце́ | jajetu
+sing & nom: я́блоко | jabuka
+sing & gen: я́блока | jabuke
+sing & dat: я́блоку | jabuci
+sing & aku: я́блоко | jabuku
+sing & vok: я́блоко | jabuko
+sing & inst: я́блоком | jabukom
+sing & lok: я́блоке | jabuci
 
-sing & nom: я́йца | jaja
-sing & gen: яи́ц | jaja
-sing & dat: я́йцам | jajima
-sing & aku: я́йца | jaja
-sing & vok: я́йца | jaja
-sing & inst: я́йцами | jajima
-sing & lok: я́йцах | jajima
-
----
-
-mačka
-fem & ru_fem
-
-sing & nom: ко́шка | mačka
-sing & gen: ко́шки | mačke
-sing & dat: ко́шке | mački
-sing & aku: ко́шку | mačku
-sing & vok: ко́шка | mačko
-sing & inst: ко́шкойко́шкою | mačkom
-sing & lok: ко́шке | mački
-
-sing & nom: ко́шки | mačke
-sing & gen: ко́шек | mačaka
-sing & dat: ко́шкам | mačkima
-sing & aku: ко́шек | mačke
-sing & vok: ко́шки | mačke
-sing & inst: ко́шками | mačkima
-sing & lok: ко́шках | mačkima
+sing & nom: я́блоки | jabuke
+sing & gen: я́блок | jabuka
+sing & dat: я́блокам | jabukama
+sing & aku: я́блоки | jabuke
+sing & vok: я́блоки | jabuke
+sing & inst: я́блоками | jabukama
+sing & lok: я́блоках | jabukama
 
 ---
 

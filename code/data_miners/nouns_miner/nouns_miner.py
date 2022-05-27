@@ -5,9 +5,9 @@ from code.data_miners.miner_common import *
 
 nouns = [
     ('muzej', 'музей'),
-    ('mačka', 'кошка'),
+    # ('mačka', 'кошка'),
     ('pas', 'пёс'),
-    ('jaje', 'яйцо'),
+    # ('jaje', 'яйцо'),
     # ('grožđa', 'виноград'),
     # ('jabuka', 'яблоко'),
     # ('maline', 'малина'),
@@ -236,8 +236,8 @@ def downloadNoun(nounPair: tuple[str, str], o: Writer) -> DownloadStatus:
 
     return DownloadStatus.Ok
 
-def generateNoun(noun: tuple[str, str]):
-    print('{} generation'.format(noun))
+def generateNoun(nounPair: tuple[str, str], o: Writer):
+    print('{} generation'.format(nounPair))
     pass
 
 ExecuteMiner(SpeechPart.noun, nouns, downloadNoun, generateNoun, 'out.txt')

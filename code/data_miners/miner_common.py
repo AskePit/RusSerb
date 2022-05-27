@@ -176,7 +176,7 @@ class Writer:
         self.file.flush()
         self.file.close()
 
-def LoadDataFile(filename: str) -> dict[str, list[str]]: # word name -> file piece
+def LoadExistedData(filename: str) -> dict[str, list[str]]: # word name -> file piece
     voc = {}
 
     with io.open(filename, encoding='utf-8') as f:
@@ -217,17 +217,37 @@ def LoadDataFile(filename: str) -> dict[str, list[str]]: # word name -> file pie
                 stage = BODY
     return voc
 
-def ExecuteMiner(speechPart: SpeechPart, wordsList, downloadFunc, generateFunc, outFile: str):
-    data = LoadDataFile(outFile)
+def ExecuteMiner(
+    speechPart: SpeechPart,
+    desired: list[tuple[str, str]],
+    downloadFunc: Callable[[tuple[str, str], Writer], DownloadStatus],
+    generateFunc: Callable[[tuple[str, str], Writer], None],
+    file: str
+):
+    existed: dict[str, list[str]] = LoadExistedData(file)
 
-    wordsList.sort(key=lambda tup: tup[0])
+    # check if we really need to do any work
+    allCovered = True
+    for w in desired:
+        if w[0] not in existed:
+            allCovered = False
+            break
+    
+    # if no - just exit
+    if allCovered:
+        print('Already up to date!')
+        return
+    
+    # extend `desired` by `existed` to have a proper sorted order of all words
+    desired += [(w, '') for w in existed if w not in dict(desired)]
+    desired.sort(key=lambda tup: tup[0])
 
-    o = Writer(outFile)
+    o = Writer(file)
     o.file.write('declined {}\n\n'.format(speechPart.name))
 
-    for word in wordsList:
-        if word[0] in data:
-            o.dumpText(data[word[0]])
+    for word in desired:
+        if word[0] in existed:
+            o.dumpText(existed[word[0]])
             continue
 
         status = downloadFunc(word, o)
@@ -240,6 +260,6 @@ def ExecuteMiner(speechPart: SpeechPart, wordsList, downloadFunc, generateFunc, 
             print('ERROR: FATAL for `{}`'.format(word))
 
         if not status == DownloadStatus.Ok:
-            generateFunc(word)
+            generateFunc(word, o)
     
     o.finish()
