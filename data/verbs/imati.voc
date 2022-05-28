@@ -5,44 +5,44 @@ a
 
 inf: иметь | imati
 
-present & sing & first:  имею   | imam
+present & sing & first: имею | imam
 present & sing & second: имеешь | imaš
-present & sing & third:  имеет  | ima
-present & plur & first:  имеем  | imamo
-present & plur & second: имеете | imate
-present & plur & third:  имеют  | imaju
+present & sing & third: имеет | ima
+present & plur & first: имеем | imamo
+present & plur & second: имеешь | imate
+present & plur & third: имеют | imaju
 
-futur & sing & first:  | imaću
-futur & sing & second:  | imaćeš
-futur & sing & third:  | imaće
-futur & plur & first:  | imaćemo
-futur & plur & second:  | imaćete
-futur & plur & third:  | imaće
+perfect & sing & male: имел | imao
+perfect & sing & fem: имела | imala
+perfect & sing & neu: имело | imalo
+perfect & plur & male: имели | imali
+perfect & plur & fem: имели | imale
+perfect & plur & neu: имели | imala
 
-perfect & sing & first:  | imao sam
-perfect & sing & second:  | imao si
-perfect & sing & third:  | imao je
-perfect & plur & first:  | imali smo
-perfect & plur & second:  | imali ste
-perfect & plur & third:  | imali su
+futur & sing & first:  | 
+futur & sing & second:  | 
+futur & sing & third:  | 
+futur & plur & first:  | 
+futur & plur & second:  | 
+futur & plur & third:  | 
 
-imperfect & sing & first:  | imah
-imperfect & sing & second:  | imaše
-imperfect & sing & third:  | imaše
-imperfect & plur & first:  | imasmo
-imperfect & plur & second:  | imaste
-imperfect & plur & third:  | imahu
+imperfect & sing & first: имел | imah
+imperfect & sing & second: имела | imaše
+imperfect & sing & third: имело | imaše
+imperfect & plur & first: имели | imasmo
+imperfect & plur & second: имели | imaste
+imperfect & plur & third: имели | imahu
 
-# participle & present:  | ìmajūći
+# participle & present:  | ìmajući
 # participle & past:  | 
-# noun:  | ìmānje
+# noun:  | ìmanje
 
-# futur & sing & first:  | imat ću
-# futur & sing & second:  | imat ćeš
-# futur & sing & third:  | imat će
-# futur & plur & first:  | imat ćemo
-# futur & plur & second:  | imat ćete
-# futur & plur & third:  | imat će
+# futur & sing & first:  | imat ćuimaću
+# futur & sing & second:  | imat ćešimaćeš
+# futur & sing & third:  | imat ćeimaće
+# futur & plur & first:  | imat ćemoimaćemo
+# futur & plur & second:  | imat ćeteimaćete
+# futur & plur & third:  | imat ćeimaće
 
 # futur2 & sing & first:  | budem imao
 # futur2 & sing & second:  | budeš imao
@@ -50,13 +50,6 @@ imperfect & plur & third:  | imahu
 # futur2 & plur & first:  | budemo imali
 # futur2 & plur & second:  | budete imali
 # futur2 & plur & third:  | budu imali
-
-# pluskvamperfekt & sing & first:  | bio sam imao
-# pluskvamperfekt & sing & second:  | bio si imao
-# pluskvamperfekt & sing & third:  | bio je imao
-# pluskvamperfekt & plur & first:  | bili smo imali
-# pluskvamperfekt & plur & second:  | bili ste imali
-# pluskvamperfekt & plur & third:  | bili su imali
 
 # aorist & sing & first:  | 
 # aorist & sing & second:  | 
@@ -80,24 +73,18 @@ imperfect & plur & third:  | imahu
 # cond2 & plur & third:  | bili bi imali
 
 # imperativ & sing & first:  | 
-# imperativ & sing & second:  | imaj
+# imperativ & sing & second: имей | imaj
 # imperativ & sing & third:  | 
 # imperativ & plur & first:  | imajmo
-# imperativ & plur & second:  | imajte
+# imperativ & plur & second: имейте | imajte
 # imperativ & plur & third:  | 
 
-# active & sing & m:  | imao
-# active & sing & f:  | imala
-# active & sing & n:  | imalo
-# active & plur & m:  | imali
-# active & plur & f:  | imale
-# active & plur & n:  | imala
-
-# passive & sing & m:  | 
-# passive & sing & f:  | 
-# passive & sing & n:  | 
-# passive & plur & m:  | 
-# passive & plur & f:  | 
-# passive & plur & n:  | 
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
+

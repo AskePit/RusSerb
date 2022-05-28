@@ -265,49 +265,70 @@ def LoadExistedData(filename: str) -> dict[str, list[str]]: # word name -> file 
                 stage = BODY
     return voc
 
+class WordsFile:
+    filename: str
+    words: list[tuple[str, str]]
+
+    def __init__(self, filename: str, words: list[tuple[str, str]]):
+        self.filename = filename
+        self.words = words
+
+class WordsLists:
+    files: list[WordsFile]
+
+    def __init__(self) -> None:
+        self.files = []
+
+    def add(self, filename: str, words: list[tuple[str, str]]):
+        self.files.append(WordsFile(filename, words))
+        return self
+
 def ExecuteMiner(
     speechPart: str,
-    desired: list[tuple[str, str]],
+    wordsLists: WordsLists,
     downloadFunc: Callable[[tuple[str, str], Writer], DownloadStatus],
     generateFunc: Callable[[tuple[str, str], Writer], None],
-    file: str
 ):
-    existed: dict[str, list[str]] = LoadExistedData(file)
+    for wordsFile in wordsLists.files:
+        file = wordsFile.filename
+        desired = wordsFile.words
 
-    # check if we really need to do any work
-    allCovered = True
-    for w in desired:
-        if w[0] not in existed:
-            allCovered = False
-            break
-    
-    # if no - just exit
-    if allCovered:
-        print('Already up to date!')
-        return
-    
-    # extend `desired` by `existed` to have a proper sorted order of all words
-    desired += [(w, '') for w in existed if w not in dict(desired)]
-    desired.sort(key=lambda tup: tup[0])
+        existed: dict[str, list[str]] = LoadExistedData(file)
 
-    o = Writer(file)
-    o.file.write('declined {}\n\n'.format(speechPart))
+        # check if we really need to do any work
+        allCovered = True
+        for w in desired:
+            if w[0] not in existed:
+                allCovered = False
+                break
+        
+        # if no - just exit
+        if allCovered:
+            print('Already up to date!')
+            return
+        
+        # extend `desired` by `existed` to have a proper sorted order of all words
+        desired += [(w, '') for w in existed if w not in dict(desired)]
+        desired.sort(key=lambda tup: tup[0])
 
-    for word in desired:
-        if word[0] in existed:
-            o.dumpText(existed[word[0]])
-            continue
+        o = Writer(file)
+        o.file.write('declined {}\n\n'.format(speechPart))
 
-        status = downloadFunc(word, o)
+        for word in desired:
+            if word[0] in existed:
+                o.dumpText(existed[word[0]])
+                continue
 
-        if status == DownloadStatus.NoUrl:
-            print('ERROR: no URL for `{}`'.format(word))
-        elif status == DownloadStatus.NoDeclTable:
-            print('ERROR: no declination table for `{}`'.format(word))
-        elif status == DownloadStatus.Fatal:
-            print('ERROR: FATAL for `{}`'.format(word))
+            status = downloadFunc(word, o)
 
-        if not status == DownloadStatus.Ok:
-            generateFunc(word, o)
-    
-    o.finish()
+            if status == DownloadStatus.NoUrl:
+                print('ERROR: no URL for `{}`'.format(word))
+            elif status == DownloadStatus.NoDeclTable:
+                print('ERROR: no declination table for `{}`'.format(word))
+            elif status == DownloadStatus.Fatal:
+                print('ERROR: FATAL for `{}`'.format(word))
+
+            if not status == DownloadStatus.Ok:
+                generateFunc(word, o)
+        
+        o.finish()
