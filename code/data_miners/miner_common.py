@@ -89,6 +89,46 @@ class DeclTable():
             text = cell.subcolumnGetter(text, cell.subcolumn)
         return text
 
+def PreGarbageFilter(txt: str) -> str:
+    for toDel in ['1', '2', '-', '—', '△', '*']:
+        txt = txt.replace(toDel, '')
+
+    replaceMap = {
+        # rus
+        'а́': 'а',
+        'о́': 'о',
+        'у́': 'у',
+        'и́': 'и',
+        'е́': 'е',
+        'ю́': 'ю',
+        'я́': 'я',
+        'ы́': 'ы',
+
+        # serb
+        'ȉ': 'i',
+        'ȕ': 'u',
+        'ū': 'u',
+        'ȇ': 'e',
+        'ē': 'e',
+        'ȅ': 'e',
+        'ȍ': 'o',
+        'ȁ': 'a',
+        'ā': 'a',
+    }
+
+    for k, v in replaceMap.items():
+        txt = txt.replace(k, v)
+
+    txt = txt.strip()
+    return txt
+
+def PostGarbageFilter(txt: str) -> str:
+    for toTrunk in ['/', '(']:
+        idx = txt.find(toTrunk)
+        if idx != -1:
+            txt = txt[:idx].strip()
+    return txt
+
 class TableDownloader:
     def __init__(self, word: str, urlBase: str, tag: str, tagClass: str):
         self.word = word
@@ -115,10 +155,7 @@ class TableDownloader:
         cells: list[str] = []
         for c in tableTag[0].find_all("td"):
             txt = c.get_text()
-            txt = txt.replace('1', '')
-            txt = txt.replace('2', '')
-            txt = txt.replace('-', '')
-            txt = txt.strip()
+            txt = PreGarbageFilter(txt)
             cells.append(txt)
 
         self.table = DeclTable(cells)
@@ -160,6 +197,10 @@ class Writer:
             rusForm = ''
         if serbForm == None:
             serbForm = ''
+        
+        rusForm = PostGarbageFilter(rusForm)
+        serbForm = PostGarbageFilter(serbForm)
+
         self.file.write('{}: {} | {}\n'.format(template, rusForm, serbForm))
 
     def endl(self):

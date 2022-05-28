@@ -4,9 +4,44 @@ sys.path.insert(0, '../../../')
 from code.data_miners.miner_common import *
 
 verbs = [
-]
-
-nonTabledVerbs = [
+    ('misliti', 'думать'),
+    ('čitati', 'читать'),
+    ('gledati', 'смотреть'),
+    ('čekati', 'ждать'),
+    ('pričati', 'разговаривать'),
+    ('spavati', 'спать'),
+    ('slušati', 'слушать'),
+    ('raditi', 'делать'),
+    ('trčati', 'бежать'),
+    ('igrati', 'играть'),
+    ('plivati', 'плавать'),
+    ('kopati', 'копать'),
+    ('učiti', 'учить'),
+    ('prati', 'стирать'),
+    ('voziti', 'водить'),
+    ('ležati', 'лежать'),
+    ('stajati', 'стоять'),
+    ('razmišljati', 'думать'),
+    ('pisati', 'писать'),
+    ('jesti', 'есть'),
+    ('govoriti', 'говорить'),
+    ('hodati', 'ходить'),
+    ('kuvati', 'готовить'),
+    ('pevati', 'петь'),
+    ('živeti', 'жить'),
+    ('raditi', 'работать'),
+    ('skakati', 'прыгать'),
+    ('kazati', 'говорить'),
+    ('putovati', 'путешествовать'),
+    ('kupovati', 'покупать'),
+    ('psovati', 'ругаться'),
+    ('doručkovati', 'завтракать'),
+    ('ići', 'идти'),
+    ('doći', 'прийти'),
+    ('zvati', 'звать'),
+    ('piti', 'пить'),
+    ('čuti', 'слышать'),
+    ('prodavati', 'продавать'),
 ]
 
 modalVerbs = [
@@ -35,7 +70,7 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
 
     serbTableMode = EN
 
-    serbOk, serb = VerbDownloader(serbVerb, 'https://en.wiktionary.org/wiki', 'div', 'NavContent')()
+    serbOk, serb = VerbDownloader(serbVerb, 'https://en.wiktionary.org/wiki', 'table', 'inflection-table')()
     rusOk, rus   = VerbDownloader(rusVerb, 'https://ru.wiktionary.org/wiki', 'table', 'morfotable ru')()
 
     if serbOk != DownloadStatus.Ok:
@@ -78,7 +113,14 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
 
     o.setTables(serb, rus)
     o.write(serbVerb)
-    o.write('\nnone\n\n')
+
+    thirdPresent = serb.get(Cell(Present, SING3))
+    if thirdPresent != None and len(thirdPresent) > 1:
+        conjugation = PostGarbageFilter(serb.get(Cell(Present, SING3)))[-1]
+    else:
+        conjugation = 'none'
+
+    o.write('\n{}\n\n'.format(conjugation))
 
     o.writeLine('inf', rusVerb, serbVerb)
     o.endl()
@@ -93,8 +135,6 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
 
     def GetSinglePast(s: str, i: int):
         # могмогламогло -> мог могла могло
-        # любиллюбилалюбило -> любил любила любило
-
         mode = len(s) % 3
         n = int((len(s) - 4) / 3)
 
@@ -102,8 +142,15 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
         i2 = 2*n+2
 
         if mode != 1:
+            # любиллюбилалюбило -> любил любила любило
             i1 += 1
             i2 += 1
+        
+        if mode == 0:
+            # шёлшлашло -> шёл шла шло
+            n = int(len(s) / 3)
+            i1 = n
+            i2 = 2*n
 
         return [s[:i1], s[i1:i2], s[i2:]][i]
     
@@ -221,4 +268,4 @@ def generateVerb(verbPair: tuple[str, str], o: Writer):
     print('{} generation'.format(verbPair))
     pass
 
-ExecuteMiner('verb', verbs+modalVerbs+nonTabledVerbs, downloadVerb, generateVerb, 'out.txt')
+ExecuteMiner('verb', verbs + modalVerbs, downloadVerb, generateVerb, 'out.txt')
