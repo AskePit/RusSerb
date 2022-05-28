@@ -225,13 +225,13 @@ def downloadNoun(nounPair: tuple[str, str], o: Writer) -> DownloadStatus:
     o.writeDecl('sing & lok',  Cell('Пр.', Sing), Cell('lokativ', Sing))
     o.endl()
 
-    o.writeDecl('sing & nom',  Cell('Им.', Plur), Cell('nominativ', Plur))
-    o.writeDecl('sing & gen',  Cell('Р.', Plur),  Cell('genitiv', Plur))
-    o.writeDecl('sing & dat',  Cell('Д.', Plur),  Cell('dativ', Plur))
-    o.writeDecl('sing & aku',  Cell('В.', Plur),  Cell('akuzativ', Plur))
-    o.writeDecl('sing & vok',  Cell('Им.', Plur), Cell('vokativ', Plur))
-    o.writeDecl('sing & inst', Cell('Тв.', Plur), Cell('instrumental', Plur))
-    o.writeDecl('sing & lok',  Cell('Пр.', Plur), Cell('lokativ', Plur))
+    o.writeDecl('plur & nom',  Cell('Им.', Plur), Cell('nominativ', Plur))
+    o.writeDecl('plur & gen',  Cell('Р.', Plur),  Cell('genitiv', Plur))
+    o.writeDecl('plur & dat',  Cell('Д.', Plur),  Cell('dativ', Plur))
+    o.writeDecl('plur & aku',  Cell('В.', Plur),  Cell('akuzativ', Plur))
+    o.writeDecl('plur & vok',  Cell('Им.', Plur), Cell('vokativ', Plur))
+    o.writeDecl('plur & inst', Cell('Тв.', Plur), Cell('instrumental', Plur))
+    o.writeDecl('plur & lok',  Cell('Пр.', Plur), Cell('lokativ', Plur))
     o.finishWord()
 
     return DownloadStatus.Ok
