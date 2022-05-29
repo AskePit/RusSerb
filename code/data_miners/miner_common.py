@@ -278,8 +278,6 @@ class WordsFile:
     def Load(listFilename: str): # -> WordsFile
         res = WordsFile()
 
-        print(listFilename)
-
         with io.open(listFilename, encoding='utf-8') as f:
             data = f.readlines()
             data = [l for l in data if not l.isspace()]
@@ -338,8 +336,6 @@ def ExecuteMiner(
     downloadFunc: Callable[[tuple[str, str], Writer], DownloadStatus],
     generateFunc: Callable[[tuple[str, str], Writer], None],
 ):
-    print(wordsLists.toString())
-
     for wordsFile in wordsLists.files:
         file = wordsFile.filename
         desired = wordsFile.words
