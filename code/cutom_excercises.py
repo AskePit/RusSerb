@@ -190,7 +190,7 @@ class PointingEx(Excercise):
 
     def __init__(self):
         super().__init__()
-        self.randomNounsPool = RandomPool(GetVocabulary('random_nouns').words)
+        self.randomNounsPool = RandomPool(GetVocabulary('nouns').words)
         self.randomAdjectivesPool = RandomPool(GetVocabulary('random_adjectives').words)
 
     def __call__(self) -> ExcerciseYield:
@@ -237,7 +237,7 @@ class ImatiEx(Excercise):
     def __init__(self):
         super().__init__()
         self.imati = GetVocabulary('imati')
-        self.randomNounsPool = RandomPool(GetVocabulary('random_nouns').words)
+        self.randomNounsPool = RandomPool(GetVocabulary('nouns').words)
 
     def __call__(self) -> ExcerciseYield:
         # title:    Переведите на сербский:
