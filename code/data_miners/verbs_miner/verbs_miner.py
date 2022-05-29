@@ -265,7 +265,6 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
     return DownloadStatus.Ok
 
 def generateVerb(verbPair: tuple[str, str], o: Writer):
-    print('{} generation'.format(verbPair))
-    pass
+    return False
 
 ExecuteMiner('verb', WordsLists.Load('words'), downloadVerb, generateVerb)

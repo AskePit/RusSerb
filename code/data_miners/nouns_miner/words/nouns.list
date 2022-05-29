@@ -1,148 +1,147 @@
 ../../../data/random_nouns.voc
 
-muzej | музей
-mačka | кошка
-pas | пёс
-jaje | яйцо
-grožđa | виноград
-jabuka | яблоко
-maline | малина
-jagode | клубника
-breskve | персики
-narandža | апельсин
-nar | гранат
-šljiva | слива
-dinja | дыня
-lubenica | арбуз
-kajsija | абрикос
-borovnice | черника
-kupine | ежевика
-japanska jabuka | хурма
-smokva | инжир
-dud | шелковица
-murva | шелковица
-trešnje | черешня
-limun | лимон
-limeta | лайм
-kruška | груша
-banana | банан
-grejpfrut | грейпфрут
 ananas | ананас
-mango | манго
-kivi | киви
-azijska trešnja | личи
-longan | лонган
-marakuja | маракуйя
-avokado | авокадо
-kokos | кокос
-pasulj | сухая фасоль
-boranija | фасоль
-grašak | горошек
-crni luk | лук
-beli luk | чеснок
-blitva | мангольд
-cvekla | свекла
-šargarepa | морковь
-krompir | картошка
-kupus | капуста
-patlidžan | баклажан
-tikvice | кабачок
-bundeva | тыква
-krastavac | огурец
-paradajz | помидор
-celer | сельдерей
-spanać | шпинат
-salata | салат
-rotkvica | редис
-pečurke | грибы
-kukuruz | кукуруза
-praziluk | лук-порей
-artičoka | артишок
-špargla | спаржа
-brokoli | брокколи
-čaj | чай
-kafa | кофе
-voda | вода
-sok | сок
-vino | вино
-pivo | пиво
-odeća | одежда
-bluza | блузка
-haljina | платье
-šorc | шорты
-pantalone | брюки
-suknja | юбка
-košulja | рубашка
-majica | футболка
-novčanik | сумка
-kombinezon | комбинезон
-farmerke | джинсы
-odelo | костюм
-helanke | леггинсы
-kaiš | ремень
-kravata | галстук
-kaput | пальто
-jakna | куртка
-mantil | плащ
-marama | платок
-džemper | свитер
-šal | шарф
-rukavice | перчатки
-kapa | кепка
-šešir | шляпа
-čizme | сапоги
-cipele | обувь
-sandale | сандалии
-kišobran | зонт
-leto | лето
-jesen | осень
-zima | зима
-proleće | весна
-ponedeljak | понедельник
-utorak | вторник
-sreda | среда
-četvrtak | четверг
-petak | пятница
-subota | суббота
-nedelja | воскресение
-januar | январь
-februar | февраль
-mart | март
 april | апрель
-maj | май
-jun | июнь
-jul | июль
-avgust | август
-septembar | сентябрь
-oktobar | октябрь
-novembar | ноябрь
-decembar | декабрь
-majka | мама
-otac | папа
-brat | брат
-sestra | сестра
-sin | сын
-ćerka | дочь
-roditelji | родители
-deca | дети
-dete | ребёнок
-maćeha | мачеха
-očuh | отчим
-zet | зять
-snaja | невестка
-supruga | жена
-suprug | муж
-deda | дедушка
+artičoka | артишок
+# avgust | август
+avokado | авокадо
+# azijska trešnja | личи
 baba | бабушка
-unuk | внук
-unuka | внучка
-unučad | внуки
-tetka | тетя
-teča | дядя
+banana | банан
+# beli luk | чеснок
+blitva | мангольд
+bluza | блузка
+boranija | фасоль
+# borovnice | черника
+brat | брат
+# breskve | персики
+# brokoli | брокколи
+bundeva | тыква
+celer | сельдерей
+# cipele | обувь
+# crni luk | лук
+# cvekla | свекла
+# deca | дети
+# decembar | декабрь
+# deda | дедушка
+# dete | ребёнок
+dinja | дыня
+dud | шелковица
+džemper | свитер
+# farmerke | джинсы
+februar | февраль
+grašak | горошек
+grejpfrut | грейпфрут
+# grožđa | виноград
+haljina | платье
+# helanke | леггинсы
+jabuka | яблоко
+# jagode | клубника
+jaje | яйцо
+jakna | куртка
+januar | январь
+# japanska jabuka | хурма
+jesen | осень
+# jul | июль
+jun | июнь
+# kafa | кофе
+kaiš | ремень
+kajsija | абрикос
+kapa | кепка
+kaput | пальто
+kivi | киви
+kišobran | зонт
+kokos | кокос
+kombinezon | комбинезон
+košulja | рубашка
+krastavac | огурец
+kravata | галстук
+# krompir | картошка
+kruška | груша
+kukuruz | кукуруза
+# kupine | ежевика
+kupus | капуста
+# leto | лето
+# limeta | лайм
+limun | лимон
+# longan | лонган
+lubenica | арбуз
+maj | май
+majica | футболка
+majka | мама
+# maline | малина
+mango | манго
+mantil | плащ
+# marakuja | маракуйя
+marama | платок
+mart | март
+maćeha | мачеха
+mačka | кошка
+murva | шелковица
+muzej | музей
+nar | гранат
+# narandža | апельсин
+# nedelja | воскресение
+novembar | ноябрь
+# novčanik | сумка
+# odelo | костюм
+# odeća | одежда
+oktobar | октябрь
+otac | папа
+očuh | отчим
+# pantalone | брюки
+paradajz | помидор
+pas | пёс
+# pasulj | сухая фасоль
+patlidžan | баклажан
+petak | пятница
+# pečurke | грибы
+pivo | пиво
+# ponedeljak | понедельник
+# praziluk | лук-порей
+# proleće | весна
+# roditelji | родители
+rotkvica | редис
+rođak | родственник
+# rukavice | перчатки
+salata | салат
+# sandale | сандалии
+septembar | сентябрь
+sestra | сестра
 sestrić | племянник
-sestričina | племянница
+# sestričina | племянница
+sin | сын
+smokva | инжир
+# snaja | невестка
+# snaja | золовка
+sok | сок
+# spanać | шпинат
+# sreda | среда
+subota | суббота
+suknja | юбка
+suprug | муж
+supruga | жена
 svekar | свекор
 svekrva | свекровь
-zet | шурин
-snaja | золовка
-rođak | родственник
+tetka | тетя
+# teča | дядя
+# tikvice | кабачок
+# trešnje | черешня
+unuk | внук
+unuka | внучка
+# unučad | внуки
+utorak | вторник
+vino | вино
+voda | вода
+zet | зять
+zima | зима
+# ćerka | дочь
+čaj | чай
+četvrtak | четверг
+# čizme | сапоги
+šal | шарф
+# šargarepa | морковь
+šešir | шляпа
+šljiva | слива
+šorc | шорты
+# špargla | спаржа

@@ -268,20 +268,25 @@ def LoadExistedData(filename: str) -> dict[str, list[str]]: # word name -> file 
     return voc
 
 class WordsFile:
-    filename: str
+    listFilename: str
+    vocFilename: str
     words: list[tuple[str, str]]
+    failedWords: list[str]
 
     def __init__(self):
-        self.filename = ''
+        self.listFilename = ''
+        self.vocFilename = ''
         self.words = []
+        self.failedWords = []
     
     def Load(listFilename: str): # -> WordsFile
         res = WordsFile()
+        res.listFilename = listFilename
 
         with io.open(listFilename, encoding='utf-8') as f:
             data = f.readlines()
             data = [l for l in data if not l.isspace()]
-            res.filename = data[0].strip()
+            res.vocFilename = data[0].strip()
 
             data = data[1:]
 
@@ -290,17 +295,30 @@ class WordsFile:
                 serb = splitted[0].strip()
                 rus = splitted[1].strip()
 
+                if serb.startswith('#'):
+                    serb = serb[1:].strip()
+                    res.failedWords.append(serb)
+
                 res.words.append((serb, rus))
-            
+        
+        res.words.sort(key=lambda tup: tup[0])
         return res
     
     def toString(self):
-        res = self.filename
+        res = self.vocFilename
         res += '\n\n'
 
         for w in self.words:
-            res += '{} | {}\n'.format(w[0], w[1])
+            failed = w[0] in self.failedWords
+            res += '{}{} | {}\n'.format('# ' if failed else '', w[0], w[1])
         return res
+    
+    def markFailed(self, serbWord: str):
+        self.failedWords.append(serbWord)
+    
+    def save(self):
+        with io.open(self.listFilename, 'w', encoding='utf-8') as f:
+            f.write(self.toString())
 
 class WordsLists:
     files: list[WordsFile]
@@ -329,6 +347,10 @@ class WordsLists:
             res += '\n'
 
         return res
+    
+    def save(self):
+        for f in self.files:
+            f.save()
 
 def ExecuteMiner(
     speechPart: str,
@@ -337,22 +359,25 @@ def ExecuteMiner(
     generateFunc: Callable[[tuple[str, str], Writer], None],
 ):
     for wordsFile in wordsLists.files:
-        file = wordsFile.filename
-        desired = wordsFile.words
+        file = wordsFile.vocFilename
+        desired = copy.deepcopy(wordsFile.words)
 
         existed: dict[str, list[str]] = LoadExistedData(file)
 
         # check if we really need to do any work
         allCovered = True
         for w in desired:
+            if w[0] in wordsFile.failedWords:
+                continue
             if w[0] not in existed:
                 allCovered = False
                 break
         
         # if no - just exit
         if allCovered:
-            print('Already up to date!')
-            return
+            print('{} is already up to date!'.format(wordsFile.listFilename))
+            wordsFile.save()
+            continue
         
         # extend `desired` by `existed` to have a proper sorted order of all words
         desired += [(w, '') for w in existed if w not in dict(desired)]
@@ -366,6 +391,9 @@ def ExecuteMiner(
                 o.dumpText(existed[word[0]])
                 continue
 
+            if word[0] in wordsFile.failedWords:
+                continue
+
             status = downloadFunc(word, o)
 
             if status == DownloadStatus.NoUrl:
@@ -376,6 +404,9 @@ def ExecuteMiner(
                 print('ERROR: FATAL for `{}`'.format(word))
 
             if not status == DownloadStatus.Ok:
-                generateFunc(word, o)
+                res = generateFunc(word, o)
+                if res == False:
+                    wordsFile.markFailed(word[0])
         
         o.finish()
+        wordsFile.save()

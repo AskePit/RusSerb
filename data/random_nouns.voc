@@ -1746,27 +1746,6 @@ plur & lok: водах | vodama
 zet
 male & ru_male
 
-sing & nom: зять | zet
-sing & gen: зятя | zeta
-sing & dat: зятю | zetu
-sing & aku: зятя | zeta
-sing & vok: зять | zete
-sing & inst: зятем | zetom
-sing & lok: зяте | zetu
-
-plur & nom: зятья | zeti
-plur & gen: зятьёв | zeta
-plur & dat: зятьям | zetima
-plur & aku: зятьёв | zete
-plur & vok: зятья | zeti
-plur & inst: зятьями | zetima
-plur & lok: зятьях | zetima
-
----
-
-zet
-male & ru_male
-
 sing & nom: шурин | zet
 sing & gen: шурина | zeta
 sing & dat: шурину | zetu
