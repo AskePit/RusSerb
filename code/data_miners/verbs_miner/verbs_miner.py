@@ -268,9 +268,4 @@ def generateVerb(verbPair: tuple[str, str], o: Writer):
     print('{} generation'.format(verbPair))
     pass
 
-wordsLists = WordsLists()\
-    .add('../../../data/verbs/imati.voc', [('imati', 'иметь')])\
-    .add('../../../data/verbs/modal_verbs.voc', modalVerbs)\
-    .add('../../../data/verbs/verbs.voc', verbs)
-
-ExecuteMiner('verb', wordsLists, downloadVerb, generateVerb)
+ExecuteMiner('verb', WordsLists.Load('words'), downloadVerb, generateVerb)

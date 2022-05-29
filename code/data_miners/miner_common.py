@@ -1,10 +1,12 @@
+import io
+import sys
+import copy
+import glob
+import os
 from enum import Enum
 from typing import Callable
 from urllib.request import urlopen
 from urllib import parse
-import io
-import sys
-import copy
 from bs4 import BeautifulSoup
 
 sys.stdin.reconfigure(encoding='utf-8')
@@ -269,9 +271,38 @@ class WordsFile:
     filename: str
     words: list[tuple[str, str]]
 
-    def __init__(self, filename: str, words: list[tuple[str, str]]):
-        self.filename = filename
-        self.words = words
+    def __init__(self):
+        self.filename = ''
+        self.words = []
+    
+    def Load(listFilename: str): # -> WordsFile
+        res = WordsFile()
+
+        print(listFilename)
+
+        with io.open(listFilename, encoding='utf-8') as f:
+            data = f.readlines()
+            data = [l for l in data if not l.isspace()]
+            res.filename = data[0].strip()
+
+            data = data[1:]
+
+            for l in data:
+                splitted = l.split('|')
+                serb = splitted[0].strip()
+                rus = splitted[1].strip()
+
+                res.words.append((serb, rus))
+            
+        return res
+    
+    def toString(self):
+        res = self.filename
+        res += '\n\n'
+
+        for w in self.words:
+            res += '{} | {}\n'.format(w[0], w[1])
+        return res
 
 class WordsLists:
     files: list[WordsFile]
@@ -282,6 +313,24 @@ class WordsLists:
     def add(self, filename: str, words: list[tuple[str, str]]):
         self.files.append(WordsFile(filename, words))
         return self
+    
+    def Load(dirname: str): # -> WordsLists
+        res = WordsLists()
+
+        listRegex = '{}/**/*.{}'.format(dirname, 'list')
+        for filename in glob.glob(listRegex, recursive=True):
+            res.files.append(WordsFile.Load(filename))
+
+        return res
+
+    def toString(self):
+        res = ''
+
+        for f in self.files:
+            res += f.toString()
+            res += '\n'
+
+        return res
 
 def ExecuteMiner(
     speechPart: str,
@@ -289,6 +338,8 @@ def ExecuteMiner(
     downloadFunc: Callable[[tuple[str, str], Writer], DownloadStatus],
     generateFunc: Callable[[tuple[str, str], Writer], None],
 ):
+    print(wordsLists.toString())
+
     for wordsFile in wordsLists.files:
         file = wordsFile.filename
         desired = wordsFile.words

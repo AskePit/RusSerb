@@ -240,5 +240,4 @@ def generateNoun(nounPair: tuple[str, str], o: Writer):
     print('{} generation'.format(nounPair))
     pass
 
-wordsLists = WordsLists().add('../../../data/random_nouns.voc', nouns)
-ExecuteMiner('noun', wordsLists, downloadNoun, generateNoun)
+ExecuteMiner('noun', WordsLists.Load('words'), downloadNoun, generateNoun)
