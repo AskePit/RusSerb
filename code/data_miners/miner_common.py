@@ -132,9 +132,10 @@ def PostGarbageFilter(txt: str) -> str:
     return txt
 
 class TableDownloader:
-    def __init__(self, word: str, urlBase: str, tag: str, tagClass: str):
+    def __init__(self, word: str, urlBase: str, header: str, tag: str, tagClass: str):
         self.word = word
         self.urlBase = urlBase
+        self.header = header
         self.tag = tag
         self.tagClass = tagClass
         self.table: list[str] = None
@@ -147,15 +148,26 @@ class TableDownloader:
         self.soup = BeautifulSoup(pagecontent, features="html.parser")
 
     def loadTable(self) -> DownloadStatus:
-        tableTag = self.soup.find_all(self.tag, {'class': self.tagClass})
+        start = self.soup
+        tableTags = None
+        if self.header != None:
+            start = self.soup.find('span', {'class': 'mw-headline'}, True, self.header)
+            if start != None:
+                start = start.parent
+            if start != None:    
+                tableTags = start.find_all_next(self.tag, {'class': self.tagClass})
+        else:
+            tableTags = start.find_all(self.tag, {'class': self.tagClass})
 
-        if len(tableTag) == 0:
+        if tableTags == None:
             return (DownloadStatus.NoDeclTable, None)
-        if len(tableTag) > 1:
+        if len(tableTags) == 0:
+            return (DownloadStatus.NoDeclTable, None)
+        if len(tableTags) > 1:
             print('multiple tables for `{}`! choosing the first one'.format(self.word))
 
         cells: list[str] = []
-        for c in tableTag[0].find_all("td"):
+        for c in tableTags[0].find_all("td"):
             txt = c.get_text()
             txt = PreGarbageFilter(txt)
             cells.append(txt)
@@ -403,7 +415,7 @@ def ExecuteMiner(
             elif status == DownloadStatus.Fatal:
                 print('ERROR: FATAL for `{}`'.format(word))
 
-            if not status == DownloadStatus.Ok:
+            if status != DownloadStatus.Ok:
                 res = generateFunc(word, o)
                 if res == False:
                     wordsFile.markFailed(word[0])

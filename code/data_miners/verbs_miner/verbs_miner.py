@@ -70,12 +70,12 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
 
     serbTableMode = EN
 
-    serbOk, serb = VerbDownloader(serbVerb, 'https://en.wiktionary.org/wiki', 'table', 'inflection-table')()
-    rusOk, rus   = VerbDownloader(rusVerb, 'https://ru.wiktionary.org/wiki', 'table', 'morfotable ru')()
+    serbOk, serb = VerbDownloader(serbVerb, 'https://en.wiktionary.org/wiki', 'Serbo-Croatian', 'table', 'inflection-table')()
+    rusOk, rus   = VerbDownloader(rusVerb, 'https://ru.wiktionary.org/wiki', None, 'table', 'morfotable ru')()
 
     if serbOk != DownloadStatus.Ok:
         # try to fallback to `sh` version
-        serbOk, serb = VerbDownloader(serbVerb, 'https://sh.wiktionary.org/wiki', 'div', 'NavContent')()
+        serbOk, serb = VerbDownloader(serbVerb, 'https://sh.wiktionary.org/wiki', 'Srpskohrvatski', 'div', 'NavContent')()
         serbTableMode = SH
 
     print(serbOk)

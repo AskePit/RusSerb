@@ -63,6 +63,27 @@ plur & lok: артишоках | artičokama
 
 ---
 
+avgust
+ru_male
+
+sing & nom: август | avgust
+sing & gen: августа | avgusta
+sing & dat: августу | avgustu
+sing & aku: август | avgust
+sing & vok: август | avguste
+sing & inst: августом | avgustom
+sing & lok: августе | avgustu
+
+plur & nom: августы | avgusti
+plur & gen: августов | avgusta
+plur & dat: августам | avgustima
+plur & aku: августы | avguste
+plur & vok: августы | avgusti
+plur & inst: августами | avgustima
+plur & lok: августах | avgustima
+
+---
+
 avokado
 male & ru_neu
 
@@ -200,13 +221,13 @@ sing & vok: брат | brate
 sing & inst: братом | bratom
 sing & lok: брате | bratu
 
-plur & nom: братья | 
-plur & gen: братьев | 
-plur & dat: братьям | 
-plur & aku: братьев | 
-plur & vok: братья | 
+plur & nom: братья | genitive
+plur & gen: братьев | dative
+plur & dat: братьям | accusative
+plur & aku: братьев | vocative
+plur & vok: братья | locative
 plur & inst: братьями | 
-plur & lok: братьях | 
+plur & lok: братьях | instrumental
 
 ---
 
@@ -252,6 +273,111 @@ plur & lok: сельдереях | celerima
 
 ---
 
+cvekla
+fem & ru_fem
+
+sing & nom: свекла | cvekla
+sing & gen: свеклы | cvekle
+sing & dat: свекле | cvekli
+sing & aku: свеклу | cveklu
+sing & vok: свекла | cveklo
+sing & inst: свеклойсвеклою | cveklom
+sing & lok: свекле | cvekli
+
+plur & nom: свеклы | cvekle
+plur & gen: свекол | cvekli
+plur & dat: свеклам | cveklama
+plur & aku: свеклы | cvekle
+plur & vok: свеклы | cvekle
+plur & inst: свеклами | cveklama
+plur & lok: свеклах | cveklama
+
+---
+
+deca
+fem & ru_neu
+
+sing & nom: ребёнок | dèca
+sing & gen: ребёнка | dèce
+sing & dat: ребёнку | deci
+sing & aku: ребёнка | decu
+sing & vok: ребёнок | deco
+sing & inst: ребёнком | dècōm
+sing & lok: ребёнке | deci
+
+plur & nom: дети | genitive
+plur & gen: детей | dative
+plur & dat: детям | accusative
+plur & aku: детей | vocative
+plur & vok: дети | locative
+plur & inst: детьми | 
+plur & lok: детях | instrumental
+
+---
+
+decembar
+male & ru_male
+
+sing & nom: декабрь | dècembar
+sing & gen: декабря | decembra
+sing & dat: декабрю | decembru
+sing & aku: декабрь | decembar
+sing & vok: декабрь | decembre
+sing & inst: декабрём | decembrom
+sing & lok: декабре | decembru
+
+plur & nom: декабри | decembri
+plur & gen: декабрей | dècembara
+plur & dat: декабрям | decembrima
+plur & aku: декабри | decembre
+plur & vok: декабри | decembri
+plur & inst: декабрями | decembrima
+plur & lok: декабрях | decembrima
+
+---
+
+deda
+fem & ru_male
+
+sing & nom: дедушка | deda
+sing & gen: дедушки | dede
+sing & dat: дедушке | dedi
+sing & aku: дедушку | dedu
+sing & vok: дедушка | deda
+sing & inst: дедушкойдедушкою | dedōm
+sing & lok: дедушке | dedi
+
+plur & nom: дедушки | dede
+plur & gen: дедушек | dêda
+plur & dat: дедушкам | dedama
+plur & aku: дедушек | dede
+plur & vok: дедушки | dede
+plur & inst: дедушками | dedama
+plur & lok: дедушках | dedama
+
+---
+
+dete
+fem & ru_male
+
+sing & nom: ребёнок | déte
+sing & gen: ребёнка | dèteta
+sing & dat: ребёнку | detetu
+sing & aku: ребёнка | dete
+sing & vok: ребёнок | dete
+sing & inst: ребёнком | detetom
+sing & lok: ребёнке | detetu
+
+plur & nom: дети | genitive
+plur & gen: детей | dative
+plur & dat: детям | accusative
+plur & aku: детей | vocative
+plur & vok: дети | locative
+plur & inst: детьми | 
+plur & lok: детях | instrumental
+
+---
+
 dinja
 fem & ru_fem
 
@@ -264,7 +390,7 @@ sing & inst: дынейдынею | dinjom
 sing & lok: дыне | dinji
 
 plur & nom: дыни | dinje
-plur & gen: дынь | dinja
+plur & gen: дынь | dȋnja
 plur & dat: дыням | dinjama
 plur & aku: дыни | dinje
 plur & vok: дыни | dinje
@@ -316,7 +442,7 @@ plur & lok: свитерах | džemperima
 ---
 
 februar
-male & ru_male
+ru_male
 
 sing & nom: февраль | februar
 sing & gen: февраля | februara
@@ -348,7 +474,7 @@ sing & inst: горошком | graškom
 sing & lok: горошке | grašku
 
 plur & nom: горошки | grašci
-plur & gen: горошков | grašaka
+plur & gen: горошков | grȃšaka
 plur & dat: горошкам | grašcima
 plur & aku: горошки | graške
 plur & vok: горошки | grašci
@@ -390,7 +516,7 @@ sing & inst: платьем | haljinom
 sing & lok: платьеплатьи | haljini
 
 plur & nom: платья | haljine
-plur & gen: платьев | haljina
+plur & gen: платьев | haljīna
 plur & dat: платьям | haljinama
 plur & aku: платья | haljine
 plur & vok: платья | haljine
@@ -407,7 +533,7 @@ sing & gen: яблока | jabuke
 sing & dat: яблоку | jabuci
 sing & aku: яблоко | jabuku
 sing & vok: яблоко | jabuko
-sing & inst: яблоком | jabukom
+sing & inst: яблоком | jabukōm
 sing & lok: яблоке | jabuci
 
 plur & nom: яблоки | jabuke
@@ -417,6 +543,27 @@ plur & aku: яблоки | jabuke
 plur & vok: яблоки | jabuke
 plur & inst: яблоками | jabukama
 plur & lok: яблоках | jabukama
+
+---
+
+jagoda
+fem & ru_fem
+
+sing & nom: клубника | jagoda
+sing & gen: клубники | jagode
+sing & dat: клубнике | jagodi
+sing & aku: клубнику | jagodu
+sing & vok: клубника | jagodo
+sing & inst: клубникойклубникою | jagodom
+sing & lok: клубнике | jagodi
+
+plur & nom: клубники | jagode
+plur & gen: клубник | jagoda
+plur & dat: клубникам | jagodama
+plur & aku: клубники | jagode
+plur & vok: клубники | jagode
+plur & inst: клубниками | jagodama
+plur & lok: клубниках | jagodama
 
 ---
 
@@ -444,7 +591,7 @@ plur & lok: яйцах | jajima
 jakna
 fem & ru_fem
 
-sing & nom: куртка | jakna
+sing & nom: куртка | jàkna
 sing & gen: куртки | jakne
 sing & dat: куртке | jakni
 sing & aku: куртку | jaknu
@@ -453,7 +600,7 @@ sing & inst: курткойкурткою | jaknom
 sing & lok: куртке | jakni
 
 plur & nom: куртки | jakne
-plur & gen: курток | jakana
+plur & gen: курток | jákna
 plur & dat: курткам | jaknama
 plur & aku: куртки | jakne
 plur & vok: куртки | jakne
@@ -463,7 +610,7 @@ plur & lok: куртках | jaknama
 ---
 
 januar
-male & ru_male
+ru_male
 
 sing & nom: январь | januar
 sing & gen: января | januara
@@ -484,7 +631,7 @@ plur & lok: январях | januarima
 ---
 
 jesen
-fem & ru_fem
+male & ru_fem
 
 sing & nom: осень | jesen
 sing & gen: осени | jeseni
@@ -504,24 +651,66 @@ plur & lok: осенях | jesenima
 
 ---
 
-jun
+jul
 ru_male
 
-sing & nom: июнь | 
-sing & gen: июня | 
-sing & dat: июню | 
-sing & aku: июнь | 
-sing & vok: июнь | 
-sing & inst: июнем | 
-sing & lok: июне | 
+sing & nom: июль | jul
+sing & gen: июля | jula
+sing & dat: июлю | julu
+sing & aku: июль | juli
+sing & vok: июль | jul
+sing & inst: июлем | julom
+sing & lok: июле | julu
 
-plur & nom: июни | 
-plur & gen: июней | 
-plur & dat: июням | 
-plur & aku: июни | 
-plur & vok: июни | 
-plur & inst: июнями | 
-plur & lok: июнях | 
+plur & nom: июли | juli
+plur & gen: июлей | jula
+plur & dat: июлям | julima
+plur & aku: июли | jule
+plur & vok: июли | juli
+plur & inst: июлями | julima
+plur & lok: июлях | julima
+
+---
+
+jun
+male & ru_male
+
+sing & nom: июнь | jun
+sing & gen: июня | juna
+sing & dat: июню | junu
+sing & aku: июнь | jun
+sing & vok: июнь | jun
+sing & inst: июнем | junom
+sing & lok: июне | junu
+
+plur & nom: июни | juni
+plur & gen: июней | juna
+plur & dat: июням | junima
+plur & aku: июни | june
+plur & vok: июни | juni
+plur & inst: июнями | junima
+plur & lok: июнях | junima
+
+---
+
+kafa
+fem & ru_male
+
+sing & nom: кофе | kafa
+sing & gen: кофе | kafe
+sing & dat: кофе | kafi
+sing & aku: кофе | kafu
+sing & vok: кофе | kafo
+sing & inst: кофе | kafom
+sing & lok: кофе | kafi
+
+plur & nom: кофе | kafe
+plur & gen: кофе | kafa
+plur & dat: кофе | kafama
+plur & aku: кофе | kafe
+plur & vok: кофе | kafe
+plur & inst: кофе | kafama
+plur & lok: кофе | kafama
 
 ---
 
@@ -536,13 +725,13 @@ sing & vok: ремень | kaišu
 sing & inst: ремнём | kaišem
 sing & lok: ремне | kaišu
 
-plur & nom: ремни | kaiševi
-plur & gen: ремней | kaiševa
-plur & dat: ремням | kaiševima
-plur & aku: ремни | kaiševe
-plur & vok: ремни | kaiševi
-plur & inst: ремнями | kaiševima
-plur & lok: ремнях | kaiševima
+plur & nom: ремни | kaiši
+plur & gen: ремней | kaiša
+plur & dat: ремням | kaišima
+plur & aku: ремни | kaiše
+plur & vok: ремни | kaiši
+plur & inst: ремнями | kaišima
+plur & lok: ремнях | kaišima
 
 ---
 
@@ -568,7 +757,7 @@ plur & lok: абрикосах | kajsijama
 ---
 
 kapa
-fem & ru_fem
+neu & ru_fem
 
 sing & nom: кепка | kapa
 sing & gen: кепки | kape
@@ -579,7 +768,7 @@ sing & inst: кепкойкепкою | kapom
 sing & lok: кепке | kapi
 
 plur & nom: кепки | kape
-plur & gen: кепок | kapa
+plur & gen: кепок | kȃpa
 plur & dat: кепкам | kapama
 plur & aku: кепки | kape
 plur & vok: кепки | kape
@@ -591,8 +780,8 @@ plur & lok: кепках | kapama
 kaput
 male & ru_neu
 
-sing & nom: пальто | kaput
-sing & gen: пальто | kaputa
+sing & nom: пальто | kàput
+sing & gen: пальто | kapúta
 sing & dat: пальто | kaputu
 sing & aku: пальто | kaput
 sing & vok: пальто | kapute
@@ -612,21 +801,21 @@ plur & lok: пальто | kaputima
 kivi
 male & ru_neu
 
-sing & nom: киви | kivi
-sing & gen: киви | kivija
-sing & dat: киви | kiviju
-sing & aku: киви | kivija
-sing & vok: киви | kivi
-sing & inst: киви | kivijem
-sing & lok: киви | kiviju
+sing & nom: киви | 
+sing & gen: киви | 
+sing & dat: киви | 
+sing & aku: киви | 
+sing & vok: киви | 
+sing & inst: киви | 
+sing & lok: киви | 
 
-plur & nom: киви | kiviji
-plur & gen: киви | kivija
-plur & dat: киви | kivijima
-plur & aku: киви | kivije
-plur & vok: киви | kiviji
-plur & inst: киви | kivijima
-plur & lok: киви | kivijima
+plur & nom: киви | 
+plur & gen: киви | 
+plur & dat: киви | 
+plur & aku: киви | 
+plur & vok: киви | 
+plur & inst: киви | 
+plur & lok: киви | 
 
 ---
 
@@ -696,7 +885,7 @@ plur & lok: комбинезонах | kombinezonima
 košulja
 fem & ru_fem
 
-sing & nom: рубашка | košulja
+sing & nom: рубашка | kòšulja
 sing & gen: рубашки | košulje
 sing & dat: рубашке | košulji
 sing & aku: рубашку | košulju
@@ -722,7 +911,7 @@ sing & gen: огурца | krastavca
 sing & dat: огурцу | krastavcu
 sing & aku: огурец | krastavac
 sing & vok: огурец | krastavče
-sing & inst: огурцом | krastavcem
+sing & inst: огурцом | krastavcom
 sing & lok: огурце | krastavcu
 
 plur & nom: огурцы | krastavci
@@ -738,7 +927,7 @@ plur & lok: огурцах | krastavcima
 kravata
 fem & ru_male
 
-sing & nom: галстук | kravata
+sing & nom: галстук | kravàta
 sing & gen: галстука | kravate
 sing & dat: галстуку | kravati
 sing & aku: галстук | kravatu
@@ -747,7 +936,7 @@ sing & inst: галстуком | kravatom
 sing & lok: галстуке | kravati
 
 plur & nom: галстуки | kravate
-plur & gen: галстуков | kravata
+plur & gen: галстуков | kraváta
 plur & dat: галстукам | kravatama
 plur & aku: галстуки | kravate
 plur & vok: галстуки | kravate
@@ -756,16 +945,37 @@ plur & lok: галстуках | kravatama
 
 ---
 
+krompir
+male & ru_fem
+
+sing & nom: картошка | kròmpīr
+sing & gen: картошки | krompíra
+sing & dat: картошке | krompiru
+sing & aku: картошку | krompir
+sing & vok: картошка | krompire
+sing & inst: картошкойкартошкою | krompirom
+sing & lok: картошке | krompiru
+
+plur & nom: картошки | krompiri
+plur & gen: картошек | krompira
+plur & dat: картошкам | krompirima
+plur & aku: картошки | krompire
+plur & vok: картошки | krompiri
+plur & inst: картошками | krompirima
+plur & lok: картошках | krompirima
+
+---
+
 kruška
 fem & ru_fem
 
 sing & nom: груша | kruška
 sing & gen: груши | kruške
-sing & dat: груше | krušci
+sing & dat: груше | kruški
 sing & aku: грушу | krušku
 sing & vok: груша | kruško
 sing & inst: грушейгрушею | kruškom
-sing & lok: груше | krušci
+sing & lok: груше | kruški
 
 plur & nom: груши | kruške
 plur & gen: груш | krušaka
@@ -798,6 +1008,27 @@ plur & lok: кукурузах | kukuruzima
 
 ---
 
+kupina
+fem & ru_fem
+
+sing & nom: ежевика | kupina
+sing & gen: ежевики | kupine
+sing & dat: ежевике | kupinu
+sing & aku: ежевику | kupinu
+sing & vok: ежевика | kupino
+sing & inst: ежевикойежевикою | kupinom
+sing & lok: ежевике | kupinu
+
+plur & nom: ежевики | kupine
+plur & gen: ежевик | kupina
+plur & dat: ежевикам | kupinama
+plur & aku: ежевики | kupine
+plur & vok: ежевики | kupine
+plur & inst: ежевиками | kupinama
+plur & lok: ежевиках | kupinama
+
+---
+
 kupus
 male & ru_fem
 
@@ -809,13 +1040,34 @@ sing & vok: капуста | kupuse
 sing & inst: капустойкапустою | kupusom
 sing & lok: капусте | kupusu
 
-plur & nom: капусты | kupusi
-plur & gen: капуст | kupusa
-plur & dat: капустам | kupusima
-plur & aku: капусты | kupuse
-plur & vok: капусты | kupusi
-plur & inst: капустами | kupusima
-plur & lok: капустах | kupusima
+plur & nom: капусты | genitive
+plur & gen: капуст | dative
+plur & dat: капустам | accusative
+plur & aku: капусты | vocative
+plur & vok: капусты | locative
+plur & inst: капустами | 
+plur & lok: капустах | instrumental
+
+---
+
+leto
+male & ru_neu
+
+sing & nom: лето | leto
+sing & gen: лета | leta
+sing & dat: лету | letu
+sing & aku: лето | leto
+sing & vok: лето | leto
+sing & inst: летом | letom
+sing & lok: лете | letu
+
+plur & nom: лета | leta
+plur & gen: лет | leta
+plur & dat: летам | letima
+plur & aku: лета | leta
+plur & vok: лета | leta
+plur & inst: летами | letima
+plur & lok: летах | letima
 
 ---
 
@@ -906,7 +1158,7 @@ plur & lok: футболках | majicama
 majka
 fem & ru_fem
 
-sing & nom: мама | majka
+sing & nom: мама | mȃjka
 sing & gen: мамы | majke
 sing & dat: маме | majci
 sing & aku: маму | majku
@@ -915,12 +1167,33 @@ sing & inst: мамоймамою | majkom
 sing & lok: маме | majci
 
 plur & nom: мамы | majke
-plur & gen: мам | majki
+plur & gen: мам | mȃjkī
 plur & dat: мамам | majkama
 plur & aku: мам | majke
 plur & vok: мамы | majke
 plur & inst: мамами | majkama
 plur & lok: мамах | majkama
+
+---
+
+malina
+fem & ru_fem
+
+sing & nom: малина | màlina
+sing & gen: малины | màline
+sing & dat: малине | màlini
+sing & aku: малину | màlinu
+sing & vok: малина | màlino
+sing & inst: малиноймалиною | màlinōm
+sing & lok: малине | màlini
+
+plur & nom: малины | màline
+plur & gen: малин | malīna
+plur & dat: малинам | màlinama
+plur & aku: малины | màline
+plur & vok: малины | màline
+plur & inst: малинами | màlinama
+plur & lok: малинах | màlinama
 
 ---
 
@@ -998,13 +1271,13 @@ sing & vok: март | marte
 sing & inst: мартом | martom
 sing & lok: марте | martu
 
-plur & nom: марты | 
-plur & gen: мартов | 
-plur & dat: мартам | 
-plur & aku: марты | 
-plur & vok: марты | 
+plur & nom: марты | genitive
+plur & gen: мартов | dative
+plur & dat: мартам | accusative
+plur & aku: марты | vocative
+plur & vok: марты | locative
 plur & inst: мартами | 
-plur & lok: мартах | 
+plur & lok: мартах | instrumental
 
 ---
 
@@ -1016,7 +1289,7 @@ sing & gen: мачехи | maćehe
 sing & dat: мачехе | maćehi
 sing & aku: мачеху | maćehu
 sing & vok: мачеха | maćeho
-sing & inst: мачехоймачехою | maćehom
+sing & inst: мачехоймачехою | maćehōm
 sing & lok: мачехе | maćehi
 
 plur & nom: мачехи | maćehe
@@ -1042,18 +1315,18 @@ sing & lok: кошке | mački
 
 plur & nom: кошки | mačke
 plur & gen: кошек | mačaka
-plur & dat: кошкам | mačkima
+plur & dat: кошкам | mačkama
 plur & aku: кошек | mačke
 plur & vok: кошки | mačke
-plur & inst: кошками | mačkima
-plur & lok: кошках | mačkima
+plur & inst: кошками | mačkama
+plur & lok: кошках | mačkama
 
 ---
 
 murva
 fem & ru_fem
 
-sing & nom: шелковица | murva
+sing & nom: шелковица | mȗrva
 sing & gen: шелковицы | murve
 sing & dat: шелковице | murvi
 sing & aku: шелковицу | murvu
@@ -1062,7 +1335,7 @@ sing & inst: шелковицейшелковицею | murvom
 sing & lok: шелковице | murvi
 
 plur & nom: шелковицы | murve
-plur & gen: шелковиц | murva
+plur & gen: шелковиц | murava
 plur & dat: шелковицам | murvama
 plur & aku: шелковицы | murve
 plur & vok: шелковицы | murve
@@ -1074,8 +1347,8 @@ plur & lok: шелковицах | murvama
 muzej
 male & ru_male
 
-sing & nom: музей | muzej
-sing & gen: музея | muzeja
+sing & nom: музей | mùzej
+sing & gen: музея | muzèja
 sing & dat: музею | muzeju
 sing & aku: музей | muzej
 sing & vok: музей | muzeju
@@ -1093,7 +1366,7 @@ plur & lok: музеях | muzejima
 ---
 
 nar
-male & ru_male
+ru_male
 
 sing & nom: гранат | nar
 sing & gen: граната | nara
@@ -1103,13 +1376,55 @@ sing & vok: гранат | nare
 sing & inst: гранатом | narom
 sing & lok: гранате | naru
 
-plur & nom: гранаты | narovi
+plur & nom: гранаты | nàrovi
 plur & gen: гранатов | narova
 plur & dat: гранатам | narovima
 plur & aku: гранаты | narove
 plur & vok: гранаты | narovi
 plur & inst: гранатами | narovima
 plur & lok: гранатах | narovima
+
+---
+
+narandža
+fem & ru_male
+
+sing & nom: апельсин | nàrandža
+sing & gen: апельсина | narandže
+sing & dat: апельсину | narandži
+sing & aku: апельсин | narandžu
+sing & vok: апельсин | narandžo
+sing & inst: апельсином | narandžom
+sing & lok: апельсине | narandži
+
+plur & nom: апельсины | narandže
+plur & gen: апельсинов | nàranadža
+plur & dat: апельсинам | narandžama
+plur & aku: апельсины | narandže
+plur & vok: апельсины | narandže
+plur & inst: апельсинами | narandžama
+plur & lok: апельсинах | narandžama
+
+---
+
+nedelja
+fem & ru_neu
+
+sing & nom: воскресение | nèdelja
+sing & gen: воскресения | nedelje
+sing & dat: воскресению | nedelji
+sing & aku: воскресение | nedelju
+sing & vok: воскресение | nedeljo
+sing & inst: воскресением | nedeljom
+sing & lok: воскресении | nedelji
+
+plur & nom: воскресения | nedelje
+plur & gen: воскресений | nedelja
+plur & dat: воскресениям | nedeljama
+plur & aku: воскресения | nedelje
+plur & vok: воскресения | nedelje
+plur & inst: воскресениями | nedeljama
+plur & lok: воскресениях | nedeljama
 
 ---
 
@@ -1131,6 +1446,69 @@ plur & aku: ноябри | novembre
 plur & vok: ноябри | novembri
 plur & inst: ноябрями | novembrima
 plur & lok: ноябрях | novembrima
+
+---
+
+novčanik
+male & ru_fem
+
+sing & nom: сумка | novčànīk
+sing & gen: сумки | novčaníka
+sing & dat: сумке | novčaniku
+sing & aku: сумку | novčanik
+sing & vok: сумка | novčaniče
+sing & inst: сумкойсумкою | novčanikom
+sing & lok: сумке | novčaniku
+
+plur & nom: сумки | novčaníci
+plur & gen: сумок | novčaníka
+plur & dat: сумкам | novčanicima
+plur & aku: сумки | novčanike
+plur & vok: сумки | novčanici
+plur & inst: сумками | novčanicima
+plur & lok: сумках | novčanicima
+
+---
+
+odelo
+neu & ru_male
+
+sing & nom: костюм | odelo
+sing & gen: костюма | odela
+sing & dat: костюму | odelu
+sing & aku: костюм | odelo
+sing & vok: костюм | odelo
+sing & inst: костюмом | odelom
+sing & lok: костюме | odelu
+
+plur & nom: костюмы | odela
+plur & gen: костюмов | odela
+plur & dat: костюмам | odelima
+plur & aku: костюмы | odela
+plur & vok: костюмы | odela
+plur & inst: костюмами | odelima
+plur & lok: костюмах | odelima
+
+---
+
+odeća
+fem & ru_fem
+
+sing & nom: одежда | odeća
+sing & gen: одежды | odeće
+sing & dat: одежде | odeći
+sing & aku: одежду | odeću
+sing & vok: одежда | odećo
+sing & inst: одеждойодеждою | odećom
+sing & lok: одежде | odeći
+
+plur & nom: одежды | odeće
+plur & gen: одежд | odeća
+plur & dat: одеждам | odećama
+plur & aku: одежды | odeće
+plur & vok: одежды | odeće
+plur & inst: одеждами | odećama
+plur & lok: одеждах | odećama
 
 ---
 
@@ -1156,23 +1534,23 @@ plur & lok: октябрях | oktobrima
 ---
 
 otac
-male & ru_male
+neu & ru_male
 
-sing & nom: папа | otac
-sing & gen: папы | oca
+sing & nom: папа | òtac
+sing & gen: папы | òca
 sing & dat: папе | ocu
 sing & aku: папу | oca
 sing & vok: папа | oče
 sing & inst: папойпапою | ocem
 sing & lok: папе | ocu
 
-plur & nom: папы | očevi
-plur & gen: пап | očeva
-plur & dat: папам | očevima
+plur & nom: папы | òčevi
+plur & gen: пап | òčeva
+plur & dat: папам | òčevima
 plur & aku: пап | očeve
 plur & vok: папы | očevi
-plur & inst: папами | očevima
-plur & lok: папах | očevima
+plur & inst: папами | òčevima
+plur & lok: папах | òčevima
 
 ---
 
@@ -1194,6 +1572,27 @@ plur & aku: отчимов | očuhe
 plur & vok: отчимы | očusi
 plur & inst: отчимами | očusima
 plur & lok: отчимах | očusima
+
+---
+
+pantalone
+male & ru_fem
+
+sing & nom:  | pantalone
+sing & gen:  | pantalona
+sing & dat:  | pantalonama
+sing & aku:  | pantalone
+sing & vok:  | pantalone
+sing & inst:  | pantalonama
+sing & lok:  | pantalonama
+
+plur & nom: брюки | genitive
+plur & gen: брюк | dative
+plur & dat: брюкам | accusative
+plur & aku: брюки | vocative
+plur & vok: брюки | locative
+plur & inst: брюками | 
+plur & lok: брюках | instrumental
 
 ---
 
@@ -1219,23 +1618,44 @@ plur & lok: помидорах | paradajzima
 ---
 
 pas
-male & ru_male
+fem & ru_male
 
 sing & nom: пёс | pas
 sing & gen: пса | psa
 sing & dat: псу | psu
 sing & aku: пса | psa
-sing & vok: пёс | psu
+sing & vok: пёс | pse
 sing & inst: псом | psom
 sing & lok: псе | psu
 
 plur & nom: псы | psi
-plur & gen: псов | pasa
+plur & gen: псов | pása
 plur & dat: псам | psima
 plur & aku: псов | pse
 plur & vok: псы | psi
 plur & inst: псами | psima
 plur & lok: псах | psima
+
+---
+
+pasulj
+male
+
+sing & nom:  | pàsulj
+sing & gen:  | pasúlja
+sing & dat:  | pasúlju
+sing & aku:  | pàsulj
+sing & vok:  | pasulju
+sing & inst:  | pasúljem
+sing & lok:  | pasúlju
+
+plur & nom:  | genitive
+plur & gen:  | dative
+plur & dat:  | accusative
+plur & aku:  | vocative
+plur & vok:  | locative
+plur & inst:  | 
+plur & lok:  | instrumental
 
 ---
 
@@ -1263,15 +1683,15 @@ plur & lok: баклажанах | patlidžanima
 petak
 male & ru_fem
 
-sing & nom: пятница | petak
+sing & nom: пятница | pétak
 sing & gen: пятницы | petka
 sing & dat: пятнице | petku
 sing & aku: пятницу | petak
 sing & vok: пятница | petku
 sing & inst: пятницейпятницею | petkom
-sing & lok: пятнице | petkom
+sing & lok: пятнице | petku
 
-plur & nom: пятницы | peci
+plur & nom: пятницы | péci
 plur & gen: пятниц | petaka
 plur & dat: пятницам | pecima
 plur & aku: пятницы | petke
@@ -1302,6 +1722,48 @@ plur & lok: пивах | pivima
 
 ---
 
+ponedeljak
+male & ru_male
+
+sing & nom: понедельник | ponedeljak
+sing & gen: понедельника | ponedeljka
+sing & dat: понедельнику | ponedeljku
+sing & aku: понедельник | ponedeljak
+sing & vok: понедельник | ponedeljče
+sing & inst: понедельником | ponedeljkom
+sing & lok: понедельнике | ponedeljku
+
+plur & nom: понедельники | ponedeljci
+plur & gen: понедельников | ponedeljaka
+plur & dat: понедельникам | ponedeljcima
+plur & aku: понедельники | ponedeljke
+plur & vok: понедельники | ponedeljci
+plur & inst: понедельниками | ponedeljcima
+plur & lok: понедельниках | ponedeljcima
+
+---
+
+proleće
+neu & ru_fem
+
+sing & nom: весна | proleće
+sing & gen: весны | proleća
+sing & dat: весне | proleću
+sing & aku: весну | proleće
+sing & vok: весна | proleće
+sing & inst: веснойвесною | prolećem
+sing & lok: весне | proleću
+
+plur & nom: вёсны | proleća
+plur & gen: вёсен | proleća
+plur & dat: вёснам | prolećima
+plur & aku: вёсны | proleća
+plur & vok: вёсны | proleća
+plur & inst: вёснами | prolećima
+plur & lok: вёснах | prolećima
+
+---
+
 rotkvica
 fem & ru_male
 
@@ -1329,7 +1791,7 @@ male & ru_male
 sing & nom: родственник | rođak
 sing & gen: родственника | rođaka
 sing & dat: родственнику | rođaku
-sing & aku: родственника | rođak
+sing & aku: родственника | rođaka
 sing & vok: родственник | rođače
 sing & inst: родственником | rođakom
 sing & lok: родственнике | rođaku
@@ -1389,21 +1851,21 @@ plur & lok: сентябрях | septembrima
 sestra
 fem & ru_fem
 
-sing & nom: сестра | sestra
-sing & gen: сестры | sestre
-sing & dat: сестре | sestri
-sing & aku: сестру | sestru
+sing & nom: сестра | sèstra
+sing & gen: сестры | sèstre
+sing & dat: сестре | sèstri
+sing & aku: сестру | sèstru
 sing & vok: сестра | sestro
-sing & inst: сестройсестрою | sestrom
-sing & lok: сестре | sestri
+sing & inst: сестройсестрою | sèstrōm
+sing & lok: сестре | sèstri
 
-plur & nom: сёстры | sestre
-plur & gen: сестёр | sestara
-plur & dat: сёстрам | sestrama
-plur & aku: сестёр | sestre
+plur & nom: сёстры | sèstre
+plur & gen: сестёр | sestára
+plur & dat: сёстрам | sèstrama
+plur & aku: сестёр | sèstre
 plur & vok: сёстры | sestre
-plur & inst: сёстрами | sestrama
-plur & lok: сёстрах | sestrama
+plur & inst: сёстрами | sèstrama
+plur & lok: сёстрах | sèstrama
 
 ---
 
@@ -1431,16 +1893,16 @@ plur & lok: племянниках | sestrićima
 sin
 male & ru_male
 
-sing & nom: сын | sin
-sing & gen: сына | sina
-sing & dat: сыну | sinu
-sing & aku: сына | sina
-sing & vok: сын | sine
-sing & inst: сыном | sinom
-sing & lok: сыне | sinu
+sing & nom: сын | sȋn
+sing & gen: сына | sȋna
+sing & dat: сыну | sȋnu
+sing & aku: сына | sȋna
+sing & vok: сын | sȋne
+sing & inst: сыном | sȋnom
+sing & lok: сыне | sínu
 
 plur & nom: сыновья | sinovi
-plur & gen: сыновей | sinova
+plur & gen: сыновей | sinōva
 plur & dat: сыновьям | sinovima
 plur & aku: сыновей | sinove
 plur & vok: сыновья | sinovi
@@ -1470,24 +1932,108 @@ plur & lok: инжирах | smokvama
 
 ---
 
+snaja
+fem & ru_fem
+
+sing & nom: золовка | snàja
+sing & gen: золовки | snaje
+sing & dat: золовке | snàsi
+sing & aku: золовку | snaju
+sing & vok: золовка | snajo
+sing & inst: золовкойзоловкою | snajom
+sing & lok: золовке | snàsi
+
+plur & nom: золовки | snaje
+plur & gen: золовок | snája
+plur & dat: золовкам | snajama
+plur & aku: золовок | snaje
+plur & vok: золовки | snaje
+plur & inst: золовками | snajama
+plur & lok: золовках | snajama
+
+---
+
+snaja
+fem & ru_fem
+
+sing & nom: золовка | snàja
+sing & gen: золовки | snaje
+sing & dat: золовке | snàsi
+sing & aku: золовку | snaju
+sing & vok: золовка | snajo
+sing & inst: золовкойзоловкою | snajom
+sing & lok: золовке | snàsi
+
+plur & nom: золовки | snaje
+plur & gen: золовок | snája
+plur & dat: золовкам | snajama
+plur & aku: золовок | snaje
+plur & vok: золовки | snaje
+plur & inst: золовками | snajama
+plur & lok: золовках | snajama
+
+---
+
 sok
 male & ru_male
 
-sing & nom: сок | sok
+sing & nom: сок | sȏk
 sing & gen: сока | soka
 sing & dat: соку | soku
 sing & aku: сок | sok
-sing & vok: сок | soče
+sing & vok: сок | soku
 sing & inst: соком | sokom
 sing & lok: соке | soku
 
-plur & nom: соки | sokovi
+plur & nom: соки | sòkovi
 plur & gen: соков | sokova
 plur & dat: сокам | sokovima
 plur & aku: соки | sokove
 plur & vok: соки | sokovi
 plur & inst: соками | sokovima
 plur & lok: соках | sokovima
+
+---
+
+spanać
+male & ru_male
+
+sing & nom: шпинат | spànać
+sing & gen: шпината | spanáća
+sing & dat: шпинату | spanaću
+sing & aku: шпинат | spanać
+sing & vok: шпинат | spanaću
+sing & inst: шпинатом | spanaćem
+sing & lok: шпинате | spanaću
+
+plur & nom: шпинаты | genitive
+plur & gen: шпинатов | dative
+plur & dat: шпинатам | accusative
+plur & aku: шпинаты | vocative
+plur & vok: шпинаты | locative
+plur & inst: шпинатами | 
+plur & lok: шпинатах | instrumental
+
+---
+
+sreda
+fem & ru_fem
+
+sing & nom: среда | sreda
+sing & gen: среды | srede
+sing & dat: среде | sredi
+sing & aku: среду | sredu
+sing & vok: среда | sredo
+sing & inst: средойсредою | sredom
+sing & lok: среде | sredi
+
+plur & nom: среды | srede
+plur & gen: сред | sreda
+plur & dat: средам | sredama
+plur & aku: среды | srede
+plur & vok: среды | srede
+plur & inst: средами | sredama
+plur & lok: средах | sredama
 
 ---
 
@@ -1638,6 +2184,48 @@ plur & lok: тётях | tetkama
 
 ---
 
+tikvica
+fem & ru_male
+
+sing & nom: кабачок | tikvica
+sing & gen: кабачка | tikvice
+sing & dat: кабачку | tikvici
+sing & aku: кабачок | tikvicu
+sing & vok: кабачок | tikvice
+sing & inst: кабачком | tikvicom
+sing & lok: кабачке | tikvici
+
+plur & nom: кабачки | tikvice
+plur & gen: кабачков | tikvica
+plur & dat: кабачкам | tikvicama
+plur & aku: кабачки | tikvice
+plur & vok: кабачки | tikvice
+plur & inst: кабачками | tikvicama
+plur & lok: кабачках | tikvicama
+
+---
+
+trešnja
+fem & ru_fem
+
+sing & nom: черешня | trešnja
+sing & gen: черешни | trešnje
+sing & dat: черешне | trešnji
+sing & aku: черешню | trešnju
+sing & vok: черешня | trešnjo
+sing & inst: черешнейчерешнею | trešnjom
+sing & lok: черешне | trešnji
+
+plur & nom: черешни | trešnje
+plur & gen: черешен | trešanja
+plur & dat: черешням | trešnjama
+plur & aku: черешни | trešnje
+plur & vok: черешни | trešnje
+plur & inst: черешнями | trešnjama
+plur & lok: черешнях | trešnjama
+
+---
+
 unuk
 male & ru_male
 
@@ -1680,19 +2268,40 @@ plur & lok: внучках | unukama
 
 ---
 
+unučad
+fem & ru_male
+
+sing & nom: внук | unučad
+sing & gen: внука | unučadi
+sing & dat: внуку | unučadi
+sing & aku: внука | unučad
+sing & vok: внук | unučadi
+sing & inst: внуком | unučađu
+sing & lok: внуке | unučadi
+
+plur & nom: внуки | unučadi
+plur & gen: внуков | unučadi
+plur & dat: внукам | unučadima
+plur & aku: внуков | unučadi
+plur & vok: внуки | unučadi
+plur & inst: внуками | unučadima
+plur & lok: внуках | unučadima
+
+---
+
 utorak
 male & ru_male
 
-sing & nom: вторник | utorak
-sing & gen: вторника | utorka
+sing & nom: вторник | útorak
+sing & gen: вторника | útōrka
 sing & dat: вторнику | utorku
 sing & aku: вторник | utorak
 sing & vok: вторник | utorče
 sing & inst: вторником | utorkom
 sing & lok: вторнике | utorku
 
-plur & nom: вторники | utorci
-plur & gen: вторников | utoraka
+plur & nom: вторники | útōrci
+plur & gen: вторников | útōraka
 plur & dat: вторникам | utorcima
 plur & aku: вторники | utorke
 plur & vok: вторники | utorci
@@ -1702,7 +2311,7 @@ plur & lok: вторниках | utorcima
 ---
 
 vino
-neu & ru_neu
+fem & ru_neu
 
 sing & nom: вино | vino
 sing & gen: вина | vina
@@ -1725,42 +2334,42 @@ plur & lok: винах | vinima
 voda
 fem & ru_fem
 
-sing & nom: вода | voda
-sing & gen: воды | vode
-sing & dat: воде | vodi
+sing & nom: вода | vòda
+sing & gen: воды | vòde
+sing & dat: воде | vòdi
 sing & aku: воду | vodu
 sing & vok: вода | vodo
-sing & inst: водойводою | vodom
-sing & lok: воде | vodi
+sing & inst: водойводою | vòdōm
+sing & lok: воде | vòdi
 
 plur & nom: воды | vode
-plur & gen: вод | voda
-plur & dat: водам | vodama
+plur & gen: вод | vóda
+plur & dat: водам | vòdama
 plur & aku: воды | vode
 plur & vok: воды | vode
-plur & inst: водами | vodama
-plur & lok: водах | vodama
+plur & inst: водами | vòdama
+plur & lok: водах | vòdama
 
 ---
 
 zet
-male & ru_male
+neu & ru_male
 
-sing & nom: шурин | zet
-sing & gen: шурина | zeta
-sing & dat: шурину | zetu
-sing & aku: шурина | zeta
-sing & vok: шурин | zete
-sing & inst: шурином | zetom
-sing & lok: шурине | zetu
+sing & nom: зять | zet
+sing & gen: зятя | zeta
+sing & dat: зятю | zetu
+sing & aku: зятя | zeta
+sing & vok: зять | zete
+sing & inst: зятем | zetom
+sing & lok: зяте | zetu
 
-plur & nom: шурины | zeti
-plur & gen: шуринов | zeta
-plur & dat: шуринам | zetima
-plur & aku: шуринов | zete
-plur & vok: шурины | zeti
-plur & inst: шуринами | zetima
-plur & lok: шуринах | zetima
+plur & nom: зятья | zetovi
+plur & gen: зятьёв | zetova
+plur & dat: зятьям | zetovima
+plur & aku: зятьёв | zetove
+plur & vok: зятья | zetovi
+plur & inst: зятьями | zetovima
+plur & lok: зятьях | zetovima
 
 ---
 
@@ -1782,6 +2391,27 @@ plur & aku: зимы | zime
 plur & vok: зимы | zime
 plur & inst: зимами | zimama
 plur & lok: зимах | zimama
+
+---
+
+ćerka
+fem & ru_fem
+
+sing & nom: дочь | ćérka
+sing & gen: дочери | ćerke
+sing & dat: дочери | ćérki
+sing & aku: дочь | ćerku
+sing & vok: дочь | ćerko
+sing & inst: дочерью | ćerkom
+sing & lok: дочери | ćérki
+
+plur & nom: дочери | ćerke
+plur & gen: дочерей | ćérka
+plur & dat: дочерям | ćerkama
+plur & aku: дочерей | ćerke
+plur & vok: дочери | ćerke
+plur & inst: дочерями | ćerkama
+plur & lok: дочерях | ćerkama
 
 ---
 
@@ -1813,14 +2443,14 @@ sing & nom: четверг | četvrtak
 sing & gen: четверга | četvrtka
 sing & dat: четвергу | četvrtku
 sing & aku: четверг | četvrtak
-sing & vok: четверг | četvrtku
+sing & vok: четверг | četvrče
 sing & inst: четвергом | četvrtkom
-sing & lok: четверге | četvrtkom
+sing & lok: четверге | četvrtku
 
 plur & nom: четверги | četvrci
 plur & gen: четвергов | četvrtaka
 plur & dat: четвергам | četvrcima
-plur & aku: четверги | četvrtke
+plur & aku: четверги | četvrke
 plur & vok: четверги | četvrci
 plur & inst: четвергами | četvrcima
 plur & lok: четвергах | četvrcima
@@ -1838,7 +2468,7 @@ sing & vok: шарф | šale
 sing & inst: шарфом | šalom
 sing & lok: шарфе | šalu
 
-plur & nom: шарфы | šalovi
+plur & nom: шарфы | šàlovi
 plur & gen: шарфов | šalova
 plur & dat: шарфам | šalovima
 plur & aku: шарфы | šalove
@@ -1848,11 +2478,32 @@ plur & lok: шарфах | šalovima
 
 ---
 
+šargarepa
+fem & ru_fem
+
+sing & nom: морковь | šargarepa
+sing & gen: моркови | šargarepe
+sing & dat: моркови | šargarepi
+sing & aku: морковь | šargarepu
+sing & vok: морковь | šargarepo
+sing & inst: морковью | šargarepom
+sing & lok: моркови | šargarepi
+
+plur & nom: моркови | šargarepe
+plur & gen: морковей | šargarepa
+plur & dat: морковям | šargarepama
+plur & aku: моркови | šargarepe
+plur & vok: моркови | šargarepe
+plur & inst: морковями | šargarepama
+plur & lok: морковях | šargarepama
+
+---
+
 šešir
 male & ru_fem
 
-sing & nom: шляпа | šešir
-sing & gen: шляпы | šešira
+sing & nom: шляпа | šèšīr
+sing & gen: шляпы | šešíra
 sing & dat: шляпе | šeširu
 sing & aku: шляпу | šešir
 sing & vok: шляпа | šeširu
@@ -1881,7 +2532,7 @@ sing & inst: сливойсливою | šljivom
 sing & lok: сливе | šljivi
 
 plur & nom: сливы | šljive
-plur & gen: слив | šljiva
+plur & gen: слив | šljȋva
 plur & dat: сливам | šljivama
 plur & aku: сливы | šljive
 plur & vok: сливы | šljive
