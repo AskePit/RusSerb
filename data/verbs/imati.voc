@@ -19,12 +19,12 @@ perfect & plur & male: имели | imali
 perfect & plur & fem: имели | imale
 perfect & plur & neu: имели | imala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | imaću
+futur & sing & second:  | imaćeš
+futur & sing & third:  | imaće
+futur & plur & first:  | imaćemo
+futur & plur & second:  | imaćete
+futur & plur & third:  | imaće
 
 imperfect & sing & first: имел | imah
 imperfect & sing & second: имела | imaše
@@ -37,12 +37,12 @@ imperfect & plur & third: имели | imahu
 # participle & past:  | 
 # noun:  | ìmanje
 
-# futur & sing & first:  | imat ćuimaću
-# futur & sing & second:  | imat ćešimaćeš
-# futur & sing & third:  | imat ćeimaće
-# futur & plur & first:  | imat ćemoimaćemo
-# futur & plur & second:  | imat ćeteimaćete
-# futur & plur & third:  | imat ćeimaće
+# futur & sing & first:  | imat ću
+# futur & sing & second:  | imat ćeš
+# futur & sing & third:  | imat će
+# futur & plur & first:  | imat ćemo
+# futur & plur & second:  | imat ćete
+# futur & plur & third:  | imat će
 
 # futur2 & sing & first:  | budem imao
 # futur2 & sing & second:  | budeš imao

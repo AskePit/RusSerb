@@ -146,6 +146,8 @@ class TableDownloader:
         url = url.scheme + "://" + url.netloc + parse.quote(url.path)
         pagecontent = urlopen(url).read()
         self.soup = BeautifulSoup(pagecontent, features="html.parser")
+        for line_break in self.soup.findAll('br'): # loop through line break tags
+            line_break.replaceWith(' ')            # replace br tags with delimiter
 
     def loadTable(self) -> DownloadStatus:
         start = self.soup

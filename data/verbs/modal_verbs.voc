@@ -19,12 +19,12 @@ perfect & plur & male: хотели | hteli
 perfect & plur & fem: хотели | htele
 perfect & plur & neu: хотели | htela
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | hteću
+futur & sing & second:  | htećeš
+futur & sing & third:  | hteće
+futur & plur & first:  | htećemo
+futur & plur & second:  | htećete
+futur & plur & third:  | hteće
 
 imperfect & sing & first: хотел | hoćah
 imperfect & sing & second: хотела | hoćaše
@@ -37,12 +37,12 @@ imperfect & plur & third: хотели | hoćahu
 # participle & past:  | htevši
 # noun:  | hténje
 
-# futur & sing & first:  | htet ćuhteću
-# futur & sing & second:  | htet ćešhtećeš
-# futur & sing & third:  | htet ćehteće
-# futur & plur & first:  | htet ćemohtećemo
-# futur & plur & second:  | htet ćetehtećete
-# futur & plur & third:  | htet ćehteće
+# futur & sing & first:  | htet ću
+# futur & sing & second:  | htet ćeš
+# futur & sing & third:  | htet će
+# futur & plur & first:  | htet ćemo
+# futur & plur & second:  | htet ćete
+# futur & plur & third:  | htet će
 
 # futur2 & sing & first:  | budem hteo
 # futur2 & sing & second:  | budeš hteo
@@ -107,12 +107,12 @@ perfect & plur & male:  | morali
 perfect & plur & fem:  | morale
 perfect & plur & neu:  | morala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | moraću
+futur & sing & second:  | moraćeš
+futur & sing & third:  | moraće
+futur & plur & first:  | moraćemo
+futur & plur & second:  | moraćete
+futur & plur & third:  | moraće
 
 imperfect & sing & first:  | morah
 imperfect & sing & second:  | moraše
@@ -125,12 +125,12 @@ imperfect & plur & third:  | morahu
 # participle & past:  | 
 # noun:  | móranje
 
-# futur & sing & first:  | morat ćumoraću
-# futur & sing & second:  | morat ćešmoraćeš
-# futur & sing & third:  | morat ćemoraće
-# futur & plur & first:  | morat ćemomoraćemo
-# futur & plur & second:  | morat ćetemoraćete
-# futur & plur & third:  | morat ćemoraće
+# futur & sing & first:  | morat ću
+# futur & sing & second:  | morat ćeš
+# futur & sing & third:  | morat će
+# futur & plur & first:  | morat ćemo
+# futur & plur & second:  | morat ćete
+# futur & plur & third:  | morat će
 
 # futur2 & sing & first:  | budem morao
 # futur2 & sing & second:  | budeš morao
@@ -283,12 +283,12 @@ perfect & plur & male: могли | smeli
 perfect & plur & fem: могли | smele
 perfect & plur & neu: могли | smela
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | smeću
+futur & sing & second:  | smećeš
+futur & sing & third:  | smeće
+futur & plur & first:  | smećemo
+futur & plur & second:  | smećete
+futur & plur & third:  | smeće
 
 imperfect & sing & first: мог | smejah
 imperfect & sing & second: могла | smejaše
@@ -301,12 +301,12 @@ imperfect & plur & third: могли | smejahu
 # participle & past:  | smevši
 # noun:  | smenje
 
-# futur & sing & first:  | smet ćusmeću
-# futur & sing & second:  | smet ćešsmećeš
-# futur & sing & third:  | smet ćesmeće
-# futur & plur & first:  | smet ćemosmećemo
-# futur & plur & second:  | smet ćetesmećete
-# futur & plur & third:  | smet ćesmeće
+# futur & sing & first:  | smet ću
+# futur & sing & second:  | smet ćeš
+# futur & sing & third:  | smet će
+# futur & plur & first:  | smet ćemo
+# futur & plur & second:  | smet ćete
+# futur & plur & third:  | smet će
 
 # futur2 & sing & first:  | budem smeo
 # futur2 & sing & second:  | budeš smeo
@@ -459,12 +459,12 @@ perfect & plur & male: умели | umeli
 perfect & plur & fem: умели | umele
 perfect & plur & neu: умели | umela
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | umeću
+futur & sing & second:  | umećeš
+futur & sing & third:  | umeće
+futur & plur & first:  | umećemo
+futur & plur & second:  | umećete
+futur & plur & third:  | umeće
 
 imperfect & sing & first: умел | umijah
 imperfect & sing & second: умела | umijaše
@@ -477,12 +477,12 @@ imperfect & plur & third: умели | umijahu
 # participle & past:  | 
 # noun:  | ùmenje
 
-# futur & sing & first:  | umet ćuumeću
-# futur & sing & second:  | umet ćešumećeš
-# futur & sing & third:  | umet ćeumeće
-# futur & plur & first:  | umet ćemoumećemo
-# futur & plur & second:  | umet ćeteumećete
-# futur & plur & third:  | umet ćeumeće
+# futur & sing & first:  | umet ću
+# futur & sing & second:  | umet ćeš
+# futur & sing & third:  | umet će
+# futur & plur & first:  | umet ćemo
+# futur & plur & second:  | umet ćete
+# futur & plur & third:  | umet će
 
 # futur2 & sing & first:  | budem umeo
 # futur2 & sing & second:  | budeš umeo
@@ -547,12 +547,12 @@ perfect & plur & male: любили | voleli
 perfect & plur & fem: любили | volele
 perfect & plur & neu: любили | volela
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | voleću
+futur & sing & second:  | volećeš
+futur & sing & third:  | voleće
+futur & plur & first:  | volećemo
+futur & plur & second:  | volećete
+futur & plur & third:  | voleće
 
 imperfect & sing & first: любил | voljah
 imperfect & sing & second: любила | voljaše
@@ -565,12 +565,12 @@ imperfect & plur & third: любили | voljahu
 # participle & past:  | 
 # noun:  | voljenje
 
-# futur & sing & first:  | volet ćuvoleću
-# futur & sing & second:  | volet ćešvolećeš
-# futur & sing & third:  | volet ćevoleće
-# futur & plur & first:  | volet ćemovolećemo
-# futur & plur & second:  | volet ćetevolećete
-# futur & plur & third:  | volet ćevoleće
+# futur & sing & first:  | volet ću
+# futur & sing & second:  | volet ćeš
+# futur & sing & third:  | volet će
+# futur & plur & first:  | volet ćemo
+# futur & plur & second:  | volet ćete
+# futur & plur & third:  | volet će
 
 # futur2 & sing & first:  | budem voleo
 # futur2 & sing & second:  | budeš voleo
@@ -635,12 +635,12 @@ perfect & plur & male: умели | znali
 perfect & plur & fem: умели | znale
 perfect & plur & neu: умели | znala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | znaću
+futur & sing & second:  | znaćeš
+futur & sing & third:  | znaće
+futur & plur & first:  | znaćemo
+futur & plur & second:  | znaćete
+futur & plur & third:  | znaće
 
 imperfect & sing & first: умел | znah
 imperfect & sing & second: умела | znaše
@@ -653,12 +653,12 @@ imperfect & plur & third: умели | znahu
 # participle & past:  | 
 # noun:  | 
 
-# futur & sing & first:  | znat ćuznaću
-# futur & sing & second:  | znat ćešznaćeš
-# futur & sing & third:  | znat ćeznaće
-# futur & plur & first:  | znat ćemoznaćemo
-# futur & plur & second:  | znat ćeteznaćete
-# futur & plur & third:  | znat ćeznaće
+# futur & sing & first:  | znat ću
+# futur & sing & second:  | znat ćeš
+# futur & sing & third:  | znat će
+# futur & plur & first:  | znat ćemo
+# futur & plur & second:  | znat ćete
+# futur & plur & third:  | znat će
 
 # futur2 & sing & first:  | budem znao
 # futur2 & sing & second:  | budeš znao
@@ -723,12 +723,12 @@ perfect & plur & male: желали | želeli
 perfect & plur & fem: желали | želele
 perfect & plur & neu: желали | želela
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | želeću
+futur & sing & second:  | želećeš
+futur & sing & third:  | želeće
+futur & plur & first:  | želećemo
+futur & plur & second:  | želećete
+futur & plur & third:  | želeće
 
 imperfect & sing & first: желал | željah
 imperfect & sing & second: желала | željaše
@@ -741,12 +741,12 @@ imperfect & plur & third: желали | željahu
 # participle & past:  | 
 # noun:  | žèljenje
 
-# futur & sing & first:  | želet ćuželeću
-# futur & sing & second:  | želet ćešželećeš
-# futur & sing & third:  | želet ćeželeće
-# futur & plur & first:  | želet ćemoželećemo
-# futur & plur & second:  | želet ćeteželećete
-# futur & plur & third:  | želet ćeželeće
+# futur & sing & first:  | želet ću
+# futur & sing & second:  | želet ćeš
+# futur & sing & third:  | želet će
+# futur & plur & first:  | želet ćemo
+# futur & plur & second:  | želet ćete
+# futur & plur & third:  | želet će
 
 # futur2 & sing & first:  | budem želeo
 # futur2 & sing & second:  | budeš želeo

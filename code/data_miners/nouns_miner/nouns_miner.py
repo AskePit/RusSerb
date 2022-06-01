@@ -47,7 +47,7 @@ def downloadNoun(nounPair: tuple[str, str], o: Writer) -> DownloadStatus:
     SH = 0
     EN = 1
 
-    serbTableMode = EN
+    serbPage = EN
 
     serbOk, serb = NounDownloader(serbNoun, 'https://en.wiktionary.org/wiki', 'Serbo-Croatian', 'table', 'inflection-table')()
     rusOk, rus   = NounDownloader(rusNoun, 'https://ru.wiktionary.org/wiki', None, 'table', 'morfotable ru')()
@@ -55,19 +55,19 @@ def downloadNoun(nounPair: tuple[str, str], o: Writer) -> DownloadStatus:
     if serbOk != DownloadStatus.Ok:
         # try to fallback to `sh` version
         serbOk, serb = NounDownloader(serbNoun, 'https://sh.wiktionary.org/wiki', 'Srpskohrvatski', 'table', 'inflection-table')()
-        serbTableMode = SH
+        serbPage = SH
 
     print(serbOk)
     if serbOk != DownloadStatus.Ok:
         return serbOk
 
-    Nominative   = ['nominativ',    'nominative'  ][serbTableMode]
-    Genitive     = ['genitiv',      'genitive'    ][serbTableMode]
-    Dative       = ['dativ',        'dative'      ][serbTableMode]
-    Accusative   = ['akuzativ',     'accusative'  ][serbTableMode]
-    Vocative     = ['vokativ',      'vocative'    ][serbTableMode]
-    Instrumental = ['instrumental', 'instrumental'][serbTableMode]
-    Locative     = ['lokativ',      'locative'    ][serbTableMode]
+    Nominative   = ['nominativ',    'nominative'  ][serbPage]
+    Genitive     = ['genitiv',      'genitive'    ][serbPage]
+    Dative       = ['dativ',        'dative'      ][serbPage]
+    Accusative   = ['akuzativ',     'accusative'  ][serbPage]
+    Vocative     = ['vokativ',      'vocative'    ][serbPage]
+    Instrumental = ['instrumental', 'instrumental'][serbPage]
+    Locative     = ['lokativ',      'locative'    ][serbPage]
 
     o.setTables(serb, rus)
     o.write(serbNoun)
@@ -83,25 +83,30 @@ def downloadNoun(nounPair: tuple[str, str], o: Writer) -> DownloadStatus:
     o.endl()
     o.endl()
     
-    Sing = 0
-    Plur = 1
+    SING = 0
+    PLUR = 1
 
-    o.writeDecl('sing & nom',  Cell('Им.', Sing), Cell(Nominative, Sing))
-    o.writeDecl('sing & gen',  Cell('Р.', Sing),  Cell(Genitive, Sing))
-    o.writeDecl('sing & dat',  Cell('Д.', Sing),  Cell(Dative, Sing))
-    o.writeDecl('sing & aku',  Cell('В.', Sing),  Cell(Accusative, Sing))
-    o.writeDecl('sing & vok',  Cell('Им.', Sing), Cell(Vocative, Sing))
-    o.writeDecl('sing & inst', Cell('Тв.', Sing), Cell(Instrumental, Sing))
-    o.writeDecl('sing & lok',  Cell('Пр.', Sing), Cell(Locative, Sing))
+    def instrGet(s: str, i: int) -> str:
+        if s == None or len(s) == 0:
+            return ''
+        return s.split()[0]
+
+    o.writeDecl('sing & nom',  Cell('Им.', SING), Cell(Nominative, SING))
+    o.writeDecl('sing & gen',  Cell('Р.', SING),  Cell(Genitive, SING))
+    o.writeDecl('sing & dat',  Cell('Д.', SING),  Cell(Dative, SING))
+    o.writeDecl('sing & aku',  Cell('В.', SING),  Cell(Accusative, SING))
+    o.writeDecl('sing & vok',  Cell('Им.', SING), Cell(Vocative, SING))
+    o.writeDecl('sing & inst', Cell('Тв.', SING, instrGet, 0), Cell(Instrumental, SING))
+    o.writeDecl('sing & lok',  Cell('Пр.', SING), Cell(Locative, SING))
     o.endl()
 
-    o.writeDecl('plur & nom',  Cell('Им.', Plur), Cell(Nominative, Plur))
-    o.writeDecl('plur & gen',  Cell('Р.', Plur),  Cell(Genitive, Plur))
-    o.writeDecl('plur & dat',  Cell('Д.', Plur),  Cell(Dative, Plur))
-    o.writeDecl('plur & aku',  Cell('В.', Plur),  Cell(Accusative, Plur))
-    o.writeDecl('plur & vok',  Cell('Им.', Plur), Cell(Vocative, Plur))
-    o.writeDecl('plur & inst', Cell('Тв.', Plur), Cell(Instrumental, Plur))
-    o.writeDecl('plur & lok',  Cell('Пр.', Plur), Cell(Locative, Plur))
+    o.writeDecl('plur & nom',  Cell('Им.', PLUR), Cell(Nominative, PLUR))
+    o.writeDecl('plur & gen',  Cell('Р.', PLUR),  Cell(Genitive, PLUR))
+    o.writeDecl('plur & dat',  Cell('Д.', PLUR),  Cell(Dative, PLUR))
+    o.writeDecl('plur & aku',  Cell('В.', PLUR),  Cell(Accusative, PLUR))
+    o.writeDecl('plur & vok',  Cell('Им.', PLUR), Cell(Vocative, PLUR))
+    o.writeDecl('plur & inst', Cell('Тв.', PLUR), Cell(Instrumental, PLUR))
+    o.writeDecl('plur & lok',  Cell('Пр.', PLUR), Cell(Locative, PLUR))
     o.finishWord()
 
     return DownloadStatus.Ok

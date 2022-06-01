@@ -19,12 +19,12 @@ perfect & plur & male: завтракали | doručkovali
 perfect & plur & fem: завтракали | doručkovale
 perfect & plur & neu: завтракали | doručkovala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | doručkovaću
+futur & sing & second:  | doručkovaćeš
+futur & sing & third:  | doručkovaće
+futur & plur & first:  | doručkovaćemo
+futur & plur & second:  | doručkovaćete
+futur & plur & third:  | doručkovaće
 
 imperfect & sing & first: завтракал | doručkovah
 imperfect & sing & second: завтракала | doručkovaše
@@ -37,12 +37,12 @@ imperfect & plur & third: завтракали | doručkovahu
 # participle & past:  | dòručkovavši
 # noun:  | dòručkovanje
 
-# futur & sing & first:  | doručkovat ćudoručkovaću
-# futur & sing & second:  | doručkovat ćešdoručkovaćeš
-# futur & sing & third:  | doručkovat ćedoručkovaće
-# futur & plur & first:  | doručkovat ćemodoručkovaćemo
-# futur & plur & second:  | doručkovat ćetedoručkovaćete
-# futur & plur & third:  | doručkovat ćedoručkovaće
+# futur & sing & first:  | doručkovat ću
+# futur & sing & second:  | doručkovat ćeš
+# futur & sing & third:  | doručkovat će
+# futur & plur & first:  | doručkovat ćemo
+# futur & plur & second:  | doručkovat ćete
+# futur & plur & third:  | doručkovat će
 
 # futur2 & sing & first:  | budem doručkovao
 # futur2 & sing & second:  | budeš doručkovao
@@ -163,7 +163,7 @@ imperfect & plur & third: пришли |
 # imperativ & sing & first:  | 
 # imperativ & sing & second: приди | dođi
 # imperativ & sing & third:  | 
-# imperativ & plur & first: придём придёмте | dođimo
+# imperativ & plur & first: придём  придёмте | dođimo
 # imperativ & plur & second: придите | dođite
 # imperativ & plur & third:  | 
 
@@ -195,12 +195,12 @@ perfect & plur & male: смотрели | gledali
 perfect & plur & fem: смотрели | gledale
 perfect & plur & neu: смотрели | gledala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | gledaću
+futur & sing & second:  | gledaćeš
+futur & sing & third:  | gledaće
+futur & plur & first:  | gledaćemo
+futur & plur & second:  | gledaćete
+futur & plur & third:  | gledaće
 
 imperfect & sing & first: смотрел | gledah
 imperfect & sing & second: смотрела | gledaše
@@ -213,12 +213,12 @@ imperfect & plur & third: смотрели | gledahu
 # participle & past:  | 
 # noun:  | gledanje
 
-# futur & sing & first:  | gledat ćugledaću
-# futur & sing & second:  | gledat ćešgledaćeš
-# futur & sing & third:  | gledat ćegledaće
-# futur & plur & first:  | gledat ćemogledaćemo
-# futur & plur & second:  | gledat ćetegledaćete
-# futur & plur & third:  | gledat ćegledaće
+# futur & sing & first:  | gledat ću
+# futur & sing & second:  | gledat ćeš
+# futur & sing & third:  | gledat će
+# futur & plur & first:  | gledat ćemo
+# futur & plur & second:  | gledat ćete
+# futur & plur & third:  | gledat će
 
 # futur2 & sing & first:  | budem gledao
 # futur2 & sing & second:  | budeš gledao
@@ -283,12 +283,12 @@ perfect & plur & male: говорили | govorili
 perfect & plur & fem: говорили | govorile
 perfect & plur & neu: говорили | govorila
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | govoriću
+futur & sing & second:  | govorićeš
+futur & sing & third:  | govoriće
+futur & plur & first:  | govorićemo
+futur & plur & second:  | govorićete
+futur & plur & third:  | govoriće
 
 imperfect & sing & first: говорил | govorah
 imperfect & sing & second: говорила | govoraše
@@ -301,12 +301,12 @@ imperfect & plur & third: говорили | govorahu
 # participle & past:  | 
 # noun:  | govòrenje
 
-# futur & sing & first:  | govorit ćugovoriću
-# futur & sing & second:  | govorit ćešgovorićeš
-# futur & sing & third:  | govorit ćegovoriće
-# futur & plur & first:  | govorit ćemogovorićemo
-# futur & plur & second:  | govorit ćetegovorićete
-# futur & plur & third:  | govorit ćegovoriće
+# futur & sing & first:  | govorit ću
+# futur & sing & second:  | govorit ćeš
+# futur & sing & third:  | govorit će
+# futur & plur & first:  | govorit ćemo
+# futur & plur & second:  | govorit ćete
+# futur & plur & third:  | govorit će
 
 # futur2 & sing & first:  | budem govorio
 # futur2 & sing & second:  | budeš govorio
@@ -371,12 +371,12 @@ perfect & plur & male: ходили | hodali
 perfect & plur & fem: ходили | hodale
 perfect & plur & neu: ходили | hodala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | hodaću
+futur & sing & second:  | hodaćeš
+futur & sing & third:  | hodaće
+futur & plur & first:  | hodaćemo
+futur & plur & second:  | hodaćete
+futur & plur & third:  | hodaće
 
 imperfect & sing & first: ходил | hodah
 imperfect & sing & second: ходила | hodaše
@@ -389,12 +389,12 @@ imperfect & plur & third: ходили | hodahu
 # participle & past:  | 
 # noun:  | hódanje
 
-# futur & sing & first:  | hodat ćuhodaću
-# futur & sing & second:  | hodat ćešhodaćeš
-# futur & sing & third:  | hodat ćehodaće
-# futur & plur & first:  | hodat ćemohodaćemo
-# futur & plur & second:  | hodat ćetehodaćete
-# futur & plur & third:  | hodat ćehodaće
+# futur & sing & first:  | hodat ću
+# futur & sing & second:  | hodat ćeš
+# futur & sing & third:  | hodat će
+# futur & plur & first:  | hodat ćemo
+# futur & plur & second:  | hodat ćete
+# futur & plur & third:  | hodat će
 
 # futur2 & sing & first:  | budem hodao
 # futur2 & sing & second:  | budeš hodao
@@ -459,12 +459,12 @@ perfect & plur & male: играли | igrali
 perfect & plur & fem: играли | igrale
 perfect & plur & neu: играли | igrala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | igraću
+futur & sing & second:  | igraćeš
+futur & sing & third:  | igraće
+futur & plur & first:  | igraćemo
+futur & plur & second:  | igraćete
+futur & plur & third:  | igraće
 
 imperfect & sing & first: играл | igrah
 imperfect & sing & second: играла | igraše
@@ -477,12 +477,12 @@ imperfect & plur & third: играли | igrahu
 # participle & past:  | 
 # noun:  | igranje
 
-# futur & sing & first:  | igrat ćuigraću
-# futur & sing & second:  | igrat ćešigraćeš
-# futur & sing & third:  | igrat ćeigraće
-# futur & plur & first:  | igrat ćemoigraćemo
-# futur & plur & second:  | igrat ćeteigraćete
-# futur & plur & third:  | igrat ćeigraće
+# futur & sing & first:  | igrat ću
+# futur & sing & second:  | igrat ćeš
+# futur & sing & third:  | igrat će
+# futur & plur & first:  | igrat ćemo
+# futur & plur & second:  | igrat ćete
+# futur & plur & third:  | igrat će
 
 # futur2 & sing & first:  | budem igrao
 # futur2 & sing & second:  | budeš igrao
@@ -603,7 +603,7 @@ imperfect & plur & third: шли | iđahu
 # imperativ & sing & first:  | 
 # imperativ & sing & second: иди | idi
 # imperativ & sing & third:  | 
-# imperativ & plur & first: идём идёмте | idimo
+# imperativ & plur & first: идём  идёмте | idimo
 # imperativ & plur & second: идите | idite
 # imperativ & plur & third:  | 
 
@@ -635,12 +635,12 @@ perfect & plur & male:  | jeli
 perfect & plur & fem:  | jele
 perfect & plur & neu:  | jela
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | ješću
+futur & sing & second:  | ješćeš
+futur & sing & third:  | ješće
+futur & plur & first:  | ješćemo
+futur & plur & second:  | ješćete
+futur & plur & third:  | ješće
 
 imperfect & sing & first:  | jedijah
 imperfect & sing & second:  | jedijaše
@@ -653,12 +653,12 @@ imperfect & plur & third:  | jedijahu
 # participle & past:  | jedavši
 # noun:  | jedenje
 
-# futur & sing & first:  | jest ćuješću
-# futur & sing & second:  | jest ćešješćeš
-# futur & sing & third:  | jest ćeješće
-# futur & plur & first:  | jest ćemoješćemo
-# futur & plur & second:  | jest ćeteješćete
-# futur & plur & third:  | jest ćeješće
+# futur & sing & first:  | jest ću
+# futur & sing & second:  | jest ćeš
+# futur & sing & third:  | jest će
+# futur & plur & first:  | jest ćemo
+# futur & plur & second:  | jest ćete
+# futur & plur & third:  | jest će
 
 # futur2 & sing & first:  | budem jeo
 # futur2 & sing & second:  | budeš jeo
@@ -723,12 +723,12 @@ perfect & plur & male: говорили | kazali
 perfect & plur & fem: говорили | kazale
 perfect & plur & neu: говорили | kazala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | kazaću
+futur & sing & second:  | kazaćeš
+futur & sing & third:  | kazaće
+futur & plur & first:  | kazaćemo
+futur & plur & second:  | kazaćete
+futur & plur & third:  | kazaće
 
 imperfect & sing & first: говорил | 
 imperfect & sing & second: говорила | 
@@ -741,12 +741,12 @@ imperfect & plur & third: говорили |
 # participle & past:  | kázavši
 # noun:  | kazanje
 
-# futur & sing & first:  | kazat ćukazaću
-# futur & sing & second:  | kazat ćeškazaćeš
-# futur & sing & third:  | kazat ćekazaće
-# futur & plur & first:  | kazat ćemokazaćemo
-# futur & plur & second:  | kazat ćetekazaćete
-# futur & plur & third:  | kazat ćekazaće
+# futur & sing & first:  | kazat ću
+# futur & sing & second:  | kazat ćeš
+# futur & sing & third:  | kazat će
+# futur & plur & first:  | kazat ćemo
+# futur & plur & second:  | kazat ćete
+# futur & plur & third:  | kazat će
 
 # futur2 & sing & first:  | budem kazao
 # futur2 & sing & second:  | budeš kazao
@@ -811,12 +811,12 @@ perfect & plur & male: копали | kopali
 perfect & plur & fem: копали | kopale
 perfect & plur & neu: копали | kopala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | kopaću
+futur & sing & second:  | kopaćeš
+futur & sing & third:  | kopaće
+futur & plur & first:  | kopaćemo
+futur & plur & second:  | kopaćete
+futur & plur & third:  | kopaće
 
 imperfect & sing & first: копал | kopah
 imperfect & sing & second: копала | kopaše
@@ -829,12 +829,12 @@ imperfect & plur & third: копали | kopahu
 # participle & past:  | 
 # noun:  | kòpanje
 
-# futur & sing & first:  | kopat ćukopaću
-# futur & sing & second:  | kopat ćeškopaćeš
-# futur & sing & third:  | kopat ćekopaće
-# futur & plur & first:  | kopat ćemokopaćemo
-# futur & plur & second:  | kopat ćetekopaćete
-# futur & plur & third:  | kopat ćekopaće
+# futur & sing & first:  | kopat ću
+# futur & sing & second:  | kopat ćeš
+# futur & sing & third:  | kopat će
+# futur & plur & first:  | kopat ćemo
+# futur & plur & second:  | kopat ćete
+# futur & plur & third:  | kopat će
 
 # futur2 & sing & first:  | budem kopao
 # futur2 & sing & second:  | budeš kopao
@@ -899,12 +899,12 @@ perfect & plur & male: покупали | kupovali
 perfect & plur & fem: покупали | kupovale
 perfect & plur & neu: покупали | kupovala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | kupovaću
+futur & sing & second:  | kupovaćeš
+futur & sing & third:  | kupovaće
+futur & plur & first:  | kupovaćemo
+futur & plur & second:  | kupovaćete
+futur & plur & third:  | kupovaće
 
 imperfect & sing & first: покупал | kupovah
 imperfect & sing & second: покупала | kupovaše
@@ -917,12 +917,12 @@ imperfect & plur & third: покупали | kupovahu
 # participle & past:  | 
 # noun:  | kupòvanje
 
-# futur & sing & first:  | kupovat ćukupovaću
-# futur & sing & second:  | kupovat ćeškupovaćeš
-# futur & sing & third:  | kupovat ćekupovaće
-# futur & plur & first:  | kupovat ćemokupovaćemo
-# futur & plur & second:  | kupovat ćetekupovaćete
-# futur & plur & third:  | kupovat ćekupovaće
+# futur & sing & first:  | kupovat ću
+# futur & sing & second:  | kupovat ćeš
+# futur & sing & third:  | kupovat će
+# futur & plur & first:  | kupovat ćemo
+# futur & plur & second:  | kupovat ćete
+# futur & plur & third:  | kupovat će
 
 # futur2 & sing & first:  | budem kupovao
 # futur2 & sing & second:  | budeš kupovao
@@ -987,12 +987,12 @@ perfect & plur & male: готовили | kuvali
 perfect & plur & fem: готовили | kuvale
 perfect & plur & neu: готовили | kuvala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | kuvaću
+futur & sing & second:  | kuvaćeš
+futur & sing & third:  | kuvaće
+futur & plur & first:  | kuvaćemo
+futur & plur & second:  | kuvaćete
+futur & plur & third:  | kuvaće
 
 imperfect & sing & first: готовил | kuvah
 imperfect & sing & second: готовила | kuvaše
@@ -1005,12 +1005,12 @@ imperfect & plur & third: готовили | kuvahu
 # participle & past:  | 
 # noun:  | kuvanje
 
-# futur & sing & first:  | kuvat ćukuvaću
-# futur & sing & second:  | kuvat ćeškuvaćeš
-# futur & sing & third:  | kuvat ćekuvaće
-# futur & plur & first:  | kuvat ćemokuvaćemo
-# futur & plur & second:  | kuvat ćetekuvaćete
-# futur & plur & third:  | kuvat ćekuvaće
+# futur & sing & first:  | kuvat ću
+# futur & sing & second:  | kuvat ćeš
+# futur & sing & third:  | kuvat će
+# futur & plur & first:  | kuvat ćemo
+# futur & plur & second:  | kuvat ćete
+# futur & plur & third:  | kuvat će
 
 # futur2 & sing & first:  | budem kuvao
 # futur2 & sing & second:  | budeš kuvao
@@ -1075,12 +1075,12 @@ perfect & plur & male: лежали | ležali
 perfect & plur & fem: лежали | ležale
 perfect & plur & neu: лежали | ležala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | ležaću
+futur & sing & second:  | ležaćeš
+futur & sing & third:  | ležaće
+futur & plur & first:  | ležaćemo
+futur & plur & second:  | ležaćete
+futur & plur & third:  | ležaće
 
 imperfect & sing & first: лежал | ležah
 imperfect & sing & second: лежала | ležaše
@@ -1093,12 +1093,12 @@ imperfect & plur & third: лежали | ležahu
 # participle & past:  | 
 # noun:  | lèžanje
 
-# futur & sing & first:  | ležat ćuležaću
-# futur & sing & second:  | ležat ćešležaćeš
-# futur & sing & third:  | ležat ćeležaće
-# futur & plur & first:  | ležat ćemoležaćemo
-# futur & plur & second:  | ležat ćeteležaćete
-# futur & plur & third:  | ležat ćeležaće
+# futur & sing & first:  | ležat ću
+# futur & sing & second:  | ležat ćeš
+# futur & sing & third:  | ležat će
+# futur & plur & first:  | ležat ćemo
+# futur & plur & second:  | ležat ćete
+# futur & plur & third:  | ležat će
 
 # futur2 & sing & first:  | budem ležao
 # futur2 & sing & second:  | budeš ležao
@@ -1163,12 +1163,12 @@ perfect & plur & male: думали | mislili
 perfect & plur & fem: думали | mislile
 perfect & plur & neu: думали | mislila
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | misliću
+futur & sing & second:  | mislićeš
+futur & sing & third:  | misliće
+futur & plur & first:  | mislićemo
+futur & plur & second:  | mislićete
+futur & plur & third:  | misliće
 
 imperfect & sing & first: думал | mišljah
 imperfect & sing & second: думала | mišljaše
@@ -1181,12 +1181,12 @@ imperfect & plur & third: думали | mišljahu
 # participle & past:  | 
 # noun:  | mišljenje
 
-# futur & sing & first:  | mislit ćumisliću
-# futur & sing & second:  | mislit ćešmislićeš
-# futur & sing & third:  | mislit ćemisliće
-# futur & plur & first:  | mislit ćemomislićemo
-# futur & plur & second:  | mislit ćetemislićete
-# futur & plur & third:  | mislit ćemisliće
+# futur & sing & first:  | mislit ću
+# futur & sing & second:  | mislit ćeš
+# futur & sing & third:  | mislit će
+# futur & plur & first:  | mislit ćemo
+# futur & plur & second:  | mislit ćete
+# futur & plur & third:  | mislit će
 
 # futur2 & sing & first:  | budem mislio
 # futur2 & sing & second:  | budeš mislio
@@ -1251,12 +1251,12 @@ perfect & plur & male: пели | pevali
 perfect & plur & fem: пели | pevale
 perfect & plur & neu: пели | pevala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | pevaću
+futur & sing & second:  | pevaćeš
+futur & sing & third:  | pevaće
+futur & plur & first:  | pevaćemo
+futur & plur & second:  | pevaćete
+futur & plur & third:  | pevaće
 
 imperfect & sing & first: пел | pevah
 imperfect & sing & second: пела | pevaše
@@ -1269,12 +1269,12 @@ imperfect & plur & third: пели | pevahu
 # participle & past:  | 
 # noun:  | pevanje
 
-# futur & sing & first:  | pevat ćupevaću
-# futur & sing & second:  | pevat ćešpevaćeš
-# futur & sing & third:  | pevat ćepevaće
-# futur & plur & first:  | pevat ćemopevaćemo
-# futur & plur & second:  | pevat ćetepevaćete
-# futur & plur & third:  | pevat ćepevaće
+# futur & sing & first:  | pevat ću
+# futur & sing & second:  | pevat ćeš
+# futur & sing & third:  | pevat će
+# futur & plur & first:  | pevat ćemo
+# futur & plur & second:  | pevat ćete
+# futur & plur & third:  | pevat će
 
 # futur2 & sing & first:  | budem pevao
 # futur2 & sing & second:  | budeš pevao
@@ -1339,12 +1339,12 @@ perfect & plur & male: писали | pisali
 perfect & plur & fem: писали | pisale
 perfect & plur & neu: писали | pisala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | pisaću
+futur & sing & second:  | pisaćeš
+futur & sing & third:  | pisaće
+futur & plur & first:  | pisaćemo
+futur & plur & second:  | pisaćete
+futur & plur & third:  | pisaće
 
 imperfect & sing & first: писал | pisah
 imperfect & sing & second: писала | pisaše
@@ -1357,12 +1357,12 @@ imperfect & plur & third: писали | pisahu
 # participle & past:  | 
 # noun:  | písanje
 
-# futur & sing & first:  | pisat ćupisaću
-# futur & sing & second:  | pisat ćešpisaćeš
-# futur & sing & third:  | pisat ćepisaće
-# futur & plur & first:  | pisat ćemopisaćemo
-# futur & plur & second:  | pisat ćetepisaćete
-# futur & plur & third:  | pisat ćepisaće
+# futur & sing & first:  | pisat ću
+# futur & sing & second:  | pisat ćeš
+# futur & sing & third:  | pisat će
+# futur & plur & first:  | pisat ćemo
+# futur & plur & second:  | pisat ćete
+# futur & plur & third:  | pisat će
 
 # futur2 & sing & first:  | budem pisao
 # futur2 & sing & second:  | budeš pisao
@@ -1427,12 +1427,12 @@ perfect & plur & male: пили | pili
 perfect & plur & fem: пили | pile
 perfect & plur & neu: пили | pila
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | piću
+futur & sing & second:  | pićeš
+futur & sing & third:  | piće
+futur & plur & first:  | pićemo
+futur & plur & second:  | pićete
+futur & plur & third:  | piće
 
 imperfect & sing & first: пил | pijah
 imperfect & sing & second: пила | pijaše
@@ -1445,12 +1445,12 @@ imperfect & plur & third: пили | pijahu
 # participle & past:  | 
 # noun:  | pijenje
 
-# futur & sing & first:  | pit ćupiću
-# futur & sing & second:  | pit ćešpićeš
-# futur & sing & third:  | pit ćepiće
-# futur & plur & first:  | pit ćemopićemo
-# futur & plur & second:  | pit ćetepićete
-# futur & plur & third:  | pit ćepiće
+# futur & sing & first:  | pit ću
+# futur & sing & second:  | pit ćeš
+# futur & sing & third:  | pit će
+# futur & plur & first:  | pit ćemo
+# futur & plur & second:  | pit ćete
+# futur & plur & third:  | pit će
 
 # futur2 & sing & first:  | budem pio
 # futur2 & sing & second:  | budeš pio
@@ -1515,12 +1515,12 @@ perfect & plur & male: плавали | plivali
 perfect & plur & fem: плавали | plivale
 perfect & plur & neu: плавали | plivala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | plivaću
+futur & sing & second:  | plivaćeš
+futur & sing & third:  | plivaće
+futur & plur & first:  | plivaćemo
+futur & plur & second:  | plivaćete
+futur & plur & third:  | plivaće
 
 imperfect & sing & first: плавал | plivah
 imperfect & sing & second: плавала | pliva
@@ -1533,12 +1533,12 @@ imperfect & plur & third: плавали | plivaše
 # participle & past:  | 
 # noun:  | plivanje
 
-# futur & sing & first:  | plivat ćuplivaću
-# futur & sing & second:  | plivat ćešplivaćeš
-# futur & sing & third:  | plivat ćeplivaće
-# futur & plur & first:  | plivat ćemoplivaćemo
-# futur & plur & second:  | plivat ćeteplivaćete
-# futur & plur & third:  | plivat ćeplivaće
+# futur & sing & first:  | plivat ću
+# futur & sing & second:  | plivat ćeš
+# futur & sing & third:  | plivat će
+# futur & plur & first:  | plivat ćemo
+# futur & plur & second:  | plivat ćete
+# futur & plur & third:  | plivat će
 
 # futur2 & sing & first:  | budem plivao
 # futur2 & sing & second:  | budeš plivao
@@ -1603,12 +1603,12 @@ perfect & plur & male: стирали | prali
 perfect & plur & fem: стирали | prale
 perfect & plur & neu: стирали | prala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | praću
+futur & sing & second:  | praćeš
+futur & sing & third:  | praće
+futur & plur & first:  | praćemo
+futur & plur & second:  | praćete
+futur & plur & third:  | praće
 
 imperfect & sing & first: стирал | prah
 imperfect & sing & second: стирала | praše
@@ -1621,12 +1621,12 @@ imperfect & plur & third: стирали | prahu
 # participle & past:  | 
 # noun:  | pránje
 
-# futur & sing & first:  | prat ćupraću
-# futur & sing & second:  | prat ćešpraćeš
-# futur & sing & third:  | prat ćepraće
-# futur & plur & first:  | prat ćemopraćemo
-# futur & plur & second:  | prat ćetepraćete
-# futur & plur & third:  | prat ćepraće
+# futur & sing & first:  | prat ću
+# futur & sing & second:  | prat ćeš
+# futur & sing & third:  | prat će
+# futur & plur & first:  | prat ćemo
+# futur & plur & second:  | prat ćete
+# futur & plur & third:  | prat će
 
 # futur2 & sing & first:  | budem prao
 # futur2 & sing & second:  | budeš prao
@@ -1691,12 +1691,12 @@ perfect & plur & male: разговаривали | pričali
 perfect & plur & fem: разговаривали | pričale
 perfect & plur & neu: разговаривали | pričala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | pričaću
+futur & sing & second:  | pričaćeš
+futur & sing & third:  | pričaće
+futur & plur & first:  | pričaćemo
+futur & plur & second:  | pričaćete
+futur & plur & third:  | pričaće
 
 imperfect & sing & first: разговаривал | pričah
 imperfect & sing & second: разговаривала | pričaše
@@ -1709,12 +1709,12 @@ imperfect & plur & third: разговаривали | pričahu
 # participle & past:  | 
 # noun:  | príčanje
 
-# futur & sing & first:  | pričat ćupričaću
-# futur & sing & second:  | pričat ćešpričaćeš
-# futur & sing & third:  | pričat ćepričaće
-# futur & plur & first:  | pričat ćemopričaćemo
-# futur & plur & second:  | pričat ćetepričaćete
-# futur & plur & third:  | pričat ćepričaće
+# futur & sing & first:  | pričat ću
+# futur & sing & second:  | pričat ćeš
+# futur & sing & third:  | pričat će
+# futur & plur & first:  | pričat ćemo
+# futur & plur & second:  | pričat ćete
+# futur & plur & third:  | pričat će
 
 # futur2 & sing & first:  | budem pričao
 # futur2 & sing & second:  | budeš pričao
@@ -1779,12 +1779,12 @@ perfect & plur & male: продавали | prodavali
 perfect & plur & fem: продавали | prodavale
 perfect & plur & neu: продавали | prodavala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | prodavaću
+futur & sing & second:  | prodavaćeš
+futur & sing & third:  | prodavaće
+futur & plur & first:  | prodavaćemo
+futur & plur & second:  | prodavaćete
+futur & plur & third:  | prodavaće
 
 imperfect & sing & first: продавал | prodavah
 imperfect & sing & second: продавала | prodavaše
@@ -1797,12 +1797,12 @@ imperfect & plur & third: продавали | prodavahu
 # participle & past:  | 
 # noun:  | prodávanje
 
-# futur & sing & first:  | prodavat ćuprodavaću
-# futur & sing & second:  | prodavat ćešprodavaćeš
-# futur & sing & third:  | prodavat ćeprodavaće
-# futur & plur & first:  | prodavat ćemoprodavaćemo
-# futur & plur & second:  | prodavat ćeteprodavaćete
-# futur & plur & third:  | prodavat ćeprodavaće
+# futur & sing & first:  | prodavat ću
+# futur & sing & second:  | prodavat ćeš
+# futur & sing & third:  | prodavat će
+# futur & plur & first:  | prodavat ćemo
+# futur & plur & second:  | prodavat ćete
+# futur & plur & third:  | prodavat će
 
 # futur2 & sing & first:  | budem prodavao
 # futur2 & sing & second:  | budeš prodavao
@@ -1867,12 +1867,12 @@ perfect & plur & male: ругались | psovali
 perfect & plur & fem: ругались | psovale
 perfect & plur & neu: ругались | psovala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | psovaću
+futur & sing & second:  | psovaćeš
+futur & sing & third:  | psovaće
+futur & plur & first:  | psovaćemo
+futur & plur & second:  | psovaćete
+futur & plur & third:  | psovaće
 
 imperfect & sing & first: ругался | psovah
 imperfect & sing & second: ругалась | psovaše
@@ -1885,12 +1885,12 @@ imperfect & plur & third: ругались | psovahu
 # participle & past:  | 
 # noun:  | psòvanje
 
-# futur & sing & first:  | psovat ćupsovaću
-# futur & sing & second:  | psovat ćešpsovaćeš
-# futur & sing & third:  | psovat ćepsovaće
-# futur & plur & first:  | psovat ćemopsovaćemo
-# futur & plur & second:  | psovat ćetepsovaćete
-# futur & plur & third:  | psovat ćepsovaće
+# futur & sing & first:  | psovat ću
+# futur & sing & second:  | psovat ćeš
+# futur & sing & third:  | psovat će
+# futur & plur & first:  | psovat ćemo
+# futur & plur & second:  | psovat ćete
+# futur & plur & third:  | psovat će
 
 # futur2 & sing & first:  | budem psovao
 # futur2 & sing & second:  | budeš psovao
@@ -1955,12 +1955,12 @@ perfect & plur & male: путешествовали | putovali
 perfect & plur & fem: путешествовали | putovale
 perfect & plur & neu: путешествовали | putovala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | putovaću
+futur & sing & second:  | putovaćeš
+futur & sing & third:  | putovaće
+futur & plur & first:  | putovaćemo
+futur & plur & second:  | putovaćete
+futur & plur & third:  | putovaće
 
 imperfect & sing & first: путешествовал | putovah
 imperfect & sing & second: путешествовала | putovaše
@@ -1973,12 +1973,12 @@ imperfect & plur & third: путешествовали | putovahu
 # participle & past:  | 
 # noun:  | putòvanje
 
-# futur & sing & first:  | putovat ćuputovaću
-# futur & sing & second:  | putovat ćešputovaćeš
-# futur & sing & third:  | putovat ćeputovaće
-# futur & plur & first:  | putovat ćemoputovaćemo
-# futur & plur & second:  | putovat ćeteputovaćete
-# futur & plur & third:  | putovat ćeputovaće
+# futur & sing & first:  | putovat ću
+# futur & sing & second:  | putovat ćeš
+# futur & sing & third:  | putovat će
+# futur & plur & first:  | putovat ćemo
+# futur & plur & second:  | putovat ćete
+# futur & plur & third:  | putovat će
 
 # futur2 & sing & first:  | budem putovao
 # futur2 & sing & second:  | budeš putovao
@@ -2043,12 +2043,12 @@ perfect & plur & male: делали | radili
 perfect & plur & fem: делали | radile
 perfect & plur & neu: делали | radila
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | radiću
+futur & sing & second:  | radićeš
+futur & sing & third:  | radiće
+futur & plur & first:  | radićemo
+futur & plur & second:  | radićete
+futur & plur & third:  | radiće
 
 imperfect & sing & first: делал | rađah
 imperfect & sing & second: делала | rađaše
@@ -2061,12 +2061,12 @@ imperfect & plur & third: делали | rađahu
 # participle & past:  | 
 # noun:  | ráđenje
 
-# futur & sing & first:  | radit ćuradiću
-# futur & sing & second:  | radit ćešradićeš
-# futur & sing & third:  | radit ćeradiće
-# futur & plur & first:  | radit ćemoradićemo
-# futur & plur & second:  | radit ćeteradićete
-# futur & plur & third:  | radit ćeradiće
+# futur & sing & first:  | radit ću
+# futur & sing & second:  | radit ćeš
+# futur & sing & third:  | radit će
+# futur & plur & first:  | radit ćemo
+# futur & plur & second:  | radit ćete
+# futur & plur & third:  | radit će
 
 # futur2 & sing & first:  | budem radio
 # futur2 & sing & second:  | budeš radio
@@ -2131,12 +2131,12 @@ perfect & plur & male: работали | radili
 perfect & plur & fem: работали | radile
 perfect & plur & neu: работали | radila
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | radiću
+futur & sing & second:  | radićeš
+futur & sing & third:  | radiće
+futur & plur & first:  | radićemo
+futur & plur & second:  | radićete
+futur & plur & third:  | radiće
 
 imperfect & sing & first: работал | rađah
 imperfect & sing & second: работала | rađaše
@@ -2149,12 +2149,12 @@ imperfect & plur & third: работали | rađahu
 # participle & past:  | 
 # noun:  | ráđenje
 
-# futur & sing & first:  | radit ćuradiću
-# futur & sing & second:  | radit ćešradićeš
-# futur & sing & third:  | radit ćeradiće
-# futur & plur & first:  | radit ćemoradićemo
-# futur & plur & second:  | radit ćeteradićete
-# futur & plur & third:  | radit ćeradiće
+# futur & sing & first:  | radit ću
+# futur & sing & second:  | radit ćeš
+# futur & sing & third:  | radit će
+# futur & plur & first:  | radit ćemo
+# futur & plur & second:  | radit ćete
+# futur & plur & third:  | radit će
 
 # futur2 & sing & first:  | budem radio
 # futur2 & sing & second:  | budeš radio
@@ -2219,12 +2219,12 @@ perfect & plur & male: думали | razmišljali
 perfect & plur & fem: думали | razmišljale
 perfect & plur & neu: думали | razmišljala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | razmišljaću
+futur & sing & second:  | razmišljaćeš
+futur & sing & third:  | razmišljaće
+futur & plur & first:  | razmišljaćemo
+futur & plur & second:  | razmišljaćete
+futur & plur & third:  | razmišljaće
 
 imperfect & sing & first: думал | razmišljah
 imperfect & sing & second: думала | razmišljaše
@@ -2237,12 +2237,12 @@ imperfect & plur & third: думали | razmišljahu
 # participle & past:  | 
 # noun:  | razmíšljanje
 
-# futur & sing & first:  | razmišljat ćurazmišljaću
-# futur & sing & second:  | razmišljat ćešrazmišljaćeš
-# futur & sing & third:  | razmišljat ćerazmišljaće
-# futur & plur & first:  | razmišljat ćemorazmišljaćemo
-# futur & plur & second:  | razmišljat ćeterazmišljaćete
-# futur & plur & third:  | razmišljat ćerazmišljaće
+# futur & sing & first:  | razmišljat ću
+# futur & sing & second:  | razmišljat ćeš
+# futur & sing & third:  | razmišljat će
+# futur & plur & first:  | razmišljat ćemo
+# futur & plur & second:  | razmišljat ćete
+# futur & plur & third:  | razmišljat će
 
 # futur2 & sing & first:  | budem razmišljao
 # futur2 & sing & second:  | budeš razmišljao
@@ -2307,12 +2307,12 @@ perfect & plur & male: прыгали | skakali
 perfect & plur & fem: прыгали | skakale
 perfect & plur & neu: прыгали | skakala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | skakaću
+futur & sing & second:  | skakaćeš
+futur & sing & third:  | skakaće
+futur & plur & first:  | skakaćemo
+futur & plur & second:  | skakaćete
+futur & plur & third:  | skakaće
 
 imperfect & sing & first: прыгал | skakah
 imperfect & sing & second: прыгала | skakaše
@@ -2325,12 +2325,12 @@ imperfect & plur & third: прыгали | skakahu
 # participle & past:  | 
 # noun:  | skákanje
 
-# futur & sing & first:  | skakat ćuskakaću
-# futur & sing & second:  | skakat ćešskakaćeš
-# futur & sing & third:  | skakat ćeskakaće
-# futur & plur & first:  | skakat ćemoskakaćemo
-# futur & plur & second:  | skakat ćeteskakaćete
-# futur & plur & third:  | skakat ćeskakaće
+# futur & sing & first:  | skakat ću
+# futur & sing & second:  | skakat ćeš
+# futur & sing & third:  | skakat će
+# futur & plur & first:  | skakat ćemo
+# futur & plur & second:  | skakat ćete
+# futur & plur & third:  | skakat će
 
 # futur2 & sing & first:  | budem skakao
 # futur2 & sing & second:  | budeš skakao
@@ -2395,12 +2395,12 @@ perfect & plur & male: слушали | slušali
 perfect & plur & fem: слушали | slušale
 perfect & plur & neu: слушали | slušala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | slušaću
+futur & sing & second:  | slušaćeš
+futur & sing & third:  | slušaće
+futur & plur & first:  | slušaćemo
+futur & plur & second:  | slušaćete
+futur & plur & third:  | slušaće
 
 imperfect & sing & first: слушал | slušah
 imperfect & sing & second: слушала | slušaše
@@ -2413,12 +2413,12 @@ imperfect & plur & third: слушали | slušahu
 # participle & past:  | 
 # noun:  | slušanje
 
-# futur & sing & first:  | slušat ćuslušaću
-# futur & sing & second:  | slušat ćešslušaćeš
-# futur & sing & third:  | slušat ćeslušaće
-# futur & plur & first:  | slušat ćemoslušaćemo
-# futur & plur & second:  | slušat ćeteslušaćete
-# futur & plur & third:  | slušat ćeslušaće
+# futur & sing & first:  | slušat ću
+# futur & sing & second:  | slušat ćeš
+# futur & sing & third:  | slušat će
+# futur & plur & first:  | slušat ćemo
+# futur & plur & second:  | slušat ćete
+# futur & plur & third:  | slušat će
 
 # futur2 & sing & first:  | budem slušao
 # futur2 & sing & second:  | budeš slušao
@@ -2483,12 +2483,12 @@ perfect & plur & male: спали | spavali
 perfect & plur & fem: спали | spavale
 perfect & plur & neu: спали | spavala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | spavaću
+futur & sing & second:  | spavaćeš
+futur & sing & third:  | spavaće
+futur & plur & first:  | spavaćemo
+futur & plur & second:  | spavaćete
+futur & plur & third:  | spavaće
 
 imperfect & sing & first: спал | spavah
 imperfect & sing & second: спала | spavaše
@@ -2501,12 +2501,12 @@ imperfect & plur & third: спали | spavahu
 # participle & past:  | 
 # noun:  | spávanje
 
-# futur & sing & first:  | spavat ćuspavaću
-# futur & sing & second:  | spavat ćešspavaćeš
-# futur & sing & third:  | spavat ćespavaće
-# futur & plur & first:  | spavat ćemospavaćemo
-# futur & plur & second:  | spavat ćetespavaćete
-# futur & plur & third:  | spavat ćespavaće
+# futur & sing & first:  | spavat ću
+# futur & sing & second:  | spavat ćeš
+# futur & sing & third:  | spavat će
+# futur & plur & first:  | spavat ćemo
+# futur & plur & second:  | spavat ćete
+# futur & plur & third:  | spavat će
 
 # futur2 & sing & first:  | budem spavao
 # futur2 & sing & second:  | budeš spavao
@@ -2571,12 +2571,12 @@ perfect & plur & male: стояли | stajali
 perfect & plur & fem: стояли | stajale
 perfect & plur & neu: стояли | stajala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | stajaću
+futur & sing & second:  | stajaćeš
+futur & sing & third:  | stajaće
+futur & plur & first:  | stajaćemo
+futur & plur & second:  | stajaćete
+futur & plur & third:  | stajaće
 
 imperfect & sing & first: стоял | stajah
 imperfect & sing & second: стояла | stajaše
@@ -2589,12 +2589,12 @@ imperfect & plur & third: стояли | stajahu  stajahu
 # participle & past:  | 
 # noun:  | stajanje
 
-# futur & sing & first:  | stajat ćustajaću
-# futur & sing & second:  | stajat ćešstajaćeš
-# futur & sing & third:  | stajat ćestajaće
-# futur & plur & first:  | stajat ćemostajaćemo
-# futur & plur & second:  | stajat ćetestajaćete
-# futur & plur & third:  | stajat ćestajaće
+# futur & sing & first:  | stajat ću
+# futur & sing & second:  | stajat ćeš
+# futur & sing & third:  | stajat će
+# futur & plur & first:  | stajat ćemo
+# futur & plur & second:  | stajat ćete
+# futur & plur & third:  | stajat će
 
 # futur2 & sing & first:  | budem stajao
 # futur2 & sing & second:  | budeš stajao
@@ -2659,12 +2659,12 @@ perfect & plur & male: бежали | trčali
 perfect & plur & fem: бежали | trčale
 perfect & plur & neu: бежали | trčala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | trčaću
+futur & sing & second:  | trčaćeš
+futur & sing & third:  | trčaće
+futur & plur & first:  | trčaćemo
+futur & plur & second:  | trčaćete
+futur & plur & third:  | trčaće
 
 imperfect & sing & first: бежал | trčah
 imperfect & sing & second: бежала | trčaše
@@ -2677,12 +2677,12 @@ imperfect & plur & third: бежали | trčahu
 # participle & past:  | tr̀čavši
 # noun:  | tr̀čanje
 
-# futur & sing & first:  | trčat ćutrčaću
-# futur & sing & second:  | trčat ćeštrčaćeš
-# futur & sing & third:  | trčat ćetrčaće
-# futur & plur & first:  | trčat ćemotrčaćemo
-# futur & plur & second:  | trčat ćetetrčaćete
-# futur & plur & third:  | trčat ćetrčaće
+# futur & sing & first:  | trčat ću
+# futur & sing & second:  | trčat ćeš
+# futur & sing & third:  | trčat će
+# futur & plur & first:  | trčat ćemo
+# futur & plur & second:  | trčat ćete
+# futur & plur & third:  | trčat će
 
 # futur2 & sing & first:  | budem trčao
 # futur2 & sing & second:  | budeš trčao
@@ -2715,7 +2715,7 @@ imperfect & plur & third: бежали | trčahu
 # imperativ & sing & first:  | 
 # imperativ & sing & second: беги | trči
 # imperativ & sing & third:  | 
-# imperativ & plur & first: бежим бежимте | trčimo
+# imperativ & plur & first: бежим  бежимте | trčimo
 # imperativ & plur & second: бегите | trčite
 # imperativ & plur & third:  | 
 
@@ -2747,12 +2747,12 @@ perfect & plur & male: учили | učili
 perfect & plur & fem: учили | učile
 perfect & plur & neu: учили | učila
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | učiću
+futur & sing & second:  | učićeš
+futur & sing & third:  | učiće
+futur & plur & first:  | učićemo
+futur & plur & second:  | učićete
+futur & plur & third:  | učiće
 
 imperfect & sing & first: учил | učih
 imperfect & sing & second: учила | učiše
@@ -2765,12 +2765,12 @@ imperfect & plur & third: учили | učahu
 # participle & past:  | ùčīvši
 # noun:  | ùčenje
 
-# futur & sing & first:  | učit ćuučiću
-# futur & sing & second:  | učit ćešučićeš
-# futur & sing & third:  | učit ćeučiće
-# futur & plur & first:  | učit ćemoučićemo
-# futur & plur & second:  | učit ćeteučićete
-# futur & plur & third:  | učit ćeučiće
+# futur & sing & first:  | učit ću
+# futur & sing & second:  | učit ćeš
+# futur & sing & third:  | učit će
+# futur & plur & first:  | učit ćemo
+# futur & plur & second:  | učit ćete
+# futur & plur & third:  | učit će
 
 # futur2 & sing & first:  | budem učio
 # futur2 & sing & second:  | budeš učio
@@ -2835,12 +2835,12 @@ perfect & plur & male: водили | vozili
 perfect & plur & fem: водили | vozile
 perfect & plur & neu: водили | vozila
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | voziću
+futur & sing & second:  | vozićeš
+futur & sing & third:  | voziće
+futur & plur & first:  | vozićemo
+futur & plur & second:  | vozićete
+futur & plur & third:  | voziće
 
 imperfect & sing & first: водил | vožah
 imperfect & sing & second: водила | vožaše
@@ -2853,12 +2853,12 @@ imperfect & plur & third: водили | vožahu
 # participle & past:  | 
 # noun:  | vòženje
 
-# futur & sing & first:  | vozit ćuvoziću
-# futur & sing & second:  | vozit ćešvozićeš
-# futur & sing & third:  | vozit ćevoziće
-# futur & plur & first:  | vozit ćemovozićemo
-# futur & plur & second:  | vozit ćetevozićete
-# futur & plur & third:  | vozit ćevoziće
+# futur & sing & first:  | vozit ću
+# futur & sing & second:  | vozit ćeš
+# futur & sing & third:  | vozit će
+# futur & plur & first:  | vozit ćemo
+# futur & plur & second:  | vozit ćete
+# futur & plur & third:  | vozit će
 
 # futur2 & sing & first:  | budem vozio
 # futur2 & sing & second:  | budeš vozio
@@ -2923,12 +2923,12 @@ perfect & plur & male: звали | zvali
 perfect & plur & fem: звали | zvale
 perfect & plur & neu: звали | zvala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | zvaću
+futur & sing & second:  | zvaćeš
+futur & sing & third:  | zvaće
+futur & plur & first:  | zvaćemo
+futur & plur & second:  | zvaćete
+futur & plur & third:  | zvaće
 
 imperfect & sing & first: звал | zvah
 imperfect & sing & second: звала | zvaše
@@ -2941,12 +2941,12 @@ imperfect & plur & third: звали | zvahu
 # participle & past:  | 
 # noun:  | zvȃnje
 
-# futur & sing & first:  | zvat ćuzvaću
-# futur & sing & second:  | zvat ćešzvaćeš
-# futur & sing & third:  | zvat ćezvaće
-# futur & plur & first:  | zvat ćemozvaćemo
-# futur & plur & second:  | zvat ćetezvaćete
-# futur & plur & third:  | zvat ćezvaće
+# futur & sing & first:  | zvat ću
+# futur & sing & second:  | zvat ćeš
+# futur & sing & third:  | zvat će
+# futur & plur & first:  | zvat ćemo
+# futur & plur & second:  | zvat ćete
+# futur & plur & third:  | zvat će
 
 # futur2 & sing & first:  | budem zvao
 # futur2 & sing & second:  | budeš zvao
@@ -3011,12 +3011,12 @@ perfect & plur & male: ждали | čekali
 perfect & plur & fem: ждали | čekale
 perfect & plur & neu: ждали | čekala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | čekaću
+futur & sing & second:  | čekaćeš
+futur & sing & third:  | čekaće
+futur & plur & first:  | čekaćemo
+futur & plur & second:  | čekaćete
+futur & plur & third:  | čekaće
 
 imperfect & sing & first: ждал | čekah
 imperfect & sing & second: ждала | čekaše
@@ -3029,12 +3029,12 @@ imperfect & plur & third: ждали | čekahu
 # participle & past:  | 
 # noun:  | čekanje
 
-# futur & sing & first:  | čekat ćučekaću
-# futur & sing & second:  | čekat ćeščekaćeš
-# futur & sing & third:  | čekat ćečekaće
-# futur & plur & first:  | čekat ćemočekaćemo
-# futur & plur & second:  | čekat ćetečekaćete
-# futur & plur & third:  | čekat ćečekaće
+# futur & sing & first:  | čekat ću
+# futur & sing & second:  | čekat ćeš
+# futur & sing & third:  | čekat će
+# futur & plur & first:  | čekat ćemo
+# futur & plur & second:  | čekat ćete
+# futur & plur & third:  | čekat će
 
 # futur2 & sing & first:  | budem čekao
 # futur2 & sing & second:  | budeš čekao
@@ -3099,12 +3099,12 @@ perfect & plur & male: читали | čitali
 perfect & plur & fem: читали | čitale
 perfect & plur & neu: читали | čitala
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | čitaću
+futur & sing & second:  | čitaćeš
+futur & sing & third:  | čitaće
+futur & plur & first:  | čitaćemo
+futur & plur & second:  | čitaćete
+futur & plur & third:  | čitaće
 
 imperfect & sing & first: читал | čitah
 imperfect & sing & second: читала | čitaše
@@ -3117,12 +3117,12 @@ imperfect & plur & third: читали | čitahu
 # participle & past:  | 
 # noun:  | čìtanje
 
-# futur & sing & first:  | čitat ćučitaću
-# futur & sing & second:  | čitat ćeščitaćeš
-# futur & sing & third:  | čitat ćečitaće
-# futur & plur & first:  | čitat ćemočitaćemo
-# futur & plur & second:  | čitat ćetečitaćete
-# futur & plur & third:  | čitat ćečitaće
+# futur & sing & first:  | čitat ću
+# futur & sing & second:  | čitat ćeš
+# futur & sing & third:  | čitat će
+# futur & plur & first:  | čitat ćemo
+# futur & plur & second:  | čitat ćete
+# futur & plur & third:  | čitat će
 
 # futur2 & sing & first:  | budem čitao
 # futur2 & sing & second:  | budeš čitao
@@ -3187,12 +3187,12 @@ perfect & plur & male: слышали | čuli
 perfect & plur & fem: слышали | čule
 perfect & plur & neu: слышали | čula
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | čuću
+futur & sing & second:  | čućeš
+futur & sing & third:  | čuće
+futur & plur & first:  | čućemo
+futur & plur & second:  | čućete
+futur & plur & third:  | čuće
 
 imperfect & sing & first: слышал | čujah
 imperfect & sing & second: слышала | čujaše
@@ -3205,12 +3205,12 @@ imperfect & plur & third: слышали | čujahu
 # participle & past:  | čȗvši
 # noun:  | čùvenje
 
-# futur & sing & first:  | čut ćučuću
-# futur & sing & second:  | čut ćeščućeš
-# futur & sing & third:  | čut ćečuće
-# futur & plur & first:  | čut ćemočućemo
-# futur & plur & second:  | čut ćetečućete
-# futur & plur & third:  | čut ćečuće
+# futur & sing & first:  | čut ću
+# futur & sing & second:  | čut ćeš
+# futur & sing & third:  | čut će
+# futur & plur & first:  | čut ćemo
+# futur & plur & second:  | čut ćete
+# futur & plur & third:  | čut će
 
 # futur2 & sing & first:  | budem čuo
 # futur2 & sing & second:  | budeš čuo
@@ -3275,12 +3275,12 @@ perfect & plur & male: жили | živeli
 perfect & plur & fem: жили | živele
 perfect & plur & neu: жили | živela
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first:  | živeću
+futur & sing & second:  | živećeš
+futur & sing & third:  | živeće
+futur & plur & first:  | živećemo
+futur & plur & second:  | živećete
+futur & plur & third:  | živeće
 
 imperfect & sing & first: жил | življah
 imperfect & sing & second: жила | življaše
@@ -3293,12 +3293,12 @@ imperfect & plur & third: жили | življahu
 # participle & past:  | 
 # noun:  | žívljenje
 
-# futur & sing & first:  | živet ćuživeću
-# futur & sing & second:  | živet ćešživećeš
-# futur & sing & third:  | živet ćeživeće
-# futur & plur & first:  | živet ćemoživećemo
-# futur & plur & second:  | živet ćeteživećete
-# futur & plur & third:  | živet ćeživeće
+# futur & sing & first:  | živet ću
+# futur & sing & second:  | živet ćeš
+# futur & sing & third:  | živet će
+# futur & plur & first:  | živet ćemo
+# futur & plur & second:  | živet ćete
+# futur & plur & third:  | živet će
 
 # futur2 & sing & first:  | budem živeo
 # futur2 & sing & second:  | budeš živeo

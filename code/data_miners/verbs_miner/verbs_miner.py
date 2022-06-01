@@ -3,59 +3,6 @@ import sys
 sys.path.insert(0, '../../../')
 from code.data_miners.miner_common import *
 
-verbs = [
-    ('misliti', 'думать'),
-    ('čitati', 'читать'),
-    ('gledati', 'смотреть'),
-    ('čekati', 'ждать'),
-    ('pričati', 'разговаривать'),
-    ('spavati', 'спать'),
-    ('slušati', 'слушать'),
-    ('raditi', 'делать'),
-    ('trčati', 'бежать'),
-    ('igrati', 'играть'),
-    ('plivati', 'плавать'),
-    ('kopati', 'копать'),
-    ('učiti', 'учить'),
-    ('prati', 'стирать'),
-    ('voziti', 'водить'),
-    ('ležati', 'лежать'),
-    ('stajati', 'стоять'),
-    ('razmišljati', 'думать'),
-    ('pisati', 'писать'),
-    ('jesti', 'есть'),
-    ('govoriti', 'говорить'),
-    ('hodati', 'ходить'),
-    ('kuvati', 'готовить'),
-    ('pevati', 'петь'),
-    ('živeti', 'жить'),
-    ('raditi', 'работать'),
-    ('skakati', 'прыгать'),
-    ('kazati', 'говорить'),
-    ('putovati', 'путешествовать'),
-    ('kupovati', 'покупать'),
-    ('psovati', 'ругаться'),
-    ('doručkovati', 'завтракать'),
-    ('ići', 'идти'),
-    ('doći', 'прийти'),
-    ('zvati', 'звать'),
-    ('piti', 'пить'),
-    ('čuti', 'слышать'),
-    ('prodavati', 'продавать'),
-]
-
-modalVerbs = [
-    ('morati', 'должен'),
-    ('moći', 'мочь'),
-    ('treba', 'надо'),
-    ('znati', 'уметь'),
-    ('umeti', 'уметь'),
-    ('smeti', 'мочь'),
-    ('želeti', 'желать'),
-    ('voleti', 'любить'),
-    ('hteti', 'хотеть'),
-]
-
 class VerbDownloader(TableDownloader):
     def loadCustom(self) -> DownloadStatus:
         return DownloadStatus.Ok
@@ -68,7 +15,7 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
     SH = 0
     EN = 1
 
-    serbTableMode = EN
+    serbPage = EN
 
     serbOk, serb = VerbDownloader(serbVerb, 'https://en.wiktionary.org/wiki', 'Serbo-Croatian', 'table', 'inflection-table')()
     rusOk, rus   = VerbDownloader(rusVerb, 'https://ru.wiktionary.org/wiki', None, 'table', 'morfotable ru')()
@@ -76,25 +23,25 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
     if serbOk != DownloadStatus.Ok:
         # try to fallback to `sh` version
         serbOk, serb = VerbDownloader(serbVerb, 'https://sh.wiktionary.org/wiki', 'Srpskohrvatski', 'div', 'NavContent')()
-        serbTableMode = SH
+        serbPage = SH
 
     print(serbOk)
     if serbOk != DownloadStatus.Ok:
         return serbOk
 
-    Present       = ['Prezent',                    'Present'                ][serbTableMode]
-    Active        = ['Glagolski pridjev radni',    'Active past participle' ][serbTableMode]
-    Passive       = ['Glagolski pridjev trpni',    'Passive past participle'][serbTableMode]
-    FutureI       = ['Futur I',                    'Future I'               ][serbTableMode]
-    FutureII      = ['Futur II',                   'Future II'              ][serbTableMode]
-    Imperfect     = ['Imperfekt',                  'Imperfect'              ][serbTableMode]
-    Aorist        = ['Aorist',                     'Aorist'                 ][serbTableMode]
-    CondI         = ['Kondicional I',              'Conditional I'          ][serbTableMode]
-    CondII        = ['Kondicional II',             'Conditional II'         ][serbTableMode]
-    Imperative    = ['Imperativ',                  'Imperative'             ][serbTableMode]
-    PresentAdverb = ['Glagolski prilog sadašnji:', 'Present verbal adverb:' ][serbTableMode]
-    PastAdverb    = ['Glagolski prilog prošli:',   'Past verbal adverb:'    ][serbTableMode]
-    VerbalNoun    = ['Glagolska imenica:',         'Verbal noun:'           ][serbTableMode]
+    Present       = ['Prezent',                    'Present'                ][serbPage]
+    Active        = ['Glagolski pridjev radni',    'Active past participle' ][serbPage]
+    Passive       = ['Glagolski pridjev trpni',    'Passive past participle'][serbPage]
+    FutureI       = ['Futur I',                    'Future I'               ][serbPage]
+    FutureII      = ['Futur II',                   'Future II'              ][serbPage]
+    Imperfect     = ['Imperfekt',                  'Imperfect'              ][serbPage]
+    Aorist        = ['Aorist',                     'Aorist'                 ][serbPage]
+    CondI         = ['Kondicional I',              'Conditional I'          ][serbPage]
+    CondII        = ['Kondicional II',             'Conditional II'         ][serbPage]
+    Imperative    = ['Imperativ',                  'Imperative'             ][serbPage]
+    PresentAdverb = ['Glagolski prilog sadašnji:', 'Present verbal adverb:' ][serbPage]
+    PastAdverb    = ['Glagolski prilog prošli:',   'Past verbal adverb:'    ][serbPage]
+    VerbalNoun    = ['Glagolska imenica:',         'Verbal noun:'           ][serbPage]
 
     SING1 = 0
     SING2 = 1
@@ -134,25 +81,7 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
     o.endl()
 
     def GetSinglePast(s: str, i: int):
-        # могмогламогло -> мог могла могло
-        mode = len(s) % 3
-        n = int((len(s) - 4) / 3)
-
-        i1 = n
-        i2 = 2*n+2
-
-        if mode != 1:
-            # любиллюбилалюбило -> любил любила любило
-            i1 += 1
-            i2 += 1
-        
-        if mode == 0:
-            # шёлшлашло -> шёл шла шло
-            n = int(len(s) / 3)
-            i1 = n
-            i2 = 2*n
-
-        return [s[:i1], s[i1:i2], s[i2:]][i]
+        return s.split()[i]
     
     def SplitParticiple(adjective: str, i: int):
         #print(adjective)
