@@ -22,7 +22,7 @@ plur & lok: ананасах | ananasima
 ---
 
 april
-ru_male
+male & ru_male
 
 sing & nom: апрель | april
 sing & gen: апреля | aprila
@@ -106,7 +106,7 @@ plur & lok: авокадо | avokadima
 ---
 
 baba
-male & ru_fem
+fem & ru_fem
 
 sing & nom: бабушка | baba
 sing & gen: бабушки | babe
@@ -442,7 +442,7 @@ plur & lok: свитерах | džemperima
 ---
 
 februar
-ru_male
+male & ru_male
 
 sing & nom: февраль | februar
 sing & gen: февраля | februara
@@ -610,7 +610,7 @@ plur & lok: куртках | jaknama
 ---
 
 januar
-ru_male
+male & ru_male
 
 sing & nom: январь | januar
 sing & gen: января | januara
@@ -652,7 +652,7 @@ plur & lok: осенях | jesenima
 ---
 
 jul
-ru_male
+male & ru_male
 
 sing & nom: июль | jul
 sing & gen: июля | jula
@@ -801,21 +801,21 @@ plur & lok: пальто | kaputima
 kivi
 male & ru_neu
 
-sing & nom: киви | 
-sing & gen: киви | 
-sing & dat: киви | 
-sing & aku: киви | 
-sing & vok: киви | 
-sing & inst: киви | 
-sing & lok: киви | 
+sing & nom: киви | kivi
+sing & gen: киви | kivija
+sing & dat: киви | kiviju
+sing & aku: киви | kivija
+sing & vok: киви | kivi
+sing & inst: киви | kivijem
+sing & lok: киви | kiviju
 
-plur & nom: киви | 
-plur & gen: киви | 
-plur & dat: киви | 
-plur & aku: киви | 
-plur & vok: киви | 
-plur & inst: киви | 
-plur & lok: киви | 
+plur & nom: киви | kiviji
+plur & gen: киви | kivija
+plur & dat: киви | kivijima
+plur & aku: киви | kivije
+plur & vok: киви | kiviji
+plur & inst: киви | kivijima
+plur & lok: киви | kivijima
 
 ---
 
@@ -1366,7 +1366,7 @@ plur & lok: музеях | muzejima
 ---
 
 nar
-ru_male
+male & ru_male
 
 sing & nom: гранат | nar
 sing & gen: граната | nara
@@ -1578,13 +1578,13 @@ plur & lok: отчимах | očusima
 pantalone
 male & ru_fem
 
-sing & nom:  | pantalone
-sing & gen:  | pantalona
-sing & dat:  | pantalonama
-sing & aku:  | pantalone
-sing & vok:  | pantalone
-sing & inst:  | pantalonama
-sing & lok:  | pantalonama
+sing & nom: брюки | pantalone
+sing & gen: брюк | pantalona
+sing & dat: брюкам | pantalonama
+sing & aku: брюки | pantalone
+sing & vok: брюки | pantalone
+sing & inst: брюками | pantalonama
+sing & lok: брюках | pantalonama
 
 plur & nom: брюки | genitive
 plur & gen: брюк | dative
@@ -1635,27 +1635,6 @@ plur & aku: псов | pse
 plur & vok: псы | psi
 plur & inst: псами | psima
 plur & lok: псах | psima
-
----
-
-pasulj
-male
-
-sing & nom:  | pasulj
-sing & gen:  | pasulja
-sing & dat:  | pasulju
-sing & aku:  | pasulj
-sing & vok:  | pasulju
-sing & inst:  | pasuljem
-sing & lok:  | pasulju
-
-plur & nom:  | genitive
-plur & gen:  | dative
-plur & dat:  | accusative
-plur & aku:  | vocative
-plur & vok:  | locative
-plur & inst:  | 
-plur & lok:  | instrumental
 
 ---
 
@@ -2523,13 +2502,13 @@ plur & lok: сливах | šljivama
 šorc
 male & ru_fem
 
-sing & nom:  | šorc
-sing & gen:  | šorca
-sing & dat:  | šorcu
-sing & aku:  | šorc
-sing & vok:  | šorče
-sing & inst:  | šorcom
-sing & lok:  | šorcu
+sing & nom: шорты | šorc
+sing & gen: шорт | šorca
+sing & dat: шортам | šorcu
+sing & aku: шорты | šorc
+sing & vok: шорты | šorče
+sing & inst: шортами | šorcom
+sing & lok: шортах | šorcu
 
 plur & nom: шорты | šorčevi
 plur & gen: шорт | šorčeva

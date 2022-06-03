@@ -267,21 +267,21 @@ imperfect & plur & third: смотрели | gledahu
 govoriti
 i
 
-inf: говорить | govoriti
+inf: говорить(govoriti) | govoriti
 
-present & sing & first: говорю | govorim
-present & sing & second: говоришь | govoriš
-present & sing & third: говорит | govori
-present & plur & first: говорим | govorimo
-present & plur & second: говоришь | govorite
-present & plur & third: говорят | govore
+present & sing & first: говорю(govoriti) | govorim
+present & sing & second: говоришь(govoriti) | govoriš
+present & sing & third: говорит(govoriti) | govori
+present & plur & first: говорим(govoriti) | govorimo
+present & plur & second: говоришь(govoriti) | govorite
+present & plur & third: говорят(govoriti) | govore
 
-perfect & sing & male: говорил | govorio
-perfect & sing & fem: говорила | govorila
-perfect & sing & neu: говорило | govorilo
-perfect & plur & male: говорили | govorili
-perfect & plur & fem: говорили | govorile
-perfect & plur & neu: говорили | govorila
+perfect & sing & male: говорил(govoriti) | govorio
+perfect & sing & fem: говорила(govoriti) | govorila
+perfect & sing & neu: говорило(govoriti) | govorilo
+perfect & plur & male: говорили(govoriti) | govorili
+perfect & plur & fem: говорили(govoriti) | govorile
+perfect & plur & neu: говорили(govoriti) | govorila
 
 futur & sing & first:  | govoriću
 futur & sing & second:  | govorićeš
@@ -290,12 +290,12 @@ futur & plur & first:  | govorićemo
 futur & plur & second:  | govorićete
 futur & plur & third:  | govoriće
 
-imperfect & sing & first: говорил | govorah
-imperfect & sing & second: говорила | govoraše
-imperfect & sing & third: говорило | govoraše
-imperfect & plur & first: говорили | govorasmo
-imperfect & plur & second: говорили | govoraste
-imperfect & plur & third: говорили | govorahu
+imperfect & sing & first: говорил(govoriti) | govorah
+imperfect & sing & second: говорила(govoriti) | govoraše
+imperfect & sing & third: говорило(govoriti) | govoraše
+imperfect & plur & first: говорили(govoriti) | govorasmo
+imperfect & plur & second: говорили(govoriti) | govoraste
+imperfect & plur & third: говорили(govoriti) | govorahu
 
 # participle & present:  | govoreći
 # participle & past:  | 
@@ -707,21 +707,21 @@ imperfect & plur & third:  | jedijahu
 kazati
 e
 
-inf: говорить | kazati
+inf: говорить(kazati) | kazati
 
-present & sing & first: говорю | kažem
-present & sing & second: говоришь | kažeš
-present & sing & third: говорит | kaže
-present & plur & first: говорим | kažemo
-present & plur & second: говоришь | kažete
-present & plur & third: говорят | kažu
+present & sing & first: говорю(kazati) | kažem
+present & sing & second: говоришь(kazati) | kažeš
+present & sing & third: говорит(kazati) | kaže
+present & plur & first: говорим(kazati) | kažemo
+present & plur & second: говоришь(kazati) | kažete
+present & plur & third: говорят(kazati) | kažu
 
-perfect & sing & male: говорил | kazao
-perfect & sing & fem: говорила | kazala
-perfect & sing & neu: говорило | kazalo
-perfect & plur & male: говорили | kazali
-perfect & plur & fem: говорили | kazale
-perfect & plur & neu: говорили | kazala
+perfect & sing & male: говорил(kazati) | kazao
+perfect & sing & fem: говорила(kazati) | kazala
+perfect & sing & neu: говорило(kazati) | kazalo
+perfect & plur & male: говорили(kazati) | kazali
+perfect & plur & fem: говорили(kazati) | kazale
+perfect & plur & neu: говорили(kazati) | kazala
 
 futur & sing & first:  | kazaću
 futur & sing & second:  | kazaćeš
@@ -730,12 +730,12 @@ futur & plur & first:  | kazaćemo
 futur & plur & second:  | kazaćete
 futur & plur & third:  | kazaće
 
-imperfect & sing & first: говорил | 
-imperfect & sing & second: говорила | 
-imperfect & sing & third: говорило | 
-imperfect & plur & first: говорили | 
-imperfect & plur & second: говорили | 
-imperfect & plur & third: говорили | 
+imperfect & sing & first: говорил(kazati) | 
+imperfect & sing & second: говорила(kazati) | 
+imperfect & sing & third: говорило(kazati) | 
+imperfect & plur & first: говорили(kazati) | 
+imperfect & plur & second: говорили(kazati) | 
+imperfect & plur & third: говорили(kazati) | 
 
 # participle & present:  | 
 # participle & past:  | kazavši
@@ -777,10 +777,10 @@ imperfect & plur & third: говорили |
 # cond2 & plur & third:  | bili bi kazali
 
 # imperativ & sing & first:  | 
-# imperativ & sing & second: говори | kaži
+# imperativ & sing & second: говори(kazati) | kaži
 # imperativ & sing & third:  | 
 # imperativ & plur & first:  | kažimo
-# imperativ & plur & second: говорите | kažite
+# imperativ & plur & second: говорите(kazati) | kažite
 # imperativ & plur & third:  | 
 
 # passive & sing & male:  | kazan
@@ -1147,21 +1147,21 @@ imperfect & plur & third: лежали | ležahu
 misliti
 i
 
-inf: думать | misliti
+inf: думать(misliti) | misliti
 
-present & sing & first: думаю | mislim
-present & sing & second: думаешь | misliš
-present & sing & third: думает | misli
-present & plur & first: думаем | mislimo
-present & plur & second: думаешь | mislite
-present & plur & third: думают | misle
+present & sing & first: думаю(misliti) | mislim
+present & sing & second: думаешь(misliti) | misliš
+present & sing & third: думает(misliti) | misli
+present & plur & first: думаем(misliti) | mislimo
+present & plur & second: думаешь(misliti) | mislite
+present & plur & third: думают(misliti) | misle
 
-perfect & sing & male: думал | mislio
-perfect & sing & fem: думала | mislila
-perfect & sing & neu: думало | mislilo
-perfect & plur & male: думали | mislili
-perfect & plur & fem: думали | mislile
-perfect & plur & neu: думали | mislila
+perfect & sing & male: думал(misliti) | mislio
+perfect & sing & fem: думала(misliti) | mislila
+perfect & sing & neu: думало(misliti) | mislilo
+perfect & plur & male: думали(misliti) | mislili
+perfect & plur & fem: думали(misliti) | mislile
+perfect & plur & neu: думали(misliti) | mislila
 
 futur & sing & first:  | misliću
 futur & sing & second:  | mislićeš
@@ -1170,12 +1170,12 @@ futur & plur & first:  | mislićemo
 futur & plur & second:  | mislićete
 futur & plur & third:  | misliće
 
-imperfect & sing & first: думал | mišljah
-imperfect & sing & second: думала | mišljaše
-imperfect & sing & third: думало | mišljaše
-imperfect & plur & first: думали | mišljasmo
-imperfect & plur & second: думали | mišljaste
-imperfect & plur & third: думали | mišljahu
+imperfect & sing & first: думал(misliti) | mišljah
+imperfect & sing & second: думала(misliti) | mišljaše
+imperfect & sing & third: думало(misliti) | mišljaše
+imperfect & plur & first: думали(misliti) | mišljasmo
+imperfect & plur & second: думали(misliti) | mišljaste
+imperfect & plur & third: думали(misliti) | mišljahu
 
 # participle & present:  | misleći
 # participle & past:  | 
@@ -1217,10 +1217,10 @@ imperfect & plur & third: думали | mišljahu
 # cond2 & plur & third:  | bili bi mislili
 
 # imperativ & sing & first:  | 
-# imperativ & sing & second: думай | misli
+# imperativ & sing & second: думайv | misli
 # imperativ & sing & third:  | 
 # imperativ & plur & first:  | mislimo
-# imperativ & plur & second: думайте | mislite
+# imperativ & plur & second: думайте(misliti) | mislite
 # imperativ & plur & third:  | 
 
 # passive & sing & male:  | mišljen
@@ -2203,21 +2203,21 @@ imperfect & plur & third: работали | rađahu
 razmišljati
 a
 
-inf: думать | razmišljati
+inf: думать(razmišljati) | razmišljati
 
-present & sing & first: думаю | razmišljam
-present & sing & second: думаешь | razmišljaš
-present & sing & third: думает | razmišlja
-present & plur & first: думаем | razmišljamo
-present & plur & second: думаешь | razmišljate
-present & plur & third: думают | razmišljaju
+present & sing & first: думаю(razmišljati) | razmišljam
+present & sing & second: думаешь(razmišljati) | razmišljaš
+present & sing & third: думает(razmišljati) | razmišlja
+present & plur & first: думаем(razmišljati) | razmišljamo
+present & plur & second: думаешь(razmišljati) | razmišljate
+present & plur & third: думают(razmišljati) | razmišljaju
 
-perfect & sing & male: думал | razmišljao
-perfect & sing & fem: думала | razmišljala
-perfect & sing & neu: думало | razmišljalo
-perfect & plur & male: думали | razmišljali
-perfect & plur & fem: думали | razmišljale
-perfect & plur & neu: думали | razmišljala
+perfect & sing & male: думал(razmišljati) | razmišljao
+perfect & sing & fem: думала(razmišljati) | razmišljala
+perfect & sing & neu: думало(razmišljati) | razmišljalo
+perfect & plur & male: думали(razmišljati) | razmišljali
+perfect & plur & fem: думали(razmišljati) | razmišljale
+perfect & plur & neu: думали(razmišljati) | razmišljala
 
 futur & sing & first:  | razmišljaću
 futur & sing & second:  | razmišljaćeš
@@ -2226,12 +2226,12 @@ futur & plur & first:  | razmišljaćemo
 futur & plur & second:  | razmišljaćete
 futur & plur & third:  | razmišljaće
 
-imperfect & sing & first: думал | razmišljah
-imperfect & sing & second: думала | razmišljaše
-imperfect & sing & third: думало | razmišljaše
-imperfect & plur & first: думали | razmišljasmo
-imperfect & plur & second: думали | razmišljaste
-imperfect & plur & third: думали | razmišljahu
+imperfect & sing & first: думал(razmišljati) | razmišljah
+imperfect & sing & second: думала(razmišljati) | razmišljaše
+imperfect & sing & third: думало(razmišljati) | razmišljaše
+imperfect & plur & first: думали(razmišljati) | razmišljasmo
+imperfect & plur & second: думали(razmišljati) | razmišljaste
+imperfect & plur & third: думали(razmišljati) | razmišljahu
 
 # participle & present:  | razmišljajući
 # participle & past:  | 
