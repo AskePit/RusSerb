@@ -294,27 +294,6 @@ plur & lok: свеклах | cveklama
 
 ---
 
-deca
-fem & ru_neu
-
-sing & nom: ребёнок | deca
-sing & gen: ребёнка | dece
-sing & dat: ребёнку | deci
-sing & aku: ребёнка | decu
-sing & vok: ребёнок | deco
-sing & inst: ребёнком | decom
-sing & lok: ребёнке | deci
-
-plur & nom: дети | genitive
-plur & gen: детей | dative
-plur & dat: детям | accusative
-plur & aku: детей | vocative
-plur & vok: дети | locative
-plur & inst: детьми | 
-plur & lok: детях | instrumental
-
----
-
 decembar
 male & ru_male
 
@@ -368,13 +347,13 @@ sing & vok: ребёнок | dete
 sing & inst: ребёнком | detetom
 sing & lok: ребёнке | detetu
 
-plur & nom: дети | genitive
-plur & gen: детей | dative
-plur & dat: детям | accusative
-plur & aku: детей | vocative
-plur & vok: дети | locative
-plur & inst: детьми | 
-plur & lok: детях | instrumental
+plur & nom: дети | deca
+plur & gen: детей | dece
+plur & dat: детям | deci
+plur & aku: детей | decu
+plur & vok: дети | deco
+plur & inst: детьми | decom
+plur & lok: детях | deci
 
 ---
 
@@ -513,7 +492,7 @@ sing & dat: платью | haljini
 sing & aku: платье | haljinu
 sing & vok: платье | haljino
 sing & inst: платьем | haljinom
-sing & lok: платье платьи | haljini
+sing & lok: платье | haljini
 
 plur & nom: платья | haljine
 plur & gen: платьев | haljina
