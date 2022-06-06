@@ -102,11 +102,6 @@ class Declination:
     def getAttrs(self):
         return [attr for attr in dir(self) if not callable(getattr(self, attr)) and not attr.startswith("__")]
 
-    def mirrorPerson(self):
-        if hasattr(self, 'person') and self.person != None:
-            self.person = self.person.getOpposite()
-        return self
-
     # male|fem & first|second|third & sing|plur & nom
     # & is for combination
     # | is for random probability
@@ -318,7 +313,24 @@ class Declination:
         if hasattr(self, 'ruGender') and not hasattr(self, 'gender'):
             setattr(self, 'gender', getattr(self, 'ruGender').toGender())
         return self
-        
+    
+    def mirrorPerson(self):
+        if hasattr(self, 'person') and self.person != None:
+            self.person = self.person.getOpposite()
+        return self
+
+    def humanizeNeutral(self, gender=None):
+        hasPerson = hasattr(self, 'person') and self.person != None
+        hasGender = hasattr(self, 'gender') and self.gender != None
+
+        if hasPerson and hasGender:
+            if self.person != Person.third:
+                if gender == None:
+                    self.gender = random.choice([Gender.male, Gender.fem])
+                else:
+                    self.gender = gender
+
+        return self
     
     def toString(self):
         first = True

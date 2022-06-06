@@ -405,6 +405,7 @@ class PerfectPositiveEx(Excercise):
             decl.parseOverride('male|fem & third')
             subject = self.randomOccupationsPool.yieldElem().get(decl)
         else:
+            decl.humanizeNeutral()
             subject = GetVocabulary('personal_pronouns').getWordForm(decl)
 
         tb = [GetVocabulary('tobe'), GetVocabulary('negative_tobe')][negative].get(decl)
