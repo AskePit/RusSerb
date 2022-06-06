@@ -433,3 +433,67 @@ class PerfectPositiveEx(Excercise):
                 answer = '{} {}.'.format(verb.serb.capitalize(), tb.serb)
 
         return ExcerciseYield(title, question, answer)
+
+class PerfectQuestionsEx(Excercise):
+    randomVerbsPool: RandomPool
+    randomOccupationsPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        # combine verbs and modal_verbs and exclude `treba`
+        l = GetVocabulary('verbs').words + GetVocabulary('modal_verbs').words
+        l = [w for w in l if w.title != 'treba']
+
+        self.randomVerbsPool = RandomPool(l)
+        self.randomOccupationsPool = RandomPool(GetVocabulary('occupations').words)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский в форме `Da li ...`:
+        # question: Вы пришли?
+        # answer:   Da li ste došli?
+
+        # title:    Переведите на сербский в форме `Je.. li ...?`:
+        # question: Вы пришли?
+        # answer:   Jeste li došli?
+
+        form = random.randint(0, 1)
+        withOccupation = random.randint(0, 10) > 7
+
+        decl = Declination.Parse('perfect & male|fem|neu & first|second|third & sing|plur & nom')
+
+        if withOccupation:
+            decl.parseOverride('male|fem & third')
+            subject = self.randomOccupationsPool.yieldElem().get(decl)
+        else:
+            decl.humanizeNeutral()
+            subject = GetVocabulary('personal_pronouns').getWordForm(decl)
+
+        tb = GetVocabulary(['tobe', 'question_tobe'][form]).get(decl)
+        verb = self.randomVerbsPool.yieldElem().get(decl)
+
+        title = ['Переведите на сербский в форме `Da li ...`', 'Переведите на сербский в форме `Je.. li ...?`'][form]
+
+        needClarify = decl.number == Number.plur
+        clarification = ''
+        if needClarify:
+            if decl.gender == Gender.male:
+                clarification = '(муж.)'
+            elif decl.gender == Gender.fem:
+                clarification = '(жен.)'
+            elif decl.gender == Gender.neu:
+                clarification = '(ср.)'
+
+        question = '{}{} {}?'.format(subject.rus.capitalize(), clarification, verb.rus)
+        if form == 0:
+            if withOccupation:
+                answer = 'Da li {} {} {}?'.format(tb.serb, subject.serb, verb.serb)
+            else:
+                answer = 'Da li {} {}?'.format(tb.serb, verb.serb)
+        else:
+            if withOccupation:
+                answer = '{} li {} {}?'.format(tb.serb.capitalize(), subject.serb, verb.serb)
+            else:
+                answer = '{} li {}?'.format(tb.serb.capitalize(), verb.serb)
+
+        return ExcerciseYield(title, question, answer)
