@@ -621,19 +621,19 @@ e
 
 inf: есть | jesti
 
-present & sing & first:  | jedem
-present & sing & second:  | jedeš
-present & sing & third:  | jede
-present & plur & first:  | jedemo
-present & plur & second:  | jedete
-present & plur & third:  | jedu
+present & sing & first: ем | jedem
+present & sing & second: ешь | jedeš
+present & sing & third: ест | jede
+present & plur & first: едим | jedemo
+present & plur & second: едите | jedete
+present & plur & third: едят | jedu
 
-perfect & sing & male:  | jeo
-perfect & sing & fem:  | jela
-perfect & sing & neu:  | jelo
-perfect & plur & male:  | jeli
-perfect & plur & fem:  | jele
-perfect & plur & neu:  | jela
+perfect & sing & male: ел | jeo
+perfect & sing & fem: ела | jela
+perfect & sing & neu: ело | jelo
+perfect & plur & male: ели | jeli
+perfect & plur & fem: ели | jele
+perfect & plur & neu: ели | jela
 
 futur & sing & first:  | ješću
 futur & sing & second:  | ješćeš
