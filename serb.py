@@ -74,7 +74,8 @@ def main():
 
             i += 1
 
-        print('\n{}q. Выход'.format(PAD))
+        print('\n{}q. Назад'.format(PAD), end='')
+        print('\n{}x. Выход'.format(PAD))
 
         ans = input()
         if TryExit(ans):
