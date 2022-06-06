@@ -3,11 +3,11 @@ declined tobe
 nisam
 none
 
-first  & sing & unisex & nom: |nisam
-second & sing & unisex & nom: |nisi
-third  & sing & unisex & nom: |nije
-first  & plur & unisex & nom: |nismo
-second & plur & unisex & nom: |niste
-third  & plur & unisex & nom: |nisu
+first  & sing: |nisam
+second & sing: |nisi
+third  & sing: |nije
+first  & plur: |nismo
+second & plur: |niste
+third  & plur: |nisu
 
 ---

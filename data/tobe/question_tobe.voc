@@ -3,11 +3,11 @@ declined tobe
 jesam
 none
 
-first  & sing & unisex & nom: |jesam
-second & sing & unisex & nom: |jesi
-third  & sing & unisex & nom: |je
-first  & plur & unisex & nom: |jesmo
-second & plur & unisex & nom: |jeste
-third  & plur & unisex & nom: |jesu
+first  & sing: |jesam
+second & sing: |jesi
+third  & sing: |je
+first  & plur: |jesmo
+second & plur: |jeste
+third  & plur: |jesu
 
 ---

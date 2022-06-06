@@ -3,11 +3,11 @@ declined tobe
 sam
 none
 
-first  & sing & unisex & nom: |sam
-second & sing & unisex & nom: |si
-third  & sing & unisex & nom: |je
-first  & plur & unisex & nom: |smo
-second & plur & unisex & nom: |ste
-third  & plur & unisex & nom: |su
+first  & sing: |sam
+second & sing: |si
+third  & sing: |je
+first  & plur: |smo
+second & plur: |ste
+third  & plur: |su
 
 ---
