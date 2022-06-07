@@ -1,3 +1,4 @@
+from msilib.schema import IniFile
 from code.excercise_types import *
 
 class ToBeEx(Excercise):
@@ -566,5 +567,50 @@ class FuturPositiveEx(Excercise):
         elif form == CU_DA:
             verb = verbWord.get(decl)
             answer = '{} {} da {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb)
+
+        return ExcerciseYield(title, question, answer)
+
+class FuturQuestionsEx(Excercise):
+    randomVerbsPool: RandomPool
+    hteti: Word
+
+    def __init__(self):
+        super().__init__()
+
+        # combine verbs and modal_verbs and exclude `treba`
+        l = GetVocabulary('verbs').words + GetVocabulary('modal_verbs').words
+        l = [w for w in l if w.title != 'treba']
+
+        self.randomVerbsPool = RandomPool(l)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский в форме `Da li [ću] ...`:
+        # question: Ты придешь?
+        # answer:   Da li ćeš doći?
+
+        # title:    Переведите на сербский в форме `[Hoću] li ...?`:
+        # question: Ты придешь?
+        # answer:   Hoćeš li doći?
+
+        form = random.randint(0, 1)
+
+        decl = Declination.Parse('present & male|fem|neu & first|second|third & sing|plur & nom')
+
+        decl.humanizeNeutral()
+        pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
+
+        cu = GetVocabulary(['cu', 'hocu'][form]).get(decl)
+        verb = self.randomVerbsPool.yieldElem().get(Infinitive)
+
+        title = [
+            'Переведите на сербский в форме `Da li [ću] ...`',
+            'Переведите на сербский в форме `[Hoću] li ...?`'
+        ][form]
+
+        question = '{} {} {}?'.format(pronoun.rus.capitalize(), cu.rus, verb.rus)
+        if form == 0:
+            answer = 'Da li {} {}?'.format(cu.serb, verb.serb)
+        else:
+            answer = '{} li {}?'.format(cu.serb.capitalize(), verb.serb)
 
         return ExcerciseYield(title, question, answer)
