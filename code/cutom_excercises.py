@@ -472,7 +472,7 @@ class PerfectQuestionsEx(Excercise):
         tb = GetVocabulary(['tobe', 'question_tobe'][form]).get(decl)
         verb = self.randomVerbsPool.yieldElem().get(decl)
 
-        title = ['Переведите на сербский в форме `Da li ...`', 'Переведите на сербский в форме `Je.. li ...?`'][form]
+        title = ['Переведите на сербский в форме `Da li ...?`', 'Переведите на сербский в форме `Je.. li ...?`'][form]
 
         needClarify = decl.number == Number.plur
         clarification = ''

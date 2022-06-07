@@ -51,13 +51,13 @@ class ExcerciseDesc:
         ex.phrasesVoc = voc
         return ex
 
-    def MakeCustomEx(name: str, funcName, parent, number: int):
+    def MakeCustomEx(name: str, funcNames: list[str], parent, number: int):
         ex = ExcerciseDesc()
         ex.name = name
         ex.parent = parent
         ex.serialNumber = number
         ex.type = ExcerciseType.custom
-        ex.customFunction = funcName
+        ex.customFunctions = funcNames
         return ex
 
     def toString(self):
@@ -66,7 +66,7 @@ class ExcerciseDesc:
         if self.type == ExcerciseType.phrases:
             res += ' <-> ' + self.phrasesVoc
         elif self.type == ExcerciseType.custom:
-            res += ' <-> ' + self.customFunction
+            res += ' <-> ' + self.customFunctions
         return res
 
 class ExcerciseDescsDir:

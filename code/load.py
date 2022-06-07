@@ -178,8 +178,8 @@ def LoadExcercises():
                 voc = data[2].strip()
                 return ExcerciseDesc.MakePhrasesEx(name, voc, parent, number)
             else:
-                funcName = data[2].strip()
-                return ExcerciseDesc.MakeCustomEx(name, funcName, parent, number)
+                funcNames = data[2].split()
+                return ExcerciseDesc.MakeCustomEx(name, funcNames, parent, number)
     
     def LoadTitle(filename) -> str:
         with io.open(filename, encoding='utf-8') as f:
