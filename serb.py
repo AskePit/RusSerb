@@ -15,15 +15,18 @@ def ClrScr():
 PAD = '  '
 
 def ExecuteExcercise(exc: ExcerciseDesc):
-    excObject = None
+    excObjects = []
 
     if exc.type == ExcerciseType.phrases:
-        excObject = PhrasesEx(exc.phrasesVoc)
+        excObjects.append(PhrasesEx(exc.phrasesVoc))
     elif exc.type == ExcerciseType.custom:
-        excObject = eval('{}()'.format(exc.customFunction))
+        for f in exc.customFunctions:
+            excercise = eval('{}()'.format(f))
+            excObjects.append(excercise)
 
     while True:
-        exYield: ExcerciseYield = excObject()
+        excercise = random.choice(excObjects)
+        exYield: ExcerciseYield = excercise()
 
         ClrScr()
         print('\n{}.........................\n'.format(PAD))
