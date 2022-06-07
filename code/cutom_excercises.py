@@ -497,3 +497,74 @@ class PerfectQuestionsEx(Excercise):
                 answer = '{} li {}?'.format(tb.serb.capitalize(), verb.serb)
 
         return ExcerciseYield(title, question, answer)
+
+class FuturPositiveEx(Excercise):
+    randomVerbsPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        # combine verbs and modal_verbs and exclude `treba`
+        l = GetVocabulary('verbs').words + GetVocabulary('modal_verbs').words
+        l = [w for w in l if w.title != 'treba']
+
+        self.randomVerbsPool = RandomPool(l)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский в форме `[Местоимение] [ću] [глагол]`:
+        # question: Я буду читать.
+        # answer:   Ja ću čitati.
+
+        # title:    Переведите на сербский в форме `[Глагол]`:
+        # question: Я буду читать.
+        # answer:   Čitaću.
+
+        # title:    Переведите на сербский в форме `[Местоимение] [ću] da [глагол]`:
+        # question: Я буду читать.
+        # answer:   Ja ću da čitam.
+
+        CU_INF = 0
+        ONE_WORD = 1
+        CU_DA = 2
+        NEGATIVE = 3
+
+        form = random.randint(0, 3)
+
+        decl = Declination.Parse('present & male|fem|neu & first|second|third & sing|plur & nom')
+
+        decl.humanizeNeutral()
+        pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
+
+        cu = GetVocabulary(['cu', 'necu'][form == NEGATIVE]).get(decl)
+        verbWord = self.randomVerbsPool.yieldElem()
+
+        title = [
+            'Переведите на сербский в форме `[Местоимение] [ću] [глагол]`',
+            'Переведите на сербский в форме `[Глагол]`',
+            'Переведите на сербский в форме `[Местоимение] [ću] da [глагол]`',
+            'Переведите на сербский'
+        ][form]
+
+        needClarify = decl.number == Number.plur
+        clarification = ''
+        if needClarify:
+            if decl.gender == Gender.male:
+                clarification = '(муж.)'
+            elif decl.gender == Gender.fem:
+                clarification = '(жен.)'
+            elif decl.gender == Gender.neu:
+                clarification = '(ср.)'
+
+        question = '{}{} {} {}.'.format(pronoun.rus.capitalize(), clarification, cu.rus, verbWord.get(Infinitive).rus)
+
+        if form == CU_INF or form == NEGATIVE:
+            verb = verbWord.get(Infinitive)
+            answer = '{} {} {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb)
+        elif form == ONE_WORD:
+            verb = verbWord.get(decl.clone().override(Time.futur))
+            answer = verb.serb.capitalize()
+        elif form == CU_DA:
+            verb = verbWord.get(decl)
+            answer = '{} {} da {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb)
+
+        return ExcerciseYield(title, question, answer)
