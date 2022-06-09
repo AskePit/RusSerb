@@ -572,7 +572,6 @@ class FuturPositiveEx(Excercise):
 
 class FuturQuestionsEx(Excercise):
     randomVerbsPool: RandomPool
-    hteti: Word
 
     def __init__(self):
         super().__init__()

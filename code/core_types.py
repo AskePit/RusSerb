@@ -3,16 +3,19 @@ import copy
 import random
 
 class SpeechPart(Enum):
-    noun      = 0 # существительное
-    pronoun   = 1 # местоимение
-    tobe      = 2 # быть
-    verb      = 3 # глагол
-    adjective = 4 # прилагательное
-    adverb    = 5 # наречие
-    particle  = 6 # частица
+    noun        = 0 # существительное
+    pronoun     = 1 # местоимение
+    tobe        = 2 # быть
+    verb        = 3 # глагол
+    adjective   = 4 # прилагательное
+    preposition = 5 # предлог
+    conjunction = 6 # союз
+    adverb      = 7 # наречие
+    particle    = 8 # частица
 
 class ExclusiveForm(Enum):
-    inf = 0 # infinitive
+    inf    = 0 # infinitive
+    unique = 1 # единственная/уникальная форма
 
 class Gender(Enum):
     male   = 0 # male

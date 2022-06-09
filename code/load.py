@@ -129,7 +129,7 @@ def LoadFile(filename: str, title: str):
             theWords = WordList()
             LoadDeclined(data, speechPart, theWords)
             return theWords
-        elif headerType == 'phrases':
+        elif headerType == 'phrases' or headerType == 'unique':
             thePhrases = PhrasesList()
             LoadPhrases(title, data, thePhrases)
             return thePhrases
