@@ -1,5 +1,6 @@
 ../../../data/verbs/verbs.voc
 
+crtati | рисовать
 doručkovati | завтракать
 doći | прийти
 gledati | смотреть
@@ -10,15 +11,20 @@ ići | идти
 jesti | есть
 kazati | говорить
 kopati | копать
+koristiti | использовать
 kupovati | покупать
 kuvati | готовить
 ležati | лежать
 misliti | думать
+odmarati | отдыхать
 pevati | петь
 pisati | писать
+pitati | спрашивать
 piti | пить
+planirati | планировать
 plivati | плавать
 prati | стирать
+praviti | делать
 pričati | разговаривать
 prodavati | продавать
 psovati | ругаться
@@ -26,28 +32,22 @@ putovati | путешествовать
 raditi | делать
 raditi | работать
 razmišljati | думать
+ručati | обедать
 skakati | прыгать
+slikati | фотографировать
 slušati | слушать
 spavati | спать
 spremati | готовить
 stajati | стоять
+svirati | играть
+trenirati | заниматься спортом
 trčati | бежать
 učiti | учить
+večerati | ужинать
 voziti | водить
 zvati | звать
 čekati | ждать
 čitati | читать
 čuti | слышать
-živeti | жить
-svirati | играть
-crtati | рисовать
 šetati | гулять
-slikati | фотографировать
-trenirati | заниматься спортом
-pitati | спрашивать
-ručati | обедать
-večerati | ужинать
-odmarati | отдыхать
-koristiti | использовать
-praviti | делать
-planirati | планировать
+živeti | жить
