@@ -1,5 +1,6 @@
 from code.core_types import *
 import random
+import sys
 
 class LangMode(Enum):
     rusSerb = 0,
@@ -16,12 +17,23 @@ class LangMode(Enum):
 
 LANG_MODE = LangMode.rusSerb
 
+if len(sys.argv) > 1:
+    langflag = str(sys.argv[1])
+    langflag = langflag.lower()
+
+    if langflag == 'russerb':
+        LANG_MODE = LangMode.rusSerb
+    elif langflag == 'serbrus':
+        LANG_MODE = LangMode.serbRus
+    elif langflag == 'random':
+        LANG_MODE = LangMode.random
+
 # NOTE: each excercise should return `ExcerciseYield` object
 
 class ExcerciseYield:
     title: str
     question: str
-    answer: str
+    # answer: str | list[str]
 
     def __init__(self, title, q, a):
         self.title = title
