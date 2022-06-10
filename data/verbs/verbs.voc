@@ -9,7 +9,7 @@ present & sing & first: рисую | crtam
 present & sing & second: рисуешь | crtaš
 present & sing & third: рисует | crta
 present & plur & first: рисуем | crtamo
-present & plur & second: рисуешь | crtate
+present & plur & second: рисуете | crtate
 present & plur & third: рисуют | crtaju
 
 perfect & sing & male: рисовал | crtao
@@ -97,7 +97,7 @@ present & sing & first: завтракаю | doručkujem
 present & sing & second: завтракаешь | doručkuješ
 present & sing & third: завтракает | doručkuje
 present & plur & first: завтракаем | doručkujemo
-present & plur & second: завтракаешь | doručkujete
+present & plur & second: завтракаете | doručkujete
 present & plur & third: завтракают | doručkuju
 
 perfect & sing & male: завтракал | doručkovao
@@ -185,7 +185,7 @@ present & sing & first: приду | dođem
 present & sing & second: придёшь | dođeš
 present & sing & third: придёт | dođe
 present & plur & first: придём | dođemo
-present & plur & second: придёшь | dođete
+present & plur & second: придёте | dođete
 present & plur & third: придут | dođu
 
 perfect & sing & male: пришёл | došao
@@ -273,7 +273,7 @@ present & sing & first: смотрю | gledam
 present & sing & second: смотришь | gledaš
 present & sing & third: смотрит | gleda
 present & plur & first: смотрим | gledamo
-present & plur & second: смотришь | gledate
+present & plur & second: смотрите | gledate
 present & plur & third: смотрят | gledaju
 
 perfect & sing & male: смотрел | gledao
@@ -361,7 +361,7 @@ present & sing & first: говорю(govoriti) | govorim
 present & sing & second: говоришь(govoriti) | govoriš
 present & sing & third: говорит(govoriti) | govori
 present & plur & first: говорим(govoriti) | govorimo
-present & plur & second: говоришь(govoriti) | govorite
+present & plur & second: говорите(govoriti) | govorite
 present & plur & third: говорят(govoriti) | govore
 
 perfect & sing & male: говорил(govoriti) | govorio
@@ -449,7 +449,7 @@ present & sing & first: хожу | hodam
 present & sing & second: ходишь | hodaš
 present & sing & third: ходит | hoda
 present & plur & first: ходим | hodamo
-present & plur & second: ходишь | hodate
+present & plur & second: ходите | hodate
 present & plur & third: ходят | hodaju
 
 perfect & sing & male: ходил | hodao
@@ -533,19 +533,19 @@ a
 
 inf: играть | igrati
 
-present & sing & first: играю | igram
-present & sing & second: играешь | igraš
-present & sing & third: играет | igra
-present & plur & first: играем | igramo
-present & plur & second: играешь | igrate
-present & plur & third: играют | igraju
+present & sing & first: играю(igrati) | igram
+present & sing & second: играешь(igrati) | igraš
+present & sing & third: играет(igrati) | igra
+present & plur & first: играем(igrati) | igramo
+present & plur & second: играете(igrati) | igrate
+present & plur & third: играют(igrati) | igraju
 
-perfect & sing & male: играл | igrao
-perfect & sing & fem: играла | igrala
-perfect & sing & neu: играло | igralo
-perfect & plur & male: играли | igrali
-perfect & plur & fem: играли | igrale
-perfect & plur & neu: играли | igrala
+perfect & sing & male: играл(igrati) | igrao
+perfect & sing & fem: играла(igrati) | igrala
+perfect & sing & neu: играло(igrati) | igralo
+perfect & plur & male: играли(igrati) | igrali
+perfect & plur & fem: играли(igrati) | igrale
+perfect & plur & neu: играли(igrati) | igrala
 
 futur & sing & first:  | igraću
 futur & sing & second:  | igraćeš
@@ -625,7 +625,7 @@ present & sing & first: иду | idem
 present & sing & second: идёшь | ideš
 present & sing & third: идёт | ide
 present & plur & first: идём | idemo
-present & plur & second: идёшь | idete
+present & plur & second: идёте | idete
 present & plur & third: идут | idu
 
 perfect & sing & male: шёл | išao
@@ -801,7 +801,7 @@ present & sing & first: говорю(kazati) | kažem
 present & sing & second: говоришь(kazati) | kažeš
 present & sing & third: говорит(kazati) | kaže
 present & plur & first: говорим(kazati) | kažemo
-present & plur & second: говоришь(kazati) | kažete
+present & plur & second: говорите(kazati) | kažete
 present & plur & third: говорят(kazati) | kažu
 
 perfect & sing & male: говорил(kazati) | kazao
@@ -889,7 +889,7 @@ present & sing & first: копаю | kopam
 present & sing & second: копаешь | kopaš
 present & sing & third: копает | kopa
 present & plur & first: копаем | kopamo
-present & plur & second: копаешь | kopate
+present & plur & second: копаете | kopate
 present & plur & third: копают | kopaju
 
 perfect & sing & male: копал | kopao
@@ -977,7 +977,7 @@ present & sing & first: использую | koristim
 present & sing & second: используешь | koristiš
 present & sing & third: использует | koristi
 present & plur & first: используем | koristimo
-present & plur & second: используешь | koristite
+present & plur & second: используете | koristite
 present & plur & third: используют | koriste
 
 perfect & sing & male: использовал | koristio
@@ -1065,7 +1065,7 @@ present & sing & first: покупаю | kupujem
 present & sing & second: покупаешь | kupuješ
 present & sing & third: покупает | kupuje
 present & plur & first: покупаем | kupujemo
-present & plur & second: покупаешь | kupujete
+present & plur & second: покупаете | kupujete
 present & plur & third: покупают | kupuju
 
 perfect & sing & male: покупал | kupovao
@@ -1153,7 +1153,7 @@ present & sing & first: готовлю | kuvam
 present & sing & second: готовишь | kuvaš
 present & sing & third: готовит | kuva
 present & plur & first: готовим | kuvamo
-present & plur & second: готовишь | kuvate
+present & plur & second: готовите | kuvate
 present & plur & third: готовят | kuvaju
 
 perfect & sing & male: готовил | kuvao
@@ -1241,7 +1241,7 @@ present & sing & first: лежу | ležim
 present & sing & second: лежишь | ležiš
 present & sing & third: лежит | leži
 present & plur & first: лежим | ležimo
-present & plur & second: лежишь | ležite
+present & plur & second: лежите | ležite
 present & plur & third: лежат | leže
 
 perfect & sing & male: лежал | ležao
@@ -1329,7 +1329,7 @@ present & sing & first: думаю(misliti) | mislim
 present & sing & second: думаешь(misliti) | misliš
 present & sing & third: думает(misliti) | misli
 present & plur & first: думаем(misliti) | mislimo
-present & plur & second: думаешь(misliti) | mislite
+present & plur & second: думаете(misliti) | mislite
 present & plur & third: думают(misliti) | misle
 
 perfect & sing & male: думал(misliti) | mislio
@@ -1417,7 +1417,7 @@ present & sing & first: отдыхаю | odmaram
 present & sing & second: отдыхаешь | odmaraš
 present & sing & third: отдыхает | odmara
 present & plur & first: отдыхаем | odmaramo
-present & plur & second: отдыхаешь | odmarate
+present & plur & second: отдыхаете | odmarate
 present & plur & third: отдыхают | odmaraju
 
 perfect & sing & male: отдыхал | odmarao
@@ -1505,7 +1505,7 @@ present & sing & first: пою | pevam
 present & sing & second: поёшь | pevaš
 present & sing & third: поёт | peva
 present & plur & first: поём | pevamo
-present & plur & second: поёшь | pevate
+present & plur & second: поёте | pevate
 present & plur & third: поют | pevaju
 
 perfect & sing & male: пел | pevao
@@ -1593,7 +1593,7 @@ present & sing & first: пишу | pišem
 present & sing & second: пишешь | pišeš
 present & sing & third: пишет | piše
 present & plur & first: пишем | pišemo
-present & plur & second: пишешь | pišete
+present & plur & second: пишете | pišete
 present & plur & third: пишут | pišu
 
 perfect & sing & male: писал | pisao
@@ -1681,7 +1681,7 @@ present & sing & first: спрашиваю | pitam
 present & sing & second: спрашиваешь | pitaš
 present & sing & third: спрашивает | pita
 present & plur & first: спрашиваем | pitamo
-present & plur & second: спрашиваешь | pitate
+present & plur & second: спрашиваете | pitate
 present & plur & third: спрашивают | pitaju
 
 perfect & sing & male: спрашивал | pitao
@@ -1769,7 +1769,7 @@ present & sing & first: пью | pijem
 present & sing & second: пьёшь | piješ
 present & sing & third: пьёт | pije
 present & plur & first: пьём | pijemo
-present & plur & second: пьёшь | pijete
+present & plur & second: пьёте | pijete
 present & plur & third: пьют | piju
 
 perfect & sing & male: пил | pio
@@ -1857,7 +1857,7 @@ present & sing & first: планирую | planiram
 present & sing & second: планируешь | planiraš
 present & sing & third: планирует | planira
 present & plur & first: планируем | planiramo
-present & plur & second: планируешь | planirate
+present & plur & second: планируете | planirate
 present & plur & third: планируют | planiraju
 
 perfect & sing & male: планировал | planirao
@@ -1945,7 +1945,7 @@ present & sing & first: плаваю | plivam
 present & sing & second: плаваешь | plivaš
 present & sing & third: плавает | pliva
 present & plur & first: плаваем | plivamo
-present & plur & second: плаваешь | plivate
+present & plur & second: плаваете | plivate
 present & plur & third: плавают | plivaju
 
 perfect & sing & male: плавал | plivao
@@ -2033,7 +2033,7 @@ present & sing & first: стираю | perem
 present & sing & second: стираешь | pereš
 present & sing & third: стирает | pere
 present & plur & first: стираем | peremo
-present & plur & second: стираешь | perete
+present & plur & second: стираете | perete
 present & plur & third: стирают | peru
 
 perfect & sing & male: стирал | prao
@@ -2121,7 +2121,7 @@ present & sing & first: делаю | pravim
 present & sing & second: делаешь | praviš
 present & sing & third: делает | pravi
 present & plur & first: делаем | pravimo
-present & plur & second: делаешь | pravite
+present & plur & second: делаете | pravite
 present & plur & third: делают | prave
 
 perfect & sing & male: делал | pravio
@@ -2209,7 +2209,7 @@ present & sing & first: разговариваю | pričam
 present & sing & second: разговариваешь | pričaš
 present & sing & third: разговаривает | priča
 present & plur & first: разговариваем | pričamo
-present & plur & second: разговариваешь | pričate
+present & plur & second: разговариваете | pričate
 present & plur & third: разговаривают | pričaju
 
 perfect & sing & male: разговаривал | pričao
@@ -2297,7 +2297,7 @@ present & sing & first: продаю | prodajem
 present & sing & second: продаёшь | prodaješ
 present & sing & third: продаёт | prodaje
 present & plur & first: продаём | prodajemo
-present & plur & second: продаёшь | prodajete
+present & plur & second: продаёте | prodajete
 present & plur & third: продают | prodaju
 
 perfect & sing & male: продавал | prodavao
@@ -2385,7 +2385,7 @@ present & sing & first: ругаюсь | psujem
 present & sing & second: ругаешься | psuješ
 present & sing & third: ругается | psuje
 present & plur & first: ругаемся | psujemo
-present & plur & second: ругаешься | psujete
+present & plur & second: ругаетесь | psujete
 present & plur & third: ругаются | psuju
 
 perfect & sing & male: ругался | psovao
@@ -2473,7 +2473,7 @@ present & sing & first: путешествую | putujem
 present & sing & second: путешествуешь | putuješ
 present & sing & third: путешествует | putuje
 present & plur & first: путешествуем | putujemo
-present & plur & second: путешествуешь | putujete
+present & plur & second: путешествуете | putujete
 present & plur & third: путешествуют | putuju
 
 perfect & sing & male: путешествовал | putovao
@@ -2561,95 +2561,7 @@ present & sing & first: работаю | radim
 present & sing & second: работаешь | radiš
 present & sing & third: работает | radi
 present & plur & first: работаем | radimo
-present & plur & second: работаешь | radite
-present & plur & third: работают | rade
-
-perfect & sing & male: работал | radio
-perfect & sing & fem: работала | radila
-perfect & sing & neu: работало | radilo
-perfect & plur & male: работали | radili
-perfect & plur & fem: работали | radile
-perfect & plur & neu: работали | radila
-
-futur & sing & first:  | radiću
-futur & sing & second:  | radićeš
-futur & sing & third:  | radiće
-futur & plur & first:  | radićemo
-futur & plur & second:  | radićete
-futur & plur & third:  | radiće
-
-imperfect & sing & first: работал | rađah
-imperfect & sing & second: работала | rađaše
-imperfect & sing & third: работало | rađaše
-imperfect & plur & first: работали | rađasmo
-imperfect & plur & second: работали | rađaste
-imperfect & plur & third: работали | rađahu
-
-# participle & present:  | radeći
-# participle & past:  | 
-# noun:  | rađenje
-
-# futur & sing & first:  | radit ću
-# futur & sing & second:  | radit ćeš
-# futur & sing & third:  | radit će
-# futur & plur & first:  | radit ćemo
-# futur & plur & second:  | radit ćete
-# futur & plur & third:  | radit će
-
-# futur2 & sing & first:  | budem radio
-# futur2 & sing & second:  | budeš radio
-# futur2 & sing & third:  | bude radio
-# futur2 & plur & first:  | budemo radili
-# futur2 & plur & second:  | budete radili
-# futur2 & plur & third:  | budu radili
-
-# aorist & sing & first:  | 
-# aorist & sing & second:  | 
-# aorist & sing & third:  | 
-# aorist & plur & first:  | 
-# aorist & plur & second:  | 
-# aorist & plur & third:  | 
-
-# cond1 & sing & first:  | radio bih
-# cond1 & sing & second:  | radio bi
-# cond1 & sing & third:  | radio bi
-# cond1 & plur & first:  | radili bismo
-# cond1 & plur & second:  | radili biste
-# cond1 & plur & third:  | radili bi
-
-# cond2 & sing & first:  | bio bih radio
-# cond2 & sing & second:  | bio bi radio
-# cond2 & sing & third:  | bio bi radio
-# cond2 & plur & first:  | bili bismo radili
-# cond2 & plur & second:  | bili biste radili
-# cond2 & plur & third:  | bili bi radili
-
-# imperativ & sing & first:  | 
-# imperativ & sing & second: работай | radi
-# imperativ & sing & third:  | 
-# imperativ & plur & first:  | radimo
-# imperativ & plur & second: работайте | radite
-# imperativ & plur & third:  | 
-
-# passive & sing & male:  | rađen
-# passive & sing & fem:  | rađena
-# passive & sing & neu:  | rađeno
-# passive & plur & male:  | rađeni
-# passive & plur & fem:  | rađene
-# passive & plur & neu:  | rađena
-
----
-
-raditi
-i
-
-inf: работать | raditi
-
-present & sing & first: работаю | radim
-present & sing & second: работаешь | radiš
-present & sing & third: работает | radi
-present & plur & first: работаем | radimo
-present & plur & second: работаешь | radite
+present & plur & second: работаете | radite
 present & plur & third: работают | rade
 
 perfect & sing & male: работал | radio
@@ -2737,7 +2649,7 @@ present & sing & first: думаю(razmišljati) | razmišljam
 present & sing & second: думаешь(razmišljati) | razmišljaš
 present & sing & third: думает(razmišljati) | razmišlja
 present & plur & first: думаем(razmišljati) | razmišljamo
-present & plur & second: думаешь(razmišljati) | razmišljate
+present & plur & second: думаете(razmišljati) | razmišljate
 present & plur & third: думают(razmišljati) | razmišljaju
 
 perfect & sing & male: думал(razmišljati) | razmišljao
@@ -2825,7 +2737,7 @@ present & sing & first: обедаю | ručam
 present & sing & second: обедаешь | ručaš
 present & sing & third: обедает | ruča
 present & plur & first: обедаем | ručamo
-present & plur & second: обедаешь | ručate
+present & plur & second: обедаете | ručate
 present & plur & third: обедают | ručaju
 
 perfect & sing & male: обедал | ručao
@@ -2913,7 +2825,7 @@ present & sing & first: прыгаю | skačem
 present & sing & second: прыгаешь | skačeš
 present & sing & third: прыгает | skače
 present & plur & first: прыгаем | skačemo
-present & plur & second: прыгаешь | skačete
+present & plur & second: прыгаете | skačete
 present & plur & third: прыгают | skaču
 
 perfect & sing & male: прыгал | skakao
@@ -3001,7 +2913,7 @@ present & sing & first: фотографирую | slikam
 present & sing & second: фотографируешь | slikaš
 present & sing & third: фотографирует | slika
 present & plur & first: фотографируем | slikamo
-present & plur & second: фотографируешь | slikate
+present & plur & second: фотографируете | slikate
 present & plur & third: фотографируют | slikaju
 
 perfect & sing & male: фотографировал | slikao
@@ -3089,7 +3001,7 @@ present & sing & first: слушаю | slušam
 present & sing & second: слушаешь | slušaš
 present & sing & third: слушает | sluša
 present & plur & first: слушаем | slušamo
-present & plur & second: слушаешь | slušate
+present & plur & second: слушаете | slušate
 present & plur & third: слушают | slušaju
 
 perfect & sing & male: слушал | slušao
@@ -3177,7 +3089,7 @@ present & sing & first: сплю | spavam
 present & sing & second: спишь | spavaš
 present & sing & third: спит | spava
 present & plur & first: спим | spavamo
-present & plur & second: спишь | spavate
+present & plur & second: спите | spavate
 present & plur & third: спят | spavaju
 
 perfect & sing & male: спал | spavao
@@ -3265,7 +3177,7 @@ present & sing & first: готовлю | spremam
 present & sing & second: готовишь | spremaš
 present & sing & third: готовит | sprema
 present & plur & first: готовим | spremamo
-present & plur & second: готовишь | spremate
+present & plur & second: готовите | spremate
 present & plur & third: готовят | spremaju
 
 perfect & sing & male: готовил | spremao
@@ -3353,7 +3265,7 @@ present & sing & first: стою | stajem
 present & sing & second: стоишь | staješ
 present & sing & third: стоит | staje
 present & plur & first: стоим | stajemo
-present & plur & second: стоишь | stajete
+present & plur & second: стоите | stajete
 present & plur & third: стоят | staju
 
 perfect & sing & male: стоял | stajao
@@ -3437,19 +3349,19 @@ a
 
 inf: играть | svirati
 
-present & sing & first: играю | sviram
-present & sing & second: играешь | sviraš
-present & sing & third: играет | svira
-present & plur & first: играем | sviramo
-present & plur & second: играешь | svirate
-present & plur & third: играют | sviraju
+present & sing & first: играю(svirati) | sviram
+present & sing & second: играешь(svirati) | sviraš
+present & sing & third: играет(svirati) | svira
+present & plur & first: играем(svirati) | sviramo
+present & plur & second: играете(svirati) | svirate
+present & plur & third: играют(svirati) | sviraju
 
-perfect & sing & male: играл | svirao
-perfect & sing & fem: играла | svirala
-perfect & sing & neu: играло | sviralo
-perfect & plur & male: играли | svirali
-perfect & plur & fem: играли | svirale
-perfect & plur & neu: играли | svirala
+perfect & sing & male: играл(svirati) | svirao
+perfect & sing & fem: играла(svirati) | svirala
+perfect & sing & neu: играло(svirati) | sviralo
+perfect & plur & male: играли(svirati) | svirali
+perfect & plur & fem: играли(svirati) | svirale
+perfect & plur & neu: играли(svirati) | svirala
 
 futur & sing & first:  | sviraću
 futur & sing & second:  | sviraćeš
@@ -3617,7 +3529,7 @@ present & sing & first: бегу | trčim
 present & sing & second: бежишь | trčiš
 present & sing & third: бежит | trči
 present & plur & first: бежим | trčimo
-present & plur & second: бежишь | trčite
+present & plur & second: бежите | trčite
 present & plur & third: бегут | trče
 
 perfect & sing & male: бежал | trčao
@@ -3705,7 +3617,7 @@ present & sing & first: учу | učim
 present & sing & second: учишь | učiš
 present & sing & third: учит | uči
 present & plur & first: учим | učimo
-present & plur & second: учишь | učite
+present & plur & second: учите | učite
 present & plur & third: учат | uče
 
 perfect & sing & male: учил | učio
@@ -3793,7 +3705,7 @@ present & sing & first: ужинаю | večeram
 present & sing & second: ужинаешь | večeraš
 present & sing & third: ужинает | večera
 present & plur & first: ужинаем | večeramo
-present & plur & second: ужинаешь | večerate
+present & plur & second: ужинаете | večerate
 present & plur & third: ужинают | večeraju
 
 perfect & sing & male: ужинал | večerao
@@ -3881,7 +3793,7 @@ present & sing & first: вожу | vozim
 present & sing & second: водишь | voziš
 present & sing & third: водит | vozi
 present & plur & first: водим | vozimo
-present & plur & second: водишь | vozite
+present & plur & second: водите | vozite
 present & plur & third: водят | voze
 
 perfect & sing & male: водил | vozio
@@ -3969,7 +3881,7 @@ present & sing & first: зову | zovem
 present & sing & second: зовёшь | zoveš
 present & sing & third: зовёт | zove
 present & plur & first: зовём | zovemo
-present & plur & second: зовёшь | zovete
+present & plur & second: зовёте | zovete
 present & plur & third: зовут | zovu
 
 perfect & sing & male: звал | zvao
@@ -4057,7 +3969,7 @@ present & sing & first: жду | čekam
 present & sing & second: ждёшь | čekaš
 present & sing & third: ждёт | čeka
 present & plur & first: ждём | čekamo
-present & plur & second: ждёшь | čekate
+present & plur & second: ждёте | čekate
 present & plur & third: ждут | čekaju
 
 perfect & sing & male: ждал | čekao
@@ -4145,7 +4057,7 @@ present & sing & first: читаю | čitam
 present & sing & second: читаешь | čitaš
 present & sing & third: читает | čita
 present & plur & first: читаем | čitamo
-present & plur & second: читаешь | čitate
+present & plur & second: читаете | čitate
 present & plur & third: читают | čitaju
 
 perfect & sing & male: читал | čitao
@@ -4233,7 +4145,7 @@ present & sing & first: слышу | čujem
 present & sing & second: слышишь | čuješ
 present & sing & third: слышит | čuje
 present & plur & first: слышим | čujemo
-present & plur & second: слышишь | čujete
+present & plur & second: слышите | čujete
 present & plur & third: слышат | čuju
 
 perfect & sing & male: слышал | čuo
@@ -4321,7 +4233,7 @@ present & sing & first: гуляю | šećem
 present & sing & second: гуляешь | šećeš
 present & sing & third: гуляет | šeće
 present & plur & first: гуляем | šećemo
-present & plur & second: гуляешь | šećete
+present & plur & second: гуляете | šećete
 present & plur & third: гуляют | šeću
 
 perfect & sing & male: гулял | šetao
@@ -4409,7 +4321,7 @@ present & sing & first: живу | živim
 present & sing & second: живёшь | živiš
 present & sing & third: живёт | živi
 present & plur & first: живём | živimo
-present & plur & second: живёшь | živite
+present & plur & second: живёте | živite
 present & plur & third: живут | žive
 
 perfect & sing & male: жил | živeo

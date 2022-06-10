@@ -191,7 +191,7 @@ present & sing & first: могу(moći) | mogu
 present & sing & second: можешь(moći) | možeš
 present & sing & third: может(moći) | može
 present & plur & first: можем(moći) | možemo
-present & plur & second: можешь(moći) | možete
+present & plur & second: можете(moći) | možete
 present & plur & third: могут(moći) | mogu
 
 perfect & sing & male: мог(moći) | mogao
@@ -279,7 +279,7 @@ present & sing & first: ненавижу | mrzim
 present & sing & second: ненавидишь | mrziš
 present & sing & third: ненавидит | mrzi
 present & plur & first: ненавидим | mrzimo
-present & plur & second: ненавидишь | mrzite
+present & plur & second: ненавидите | mrzite
 present & plur & third: ненавидят | mrze
 
 perfect & sing & male: ненавидел | mrzeo
@@ -367,7 +367,7 @@ present & sing & first: обожаю | obožavam
 present & sing & second: обожаешь | obožavaš
 present & sing & third: обожает | obožava
 present & plur & first: обожаем | obožavamo
-present & plur & second: обожаешь | obožavate
+present & plur & second: обожаете | obožavate
 present & plur & third: обожают | obožavaju
 
 perfect & sing & male: обожал | obožavao
@@ -455,7 +455,7 @@ present & sing & first: могу(smeti) | smem
 present & sing & second: можешь(smeti) | smeš
 present & sing & third: может(smeti) | sme
 present & plur & first: можем(smeti) | smemo
-present & plur & second: можешь(smeti) | smete
+present & plur & second: можете(smeti) | smete
 present & plur & third: могут(smeti) | smeju
 
 perfect & sing & male: мог(smeti) | smeo
@@ -631,7 +631,7 @@ present & sing & first: нуждаюсь | trebam
 present & sing & second: нуждаешься | trebaš
 present & sing & third: нуждается | treba
 present & plur & first: нуждаемся | trebamo
-present & plur & second: нуждаешься | trebate
+present & plur & second: нуждаетесь | trebate
 present & plur & third: нуждаются | trebaju
 
 perfect & sing & male: нуждался | trebao
@@ -719,7 +719,7 @@ present & sing & first: умею(umeti) | umem
 present & sing & second: умеешь(umeti) | umeš
 present & sing & third: умеет(umeti) | ume
 present & plur & first: умеем(umeti) | umemo
-present & plur & second: умеешь(umeti) | umete
+present & plur & second: умеете(umeti) | umete
 present & plur & third: умеют(umeti) | umeju
 
 perfect & sing & male: умел(umeti) | umeo
@@ -807,7 +807,7 @@ present & sing & first: люблю | volim
 present & sing & second: любишь | voliš
 present & sing & third: любит | voli
 present & plur & first: любим | volimo
-present & plur & second: любишь | volite
+present & plur & second: любите | volite
 present & plur & third: любят | vole
 
 perfect & sing & male: любил | voleo
@@ -983,7 +983,7 @@ present & sing & first: желаю | želim
 present & sing & second: желаешь | želiš
 present & sing & third: желает | želi
 present & plur & first: желаем | želimo
-present & plur & second: желаешь | želite
+present & plur & second: желаете | želite
 present & plur & third: желают | žele
 
 perfect & sing & male: желал | želeo

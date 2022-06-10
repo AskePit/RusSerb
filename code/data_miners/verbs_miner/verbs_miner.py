@@ -76,7 +76,7 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
     o.writeDecl('present & sing & second', Cell('Ты', PRESENT), Cell(Present, SING2))
     o.writeDecl('present & sing & third',  Cell('Он', PRESENT), Cell(Present, SING3))
     o.writeDecl('present & plur & first',  Cell('Мы', PRESENT), Cell(Present, PLUR1))
-    o.writeDecl('present & plur & second', Cell('Ты', PRESENT), Cell(Present, PLUR2))
+    o.writeDecl('present & plur & second', Cell('Вы', PRESENT), Cell(Present, PLUR2))
     o.writeDecl('present & plur & third',  Cell('Они', PRESENT), Cell(Present, PLUR3))
     o.endl()
 
