@@ -28,7 +28,13 @@ class ToBeEx(Excercise):
         title = 'Переведите на сербский'
         rusNoParticle = [' ', ' не '][negative]
         question = '{}{}{} ({}).'.format(pronoun.rus.capitalize(), rusNoParticle, occ.rus, occ.serb)
-        answer = '{} {} {}.'.format(pronoun.serb.capitalize(), tb.serb, occ.serb)
+
+        answer = []
+        if negative:
+            answer = '({}) {} {}.'.format(pronoun.serb.capitalize(), tb.serb, occ.serb)
+        else:
+            answer.append('{} {} {}.'.format(pronoun.serb.capitalize(), tb.serb, occ.serb))
+            answer.append('{} {}.'.format(occ.serb.capitalize(), tb.serb))
 
         return ExcerciseYield(title, question, answer)
 
@@ -40,32 +46,27 @@ class ToBeEx2(Excercise):
         self.randomOccupationsPool = RandomPool(GetVocabulary('occupations').words)
 
     def __call__(self) -> ExcerciseYield:
-        # title:    Переведите на сербский в форме `Da li ...?`
+        # title:    Переведите на сербский:
         # question: Ты студент (student)?
-        # answer:   Da li si ti student?
-
-        # title:    Переведите на сербский в форме `Je.. li ...?`
-        # question: Вы врачи (lekari)?
-        # answer:   Jeste li vi lekari?
+        # answer:   Da li si (ti) student?
+        # answer:   Jesi li (ti) student?
 
         decl = Declination.Parse('male|fem & first|second|third & sing|plur & nom')
 
         occupation = self.randomOccupationsPool.yieldElem()
-        form = random.randint(0, 1)
         pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
-        tb = [GetVocabulary('tobe'), GetVocabulary('question_tobe')][form].get(decl)
+        
         occ = occupation.get(decl)
 
-        title = [
-            'Переведите на сербский в форме `Da li ...?`',
-            'Переведите на сербский в форме `Je.. li ...?`'
-        ][form]
+        title = 'Переведите на сербский'
         question = '{} {} ({})?'.format(pronoun.rus.capitalize(), occ.rus, occ.serb)
 
-        if form == 0:
-            answer = 'Da li {} {} {}?'.format(tb.serb, pronoun.serb, occ.serb)
-        else:
-            answer = '{} li {} {}?'.format(tb.serb.capitalize(), pronoun.serb, occ.serb)
+        answer = []
+        tb = GetVocabulary('tobe').get(decl)
+        answer.append('Da li {} ({}) {}?'.format(tb.serb, pronoun.serb, occ.serb))
+
+        tb = GetVocabulary('question_tobe').get(decl)
+        answer.append('{} li ({}) {}?'.format(tb.serb.capitalize(), pronoun.serb, occ.serb))
 
         return ExcerciseYield(title, question, answer)
 
@@ -88,26 +89,20 @@ class ToBeEx3(Excercise):
         qDecl = Declination.Parse('male|fem & first|second|third & sing|plur & nom')
         aDecl = qDecl.clone().mirrorPerson()
 
-        #print(qDecl.toString())
-        #print(aDecl.toString())
-
         occupation = self.randomOccupationsPool.yieldElem()
-        form = random.randint(0, 1)
         qPronoun = GetVocabulary('personal_pronouns').getWordForm(qDecl)
         aPronoun = GetVocabulary('personal_pronouns').getWordForm(aDecl)
-        aTb = [GetVocabulary('positive_tobe'), GetVocabulary('tobe')][form].get(aDecl)
+        
         occ = occupation.get(aDecl)
 
-        title = [
-            'Ответьте на вопрос в короткой форме',
-            'Ответьте на вопрос в полной форме'
-        ][form]
+        title = 'Ответьте на вопрос'
         question = '{} {} ({})?'.format(qPronoun.rus.capitalize(), occ.rus, occ.serb)
 
-        if form == 0:
-            answer = aTb.serb.capitalize() + '.'
-        else:
-            answer = '{} {} {}.'.format(aPronoun.serb.capitalize(), aTb.serb, occ.serb)
+        answer = []
+        aTb = GetVocabulary('positive_tobe').get(aDecl)
+        answer.append(aTb.serb.capitalize() + '.')
+        aTb = GetVocabulary('tobe').get(aDecl)
+        answer.append('{} {} {}.'.format(aPronoun.serb.capitalize(), aTb.serb, occ.serb))
 
         return ExcerciseYield(title, question, answer)
 
