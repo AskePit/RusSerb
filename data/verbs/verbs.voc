@@ -3525,19 +3525,19 @@ a
 
 inf: заниматься спортом | trenirati
 
-present & sing & first:  | treniram
-present & sing & second:  | treniraš
-present & sing & third:  | trenira
-present & plur & first:  | treniramo
-present & plur & second:  | trenirate
-present & plur & third:  | treniraju
+present & sing & first: занимаюсь спортом | treniram
+present & sing & second: занимаешься спортом | treniraš
+present & sing & third: занимается спортом | trenira
+present & plur & first: занимаемся спортом | treniramo
+present & plur & second: занимаетесь спортом | trenirate
+present & plur & third: занимаются спортом | treniraju
 
-perfect & sing & male:  | trenirao
-perfect & sing & fem:  | trenirala
-perfect & sing & neu:  | treniralo
-perfect & plur & male:  | trenirali
-perfect & plur & fem:  | trenirale
-perfect & plur & neu:  | trenirala
+perfect & sing & male: занимался спортом | trenirao
+perfect & sing & fem: занималась спортом | trenirala
+perfect & sing & neu: занималось спортом | treniralo
+perfect & plur & male: занимались спортом | trenirali
+perfect & plur & fem: занимались спортом | trenirale
+perfect & plur & neu: занимались спортом | trenirala
 
 futur & sing & first:  | treniraću
 futur & sing & second:  | treniraćeš

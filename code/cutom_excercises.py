@@ -391,12 +391,8 @@ class PerfectPositiveEx(Excercise):
         # title:    Переведите на сербский с местоимением:
         # question: Я читал.
         # answer:   Ja sam čitao.
+        #           Čitao sam.
 
-        # title:    Переведите на сербский без местоимения:
-        # question: Я читал.
-        # answer:   Čitao sam.
-
-        form = random.randint(0, 1)
         negative = random.randint(0, 1)
         withOccupation = random.randint(0, 10) > 7
 
@@ -412,7 +408,7 @@ class PerfectPositiveEx(Excercise):
         tb = [GetVocabulary('tobe'), GetVocabulary('negative_tobe')][negative].get(decl)
         verb = self.randomVerbsPool.yieldElem().get(decl)
 
-        title = 'Переведите на сербский' if withOccupation else ['Переведите на сербский с местоимением', 'Переведите на сербский без местоимения'][form]
+        title = 'Переведите на сербский'
 
         needClarify = decl.number == Number.plur
         clarification = ''
@@ -425,13 +421,16 @@ class PerfectPositiveEx(Excercise):
                 clarification = '(ср.)'
 
         question = '{}{}{}{}.'.format(subject.rus.capitalize(), clarification,  [' ', ' не '][negative], verb.rus)
-        if form == 0 or withOccupation:
+
+        if withOccupation:
             answer = '{} {} {}.'.format(subject.serb.capitalize(), tb.serb, verb.serb)
         else:
+            answer = []
+            answer.append('{} {} {}.'.format(subject.serb.capitalize(), tb.serb, verb.serb))
             if negative:
-                answer = '{} {}.'.format(tb.serb.capitalize(), verb.serb)
+                answer.append('{} {}.'.format(tb.serb.capitalize(), verb.serb))
             else:
-                answer = '{} {}.'.format(verb.serb.capitalize(), tb.serb)
+                answer.append('{} {}.'.format(verb.serb.capitalize(), tb.serb))
 
         return ExcerciseYield(title, question, answer)
 
@@ -453,12 +452,8 @@ class PerfectQuestionsEx(Excercise):
         # title:    Переведите на сербский в форме `Da li ...`:
         # question: Вы пришли?
         # answer:   Da li ste došli?
+        #           Jeste li došli?
 
-        # title:    Переведите на сербский в форме `Je.. li ...?`:
-        # question: Вы пришли?
-        # answer:   Jeste li došli?
-
-        form = random.randint(0, 1)
         withOccupation = random.randint(0, 10) > 7
 
         decl = Declination.Parse('perfect & male|fem|neu & first|second|third & sing|plur & nom')
@@ -470,10 +465,10 @@ class PerfectQuestionsEx(Excercise):
             decl.humanizeNeutral()
             subject = GetVocabulary('personal_pronouns').getWordForm(decl)
 
-        tb = GetVocabulary(['tobe', 'question_tobe'][form]).get(decl)
+        
         verb = self.randomVerbsPool.yieldElem().get(decl)
 
-        title = ['Переведите на сербский в форме `Da li ...?`', 'Переведите на сербский в форме `Je.. li ...?`'][form]
+        title = 'Переведите на сербский'
 
         needClarify = decl.number == Number.plur
         clarification = ''
@@ -486,16 +481,20 @@ class PerfectQuestionsEx(Excercise):
                 clarification = '(ср.)'
 
         question = '{}{} {}?'.format(subject.rus.capitalize(), clarification, verb.rus)
-        if form == 0:
-            if withOccupation:
-                answer = 'Da li {} {} {}?'.format(tb.serb, subject.serb, verb.serb)
-            else:
-                answer = 'Da li {} {}?'.format(tb.serb, verb.serb)
+
+        answer = []
+
+        tb = GetVocabulary('tobe').get(decl)
+        if withOccupation:
+            answer.append('Da li {} {} {}?'.format(tb.serb, subject.serb, verb.serb))
         else:
-            if withOccupation:
-                answer = '{} li {} {}?'.format(tb.serb.capitalize(), subject.serb, verb.serb)
-            else:
-                answer = '{} li {}?'.format(tb.serb.capitalize(), verb.serb)
+            answer.append('Da li {} {}?'.format(tb.serb, verb.serb))
+
+        tb = GetVocabulary('question_tobe').get(decl)
+        if withOccupation:
+            answer.append('{} li {} {}?'.format(tb.serb.capitalize(), subject.serb, verb.serb))
+        else:
+            answer.append('{} li {}?'.format(tb.serb.capitalize(), verb.serb))
 
         return ExcerciseYield(title, question, answer)
 
@@ -521,7 +520,7 @@ class FuturPositiveEx(Excercise):
         # title:    Переведите на сербский:
         # question: Я не буду читать.
         # answer:   (Ja) neću čitati.
-        # answer:   (Ja) neću da čitam.
+        #           (Ja) neću da čitam.
 
         negative = random.randint(0, 1)
 
