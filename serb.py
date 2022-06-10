@@ -38,7 +38,12 @@ def ExecuteExcercise(exc: ExcerciseDesc):
         if TryExit(ans):
             break
         else:
-            print('{}{}'.format(PAD, exYield.answer))
+            if type(exYield.answer) is list:
+                print('\n')
+                for a in exYield.answer:
+                    print('{}{}'.format(PAD, a))
+            else:
+                print('{}{}'.format(PAD, exYield.answer))
             print('\n{}.........................\n'.format(PAD))
             ans = input()
             if TryExit(ans):
