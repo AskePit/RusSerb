@@ -512,39 +512,28 @@ class FuturPositiveEx(Excercise):
         self.randomVerbsPool = RandomPool(l)
 
     def __call__(self) -> ExcerciseYield:
-        # title:    Переведите на сербский в форме `[Местоимение] [ću] [глагол]`:
-        # question: Я буду читать.
-        # answer:   Ja ću čitati.
-
-        # title:    Переведите на сербский в форме `[Глагол]`:
+        # title:    Переведите на сербский:
         # question: Я буду читать.
         # answer:   Čitaću.
+        #           Ja ću čitati.
+        #           Ja ću da čitam.
 
-        # title:    Переведите на сербский в форме `[Местоимение] [ću] da [глагол]`:
-        # question: Я буду читать.
-        # answer:   Ja ću da čitam.
+        # title:    Переведите на сербский:
+        # question: Я не буду читать.
+        # answer:   (Ja) neću čitati.
+        # answer:   (Ja) neću da čitam.
 
-        CU_INF = 0
-        ONE_WORD = 1
-        CU_DA = 2
-        NEGATIVE = 3
-
-        form = random.randint(0, 3)
+        negative = random.randint(0, 1)
 
         decl = Declination.Parse('present & male|fem|neu & first|second|third & sing|plur & nom')
 
         decl.humanizeNeutral()
         pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
 
-        cu = GetVocabulary(['cu', 'necu'][form == NEGATIVE]).get(decl)
+        cu = GetVocabulary(['cu', 'necu'][negative]).get(decl)
         verbWord = self.randomVerbsPool.yieldElem()
 
-        title = [
-            'Переведите на сербский в форме `[Местоимение] [ću] [глагол]`',
-            'Переведите на сербский в форме `[Глагол]`',
-            'Переведите на сербский в форме `[Местоимение] [ću] da [глагол]`',
-            'Переведите на сербский'
-        ][form]
+        title = 'Переведите на сербский'
 
         needClarify = decl.number == Number.plur
         clarification = ''
@@ -558,15 +547,23 @@ class FuturPositiveEx(Excercise):
 
         question = '{}{} {} {}.'.format(pronoun.rus.capitalize(), clarification, cu.rus, verbWord.get(Infinitive).rus)
 
-        if form == CU_INF or form == NEGATIVE:
-            verb = verbWord.get(Infinitive)
-            answer = '{} {} {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb)
-        elif form == ONE_WORD:
+        answer = []
+
+        if not negative:
             verb = verbWord.get(decl.clone().override(Time.futur))
-            answer = verb.serb.capitalize()
-        elif form == CU_DA:
+            answer.append('{}.'.format(verb.serb.capitalize()))
+
+            verb = verbWord.get(Infinitive)
+            answer.append('{} {} {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb))
+            
             verb = verbWord.get(decl)
-            answer = '{} {} da {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb)
+            answer.append('{} {} da {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb))
+        else:
+            verb = verbWord.get(Infinitive)
+            answer.append('({}) {} {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb))
+
+            verb = verbWord.get(decl)
+            answer.append('({}) {} da {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb))
 
         return ExcerciseYield(title, question, answer)
 
@@ -583,33 +580,27 @@ class FuturQuestionsEx(Excercise):
         self.randomVerbsPool = RandomPool(l)
 
     def __call__(self) -> ExcerciseYield:
-        # title:    Переведите на сербский в форме `Da li [ću] ...`:
+        # title:    Переведите на сербский:
         # question: Ты придешь?
         # answer:   Da li ćeš doći?
-
-        # title:    Переведите на сербский в форме `[Hoću] li ...?`:
-        # question: Ты придешь?
-        # answer:   Hoćeš li doći?
-
-        form = random.randint(0, 1)
+        #           Hoćeš li doći?
 
         decl = Declination.Parse('present & male|fem|neu & first|second|third & sing|plur & nom')
 
         decl.humanizeNeutral()
         pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
 
-        cu = GetVocabulary(['cu', 'hocu'][form]).get(decl)
+        cu = GetVocabulary('cu').get(decl)
         verb = self.randomVerbsPool.yieldElem().get(Infinitive)
 
-        title = [
-            'Переведите на сербский в форме `Da li [ću] ...`',
-            'Переведите на сербский в форме `[Hoću] li ...?`'
-        ][form]
+        title = 'Переведите на сербский'
 
         question = '{} {} {}?'.format(pronoun.rus.capitalize(), cu.rus, verb.rus)
-        if form == 0:
-            answer = 'Da li {} {}?'.format(cu.serb, verb.serb)
-        else:
-            answer = '{} li {}?'.format(cu.serb.capitalize(), verb.serb)
+        answer = []
+
+        answer.append('Da li {} {}?'.format(cu.serb, verb.serb))
+
+        cu = GetVocabulary('hocu').get(decl)
+        answer.append('{} li {}?'.format(cu.serb.capitalize(), verb.serb))
 
         return ExcerciseYield(title, question, answer)
