@@ -1,5 +1,181 @@
 declined verb
 
+birati
+a
+
+inf: выбирать | birati
+
+present & sing & first: выбираю | biram
+present & sing & second: выбираешь | biraš
+present & sing & third: выбирает | bira
+present & plur & first: выбираем | biramo
+present & plur & second: выбираете | birate
+present & plur & third: выбирают | biraju
+
+perfect & sing & male: выбирал | birao
+perfect & sing & fem: выбирала | birala
+perfect & sing & neu: выбирало | biralo
+perfect & plur & male: выбирали | birali
+perfect & plur & fem: выбирали | birale
+perfect & plur & neu: выбирали | birala
+
+futur & sing & first:  | biraću
+futur & sing & second:  | biraćeš
+futur & sing & third:  | biraće
+futur & plur & first:  | biraćemo
+futur & plur & second:  | biraćete
+futur & plur & third:  | biraće
+
+imperfect & sing & first: выбирал | birah
+imperfect & sing & second: выбирала | biraše
+imperfect & sing & third: выбирало | biraše
+imperfect & plur & first: выбирали | birasmo
+imperfect & plur & second: выбирали | biraste
+imperfect & plur & third: выбирали | birahu
+
+# participle & present:  | birajući
+# participle & past:  | 
+# noun:  | biranje
+
+# futur & sing & first:  | birat ću
+# futur & sing & second:  | birat ćeš
+# futur & sing & third:  | birat će
+# futur & plur & first:  | birat ćemo
+# futur & plur & second:  | birat ćete
+# futur & plur & third:  | birat će
+
+# futur2 & sing & first:  | budem birao
+# futur2 & sing & second:  | budeš birao
+# futur2 & sing & third:  | bude birao
+# futur2 & plur & first:  | budemo birali
+# futur2 & plur & second:  | budete birali
+# futur2 & plur & third:  | budu birali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | birao bih
+# cond1 & sing & second:  | birao bi
+# cond1 & sing & third:  | birao bi
+# cond1 & plur & first:  | birali bismo
+# cond1 & plur & second:  | birali biste
+# cond1 & plur & third:  | birali bi
+
+# cond2 & sing & first:  | bio bih birao
+# cond2 & sing & second:  | bio bi birao
+# cond2 & sing & third:  | bio bi birao
+# cond2 & plur & first:  | bili bismo birali
+# cond2 & plur & second:  | bili biste birali
+# cond2 & plur & third:  | bili bi birali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: выбирай | biraj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | birajmo
+# imperativ & plur & second: выбирайте | birajte
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | biran
+# passive & sing & fem:  | birana
+# passive & sing & neu:  | birano
+# passive & plur & male:  | birani
+# passive & plur & fem:  | birane
+# passive & plur & neu:  | birana
+
+---
+
+biti
+t
+
+inf: быть | biti
+
+present & sing & first:  | jesam
+present & sing & second:  | jesi
+present & sing & third:  | jeste, jest
+present & plur & first:  | jesmo
+present & plur & second:  | jeste
+present & plur & third:  | jesu
+
+perfect & sing & male:  | bio
+perfect & sing & fem:  | bila
+perfect & sing & neu:  | bilo
+perfect & plur & male:  | bili
+perfect & plur & fem:  | bile
+perfect & plur & neu:  | bila
+
+futur & sing & first:  | biću
+futur & sing & second:  | bićeš
+futur & sing & third:  | biće
+futur & plur & first:  | bićemo
+futur & plur & second:  | bićete
+futur & plur & third:  | biće
+
+imperfect & sing & first:  | bijah
+imperfect & sing & second:  | bijaše
+imperfect & sing & third:  | bijaše
+imperfect & plur & first:  | bijasmo
+imperfect & plur & second:  | bijaste
+imperfect & plur & third:  | bijahu
+
+# participle & present:  | budući
+# participle & past:  | bivši
+# noun:  | 
+
+# futur & sing & first:  | bit ću
+# futur & sing & second:  | bit ćeš
+# futur & sing & third:  | bit će
+# futur & plur & first:  | bit ćemo
+# futur & plur & second:  | bit ćete
+# futur & plur & third:  | bit će
+
+# futur2 & sing & first:  | budem bio
+# futur2 & sing & second:  | budeš bio
+# futur2 & sing & third:  | bude bio
+# futur2 & plur & first:  | budemo bili
+# futur2 & plur & second:  | budete bili
+# futur2 & plur & third:  | budu bili
+
+# aorist & sing & first:  | bih
+# aorist & sing & second:  | bi
+# aorist & sing & third:  | bi
+# aorist & plur & first:  | bismo
+# aorist & plur & second:  | biste
+# aorist & plur & third:  | biše
+
+# cond1 & sing & first:  | bio bih
+# cond1 & sing & second:  | bio bi
+# cond1 & sing & third:  | bio bi
+# cond1 & plur & first:  | bili bismo
+# cond1 & plur & second:  | bili biste
+# cond1 & plur & third:  | bili bi
+
+# cond2 & sing & first:  | bio bih bio
+# cond2 & sing & second:  | bio bi bio
+# cond2 & sing & third:  | bio bi bio
+# cond2 & plur & first:  | bili bismo bili
+# cond2 & plur & second:  | bili biste bili
+# cond2 & plur & third:  | bili bi bili
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | budi
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | budimo
+# imperativ & plur & second:  | budite
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
+
+---
+
 crtati
 a
 
@@ -85,6 +261,182 @@ imperfect & plur & third: рисовали | crtahu
 # passive & plur & male:  | crtani
 # passive & plur & fem:  | crtane
 # passive & plur & neu:  | crtana
+
+---
+
+dobiti
+e
+
+inf: получить | dobiti
+
+present & sing & first: получу | dobijem
+present & sing & second: получишь | dobiješ
+present & sing & third: получит | dobije
+present & plur & first: получим | dobijemo
+present & plur & second: получите | dobijete
+present & plur & third: получат | dobiju
+
+perfect & sing & male: получил | dobio
+perfect & sing & fem: получила | dobila
+perfect & sing & neu: получило | dobilo
+perfect & plur & male: получили | dobili
+perfect & plur & fem: получили | dobile
+perfect & plur & neu: получили | dobila
+
+futur & sing & first:  | dobiću
+futur & sing & second:  | dobićeš
+futur & sing & third:  | dobiće
+futur & plur & first:  | dobićemo
+futur & plur & second:  | dobićete
+futur & plur & third:  | dobiće
+
+imperfect & sing & first: получил | 
+imperfect & sing & second: получила | 
+imperfect & sing & third: получило | 
+imperfect & plur & first: получили | 
+imperfect & plur & second: получили | 
+imperfect & plur & third: получили | 
+
+# participle & present:  | 
+# participle & past:  | dobivši
+# noun:  | 
+
+# futur & sing & first:  | dobit ću
+# futur & sing & second:  | dobit ćeš
+# futur & sing & third:  | dobit će
+# futur & plur & first:  | dobit ćemo
+# futur & plur & second:  | dobit ćete
+# futur & plur & third:  | dobit će
+
+# futur2 & sing & first:  | budem dobio
+# futur2 & sing & second:  | budeš dobio
+# futur2 & sing & third:  | bude dobio
+# futur2 & plur & first:  | budemo dobili
+# futur2 & plur & second:  | budete dobili
+# futur2 & plur & third:  | budu dobili
+
+# aorist & sing & first:  | dobih
+# aorist & sing & second:  | dobi
+# aorist & sing & third:  | dobi
+# aorist & plur & first:  | dobismo
+# aorist & plur & second:  | dobiste
+# aorist & plur & third:  | dobiše
+
+# cond1 & sing & first:  | dobio bih
+# cond1 & sing & second:  | dobio bi
+# cond1 & sing & third:  | dobio bi
+# cond1 & plur & first:  | dobili bismo
+# cond1 & plur & second:  | dobili biste
+# cond1 & plur & third:  | dobili bi
+
+# cond2 & sing & first:  | bio bih dobio
+# cond2 & sing & second:  | bio bi dobio
+# cond2 & sing & third:  | bio bi dobio
+# cond2 & plur & first:  | bili bismo dobili
+# cond2 & plur & second:  | bili biste dobili
+# cond2 & plur & third:  | bili bi dobili
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: получи | dobij
+# imperativ & sing & third:  | 
+# imperativ & plur & first: получим  получимте | dobijmo
+# imperativ & plur & second: получите | dobijte
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | dobiven
+# passive & sing & fem:  | dobivena
+# passive & sing & neu:  | dobiveno
+# passive & plur & male:  | dobiveni
+# passive & plur & fem:  | dobivene
+# passive & plur & neu:  | dobivena
+
+---
+
+doneti
+e
+
+inf: принести | doneti
+
+present & sing & first: принесу | donesem
+present & sing & second: принесёшь | doneseš
+present & sing & third: принесёт | donese
+present & plur & first: принесём | donesemo
+present & plur & second: принесёте | donesete
+present & plur & third: принесут | donesu
+
+perfect & sing & male: принёс | donio
+perfect & sing & fem: принесла | donesao
+perfect & sing & neu: принесло | donela
+perfect & plur & male: принесли | doneli
+perfect & plur & fem: принесли | donesli
+perfect & plur & neu: принесли | donele
+
+futur & sing & first:  | doneću
+futur & sing & second:  | donećeš
+futur & sing & third:  | doneće
+futur & plur & first:  | donećemo
+futur & plur & second:  | donećete
+futur & plur & third:  | doneće
+
+imperfect & sing & first: принёс | 
+imperfect & sing & second: принесла | 
+imperfect & sing & third: принесло | 
+imperfect & plur & first: принесли | 
+imperfect & plur & second: принесли | 
+imperfect & plur & third: принесли | 
+
+# participle & present:  | 
+# participle & past:  | donevši
+# noun:  | 
+
+# futur & sing & first:  | donet ću
+# futur & sing & second:  | donet ćeš
+# futur & sing & third:  | donet će
+# futur & plur & first:  | donet ćemo
+# futur & plur & second:  | donet ćete
+# futur & plur & third:  | donet će
+
+# futur2 & sing & first:  | budem donio
+# futur2 & sing & second:  | budeš donio
+# futur2 & sing & third:  | bude donio
+# futur2 & plur & first:  | budemo doneli
+# futur2 & plur & second:  | budete doneli
+# futur2 & plur & third:  | budu doneli
+
+# aorist & sing & first:  | doneh
+# aorist & sing & second:  | done
+# aorist & sing & third:  | done
+# aorist & plur & first:  | donesmo
+# aorist & plur & second:  | doneste
+# aorist & plur & third:  | doneše
+
+# cond1 & sing & first:  | donio
+# cond1 & sing & second:  | donio
+# cond1 & sing & third:  | donio
+# cond1 & plur & first:  | doneli
+# cond1 & plur & second:  | doneli
+# cond1 & plur & third:  | doneli
+
+# cond2 & sing & first:  | bio bih donio
+# cond2 & sing & second:  | bio bi donio
+# cond2 & sing & third:  | bio bi donio
+# cond2 & plur & first:  | bili bismo doneli
+# cond2 & plur & second:  | bili biste doneli
+# cond2 & plur & third:  | bili bi doneli
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: принеси | donesi
+# imperativ & sing & third:  | 
+# imperativ & plur & first: принесём  принесёмте | donesimo
+# imperativ & plur & second: принесите | donesite
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | donesen
+# passive & sing & fem:  | donesena
+# passive & sing & neu:  | doneseno
+# passive & plur & male:  | doneseni
+# passive & plur & fem:  | donesene
+# passive & plur & neu:  | donesena
 
 ---
 
@@ -1496,6 +1848,94 @@ imperfect & plur & third: отдыхали | odmarahu
 
 ---
 
+pakovati
+e
+
+inf: собирать | pakovati
+
+present & sing & first: собираю | pakujem
+present & sing & second: собираешь | pakuješ
+present & sing & third: собирает | pakuje
+present & plur & first: собираем | pakujemo
+present & plur & second: собираете | pakujete
+present & plur & third: собирают | pakuju
+
+perfect & sing & male: собирал | pakivao
+perfect & sing & fem: собирала | pakivala
+perfect & sing & neu: собирало | pakivalo
+perfect & plur & male: собирали | pakivali
+perfect & plur & fem: собирали | pakivale
+perfect & plur & neu: собирали | pakivala
+
+futur & sing & first:  | pakovaću
+futur & sing & second:  | pakovaćeš
+futur & sing & third:  | pakovaće
+futur & plur & first:  | pakovaćemo
+futur & plur & second:  | pakovaćete
+futur & plur & third:  | pakovaće
+
+imperfect & sing & first: собирал | pakivah
+imperfect & sing & second: собирала | pakivaše
+imperfect & sing & third: собирало | pakivaše
+imperfect & plur & first: собирали | pakivasmo
+imperfect & plur & second: собирали | pakivaste
+imperfect & plur & third: собирали | pakivahu
+
+# participle & present:  | pakujući
+# participle & past:  | 
+# noun:  | pakovanje
+
+# futur & sing & first:  | pakovat ću
+# futur & sing & second:  | pakovat ćeš
+# futur & sing & third:  | pakovat će
+# futur & plur & first:  | pakovat ćemo
+# futur & plur & second:  | pakovat ćete
+# futur & plur & third:  | pakovat će
+
+# futur2 & sing & first:  | budem pakivao
+# futur2 & sing & second:  | budeš pakivao
+# futur2 & sing & third:  | bude pakivao
+# futur2 & plur & first:  | budemo pakivali
+# futur2 & plur & second:  | budete pakivali
+# futur2 & plur & third:  | budu pakivali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | pakivao bih
+# cond1 & sing & second:  | pakivao bi
+# cond1 & sing & third:  | pakivao bi
+# cond1 & plur & first:  | pakivali bismo
+# cond1 & plur & second:  | pakivali biste
+# cond1 & plur & third:  | pakivali bi
+
+# cond2 & sing & first:  | bio bih pakivao
+# cond2 & sing & second:  | bio bi pakivao
+# cond2 & sing & third:  | bio bi pakivao
+# cond2 & plur & first:  | bili bismo pakivali
+# cond2 & plur & second:  | bili biste pakivali
+# cond2 & plur & third:  | bili bi pakivali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: собирай | pakuj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | pakujmo
+# imperativ & plur & second: собирайте | pakujte
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | pakivan
+# passive & sing & fem:  | pakivana
+# passive & sing & neu:  | pakivano
+# passive & plur & male:  | pakivani
+# passive & plur & fem:  | pakivane
+# passive & plur & neu:  | pakivana
+
+---
+
 pevati
 a
 
@@ -2024,6 +2464,94 @@ imperfect & plur & third: плавали | plivaše
 
 ---
 
+posetiti
+i
+
+inf: посетить | posetiti
+
+present & sing & first: посещу | posetim
+present & sing & second: посетишь | posetiš
+present & sing & third: посетит | poseti
+present & plur & first: посетим | posetimo
+present & plur & second: посетите | posetite
+present & plur & third: посетят | posete
+
+perfect & sing & male: посетил | posetio
+perfect & sing & fem: посетила | posetila
+perfect & sing & neu: посетило | posetilo
+perfect & plur & male: посетили | posetili
+perfect & plur & fem: посетили | posetile
+perfect & plur & neu: посетили | posetila
+
+futur & sing & first:  | posetiću
+futur & sing & second:  | posetićeš
+futur & sing & third:  | posetiće
+futur & plur & first:  | posetićemo
+futur & plur & second:  | posetićete
+futur & plur & third:  | posetiće
+
+imperfect & sing & first: посетил | 
+imperfect & sing & second: посетила | 
+imperfect & sing & third: посетило | 
+imperfect & plur & first: посетили | 
+imperfect & plur & second: посетили | 
+imperfect & plur & third: посетили | 
+
+# participle & present:  | 
+# participle & past:  | posetivši
+# noun:  | 
+
+# futur & sing & first:  | posetit ću
+# futur & sing & second:  | posetit ćeš
+# futur & sing & third:  | posetit će
+# futur & plur & first:  | posetit ćemo
+# futur & plur & second:  | posetit ćete
+# futur & plur & third:  | posetit će
+
+# futur2 & sing & first:  | budem posetio
+# futur2 & sing & second:  | budeš posetio
+# futur2 & sing & third:  | bude posetio
+# futur2 & plur & first:  | budemo posetili
+# futur2 & plur & second:  | budete posetili
+# futur2 & plur & third:  | budu posetili
+
+# aorist & sing & first:  | posetih
+# aorist & sing & second:  | poseti
+# aorist & sing & third:  | poseti
+# aorist & plur & first:  | posetismo
+# aorist & plur & second:  | posetiste
+# aorist & plur & third:  | posetiše
+
+# cond1 & sing & first:  | posetio bih
+# cond1 & sing & second:  | posetio bi
+# cond1 & sing & third:  | posetio bi
+# cond1 & plur & first:  | posetili bismo
+# cond1 & plur & second:  | posetili biste
+# cond1 & plur & third:  | posetili bi
+
+# cond2 & sing & first:  | bio bih posetio
+# cond2 & sing & second:  | bio bi posetio
+# cond2 & sing & third:  | bio bi posetio
+# cond2 & plur & first:  | bili bismo posetili
+# cond2 & plur & second:  | bili biste posetili
+# cond2 & plur & third:  | bili bi posetili
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: посети | poseti
+# imperativ & sing & third:  | 
+# imperativ & plur & first: посетим  посетимте | posetimo
+# imperativ & plur & second: посетите | posetite
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | posećen
+# passive & sing & fem:  | posećena
+# passive & sing & neu:  | posećeno
+# passive & plur & male:  | posećeni
+# passive & plur & fem:  | posećene
+# passive & plur & neu:  | posećena
+
+---
+
 prati
 e
 
@@ -2115,21 +2643,21 @@ imperfect & plur & third: стирали | prahu
 praviti
 i
 
-inf: делать | praviti
+inf: делать(praviti) | praviti
 
-present & sing & first: делаю | pravim
-present & sing & second: делаешь | praviš
-present & sing & third: делает | pravi
-present & plur & first: делаем | pravimo
-present & plur & second: делаете | pravite
-present & plur & third: делают | prave
+present & sing & first: делаю(praviti) | pravim
+present & sing & second: делаешь(praviti) | praviš
+present & sing & third: делает(praviti) | pravi
+present & plur & first: делаем(praviti) | pravimo
+present & plur & second: делаете(praviti) | pravite
+present & plur & third: делают(praviti) | prave
 
-perfect & sing & male: делал | pravio
-perfect & sing & fem: делала | pravila
-perfect & sing & neu: делало | pravilo
-perfect & plur & male: делали | pravili
-perfect & plur & fem: делали | pravile
-perfect & plur & neu: делали | pravila
+perfect & sing & male: делал(praviti) | pravio
+perfect & sing & fem: делала(praviti) | pravila
+perfect & sing & neu: делало(praviti) | pravilo
+perfect & plur & male: делали(praviti) | pravili
+perfect & plur & fem: делали(praviti) | pravile
+perfect & plur & neu: делали(praviti) | pravila
 
 futur & sing & first:  | praviću
 futur & sing & second:  | pravićeš
@@ -2555,21 +3083,21 @@ imperfect & plur & third: путешествовали | putovahu
 raditi
 i
 
-inf: работать | raditi
+inf: делать(raditi) | raditi
 
-present & sing & first: работаю | radim
-present & sing & second: работаешь | radiš
-present & sing & third: работает | radi
-present & plur & first: работаем | radimo
-present & plur & second: работаете | radite
-present & plur & third: работают | rade
+present & sing & first: делаю(raditi) | radim
+present & sing & second: делаешь(raditi) | radiš
+present & sing & third: делает(raditi) | radi
+present & plur & first: делаем(raditi) | radimo
+present & plur & second: делаете(raditi) | radite
+present & plur & third: делают(raditi) | rade
 
-perfect & sing & male: работал | radio
-perfect & sing & fem: работала | radila
-perfect & sing & neu: работало | radilo
-perfect & plur & male: работали | radili
-perfect & plur & fem: работали | radile
-perfect & plur & neu: работали | radila
+perfect & sing & male: делал(raditi) | radio
+perfect & sing & fem: делала(raditi) | radila
+perfect & sing & neu: делало(raditi) | radilo
+perfect & plur & male: делали(raditi) | radili
+perfect & plur & fem: делали(raditi) | radile
+perfect & plur & neu: делали(raditi) | radila
 
 futur & sing & first:  | radiću
 futur & sing & second:  | radićeš
@@ -2578,12 +3106,12 @@ futur & plur & first:  | radićemo
 futur & plur & second:  | radićete
 futur & plur & third:  | radiće
 
-imperfect & sing & first: работал | rađah
-imperfect & sing & second: работала | rađaše
-imperfect & sing & third: работало | rađaše
-imperfect & plur & first: работали | rađasmo
-imperfect & plur & second: работали | rađaste
-imperfect & plur & third: работали | rađahu
+imperfect & sing & first: делал | rađah
+imperfect & sing & second: делала | rađaše
+imperfect & sing & third: делало | rađaše
+imperfect & plur & first: делали | rađasmo
+imperfect & plur & second: делали | rađaste
+imperfect & plur & third: делали | rađahu
 
 # participle & present:  | radeći
 # participle & past:  | 
@@ -2625,10 +3153,10 @@ imperfect & plur & third: работали | rađahu
 # cond2 & plur & third:  | bili bi radili
 
 # imperativ & sing & first:  | 
-# imperativ & sing & second: работай | radi
+# imperativ & sing & second: делай | radi
 # imperativ & sing & third:  | 
 # imperativ & plur & first:  | radimo
-# imperativ & plur & second: работайте | radite
+# imperativ & plur & second: делайте | radite
 # imperativ & plur & third:  | 
 
 # passive & sing & male:  | rađen
@@ -2637,6 +3165,94 @@ imperfect & plur & third: работали | rađahu
 # passive & plur & male:  | rađeni
 # passive & plur & fem:  | rađene
 # passive & plur & neu:  | rađena
+
+---
+
+razgovarati
+a
+
+inf: разговаривать | razgovarati
+
+present & sing & first: разговариваю | razgovaram
+present & sing & second: разговариваешь | razgovaraš
+present & sing & third: разговаривает | razgovara
+present & plur & first: разговариваем | razgovaramo
+present & plur & second: разговариваете | razgovarate
+present & plur & third: разговаривают | razgovaraju
+
+perfect & sing & male: разговаривал | razgovarao
+perfect & sing & fem: разговаривала | razgovarala
+perfect & sing & neu: разговаривало | razgovaralo
+perfect & plur & male: разговаривали | razgovarali
+perfect & plur & fem: разговаривали | razgovarale
+perfect & plur & neu: разговаривали | razgovarala
+
+futur & sing & first:  | razgovaraću
+futur & sing & second:  | razgovaraćeš
+futur & sing & third:  | razgovaraće
+futur & plur & first:  | razgovaraćemo
+futur & plur & second:  | razgovaraćete
+futur & plur & third:  | razgovaraće
+
+imperfect & sing & first: разговаривал | razgovarah
+imperfect & sing & second: разговаривала | razgovaraše
+imperfect & sing & third: разговаривало | razgovaraše
+imperfect & plur & first: разговаривали | razgovarasmo
+imperfect & plur & second: разговаривали | razgovaraste
+imperfect & plur & third: разговаривали | razgovarahu
+
+# participle & present:  | razgovarajući
+# participle & past:  | 
+# noun:  | razgovaranje
+
+# futur & sing & first:  | razgovarat ću
+# futur & sing & second:  | razgovarat ćeš
+# futur & sing & third:  | razgovarat će
+# futur & plur & first:  | razgovarat ćemo
+# futur & plur & second:  | razgovarat ćete
+# futur & plur & third:  | razgovarat će
+
+# futur2 & sing & first:  | budem razgovarao
+# futur2 & sing & second:  | budeš razgovarao
+# futur2 & sing & third:  | bude razgovarao
+# futur2 & plur & first:  | budemo razgovarali
+# futur2 & plur & second:  | budete razgovarali
+# futur2 & plur & third:  | budu razgovarali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | razgovarao bih
+# cond1 & sing & second:  | razgovarao bi
+# cond1 & sing & third:  | razgovarao bi
+# cond1 & plur & first:  | razgovarali bismo
+# cond1 & plur & second:  | razgovarali biste
+# cond1 & plur & third:  | razgovarali bi
+
+# cond2 & sing & first:  | bio bih razgovarao
+# cond2 & sing & second:  | bio bi razgovarao
+# cond2 & sing & third:  | bio bi razgovarao
+# cond2 & plur & first:  | bili bismo razgovarali
+# cond2 & plur & second:  | bili biste razgovarali
+# cond2 & plur & third:  | bili bi razgovarali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: разговаривай | razgovaraj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | razgovarajmo
+# imperativ & plur & second: разговаривайте | razgovarajte
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
 
 ---
 
@@ -2725,6 +3341,182 @@ imperfect & plur & third: думали(razmišljati) | razmišljahu
 # passive & plur & male:  | 
 # passive & plur & fem:  | 
 # passive & plur & neu:  | 
+
+---
+
+razumeti
+e
+
+inf: понимать | razumeti
+
+present & sing & first: понимаю | razumem
+present & sing & second: понимаешь | razumeš
+present & sing & third: понимает | razume
+present & plur & first: понимаем | razumemo
+present & plur & second: понимаете | razumete
+present & plur & third: понимают | razumeju
+
+perfect & sing & male: понимал | razumeo
+perfect & sing & fem: понимала | razumela
+perfect & sing & neu: понимало | razumelo
+perfect & plur & male: понимали | razumeli
+perfect & plur & fem: понимали | razumele
+perfect & plur & neu: понимали | razumela
+
+futur & sing & first:  | razumeću
+futur & sing & second:  | razumećeš
+futur & sing & third:  | razumeće
+futur & plur & first:  | razumećemo
+futur & plur & second:  | razumećete
+futur & plur & third:  | razumeće
+
+imperfect & sing & first: понимал | 
+imperfect & sing & second: понимала | 
+imperfect & sing & third: понимало | 
+imperfect & plur & first: понимали | 
+imperfect & plur & second: понимали | 
+imperfect & plur & third: понимали | 
+
+# participle & present:  | 
+# participle & past:  | razumevši
+# noun:  | 
+
+# futur & sing & first:  | razumet ću
+# futur & sing & second:  | razumet ćeš
+# futur & sing & third:  | razumet će
+# futur & plur & first:  | razumet ćemo
+# futur & plur & second:  | razumet ćete
+# futur & plur & third:  | razumet će
+
+# futur2 & sing & first:  | budem razumeo
+# futur2 & sing & second:  | budeš razumeo
+# futur2 & sing & third:  | bude razumeo
+# futur2 & plur & first:  | budemo razumeli
+# futur2 & plur & second:  | budete razumeli
+# futur2 & plur & third:  | budu razumeli
+
+# aorist & sing & first:  | razumeh
+# aorist & sing & second:  | razume
+# aorist & sing & third:  | razume
+# aorist & plur & first:  | razumesmo
+# aorist & plur & second:  | razumeste
+# aorist & plur & third:  | razumeše
+
+# cond1 & sing & first:  | razumeo bih
+# cond1 & sing & second:  | razumeo bi
+# cond1 & sing & third:  | razumeo bi
+# cond1 & plur & first:  | razumeli bismo
+# cond1 & plur & second:  | razumeli biste
+# cond1 & plur & third:  | razumeli bi
+
+# cond2 & sing & first:  | bio bih razumeo
+# cond2 & sing & second:  | bio bi razumeo
+# cond2 & sing & third:  | bio bi razumeo
+# cond2 & plur & first:  | bili bismo razumeli
+# cond2 & plur & second:  | bili biste razumeli
+# cond2 & plur & third:  | bili bi razumeli
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: понимай | razumij
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | razumijmo
+# imperativ & plur & second: понимайте | razumijte
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
+
+---
+
+reći
+e
+
+inf: сказать | reći
+
+present & sing & first: скажу | reknem
+present & sing & second: скажешь | rekneš
+present & sing & third: скажет | rekne
+present & plur & first: скажем | reknemo
+present & plur & second: скажете | reknete
+present & plur & third: скажут | reknu
+
+perfect & sing & male: сказал | rekao
+perfect & sing & fem: сказала | rekla
+perfect & sing & neu: сказало | reklo
+perfect & plur & male: сказали | rekli
+perfect & plur & fem: сказали | rekle
+perfect & plur & neu: сказали | rekla
+
+futur & sing & first:  | 
+futur & sing & second:  | 
+futur & sing & third:  | 
+futur & plur & first:  | 
+futur & plur & second:  | 
+futur & plur & third:  | 
+
+imperfect & sing & first: сказал | 
+imperfect & sing & second: сказала | 
+imperfect & sing & third: сказало | 
+imperfect & plur & first: сказали | 
+imperfect & plur & second: сказали | 
+imperfect & plur & third: сказали | 
+
+# participle & present:  | rekući
+# participle & past:  | rekavši
+# noun:  | 
+
+# futur & sing & first:  | reći ću
+# futur & sing & second:  | reći ćeš
+# futur & sing & third:  | reći će
+# futur & plur & first:  | reći ćemo
+# futur & plur & second:  | reći ćete
+# futur & plur & third:  | reći će
+
+# futur2 & sing & first:  | budem rekao
+# futur2 & sing & second:  | budeš rekao
+# futur2 & sing & third:  | bude rekao
+# futur2 & plur & first:  | budemo rekli
+# futur2 & plur & second:  | budete rekli
+# futur2 & plur & third:  | budu rekli
+
+# aorist & sing & first:  | rekoh
+# aorist & sing & second:  | reče
+# aorist & sing & third:  | reče
+# aorist & plur & first:  | rekosmo
+# aorist & plur & second:  | rekoste
+# aorist & plur & third:  | rekoše
+
+# cond1 & sing & first:  | rekao bih
+# cond1 & sing & second:  | rekao bi
+# cond1 & sing & third:  | rekao bi
+# cond1 & plur & first:  | rekli bismo
+# cond1 & plur & second:  | rekli biste
+# cond1 & plur & third:  | rekli bi
+
+# cond2 & sing & first:  | bio bih rekao
+# cond2 & sing & second:  | bio bi rekao
+# cond2 & sing & third:  | bio bi rekao
+# cond2 & plur & first:  | bili bismo rekli
+# cond2 & plur & second:  | bili biste rekli
+# cond2 & plur & third:  | bili bi rekli
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: скажи | rekni
+# imperativ & sing & third:  | 
+# imperativ & plur & first: скажем  скажемте | reknimo
+# imperativ & plur & second: скажите | reknite
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | rečen
+# passive & sing & fem:  | rečena
+# passive & sing & neu:  | rečeno
+# passive & plur & male:  | rečeni
+# passive & plur & fem:  | rečene
+# passive & plur & neu:  | rečena
 
 ---
 
@@ -3432,6 +4224,94 @@ imperfect & plur & third: играли | svirahu
 
 ---
 
+tražiti
+i
+
+inf: искать | tražiti
+
+present & sing & first: ищу | tražim
+present & sing & second: ищешь | tražiš
+present & sing & third: ищет | traži
+present & plur & first: ищем | tražimo
+present & plur & second: ищете | tražite
+present & plur & third: ищут | traže
+
+perfect & sing & male: искал | tražio
+perfect & sing & fem: искала | tražila
+perfect & sing & neu: искало | tražilo
+perfect & plur & male: искали | tražili
+perfect & plur & fem: искали | tražile
+perfect & plur & neu: искали | tražila
+
+futur & sing & first:  | tražiću
+futur & sing & second:  | tražićeš
+futur & sing & third:  | tražiće
+futur & plur & first:  | tražićemo
+futur & plur & second:  | tražićete
+futur & plur & third:  | tražiće
+
+imperfect & sing & first: искал | tražah
+imperfect & sing & second: искала | tražaše
+imperfect & sing & third: искало | tražaše
+imperfect & plur & first: искали | tražasmo
+imperfect & plur & second: искали | tražaste
+imperfect & plur & third: искали | tražahu
+
+# participle & present:  | tražeći
+# participle & past:  | 
+# noun:  | traženje
+
+# futur & sing & first:  | tražit ću
+# futur & sing & second:  | tražit ćeš
+# futur & sing & third:  | tražit će
+# futur & plur & first:  | tražit ćemo
+# futur & plur & second:  | tražit ćete
+# futur & plur & third:  | tražit će
+
+# futur2 & sing & first:  | budem tražio
+# futur2 & sing & second:  | budeš tražio
+# futur2 & sing & third:  | bude tražio
+# futur2 & plur & first:  | budemo tražili
+# futur2 & plur & second:  | budete tražili
+# futur2 & plur & third:  | budu tražili
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | tražio bih
+# cond1 & sing & second:  | tražio bi
+# cond1 & sing & third:  | tražio bi
+# cond1 & plur & first:  | tražili bismo
+# cond1 & plur & second:  | tražili biste
+# cond1 & plur & third:  | tražili bi
+
+# cond2 & sing & first:  | bio bih tražio
+# cond2 & sing & second:  | bio bi tražio
+# cond2 & sing & third:  | bio bi tražio
+# cond2 & plur & first:  | bili bismo tražili
+# cond2 & plur & second:  | bili biste tražili
+# cond2 & plur & third:  | bili bi tražili
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: ищи | traži
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | tražimo
+# imperativ & plur & second: ищите | tražite
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | tražen
+# passive & sing & fem:  | tražena
+# passive & sing & neu:  | traženo
+# passive & plur & male:  | traženi
+# passive & plur & fem:  | tražene
+# passive & plur & neu:  | tražena
+
+---
+
 trenirati
 a
 
@@ -3605,6 +4485,94 @@ imperfect & plur & third: бежали | trčahu
 # passive & plur & male:  | 
 # passive & plur & fem:  | 
 # passive & plur & neu:  | 
+
+---
+
+tuširati
+a
+
+inf: принимать душ | tuširati
+
+present & sing & first:  | tuširam
+present & sing & second:  | tuširaš
+present & sing & third:  | tušira
+present & plur & first:  | tuširamo
+present & plur & second:  | tuširate
+present & plur & third:  | tuširaju
+
+perfect & sing & male:  | tuširao
+perfect & sing & fem:  | tuširala
+perfect & sing & neu:  | tuširalo
+perfect & plur & male:  | tuširali
+perfect & plur & fem:  | tuširale
+perfect & plur & neu:  | tuširala
+
+futur & sing & first:  | tuširaću
+futur & sing & second:  | tuširaćeš
+futur & sing & third:  | tuširaće
+futur & plur & first:  | tuširaćemo
+futur & plur & second:  | tuširaćete
+futur & plur & third:  | tuširaće
+
+imperfect & sing & first:  | tuširah
+imperfect & sing & second:  | tuširaše
+imperfect & sing & third:  | tuširaše
+imperfect & plur & first:  | tuširasmo
+imperfect & plur & second:  | tuširaste
+imperfect & plur & third:  | tuširahu
+
+# participle & present:  | tuširajući
+# participle & past:  | 
+# noun:  | tuširanje
+
+# futur & sing & first:  | tuširat ću
+# futur & sing & second:  | tuširat ćeš
+# futur & sing & third:  | tuširat će
+# futur & plur & first:  | tuširat ćemo
+# futur & plur & second:  | tuširat ćete
+# futur & plur & third:  | tuširat će
+
+# futur2 & sing & first:  | budem tuširao
+# futur2 & sing & second:  | budeš tuširao
+# futur2 & sing & third:  | bude tuširao
+# futur2 & plur & first:  | budemo tuširali
+# futur2 & plur & second:  | budete tuširali
+# futur2 & plur & third:  | budu tuširali
+
+# aorist & sing & first:  | 
+# aorist & sing & second:  | 
+# aorist & sing & third:  | 
+# aorist & plur & first:  | 
+# aorist & plur & second:  | 
+# aorist & plur & third:  | 
+
+# cond1 & sing & first:  | tuširao bih
+# cond1 & sing & second:  | tuširao bi
+# cond1 & sing & third:  | tuširao bi
+# cond1 & plur & first:  | tuširali bismo
+# cond1 & plur & second:  | tuširali biste
+# cond1 & plur & third:  | tuširali bi
+
+# cond2 & sing & first:  | bio bih tuširao
+# cond2 & sing & second:  | bio bi tuširao
+# cond2 & sing & third:  | bio bi tuširao
+# cond2 & plur & first:  | bili bismo tuširali
+# cond2 & plur & second:  | bili biste tuširali
+# cond2 & plur & third:  | bili bi tuširali
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | tuširaj
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | tuširajmo
+# imperativ & plur & second:  | tuširajte
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | tuširan
+# passive & sing & fem:  | tuširana
+# passive & sing & neu:  | tuširano
+# passive & plur & male:  | tuširani
+# passive & plur & fem:  | tuširane
+# passive & plur & neu:  | tuširana
 
 ---
 
@@ -3869,6 +4837,94 @@ imperfect & plur & third: водили | vožahu
 # passive & plur & male:  | voženi
 # passive & plur & fem:  | vožene
 # passive & plur & neu:  | vožena
+
+---
+
+zaboraviti
+i
+
+inf: забыть | zaboraviti
+
+present & sing & first:  | zaboravim
+present & sing & second:  | zaboraviš
+present & sing & third:  | zaboravi
+present & plur & first:  | zaboravimo
+present & plur & second:  | zaboravite
+present & plur & third:  | zaborave
+
+perfect & sing & male:  | zaboravio
+perfect & sing & fem:  | zaboravila
+perfect & sing & neu:  | zaboravilo
+perfect & plur & male:  | zaboravili
+perfect & plur & fem:  | zaboravile
+perfect & plur & neu:  | zaboravila
+
+futur & sing & first:  | zaboraviću
+futur & sing & second:  | zaboravićeš
+futur & sing & third:  | zaboraviće
+futur & plur & first:  | zaboravićemo
+futur & plur & second:  | zaboravićete
+futur & plur & third:  | zaboraviće
+
+imperfect & sing & first:  | 
+imperfect & sing & second:  | 
+imperfect & sing & third:  | 
+imperfect & plur & first:  | 
+imperfect & plur & second:  | 
+imperfect & plur & third:  | 
+
+# participle & present:  | 
+# participle & past:  | zaboravivši
+# noun:  | 
+
+# futur & sing & first:  | zaboravit ću
+# futur & sing & second:  | zaboravit ćeš
+# futur & sing & third:  | zaboravit će
+# futur & plur & first:  | zaboravit ćemo
+# futur & plur & second:  | zaboravit ćete
+# futur & plur & third:  | zaboravit će
+
+# futur2 & sing & first:  | budem zaboravio
+# futur2 & sing & second:  | budeš zaboravio
+# futur2 & sing & third:  | bude zaboravio
+# futur2 & plur & first:  | budemo zaboravili
+# futur2 & plur & second:  | budete zaboravili
+# futur2 & plur & third:  | budu zaboravili
+
+# aorist & sing & first:  | zaboravih
+# aorist & sing & second:  | zaboravi
+# aorist & sing & third:  | zaboravi
+# aorist & plur & first:  | zaboravismo
+# aorist & plur & second:  | zaboraviste
+# aorist & plur & third:  | zaboraviše
+
+# cond1 & sing & first:  | zaboravio bih
+# cond1 & sing & second:  | zaboravio bi
+# cond1 & sing & third:  | zaboravio bi
+# cond1 & plur & first:  | zaboravili bismo
+# cond1 & plur & second:  | zaboravili biste
+# cond1 & plur & third:  | zaboravili bi
+
+# cond2 & sing & first:  | bio bih zaboravio
+# cond2 & sing & second:  | bio bi zaboravio
+# cond2 & sing & third:  | bio bi zaboravio
+# cond2 & plur & first:  | bili bismo zaboravili
+# cond2 & plur & second:  | bili biste zaboravili
+# cond2 & plur & third:  | bili bi zaboravili
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second:  | zaboravi
+# imperativ & sing & third:  | 
+# imperativ & plur & first:  | zaboravimo
+# imperativ & plur & second:  | zaboravite
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | zaboravljen
+# passive & sing & fem:  | zaboravljena
+# passive & sing & neu:  | zaboravljeno
+# passive & plur & male:  | zaboravljeni
+# passive & plur & fem:  | zaboravljene
+# passive & plur & neu:  | zaboravljena
 
 ---
 
