@@ -146,7 +146,7 @@ def PreGarbageFilter(txt: str) -> str:
     return txt
 
 def PostGarbageFilter(txt: str) -> str:
-    for toTrunk in ['/', '(']:
+    for toTrunk in ['/', '(', ',']:
         idx = txt.find(toTrunk)
         if idx != -1:
             txt = txt[:idx].strip()
