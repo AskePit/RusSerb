@@ -30,15 +30,26 @@ if len(sys.argv) > 1:
 
 # NOTE: each excercise should return `ExcerciseYield` object
 
+def NormalizeSentence(phrase: str):
+    res = ' '.join(phrase.split()).capitalize()
+    if res.startswith('(') and len(res) > 1:
+        res = res[:1] + res[1].upper() + res[2:]
+    return res
+
 class ExcerciseYield:
     title: str
     question: str
     # answer: str | list[str]
 
     def __init__(self, title, q, a):
-        self.title = title
-        self.question = q
+        self.title = NormalizeSentence(title)
+        self.question = NormalizeSentence(q)
         self.answer = a
+
+        if type(self.answer) is list:
+            self.answer = [NormalizeSentence(ans) for ans in self.answer if len(ans) > 0]
+        else:
+            self.answer = NormalizeSentence(self.answer)
 
 class ExcerciseType(Enum):
     phrases = 0

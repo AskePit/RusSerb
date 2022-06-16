@@ -27,14 +27,14 @@ class ToBeEx(Excercise):
 
         title = 'Переведите на сербский'
         rusNoParticle = [' ', ' не '][negative]
-        question = '{}{}{} ({}).'.format(pronoun.rus.capitalize(), rusNoParticle, occ.rus, occ.serb)
+        question = '{}{}{} ({})'.format(pronoun.rus, rusNoParticle, occ.rus, occ.serb)
 
         answer = []
         if negative:
-            answer = '({}) {} {}.'.format(pronoun.serb.capitalize(), tb.serb, occ.serb)
+            answer = '({}) {} {}'.format(pronoun.serb, tb.serb, occ.serb)
         else:
-            answer.append('{} {} {}.'.format(pronoun.serb.capitalize(), tb.serb, occ.serb))
-            answer.append('{} {}.'.format(occ.serb.capitalize(), tb.serb))
+            answer.append('{} {} {}'.format(pronoun.serb, tb.serb, occ.serb))
+            answer.append('{} {}'.format(occ.serb, tb.serb))
 
         return ExcerciseYield(title, question, answer)
 
@@ -59,14 +59,14 @@ class ToBeEx2(Excercise):
         occ = occupation.get(decl)
 
         title = 'Переведите на сербский'
-        question = '{} {} ({})?'.format(pronoun.rus.capitalize(), occ.rus, occ.serb)
+        question = '{} {} ({})?'.format(pronoun.rus, occ.rus, occ.serb)
 
         answer = []
         tb = GetVocabulary('tobe').get(decl)
         answer.append('Da li {} ({}) {}?'.format(tb.serb, pronoun.serb, occ.serb))
 
         tb = GetVocabulary('question_tobe').get(decl)
-        answer.append('{} li ({}) {}?'.format(tb.serb.capitalize(), pronoun.serb, occ.serb))
+        answer.append('{} li ({}) {}?'.format(tb.serb, pronoun.serb, occ.serb))
 
         return ExcerciseYield(title, question, answer)
 
@@ -96,13 +96,13 @@ class ToBeEx3(Excercise):
         occ = occupation.get(aDecl)
 
         title = 'Ответьте на вопрос'
-        question = '{} {} ({})?'.format(qPronoun.rus.capitalize(), occ.rus, occ.serb)
+        question = '{} {} ({})?'.format(qPronoun.rus, occ.rus, occ.serb)
 
         answer = []
         aTb = GetVocabulary('positive_tobe').get(aDecl)
-        answer.append(aTb.serb.capitalize() + '.')
+        answer.append(aTb.serb + '')
         aTb = GetVocabulary('tobe').get(aDecl)
-        answer.append('{} {} {}.'.format(aPronoun.serb.capitalize(), aTb.serb, occ.serb))
+        answer.append('{} {} {}'.format(aPronoun.serb, aTb.serb, occ.serb))
 
         return ExcerciseYield(title, question, answer)
 
@@ -218,8 +218,8 @@ class PointingEx(Excercise):
             distClarif = '(дальн.)'
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
-        question = '{}{} {} {} - {}.'.format(point.rus.capitalize(), distClarif, adj.rus, noun.rus, possess.rus)
-        answer = '{} {} {} {} {}.'.format(point.serb.capitalize(), adj.serb, noun.serb, tobe.serb, possess.serb)
+        question = '{}{} {} {} - {}'.format(point.rus, distClarif, adj.rus, noun.rus, possess.rus)
+        answer = '{} {} {} {} {}'.format(point.serb, adj.serb, noun.serb, tobe.serb, possess.serb)
 
         if lang:
             question, answer = answer, question
@@ -271,8 +271,8 @@ class ImatiEx(Excercise):
 
         title = 'Переведите на сербский'
         rusParticle = ['есть', 'нет'][negative]
-        question = 'У {} {} {}.'.format(rusPronounCorrected, rusParticle, rusNoun.rus)
-        answer = '{} {}.'.format(imatiCorrected.capitalize(), serbNoun.serb)
+        question = 'У {} {} {}'.format(rusPronounCorrected, rusParticle, rusNoun.rus)
+        answer = '{} {}'.format(imatiCorrected, serbNoun.serb)
 
         return ExcerciseYield(title, question, answer)
 
@@ -310,8 +310,8 @@ class VerbsEx(Excercise):
         verb = self.randomVerbsPool.yieldElem().get(decl)
 
         title = 'Переведите на сербский'
-        question = '{}{}{}.'.format(pronoun.rus.capitalize(), [' ', ' не '][negative], verb.rus)
-        answer = '{}{}{}.'.format(pronoun.serb.capitalize(), [' ', ' ne '][negative], verb.serb)
+        question = '{}{}{}'.format(pronoun.rus, [' ', ' не '][negative], verb.rus)
+        answer = '{}{}{}'.format(pronoun.serb, [' ', ' ne '][negative], verb.serb)
 
         return ExcerciseYield(title, question, answer)
 
@@ -363,8 +363,8 @@ class ModalVerbsEx(Excercise):
 
         title = 'Переведите на сербский'
 
-        question = '{}{}{} {}.'.format(rusPronoun.rus.capitalize(), [' ', ' не '][negative], modal.rus, rusVerb.rus)
-        answer = '{}{} da {}.'.format(['', 'Ne '][negative], [modal.serb.capitalize(), modal.serb][negative], serbVerb.serb)
+        question = '{}{}{} {}'.format(rusPronoun.rus, [' ', ' не '][negative], modal.rus, rusVerb.rus)
+        answer = '{}{} da {}'.format(['', 'Ne '][negative], [modal.serb, modal.serb][negative], serbVerb.serb)
 
         return ExcerciseYield(title, question, answer)
 
@@ -415,17 +415,17 @@ class PerfectPositiveEx(Excercise):
             elif decl.gender == Gender.neu:
                 clarification = '(ср.)'
 
-        question = '{}{}{}{}.'.format(subject.rus.capitalize(), clarification,  [' ', ' не '][negative], verb.rus)
+        question = '{}{}{}{}'.format(subject.rus, clarification,  [' ', ' не '][negative], verb.rus)
 
         if withOccupation:
-            answer = '{} {} {}.'.format(subject.serb.capitalize(), tb.serb, verb.serb)
+            answer = '{} {} {}'.format(subject.serb, tb.serb, verb.serb)
         else:
             answer = []
-            answer.append('{} {} {}.'.format(subject.serb.capitalize(), tb.serb, verb.serb))
+            answer.append('{} {} {}'.format(subject.serb, tb.serb, verb.serb))
             if negative:
-                answer.append('{} {}.'.format(tb.serb.capitalize(), verb.serb))
+                answer.append('{} {}'.format(tb.serb, verb.serb))
             else:
-                answer.append('{} {}.'.format(verb.serb.capitalize(), tb.serb))
+                answer.append('{} {}'.format(verb.serb, tb.serb))
 
         return ExcerciseYield(title, question, answer)
 
@@ -475,7 +475,7 @@ class PerfectQuestionsEx(Excercise):
             elif decl.gender == Gender.neu:
                 clarification = '(ср.)'
 
-        question = '{}{} {}?'.format(subject.rus.capitalize(), clarification, verb.rus)
+        question = '{}{} {}?'.format(subject.rus, clarification, verb.rus)
 
         answer = []
 
@@ -487,9 +487,9 @@ class PerfectQuestionsEx(Excercise):
 
         tb = GetVocabulary('question_tobe').get(decl)
         if withOccupation:
-            answer.append('{} li {} {}?'.format(tb.serb.capitalize(), subject.serb, verb.serb))
+            answer.append('{} li {} {}?'.format(tb.serb, subject.serb, verb.serb))
         else:
-            answer.append('{} li {}?'.format(tb.serb.capitalize(), verb.serb))
+            answer.append('{} li {}?'.format(tb.serb, verb.serb))
 
         return ExcerciseYield(title, question, answer)
 
@@ -526,6 +526,7 @@ class FuturPositiveEx(Excercise):
 
         cu = GetVocabulary(['cu', 'necu'][negative]).get(decl)
         verbWord = self.randomVerbsPool.yieldElem()
+        selfness = random.randint(0, 1)
 
         title = 'Переведите на сербский'
 
@@ -539,25 +540,25 @@ class FuturPositiveEx(Excercise):
             elif decl.gender == Gender.neu:
                 clarification = '(ср.)'
 
-        question = '{}{} {} {}.'.format(pronoun.rus.capitalize(), clarification, cu.rus, verbWord.get(Infinitive).rus)
+        question = '{}{} {} {}'.format(pronoun.rus, clarification, cu.rus, verbWord.get(Infinitive).getRusReflexive(selfness))
 
         answer = []
 
         if not negative:
             verb = verbWord.get(decl.clone().override(Time.futur))
-            answer.append('{}.'.format(verb.serb.capitalize()))
+            answer.append('{} {}'.format(verb.serb, verb.getSerbReflexive(selfness)))
 
             verb = verbWord.get(Infinitive)
-            answer.append('{} {} {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb))
+            answer.append('{} {} {} {}'.format(pronoun.serb, cu.serb, verb.getSerbReflexive(selfness), verb.serb))
             
             verb = verbWord.get(decl)
-            answer.append('{} {} da {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb))
+            answer.append('{} {} {} da {}'.format(pronoun.serb, cu.serb, verb.getSerbReflexive(selfness), verb.serb))
         else:
             verb = verbWord.get(Infinitive)
-            answer.append('({}) {} {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb))
+            answer.append('({}) {} {} {}'.format(pronoun.serb, cu.serb, verb.getSerbReflexive(selfness), verb.serb))
 
             verb = verbWord.get(decl)
-            answer.append('({}) {} da {}.'.format(pronoun.serb.capitalize(), cu.serb, verb.serb))
+            answer.append('({}) {} {} da {}'.format(pronoun.serb, cu.serb, verb.getSerbReflexive(selfness), verb.serb))
 
         return ExcerciseYield(title, question, answer)
 
@@ -586,15 +587,16 @@ class FuturQuestionsEx(Excercise):
 
         cu = GetVocabulary('cu').get(decl)
         verb = self.randomVerbsPool.yieldElem().get(Infinitive)
+        selfness = random.randint(0, 1)
 
         title = 'Переведите на сербский'
 
-        question = '{} {} {}?'.format(pronoun.rus.capitalize(), cu.rus, verb.rus)
+        question = '{} {} {}?'.format(pronoun.rus, cu.rus, verb.getRusReflexive(selfness))
         answer = []
 
-        answer.append('Da li {} {}?'.format(cu.serb, verb.serb))
+        answer.append('Da li {} {} {}?'.format(cu.serb, verb.getSerbReflexive(selfness), verb.serb))
 
         cu = GetVocabulary('hocu').get(decl)
-        answer.append('{} li {}?'.format(cu.serb.capitalize(), verb.serb))
+        answer.append('{} li {} {}?'.format(cu.serb, verb.getSerbReflexive(selfness), verb.serb))
 
         return ExcerciseYield(title, question, answer)

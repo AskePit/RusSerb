@@ -1,7 +1,7 @@
 declined verb
 
 birati
-a
+a & no_se
 
 inf: выбирать | birati
 
@@ -89,7 +89,7 @@ imperfect & plur & third: выбирали | birahu
 ---
 
 biti
-e
+e & no_se
 
 inf: быть | biti
 
@@ -177,7 +177,7 @@ imperfect & plur & third:  | bijahu
 ---
 
 crtati
-a
+a & no_se
 
 inf: рисовать | crtati
 
@@ -265,7 +265,7 @@ imperfect & plur & third: рисовали | crtahu
 ---
 
 dobiti
-e
+e & no_se
 
 inf: получить | dobiti
 
@@ -353,7 +353,7 @@ imperfect & plur & third: получили |
 ---
 
 doneti
-e
+e & no_se
 
 inf: принести | doneti
 
@@ -441,7 +441,7 @@ imperfect & plur & third: принесли |
 ---
 
 doručkovati
-e
+e & no_se
 
 inf: завтракать | doručkovati
 
@@ -529,7 +529,7 @@ imperfect & plur & third: завтракали | doručkovahu
 ---
 
 doći
-e
+e & no_se
 
 inf: прийти | doći
 
@@ -617,7 +617,7 @@ imperfect & plur & third: пришли |
 ---
 
 gledati
-a
+a & opt_se
 
 inf: смотреть | gledati
 
@@ -705,7 +705,7 @@ imperfect & plur & third: смотрели | gledahu
 ---
 
 govoriti
-i
+i & no_se
 
 inf: говорить(govoriti) | govoriti
 
@@ -793,7 +793,7 @@ imperfect & plur & third: говорили(govoriti) | govorahu
 ---
 
 hodati
-a
+a & no_se
 
 inf: ходить | hodati
 
@@ -881,7 +881,7 @@ imperfect & plur & third: ходили | hodahu
 ---
 
 igrati
-a
+a & opt_se
 
 inf: играть | igrati
 
@@ -969,7 +969,7 @@ imperfect & plur & third: играли | igrahu
 ---
 
 ići
-e
+e & no_se
 
 inf: идти | ići
 
@@ -1057,7 +1057,7 @@ imperfect & plur & third: шли | iđahu
 ---
 
 jesti
-e
+e & no_se
 
 inf: есть | jesti
 
@@ -1145,7 +1145,7 @@ imperfect & plur & third:  | jedijahu
 ---
 
 kazati
-e
+e & no_se
 
 inf: говорить(kazati) | kazati
 
@@ -1233,7 +1233,7 @@ imperfect & plur & third: говорили(kazati) |
 ---
 
 kopati
-a
+a & no_se
 
 inf: копать | kopati
 
@@ -1321,7 +1321,7 @@ imperfect & plur & third: копали | kopahu
 ---
 
 koristiti
-i
+i & opt_se
 
 inf: использовать | koristiti
 
@@ -1409,7 +1409,7 @@ imperfect & plur & third: использовали | korišćahu
 ---
 
 kupovati
-e
+e & opt_se
 
 inf: покупать | kupovati
 
@@ -1497,7 +1497,7 @@ imperfect & plur & third: покупали | kupovahu
 ---
 
 kuvati
-a
+a & opt_se
 
 inf: готовить | kuvati
 
@@ -1585,7 +1585,7 @@ imperfect & plur & third: готовили | kuvahu
 ---
 
 ležati
-i
+i & no_se
 
 inf: лежать | ležati
 
@@ -1673,7 +1673,7 @@ imperfect & plur & third: лежали | ležahu
 ---
 
 misliti
-i
+i & no_se
 
 inf: думать(misliti) | misliti
 
@@ -1761,7 +1761,7 @@ imperfect & plur & third: думали(misliti) | mišljahu
 ---
 
 odmarati
-a
+a & se
 
 inf: отдыхать | odmarati
 
@@ -1849,7 +1849,7 @@ imperfect & plur & third: отдыхали | odmarahu
 ---
 
 pakovati
-e
+e & opt_se
 
 inf: собирать | pakovati
 
@@ -1937,7 +1937,7 @@ imperfect & plur & third: собирали | pakivahu
 ---
 
 pevati
-a
+a & no_se
 
 inf: петь | pevati
 
@@ -2025,7 +2025,7 @@ imperfect & plur & third: пели | pevahu
 ---
 
 pisati
-e
+e & no_se
 
 inf: писать | pisati
 
@@ -2113,7 +2113,7 @@ imperfect & plur & third: писали | pisahu
 ---
 
 pitati
-a
+a & opt_se
 
 inf: спрашивать | pitati
 
@@ -2201,7 +2201,7 @@ imperfect & plur & third: спрашивали | pitahu
 ---
 
 piti
-e
+e & no_se
 
 inf: пить | piti
 
@@ -2289,7 +2289,7 @@ imperfect & plur & third: пили | pijahu
 ---
 
 planirati
-a
+a & no_se
 
 inf: планировать | planirati
 
@@ -2377,7 +2377,7 @@ imperfect & plur & third: планировали | planirahu
 ---
 
 plivati
-a
+a & no_se
 
 inf: плавать | plivati
 
@@ -2465,7 +2465,7 @@ imperfect & plur & third: плавали | plivaše
 ---
 
 posetiti
-i
+i & opt_se
 
 inf: посетить | posetiti
 
@@ -2553,7 +2553,7 @@ imperfect & plur & third: посетили |
 ---
 
 prati
-e
+e & opt_se
 
 inf: стирать | prati
 
@@ -2641,7 +2641,7 @@ imperfect & plur & third: стирали | prahu
 ---
 
 praviti
-i
+i & opt_se
 
 inf: делать(praviti) | praviti
 
@@ -2729,7 +2729,7 @@ imperfect & plur & third: делали | pravljahu
 ---
 
 pričati
-a
+a & no_se
 
 inf: разговаривать | pričati
 
@@ -2817,7 +2817,7 @@ imperfect & plur & third: разговаривали | pričahu
 ---
 
 prodavati
-e
+e & no_se
 
 inf: продавать | prodavati
 
@@ -2905,7 +2905,7 @@ imperfect & plur & third: продавали | prodavahu
 ---
 
 psovati
-e
+e & no_se
 
 inf: ругаться | psovati
 
@@ -2993,7 +2993,7 @@ imperfect & plur & third: ругались | psovahu
 ---
 
 putovati
-e
+e & no_se
 
 inf: путешествовать | putovati
 
@@ -3081,7 +3081,7 @@ imperfect & plur & third: путешествовали | putovahu
 ---
 
 raditi
-i
+i & no_se
 
 inf: делать(raditi) | raditi
 
@@ -3169,7 +3169,7 @@ imperfect & plur & third: делали | rađahu
 ---
 
 razgovarati
-a
+a & no_se
 
 inf: разговаривать | razgovarati
 
@@ -3257,7 +3257,7 @@ imperfect & plur & third: разговаривали | razgovarahu
 ---
 
 razmišljati
-a
+a & no_se
 
 inf: думать(razmišljati) | razmišljati
 
@@ -3345,7 +3345,7 @@ imperfect & plur & third: думали(razmišljati) | razmišljahu
 ---
 
 razumeti
-e
+e & no_se
 
 inf: понимать | razumeti
 
@@ -3433,7 +3433,7 @@ imperfect & plur & third: понимали |
 ---
 
 reći
-e
+e & no_se
 
 inf: сказать | reći
 
@@ -3521,7 +3521,7 @@ imperfect & plur & third: сказали |
 ---
 
 ručati
-a
+a & no_se
 
 inf: обедать | ručati
 
@@ -3609,7 +3609,7 @@ imperfect & plur & third: обедали | ručahu
 ---
 
 skakati
-e
+e & no_se
 
 inf: прыгать | skakati
 
@@ -3697,7 +3697,7 @@ imperfect & plur & third: прыгали | skakahu
 ---
 
 slikati
-a
+a & opt_se
 
 inf: фотографировать | slikati
 
@@ -3785,7 +3785,7 @@ imperfect & plur & third: фотографировали | slikahu
 ---
 
 slušati
-a
+a & no_se
 
 inf: слушать | slušati
 
@@ -3873,7 +3873,7 @@ imperfect & plur & third: слушали | slušahu
 ---
 
 spavati
-a
+a & no_se
 
 inf: спать | spavati
 
@@ -3961,7 +3961,7 @@ imperfect & plur & third: спали | spavahu
 ---
 
 spremati
-a
+a & opt_se
 
 inf: готовить | spremati
 
@@ -4049,7 +4049,7 @@ imperfect & plur & third: готовили | spremahu
 ---
 
 stajati
-e
+e & no_se
 
 inf: стоять | stajati
 
@@ -4137,7 +4137,7 @@ imperfect & plur & third: стояли | stajahu  stajahu
 ---
 
 svirati
-a
+a & no_se
 
 inf: играть | svirati
 
@@ -4225,7 +4225,7 @@ imperfect & plur & third: играли | svirahu
 ---
 
 tražiti
-i
+i & opt_se
 
 inf: искать | tražiti
 
@@ -4313,7 +4313,7 @@ imperfect & plur & third: искали | tražahu
 ---
 
 trenirati
-a
+a & no_se
 
 inf: заниматься спортом | trenirati
 
@@ -4401,7 +4401,7 @@ imperfect & plur & third:  | trenirahu
 ---
 
 trčati
-i
+i & no_se
 
 inf: бежать | trčati
 
@@ -4489,7 +4489,7 @@ imperfect & plur & third: бежали | trčahu
 ---
 
 tuširati
-a
+a & se
 
 inf: принимать душ | tuširati
 
@@ -4577,7 +4577,7 @@ imperfect & plur & third:  | tuširahu
 ---
 
 učiti
-i
+i & no_se
 
 inf: учить | učiti
 
@@ -4665,7 +4665,7 @@ imperfect & plur & third: учили | učahu
 ---
 
 večerati
-a
+a & no_se
 
 inf: ужинать | večerati
 
@@ -4753,7 +4753,7 @@ imperfect & plur & third: ужинали | večeravahu
 ---
 
 voziti
-i
+i & no_se
 
 inf: водить | voziti
 
@@ -4841,7 +4841,7 @@ imperfect & plur & third: водили | vožahu
 ---
 
 zaboraviti
-i
+i & no_se
 
 inf: забыть | zaboraviti
 
@@ -4929,7 +4929,7 @@ imperfect & plur & third:  |
 ---
 
 zvati
-e
+e & opt_se
 
 inf: звать | zvati
 
@@ -5017,7 +5017,7 @@ imperfect & plur & third: звали | zvahu
 ---
 
 čekati
-a
+a & no_se
 
 inf: ждать | čekati
 
@@ -5105,7 +5105,7 @@ imperfect & plur & third: ждали | čekahu
 ---
 
 čitati
-a
+a & no_se
 
 inf: читать | čitati
 
@@ -5193,7 +5193,7 @@ imperfect & plur & third: читали | čitahu
 ---
 
 čuti
-e
+e & opt_se
 
 inf: слышать | čuti
 
@@ -5281,7 +5281,7 @@ imperfect & plur & third: слышали | čujahu
 ---
 
 šetati
-e
+e & se
 
 inf: гулять | šetati
 
@@ -5369,7 +5369,7 @@ imperfect & plur & third: гуляли | šetahu
 ---
 
 živeti
-i
+i & no_se
 
 inf: жить | živeti
 

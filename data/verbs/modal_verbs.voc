@@ -1,7 +1,7 @@
 declined verb
 
 hteti
-e
+e & opt_se
 
 inf: хотеть | hteti
 
@@ -89,7 +89,7 @@ imperfect & plur & third: хотели | hoćahu
 ---
 
 morati
-a
+a & no_se
 
 inf: должен | morati
 
@@ -183,7 +183,7 @@ imperfect & plur & third:  | morahu
 ---
 
 moći
-e
+e & no_se
 
 inf: мочь(moći) | moći
 
@@ -271,7 +271,7 @@ imperfect & plur & third: могли | mogahu
 ---
 
 mrzeti
-i
+i & no_se
 
 inf: ненавидеть | mrzeti
 
@@ -359,7 +359,7 @@ imperfect & plur & third: ненавидели | mržahu
 ---
 
 obožavati
-a
+a & no_se
 
 inf: обожать | obožavati
 
@@ -447,7 +447,7 @@ imperfect & plur & third: обожали | obožavahu
 ---
 
 smeti
-e
+e & no_se
 
 inf: мочь(smeti) | smeti
 
@@ -535,7 +535,7 @@ imperfect & plur & third: могли | smejahu
 ---
 
 treba
-none
+a & no_se
 
 inf: надо | treba
 
@@ -623,7 +623,7 @@ imperfect & plur & third:  |
 ---
 
 trebati
-a
+a & no_se
 
 inf: нуждаться | trebati
 
@@ -711,7 +711,7 @@ imperfect & plur & third: нуждались | trebahu
 ---
 
 umeti
-e
+e & no_se
 
 inf: уметь(umeti) | umeti
 
@@ -799,7 +799,7 @@ imperfect & plur & third: умели(umeti) | umijahu
 ---
 
 voleti
-i
+i & no_se
 
 inf: любить | voleti
 
@@ -887,7 +887,7 @@ imperfect & plur & third: любили | voljahu
 ---
 
 znati
-a
+a & no_se
 
 inf: уметь(znati) | znati
 
@@ -975,7 +975,7 @@ imperfect & plur & third: умели(znati) | znahu
 ---
 
 želeti
-i
+i & no_se
 
 inf: желать | želeti
 

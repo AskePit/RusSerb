@@ -86,6 +86,11 @@ class VerbConjugation(Enum):
     i = 1
     e = 2
 
+class Reflexiveness(Enum):
+    no_se = 0
+    opt_se = 1
+    se = 2
+
 DeclinationAttributesMap = {
     'person': Person,
     'gender': Gender,
@@ -95,7 +100,8 @@ DeclinationAttributesMap = {
     'distance': Distance,
     'exclusive': ExclusiveForm,
     'time': Time,
-    'verbConjugation': VerbConjugation
+    'conjugation': VerbConjugation,
+    'reflexiveness': Reflexiveness
 }
 
 class Declination:
@@ -350,23 +356,59 @@ class Declination:
 
 Infinitive = Declination.Parse('inf')
 
+def GetRusReflexive(rusWord: str, decl: Declination):
+    if rusWord.endswith('сь') or rusWord.endswith('ся'):
+        return rusWord
+    
+    if hasattr(decl, 'number') and hasattr(decl, 'person'):
+        firstSing  = decl.person == Person.first  and decl.number == Number.sing
+        secondPlur = decl.person == Person.second and decl.number == Number.plur
+
+        if firstSing or secondPlur:
+            return rusWord + 'сь'
+
+    return rusWord + 'ся'
+
+def GetSerbReflexive(decl: Declination):
+    if hasattr(decl, 'reflexiveness'):
+        if decl.reflexiveness == Reflexiveness.no_se:
+            return ''
+        
+        return 'se'
+    
+    return ''
+
 # exact declination of `Word` in both languages
 class DeclinedWord:
+    # meta: Word
     declination: Declination
     rus: str
     serb: str
 
-    def Make(declination, rus, serb):
+    def Make(meta, declination, rus, serb):
         res = DeclinedWord()
+        res.meta = meta
         res.declination = declination
         res.rus = rus
         res.serb = serb
         return res
+    
+    def getRusReflexive(self, reflection: bool):
+        if not reflection:
+            return self.rus
+
+        if self.getSerbReflexive(reflection) == '':
+            return self.rus
+        return GetRusReflexive(self.rus, self.declination)
+    
+    def getSerbReflexive(self, reflection: bool):
+        return GetSerbReflexive(self.meta.metaDeclination) if reflection else ''
 
 # pair of serb and rus words in two different declinations
 # stores deep copies of declinations and strings, so you can play
 # with it as you like
 class DeclinedPair:
+    # meta: Word
     serbDeclination: Declination
     rusDeclination: Declination
     rus: str
@@ -374,6 +416,7 @@ class DeclinedPair:
 
     def Make(declinedWord: DeclinedWord): # -> DeclinedPair
         res = DeclinedPair()
+        res.meta = declinedWord.meta
         res.serbDeclination = declinedWord.declination.clone()
         res.rusDeclination = declinedWord.declination.clone()
         res.rus = copy.deepcopy(declinedWord.rus)
@@ -413,6 +456,14 @@ class DeclinedPair:
         self.serbDeclination.parseOverride(overrideForms)
         self.rusDeclination.parseOverride(overrideForms)
         return self
+    
+    def getRusReflexive(self):
+        if self.getSerbReflexive() == '':
+            return self.rus
+        return GetRusReflexive(self.rus, self.rusDeclination)
+    
+    def getSerbReflexive(self):
+        return GetSerbReflexive(self.serbDeclination)
 
 class Word:
     speechPart: SpeechPart
