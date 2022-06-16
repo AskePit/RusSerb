@@ -3,88 +3,88 @@ declined verb
 imati
 a & no_se
 
-inf: иметь | imati
+inf: imati | иметь
 
-present & sing & first: имею | imam
-present & sing & second: имеешь | imaš
-present & sing & third: имеет | ima
-present & plur & first: имеем | imamo
-present & plur & second: имеете | imate
-present & plur & third: имеют | imaju
+present & sing & first: imam | имею
+present & sing & second: imaš | имеешь
+present & sing & third: ima | имеет
+present & plur & first: imamo | имеем
+present & plur & second: imate | имеете
+present & plur & third: imaju | имеют
 
-perfect & sing & male: имел | imao
-perfect & sing & fem: имела | imala
-perfect & sing & neu: имело | imalo
-perfect & plur & male: имели | imali
-perfect & plur & fem: имели | imale
-perfect & plur & neu: имели | imala
+perfect & sing & male: imao | имел
+perfect & sing & fem: imala | имела
+perfect & sing & neu: imalo | имело
+perfect & plur & male: imali | имели
+perfect & plur & fem: imale | имели
+perfect & plur & neu: imala | имели
 
-futur & sing & first:  | imaću
-futur & sing & second:  | imaćeš
-futur & sing & third:  | imaće
-futur & plur & first:  | imaćemo
-futur & plur & second:  | imaćete
-futur & plur & third:  | imaće
+futur & sing & first: imaću |
+futur & sing & second: imaćeš |
+futur & sing & third: imaće |
+futur & plur & first: imaćemo |
+futur & plur & second: imaćete |
+futur & plur & third: imaće |
 
-imperfect & sing & first: имел | imah
-imperfect & sing & second: имела | imaše
-imperfect & sing & third: имело | imaše
-imperfect & plur & first: имели | imasmo
-imperfect & plur & second: имели | imaste
-imperfect & plur & third: имели | imahu
+imperfect & sing & first: imah | имел
+imperfect & sing & second: imaše | имела
+imperfect & sing & third: imaše | имело
+imperfect & plur & first: imasmo | имели
+imperfect & plur & second: imaste | имели
+imperfect & plur & third: imahu | имели
 
-# participle & present:  | ìmajući
-# participle & past:  | 
-# noun:  | ìmanje
+# participle & present: ìmajući |
+# participle & past: |
+# noun: ìmanje |
 
-# futur & sing & first:  | imat ću
-# futur & sing & second:  | imat ćeš
-# futur & sing & third:  | imat će
-# futur & plur & first:  | imat ćemo
-# futur & plur & second:  | imat ćete
-# futur & plur & third:  | imat će
+# futur & sing & first: imat ću |
+# futur & sing & second: imat ćeš |
+# futur & sing & third: imat će |
+# futur & plur & first: imat ćemo |
+# futur & plur & second: imat ćete |
+# futur & plur & third: imat će |
 
-# futur2 & sing & first:  | budem imao
-# futur2 & sing & second:  | budeš imao
-# futur2 & sing & third:  | bude imao
-# futur2 & plur & first:  | budemo imali
-# futur2 & plur & second:  | budete imali
-# futur2 & plur & third:  | budu imali
+# futur2 & sing & first: budem imao |
+# futur2 & sing & second: budeš imao |
+# futur2 & sing & third: bude imao |
+# futur2 & plur & first: budemo imali |
+# futur2 & plur & second: budete imali |
+# futur2 & plur & third: budu imali |
 
-# aorist & sing & first:  | 
-# aorist & sing & second:  | 
-# aorist & sing & third:  | 
-# aorist & plur & first:  | 
-# aorist & plur & second:  | 
-# aorist & plur & third:  | 
+# aorist & sing & first: |
+# aorist & sing & second: |
+# aorist & sing & third: |
+# aorist & plur & first: |
+# aorist & plur & second: |
+# aorist & plur & third: |
 
-# cond1 & sing & first:  | imao bih
-# cond1 & sing & second:  | imao bi
-# cond1 & sing & third:  | imao bi
-# cond1 & plur & first:  | imali bismo
-# cond1 & plur & second:  | imali biste
-# cond1 & plur & third:  | imali bi
+# cond1 & sing & first: imao bih |
+# cond1 & sing & second: imao bi |
+# cond1 & sing & third: imao bi |
+# cond1 & plur & first: imali bismo |
+# cond1 & plur & second: imali biste |
+# cond1 & plur & third: imali bi |
 
-# cond2 & sing & first:  | bio bih imao
-# cond2 & sing & second:  | bio bi imao
-# cond2 & sing & third:  | bio bi imao
-# cond2 & plur & first:  | bili bismo imali
-# cond2 & plur & second:  | bili biste imali
-# cond2 & plur & third:  | bili bi imali
+# cond2 & sing & first: bio bih imao |
+# cond2 & sing & second: bio bi imao |
+# cond2 & sing & third: bio bi imao |
+# cond2 & plur & first: bili bismo imali |
+# cond2 & plur & second: bili biste imali |
+# cond2 & plur & third: bili bi imali |
 
-# imperativ & sing & first:  | 
-# imperativ & sing & second: имей | imaj
-# imperativ & sing & third:  | 
-# imperativ & plur & first:  | imajmo
-# imperativ & plur & second: имейте | imajte
-# imperativ & plur & third:  | 
+# imperativ & sing & first: |
+# imperativ & sing & second: imaj | имей
+# imperativ & sing & third: |
+# imperativ & plur & first: imajmo |
+# imperativ & plur & second: imajte | имейте
+# imperativ & plur & third: |
 
-# passive & sing & male:  | 
-# passive & sing & fem:  | 
-# passive & sing & neu:  | 
-# passive & plur & male:  | 
-# passive & plur & fem:  | 
-# passive & plur & neu:  | 
+# passive & sing & male: |
+# passive & sing & fem: |
+# passive & sing & neu: |
+# passive & plur & male: |
+# passive & plur & fem: |
+# passive & plur & neu: |
 
 ---
 

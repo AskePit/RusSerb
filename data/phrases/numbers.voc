@@ -1,57 +1,57 @@
 phrases
 
-ноль | nula | 0
-один | jedan | 1
-два | dva | 2
-три | tri | 3
-четыре | četiri | 4
-пять | pet | 5
-шесть | šest | 6
-семь | sedam | 7
-восемь | osam | 8
-девять | devet | 9
-десять | deset | 10
+nula | ноль | 0
+jedan | один | 1
+dva | два | 2
+tri | три | 3
+četiri | четыре | 4
+pet | пять | 5
+šest | шесть | 6
+sedam | семь | 7
+osam | восемь | 8
+devet | девять | 9
+deset | десять | 10
 
-одиннадцать | jedanaest | 11
-двеннадцать | dvanaest | 12
-тринадцать | trinaest | 13
-четрнадцать | četrnaest | 14
-пятнадцать | petnaest | 15
-шестнадцать | šesnaest | 16
-семнадцать | sedamnaest | 17
-восемнадцать | osamnaest | 18
-девятнадцать | devetnaest | 19
+jedanaest | одиннадцать | 11
+dvanaest | двеннадцать | 12
+trinaest | тринадцать | 13
+četrnaest | четрнадцать | 14
+petnaest | пятнадцать | 15
+šesnaest | шестнадцать | 16
+sedamnaest | семнадцать | 17
+osamnaest | восемнадцать | 18
+devetnaest | девятнадцать | 19
 
-двадцать | dvadeset | 20
-тридцать | trideset | 30
-сорок | četrdeset | 40
-пятьдесят | pedeset | 50
-шестьдесят | šezdeset | 60
-семьдесят | sedamdeset | 70
-восемьдесят | osamdeset | 80
-девяносто | devedeset | 90
+dvadeset | двадцать | 20
+trideset | тридцать | 30
+četrdeset | сорок | 40
+pedeset | пятьдесят | 50
+šezdeset | шестьдесят | 60
+sedamdeset | семьдесят | 70
+osamdeset | восемьдесят | 80
+devedeset | девяносто | 90
 
-сто | sto | 100
-двести | dvesta | 200
-триста | trista | 300
-четыреста | četiristo | 400
-пятьсот | petsto | 500
-шестьсот | šeststo | 600
-семьсот | sedamsto | 700
-восемьсот | osamsto | 800
-девятьсот | devetsto | 900
+sto | сто | 100
+dvesta | двести | 200
+trista | триста | 300
+četiristo | четыреста | 400
+petsto | пятьсот | 500
+šeststo | шестьсот | 600
+sedamsto | семьсот | 700
+osamsto | восемьсот | 800
+devetsto | девятьсот | 900
 
-тысяча | hiljadu | 1000
-две тысячи | dve hiljade | 2000
-три тысячи | tri hiljade | 3000
-четыре тысячи | četiri hiljade | 4000
-пять тысяч | pet hiljada | 5000
-шесть тысяч | šest hiljada | 6000
-семь тысяч | sedam hiljada | 7000
-восемь тысяч | osam hiljada | 8000
-девять тысяч | devet hiljada | 9000
-десять тысяч | deset hiljada | 10000
+hiljadu | тысяча | 1000
+dve hiljade | две тысячи | 2000
+tri hiljade | три тысячи | 3000
+četiri hiljade | четыре тысячи | 4000
+pet hiljada | пять тысяч | 5000
+šest hiljada | шесть тысяч | 6000
+sedam hiljada | семь тысяч | 7000
+osam hiljada | восемь тысяч | 8000
+devet hiljada | девять тысяч | 9000
+deset hiljada | десять тысяч | 10000
 
-миллион | milion | 1000000
-один миллион | jedan milion | 1000000
-два миллиона | dva miliona | 2000000
+milion | миллион | 1000000
+jedan milion | один миллион | 1000000
+dva miliona | два миллиона | 2000000

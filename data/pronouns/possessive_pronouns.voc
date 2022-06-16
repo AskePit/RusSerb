@@ -3,422 +3,422 @@ declined pronoun
 мой
 first & sing & unisex
 
-male & sing & nom:  мой   | moj
-male & sing & gen:  моего | mojega
-male & sing & dat:  моему | mojemu
-male & sing & aku:  мой   | mojega
-male & sing & inst: моим  | mojim
-male & sing & lok:  моём  | mojem
+male & sing & nom: moj | мой
+male & sing & gen: mojega | моего
+male & sing & dat: mojemu | моему
+male & sing & aku: mojega | мой
+male & sing & inst: mojim | моим
+male & sing & lok: mojem | моём
 
-fem & sing & nom:  моя  | moja
-fem & sing & gen:  моей | moje
-fem & sing & dat:  моей | mojoj
-fem & sing & aku:  мою  | moju
-fem & sing & inst: моей | mojom
-fem & sing & lok:  моей | mojoj
+fem & sing & nom: moja | моя
+fem & sing & gen: moje | моей
+fem & sing & dat: mojoj | моей
+fem & sing & aku: moju | мою
+fem & sing & inst: mojom | моей
+fem & sing & lok: mojoj | моей
 
-neu & sing & nom:  моё   | moje
-neu & sing & gen:  моего | mojega
-neu & sing & dat:  моему | mojemu
-neu & sing & aku:  моё   | mojega
-neu & sing & inst: моим  | mojim
-neu & sing & lok:  моём  | mojem
+neu & sing & nom: moje | моё
+neu & sing & gen: mojega | моего
+neu & sing & dat: mojemu | моему
+neu & sing & aku: mojega | моё
+neu & sing & inst: mojim | моим
+neu & sing & lok: mojem | моём
 
-male & plur & nom:  мои   | moji
-male & plur & gen:  моих  | mojih
-male & plur & dat:  моим  | mojim
-male & plur & aku:  моих  | moje
-male & plur & inst: моими | mojim
-male & plur & lok:  моих  | mojim
+male & plur & nom: moji | мои
+male & plur & gen: mojih | моих
+male & plur & dat: mojim | моим
+male & plur & aku: moje | моих
+male & plur & inst: mojim | моими
+male & plur & lok: mojim | моих
 
-fem & plur & nom:  мои   | moje
-fem & plur & gen:  моих  | mojih
-fem & plur & dat:  моим  | mojim
-fem & plur & aku:  моих  | moje
-fem & plur & inst: моими | mojim
-fem & plur & lok:  моих  | mojim
+fem & plur & nom: moje | мои
+fem & plur & gen: mojih | моих
+fem & plur & dat: mojim | моим
+fem & plur & aku: moje | моих
+fem & plur & inst: mojim | моими
+fem & plur & lok: mojim | моих
 
-neu & plur & nom:  мои   | moja
-neu & plur & gen:  моих  | mojih
-neu & plur & dat:  моим  | mojim
-neu & plur & aku:  моих  | moja
-neu & plur & inst: моими | mojim
-neu & plur & lok:  моих  | mojim
+neu & plur & nom: moja | мои
+neu & plur & gen: mojih | моих
+neu & plur & dat: mojim | моим
+neu & plur & aku: moja | моих
+neu & plur & inst: mojim | моими
+neu & plur & lok: mojim | моих
 
 ---
 
 твой
 second & sing & unisex
 
-male & sing & nom:  твой   | tvoj
-male & sing & gen:  твоего | tvojega
-male & sing & dat:  твоему | tvojemu
-male & sing & aku:  твой   | tvojega
-male & sing & inst: твоим  | tvojim
-male & sing & lok:  твоём  | tvojem
+male & sing & nom: tvoj | твой
+male & sing & gen: tvojega | твоего
+male & sing & dat: tvojemu | твоему
+male & sing & aku: tvojega | твой
+male & sing & inst: tvojim | твоим
+male & sing & lok: tvojem | твоём
 
-fem & sing & nom:  твоя  | tvoja
-fem & sing & gen:  твоей | tvoje
-fem & sing & dat:  твоей | tvojoj
-fem & sing & aku:  твою  | tvoju
-fem & sing & inst: твоей | tvojom
-fem & sing & lok:  твоей | tvojoj
+fem & sing & nom: tvoja | твоя
+fem & sing & gen: tvoje | твоей
+fem & sing & dat: tvojoj | твоей
+fem & sing & aku: tvoju | твою
+fem & sing & inst: tvojom | твоей
+fem & sing & lok: tvojoj | твоей
 
-neu & sing & nom:  твоё   | tvoje
-neu & sing & gen:  твоего | tvojega
-neu & sing & dat:  твоему | tvojemu
-neu & sing & aku:  твоё   | tvojega
-neu & sing & inst: твоим  | tvojim
-neu & sing & lok:  твоём  | tvojem
+neu & sing & nom: tvoje | твоё
+neu & sing & gen: tvojega | твоего
+neu & sing & dat: tvojemu | твоему
+neu & sing & aku: tvojega | твоё
+neu & sing & inst: tvojim | твоим
+neu & sing & lok: tvojem | твоём
 
-male & plur & nom:  твои   | tvoji
-male & plur & gen:  твоих  | tvojih
-male & plur & dat:  твоим  | tvojim
-male & plur & aku:  твоих  | tvoje
-male & plur & inst: твоими | tvojim
-male & plur & lok:  твоих  | tvojim
+male & plur & nom: tvoji | твои
+male & plur & gen: tvojih | твоих
+male & plur & dat: tvojim | твоим
+male & plur & aku: tvoje | твоих
+male & plur & inst: tvojim | твоими
+male & plur & lok: tvojim | твоих
 
-fem & plur & nom:  твои   | tvoje
-fem & plur & gen:  твоих  | tvojih
-fem & plur & dat:  твоим  | tvojim
-fem & plur & aku:  твоих  | tvoje
-fem & plur & inst: твоими | tvojim
-fem & plur & lok:  твоих  | tvojim
+fem & plur & nom: tvoje | твои
+fem & plur & gen: tvojih | твоих
+fem & plur & dat: tvojim | твоим
+fem & plur & aku: tvoje | твоих
+fem & plur & inst: tvojim | твоими
+fem & plur & lok: tvojim | твоих
 
-neu & plur & nom:  твои   | tvoja
-neu & plur & gen:  твоих  | tvojih
-neu & plur & dat:  твоим  | tvojim
-neu & plur & aku:  твоих  | tvoja
-neu & plur & inst: твоими | tvojim
-neu & plur & lok:  твоих  | tvojim
+neu & plur & nom: tvoja | твои
+neu & plur & gen: tvojih | твоих
+neu & plur & dat: tvojim | твоим
+neu & plur & aku: tvoja | твоих
+neu & plur & inst: tvojim | твоими
+neu & plur & lok: tvojim | твоих
 
 ---
 
 свой
 gen
 
-male & sing & nom:  свой   | svoj
-male & sing & gen:  своего | svojega
-male & sing & dat:  своему | svojemu
-male & sing & aku:  свой   | svojega
-male & sing & inst: своим  | svojim
-male & sing & lok:  своём  | svojem
+male & sing & nom: svoj | свой
+male & sing & gen: svojega | своего
+male & sing & dat: svojemu | своему
+male & sing & aku: svojega | свой
+male & sing & inst: svojim | своим
+male & sing & lok: svojem | своём
 
-fem & sing & nom:  своя  | svoja
-fem & sing & gen:  своей | svoje
-fem & sing & dat:  своей | svojoj
-fem & sing & aku:  свою  | svoju
-fem & sing & inst: своей | svojom
-fem & sing & lok:  своей | svojoj
+fem & sing & nom: svoja | своя
+fem & sing & gen: svoje | своей
+fem & sing & dat: svojoj | своей
+fem & sing & aku: svoju | свою
+fem & sing & inst: svojom | своей
+fem & sing & lok: svojoj | своей
 
-neu & sing & nom:  своё   | svoje
-neu & sing & gen:  своего | svojega
-neu & sing & dat:  своему | svojemu
-neu & sing & aku:  своё   | svojega
-neu & sing & inst: своим  | svojim
-neu & sing & lok:  своём  | svojem
+neu & sing & nom: svoje | своё
+neu & sing & gen: svojega | своего
+neu & sing & dat: svojemu | своему
+neu & sing & aku: svojega | своё
+neu & sing & inst: svojim | своим
+neu & sing & lok: svojem | своём
 
-male & plur & nom:  свои   | svoji
-male & plur & gen:  своих  | svojih
-male & plur & dat:  своим  | svojim
-male & plur & aku:  своих  | svoje
-male & plur & inst: своими | svojim
-male & plur & lok:  своих  | svojim
+male & plur & nom: svoji | свои
+male & plur & gen: svojih | своих
+male & plur & dat: svojim | своим
+male & plur & aku: svoje | своих
+male & plur & inst: svojim | своими
+male & plur & lok: svojim | своих
 
-fem & plur & nom:  свои   | svoje
-fem & plur & gen:  своих  | svojih
-fem & plur & dat:  своим  | svojim
-fem & plur & aku:  своих  | svoje
-fem & plur & inst: своими | svojim
-fem & plur & lok:  своих  | svojim
+fem & plur & nom: svoje | свои
+fem & plur & gen: svojih | своих
+fem & plur & dat: svojim | своим
+fem & plur & aku: svoje | своих
+fem & plur & inst: svojim | своими
+fem & plur & lok: svojim | своих
 
-neu & plur & nom:  свои   | svoja
-neu & plur & gen:  своих  | svojih
-neu & plur & dat:  своим  | svojim
-neu & plur & aku:  своих  | svoja
-neu & plur & inst: своими | svojim
-neu & plur & lok:  своих  | svojim
+neu & plur & nom: svoja | свои
+neu & plur & gen: svojih | своих
+neu & plur & dat: svojim | своим
+neu & plur & aku: svoja | своих
+neu & plur & inst: svojim | своими
+neu & plur & lok: svojim | своих
 
 ---
 
 его
 third & male & sing
 
-male & sing & nom:  его | njegov
-male & sing & gen:  его | njegovog
-male & sing & dat:  его | njegovom
-male & sing & aku:  его | njegovog
-male & sing & inst: его | njegovim
-male & sing & lok:  его | njegovom
+male & sing & nom: njegov | его
+male & sing & gen: njegovog | его
+male & sing & dat: njegovom | его
+male & sing & aku: njegovog | его
+male & sing & inst: njegovim | его
+male & sing & lok: njegovom | его
 
-fem & sing & nom:  его | njegova
-fem & sing & gen:  его | njegove
-fem & sing & dat:  его | njegovoj
-fem & sing & aku:  его | njegovu
-fem & sing & inst: его | njegovom
-fem & sing & lok:  его | njegovoj
+fem & sing & nom: njegova | его
+fem & sing & gen: njegove | его
+fem & sing & dat: njegovoj | его
+fem & sing & aku: njegovu | его
+fem & sing & inst: njegovom | его
+fem & sing & lok: njegovoj | его
 
-neu & sing & nom:  его | njegovo
-neu & sing & gen:  его | njegovog
-neu & sing & dat:  его | njegovom
-neu & sing & aku:  его | njegovo
-neu & sing & inst: его | njegovim
-neu & sing & lok:  его | njegovom
+neu & sing & nom: njegovo | его
+neu & sing & gen: njegovog | его
+neu & sing & dat: njegovom | его
+neu & sing & aku: njegovo | его
+neu & sing & inst: njegovim | его
+neu & sing & lok: njegovom | его
 
-male & plur & nom:  его | njegovi
-male & plur & gen:  его | njegovih
-male & plur & dat:  его | njegovim
-male & plur & aku:  его | njegove
-male & plur & inst: его | njegovim
-male & plur & lok:  его | njegovim
+male & plur & nom: njegovi | его
+male & plur & gen: njegovih | его
+male & plur & dat: njegovim | его
+male & plur & aku: njegove | его
+male & plur & inst: njegovim | его
+male & plur & lok: njegovim | его
 
-fem & plur & nom:  его | njegove
-fem & plur & gen:  его | njegovih
-fem & plur & dat:  его | njegovim
-fem & plur & aku:  его | njegove
-fem & plur & inst: его | njegovim
-fem & plur & lok:  его | njegovim
+fem & plur & nom: njegove | его
+fem & plur & gen: njegovih | его
+fem & plur & dat: njegovim | его
+fem & plur & aku: njegove | его
+fem & plur & inst: njegovim | его
+fem & plur & lok: njegovim | его
 
-neu & plur & nom:  его | njegova
-neu & plur & gen:  его | njegovih
-neu & plur & dat:  его | njegovim
-neu & plur & aku:  его | njegova
-neu & plur & inst: его | njegovim
-neu & plur & lok:  его | njegovim
+neu & plur & nom: njegova | его
+neu & plur & gen: njegovih | его
+neu & plur & dat: njegovim | его
+neu & plur & aku: njegova | его
+neu & plur & inst: njegovim | его
+neu & plur & lok: njegovim | его
 
 ---
 
 её
 third & fem & sing
 
-male & sing & nom:  её | njen
-male & sing & gen:  её | njenog
-male & sing & dat:  её | njenom
-male & sing & aku:  её | njenog
-male & sing & inst: её | njenim
-male & sing & lok:  её | njenom
+male & sing & nom: njen | её
+male & sing & gen: njenog | её
+male & sing & dat: njenom | её
+male & sing & aku: njenog | её
+male & sing & inst: njenim | её
+male & sing & lok: njenom | её
 
-fem & sing & nom:  её | njena
-fem & sing & gen:  её | njene
-fem & sing & dat:  её | njenoj
-fem & sing & aku:  её | njenu
-fem & sing & inst: её | njenom
-fem & sing & lok:  её | njenoj
+fem & sing & nom: njena | её
+fem & sing & gen: njene | её
+fem & sing & dat: njenoj | её
+fem & sing & aku: njenu | её
+fem & sing & inst: njenom | её
+fem & sing & lok: njenoj | её
 
-neu & sing & nom:  её | njeno
-neu & sing & gen:  её | njenog
-neu & sing & dat:  её | njenom
-neu & sing & aku:  её | njeno
-neu & sing & inst: её | njenim
-neu & sing & lok:  её | njenom
+neu & sing & nom: njeno | её
+neu & sing & gen: njenog | её
+neu & sing & dat: njenom | её
+neu & sing & aku: njeno | её
+neu & sing & inst: njenim | её
+neu & sing & lok: njenom | её
 
-male & plur & nom:  её | njeni
-male & plur & gen:  её | njenih
-male & plur & dat:  её | njenim
-male & plur & aku:  её | njene
-male & plur & inst: её | njenim
-male & plur & lok:  её | njenim
+male & plur & nom: njeni | её
+male & plur & gen: njenih | её
+male & plur & dat: njenim | её
+male & plur & aku: njene | её
+male & plur & inst: njenim | её
+male & plur & lok: njenim | её
 
-fem & plur & nom:  её | njene
-fem & plur & gen:  её | njenih
-fem & plur & dat:  её | njenim
-fem & plur & aku:  её | njene
-fem & plur & inst: её | njenim
-fem & plur & lok:  её | njenim
+fem & plur & nom: njene | её
+fem & plur & gen: njenih | её
+fem & plur & dat: njenim | её
+fem & plur & aku: njene | её
+fem & plur & inst: njenim | её
+fem & plur & lok: njenim | её
 
-neu & plur & nom:  её | njena
-neu & plur & gen:  её | njenih
-neu & plur & dat:  её | njenim
-neu & plur & aku:  её | njena
-neu & plur & inst: её | njenim
-neu & plur & lok:  её | njenim
+neu & plur & nom: njena | её
+neu & plur & gen: njenih | её
+neu & plur & dat: njenim | её
+neu & plur & aku: njena | её
+neu & plur & inst: njenim | её
+neu & plur & lok: njenim | её
 
 ---
 
 его
 third & neu & sing
 
-male & sing & nom:  его | njegov
-male & sing & gen:  его | njegovog
-male & sing & dat:  его | njegovom
-male & sing & aku:  его | njegovog
-male & sing & inst: его | njegovim
-male & sing & lok:  его | njegovom
+male & sing & nom: njegov | его
+male & sing & gen: njegovog | его
+male & sing & dat: njegovom | его
+male & sing & aku: njegovog | его
+male & sing & inst: njegovim | его
+male & sing & lok: njegovom | его
 
-fem & sing & nom:  его | njegova
-fem & sing & gen:  его | njegove
-fem & sing & dat:  его | njegovoj
-fem & sing & aku:  его | njegovu
-fem & sing & inst: его | njegovom
-fem & sing & lok:  его | njegovoj
+fem & sing & nom: njegova | его
+fem & sing & gen: njegove | его
+fem & sing & dat: njegovoj | его
+fem & sing & aku: njegovu | его
+fem & sing & inst: njegovom | его
+fem & sing & lok: njegovoj | его
 
-neu & sing & nom:  его | njegovo
-neu & sing & gen:  его | njegovog
-neu & sing & dat:  его | njegovom
-neu & sing & aku:  его | njegovo
-neu & sing & inst: его | njegovim
-neu & sing & lok:  его | njegovom
+neu & sing & nom: njegovo | его
+neu & sing & gen: njegovog | его
+neu & sing & dat: njegovom | его
+neu & sing & aku: njegovo | его
+neu & sing & inst: njegovim | его
+neu & sing & lok: njegovom | его
 
-male & plur & nom:  его | njegovi
-male & plur & gen:  его | njegovih
-male & plur & dat:  его | njegovim
-male & plur & aku:  его | njegove
-male & plur & inst: его | njegovim
-male & plur & lok:  его | njegovim
+male & plur & nom: njegovi | его
+male & plur & gen: njegovih | его
+male & plur & dat: njegovim | его
+male & plur & aku: njegove | его
+male & plur & inst: njegovim | его
+male & plur & lok: njegovim | его
 
-fem & plur & nom:  его | njegove
-fem & plur & gen:  его | njegovih
-fem & plur & dat:  его | njegovim
-fem & plur & aku:  его | njegove
-fem & plur & inst: его | njegovim
-fem & plur & lok:  его | njegovim
+fem & plur & nom: njegove | его
+fem & plur & gen: njegovih | его
+fem & plur & dat: njegovim | его
+fem & plur & aku: njegove | его
+fem & plur & inst: njegovim | его
+fem & plur & lok: njegovim | его
 
-neu & plur & nom:  его | njegova
-neu & plur & gen:  его | njegovih
-neu & plur & dat:  его | njegovim
-neu & plur & aku:  его | njegova
-neu & plur & inst: его | njegovim
-neu & plur & lok:  его | njegovim
+neu & plur & nom: njegova | его
+neu & plur & gen: njegovih | его
+neu & plur & dat: njegovim | его
+neu & plur & aku: njegova | его
+neu & plur & inst: njegovim | его
+neu & plur & lok: njegovim | его
 
 ---
 
 наш
 first & plur & unisex
 
-male & sing & nom:  наш   | naš
-male & sing & gen:  нашего | našega
-male & sing & dat:  нашему | našemu
-male & sing & aku:  наш   | našega
-male & sing & inst: нашим  | našim
-male & sing & lok:  нашем  | našem
+male & sing & nom: naš | наш
+male & sing & gen: našega | нашего
+male & sing & dat: našemu | нашему
+male & sing & aku: našega | наш
+male & sing & inst: našim | нашим
+male & sing & lok: našem | нашем
 
-fem & sing & nom:  наша  | naša
-fem & sing & gen:  нашей | naše
-fem & sing & dat:  нашей | našoj
-fem & sing & aku:  нашу  | našu
-fem & sing & inst: нашей | našom
-fem & sing & lok:  нашей | našoj
+fem & sing & nom: naša | наша
+fem & sing & gen: naše | нашей
+fem & sing & dat: našoj | нашей
+fem & sing & aku: našu | нашу
+fem & sing & inst: našom | нашей
+fem & sing & lok: našoj | нашей
 
-neu & sing & nom:  наше   | naše
-neu & sing & gen:  нашего | našega
-neu & sing & dat:  нашему | našemu
-neu & sing & aku:  наше   | naše
-neu & sing & inst: нашим  | našim
-neu & sing & lok:  нашем  | našem
+neu & sing & nom: naše | наше
+neu & sing & gen: našega | нашего
+neu & sing & dat: našemu | нашему
+neu & sing & aku: naše | наше
+neu & sing & inst: našim | нашим
+neu & sing & lok: našem | нашем
 
-male & plur & nom:  наши   | naši
-male & plur & gen:  наших  | naših
-male & plur & dat:  нашим  | našim
-male & plur & aku:  наших  | naše
-male & plur & inst: нашими | našim
-male & plur & lok:  наших  | našim
+male & plur & nom: naši | наши
+male & plur & gen: naših | наших
+male & plur & dat: našim | нашим
+male & plur & aku: naše | наших
+male & plur & inst: našim | нашими
+male & plur & lok: našim | наших
 
-fem & plur & nom:  наши   | naše
-fem & plur & gen:  наших  | naših
-fem & plur & dat:  нашим  | našim
-fem & plur & aku:  наших  | naše
-fem & plur & inst: нашими | našim
-fem & plur & lok:  наших  | našim
+fem & plur & nom: naše | наши
+fem & plur & gen: naših | наших
+fem & plur & dat: našim | нашим
+fem & plur & aku: naše | наших
+fem & plur & inst: našim | нашими
+fem & plur & lok: našim | наших
 
-neu & plur & nom:  наши   | naša
-neu & plur & gen:  наших  | naših
-neu & plur & dat:  нашим  | našim
-neu & plur & aku:  наших  | naša
-neu & plur & inst: нашими | našim
-neu & plur & lok:  наших  | našim
+neu & plur & nom: naša | наши
+neu & plur & gen: naših | наших
+neu & plur & dat: našim | нашим
+neu & plur & aku: naša | наших
+neu & plur & inst: našim | нашими
+neu & plur & lok: našim | наших
 
 ---
 
 ваш
 second & plur & unisex
 
-male & sing & nom:  ваш   | vaš
-male & sing & gen:  вашего | vašega
-male & sing & dat:  вашему | vašemu
-male & sing & aku:  ваш   | vašega
-male & sing & inst: вашим  | vašim
-male & sing & lok:  вашем  | vašem
+male & sing & nom: vaš | ваш
+male & sing & gen: vašega | вашего
+male & sing & dat: vašemu | вашему
+male & sing & aku: vašega | ваш
+male & sing & inst: vašim | вашим
+male & sing & lok: vašem | вашем
 
-fem & sing & nom:  ваша  | vaša
-fem & sing & gen:  вашей | vaše
-fem & sing & dat:  вашей | vašoj
-fem & sing & aku:  вашу  | vašu
-fem & sing & inst: вашей | vašom
-fem & sing & lok:  вашей | vašoj
+fem & sing & nom: vaša | ваша
+fem & sing & gen: vaše | вашей
+fem & sing & dat: vašoj | вашей
+fem & sing & aku: vašu | вашу
+fem & sing & inst: vašom | вашей
+fem & sing & lok: vašoj | вашей
 
-neu & sing & nom:  ваше   | vaše
-neu & sing & gen:  вашего | vašega
-neu & sing & dat:  вашему | vašemu
-neu & sing & aku:  ваше   | vaše
-neu & sing & inst: вашим  | vašim
-neu & sing & lok:  вашем  | vašem
+neu & sing & nom: vaše | ваше
+neu & sing & gen: vašega | вашего
+neu & sing & dat: vašemu | вашему
+neu & sing & aku: vaše | ваше
+neu & sing & inst: vašim | вашим
+neu & sing & lok: vašem | вашем
 
-male & plur & nom:  ваши   | vaši
-male & plur & gen:  ваших  | vaših
-male & plur & dat:  вашим  | vašim
-male & plur & aku:  ваших  | vaše
-male & plur & inst: вашими | vašim
-male & plur & lok:  ваших  | vašim
+male & plur & nom: vaši | ваши
+male & plur & gen: vaših | ваших
+male & plur & dat: vašim | вашим
+male & plur & aku: vaše | ваших
+male & plur & inst: vašim | вашими
+male & plur & lok: vašim | ваших
 
-fem & plur & nom:  ваши   | vaše
-fem & plur & gen:  ваших  | vaših
-fem & plur & dat:  вашим  | vašim
-fem & plur & aku:  ваших  | vaše
-fem & plur & inst: вашими | vašim
-fem & plur & lok:  ваших  | vašim
+fem & plur & nom: vaše | ваши
+fem & plur & gen: vaših | ваших
+fem & plur & dat: vašim | вашим
+fem & plur & aku: vaše | ваших
+fem & plur & inst: vašim | вашими
+fem & plur & lok: vašim | ваших
 
-neu & plur & nom:  ваши   | vaša
-neu & plur & gen:  ваших  | vaših
-neu & plur & dat:  вашим  | vašim
-neu & plur & aku:  ваших  | vaša
-neu & plur & inst: вашими | vašim
-neu & plur & lok:  ваших  | vašim
+neu & plur & nom: vaša | ваши
+neu & plur & gen: vaših | ваших
+neu & plur & dat: vašim | вашим
+neu & plur & aku: vaša | ваших
+neu & plur & inst: vašim | вашими
+neu & plur & lok: vašim | ваших
 
 ---
 
 их
 third & plur & unisex
 
-male & sing & nom:  их   | njihov
-male & sing & gen:  их | njihovogo
-male & sing & dat:  их | njihovom
-male & sing & aku:  их   | njihovoga
-male & sing & inst: их  | njihovim
-male & sing & lok:  их  | njihovom
+male & sing & nom: njihov | их
+male & sing & gen: njihovogo | их
+male & sing & dat: njihovom | их
+male & sing & aku: njihovoga | их
+male & sing & inst: njihovim | их
+male & sing & lok: njihovom | их
 
-fem & sing & nom:  их  | njihova
-fem & sing & gen:  их | njihove
-fem & sing & dat:  их | njihovoj
-fem & sing & aku:  их  | njihovu
-fem & sing & inst: их | njihovom
-fem & sing & lok:  их | njihovoj
+fem & sing & nom: njihova | их
+fem & sing & gen: njihove | их
+fem & sing & dat: njihovoj | их
+fem & sing & aku: njihovu | их
+fem & sing & inst: njihovom | их
+fem & sing & lok: njihovoj | их
 
-neu & sing & nom:  их   | njihovo
-neu & sing & gen:  их | njihovoga
-neu & sing & dat:  их | njihovom
-neu & sing & aku:  их   | njihovo
-neu & sing & inst: их  | njihovim
-neu & sing & lok:  их  | njihovom
+neu & sing & nom: njihovo | их
+neu & sing & gen: njihovoga | их
+neu & sing & dat: njihovom | их
+neu & sing & aku: njihovo | их
+neu & sing & inst: njihovim | их
+neu & sing & lok: njihovom | их
 
-male & plur & nom:  их   | njihovi
-male & plur & gen:  их  | njihovih
-male & plur & dat:  их  | njihovim
-male & plur & aku:  их  | njihove
-male & plur & inst: их | njihovim
-male & plur & lok:  их  | njihovim
+male & plur & nom: njihovi | их
+male & plur & gen: njihovih | их
+male & plur & dat: njihovim | их
+male & plur & aku: njihove | их
+male & plur & inst: njihovim | их
+male & plur & lok: njihovim | их
 
-fem & plur & nom:  их   | njihove
-fem & plur & gen:  их  | njihovih
-fem & plur & dat:  их  | njihovim
-fem & plur & aku:  их  | njihove
-fem & plur & inst: их | njihovim
-fem & plur & lok:  их  | njihovim
+fem & plur & nom: njihove | их
+fem & plur & gen: njihovih | их
+fem & plur & dat: njihovim | их
+fem & plur & aku: njihove | их
+fem & plur & inst: njihovim | их
+fem & plur & lok: njihovim | их
 
-neu & plur & nom:  их   | njihova
-neu & plur & gen:  их  | njihovih
-neu & plur & dat:  их  | njihovim
-neu & plur & aku:  их  | njihova
-neu & plur & inst: их | njihovim
-neu & plur & lok:  их  | njihovim
+neu & plur & nom: njihova | их
+neu & plur & gen: njihovih | их
+neu & plur & dat: njihovim | их
+neu & plur & aku: njihova | их
+neu & plur & inst: njihovim | их
+neu & plur & lok: njihovim | их
 
 ---

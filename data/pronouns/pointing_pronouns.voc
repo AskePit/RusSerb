@@ -3,140 +3,140 @@ declined pronoun
 этот
 close & third
 
-male & sing & nom:  этот  | ovaj
-male & sing & gen:  этого | ovoga
-male & sing & dat:  этому | ovom
-male & sing & aku:  этого | ovoga
-male & sing & inst: этоим | ovim
-male & sing & lok:  этом  | ovom
+male & sing & nom: ovaj | этот
+male & sing & gen: ovoga | этого
+male & sing & dat: ovom | этому
+male & sing & aku: ovoga | этого
+male & sing & inst: ovim | этоим
+male & sing & lok: ovom | этом
 
-fem & sing & nom:  эта  | ova
-fem & sing & gen:  этой | ove
-fem & sing & dat:  этой | ovoj
-fem & sing & aku:  эту  | ovu
-fem & sing & inst: этой | ovom
-fem & sing & lok:  этой | ovoj
+fem & sing & nom: ova | эта
+fem & sing & gen: ove | этой
+fem & sing & dat: ovoj | этой
+fem & sing & aku: ovu | эту
+fem & sing & inst: ovom | этой
+fem & sing & lok: ovoj | этой
 
-neu & sing & nom:  это   | ovo
-neu & sing & gen:  этого | ovoga
-neu & sing & dat:  этому | ovom
-neu & sing & aku:  это   | ovoga
-neu & sing & inst: этим  | ovim
-neu & sing & lok:  этом  | ovom
+neu & sing & nom: ovo | это
+neu & sing & gen: ovoga | этого
+neu & sing & dat: ovom | этому
+neu & sing & aku: ovoga | это
+neu & sing & inst: ovim | этим
+neu & sing & lok: ovom | этом
 
-male & plur & nom:  эти   | ovi
-male & plur & gen:  этих  | ovih
-male & plur & dat:  этим  | ovim
-male & plur & aku:  этих  | ove
-male & plur & inst: этими | ovim
-male & plur & lok:  этих  | ovim
+male & plur & nom: ovi | эти
+male & plur & gen: ovih | этих
+male & plur & dat: ovim | этим
+male & plur & aku: ove | этих
+male & plur & inst: ovim | этими
+male & plur & lok: ovim | этих
 
-fem & plur & nom:  эти   | ove
-fem & plur & gen:  этих  | ovih
-fem & plur & dat:  этим  | ovim
-fem & plur & aku:  этих  | ove
-fem & plur & inst: этими | ovim
-fem & plur & lok:  этих  | ovim
+fem & plur & nom: ove | эти
+fem & plur & gen: ovih | этих
+fem & plur & dat: ovim | этим
+fem & plur & aku: ove | этих
+fem & plur & inst: ovim | этими
+fem & plur & lok: ovim | этих
 
-neu & plur & nom:  эти   | ova
-neu & plur & gen:  этих  | ovih
-neu & plur & dat:  этим  | ovim
-neu & plur & aku:  этих  | ova
-neu & plur & inst: этими | ovim
-neu & plur & lok:  этих  | ovim
+neu & plur & nom: ova | эти
+neu & plur & gen: ovih | этих
+neu & plur & dat: ovim | этим
+neu & plur & aku: ova | этих
+neu & plur & inst: ovim | этими
+neu & plur & lok: ovim | этих
 
 ---
 
 тот (taj)
 far & third
 
-male & sing & nom:  тот  | taj
-male & sing & gen:  того | toga
-male & sing & dat:  тому | tom
-male & sing & aku:  того | toga
-male & sing & inst: тоим | tim
-male & sing & lok:  том  | tom
+male & sing & nom: taj | тот
+male & sing & gen: toga | того
+male & sing & dat: tom | тому
+male & sing & aku: toga | того
+male & sing & inst: tim | тоим
+male & sing & lok: tom | том
 
-fem & sing & nom:  та  | ta
-fem & sing & gen:  той | te
-fem & sing & dat:  той | toj
-fem & sing & aku:  ту  | tu
-fem & sing & inst: той | tom
-fem & sing & lok:  той | toj
+fem & sing & nom: ta | та
+fem & sing & gen: te | той
+fem & sing & dat: toj | той
+fem & sing & aku: tu | ту
+fem & sing & inst: tom | той
+fem & sing & lok: toj | той
 
-neu & sing & nom:  то   | to
-neu & sing & gen:  того | toga
-neu & sing & dat:  тому | tom
-neu & sing & aku:  то   | toga
-neu & sing & inst: тем  | tim
-neu & sing & lok:  том  | tom
+neu & sing & nom: to | то
+neu & sing & gen: toga | того
+neu & sing & dat: tom | тому
+neu & sing & aku: toga | то
+neu & sing & inst: tim | тем
+neu & sing & lok: tom | том
 
-male & plur & nom:  те   | ti
-male & plur & gen:  тех  | tih
-male & plur & dat:  тем  | tim
-male & plur & aku:  тех  | te
-male & plur & inst: теми | tim
-male & plur & lok:  тех  | tim
+male & plur & nom: ti | те
+male & plur & gen: tih | тех
+male & plur & dat: tim | тем
+male & plur & aku: te | тех
+male & plur & inst: tim | теми
+male & plur & lok: tim | тех
 
-fem & plur & nom:  те   | te
-fem & plur & gen:  тех  | tih
-fem & plur & dat:  тем  | tim
-fem & plur & aku:  тех  | te
-fem & plur & inst: теми | tim
-fem & plur & lok:  тех  | tim
+fem & plur & nom: te | те
+fem & plur & gen: tih | тех
+fem & plur & dat: tim | тем
+fem & plur & aku: te | тех
+fem & plur & inst: tim | теми
+fem & plur & lok: tim | тех
 
-neu & plur & nom:  те   | ta
-neu & plur & gen:  тех  | tih
-neu & plur & dat:  тем  | tim
-neu & plur & aku:  тех  | ta
-neu & plur & inst: теми | tim
-neu & plur & lok:  тех  | tim
+neu & plur & nom: ta | те
+neu & plur & gen: tih | тех
+neu & plur & dat: tim | тем
+neu & plur & aku: ta | тех
+neu & plur & inst: tim | теми
+neu & plur & lok: tim | тех
 
 ---
 
 тот (onaj)
 off & third
 
-male & sing & nom:  тот  | onaj
-male & sing & gen:  того | onoga
-male & sing & dat:  тому | onom
-male & sing & aku:  того | onoga
-male & sing & inst: тоим | onim
-male & sing & lok:  том  | onom
+male & sing & nom: onaj | тот
+male & sing & gen: onoga | того
+male & sing & dat: onom | тому
+male & sing & aku: onoga | того
+male & sing & inst: onim | тоим
+male & sing & lok: onom | том
 
-fem & sing & nom:  та  | ona
-fem & sing & gen:  той | one
-fem & sing & dat:  той | onoj
-fem & sing & aku:  ту  | onu
-fem & sing & inst: той | onom
-fem & sing & lok:  той | onoj
+fem & sing & nom: ona | та
+fem & sing & gen: one | той
+fem & sing & dat: onoj | той
+fem & sing & aku: onu | ту
+fem & sing & inst: onom | той
+fem & sing & lok: onoj | той
 
-neu & sing & nom:  то   | ono
-neu & sing & gen:  того | onoga
-neu & sing & dat:  тому | onom
-neu & sing & aku:  то   | onoga
-neu & sing & inst: тем  | onim
-neu & sing & lok:  том  | onom
+neu & sing & nom: ono | то
+neu & sing & gen: onoga | того
+neu & sing & dat: onom | тому
+neu & sing & aku: onoga | то
+neu & sing & inst: onim | тем
+neu & sing & lok: onom | том
 
-male & plur & nom:  те   | oni
-male & plur & gen:  тех  | onih
-male & plur & dat:  тем  | onim
-male & plur & aku:  тех  | one
-male & plur & inst: теми | onim
-male & plur & lok:  тех  | onim
+male & plur & nom: oni | те
+male & plur & gen: onih | тех
+male & plur & dat: onim | тем
+male & plur & aku: one | тех
+male & plur & inst: onim | теми
+male & plur & lok: onim | тех
 
-fem & plur & nom:  те   | one
-fem & plur & gen:  тех  | onih
-fem & plur & dat:  тем  | onim
-fem & plur & aku:  тех  | one
-fem & plur & inst: теми | onim
-fem & plur & lok:  тех  | onim
+fem & plur & nom: one | те
+fem & plur & gen: onih | тех
+fem & plur & dat: onim | тем
+fem & plur & aku: one | тех
+fem & plur & inst: onim | теми
+fem & plur & lok: onim | тех
 
-neu & plur & nom:  те   | ona
-neu & plur & gen:  тех  | onih
-neu & plur & dat:  тем  | onim
-neu & plur & aku:  тех  | ona
-neu & plur & inst: теми | onim
-neu & plur & lok:  тех  | onim
+neu & plur & nom: ona | те
+neu & plur & gen: onih | тех
+neu & plur & dat: onim | тем
+neu & plur & aku: ona | тех
+neu & plur & inst: onim | теми
+neu & plur & lok: onim | тех
 
 ---

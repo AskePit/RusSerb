@@ -1,52 +1,52 @@
 phrases
 
-понедельник | ponedeljak
-вторник | utorak
-среда | sreda
-четверг | četvrtak
-пятница | petak
-суббота | subota
-воскресение | nedelja
+ponedeljak | понедельник
+utorak | вторник
+sreda | среда
+četvrtak | четверг
+petak | пятница
+subota | суббота
+nedelja | воскресение
 
-январь | januar
-февраль | februar
-март | mart
-апрель | april
-май | maj
-июнь | jun
-июль | jul
-август | avgust
-сентябрь | septembar
-октябрь | oktobar
-ноябрь | novembar
-декабрь | decembar
+januar | январь
+februar | февраль
+mart | март
+april | апрель
+maj | май
+jun | июнь
+jul | июль
+avgust | август
+septembar | сентябрь
+oktobar | октябрь
+novembar | ноябрь
+decembar | декабрь
 
-секунда | sekunda
-минута | minut
-час | sat
-сутки/день | dan
-неделя | nedelja/sedmica
-месяц | mesec
-год | godina
-десятилетие | dekada
-век | vek
+sekunda | секунда
+minut | минута
+sat | час
+dan | сутки/день
+nedelja/sedmica | неделя
+mesec | месяц
+godina | год
+dekada | десятилетие
+vek | век
 
-лето | leto
-осень | jesen
-зима | zima
-весна | proleće
+leto | лето
+jesen | осень
+zima | зима
+proleće | весна
 
-время | vreme
-времена года | godišnja doba
-выходные | vikend
-дни недели | dani u nedelji
-день недели | dan u nedelji
-месяца года | meseci u godini
+vreme | время
+godišnja doba | времена года
+vikend | выходные
+dani u nedelji | дни недели
+dan u nedelji | день недели
+meseci u godini | месяца года
 
-сегодня | danas
-завтра | sutra
-послезавтра | prekosutra
-вчера | juče
-позавчера | prekjuče
+danas | сегодня
+sutra | завтра
+prekosutra | послезавтра
+juče | вчера
+prekjuče | позавчера
 
-сколько времени? | koliko je sati?
+koliko je sati? | сколько времени?

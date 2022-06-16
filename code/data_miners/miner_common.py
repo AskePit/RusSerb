@@ -238,7 +238,7 @@ class Writer:
         rusForm = PostGarbageFilter(rusForm)
         serbForm = PostGarbageFilter(serbForm)
 
-        self.file.write('{}: {} | {}\n'.format(template, rusForm, serbForm))
+        self.file.write('{}: {} | {}\n'.format(template, serbForm, rusForm))
 
     def endl(self):
         self.file.write('\n')

@@ -2,126 +2,126 @@ declined noun
 
 ученик
 none
-male & sing & nom: ученик  | učenik
-male & plur & nom: ученики | učenici
-fem  & sing & nom: ученица | učenica
-fem  & plur & nom: ученицы | učenice
+male & sing & nom: učenik | ученик
+male & plur & nom: učenici | ученики
+fem & sing & nom: učenica | ученица
+fem & plur & nom: učenice | ученицы
 
 ---
 
 гражданин
 none
-male & sing & nom: гражданин | građanin
-male & plur & nom: граждане  | građani
-fem  & sing & nom: гражданка | građanka
-fem  & plur & nom: гражданки | građanke
+male & sing & nom: građanin | гражданин
+male & plur & nom: građani | граждане
+fem & sing & nom: građanka | гражданка
+fem & plur & nom: građanke | гражданки
 
 ---
 
 цыган
 none
-male & sing & nom: цыган   | Ciganin
-male & plur & nom: цыгане  | Cigani
-fem  & sing & nom: цыганка | Ciganka
-fem  & plur & nom: цыганки | Ciganke
+male & sing & nom: Ciganin | цыган
+male & plur & nom: Cigani | цыгане
+fem & sing & nom: Ciganka | цыганка
+fem & plur & nom: Ciganke | цыганки
 
 ---
 
 студент
 none
-male & sing & nom: студент   | student
-male & plur & nom: студенты  | studenti
-fem  & sing & nom: студентка | studentica
-fem  & plur & nom: студентки | studentice
+male & sing & nom: student | студент
+male & plur & nom: studenti | студенты
+fem & sing & nom: studentica | студентка
+fem & plur & nom: studentice | студентки
 
 ---
 
 начальник
 none
-male & sing & nom: начальник  | šef
-male & plur & nom: начальники | šefovi
-fem  & sing & nom: начальница | šefica
-fem  & plur & nom: начальницы | šefice
+male & sing & nom: šef | начальник
+male & plur & nom: šefovi | начальники
+fem & sing & nom: šefica | начальница
+fem & plur & nom: šefice | начальницы
 
 ---
 
 юрист
 none
-male & sing & nom: юрист   | pravnik
-male & plur & nom: юристы  | pravnici
-fem  & sing & nom: юристка | pravnica
-fem  & plur & nom: юристки | pravnice
+male & sing & nom: pravnik | юрист
+male & plur & nom: pravnici | юристы
+fem & sing & nom: pravnica | юристка
+fem & plur & nom: pravnice | юристки
 
 ---
 
 менеджер
 none
-male & sing & nom: менеджер  | menadžer
-male & plur & nom: менеджеры | menadžeri
-fem  & sing & nom: менеджер  | menadžer
-fem  & plur & nom: менеджеры | menadžeri
+male & sing & nom: menadžer | менеджер
+male & plur & nom: menadžeri | менеджеры
+fem & sing & nom: menadžer | менеджер
+fem & plur & nom: menadžeri | менеджеры
 
 ---
 
 учитель
 none
-male & sing & nom: учитель     | profesor
-male & plur & nom: учителя     | profesori
-fem  & sing & nom: учительница | profesorica
-fem  & plur & nom: учительницы | profesorice
+male & sing & nom: profesor | учитель
+male & plur & nom: profesori | учителя
+fem & sing & nom: profesorica | учительница
+fem & plur & nom: profesorice | учительницы
 
 ---
 
 врач
 none
-male & sing & nom: врач  | lekar
-male & plur & nom: врачи | lekari
-fem  & sing & nom: врач  | lekarka
-fem  & plur & nom: врачи | lekarke
+male & sing & nom: lekar | врач
+male & plur & nom: lekari | врачи
+fem & sing & nom: lekarka | врач
+fem & plur & nom: lekarke | врачи
 
 ---
 
 сосед
 none
-male & sing & nom: сосед   | sused
-male & plur & nom: соседи  | susedi
-fem  & sing & nom: соседка | sused
-fem  & plur & nom: соседки | susedi
+male & sing & nom: sused | сосед
+male & plur & nom: susedi | соседи
+fem & sing & nom: sused | соседка
+fem & plur & nom: susedi | соседки
 
 ---
 
 приятель
 none
-male & sing & nom: приятель     | prijatelj
-male & plur & nom: приятели     | prijatelji
-fem  & sing & nom: приятельница | prijateljica
-fem  & plur & nom: приятельницы | prijateljice
+male & sing & nom: prijatelj | приятель
+male & plur & nom: prijatelji | приятели
+fem & sing & nom: prijateljica | приятельница
+fem & plur & nom: prijateljice | приятельницы
 
 ---
 
 пенсионер
 none
-male & sing & nom: пенсионер   | penzioner
-male & plur & nom: пенсионеры  | penzioneri
-fem  & sing & nom: пенсионерка | penzionerka
-fem  & plur & nom: пенсионерки | penzionerke
+male & sing & nom: penzioner | пенсионер
+male & plur & nom: penzioneri | пенсионеры
+fem & sing & nom: penzionerka | пенсионерка
+fem & plur & nom: penzionerke | пенсионерки
 
 ---
 
 турист
 none
-male & sing & nom: турист  | turista
-male & plur & nom: туристы | turisti
-fem  & sing & nom: турист  | turista
-fem  & plur & nom: туристы | turisti
+male & sing & nom: turista | турист
+male & plur & nom: turisti | туристы
+fem & sing & nom: turista | турист
+fem & plur & nom: turisti | туристы
 
 ---
 
 русский
 none
-male & sing & nom: русский | Rus
-male & plur & nom: русские | Rusi
-fem  & sing & nom: русская | Ruskinja
-fem  & plur & nom: русские | Ruskinje
+male & sing & nom: Rus | русский
+male & plur & nom: Rusi | русские
+fem & sing & nom: Ruskinja | русская
+fem & plur & nom: Ruskinje | русские
 
 ---

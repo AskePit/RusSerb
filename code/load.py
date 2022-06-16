@@ -91,8 +91,8 @@ def LoadDeclined(data: list[str], speechPart: SpeechPart, theWords: WordList):
             writing = declWriting[1].strip()
             
             words = writing.split(INLINE_SEPARATOR)
-            rus = words[0].strip()
-            serb = words[1].strip()
+            serb = words[0].strip()
+            rus = words[1].strip()
 
             declinedWord = DeclinedWord.Make(theWord, Declination.Parse(decl), rus, serb)
             theWord.forms.append(declinedWord)
@@ -105,8 +105,8 @@ def LoadPhrases(title: str, data: list[str], thePhrases: PhrasesList):
     
     for w in data:
         words = w.split(INLINE_SEPARATOR)
-        rus = words[0].strip()
-        serb = words[1].strip()
+        serb = words[0].strip()
+        rus = words[1].strip()
         aux = words[2].strip() if len(words) > 2 else None
         thePhrases.phrases.append(Phrase(rus, serb, aux))
 
