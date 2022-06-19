@@ -31,9 +31,11 @@ if len(sys.argv) > 1:
 # NOTE: each excercise should return `ExcerciseYield` object
 
 def NormalizeSentence(phrase: str):
-    res = ' '.join(phrase.split()).capitalize()
-    if res.startswith('(') and len(res) > 1:
+    res = ' '.join(phrase.split())
+    if len(res) > 1 and (res.startswith('(') or res.startswith('[')):
         res = res[:1] + res[1].upper() + res[2:]
+    else:
+        res = res[:1].upper() + res[1:]
     return res
 
 class ExcerciseYield:

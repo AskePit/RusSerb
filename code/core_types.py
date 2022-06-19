@@ -48,6 +48,9 @@ class Case(Enum):
     inst = 5 # instrumental / творительный
     lok  = 6 # lokative     / предложный
 
+    def toString(self):
+        return self.name.capitalize()
+
 class Person(Enum):
     first  = 0 # первое лицо
     second = 1 # второе лицо
@@ -493,7 +496,7 @@ class Word:
         res = '{} {}\n'.format(self.speechPart.name, self.title)
         res += '{}\n'.format(self.metaDeclination.toString())
         for word in self.forms:
-            res += '{}: {}|{}\n'.format(word.declination.toString(), word.rus, word.serb)
+            res += '{}: {}|{}\n'.format(word.declination.toString(), word.serb, word.rus)
         return res
     
     def normalize(self):
@@ -584,7 +587,7 @@ class Phrase:
             self.aux = aux
 
     def toString(self):
-        res = self.rus + '|' + self.serb
+        res = self.serb + '|' + self.rus
         if hasattr(self, 'aux'):
             res += '|' + self.aux
         return res

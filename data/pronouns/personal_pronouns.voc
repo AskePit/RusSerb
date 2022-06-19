@@ -27,11 +27,11 @@ lok: tebi | тебе
 он
 third & sing & male
 nom: on | он
-gen: njega | его
-dat: njemu | ему
+gen: njega | (н)его
+dat: njemu | (н)ему
 aku: njega | его
 vok: |
-inst: njim | им
+inst: njim | (н)им
 lok: njemu | нем
 
 ---
@@ -39,11 +39,11 @@ lok: njemu | нем
 она
 third & sing & fem
 nom: ona | она
-gen: nje | её
+gen: nje | (н)её
 dat: njoj | ей
 aku: nju | её
 vok: |
-inst: njom | ей
+inst: njom | (н)ей
 lok: njoj | ней
 
 ---
@@ -51,11 +51,11 @@ lok: njoj | ней
 оно
 third & sing & neu
 nom: ono | оно
-gen: njega | его
-dat: njemu | ему
+gen: njega | (н)его
+dat: njemu | (н)ему
 aku: njega | его
 vok: |
-inst: njim | им
+inst: njim | (н)им
 lok: njemu | нем
 
 ---
@@ -87,11 +87,11 @@ lok: vama | вас
 они (муж.)
 third & plur & male
 nom: oni | они
-gen: njih | их
-dat: njma | им
+gen: njih | (н)их
+dat: njima | (н)им
 aku: njih | их
 vok: |
-inst: njima | ими
+inst: njima | (н)ими
 lok: njima | них
 
 ---
@@ -99,11 +99,11 @@ lok: njima | них
 они (жен.)
 third & plur & fem
 nom: one | они
-gen: njih | их
-dat: njma | им
+gen: njih | (н)их
+dat: njima | (н)им
 aku: njih | их
 vok: |
-inst: njima | ими
+inst: njima | (н)ими
 lok: njima | них
 
 ---
@@ -111,11 +111,11 @@ lok: njima | них
 они (ср.)
 third & plur & neu
 nom: ona | они
-gen: njih | их
-dat: njma | им
+gen: njih | (н)их
+dat: njima | (н)им
 aku: njih | их
 vok: |
-inst: njima | ими
+inst: njima | (н)ими
 lok: njima | них
 
 ---

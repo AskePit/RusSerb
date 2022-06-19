@@ -1,3 +1,4 @@
+from ast import Num
 from msilib.schema import IniFile
 from code.excercise_types import *
 
@@ -598,5 +599,87 @@ class FuturQuestionsEx(Excercise):
 
         cu = GetVocabulary('hocu').get(decl)
         answer.append('{} li {} {}?'.format(cu.serb, verb.getSerbReflexive(selfness), verb.serb))
+
+        return ExcerciseYield(title, question, answer)
+
+class PrepositionsCasesEx(Excercise):
+    case2PrepSerb: dict[Case, list[str]]
+    prep2CaseRus: list[tuple[str, list[Case]]]
+    serb2RusPrep: dict[str, str]
+
+    def __init__(self):
+        super().__init__()
+
+        self.case2PrepSerb = {}
+        self.prep2CaseRus = []
+
+        self.serb2RusPrep = {}
+
+        for c in [Case.gen, Case.aku, Case.dat, Case.inst, Case.lok]:
+            self.case2PrepSerb[c] = []
+
+        for prep in GetVocabulary('prepositions').phrases:
+            langs = prep.aux.split(',')
+            for lang in langs:
+                splitted = lang.split(':')
+                l = splitted[0].strip()
+                cases = splitted[1].split()
+
+                for c in cases:
+                    case = Case[c.strip()]
+
+                    if l == 'serb':
+                        self.case2PrepSerb[case].append(prep.serb)
+                    elif l == 'rus':
+                        rusKey = next((tup for tup in self.prep2CaseRus if tup[0] == prep.rus), None)
+                        if rusKey == None:
+                            self.prep2CaseRus.append((prep.rus, [case]))
+                        else:
+                            rusKey[1].append(case)
+
+            self.serb2RusPrep[prep.serb] = prep.rus
+            self.prep2CaseRus = [(tup[0], list(set(tup[1]))) for tup in self.prep2CaseRus]
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский:
+        # question: Oko vas
+        # answer:   Вокруг вас
+
+        withNoun = random.randint(0, 1)
+        number = random.choice(list(Number))
+
+        serbCase = random.choice([Case.gen, Case.aku, Case.dat, Case.inst, Case.lok])
+
+        serbPreposition = random.choice( self.case2PrepSerb[serbCase] )
+        rusPreposition = self.serb2RusPrep[serbPreposition]
+
+        rusPrepTup = next((tup for tup in self.prep2CaseRus if tup[0] == rusPreposition), None)
+        if rusPrepTup != None:
+            rusCase = random.choice(rusPrepTup[1])
+        else:
+            rusCase = Case.aku
+
+        if withNoun:
+            serbDecl = Declination.Make(serbCase, number)
+            rusDecl = Declination.Make(rusCase, number)
+
+            noun = random.choice( GetVocabulary('nouns').words )
+            serbObject = noun.get(serbDecl)
+            rusObject = noun.get(rusDecl)
+        else:
+            gender = random.choice(list(Gender))
+            person = random.choice(list(Person))
+
+            serbDecl = Declination.Make(serbCase, number, gender, person)
+            rusDecl = Declination.Make(rusCase, number, gender, person)
+            serbObject = GetVocabulary('personal_pronouns').getWordForm(serbDecl)
+            rusObject = GetVocabulary('personal_pronouns').getWordForm(rusDecl)
+
+        if ',' in rusPreposition:
+            rusPreposition = '[{}]'.format(rusPreposition)
+
+        title = 'Переведите на сербский'
+        question = '{} {}'.format(rusPreposition, rusObject.rus)
+        answer = '{} {} ({})'.format(serbPreposition, serbObject.serb, serbCase.toString())
 
         return ExcerciseYield(title, question, answer)

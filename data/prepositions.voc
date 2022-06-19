@@ -1,16 +1,16 @@
 unique preposition
 
 bez | без | serb: gen, rus: gen
-za | для, за, через | serb: aku inst, rus: dat gen inst aku
+za | для, за, через | serb: aku inst, rus: gen
 zbog | из-за | serb: gen, rus: gen
 između | между | serb: gen, rus: inst
-među | между | serb: inst, rus: inst
+# među | между | serb: inst, rus: inst
 iznad | над | serb: gen, rus: inst
 kod | к, у | serb: gen, rus: dat gen
 kroz | сквозь | serb: aku, rus: aku
 na | на, в | serb: aku lok, rus: lok
-nadomak | вблизи, около, rus: gen
-niz | вниз по | rus: dat
+# nadomak | вблизи, около | rus: gen
+# niz | вниз по | rus: dat
 od | из, от, с | serb: gen, rus: gen
 pod | под | serb: inst, rus: inst
 pored | возле, рядом | serb: gen, rus: gen
@@ -19,11 +19,11 @@ ispred | перед | serb: gen, rus: inst
 sa | с | serb: gen inst, rus: inst
 ka | к | serb: dat, rus: dat
 u | в | serb: aku lok, rus: lok
-v | в | rus: lok
+# v | в | rus: lok
 prekoputa | напротив | serb: gen, rus: gen
 nasprotiv | напротив | serb: gen, rus: gen
 posle | после | serb: gen, rus: inst
-uza | против | rus: gen
+# uza | против | rus: gen
 uz | вместе с, вверх | serb: aku, rus: inst
 duž | вдоль | serb: gen, rus: gen
 oko | вокруг | serb: gen, rus: gen
@@ -31,9 +31,9 @@ iza | позади | serb: gen, rus: gen
 ispod | под | serb: gen, rus: gen
 tokom | в течение | serb: gen, rus: gen
 osim | кроме | serb: gen, rus: gen
-unutra | внутри | rus: inst
+# unutra | внутри | rus: inst
 blizu | около | serb: gen, rus: gen
-van | снаружи | rus: gen
+# van | снаружи | rus: gen
 iz | из | serb: gen, rus: gen
 preko | через | serb: gen, rus: aku
 do | до | serb: gen, rus: gen
@@ -43,7 +43,7 @@ nasuprot | напротив | serb: dat, rus: gen
 zahvaljujući | благодаря | serb: dat, rus: dat
 uprkos | вопреки | serb: dat, rus: dat
 pri | при | serb: dat, rus: lok
-po | по, за | serb: aku lok, rus: lok
+po | по, за | serb: aku lok, rus: lok inst
 nad | над | serb: inst, rus: inst
 pred | перед | serb: inst, rus: inst
 o | о, обо, об | serb: lok, rus: lok
