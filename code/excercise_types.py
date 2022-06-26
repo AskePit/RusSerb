@@ -176,8 +176,8 @@ class PhrasesEx(Excercise):
         lang = LangMode.GetLangBit()
         phrase = self.randomPool.yieldElem()
 
-        rus = phrase.rus.capitalize()
-        serb = phrase.serb.capitalize()
+        rus = phrase.rus
+        serb = phrase.serb
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
         question = [rus, serb][lang]
