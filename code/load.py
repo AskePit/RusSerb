@@ -110,6 +110,32 @@ def LoadPhrases(title: str, data: list[str], thePhrases: PhrasesList):
         aux = words[2].strip() if len(words) > 2 else None
         thePhrases.phrases.append(Phrase(rus, serb, aux))
 
+def LoadBlockPhrases(title: str, data: list[str], thePhrases: PhrasesList):
+    # read data
+    data = ConvertLinesToTokens(data)
+    
+    SERB = 0
+    RUS = 1
+
+    stage = SERB
+    thePhrase = Phrase([], [])
+
+    for l in data:
+        if l.startswith('---'):
+            # phrase end
+            thePhrase.normalize()
+            thePhrases.phrases.append(copy.deepcopy(thePhrase))
+            thePhrase = Phrase([], [])
+            
+            stage = SERB
+        elif l.startswith('|'):
+            # title
+            stage = RUS
+        elif stage == SERB:
+            thePhrase.serb.append(l.strip())
+        elif stage == RUS:
+            thePhrase.rus.append(l.strip())
+
 def LoadFile(filename: str, title: str):
     with io.open(filename, encoding='utf-8') as f:
         data = f.readlines()
@@ -132,6 +158,10 @@ def LoadFile(filename: str, title: str):
         elif headerType == 'phrases' or headerType == 'unique':
             thePhrases = PhrasesList()
             LoadPhrases(title, data, thePhrases)
+            return thePhrases
+        elif headerType == 'block_phrases':
+            thePhrases = PhrasesList()
+            LoadBlockPhrases(title, data, thePhrases)
             return thePhrases
 
 VOCABULARY_EXT = 'voc'

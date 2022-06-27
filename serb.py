@@ -31,7 +31,13 @@ def ExecuteExcercise(exc: ExcerciseDesc):
         ClrScr()
         print('\n{}.........................\n'.format(PAD))
         print('{}{}:\n'.format(PAD, exYield.title))
-        print('{}{}'.format(PAD, exYield.question), end='')
+
+        if type(exYield.question) is list:
+            print('\n')
+            for q in exYield.question:
+                print('{}{}'.format(PAD, q))
+        else:
+            print('{}{}'.format(PAD, exYield.question), end='')
 
         ans = input()
 

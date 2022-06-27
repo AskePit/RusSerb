@@ -576,11 +576,11 @@ class WordList:
             return None
 
 class Phrase:
-    rus: str
-    serb: str
+    rus: str|list[str]
+    serb: str|list[str]
     aux: str
 
-    def __init__(self, rus, serb, aux=None):
+    def __init__(self, rus='', serb='', aux=None):
         self.rus = rus
         self.serb = serb
         if not aux is None:
@@ -590,7 +590,13 @@ class Phrase:
         res = self.serb + '|' + self.rus
         if hasattr(self, 'aux'):
             res += '|' + self.aux
-        return res
+        return 
+    
+    def normalize(self):
+        if type(self.rus) is list and len(self.rus) == 1:
+            self.rus = self.rus[0]
+        if type(self.serb) is list and len(self.serb) == 1:
+            self.serb = self.serb[0]
 
 class PhrasesList:    
     title: str = ''
