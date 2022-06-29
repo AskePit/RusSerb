@@ -2,7 +2,6 @@ import io
 import sys
 import copy
 import glob
-import os
 from enum import Enum
 from typing import Callable
 from urllib.request import urlopen
@@ -19,8 +18,9 @@ class DownloadStatus(Enum):
     Fatal = 3
 
 class Cell:
-    def __init__(self, row: str, column: int, subcolumnGetter: Callable[[str, int], str] = None, subcolumn: int = 0):
+    def __init__(self, row: str, column: int, subcolumnGetter: Callable[[str, int], str] = None, subcolumn: int = 0, rowNum = 0):
         self.row = row
+        self.rowNum = rowNum
         self.column = column
         self.subcolumnGetter = subcolumnGetter
         self.subcolumn = subcolumn
@@ -31,62 +31,65 @@ class DeclTable():
     def __init__(self, cells: list[str]) -> None:
         self.cells = cells
     
-    def extractCell(self, idx: int):
+    def accessCell(self, idx: int):
         if idx >= len(self.cells):
             return ''
         return self.cells[idx]
-    
-    def findCell(self, pattern: str):
-        index = 0
 
-        for cell in self.cells:
-            if pattern == cell:
-                return index
-            index += 1
-        
-        index = 0
-
-        for cell in self.cells:
-            if pattern in cell:
-                if pattern[-1] == 'I' and pattern[-2] != 'I' and 'II' in cell:
-                    continue
-                return index
-            index += 1
-        return None
-    
-    def getHeaderCell(self, headerIndex: int, cellIndex: int):
+    def accessHeaderCell(self, headerIndex: int, cellIndex: int):
         if headerIndex == None:
             return ''
         else:
-            return self.extractCell(headerIndex + cellIndex + 1)
-
-    def getRow(self, header: str, count: int) -> list[str]:
-        res = []
-
-        headerIdx = self.findCell(header)
-        for i in range(count):
-            res.append(self.getHeaderCell(headerIdx, i))
-        return res
+            return self.accessCell(headerIndex + cellIndex + 1)
     
-    def parseColumnedCell(self, pattern: str):
+    def findCell(self, rowPattern: str, rowNum: int = 0):
+        # full match
+        index = 0
+        ri = 0
+
+        for cell in self.cells:
+            if rowPattern == cell:
+                if ri < rowNum:
+                    ri += 1
+                else:
+                    return index
+            index += 1
+        
+        # partial match
+        index = 0
+        ri = 0
+
+        for cell in self.cells:
+            if rowPattern in cell:
+                if rowPattern[-1] == 'I' and rowPattern[-2] != 'I' and 'II' in cell:
+                    continue
+                else:
+                    if ri < rowNum:
+                        ri += 1
+                    else:
+                        return index
+            index += 1
+        return None
+
+    def parseColumnedCell(self, pattern: str, rowNum: int = 0):
         def extractAfterColumn(line: str):
             return line.split(':')[1].strip()
             
-        found = self.findCell(pattern)
+        found = self.findCell(pattern, rowNum)
         if found == None:
             return ''
         else:
-            return extractAfterColumn(self.extractCell(found))
+            return extractAfterColumn(self.accessCell(found))
     
     def get(self, cell: Cell) -> str:
         if cell == None:
             return ''
 
-        headerIdx = self.findCell(cell.row)
+        headerIdx = self.findCell(cell.row, cell.rowNum)
         if headerIdx == None:
             return ''
 
-        text = self.getHeaderCell(headerIdx, cell.column)
+        text = self.accessHeaderCell(headerIdx, cell.column)
         if cell.subcolumnGetter != None:
             text = cell.subcolumnGetter(text, cell.subcolumn)
         return text
