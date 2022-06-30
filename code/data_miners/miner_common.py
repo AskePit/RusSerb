@@ -149,18 +149,19 @@ def PreGarbageFilter(txt: str) -> str:
     return txt
 
 def PostGarbageFilter(txt: str) -> str:
-    for toTrunk in ['/', '(', ',']:
+    for toTrunk in ['/', '(', ',', ' ']:
         idx = txt.find(toTrunk)
         if idx != -1:
             txt = txt[:idx].strip()
     return txt
 
 class TableDownloader:
-    def __init__(self, word: str, urlBase: str, header: str, tag: str, tagClass: str):
+    def __init__(self, word: str, urlBase: str, header: str, tag: str, tagClass: str, tagIdx: int = 0):
         self.word = word
         self.urlBase = urlBase
         self.header = header
         self.tag = tag
+        self.tagIdx = tagIdx
         self.tagClass = tagClass
         self.table: list[str] = None
 
@@ -189,11 +190,13 @@ class TableDownloader:
             return (DownloadStatus.NoDeclTable, None)
         if len(tableTags) == 0:
             return (DownloadStatus.NoDeclTable, None)
-        if len(tableTags) > 1:
+        if len(tableTags) <= self.tagIdx:
+            return (DownloadStatus.NoDeclTable, None)
+        if len(tableTags) > self.tagIdx + 1:
             print('multiple tables for `{}`! choosing the first one'.format(self.word))
 
         cells: list[str] = []
-        for c in tableTags[0].find_all("td"):
+        for c in tableTags[self.tagIdx].find_all(["td", "th"]):
             txt = c.get_text()
             txt = PreGarbageFilter(txt)
             cells.append(txt)
@@ -246,9 +249,16 @@ class Writer:
     def endl(self):
         self.file.write('\n')
 
-    def writeDecl(self, decl: str, rusCell: Cell, serbCell: Cell):
-        ru = self.rus.get(rusCell) if self.rus != None else ''
-        se = self.serb.get(serbCell) if self.serb != None else ''
+    def writeDecl(self, decl: str, rusCell: Cell|str, serbCell: Cell|str):
+        if type(rusCell) is Cell:
+            ru = self.rus.get(rusCell) if self.rus != None else ''
+        else:
+            ru = rusCell
+
+        if type(serbCell) is Cell:
+            se = self.serb.get(serbCell) if self.serb != None else ''
+        else:
+            se = serbCell
 
         self.writeLine(decl, ru, se)
     

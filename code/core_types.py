@@ -94,6 +94,16 @@ class Reflexiveness(Enum):
     opt_se = 1
     se = 2
 
+class Definition(Enum):
+    indef = 0
+    defined = 1
+    comp = 2
+    super = 3
+
+class Animality(Enum):
+    anim = 0
+    inanim = 1
+
 DeclinationAttributesMap = {
     'person': Person,
     'gender': Gender,
@@ -104,7 +114,9 @@ DeclinationAttributesMap = {
     'exclusive': ExclusiveForm,
     'time': Time,
     'conjugation': VerbConjugation,
-    'reflexiveness': Reflexiveness
+    'reflexiveness': Reflexiveness,
+    'definition': Definition,
+    'animality': Animality,
 }
 
 class Declination:

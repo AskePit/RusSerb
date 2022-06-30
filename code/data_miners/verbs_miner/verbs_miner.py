@@ -1,4 +1,3 @@
-import os
 import sys
 sys.path.insert(0, '../../../')
 from code.data_miners.miner_common import *

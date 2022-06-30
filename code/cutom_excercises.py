@@ -188,7 +188,7 @@ class PointingEx(Excercise):
     def __init__(self):
         super().__init__()
         self.randomNounsPool = RandomPool(GetVocabulary('nouns').words)
-        self.randomAdjectivesPool = RandomPool(GetVocabulary('random_adjectives').words)
+        self.randomAdjectivesPool = RandomPool(GetVocabulary('adjectives').words)
 
     def __call__(self) -> ExcerciseYield:
         # title:    Переведите на сербский:
@@ -204,7 +204,7 @@ class PointingEx(Excercise):
         num = random.choice(list(Number))
         distance = random.choice(list(Distance))
 
-        noun = self.randomNounsPool.yieldElem().makeNounGenderPair(Case.nom, num, distance, Person.third)
+        noun = self.randomNounsPool.yieldElem().makeNounGenderPair(Case.nom, num, distance, Person.third, Definition.defined)
         adj = self.randomAdjectivesPool.yieldElem().makeSimilarPair(noun)
         point = GetVocabulary('pointing_pronouns').makeSimilarPair(noun)
         tobe = GetVocabulary('tobe').makeSimilarPair(noun)

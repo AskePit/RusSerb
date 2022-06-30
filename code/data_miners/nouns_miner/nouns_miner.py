@@ -1,4 +1,3 @@
-import os
 import sys
 sys.path.insert(0, '../../../')
 from code.data_miners.miner_common import *
@@ -86,18 +85,13 @@ def downloadNoun(nounPair: tuple[str, str], o: Writer) -> DownloadStatus:
     SING = 0
     PLUR = 1
 
-    def instrGet(s: str, i: int) -> str:
-        if s == None or len(s) == 0:
-            return ''
-        return s.split()[0]
-
     o.writeDecl('sing & nom',  Cell('Им.', SING), Cell(Nominative, SING))
     o.writeDecl('sing & gen',  Cell('Р.', SING),  Cell(Genitive, SING))
     o.writeDecl('sing & dat',  Cell('Д.', SING),  Cell(Dative, SING))
     o.writeDecl('sing & aku',  Cell('В.', SING),  Cell(Accusative, SING))
     o.writeDecl('sing & vok',  Cell('Им.', SING), Cell(Vocative, SING))
-    o.writeDecl('sing & inst', Cell('Тв.', SING, instrGet, 0), Cell(Instrumental, SING))
-    o.writeDecl('sing & lok',  Cell('Пр.', SING, instrGet, 0), Cell(Locative, SING))
+    o.writeDecl('sing & inst', Cell('Тв.', SING), Cell(Instrumental, SING))
+    o.writeDecl('sing & lok',  Cell('Пр.', SING), Cell(Locative, SING))
     o.endl()
 
     o.writeDecl('plur & nom',  Cell('Им.', PLUR), Cell(Nominative, PLUR))
