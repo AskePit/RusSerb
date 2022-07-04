@@ -715,15 +715,10 @@ class ComparativeEx(Excercise):
         mojDecl = Declination.Make(person, random.choice(list(Number)), Case.nom)
         tvojDecl = Declination.Make(person.getOpposite(), random.choice(list(Number)), Case.gen)
 
-        print(tvojDecl.toString())
-
         pronounsVoc = GetVocabulary('possessive_pronouns')
 
         moj = DeclinedPair.Make( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
         tvoj = DeclinedPair.Make( pronounsVoc.getWord(tvojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun).overrideDeclinations(Case.gen)
-
-        print(tvoj.serbDeclination.toString())
-        print(tvoj.rusDeclination.toString())
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
         question = '{} {} {} {}'.format(moj.rus, noun.rus, adj.rus, tvoj.rus)

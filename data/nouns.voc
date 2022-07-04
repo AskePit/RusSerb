@@ -221,13 +221,13 @@ sing & vok: brate | брат
 sing & inst: bratom | братом
 sing & lok: bratu | брате
 
-plur & nom: genitive | братья
-plur & gen: dative | братьев
-plur & dat: accusative | братьям
-plur & aku: vocative | братьев
-plur & vok: locative | братья
-plur & inst: | братьями
-plur & lok: instrumental | братьях
+plur & nom: braća | братья
+plur & gen: braće | братьев
+plur & dat: braći | братьям
+plur & aku: braću | братьев
+plur & vok: braćo | братья
+plur & inst: braćom | братьями
+plur & lok: braći | братьях
 
 ---
 
@@ -1019,13 +1019,13 @@ sing & vok: kupuse | капуста
 sing & inst: kupusom | капустой
 sing & lok: kupusu | капусте
 
-plur & nom: genitive | капусты
-plur & gen: dative | капуст
-plur & dat: accusative | капустам
-plur & aku: vocative | капусты
-plur & vok: locative | капусты
-plur & inst: | капустами
-plur & lok: instrumental | капустах
+plur & nom: kupus | капусты
+plur & gen: kupusa | капуст
+plur & dat: kupusu | капустам
+plur & aku: kupus | капусты
+plur & vok: kupuse | капусты
+plur & inst: kupusom | капустами
+plur & lok: kupusu | капустах
 
 ---
 
@@ -1250,13 +1250,13 @@ sing & vok: marte | март
 sing & inst: martom | мартом
 sing & lok: martu | марте
 
-plur & nom: genitive | марты
-plur & gen: dative | мартов
-plur & dat: accusative | мартам
-plur & aku: vocative | марты
-plur & vok: locative | марты
-plur & inst: | мартами
-plur & lok: instrumental | мартах
+plur & nom: marti | марты
+plur & gen: marta | мартов
+plur & dat: martima | мартам
+plur & aku: marte | марты
+plur & vok: marti | марты
+plur & inst: martima | мартами
+plur & lok: martima | мартах
 
 ---
 
@@ -1565,13 +1565,13 @@ sing & vok: pantalone | брюки
 sing & inst: pantalonama | брюками
 sing & lok: pantalonama | брюках
 
-plur & nom: genitive | брюки
-plur & gen: dative | брюк
-plur & dat: accusative | брюкам
-plur & aku: vocative | брюки
-plur & vok: locative | брюки
-plur & inst: | брюками
-plur & lok: instrumental | брюках
+plur & nom: pantalone | брюки
+plur & gen: pantalona | брюк
+plur & dat: pantalonama | брюкам
+plur & aku: pantalone | брюки
+plur & vok: pantalone | брюки
+plur & inst: pantalonama | брюками
+plur & lok: pantalonama | брюках
 
 ---
 
@@ -1943,13 +1943,13 @@ sing & vok: spanaću | шпинат
 sing & inst: spanaćem | шпинатом
 sing & lok: spanaću | шпинате
 
-plur & nom: genitive | шпинаты
-plur & gen: dative | шпинатов
-plur & dat: accusative | шпинатам
-plur & aku: vocative | шпинаты
-plur & vok: locative | шпинаты
-plur & inst: | шпинатами
-plur & lok: instrumental | шпинатах
+plur & nom: spanać | шпинаты
+plur & gen: spanaća | шпинатов
+plur & dat: spanaću | шпинатам
+plur & aku: spanać | шпинаты
+plur & vok: spanaću | шпинаты
+plur & inst: spanaćem | шпинатами
+plur & lok: spanaću | шпинатах
 
 ---
 

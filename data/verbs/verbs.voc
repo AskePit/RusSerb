@@ -93,33 +93,33 @@ e & no_se
 
 inf: biti | быть
 
-present & sing & first: jesam |
-present & sing & second: jesi |
-present & sing & third: jeste |
-present & plur & first: jesmo |
-present & plur & second: jeste |
-present & plur & third: jesu |
+present & sing & first: jesam | есть
+present & sing & second: jesi | есть
+present & sing & third: jeste | есть
+present & plur & first: jesmo | есть
+present & plur & second: jeste | есть
+present & plur & third: jesu | есть
 
-perfect & sing & male: bio |
-perfect & sing & fem: bila |
-perfect & sing & neu: bilo |
-perfect & plur & male: bili |
-perfect & plur & fem: bile |
-perfect & plur & neu: bila |
+perfect & sing & male: bio | был
+perfect & sing & fem: bila | была
+perfect & sing & neu: bilo | было
+perfect & plur & male: bili | были
+perfect & plur & fem: bile | были
+perfect & plur & neu: bila | были
 
-futur & sing & first: biću |
-futur & sing & second: bićeš |
-futur & sing & third: biće |
-futur & plur & first: bićemo |
-futur & plur & second: bićete |
-futur & plur & third: biće |
+futur & sing & first: biću | буд
+futur & sing & second: bićeš | будешь
+futur & sing & third: biće | будет
+futur & plur & first: bićemo | будем
+futur & plur & second: bićete | будете
+futur & plur & third: biće | будут
 
-imperfect & sing & first: bijah |
-imperfect & sing & second: bijaše |
-imperfect & sing & third: bijaše |
-imperfect & plur & first: bijasmo |
-imperfect & plur & second: bijaste |
-imperfect & plur & third: bijahu |
+imperfect & sing & first: bijah | был
+imperfect & sing & second: bijaše | был
+imperfect & sing & third: bijaše | был
+imperfect & plur & first: bijasmo | были
+imperfect & plur & second: bijaste | были
+imperfect & plur & third: bijahu | были
 
 # participle & present: budući |
 # participle & past: bivši |
@@ -4493,19 +4493,19 @@ a & se
 
 inf: tuširati | принимать душ
 
-present & sing & first: tuširam |
-present & sing & second: tuširaš |
-present & sing & third: tušira |
-present & plur & first: tuširamo |
-present & plur & second: tuširate |
-present & plur & third: tuširaju |
+present & sing & first: tuširam | принимаю душ
+present & sing & second: tuširaš | принимешь душ
+present & sing & third: tušira | принимает душ
+present & plur & first: tuširamo | принимаем душ
+present & plur & second: tuširate | принимаете душ
+present & plur & third: tuširaju | принимают душ
 
-perfect & sing & male: tuširao |
-perfect & sing & fem: tuširala |
-perfect & sing & neu: tuširalo |
-perfect & plur & male: tuširali |
-perfect & plur & fem: tuširale |
-perfect & plur & neu: tuširala |
+perfect & sing & male: tuširao | принимал душ
+perfect & sing & fem: tuširala | принимала душ
+perfect & sing & neu: tuširalo | принимало душ
+perfect & plur & male: tuširali | принимали душ
+perfect & plur & fem: tuširale | принимали душ
+perfect & plur & neu: tuširala | принимали душ
 
 futur & sing & first: tuširaću |
 futur & sing & second: tuširaćeš |
@@ -4845,19 +4845,19 @@ i & no_se
 
 inf: zaboraviti | забыть
 
-present & sing & first: zaboravim |
-present & sing & second: zaboraviš |
-present & sing & third: zaboravi |
-present & plur & first: zaboravimo |
-present & plur & second: zaboravite |
-present & plur & third: zaborave |
+present & sing & first: zaboravim | забываю
+present & sing & second: zaboraviš | забываешь
+present & sing & third: zaboravi | забывает
+present & plur & first: zaboravimo | забываем
+present & plur & second: zaboravite | забываете
+present & plur & third: zaborave | забывают
 
-perfect & sing & male: zaboravio |
-perfect & sing & fem: zaboravila |
-perfect & sing & neu: zaboravilo |
-perfect & plur & male: zaboravili |
-perfect & plur & fem: zaboravile |
-perfect & plur & neu: zaboravila |
+perfect & sing & male: zaboravio | забыл
+perfect & sing & fem: zaboravila | забыла
+perfect & sing & neu: zaboravilo | забыло
+perfect & plur & male: zaboravili | забыли
+perfect & plur & fem: zaboravile | забыли
+perfect & plur & neu: zaboravila | забыли
 
 futur & sing & first: zaboraviću |
 futur & sing & second: zaboravićeš |

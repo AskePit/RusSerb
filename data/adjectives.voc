@@ -5318,61 +5318,61 @@ none
 
 inf: redak | редкий
 
-sing & nom & male & indef:  | редок
-sing & nom & fem  & indef:  | редка
-sing & nom & neu  & indef:  | редко
-plur & nom & male & indef:  | редки
-plur & nom & fem  & indef:  | редки
-plur & nom & neu  & indef:  | редки
+sing & nom & male & indef: redak | редок
+sing & nom & fem  & indef: retka | редка
+sing & nom & neu  & indef: retko | редко
+plur & nom & male & indef: retki | редки
+plur & nom & fem  & indef: retke | редки
+plur & nom & neu  & indef: retka | редки
 
-sing & gen & male & indef:  | редкого
-sing & gen & fem  & indef:  | редкой
-sing & gen & neu  & indef:  | редкого
-plur & gen & male & indef:  | редких
-plur & gen & fem  & indef:  | редких
-plur & gen & neu  & indef:  | редких
+sing & gen & male & indef: retka | редкого
+sing & gen & fem  & indef: retke | редкой
+sing & gen & neu  & indef: retkog | редкого
+plur & gen & male & indef: retkih | редких
+plur & gen & fem  & indef: retkih | редких
+plur & gen & neu  & indef: retkih | редких
 
-sing & dat & male & indef:  | редкому
-sing & dat & fem  & indef:  | редкой
-sing & dat & neu  & indef:  | редкому
-plur & dat & male & indef:  | редким
-plur & dat & fem  & indef:  | редким
-plur & dat & neu  & indef:  | редким
+sing & dat & male & indef: retku | редкому
+sing & dat & fem  & indef: retkoj | редкой
+sing & dat & neu  & indef: retkom | редкому
+plur & dat & male & indef: retkim | редким
+plur & dat & fem  & indef: retkim | редким
+plur & dat & neu  & indef: retkim | редким
 
-sing & aku & male & indef & anim:  | редкого
-sing & aku & fem  & indef & anim:  | редкую
-sing & aku & neu  & indef & anim:  | редкое
-plur & aku & male & indef & anim:  | редких
-plur & aku & fem  & indef & anim:  | редких
-plur & aku & neu  & indef & anim:  | редких
+sing & aku & male & indef & anim: retka | редкого
+sing & aku & fem  & indef & anim: retku | редкую
+sing & aku & neu  & indef & anim: retko | редкое
+plur & aku & male & indef & anim: retke | редких
+plur & aku & fem  & indef & anim: retke | редких
+plur & aku & neu  & indef & anim: retka | редких
 
-sing & aku & male & indef & inanim:  | редкий
-sing & aku & fem  & indef & inanim:  | редкую
-sing & aku & neu  & indef & inanim:  | редкое
-plur & aku & male & indef & inanim:  | редким
-plur & aku & fem  & indef & inanim:  | редким
-plur & aku & neu  & indef & inanim:  | редким
+sing & aku & male & indef & inanim: redak | редкий
+sing & aku & fem  & indef & inanim: retku | редкую
+sing & aku & neu  & indef & inanim: retko | редкое
+plur & aku & male & indef & inanim: retke | редким
+plur & aku & fem  & indef & inanim: retke | редким
+plur & aku & neu  & indef & inanim: retka | редким
 
-sing & vok & male & indef:  | редок
-sing & vok & fem  & indef:  | редка
-sing & vok & neu  & indef:  | редко
-plur & vok & male & indef:  | редки
-plur & vok & fem  & indef:  | редки
-plur & vok & neu  & indef:  | редки
+sing & vok & male & indef: redak | редкий
+sing & vok & fem  & indef: retka | редкая
+sing & vok & neu  & indef: retko | редкое
+plur & vok & male & indef: retki | редкие
+plur & vok & fem  & indef: retke | редкие
+plur & vok & neu  & indef: retka | редкие
 
-sing & lok & male & indef:  | редком
-sing & lok & fem  & indef:  | редкой
-sing & lok & neu  & indef:  | редком
-plur & lok & male & indef:  | редких
-plur & lok & fem  & indef:  | редких
-plur & lok & neu  & indef:  | редких
+sing & lok & male & indef: retku | редком
+sing & lok & fem  & indef: retkoj | редкой
+sing & lok & neu  & indef: retkom | редком
+plur & lok & male & indef: retkim | редких
+plur & lok & fem  & indef: retkim | редких
+plur & lok & neu  & indef: retkim | редких
 
-sing & inst & male & indef:  | редким
-sing & inst & fem  & indef:  | редкой
-sing & inst & neu  & indef:  | редким
-plur & inst & male & indef:  | редкими
-plur & inst & fem  & indef:  | редкими
-plur & inst & neu  & indef:  | редкими
+sing & inst & male & indef: retkim | редким
+sing & inst & fem  & indef: retkom | редкой
+sing & inst & neu  & indef: retkim | редким
+plur & inst & male & indef: retkim | редкими
+plur & inst & fem  & indef: retkim | редкими
+plur & inst & neu  & indef: retkim | редкими
 
 sing & nom & male & defined: retki | редкий
 sing & nom & fem  & defined: retka | редкая
