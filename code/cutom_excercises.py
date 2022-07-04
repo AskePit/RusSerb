@@ -683,3 +683,53 @@ class PrepositionsCasesEx(Excercise):
         answer = '{} {} ({})'.format(serbPreposition, serbObject.serb, serbCase.toString())
 
         return ExcerciseYield(title, question, answer)
+
+class ComparativeEx(Excercise):
+    randomNounsPool: RandomPool
+    randomAdjectivesPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+        self.randomNounsPool = RandomPool(GetVocabulary('nouns').words)
+        self.randomAdjectivesPool = RandomPool(GetVocabulary('adjectives').words)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский:
+        # question: Эта умная кошка моя
+        # answer:   Ta pametna mačka je moja
+
+        # title:    Переведите на русский:
+        # question: Taj veliki kukuruz je njihov
+        # answer:   Та большая кукуруза - их
+
+        lang = LangMode.GetLangBit()
+
+        num = random.choice(list(Number))
+
+        noun = self.randomNounsPool.yieldElem().makeNounGenderPair(Case.nom, num, Person.third, Definition.comp)
+        adj = self.randomAdjectivesPool.yieldElem().makeSimilarPair(noun)
+        tobe = GetVocabulary('tobe').makeSimilarPair(noun)
+
+        person = random.choice(list(Person))
+
+        mojDecl = Declination.Make(person, random.choice(list(Number)), Case.nom)
+        tvojDecl = Declination.Make(person.getOpposite(), random.choice(list(Number)), Case.gen)
+
+        print(tvojDecl.toString())
+
+        pronounsVoc = GetVocabulary('possessive_pronouns')
+
+        moj = DeclinedPair.Make( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
+        tvoj = DeclinedPair.Make( pronounsVoc.getWord(tvojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun).overrideDeclinations(Case.gen)
+
+        print(tvoj.serbDeclination.toString())
+        print(tvoj.rusDeclination.toString())
+
+        title = ['Переведите на сербский', 'Переведите на русский'][lang]
+        question = '{} {} {} {}'.format(moj.rus, noun.rus, adj.rus, tvoj.rus)
+        answer = '{} {} {} {} od {}'.format(moj.serb, noun.serb, tobe.serb, adj.serb, tvoj.serb)
+
+        if lang:
+            question, answer = answer, question
+
+        return ExcerciseYield(title, question, answer)

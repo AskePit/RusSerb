@@ -442,34 +442,43 @@ class DeclinedPair:
         return copy.deepcopy(self)
     
     def setWord(self, word):
-        self.serb = word.get(self.serbDeclination).serb
-        self.rus = word.get(self.rusDeclination).rus
+        self.meta = word
+        self.serb = self.meta.get(self.serbDeclination).serb
+        self.rus = self.meta.get(self.rusDeclination).rus
         return self
         
     def cloneRusToSerbDecl(self, *overrideArgs):
         self.serbDeclination = self.rusDeclination.clone().override(*overrideArgs)
+        self.serb = self.meta.get(self.serbDeclination).serb
         return self
 
     def cloneRusToSerbDeclParse(self, overrideForm: str):
         self.serbDeclination = self.rusDeclination.clone().parseOverride(overrideForm)
+        self.serb = self.meta.get(self.serbDeclination).serb
         return self
     
     def cloneSerbToRusDecl(self, *overrideArgs):
         self.rusDeclination = self.serbDeclination.clone().override(*overrideArgs)
+        self.rus = self.meta.get(self.rusDeclination).rus
         return self
 
     def cloneSerbToRusDeclParse(self, overrideForm: str):
         self.rusDeclination = self.serbDeclination.clone().parseOverride(overrideForm)
+        self.rus = self.meta.get(self.rusDeclination).rus
         return self
     
     def overrideDeclinations(self, *overrideArgs):
         self.serbDeclination.override(*overrideArgs)
+        self.serb = self.meta.get(self.serbDeclination).serb
         self.rusDeclination.override(*overrideArgs)
+        self.rus = self.meta.get(self.rusDeclination).rus
         return self
 
     def overrideDeclinationsParse(self, overrideForms: str):
         self.serbDeclination.parseOverride(overrideForms)
+        self.serb = self.meta.get(self.serbDeclination).serb
         self.rusDeclination.parseOverride(overrideForms)
+        self.rus = self.meta.get(self.rusDeclination).rus
         return self
     
     def getRusReflexive(self):
@@ -479,6 +488,13 @@ class DeclinedPair:
     
     def getSerbReflexive(self):
         return GetSerbReflexive(self.serbDeclination)
+    
+    def overrideGendersFromNounPair(self, nounPair):
+        self.serbDeclination.override(nounPair.serbDeclination.gender)
+        self.serb = self.meta.get(self.serbDeclination).serb
+        self.rusDeclination.override(nounPair.rusDeclination.gender)
+        self.rus = self.meta.get(self.rusDeclination).rus
+        return self
 
 class Word:
     speechPart: SpeechPart

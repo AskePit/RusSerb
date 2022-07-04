@@ -1,0 +1,48 @@
+declined pronoun
+
+свой
+none
+
+male & sing & nom: svoj | свой
+male & sing & gen: svojega | своего
+male & sing & dat: svojemu | своему
+male & sing & aku: svojega | свой
+male & sing & inst: svojim | своим
+male & sing & lok: svojem | своём
+
+fem & sing & nom: svoja | своя
+fem & sing & gen: svoje | своей
+fem & sing & dat: svojoj | своей
+fem & sing & aku: svoju | свою
+fem & sing & inst: svojom | своей
+fem & sing & lok: svojoj | своей
+
+neu & sing & nom: svoje | своё
+neu & sing & gen: svojega | своего
+neu & sing & dat: svojemu | своему
+neu & sing & aku: svojega | своё
+neu & sing & inst: svojim | своим
+neu & sing & lok: svojem | своём
+
+male & plur & nom: svoji | свои
+male & plur & gen: svojih | своих
+male & plur & dat: svojim | своим
+male & plur & aku: svoje | своих
+male & plur & inst: svojim | своими
+male & plur & lok: svojim | своих
+
+fem & plur & nom: svoje | свои
+fem & plur & gen: svojih | своих
+fem & plur & dat: svojim | своим
+fem & plur & aku: svoje | своих
+fem & plur & inst: svojim | своими
+fem & plur & lok: svojim | своих
+
+neu & plur & nom: svoja | свои
+neu & plur & gen: svojih | своих
+neu & plur & dat: svojim | своим
+neu & plur & aku: svoja | своих
+neu & plur & inst: svojim | своими
+neu & plur & lok: svojim | своих
+
+---

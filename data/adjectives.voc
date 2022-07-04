@@ -1503,61 +1503,61 @@ plur & inst & male & defined: dobrim | хорошими
 plur & inst & fem  & defined: dobrim | хорошими
 plur & inst & neu  & defined: dobrim | хорошими
 
-sing & nom & male & comp: bolji | лучший
-sing & nom & fem  & comp: bolja | лучший
-sing & nom & neu  & comp: bolje | лучший
-plur & nom & male & comp: bolji | лучший
-plur & nom & fem  & comp: bolje | лучший
-plur & nom & neu  & comp: bolja | лучший
+sing & nom & male & comp: bolji | лучше
+sing & nom & fem  & comp: bolja | лучше
+sing & nom & neu  & comp: bolje | лучше
+plur & nom & male & comp: bolji | лучше
+plur & nom & fem  & comp: bolje | лучше
+plur & nom & neu  & comp: bolja | лучше
 
-sing & gen & male & comp: boljeg | лучший
-sing & gen & fem  & comp: bolje | лучший
-sing & gen & neu  & comp: boljeg | лучший
-plur & gen & male & comp: boljih | лучший
-plur & gen & fem  & comp: boljih | лучший
-plur & gen & neu  & comp: boljih | лучший
+sing & gen & male & comp: boljeg | лучше
+sing & gen & fem  & comp: bolje | лучше
+sing & gen & neu  & comp: boljeg | лучше
+plur & gen & male & comp: boljih | лучше
+plur & gen & fem  & comp: boljih | лучше
+plur & gen & neu  & comp: boljih | лучше
 
-sing & dat & male & comp: boljem | лучший
-sing & dat & fem  & comp: boljoj | лучший
-sing & dat & neu  & comp: boljem | лучший
-plur & dat & male & comp: boljim | лучший
-plur & dat & fem  & comp: boljim | лучший
-plur & dat & neu  & comp: boljim | лучший
+sing & dat & male & comp: boljem | лучше
+sing & dat & fem  & comp: boljoj | лучше
+sing & dat & neu  & comp: boljem | лучше
+plur & dat & male & comp: boljim | лучше
+plur & dat & fem  & comp: boljim | лучше
+plur & dat & neu  & comp: boljim | лучше
 
-sing & aku & male & comp & anim: boljeg | лучший
-sing & aku & fem  & comp & anim: bolju | лучший
-sing & aku & neu  & comp & anim: bolje | лучший
-plur & aku & male & comp & anim: bolje | лучший
-plur & aku & fem  & comp & anim: bolje | лучший
-plur & aku & neu  & comp & anim: bolja | лучший
+sing & aku & male & comp & anim: boljeg | лучше
+sing & aku & fem  & comp & anim: bolju | лучше
+sing & aku & neu  & comp & anim: bolje | лучше
+plur & aku & male & comp & anim: bolje | лучше
+plur & aku & fem  & comp & anim: bolje | лучше
+plur & aku & neu  & comp & anim: bolja | лучше
 
-sing & aku & male & comp & inanim: bolji | лучший
-sing & aku & fem  & comp & inanim: bolju | лучший
-sing & aku & neu  & comp & inanim: bolje | лучший
-plur & aku & male & comp & inanim: bolje | лучший
-plur & aku & fem  & comp & inanim: bolje | лучший
-plur & aku & neu  & comp & inanim: bolja | лучший
+sing & aku & male & comp & inanim: bolji | лучше
+sing & aku & fem  & comp & inanim: bolju | лучше
+sing & aku & neu  & comp & inanim: bolje | лучше
+plur & aku & male & comp & inanim: bolje | лучше
+plur & aku & fem  & comp & inanim: bolje | лучше
+plur & aku & neu  & comp & inanim: bolja | лучше
 
-sing & vok & male & comp: bolji | лучший
-sing & vok & fem  & comp: bolja | лучший
-sing & vok & neu  & comp: bolje | лучший
-plur & vok & male & comp: bolji | лучший
-plur & vok & fem  & comp: bolje | лучший
-plur & vok & neu  & comp: bolja | лучший
+sing & vok & male & comp: bolji | лучше
+sing & vok & fem  & comp: bolja | лучше
+sing & vok & neu  & comp: bolje | лучше
+plur & vok & male & comp: bolji | лучше
+plur & vok & fem  & comp: bolje | лучше
+plur & vok & neu  & comp: bolja | лучше
 
-sing & lok & male & comp: boljem | лучший
-sing & lok & fem  & comp: boljoj | лучший
-sing & lok & neu  & comp: boljem | лучший
-plur & lok & male & comp: boljim | лучший
-plur & lok & fem  & comp: boljim | лучший
-plur & lok & neu  & comp: boljim | лучший
+sing & lok & male & comp: boljem | лучше
+sing & lok & fem  & comp: boljoj | лучше
+sing & lok & neu  & comp: boljem | лучше
+plur & lok & male & comp: boljim | лучше
+plur & lok & fem  & comp: boljim | лучше
+plur & lok & neu  & comp: boljim | лучше
 
-sing & inst & male & comp: boljim | лучший
-sing & inst & fem  & comp: boljom | лучший
-sing & inst & neu  & comp: boljim | лучший
-plur & inst & male & comp: boljim | лучший
-plur & inst & fem  & comp: boljim | лучший
-plur & inst & neu  & comp: boljim | лучший
+sing & inst & male & comp: boljim | лучше
+sing & inst & fem  & comp: boljom | лучше
+sing & inst & neu  & comp: boljim | лучше
+plur & inst & male & comp: boljim | лучше
+plur & inst & fem  & comp: boljim | лучше
+plur & inst & neu  & comp: boljim | лучше
 
 sing & nom & male & super: najbolji | наихорошейший
 sing & nom & fem  & super: najbolja | наихорошейшее
@@ -3813,61 +3813,61 @@ plur & inst & male & defined: lošim | плохими
 plur & inst & fem  & defined: lošim | плохими
 plur & inst & neu  & defined: lošim | плохими
 
-sing & nom & male & comp: lošiji | плоше»
-sing & nom & fem  & comp: lošija | плоше»
-sing & nom & neu  & comp: lošije | плоше»
-plur & nom & male & comp: lošiji | плоше»
-plur & nom & fem  & comp: lošije | плоше»
-plur & nom & neu  & comp: lošija | плоше»
+sing & nom & male & comp: lošiji | хуже
+sing & nom & fem  & comp: lošija | хуже
+sing & nom & neu  & comp: lošije | хуже
+plur & nom & male & comp: lošiji | хуже
+plur & nom & fem  & comp: lošije | хуже
+plur & nom & neu  & comp: lošija | хуже
 
-sing & gen & male & comp: lošijeg | плоше»
-sing & gen & fem  & comp: lošije | плоше»
-sing & gen & neu  & comp: lošijeg | плоше»
-plur & gen & male & comp: lošijih | плоше»
-plur & gen & fem  & comp: lošijih | плоше»
-plur & gen & neu  & comp: lošijih | плоше»
+sing & gen & male & comp: lošijeg | хуже
+sing & gen & fem  & comp: lošije | хуже
+sing & gen & neu  & comp: lošijeg | хуже
+plur & gen & male & comp: lošijih | хуже
+plur & gen & fem  & comp: lošijih | хуже
+plur & gen & neu  & comp: lošijih | хуже
 
-sing & dat & male & comp: lošijem | плоше»
-sing & dat & fem  & comp: lošijoj | плоше»
-sing & dat & neu  & comp: lošijem | плоше»
-plur & dat & male & comp: lošijim | плоше»
-plur & dat & fem  & comp: lošijim | плоше»
-plur & dat & neu  & comp: lošijim | плоше»
+sing & dat & male & comp: lošijem | хуже
+sing & dat & fem  & comp: lošijoj | хуже
+sing & dat & neu  & comp: lošijem | хуже
+plur & dat & male & comp: lošijim | хуже
+plur & dat & fem  & comp: lošijim | хуже
+plur & dat & neu  & comp: lošijim | хуже
 
-sing & aku & male & comp & anim: lošijeg | плоше»
-sing & aku & fem  & comp & anim: lošiju | плоше»
-sing & aku & neu  & comp & anim: lošije | плоше»
-plur & aku & male & comp & anim: lošije | плоше»
-plur & aku & fem  & comp & anim: lošije | плоше»
-plur & aku & neu  & comp & anim: lošija | плоше»
+sing & aku & male & comp & anim: lošijeg | хуже
+sing & aku & fem  & comp & anim: lošiju | хуже
+sing & aku & neu  & comp & anim: lošije | хуже
+plur & aku & male & comp & anim: lošije | хуже
+plur & aku & fem  & comp & anim: lošije | хуже
+plur & aku & neu  & comp & anim: lošija | хуже
 
-sing & aku & male & comp & inanim: lošiji | плоше»
-sing & aku & fem  & comp & inanim: lošiju | плоше»
-sing & aku & neu  & comp & inanim: lošije | плоше»
-plur & aku & male & comp & inanim: lošije | плоше»
-plur & aku & fem  & comp & inanim: lošije | плоше»
-plur & aku & neu  & comp & inanim: lošija | плоше»
+sing & aku & male & comp & inanim: lošiji | хуже
+sing & aku & fem  & comp & inanim: lošiju | хуже
+sing & aku & neu  & comp & inanim: lošije | хуже
+plur & aku & male & comp & inanim: lošije | хуже
+plur & aku & fem  & comp & inanim: lošije | хуже
+plur & aku & neu  & comp & inanim: lošija | хуже
 
-sing & vok & male & comp: lošiji | плоше»
-sing & vok & fem  & comp: lošija | плоше»
-sing & vok & neu  & comp: lošije | плоше»
-plur & vok & male & comp: lošiji | плоше»
-plur & vok & fem  & comp: lošije | плоше»
-plur & vok & neu  & comp: lošija | плоше»
+sing & vok & male & comp: lošiji | хуже
+sing & vok & fem  & comp: lošija | хуже
+sing & vok & neu  & comp: lošije | хуже
+plur & vok & male & comp: lošiji | хуже
+plur & vok & fem  & comp: lošije | хуже
+plur & vok & neu  & comp: lošija | хуже
 
-sing & lok & male & comp: lošijem | плоше»
-sing & lok & fem  & comp: lošijoj | плоше»
-sing & lok & neu  & comp: lošijem | плоше»
-plur & lok & male & comp: lošijim | плоше»
-plur & lok & fem  & comp: lošijim | плоше»
-plur & lok & neu  & comp: lošijim | плоше»
+sing & lok & male & comp: lošijem | хуже
+sing & lok & fem  & comp: lošijoj | хуже
+sing & lok & neu  & comp: lošijem | хуже
+plur & lok & male & comp: lošijim | хуже
+plur & lok & fem  & comp: lošijim | хуже
+plur & lok & neu  & comp: lošijim | хуже
 
-sing & inst & male & comp: lošijim | плоше»
-sing & inst & fem  & comp: lošijom | плоше»
-sing & inst & neu  & comp: lošijim | плоше»
-plur & inst & male & comp: lošijim | плоше»
-plur & inst & fem  & comp: lošijim | плоше»
-plur & inst & neu  & comp: lošijim | плоше»
+sing & inst & male & comp: lošijim | хуже
+sing & inst & fem  & comp: lošijom | хуже
+sing & inst & neu  & comp: lošijim | хуже
+plur & inst & male & comp: lošijim | хуже
+plur & inst & fem  & comp: lošijim | хуже
+plur & inst & neu  & comp: lošijim | хуже
 
 sing & nom & male & super: najlošiji | наиплохейший
 sing & nom & fem  & super: najlošija | наиплохейшее

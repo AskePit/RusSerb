@@ -4,9 +4,9 @@ declined pronoun
 first & sing & unisex
 
 male & sing & nom: moj | мой
-male & sing & gen: mojega | моего
+male & sing & gen: mojeg | моего
 male & sing & dat: mojemu | моему
-male & sing & aku: mojega | мой
+male & sing & aku: mojeg | мой
 male & sing & inst: mojim | моим
 male & sing & lok: mojem | моём
 
@@ -18,9 +18,9 @@ fem & sing & inst: mojom | моей
 fem & sing & lok: mojoj | моей
 
 neu & sing & nom: moje | моё
-neu & sing & gen: mojega | моего
+neu & sing & gen: mojeg | моего
 neu & sing & dat: mojemu | моему
-neu & sing & aku: mojega | моё
+neu & sing & aku: mojeg | моё
 neu & sing & inst: mojim | моим
 neu & sing & lok: mojem | моём
 
@@ -51,9 +51,9 @@ neu & plur & lok: mojim | моих
 second & sing & unisex
 
 male & sing & nom: tvoj | твой
-male & sing & gen: tvojega | твоего
+male & sing & gen: tvojeg | твоего
 male & sing & dat: tvojemu | твоему
-male & sing & aku: tvojega | твой
+male & sing & aku: tvojeg | твой
 male & sing & inst: tvojim | твоим
 male & sing & lok: tvojem | твоём
 
@@ -65,9 +65,9 @@ fem & sing & inst: tvojom | твоей
 fem & sing & lok: tvojoj | твоей
 
 neu & sing & nom: tvoje | твоё
-neu & sing & gen: tvojega | твоего
+neu & sing & gen: tvojeg | твоего
 neu & sing & dat: tvojemu | твоему
-neu & sing & aku: tvojega | твоё
+neu & sing & aku: tvojeg | твоё
 neu & sing & inst: tvojim | твоим
 neu & sing & lok: tvojem | твоём
 
@@ -91,53 +91,6 @@ neu & plur & dat: tvojim | твоим
 neu & plur & aku: tvoja | твоих
 neu & plur & inst: tvojim | твоими
 neu & plur & lok: tvojim | твоих
-
----
-
-свой
-gen
-
-male & sing & nom: svoj | свой
-male & sing & gen: svojega | своего
-male & sing & dat: svojemu | своему
-male & sing & aku: svojega | свой
-male & sing & inst: svojim | своим
-male & sing & lok: svojem | своём
-
-fem & sing & nom: svoja | своя
-fem & sing & gen: svoje | своей
-fem & sing & dat: svojoj | своей
-fem & sing & aku: svoju | свою
-fem & sing & inst: svojom | своей
-fem & sing & lok: svojoj | своей
-
-neu & sing & nom: svoje | своё
-neu & sing & gen: svojega | своего
-neu & sing & dat: svojemu | своему
-neu & sing & aku: svojega | своё
-neu & sing & inst: svojim | своим
-neu & sing & lok: svojem | своём
-
-male & plur & nom: svoji | свои
-male & plur & gen: svojih | своих
-male & plur & dat: svojim | своим
-male & plur & aku: svoje | своих
-male & plur & inst: svojim | своими
-male & plur & lok: svojim | своих
-
-fem & plur & nom: svoje | свои
-fem & plur & gen: svojih | своих
-fem & plur & dat: svojim | своим
-fem & plur & aku: svoje | своих
-fem & plur & inst: svojim | своими
-fem & plur & lok: svojim | своих
-
-neu & plur & nom: svoja | свои
-neu & plur & gen: svojih | своих
-neu & plur & dat: svojim | своим
-neu & plur & aku: svoja | своих
-neu & plur & inst: svojim | своими
-neu & plur & lok: svojim | своих
 
 ---
 
