@@ -680,7 +680,7 @@ class PrepositionsCasesEx(Excercise):
 
         title = 'Переведите на сербский'
         question = '{} {}'.format(rusPreposition, rusObject.rus)
-        answer = '{} {} ({})'.format(serbPreposition, serbObject.serb, serbCase.toString())
+        answer = '{} {} ({})'.format(serbPreposition, serbObject.serb, str(serbCase))
 
         return ExcerciseYield(title, question, answer)
 
@@ -717,8 +717,8 @@ class ComparativeEx(Excercise):
 
         pronounsVoc = GetVocabulary('possessive_pronouns')
 
-        moj = DeclinedPair.Make( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
-        tvoj = DeclinedPair.Make( pronounsVoc.getWord(tvojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun).overrideDeclinations(Case.gen)
+        moj = DeclinedPair( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
+        tvoj = DeclinedPair( pronounsVoc.getWord(tvojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun).overrideDeclinations(Case.gen)
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
         question = '{} {} {} {}'.format(moj.rus, noun.rus, adj.rus, tvoj.rus)
@@ -758,7 +758,7 @@ class SuperlativeEx(Excercise):
         person = random.choice(list(Person))
         mojDecl = Declination.Make(person, random.choice(list(Number)), Case.nom)
         pronounsVoc = GetVocabulary('possessive_pronouns')
-        moj = DeclinedPair.Make( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
+        moj = DeclinedPair( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
         question = '{} {} {}'.format(moj.rus, noun.rus, adj.rus)

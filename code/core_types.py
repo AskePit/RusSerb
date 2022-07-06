@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 from enum import Enum
 import copy
 import random
@@ -48,7 +49,7 @@ class Case(Enum):
     inst = 5 # instrumental / творительный
     lok  = 6 # lokative     / предложный
 
-    def toString(self):
+    def __str__(self):
         return self.name.capitalize()
 
 class Person(Enum):
@@ -57,9 +58,9 @@ class Person(Enum):
     third  = 2 # третье лицо
 
     def getOpposite(self):
-        if self.value == 0:
+        if self == Person.first:
             return Person.second
-        if self.value == 1:
+        if self == Person.second:
             return Person.first
         return Person.third
 
@@ -71,13 +72,13 @@ class Time(Enum):
     futur     = 4
 
     def isPresent(self):
-        return self.value == 0
+        return self == Time.present
     
     def isPast(self):
-        return self.value == 1 or self.value == 2 or self.value == 3
+        return self == Time.perfect or self == Time.imperfectmperf or self == Time.aorist
 
     def isFuture(self):
-        return self.value == 4
+        return self.value == Time.futur
 
 class Distance(Enum):
     close = 0 # этот
@@ -129,7 +130,7 @@ class Declination:
     # male|fem & first|second|third & sing|plur & nom
     # & is for combination
     # | is for random probability
-    def Parse(form: str): # Declination
+    def Parse(form: str) -> 'Declination':
         res = Declination()
 
         components = form.split('&')
@@ -163,7 +164,7 @@ class Declination:
     #     fem  & first & plur & nom
     #
     # unisex expands to male|fem|neu
-    def ParseList(form: str): # list[Declination]
+    def ParseList(form: str) -> 'list[Declination]':
         res: list[Declination] = []
 
         attrs = {} # <AttrName, list[AttrEnum]>
@@ -238,7 +239,7 @@ class Declination:
 
         return res
     
-    def Make(*argv): # Declination
+    def Make(*argv) -> 'Declination':
         res = Declination()
 
         for arg in argv:
@@ -356,7 +357,7 @@ class Declination:
 
         return self
     
-    def toString(self):
+    def __str__(self) -> str:
         first = True
         res = ""
 
@@ -394,20 +395,13 @@ def GetSerbReflexive(decl: Declination):
     return ''
 
 # exact declination of `Word` in both languages
+@dataclass
 class DeclinedWord:
-    # meta: Word
+    meta: 'Word'
     declination: Declination
     rus: str
     serb: str
 
-    def Make(meta, declination, rus, serb):
-        res = DeclinedWord()
-        res.meta = meta
-        res.declination = declination
-        res.rus = rus
-        res.serb = serb
-        return res
-    
     def getRusReflexive(self, reflection: bool):
         if not reflection:
             return self.rus
@@ -422,21 +416,21 @@ class DeclinedWord:
 # pair of serb and rus words in two different declinations
 # stores deep copies of declinations and strings, so you can play
 # with it as you like
+@dataclass
 class DeclinedPair:
-    # meta: Word
+    meta: 'Word'
     serbDeclination: Declination
     rusDeclination: Declination
     rus: str
     serb: str
 
-    def Make(declinedWord: DeclinedWord): # -> DeclinedPair
-        res = DeclinedPair()
-        res.meta = declinedWord.meta
-        res.serbDeclination = declinedWord.declination.clone()
-        res.rusDeclination = declinedWord.declination.clone()
-        res.rus = copy.deepcopy(declinedWord.rus)
-        res.serb = copy.deepcopy(declinedWord.serb)
-        return res
+    def __init__(self, declinedWord: DeclinedWord = None):
+        if declinedWord:
+            self.meta = declinedWord.meta
+            self.serbDeclination = declinedWord.declination.clone()
+            self.rusDeclination = declinedWord.declination.clone()
+            self.rus = copy.deepcopy(declinedWord.rus)
+            self.serb = copy.deepcopy(declinedWord.serb)
     
     def clone(self):
         return copy.deepcopy(self)
@@ -502,17 +496,10 @@ class Word:
     metaDeclination: Declination
     forms: list[DeclinedWord]
     
-    def Make(speechPart: SpeechPart):
-        res = Word()
-        res.speechPart = speechPart
-        res.forms = []
-        res.title = ""
-        return res
-
-    def MakeTitled(speechPart: SpeechPart, title: str):
-        res = Word.Make(speechPart)
-        res.title = title
-        return res
+    def __init__(self, speechPart: SpeechPart):
+        self.speechPart = speechPart
+        self.forms = []
+        self.title = ""
 
     def get(self, declination: Declination) -> DeclinedWord:
         for word in self.forms:
@@ -520,11 +507,11 @@ class Word:
                 return word
         return None
 
-    def toString(self):
+    def __str__(self):
         res = '{} {}\n'.format(self.speechPart.name, self.title)
-        res += '{}\n'.format(self.metaDeclination.toString())
+        res += '{}\n'.format(self.metaDeclination)
         for word in self.forms:
-            res += '{}: {}|{}\n'.format(word.declination.toString(), word.serb, word.rus)
+            res += '{}: {}|{}\n'.format(word.declination, word.serb, word.rus)
         return res
     
     def normalize(self):
@@ -566,10 +553,10 @@ class WordList:
     def __init__(self):
         self.words = []
     
-    def toString(self):
+    def __str__(self):
         res = ""
         for word in self.words:
-            res += word.toString() + '\n'
+            res += str(word) + '\n'
         
         return res
     
@@ -614,7 +601,7 @@ class Phrase:
         if not aux is None:
             self.aux = aux
 
-    def toString(self):
+    def __str__(self):
         res = self.serb + '|' + self.rus
         if hasattr(self, 'aux'):
             res += '|' + self.aux
@@ -634,13 +621,13 @@ class PhrasesList:
         self.title = ""
         self.phrases = []
 
-    def toString(self):
+    def __str__(self):
         res = ''
         for phrase in self.phrases:
-            res += phrase.toString() + '\n'
+            res += str(phrase) + '\n'
         return res
     
-    def Merge(lists): # PhrasesList
+    def Merge(lists) -> 'PhrasesList':
         res = PhrasesList()
         for l in lists:
             res.phrases.extend(l.phrases)

@@ -17,43 +17,6 @@ def ConvertLinesToTokens(lines: list[str]) -> list[str]:
     res[:] = [x for x in res if x]
     return res
     
-class Header:
-    speechPart = SpeechPart.noun
-    formsSequence: list[Declination] = []
-    cursor = 0
-
-    def __init__(self) -> None:
-        self.speechPart = SpeechPart.noun
-        self.formsSequence = []
-        self.cursor = 0
-
-    def parseHeader(self, speechPart: SpeechPart, lines: list[str]):
-        self.speechPart = speechPart
-        
-        parseSequence = ConvertLinesToTokens(lines)
-        for seq in parseSequence:
-            self.formsSequence.append(Declination.Parse(seq))
-        
-    def yieldDeclination(self) -> Declination:
-        if len(self.formsSequence) == 0:
-            return None
-
-        if self.cursor >= len(self.formsSequence):
-            return None
-        
-        res = self.formsSequence[self.cursor]
-        self.cursor += 1
-        return res
-    
-    def resetYield(self):
-        self.cursor = 0
-    
-    def toString(self):
-        res = ""
-        for decl in self.formsSequence:
-            res += decl.toString() + '\n'
-        return res
-
 def LoadDeclined(data: list[str], speechPart: SpeechPart, theWords: WordList):
     # read data
     data = ConvertLinesToTokens(data)
@@ -63,14 +26,14 @@ def LoadDeclined(data: list[str], speechPart: SpeechPart, theWords: WordList):
     DECL = 2
 
     stage = TITLE
-    theWord = Word.Make(speechPart)
+    theWord = Word(speechPart)
 
     for l in data:
         if l.startswith('-'):
             # word end
             theWord.normalize()
             theWords.words.append(theWord)
-            theWord = Word.Make(speechPart)
+            theWord = Word(speechPart)
             stage = TITLE
         elif stage == TITLE:
             # title
@@ -94,7 +57,7 @@ def LoadDeclined(data: list[str], speechPart: SpeechPart, theWords: WordList):
             serb = words[0].strip()
             rus = words[1].strip()
 
-            declinedWord = DeclinedWord.Make(theWord, Declination.Parse(decl), rus, serb)
+            declinedWord = DeclinedWord(theWord, Declination.Parse(decl), rus, serb)
             theWord.forms.append(declinedWord)
 
 def LoadPhrases(title: str, data: list[str], thePhrases: PhrasesList):

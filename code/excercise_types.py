@@ -72,7 +72,7 @@ class ExcerciseDesc:
         self.name = ''
         self.parent = None
     
-    def MakePhrasesEx(name: str, voc: str, parent, number: int):
+    def MakePhrasesEx(name: str, voc: str, parent, number: int) -> 'ExcerciseDesc':
         ex = ExcerciseDesc()
         ex.name = name
         ex.parent = parent
@@ -81,7 +81,7 @@ class ExcerciseDesc:
         ex.phrasesVoc = voc
         return ex
 
-    def MakeCustomEx(name: str, funcNames: list[str], parent, number: int):
+    def MakeCustomEx(name: str, funcNames: list[str], parent, number: int) -> 'ExcerciseDesc':
         ex = ExcerciseDesc()
         ex.name = name
         ex.parent = parent
@@ -90,7 +90,7 @@ class ExcerciseDesc:
         ex.customFunctions = funcNames
         return ex
 
-    def toString(self):
+    def __str__(self):
         res = 'parent: ' + (self.parent.name if self.parent != None else '<None>') + '\n'
         res = self.name
         if self.type == ExcerciseType.phrases:
@@ -113,13 +113,13 @@ class ExcerciseDescsDir:
         self.children = []
         self.excercises = []
     
-    def toString(self):
+    def __str__(self):
         res = self.name + '\n'
         res += 'parent: ' + (self.parent.name if self.parent != None else '<None>') + '\n'
         for ex in self.excercises:
-            res += '\n  ' + ex.toString()
+            res += '\n  ' + str(ex)
         for ch in self.children:
-            res += '\n' + ch.toString()
+            res += '\n' + str(ch)
         return res
 
 class RandomPool:

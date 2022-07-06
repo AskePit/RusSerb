@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 import io
 import sys
 import copy
@@ -17,20 +18,18 @@ class DownloadStatus(Enum):
     NoDeclTable = 2
     Fatal = 3
 
+@dataclass
 class Cell:
-    def __init__(self, row: str, column: int, subcolumnGetter: Callable[[str, int], str] = None, subcolumn: int = 0, rowNum = 0):
-        self.row = row
-        self.rowNum = rowNum
-        self.column = column
-        self.subcolumnGetter = subcolumnGetter
-        self.subcolumn = subcolumn
+    row: str
+    column: int
+    subcolumnGetter: Callable[[str, int], str] = None
+    subcolumn: int = 0,
+    rowNum: int = 0
 
+@dataclass
 class DeclTable():
     cells: list[str]
 
-    def __init__(self, cells: list[str]) -> None:
-        self.cells = cells
-    
     def accessCell(self, idx: int):
         if idx >= len(self.cells):
             return ''
@@ -155,15 +154,15 @@ def PostGarbageFilter(txt: str) -> str:
             txt = txt[:idx].strip()
     return txt
 
+@dataclass
 class TableDownloader:
-    def __init__(self, word: str, urlBase: str, header: str, tag: str, tagClass: str, tagIdx: int = 0):
-        self.word = word
-        self.urlBase = urlBase
-        self.header = header
-        self.tag = tag
-        self.tagIdx = tagIdx
-        self.tagClass = tagClass
-        self.table: list[str] = None
+    word: str
+    urlBase: str
+    header: str
+    tag: str
+    tagClass: str
+    tagIdx: int = 0
+    table: list[str] = None
 
     def downloadSoup(self):
         url = "{}/{}".format(self.urlBase, self.word)
@@ -327,7 +326,7 @@ class WordsFile:
         self.words = []
         self.failedWords = []
     
-    def Load(listFilename: str): # -> WordsFile
+    def Load(listFilename: str) -> 'WordsFile':
         res = WordsFile()
         res.listFilename = listFilename
 
@@ -352,7 +351,7 @@ class WordsFile:
         res.words.sort(key=lambda tup: tup[0])
         return res
     
-    def toString(self):
+    def __str__(self):
         res = self.vocFilename
         res += '\n\n'
 
@@ -366,7 +365,7 @@ class WordsFile:
     
     def save(self):
         with io.open(self.listFilename, 'w', encoding='utf-8') as f:
-            f.write(self.toString())
+            f.write(str(self))
 
 class WordsLists:
     files: list[WordsFile]
@@ -375,7 +374,7 @@ class WordsLists:
         self.files = []
 
     def add(self, filename: str, words: list[tuple[str, str]]):
-        self.files.append(WordsFile(filename, words))
+        self.files.append(WordsFile(filename, words=words))
         return self
     
     def Load(dirname: str): # -> WordsLists
@@ -387,11 +386,11 @@ class WordsLists:
 
         return res
 
-    def toString(self):
+    def __str__(self):
         res = ''
 
         for f in self.files:
-            res += f.toString()
+            res += str(f)
             res += '\n'
 
         return res
