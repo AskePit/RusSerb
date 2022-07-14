@@ -57,7 +57,7 @@ def LoadDeclined(data: list[str], speechPart: SpeechPart, theWords: WordList):
             serb = words[0].strip()
             rus = words[1].strip()
 
-            declinedWord = DeclinedWord(theWord, Declination.Parse(decl), rus, serb)
+            declinedWord = WordForm(theWord, Declination.Parse(decl), rus, serb)
             theWord.forms.append(declinedWord)
 
 def LoadPhrases(title: str, data: list[str], thePhrases: PhrasesList):

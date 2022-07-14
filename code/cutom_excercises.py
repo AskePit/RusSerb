@@ -717,8 +717,8 @@ class ComparativeEx(Excercise):
 
         pronounsVoc = GetVocabulary('possessive_pronouns')
 
-        moj = DeclinedPair( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
-        tvoj = DeclinedPair( pronounsVoc.getWord(tvojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun).overrideDeclinations(Case.gen)
+        moj = WordDuoForm( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
+        tvoj = WordDuoForm( pronounsVoc.getWord(tvojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun).overrideDeclinations(Case.gen)
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
         question = '{} {} {} {}'.format(moj.rus, noun.rus, adj.rus, tvoj.rus)
@@ -758,7 +758,7 @@ class SuperlativeEx(Excercise):
         person = random.choice(list(Person))
         mojDecl = Declination.Make(person, random.choice(list(Number)), Case.nom)
         pronounsVoc = GetVocabulary('possessive_pronouns')
-        moj = DeclinedPair( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
+        moj = WordDuoForm( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
         question = '{} {} {}'.format(moj.rus, noun.rus, adj.rus)

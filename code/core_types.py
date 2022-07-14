@@ -396,7 +396,7 @@ def GetSerbReflexive(decl: Declination):
 
 # exact declination of `Word` in both languages
 @dataclass
-class DeclinedWord:
+class WordForm:
     meta: 'Word'
     declination: Declination
     rus: str
@@ -417,14 +417,14 @@ class DeclinedWord:
 # stores deep copies of declinations and strings, so you can play
 # with it as you like
 @dataclass
-class DeclinedPair:
+class WordDuoForm:
     meta: 'Word'
     serbDeclination: Declination
     rusDeclination: Declination
     rus: str
     serb: str
 
-    def __init__(self, declinedWord: DeclinedWord = None):
+    def __init__(self, declinedWord: WordForm = None):
         if declinedWord:
             self.meta = declinedWord.meta
             self.serbDeclination = declinedWord.declination.clone()
@@ -494,14 +494,14 @@ class Word:
     speechPart: SpeechPart
     title: str
     metaDeclination: Declination
-    forms: list[DeclinedWord]
+    forms: list[WordForm]
     
     def __init__(self, speechPart: SpeechPart):
         self.speechPart = speechPart
         self.forms = []
         self.title = ""
 
-    def get(self, declination: Declination) -> DeclinedWord:
+    def get(self, declination: Declination) -> WordForm:
         for word in self.forms:
             if word.declination.intersects(declination):
                 return word
@@ -517,7 +517,7 @@ class Word:
     def normalize(self):
         # unwrap Gender.unisex to 3 genders
 
-        new_forms: list[DeclinedWord] = []
+        new_forms: list[WordForm] = []
 
         for f in self.forms:
             if hasattr(f.declination, 'gender') and f.declination.gender == Gender.unisex:
@@ -528,7 +528,7 @@ class Word:
 
         self.forms += new_forms
     
-    def makeNounGenderPair(self, *declinationArgs) -> DeclinedPair:
+    def makeNounGenderPair(self, *declinationArgs) -> WordDuoForm:
         if self.speechPart != SpeechPart.noun:
             return None
 
@@ -538,13 +538,13 @@ class Word:
         if not hasattr(self.metaDeclination, 'ruGender'):
             self.metaDeclination.ruGender = self.metaDeclination.gender.toRuGender()
 
-        pair = DeclinedPair()
+        pair = WordDuoForm()
         pair.serbDeclination = Declination.Make(self.metaDeclination.gender, *declinationArgs)
         pair.rusDeclination = Declination.Make(self.metaDeclination.ruGender.toGender(), *declinationArgs)
         pair.setWord(self)
         return pair
     
-    def makeSimilarPair(self, pair: DeclinedPair) -> DeclinedPair:
+    def makeSimilarPair(self, pair: WordDuoForm) -> WordDuoForm:
         return pair.clone().setWord(self)
 
 class WordList:
@@ -572,13 +572,13 @@ class WordList:
                 return word
         return None
 
-    def getWordForm(self, declination: Declination) -> DeclinedWord:
+    def getWordForm(self, declination: Declination) -> WordForm:
         for word in self.words:
             if word.metaDeclination.intersects(declination):
                 return word.get(declination)
         return None
     
-    def makeSimilarPair(self, pair: DeclinedPair) -> DeclinedPair:
+    def makeSimilarPair(self, pair: WordDuoForm) -> WordDuoForm:
         res = pair.clone()
         res.serb = self.getWordForm(pair.serbDeclination).serb
         res.rus = self.getWordForm(pair.rusDeclination).rus
