@@ -201,8 +201,8 @@ class PointingEx(Excercise):
 
         lang = LangMode.GetLangBit()
 
-        num = random.choice(list(Number))
-        distance = random.choice(list(Distance))
+        num = RandomEnum(Number)
+        distance = RandomEnum(Distance)
 
         subjDecl = Declination.Make(Case.nom, num, distance, Person.third, Definition.defined)
 
@@ -211,7 +211,7 @@ class PointingEx(Excercise):
         point = noun.clone().setWord(GetVocabulary('pointing_pronouns').getWord(Declination.Make(distance)))
         tobe = noun.clone().setWord(GetVocabulary('tobe'))
 
-        possessDecl = Declination.Make(random.choice(list(Number)), random.choice(list(Gender)), random.choice(list(Person)))
+        possessDecl = Declination.Make(RandomEnum(Number), RandomEnum(Gender), RandomEnum(Person))
         possess = noun.clone().setWord(GetVocabulary('possessive_pronouns').getWord(possessDecl))
 
         distClarif = ''
@@ -648,7 +648,7 @@ class PrepositionsCasesEx(Excercise):
         # answer:   Вокруг вас
 
         withNoun = random.randint(0, 1)
-        number = random.choice(list(Number))
+        number = RandomEnum(Number)
 
         serbCase = random.choice([Case.gen, Case.aku, Case.dat, Case.inst, Case.lok])
 
@@ -669,8 +669,8 @@ class PrepositionsCasesEx(Excercise):
             serbObject = noun.get(serbDecl)
             rusObject = noun.get(rusDecl)
         else:
-            gender = random.choice(list(Gender))
-            person = random.choice(list(Person))
+            gender = RandomEnum(Gender)
+            person = RandomEnum(Person)
 
             serbDecl = Declination.Make(serbCase, number, gender, person)
             rusDecl = Declination.Make(rusCase, number, gender, person)
@@ -706,16 +706,16 @@ class ComparativeEx(Excercise):
 
         lang = LangMode.GetLangBit()
 
-        subjDecl = Declination.Make(Case.nom, random.choice(list(Number)), Person.third, Definition.comp)
+        subjDecl = Declination.Make(Case.nom, RandomEnum(Number), Person.third, Definition.comp)
 
         noun = WordBiForm.MakeFromNoun(self.randomNounsPool.yieldElem(), subjDecl)
         adj = noun.clone().setWord(self.randomAdjectivesPool.yieldElem())
         tobe = noun.clone().setWord(GetVocabulary('tobe'))
 
-        person = random.choice(list(Person))
+        person = RandomEnum(Person)
 
-        mojDecl = Declination.Make(person, random.choice(list(Number)), random.choice(list(Gender)))
-        tvojDecl = Declination.Make(person.getOpposite(), random.choice(list(Number)), random.choice(list(Gender)))
+        mojDecl = Declination.Make(person, RandomEnum(Number), RandomEnum(Gender))
+        tvojDecl = Declination.Make(person.getOpposite(), RandomEnum(Number), RandomEnum(Gender))
 
         pronounsVoc = GetVocabulary('possessive_pronouns')
 
@@ -752,15 +752,15 @@ class SuperlativeEx(Excercise):
 
         lang = LangMode.GetLangBit()
 
-        subjDecl = Declination.Make(Case.nom, random.choice(list(Number)), Person.third, Definition.super)
+        subjDecl = Declination.Make(Case.nom, RandomEnum(Number), Person.third, Definition.super)
 
         noun = WordBiForm.MakeFromNoun(self.randomNounsPool.yieldElem(), subjDecl)
         adj = noun.clone().setWord(self.randomAdjectivesPool.yieldElem())
         tobe = noun.clone().setWord(GetVocabulary('tobe'))
 
-        person = random.choice(list(Person))
+        person = RandomEnum(Person)
 
-        mojDecl = Declination.Make(person, random.choice(list(Number)), random.choice(list(Gender)))
+        mojDecl = Declination.Make(person, RandomEnum(Number), RandomEnum(Gender))
         pronounsVoc = GetVocabulary('possessive_pronouns')
         moj = noun.clone().setWord(pronounsVoc.getWord(mojDecl))
 

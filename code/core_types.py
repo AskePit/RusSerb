@@ -105,6 +105,9 @@ class Animality(Enum):
     anim = 0
     inanim = 1
 
+def RandomEnum(iterable):
+    return random.choice(list(iterable))
+
 DeclinationAttributesMap = {
     'person': Person,
     'gender': Gender,
