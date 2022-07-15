@@ -204,13 +204,15 @@ class PointingEx(Excercise):
         num = random.choice(list(Number))
         distance = random.choice(list(Distance))
 
-        noun = self.randomNounsPool.yieldElem().makeNounGenderPair(Case.nom, num, distance, Person.third, Definition.defined)
-        adj = self.randomAdjectivesPool.yieldElem().makeSimilarPair(noun)
-        point = GetVocabulary('pointing_pronouns').makeSimilarPair(noun)
-        tobe = GetVocabulary('tobe').makeSimilarPair(noun)
+        subjDecl = Declination.Make(Case.nom, num, distance, Person.third, Definition.defined)
 
-        possessDecl = noun.serbDeclination.clone().override(random.choice(list(Number)), random.choice(list(Gender)))
-        possess = GetVocabulary('possessive_pronouns').getWord(possessDecl).makeSimilarPair(noun)
+        noun = WordBiForm.MakeFromNoun(self.randomNounsPool.yieldElem(), subjDecl)
+        adj = noun.clone().setWord(self.randomAdjectivesPool.yieldElem())
+        point = noun.clone().setWord(GetVocabulary('pointing_pronouns').getWord(Declination.Make(distance)))
+        tobe = noun.clone().setWord(GetVocabulary('tobe'))
+
+        possessDecl = Declination.Make(random.choice(list(Number)), random.choice(list(Gender)), random.choice(list(Person)))
+        possess = noun.clone().setWord(GetVocabulary('possessive_pronouns').getWord(possessDecl))
 
         distClarif = ''
         if distance == Distance.far:
@@ -219,8 +221,8 @@ class PointingEx(Excercise):
             distClarif = '(дальн.)'
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
-        question = '{}{} {} {} - {}'.format(point.rus, distClarif, adj.rus, noun.rus, possess.rus)
-        answer = '{} {} {} {} {}'.format(point.serb, adj.serb, noun.serb, tobe.serb, possess.serb)
+        question = '{}{} {} {} - {}'.format(point.rus(), distClarif, adj.rus(), noun.rus(), possess.rus())
+        answer = '{} {} {} {} {}'.format(point.serb(), adj.serb(), noun.serb(), tobe.serb(), possess.serb())
 
         if lang:
             question, answer = answer, question
@@ -704,25 +706,26 @@ class ComparativeEx(Excercise):
 
         lang = LangMode.GetLangBit()
 
-        num = random.choice(list(Number))
+        subjDecl = Declination.Make(Case.nom, random.choice(list(Number)), Person.third, Definition.comp)
 
-        noun = self.randomNounsPool.yieldElem().makeNounGenderPair(Case.nom, num, Person.third, Definition.comp)
-        adj = self.randomAdjectivesPool.yieldElem().makeSimilarPair(noun)
-        tobe = GetVocabulary('tobe').makeSimilarPair(noun)
+        noun = WordBiForm.MakeFromNoun(self.randomNounsPool.yieldElem(), subjDecl)
+        adj = noun.clone().setWord(self.randomAdjectivesPool.yieldElem())
+        tobe = noun.clone().setWord(GetVocabulary('tobe'))
 
         person = random.choice(list(Person))
 
-        mojDecl = Declination.Make(person, random.choice(list(Number)), Case.nom)
-        tvojDecl = Declination.Make(person.getOpposite(), random.choice(list(Number)), Case.gen)
+        mojDecl = Declination.Make(person, random.choice(list(Number)), random.choice(list(Gender)))
+        tvojDecl = Declination.Make(person.getOpposite(), random.choice(list(Number)), random.choice(list(Gender)))
 
         pronounsVoc = GetVocabulary('possessive_pronouns')
 
-        moj = WordDuoForm( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
-        tvoj = WordDuoForm( pronounsVoc.getWord(tvojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun).overrideDeclinations(Case.gen)
+        moj = noun.clone().setWord(pronounsVoc.getWord(mojDecl))
+        tvoj = noun.clone().setWord(pronounsVoc.getWord(tvojDecl))
+        tvoj.commonDecl.override(Case.gen)
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
-        question = '{} {} {} {}'.format(moj.rus, noun.rus, adj.rus, tvoj.rus)
-        answer = '{} {} {} {} od {}'.format(moj.serb, noun.serb, tobe.serb, adj.serb, tvoj.serb)
+        question = '{} {} {} {}'.format(moj.rus(), noun.rus(), adj.rus(), tvoj.rus())
+        answer = '{} {} {} {} od {}'.format(moj.serb(), noun.serb(), tobe.serb(), adj.serb(), tvoj.serb())
 
         if lang:
             question, answer = answer, question
@@ -749,20 +752,21 @@ class SuperlativeEx(Excercise):
 
         lang = LangMode.GetLangBit()
 
-        num = random.choice(list(Number))
+        subjDecl = Declination.Make(Case.nom, random.choice(list(Number)), Person.third, Definition.super)
 
-        noun = self.randomNounsPool.yieldElem().makeNounGenderPair(Case.nom, num, Person.third, Definition.super)
-        adj = self.randomAdjectivesPool.yieldElem().makeSimilarPair(noun)
-        tobe = GetVocabulary('tobe').makeSimilarPair(noun)
+        noun = WordBiForm.MakeFromNoun(self.randomNounsPool.yieldElem(), subjDecl)
+        adj = noun.clone().setWord(self.randomAdjectivesPool.yieldElem())
+        tobe = noun.clone().setWord(GetVocabulary('tobe'))
 
         person = random.choice(list(Person))
-        mojDecl = Declination.Make(person, random.choice(list(Number)), Case.nom)
+
+        mojDecl = Declination.Make(person, random.choice(list(Number)), random.choice(list(Gender)))
         pronounsVoc = GetVocabulary('possessive_pronouns')
-        moj = WordDuoForm( pronounsVoc.getWord(mojDecl).get(noun.serbDeclination) ).overrideGendersFromNounPair(noun)
+        moj = noun.clone().setWord(pronounsVoc.getWord(mojDecl))
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
-        question = '{} {} {}'.format(moj.rus, noun.rus, adj.rus)
-        answer = '{} {} {} {}'.format(moj.serb, noun.serb, tobe.serb, adj.serb)
+        question = '{} {} {}'.format(moj.rus(), noun.rus(), adj.rus())
+        answer = '{} {} {} {}'.format(moj.serb(), noun.serb(), tobe.serb(), adj.serb())
 
         if lang:
             question, answer = answer, question

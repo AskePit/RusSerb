@@ -416,79 +416,61 @@ class WordForm:
 # pair of serb and rus words in two different declinations
 # stores deep copies of declinations and strings, so you can play
 # with it as you like
-@dataclass
-class WordDuoForm:
-    meta: 'Word'
-    serbDeclination: Declination
-    rusDeclination: Declination
-    rus: str
-    serb: str
+class WordBiForm:
+    word: 'Word'
 
-    def __init__(self, declinedWord: WordForm = None):
-        if declinedWord:
-            self.meta = declinedWord.meta
-            self.serbDeclination = declinedWord.declination.clone()
-            self.rusDeclination = declinedWord.declination.clone()
-            self.rus = copy.deepcopy(declinedWord.rus)
-            self.serb = copy.deepcopy(declinedWord.serb)
+    commonDecl: Declination
+    serbOnlyDecl: Declination
+    rusOnlyDecl: Declination
+
+    rusCache: str = None
+    serbCache: str = None
+
+    def MakeFromNoun(noun: 'Word', commonDecl: Declination) -> 'WordBiForm':
+        if noun.speechPart != SpeechPart.noun:
+            return None
+        
+        if not hasattr(noun.metaDeclination, 'gender'):
+            return None
+
+        res = WordBiForm()
+
+        res.word = noun
+        res.commonDecl = commonDecl
+
+        nounMeta = res.word.metaDeclination
+
+        if not hasattr(nounMeta, 'ruGender'):
+            nounMeta.ruGender = nounMeta.gender.toRuGender()
+
+        res.serbOnlyDecl = Declination.Make(nounMeta.gender)
+        res.rusOnlyDecl = Declination.Make(nounMeta.ruGender.toGender())
+
+        return res
     
     def clone(self):
         return copy.deepcopy(self)
     
-    def setWord(self, word):
-        self.meta = word
-        self.serb = self.meta.get(self.serbDeclination).serb
-        self.rus = self.meta.get(self.rusDeclination).rus
-        return self
-        
-    def cloneRusToSerbDecl(self, *overrideArgs):
-        self.serbDeclination = self.rusDeclination.clone().override(*overrideArgs)
-        self.serb = self.meta.get(self.serbDeclination).serb
-        return self
-
-    def cloneRusToSerbDeclParse(self, overrideForm: str):
-        self.serbDeclination = self.rusDeclination.clone().parseOverride(overrideForm)
-        self.serb = self.meta.get(self.serbDeclination).serb
+    def setWord(self, word: 'Word') -> 'WordBiForm':
+        self.word = word
+        self.invalidateCache()
         return self
     
-    def cloneSerbToRusDecl(self, *overrideArgs):
-        self.rusDeclination = self.serbDeclination.clone().override(*overrideArgs)
-        self.rus = self.meta.get(self.rusDeclination).rus
-        return self
-
-    def cloneSerbToRusDeclParse(self, overrideForm: str):
-        self.rusDeclination = self.serbDeclination.clone().parseOverride(overrideForm)
-        self.rus = self.meta.get(self.rusDeclination).rus
-        return self
+    def rus(self) -> str:
+        if self.rusCache == None:
+            rusDecl = self.commonDecl.clone().overrideByDelc(self.rusOnlyDecl)
+            self.rusCache = self.word.get(rusDecl).rus
+        return self.rusCache
     
-    def overrideDeclinations(self, *overrideArgs):
-        self.serbDeclination.override(*overrideArgs)
-        self.serb = self.meta.get(self.serbDeclination).serb
-        self.rusDeclination.override(*overrideArgs)
-        self.rus = self.meta.get(self.rusDeclination).rus
-        return self
-
-    def overrideDeclinationsParse(self, overrideForms: str):
-        self.serbDeclination.parseOverride(overrideForms)
-        self.serb = self.meta.get(self.serbDeclination).serb
-        self.rusDeclination.parseOverride(overrideForms)
-        self.rus = self.meta.get(self.rusDeclination).rus
-        return self
+    def serb(self) -> str:
+        if self.serbCache == None:
+            serbDecl = self.commonDecl.clone().overrideByDelc(self.serbOnlyDecl)
+            self.serbCache = self.word.get(serbDecl).serb
+        return self.serbCache
     
-    def getRusReflexive(self):
-        if self.getSerbReflexive() == '':
-            return self.rus
-        return GetRusReflexive(self.rus, self.rusDeclination)
-    
-    def getSerbReflexive(self):
-        return GetSerbReflexive(self.serbDeclination)
-    
-    def overrideGendersFromNounPair(self, nounPair):
-        self.serbDeclination.override(nounPair.serbDeclination.gender)
-        self.serb = self.meta.get(self.serbDeclination).serb
-        self.rusDeclination.override(nounPair.rusDeclination.gender)
-        self.rus = self.meta.get(self.rusDeclination).rus
-        return self
+    def invalidateCache(self):
+        self.rusCache = None
+        self.serbCache = None
 
 class Word:
     speechPart: SpeechPart
@@ -528,25 +510,6 @@ class Word:
 
         self.forms += new_forms
     
-    def makeNounGenderPair(self, *declinationArgs) -> WordDuoForm:
-        if self.speechPart != SpeechPart.noun:
-            return None
-
-        if not hasattr(self.metaDeclination, 'gender'):
-            return None
-
-        if not hasattr(self.metaDeclination, 'ruGender'):
-            self.metaDeclination.ruGender = self.metaDeclination.gender.toRuGender()
-
-        pair = WordDuoForm()
-        pair.serbDeclination = Declination.Make(self.metaDeclination.gender, *declinationArgs)
-        pair.rusDeclination = Declination.Make(self.metaDeclination.ruGender.toGender(), *declinationArgs)
-        pair.setWord(self)
-        return pair
-    
-    def makeSimilarPair(self, pair: WordDuoForm) -> WordDuoForm:
-        return pair.clone().setWord(self)
-
 class WordList:
     words: list[Word]
 
@@ -578,12 +541,6 @@ class WordList:
                 return word.get(declination)
         return None
     
-    def makeSimilarPair(self, pair: WordDuoForm) -> WordDuoForm:
-        res = pair.clone()
-        res.serb = self.getWordForm(pair.serbDeclination).serb
-        res.rus = self.getWordForm(pair.rusDeclination).rus
-        return res
-
     def tryUnwrap(self) -> Word:
         if len(self.words) == 1:
             return self.words[0]
