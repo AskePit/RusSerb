@@ -772,3 +772,128 @@ class SuperlativeEx(Excercise):
             question, answer = answer, question
 
         return ExcerciseYield(title, question, answer)
+
+class ConjunctivePositiveEx(Excercise):
+    randomVerbsPool: RandomPool
+    randomOccupationsPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        # combine verbs and modal_verbs and exclude `treba`
+        l = GetVocabulary('verbs').words + GetVocabulary('modal_verbs').words
+        l = [w for w in l if w.title != 'treba']
+
+        self.randomVerbsPool = RandomPool(l)
+        self.randomOccupationsPool = RandomPool(GetVocabulary('occupations').words)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский с местоимением:
+        # question: Я бы читал.
+        # answer:   Ja bih čitao.
+
+        negative = random.randint(0, 1)
+        withOccupation = random.randint(0, 10) > 7
+
+        decl = Declination.Parse('perfect & male|fem|neu & first|second|third & sing|plur & nom')
+
+        if withOccupation:
+            decl.parseOverride('male|fem & third')
+            subject = self.randomOccupationsPool.yieldElem().get(decl)
+        else:
+            decl.humanizeNeutral()
+            subject = GetVocabulary('personal_pronouns').getWordForm(decl)
+
+        bih = GetVocabulary('bih').get(decl)
+        verb = self.randomVerbsPool.yieldElem().get(decl)
+
+        title = 'Переведите на сербский'
+
+        needClarify = decl.number == Number.plur
+        clarification = ''
+        if needClarify:
+            if decl.gender == Gender.male:
+                clarification = '(муж.)'
+            elif decl.gender == Gender.fem:
+                clarification = '(жен.)'
+            elif decl.gender == Gender.neu:
+                clarification = '(ср.)'
+
+        question = '{}{}{}{}'.format(subject.rus, clarification,  [' бы ', ' бы не '][negative], verb.rus)
+
+        bihSerb = bih.serb
+        if negative:
+            bihSerb = 'ne ' + bihSerb
+
+        canOmitPronoun = decl.person == Person.first or (decl.person == Person.second and decl.number == Number.plur)
+
+        if withOccupation:
+            answer = '{} {} {}'.format(subject.serb, bihSerb, verb.serb)
+        else:
+            answer = []
+            answer.append('{} {} {}'.format(subject.serb, bihSerb, verb.serb))
+
+            if canOmitPronoun:
+                if negative:
+                    answer.append('{} {}'.format(bihSerb, verb.serb))
+                else:
+                    answer.append('{} {}'.format(verb.serb, bihSerb))
+
+        return ExcerciseYield(title, question, answer)
+
+class ConjunctiveQuestionsEx(Excercise):
+    randomVerbsPool: RandomPool
+    randomOccupationsPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        # combine verbs and modal_verbs and exclude `treba`
+        l = GetVocabulary('verbs').words + GetVocabulary('modal_verbs').words
+        l = [w for w in l if w.title != 'treba']
+
+        self.randomVerbsPool = RandomPool(l)
+        self.randomOccupationsPool = RandomPool(GetVocabulary('occupations').words)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский:
+        # question: Вы бы пришли?
+        # answer:   Da li biste došli?
+
+        withOccupation = random.randint(0, 10) > 7
+
+        decl = Declination.Parse('perfect & male|fem|neu & first|second|third & sing|plur & nom')
+
+        if withOccupation:
+            decl.parseOverride('male|fem & third')
+            subject = self.randomOccupationsPool.yieldElem().get(decl)
+        else:
+            decl.humanizeNeutral()
+            subject = GetVocabulary('personal_pronouns').getWordForm(decl)
+
+        
+        verb = self.randomVerbsPool.yieldElem().get(decl)
+
+        title = 'Переведите на сербский'
+
+        needClarify = decl.number == Number.plur
+        clarification = ''
+        if needClarify:
+            if decl.gender == Gender.male:
+                clarification = '(муж.)'
+            elif decl.gender == Gender.fem:
+                clarification = '(жен.)'
+            elif decl.gender == Gender.neu:
+                clarification = '(ср.)'
+
+        question = '{}{} бы {}?'.format(subject.rus, clarification, verb.rus)
+
+        canOmitPronoun = decl.person == Person.first or (decl.person == Person.second and decl.number == Number.plur)
+
+        tb = GetVocabulary('bih').get(decl)
+        if withOccupation or not canOmitPronoun:
+            answer = 'Da li {} {} {}?'.format(tb.serb, subject.serb, verb.serb)
+        else:
+            answer = 'Da li {} {}?'.format(tb.serb, verb.serb)
+
+        return ExcerciseYield(title, question, answer)

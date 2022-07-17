@@ -46,17 +46,19 @@ class ExcerciseYield:
     def __init__(self, title, q, a):
         self.title = NormalizeSentence(title)
 
-        self.question = q
-        if type(self.question) is list:
-            self.question = [NormalizeSentence(que) for que in self.question if len(que) > 0]
-        else:
-            self.question = NormalizeSentence(self.question)
+        self.question = ExcerciseYield._PreparePhrase(q)
+        self.answer = ExcerciseYield._PreparePhrase(a)
+    
+    def _PreparePhrase(phrase: str | list[str]) -> str | list[str]:
+        if type(phrase) is list and len(phrase) == 1:
+            phrase = phrase[0]
 
-        self.answer = a
-        if type(self.answer) is list:
-            self.answer = [NormalizeSentence(ans) for ans in self.answer if len(ans) > 0]
+        if type(phrase) is list:
+            phrase = [NormalizeSentence(que) for que in phrase if len(que) > 0]
         else:
-            self.answer = NormalizeSentence(self.answer)
+            phrase = NormalizeSentence(phrase)
+        
+        return phrase
 
 class ExcerciseType(Enum):
     phrases = 0
