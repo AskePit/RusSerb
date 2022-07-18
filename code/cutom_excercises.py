@@ -897,3 +897,67 @@ class ConjunctiveQuestionsEx(Excercise):
             answer = 'Da li {} {}?'.format(tb.serb, verb.serb)
 
         return ExcerciseYield(title, question, answer)
+
+class AkkuzativEx(Excercise):
+    randomVerbsPool: RandomPool
+    randomNounsPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        self.randomNounsPool = RandomPool(GetVocabulary('nouns').words)
+
+        allowed_verbs = [
+            'imati',
+            'hteti',
+            'mrzeti',
+            'obožavati',
+            'voleti',
+            'želeti',
+            'crtati',
+            'kupovati',
+            'prodavati',
+            'razumeti',
+            'slikati',
+            'slušati',
+            'tražiti',
+            'zvati',
+            'čekati',
+            'čuti',
+        ]
+
+        # combine verbs and modal_verbs and exclude `treba`
+        l = GetVocabulary('verbs').words + GetVocabulary('modal_verbs').words
+        l = [w for w in l if w.title in allowed_verbs]
+
+        self.randomVerbsPool = RandomPool(l)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский с местоимением:
+        # question: Я бы читал.
+        # answer:   Ja bih čitao.
+
+        negative = random.randint(0, 1)
+
+        decl = Declination.Parse('present & male|fem & first|second|third & sing|plur & nom')
+        subject = GetVocabulary('personal_pronouns').getWordForm(decl)
+
+        verb = self.randomVerbsPool.yieldElem().get(decl)
+        noun = self.randomNounsPool.yieldElem().get(Declination.Parse('sing|plur & aku'))
+
+        title = 'Переведите на сербский'
+
+        needClarify = decl.number == Number.plur
+        clarification = ''
+        if needClarify:
+            if decl.gender == Gender.male:
+                clarification = '(муж.)'
+            elif decl.gender == Gender.fem:
+                clarification = '(жен.)'
+            elif decl.gender == Gender.neu:
+                clarification = '(ср.)'
+
+        question = '{}{}{} {}'.format(subject.rus, [' ', ' не '][negative], verb.rus, noun.rus)
+        answer = '{}{} {}'.format(['', 'ne '][negative], verb.serb, noun.serb)
+
+        return ExcerciseYield(title, question, answer)
