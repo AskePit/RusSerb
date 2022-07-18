@@ -898,7 +898,7 @@ class ConjunctiveQuestionsEx(Excercise):
 
         return ExcerciseYield(title, question, answer)
 
-class AkkuzativEx(Excercise):
+class AkuzativEx(Excercise):
     randomVerbsPool: RandomPool
     randomNounsPool: RandomPool
 

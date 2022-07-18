@@ -99,7 +99,7 @@ def LoadBlockPhrases(title: str, data: list[str], thePhrases: PhrasesList):
         elif stage == RUS:
             thePhrase.rus.append(l.strip())
 
-def LoadFile(filename: str, title: str):
+def LoadVocFile(filename: str, title: str):
     with io.open(filename, encoding='utf-8') as f:
         data = f.readlines()
         if not len(data):
@@ -128,6 +128,7 @@ def LoadFile(filename: str, title: str):
             return thePhrases
 
 VOCABULARY_EXT = 'voc'
+MAN_EXT = 'man'
 EXCERCISE_EXT = 'exc'
 EXCERCISE_TITLE_FILENAME = '_title'
 
@@ -135,7 +136,7 @@ def LoadVocabulary(path='.'):
     vocRegex = '{}/**/*.{}'.format(path, VOCABULARY_EXT)
     for f in glob.glob(vocRegex, recursive=True):
         collectionName = os.path.splitext(os.path.basename(f))[0]
-        data = LoadFile(f, collectionName)
+        data = LoadVocFile(f, collectionName)
 
         if isinstance(data, WordList):
             unwrapped = data.tryUnwrap()
@@ -143,6 +144,14 @@ def LoadVocabulary(path='.'):
                 data = unwrapped
 
         vocabulary[collectionName] = data
+
+def LoadManuals(path='.'):
+    manRegex = '{}/**/*.{}'.format(path, MAN_EXT)
+    for f in glob.glob(manRegex, recursive=True):
+        manName = os.path.splitext(os.path.basename(f))[0]
+        with io.open(f, encoding='utf-8') as f:
+            data = f.read()
+            mans[manName] = data
 
 def LoadExcercises():
     def LoadDir(dirname, parent: ExcerciseDescsDir) -> ExcerciseDescsDir:
@@ -166,13 +175,14 @@ def LoadExcercises():
 
             name = data[0].strip()
             type = ExcerciseType[data[1].strip()]
+            help = data[3] if len(data) >= 4 else None
 
             if type == ExcerciseType.phrases:
                 voc = data[2].strip()
-                return ExcerciseDesc.MakePhrasesEx(name, voc, parent, number)
+                return ExcerciseDesc.MakePhrasesEx(name, voc, help, parent, number)
             else:
                 funcNames = data[2].split()
-                return ExcerciseDesc.MakeCustomEx(name, funcNames, parent, number)
+                return ExcerciseDesc.MakeCustomEx(name, funcNames, help, parent, number)
     
     def LoadTitle(filename) -> str:
         with io.open(filename, encoding='utf-8') as f:

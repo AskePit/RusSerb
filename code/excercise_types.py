@@ -28,8 +28,6 @@ if len(sys.argv) > 1:
     elif langflag == 'random':
         LANG_MODE = LangMode.random
 
-# NOTE: each excercise should return `ExcerciseYield` object
-
 def NormalizeSentence(phrase: str):
     res = ' '.join(phrase.split())
     if len(res) > 1 and (res.startswith('(') or res.startswith('[')):
@@ -38,6 +36,7 @@ def NormalizeSentence(phrase: str):
         res = res[:1].upper() + res[1:]
     return res
 
+# NOTE: each excercise should return `ExcerciseYield` object
 class ExcerciseYield:
     title: str
     question: str | list[str]
@@ -69,27 +68,30 @@ class ExcerciseDesc:
     parent = None # ExcercisesDir
     serialNumber: int
     type: ExcerciseType
+    help = None # str
 
     def __init__(self):
         self.name = ''
         self.parent = None
     
-    def MakePhrasesEx(name: str, voc: str, parent, number: int) -> 'ExcerciseDesc':
+    def MakePhrasesEx(name: str, voc: str, help: str, parent, number: int) -> 'ExcerciseDesc':
         ex = ExcerciseDesc()
         ex.name = name
         ex.parent = parent
         ex.serialNumber = number
         ex.type = ExcerciseType.phrases
         ex.phrasesVoc = voc
+        ex.help = help
         return ex
 
-    def MakeCustomEx(name: str, funcNames: list[str], parent, number: int) -> 'ExcerciseDesc':
+    def MakeCustomEx(name: str, funcNames: list[str], help: str, parent, number: int) -> 'ExcerciseDesc':
         ex = ExcerciseDesc()
         ex.name = name
         ex.parent = parent
         ex.serialNumber = number
         ex.type = ExcerciseType.custom
         ex.customFunctions = funcNames
+        ex.help = help
         return ex
 
     def __str__(self):

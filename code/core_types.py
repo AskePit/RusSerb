@@ -594,6 +594,10 @@ class PhrasesList:
         return res
 
 vocabulary = {}
+mans = {}
 
 def GetVocabulary(name: str):
     return vocabulary[name]
+
+def GetMan(name: str):
+    return mans[name]

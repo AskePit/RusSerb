@@ -8,6 +8,24 @@ def TryExit(anykey):
         quit()
     return anykey == 'q' or anykey == 'Q' or anykey == 'й' or anykey == 'Й'
 
+def TryHelp(anykey, manName, screen):
+    help = anykey == 'h' or anykey == 'H' or anykey == 'р' or anykey == 'Р'
+    if help:
+        def yieldText(text: str):
+            ClrScr()
+            print(text)
+            input()
+            ClrScr()
+            print(screen)
+
+        if manName == None or manName == '':
+            yieldText('\n    NO HELP')
+        else:
+            yieldText(GetMan(manName))
+        return True
+    else:
+        return False
+
 def ClrScr():
     os.system('cls')
     os.system('clear')
@@ -29,34 +47,47 @@ def ExecuteExcercise(exc: ExcerciseDesc):
         exYield: ExcerciseYield = excercise()
 
         ClrScr()
-        print('\n{}.........................\n'.format(PAD))
-        print('{}{}:\n'.format(PAD, exYield.title))
+
+        screen = ''
+        screen += '\n{}.........................\n\n'.format(PAD)
+        screen += '{}{}:\n\n'.format(PAD, exYield.title)
 
         if type(exYield.question) is list:
-            print('\n')
+            screen += '\n\n'
             for q in exYield.question:
-                print('{}{}'.format(PAD, q))
+                screen += '{}{}\n'.format(PAD, q)
         else:
-            print('{}{}'.format(PAD, exYield.question), end='')
+            screen += '{}{}\n'.format(PAD, exYield.question)
+
+        print(screen)
 
         ans = input()
+        while TryHelp(ans, exc.help, screen):
+            ans = input()
 
         if TryExit(ans):
             break
         else:
             if type(exYield.answer) is list:
-                print('\n')
+                screen += '\n\n'
                 for a in exYield.answer:
-                    print('{}{}'.format(PAD, a))
+                    screen += '{}{}\n'.format(PAD, a)
             else:
-                print('{}{}'.format(PAD, exYield.answer))
-            print('\n{}.........................\n'.format(PAD))
+                screen += '{}{}\n'.format(PAD, exYield.answer)
+            screen += '\n{}.........................\n\n'.format(PAD)
+
+            ClrScr()
+            print(screen)
+
             ans = input()
+            while TryHelp(ans, exc.help, screen):
+                ans = input()
             if TryExit(ans):
                 break
 
 def main():
-    LoadVocabulary()
+    LoadVocabulary('./vocabulary')
+    LoadManuals('./mans')
     excercises = LoadExcercises()
 
     currentDir = excercises
@@ -92,6 +123,7 @@ def main():
         print('\n{}x. Выход'.format(PAD))
 
         ans = input()
+
         if TryExit(ans):
             if (not hasattr(currentDir, 'parent')) or currentDir.parent == None:
                 break
