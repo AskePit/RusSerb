@@ -392,7 +392,7 @@ class PerfectPositiveEx(Excercise):
         #           Čitao sam.
 
         negative = random.randint(0, 1)
-        withOccupation = random.randint(0, 10) > 7
+        withOccupation = RandomPercent(30)
 
         decl = Declination.Parse('perfect & male|fem|neu & first|second|third & sing|plur & nom')
 
@@ -452,7 +452,7 @@ class PerfectQuestionsEx(Excercise):
         # answer:   Da li ste došli?
         #           Jeste li došli?
 
-        withOccupation = random.randint(0, 10) > 7
+        withOccupation = RandomPercent(30)
 
         decl = Declination.Parse('perfect & male|fem|neu & first|second|third & sing|plur & nom')
 
@@ -793,7 +793,7 @@ class ConjunctivePositiveEx(Excercise):
         # answer:   Ja bih čitao.
 
         negative = random.randint(0, 1)
-        withOccupation = random.randint(0, 10) > 7
+        withOccupation = RandomPercent(30)
 
         decl = Declination.Parse('perfect & male|fem|neu & first|second|third & sing|plur & nom')
 
@@ -860,7 +860,7 @@ class ConjunctiveQuestionsEx(Excercise):
         # question: Вы бы пришли?
         # answer:   Da li biste došli?
 
-        withOccupation = random.randint(0, 10) > 7
+        withOccupation = RandomPercent(30)
 
         decl = Declination.Parse('perfect & male|fem|neu & first|second|third & sing|plur & nom')
 
@@ -898,12 +898,38 @@ class ConjunctiveQuestionsEx(Excercise):
 
         return ExcerciseYield(title, question, answer)
 
-class AkuzativEx(Excercise):
+class CaseEx(Excercise):
     randomVerbsPool: RandomPool
     randomNounsPool: RandomPool
+    serbPreposition: str
+    rusPreposition: str
+    case: Case
 
+    def __call__(self) -> ExcerciseYield:
+        negative = RandomPercent(25)
+
+        verb = self.randomVerbsPool.yieldElem().get(Declination.Parse('present & first & sing'))
+        noun = self.randomNounsPool.yieldElem().get(Declination.Parse('sing|plur & male|fem').override(self.case))
+
+        rusNe = 'не ' if negative else ''
+        serbNe = 'ne ' if negative else ''
+
+        rusPrep = ' {} '.format(self.rusPreposition) if len(self.rusPreposition)>0 else ' '
+        serbPrep = ' {} '.format(self.serbPreposition) if len(self.serbPreposition)>0 else ' '
+
+        title = 'Переведите на сербский'
+        question = '{}{}{}{}'.format(rusNe, verb.rus, rusPrep, noun.rus)
+        answer = '{}{}{}{}'.format(serbNe, verb.serb, serbPrep, noun.serb)
+
+        return ExcerciseYield(title, question, answer)
+
+class AkuzativEx(CaseEx):
     def __init__(self):
         super().__init__()
+
+        self.case = Case.aku
+        self.serbPreposition = ''
+        self.rusPreposition = ''
 
         self.randomNounsPool = RandomPool(GetVocabulary('nouns').words)
 
@@ -932,31 +958,13 @@ class AkuzativEx(Excercise):
 
         self.randomVerbsPool = RandomPool(l)
 
-    def __call__(self) -> ExcerciseYield:
-        # title:    Переведите на сербский с местоимением:
-        # question: Я бы читал.
-        # answer:   Ja bih čitao.
-
-        negative = random.randint(0, 1)
-
-        decl = Declination.Parse('present & male|fem & first|second|third & sing|plur & nom')
-        subject = GetVocabulary('personal_pronouns').getWordForm(decl)
-
-        verb = self.randomVerbsPool.yieldElem().get(decl)
-        noun = self.randomNounsPool.yieldElem().get(Declination.Parse('sing|plur & aku'))
-
-        title = 'Переведите на сербский'
-        question = '{}{}{} {}'.format(subject.rus, [' ', ' не '][negative], verb.rus, noun.rus)
-        answer = '{}{} {}'.format(['', 'ne '][negative], verb.serb, noun.serb)
-
-        return ExcerciseYield(title, question, answer)
-
-class InstrumentalEx(Excercise):
-    randomVerbsPool: RandomPool
-    randomNounsPool: RandomPool
-
+class InstrumentalEx(CaseEx):
     def __init__(self):
         super().__init__()
+
+        self.case = Case.inst
+        self.serbPreposition = 'sa'
+        self.rusPreposition = 'с'
 
         nouns = GetVocabulary('occupations').words + GetVocabulary('nouns').words
         nouns = [w for w in nouns if w.metaDeclination.animality == Animality.anim]
@@ -991,18 +999,3 @@ class InstrumentalEx(Excercise):
 
         self.randomVerbsPool = RandomPool(verbs)
 
-    def __call__(self) -> ExcerciseYield:
-        # title:    Переведите на сербский с местоимением:
-        # question: Я бы читал.
-        # answer:   Ja bih čitao.
-
-        negative = random.randint(0, 1)
-
-        verb = self.randomVerbsPool.yieldElem().get(Declination.Parse('present & first & sing'))
-        noun = self.randomNounsPool.yieldElem().get(Declination.Parse('sing|plur & male|fem & inst'))
-
-        title = 'Переведите на сербский'
-        question = '{}{} с {}'.format(['', 'не '][negative], verb.rus, noun.rus)
-        answer = '{}{} sa {}'.format(['', 'ne '][negative], verb.serb, noun.serb)
-
-        return ExcerciseYield(title, question, answer)

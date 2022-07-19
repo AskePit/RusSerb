@@ -108,6 +108,9 @@ class Animality(Enum):
 def RandomEnum(iterable):
     return random.choice(list(iterable))
 
+def RandomPercent(percent: int) -> bool:
+    return random.randint(0, 100) <= percent
+
 DeclinationAttributesMap = {
     'person': Person,
     'gender': Gender,
