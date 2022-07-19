@@ -1,127 +1,635 @@
 declined noun
 
-ученик
-none
-male & sing & nom: učenik | ученик
-male & plur & nom: učenici | ученики
-fem & sing & nom: učenica | ученица
-fem & plur & nom: učenice | ученицы
+Amerikanac
+anim
+
+male & ru_male & sing & nom: Amerikanac | американец
+male & ru_male & sing & gen: Amerikanca | американца
+male & ru_male & sing & dat: Amerikancu | американцу
+male & ru_male & sing & aku: Amerikanca | американца
+male & ru_male & sing & vok: Amerikanče | американец
+male & ru_male & sing & inst: Amerikancem | американцем
+male & ru_male & sing & lok: Amerikancu | американце
+
+male & ru_male & plur & nom: Amerikanci | американцы
+male & ru_male & plur & gen: Amerikanaca | американцев
+male & ru_male & plur & dat: Amerikancima | американцам
+male & ru_male & plur & aku: Amerikance | американцев
+male & ru_male & plur & vok: Amerikanci | американцы
+male & ru_male & plur & inst: Amerikancima | американцами
+male & ru_male & plur & lok: Amerikancima | американцах
+
+fem & ru_fem & sing & nom: Amerikanka | американка
+fem & ru_fem & sing & gen: Amerikanke | американки
+fem & ru_fem & sing & dat: Amerikanki | американке
+fem & ru_fem & sing & aku: Amerikanku | американку
+fem & ru_fem & sing & vok: Amerikanka | американка
+fem & ru_fem & sing & inst: Amerikankom | американкой
+fem & ru_fem & sing & lok: Amerikanki | американке
+
+fem & ru_fem & plur & nom: Amerikanke | американки
+fem & ru_fem & plur & gen: Amerikankara | американок
+fem & ru_fem & plur & dat: Amerikankama | американкам
+fem & ru_fem & plur & aku: Amerikanke | американок
+fem & ru_fem & plur & vok: Amerikanke | американки
+fem & ru_fem & plur & inst: Amerikankama | американками
+fem & ru_fem & plur & lok: Amerikankama | американках
 
 ---
 
-гражданин
-none
-male & sing & nom: građanin | гражданин
-male & plur & nom: građani | граждане
-fem & sing & nom: građanka | гражданка
-fem & plur & nom: građanke | гражданки
+Ciganin
+anim
+
+male & ru_male & sing & nom: Ciganin | цыган
+male & ru_male & sing & gen: Ciganina | цыгана
+male & ru_male & sing & dat: Ciganinu | цыгану
+male & ru_male & sing & aku: Ciganina | цыгана
+male & ru_male & sing & vok: Ciganine | цыган
+male & ru_male & sing & inst: Ciganinom | цыганом
+male & ru_male & sing & lok: Ciganinu | цыгане
+
+male & ru_male & plur & nom: Cigani | цыгане
+male & ru_male & plur & gen: Cigana | цыган
+male & ru_male & plur & dat: Ciganima | цыганам
+male & ru_male & plur & aku: Cigane | цыган
+male & ru_male & plur & vok: Cigani | цыгане
+male & ru_male & plur & inst: Ciganima | цыганами
+male & ru_male & plur & lok: Ciganima | цыганах
+
+fem & ru_fem & sing & nom: Ciganka | цыганка
+fem & ru_fem & sing & gen: Ciganke | цыгаки
+fem & ru_fem & sing & dat: Ciganki | цыганке
+fem & ru_fem & sing & aku: Ciganku | цыганку
+fem & ru_fem & sing & vok: Ciganka | цыганка
+fem & ru_fem & sing & inst: Cigankom | цыганкой
+fem & ru_fem & sing & lok: Ciganki | цыганке
+
+fem & ru_fem & plur & nom: Ciganke | цыганки
+fem & ru_fem & plur & gen: Cigankara | цыганок
+fem & ru_fem & plur & dat: Cigankama | цыганкам
+fem & ru_fem & plur & aku: Ciganke | цыганок
+fem & ru_fem & plur & vok: Ciganke | цыганки
+fem & ru_fem & plur & inst: Cigankama | цыганками
+fem & ru_fem & plur & lok: Cigankama | цыганках
 
 ---
 
-цыган
-none
-male & sing & nom: Ciganin | цыган
-male & plur & nom: Cigani | цыгане
-fem & sing & nom: Ciganka | цыганка
-fem & plur & nom: Ciganke | цыганки
+Francuz
+anim
+
+male & ru_male & sing & nom: Francuz | француз
+male & ru_male & sing & gen: Francuza | француза
+male & ru_male & sing & dat: Francuzu | французу
+male & ru_male & sing & aku: Francuza | француза
+male & ru_male & sing & vok: Francuzu | француз
+male & ru_male & sing & inst: Francuzom | французом
+male & ru_male & sing & lok: Francuzu | французе
+
+male & ru_male & plur & nom: Francuzi | французы
+male & ru_male & plur & gen: Francuza | французов
+male & ru_male & plur & dat: Francuzima | французам
+male & ru_male & plur & aku: Francuze | французов
+male & ru_male & plur & vok: Francuzi | французы
+male & ru_male & plur & inst: Francuzima | французами
+male & ru_male & plur & lok: Francuzima | французах
+
+fem & ru_fem & sing & nom: Francuskinja | француженка
+fem & ru_fem & sing & gen: Francuskinje | француженки
+fem & ru_fem & sing & dat: Francuskinji | француженке
+fem & ru_fem & sing & aku: Francuskinju | француженку
+fem & ru_fem & sing & vok: Francuskinja | француженка
+fem & ru_fem & sing & inst: Francuskinjom | француженкой
+fem & ru_fem & sing & lok: Francuskinji | француженке
+
+fem & ru_fem & plur & nom: Francuskinje | француженки
+fem & ru_fem & plur & gen: Francuskinjara | француженок
+fem & ru_fem & plur & dat: Francuskinjama | француженкам
+fem & ru_fem & plur & aku: Francuskinje | француженок
+fem & ru_fem & plur & vok: Francuskinje | француженки
+fem & ru_fem & plur & inst: Francuskinjama | француженками
+fem & ru_fem & plur & lok: Francuskinjama | француженках
 
 ---
 
-студент
-none
-male & sing & nom: student | студент
-male & plur & nom: studenti | студенты
-fem & sing & nom: studentica | студентка
-fem & plur & nom: studentice | студентки
+Nemac
+anim
+
+male & ru_male & sing & nom: Nemac | немец
+male & ru_male & sing & gen: Nemca | немца
+male & ru_male & sing & dat: Nemcu | немцу
+male & ru_male & sing & aku: Nemca | немца
+male & ru_male & sing & vok: Nemče | немец
+male & ru_male & sing & inst: Nemcem | немцем
+male & ru_male & sing & lok: Nemcu | немце
+
+male & ru_male & plur & nom: Nemci | немцы
+male & ru_male & plur & gen: Nemaca | немцев
+male & ru_male & plur & dat: Nemcima | немцам
+male & ru_male & plur & aku: Nemce | немцев
+male & ru_male & plur & vok: Nemci | немцы
+male & ru_male & plur & inst: Nemcima | немцами
+male & ru_male & plur & lok: Nemcima | немцах
+
+fem & ru_fem & sing & nom: Nemka | немка
+fem & ru_fem & sing & gen: Nemke | немки
+fem & ru_fem & sing & dat: Nemki | немке
+fem & ru_fem & sing & aku: Nemku | немку
+fem & ru_fem & sing & vok: Nemka | немка
+fem & ru_fem & sing & inst: Nemkom | немкой
+fem & ru_fem & sing & lok: Nemki | немке
+
+fem & ru_fem & plur & nom: Nemke | немки
+fem & ru_fem & plur & gen: Nemkara | немок
+fem & ru_fem & plur & dat: Nemkama | немкам
+fem & ru_fem & plur & aku: Nemke | немок
+fem & ru_fem & plur & vok: Nemke | немки
+fem & ru_fem & plur & inst: Nemkama | немками
+fem & ru_fem & plur & lok: Nemkama | немках
 
 ---
 
-начальник
-none
-male & sing & nom: šef | начальник
-male & plur & nom: šefovi | начальники
-fem & sing & nom: šefica | начальница
-fem & plur & nom: šefice | начальницы
+Rus
+anim
+
+male & ru_male & sing & nom: Rus | русский
+male & ru_male & sing & gen: Rusa | русского
+male & ru_male & sing & dat: Rusu | русскому
+male & ru_male & sing & aku: Rusa | русского
+male & ru_male & sing & vok: Ruse | русский
+male & ru_male & sing & inst: Rusom | русским
+male & ru_male & sing & lok: Rusu | русском
+
+male & ru_male & plur & nom: Rusi | русские
+male & ru_male & plur & gen: Rusa | русских
+male & ru_male & plur & dat: Rusima | русским
+male & ru_male & plur & aku: Ruse | русских
+male & ru_male & plur & vok: Rusi | русские
+male & ru_male & plur & inst: Rusima | русскими
+male & ru_male & plur & lok: Rusima | русских
+
+fem & ru_fem & sing & nom: Ruskinja | русская
+fem & ru_fem & sing & gen: Ruskinje | русской
+fem & ru_fem & sing & dat: Ruskinji | русским
+fem & ru_fem & sing & aku: Ruskinju | русскую
+fem & ru_fem & sing & vok: Ruskinja | русская
+fem & ru_fem & sing & inst: Ruskinjom | русской
+fem & ru_fem & sing & lok: Ruskinji | русской
+
+fem & ru_fem & plur & nom: Ruskinje | русские
+fem & ru_fem & plur & gen: Ruskinjara | русских
+fem & ru_fem & plur & dat: Ruskinjama | русским
+fem & ru_fem & plur & aku: Ruskinje | русских
+fem & ru_fem & plur & vok: Ruskinje | русские
+fem & ru_fem & plur & inst: Ruskinjama | русскими
+fem & ru_fem & plur & lok: Ruskinjama | русских
 
 ---
 
-юрист
-none
-male & sing & nom: pravnik | юрист
-male & plur & nom: pravnici | юристы
-fem & sing & nom: pravnica | юристка
-fem & plur & nom: pravnice | юристки
+Srbin
+anim
+
+male & ru_male & sing & nom: Srbin | серб
+male & ru_male & sing & gen: Srbina | серба
+male & ru_male & sing & dat: Srbinu | сербу
+male & ru_male & sing & aku: Srbina | серба
+male & ru_male & sing & vok: Srbine | серб
+male & ru_male & sing & inst: Srbinom | сербом
+male & ru_male & sing & lok: Srbinu | сербе
+
+male & ru_male & plur & nom: Srbi | сербы
+male & ru_male & plur & gen: Srba | сербов
+male & ru_male & plur & dat: Srbima | сербам
+male & ru_male & plur & aku: Srbe | сербов
+male & ru_male & plur & vok: Srbi | сербы
+male & ru_male & plur & inst: Srbima | сербами
+male & ru_male & plur & lok: Srbima | сербах
+
+fem & ru_fem & sing & nom: Srpkinja | сербка
+fem & ru_fem & sing & gen: Srpkinje | сербки
+fem & ru_fem & sing & dat: Srpkinji | сербке
+fem & ru_fem & sing & aku: Srpkinju | сербку
+fem & ru_fem & sing & vok: Srpkinja | сербка
+fem & ru_fem & sing & inst: Srpkinjom | сербкой
+fem & ru_fem & sing & lok: Srpkinji | сербке
+
+fem & ru_fem & plur & nom: Srpkinje | сербки
+fem & ru_fem & plur & gen: Srpkinjara | сербок
+fem & ru_fem & plur & dat: Srpkinjama | сербкам
+fem & ru_fem & plur & aku: Srpkinje | сербок
+fem & ru_fem & plur & vok: Srpkinje | сербки
+fem & ru_fem & plur & inst: Srpkinjama | сербками
+fem & ru_fem & plur & lok: Srpkinjama | сербках
 
 ---
 
-менеджер
-none
-male & sing & nom: menadžer | менеджер
-male & plur & nom: menadžeri | менеджеры
-fem & sing & nom: menadžer | менеджер
-fem & plur & nom: menadžeri | менеджеры
+građanin
+anim
+
+male & ru_male & sing & nom: građanin | гражданин
+male & ru_male & sing & gen: građanina | гражданина
+male & ru_male & sing & dat: građaninu | гражданину
+male & ru_male & sing & aku: građanina | гражданина
+male & ru_male & sing & vok: građanine | гражданин
+male & ru_male & sing & inst: građaninom | гражданином
+male & ru_male & sing & lok: građaninu | гражданине
+
+male & ru_male & plur & nom: građani | граждане
+male & ru_male & plur & gen: građana | граждан
+male & ru_male & plur & dat: građanima | гражданам
+male & ru_male & plur & aku: građane | граждан
+male & ru_male & plur & vok: građani | граждане
+male & ru_male & plur & inst: građanima | гражданами
+male & ru_male & plur & lok: građanima | гражданах
+
+fem & ru_fem & sing & nom: građanka | гражданка
+fem & ru_fem & sing & gen: građanke | гражданка
+fem & ru_fem & sing & dat: građanki | гражданка
+fem & ru_fem & sing & aku: građanku | гражданка
+fem & ru_fem & sing & vok: građanka | гражданка
+fem & ru_fem & sing & inst: građankom | гражданка
+fem & ru_fem & sing & lok: građanki | гражданка
+
+fem & ru_fem & plur & nom: građanke | гражданки
+fem & ru_fem & plur & gen: građankara | гражданки
+fem & ru_fem & plur & dat: građankama | гражданки
+fem & ru_fem & plur & aku: građanke | гражданки
+fem & ru_fem & plur & vok: građanke | гражданки
+fem & ru_fem & plur & inst: građankama | гражданки
+fem & ru_fem & plur & lok: građankama | гражданки
 
 ---
 
-учитель
-none
-male & sing & nom: profesor | учитель
-male & plur & nom: profesori | учителя
-fem & sing & nom: profesorica | учительница
-fem & plur & nom: profesorice | учительницы
+lekar
+anim
+
+male & ru_male & sing & nom: lekar | врач
+male & ru_male & sing & gen: lekara | врача
+male & ru_male & sing & dat: lekaru | врачу
+male & ru_male & sing & aku: lekara | врача
+male & ru_male & sing & vok: lekare | врач
+male & ru_male & sing & inst: lekarom | врачом
+male & ru_male & sing & lok: lekaru | враче
+
+male & ru_male & plur & nom: lekari | врачи
+male & ru_male & plur & gen: lekara | врачей
+male & ru_male & plur & dat: lekarima | врачам
+male & ru_male & plur & aku: lekare | врачей
+male & ru_male & plur & vok: lekari | врачи
+male & ru_male & plur & inst: lekarima | врачами
+male & ru_male & plur & lok: lekarima | врачах
+
+fem & ru_fem & sing & nom: lekarka | врач
+fem & ru_fem & sing & gen: lekarke | врача
+fem & ru_fem & sing & dat: lekarki | врачу
+fem & ru_fem & sing & aku: lekarku | врача
+fem & ru_fem & sing & vok: lekarka | врач
+fem & ru_fem & sing & inst: lekarkom | врачом
+fem & ru_fem & sing & lok: lekarki | враче
+
+fem & ru_fem & plur & nom: lekarke | врачи
+fem & ru_fem & plur & gen: lekarkara | врачей
+fem & ru_fem & plur & dat: lekarkama | врачам
+fem & ru_fem & plur & aku: lekarke | врачей
+fem & ru_fem & plur & vok: lekarke | врачи
+fem & ru_fem & plur & inst: lekarkama | врачами
+fem & ru_fem & plur & lok: lekarkama | врачах
 
 ---
 
-врач
-none
-male & sing & nom: lekar | врач
-male & plur & nom: lekari | врачи
-fem & sing & nom: lekarka | врач
-fem & plur & nom: lekarke | врачи
+menadžer
+anim & unisex
+
+sing & nom: menadžer | менеджер
+sing & gen: menadžera | менеджера
+sing & dat: menadžeru | менеджеру
+sing & aku: menadžera | менеджера
+sing & vok: menadžeru | менеджер
+sing & inst: menadžerom | менеджером
+sing & lok: menadžeru | менеджере
+
+plur & nom: menadžeri | менеджеры
+plur & gen: menadžera | менеджеров
+plur & dat: menadžerima | менеджерам
+plur & aku: menadžere | менеджеров
+plur & vok: menadžeri | менеджеры
+plur & inst: menadžerima | менеджерами
+plur & lok: menadžerima | менеджерах
 
 ---
 
-сосед
-none
-male & sing & nom: sused | сосед
-male & plur & nom: susedi | соседи
-fem & sing & nom: sused | соседка
-fem & plur & nom: susedi | соседки
+penzioner
+anim
+
+male & ru_male & sing & nom: penzioner | пенсионер
+male & ru_male & sing & gen: penzionera | пенсионера
+male & ru_male & sing & dat: penzioneru | пенсионеру
+male & ru_male & sing & aku: penzionera | пенсионера
+male & ru_male & sing & vok: penzioneru | пенсионер
+male & ru_male & sing & inst: penzionerom | пенсионером
+male & ru_male & sing & lok: penzioneru | пенсионере
+
+male & ru_male & plur & nom: penzioneri | пенсионеры
+male & ru_male & plur & gen: penzionera | пенсионеров
+male & ru_male & plur & dat: penzionerima | пенсионерам
+male & ru_male & plur & aku: penzionere | пенсионеров
+male & ru_male & plur & vok: penzioneri | пенсионеры
+male & ru_male & plur & inst: penzionerima | пенсионерами
+male & ru_male & plur & lok: penzionerima | пенсионерах
+
+fem & ru_fem & sing & nom: penzionerka | пенсионерка
+fem & ru_fem & sing & gen: penzionerke | пенсионерок
+fem & ru_fem & sing & dat: penzionerki | пенсионерке
+fem & ru_fem & sing & aku: penzionerku | пенсионерку
+fem & ru_fem & sing & vok: penzionerka | пенсионерка
+fem & ru_fem & sing & inst: penzionerkom | пенсионеркой
+fem & ru_fem & sing & lok: penzionerki | пенсионерке
+
+fem & ru_fem & plur & nom: penzionerke | пенсионерки
+fem & ru_fem & plur & gen: penzionerkara | пенсионерок
+fem & ru_fem & plur & dat: penzionerkama | пенсионеркам
+fem & ru_fem & plur & aku: penzionerke | пенсионерок
+fem & ru_fem & plur & vok: penzionerke | пенсионерки
+fem & ru_fem & plur & inst: penzionerkama | пенсионерками
+fem & ru_fem & plur & lok: penzionerkama | пенсионерках
 
 ---
 
-приятель
-none
-male & sing & nom: prijatelj | приятель
-male & plur & nom: prijatelji | приятели
-fem & sing & nom: prijateljica | приятельница
-fem & plur & nom: prijateljice | приятельницы
+pravnik
+anim
+
+male & ru_male & sing & nom: prȃvnik | юрист
+male & ru_male & sing & gen: pravnika | юриста
+male & ru_male & sing & dat: pravniku | юристу
+male & ru_male & sing & aku: pravnika | юриста
+male & ru_male & sing & vok: prȃvniče | юрист
+male & ru_male & sing & inst: pravnikom | юристом
+male & ru_male & sing & lok: pravniku | юристе
+
+male & ru_male & plur & nom: prȃvnici | юристы
+male & ru_male & plur & gen: pravnika | юристов
+male & ru_male & plur & dat: pravnicima | юристам
+male & ru_male & plur & aku: pravnike | юристов
+male & ru_male & plur & vok: pravnici | юристы
+male & ru_male & plur & inst: pravnicima | юристами
+male & ru_male & plur & lok: pravnicima | юристах
+
+fem & ru_fem & sing & nom: pravnica | юристка
+fem & ru_fem & sing & gen: pravnice | юристки
+fem & ru_fem & sing & dat: pravnici | юристке
+fem & ru_fem & sing & aku: pravnicu | юристку
+fem & ru_fem & sing & vok: pravnica | юристка
+fem & ru_fem & sing & inst: pravnicom | юристкой
+fem & ru_fem & sing & lok: pravnici | юристке
+
+fem & ru_fem & plur & nom: pravnice | юристки
+fem & ru_fem & plur & gen: pravnicara | юристок
+fem & ru_fem & plur & dat: pravnicama | юристкам
+fem & ru_fem & plur & aku: pravnice | юристок
+fem & ru_fem & plur & vok: pravnice | юристки
+fem & ru_fem & plur & inst: pravnicama | юристками
+fem & ru_fem & plur & lok: pravnicama | юристках
 
 ---
 
-пенсионер
-none
-male & sing & nom: penzioner | пенсионер
-male & plur & nom: penzioneri | пенсионеры
-fem & sing & nom: penzionerka | пенсионерка
-fem & plur & nom: penzionerke | пенсионерки
+prijatelj
+anim
+
+male & ru_male & sing & nom: prijatelj | приятель
+male & ru_male & sing & gen: prijatelja | приятеля
+male & ru_male & sing & dat: prijatelju | приятелю
+male & ru_male & sing & aku: prijatelja | приятеля
+male & ru_male & sing & vok: prijatelju | приятель
+male & ru_male & sing & inst: prijateljem | приятелем
+male & ru_male & sing & lok: prijatelju | приятеле
+
+male & ru_male & plur & nom: prijatelji | приятели
+male & ru_male & plur & gen: prijatelja | приятелей
+male & ru_male & plur & dat: prijateljima | приятелям
+male & ru_male & plur & aku: prijatelje | приятелей
+male & ru_male & plur & vok: prijatelji | приятели
+male & ru_male & plur & inst: prijateljima | приятелями
+male & ru_male & plur & lok: prijateljima | приятелях
+
+fem & ru_fem & sing & nom: prijateljica | приятельница
+fem & ru_fem & sing & gen: prijateljice | приятельницы
+fem & ru_fem & sing & dat: prijateljici | приятельнице
+fem & ru_fem & sing & aku: prijateljicu | приятельницу
+fem & ru_fem & sing & vok: prijateljica | приятельница
+fem & ru_fem & sing & inst: prijateljicom | приятельницой
+fem & ru_fem & sing & lok: prijateljici | приятельнице
+
+fem & ru_fem & plur & nom: prijateljice | приятельницы
+fem & ru_fem & plur & gen: prijateljicara | приятельниц
+fem & ru_fem & plur & dat: prijateljicama | приятельницам
+fem & ru_fem & plur & aku: prijateljice | приятельниц
+fem & ru_fem & plur & vok: prijateljice | приятельницы
+fem & ru_fem & plur & inst: prijateljicama | приятельницами
+fem & ru_fem & plur & lok: prijateljicama | приятельницах
 
 ---
 
-турист
-none
-male & sing & nom: turista | турист
-male & plur & nom: turisti | туристы
-fem & sing & nom: turista | турист
-fem & plur & nom: turisti | туристы
+profesor
+anim
+
+male & ru_male & sing & nom: profesor | учитель
+male & ru_male & sing & gen: profesora | учителя
+male & ru_male & sing & dat: profesoru | учителю
+male & ru_male & sing & aku: profesora | учителя
+male & ru_male & sing & vok: profesore | учитель
+male & ru_male & sing & inst: profesorom | учителем
+male & ru_male & sing & lok: profesoru | учителе
+
+male & ru_male & plur & nom: profesori | учителя
+male & ru_male & plur & gen: profesora | учителей
+male & ru_male & plur & dat: profesorima | учителям
+male & ru_male & plur & aku: profesore | учителей
+male & ru_male & plur & vok: profesori | учителя
+male & ru_male & plur & inst: profesorima | учителями
+male & ru_male & plur & lok: profesorima | учителях
+
+fem & ru_fem & sing & nom: profesorica | учительница
+fem & ru_fem & sing & gen: profesorice | учительницы
+fem & ru_fem & sing & dat: profesorici | учительнице
+fem & ru_fem & sing & aku: profesoricu | учительницу
+fem & ru_fem & sing & vok: profesorica | учительница
+fem & ru_fem & sing & inst: profesoricom | учительницой
+fem & ru_fem & sing & lok: profesorici | учительнице
+
+fem & ru_fem & plur & nom: profesorice | учительницы
+fem & ru_fem & plur & gen: profesoricara | учительниц
+fem & ru_fem & plur & dat: profesoricama | учительницам
+fem & ru_fem & plur & aku: profesorice | учительниц
+fem & ru_fem & plur & vok: profesorice | учительницы
+fem & ru_fem & plur & inst: profesoricama | учительницами
+fem & ru_fem & plur & lok: profesoricama | учительницах
 
 ---
 
-русский
-none
-male & sing & nom: Rus | русский
-male & plur & nom: Rusi | русские
-fem & sing & nom: Ruskinja | русская
-fem & plur & nom: Ruskinje | русские
+student
+anim
+
+male & ru_male & sing & nom: student | студент
+male & ru_male & sing & gen: studenta | студента
+male & ru_male & sing & dat: studentu | студенту
+male & ru_male & sing & aku: studenta | студента
+male & ru_male & sing & vok: studente | студент
+male & ru_male & sing & inst: studentom | студентом
+male & ru_male & sing & lok: studentu | студенте
+
+male & ru_male & plur & nom: studenti | студенты
+male & ru_male & plur & gen: studenata | студентов
+male & ru_male & plur & dat: studentima | студентам
+male & ru_male & plur & aku: studente | студентов
+male & ru_male & plur & vok: studenti | студенты
+male & ru_male & plur & inst: studentima | студентами
+male & ru_male & plur & lok: studentima | студентах
+
+fem & ru_fem & sing & nom: studentica | студентка
+fem & ru_fem & sing & gen: studentice | студентки
+fem & ru_fem & sing & dat: studentici | студентке
+fem & ru_fem & sing & aku: studenticu | студентку
+fem & ru_fem & sing & vok: studentica | студентка
+fem & ru_fem & sing & inst: studenticom | студенткой
+fem & ru_fem & sing & lok: studentici | студентке
+
+fem & ru_fem & plur & nom: studentice | студентки
+fem & ru_fem & plur & gen: studenticara | студенток
+fem & ru_fem & plur & dat: studenticama | студенткам
+fem & ru_fem & plur & aku: studentice | студенток
+fem & ru_fem & plur & vok: studentice | студентки
+fem & ru_fem & plur & inst: studenticama | студентками
+fem & ru_fem & plur & lok: studenticama | студентках
+
+---
+
+sused
+unisex & anim
+
+sing & nom: sused | сосед
+sing & gen: suseda | соседа
+sing & dat: susedu | соседу
+sing & aku: suseda | соседа
+sing & vok: susede | сосед
+sing & inst: susedom | соседом
+sing & lok: susedu | соседе
+
+plur & nom: susedi | соседи
+plur & gen: suseda | соседей
+plur & dat: susedima | соседям
+plur & aku: susede | соседей
+plur & vok: susedi | соседи
+plur & inst: susedima | соседями
+plur & lok: susedima | соседях
+
+---
+
+učenik
+anim
+
+male & ru_male & sing & nom: učenik | ученик
+male & ru_male & sing & gen: učenika | ученика
+male & ru_male & sing & dat: učeniku | ученику
+male & ru_male & sing & aku: učenika | ученика
+male & ru_male & sing & vok: učeniče | ученик
+male & ru_male & sing & inst: učenikom | учеником
+male & ru_male & sing & lok: učeniku | ученике
+
+male & ru_male & plur & nom: učenici | ученики
+male & ru_male & plur & gen: učenika | учеников
+male & ru_male & plur & dat: učenicima | ученикам
+male & ru_male & plur & aku: učenike | учеников
+male & ru_male & plur & vok: učenici | ученики
+male & ru_male & plur & inst: učenicima | учениками
+male & ru_male & plur & lok: učenicima | учениках
+
+fem & ru_fem & sing & nom: učenica | ученица
+fem & ru_fem & sing & gen: učenice | ученицы
+fem & ru_fem & sing & dat: učenici | ученице
+fem & ru_fem & sing & aku: učenicu | ученицу
+fem & ru_fem & sing & vok: učenica | ученица
+fem & ru_fem & sing & inst: učenicom | ученицей
+fem & ru_fem & sing & lok: učenici | ученице
+
+fem & ru_fem & plur & nom: učenice | ученицы
+fem & ru_fem & plur & gen: učenicara | учениц
+fem & ru_fem & plur & dat: učenicama | ученицам
+fem & ru_fem & plur & aku: učenice | учениц
+fem & ru_fem & plur & vok: učenice | ученицы
+fem & ru_fem & plur & inst: učenicama | ученицами
+fem & ru_fem & plur & lok: učenicama | ученицах
+
+---
+
+Španac
+anim
+
+male & ru_male & sing & nom: Španac | испанец
+male & ru_male & sing & gen: Španca | испанца
+male & ru_male & sing & dat: Špancu | испанцу
+male & ru_male & sing & aku: Španca | испанца
+male & ru_male & sing & vok: Španče | испанец
+male & ru_male & sing & inst: Špancem | испанцем
+male & ru_male & sing & lok: Špancu | испанце
+
+male & ru_male & plur & nom: Španci | испанцы
+male & ru_male & plur & gen: Špȃnaca | испанцев
+male & ru_male & plur & dat: Špancima | испанцам
+male & ru_male & plur & aku: Špance | испанцев
+male & ru_male & plur & vok: Španci | испанцы
+male & ru_male & plur & inst: Špancima | испанцами
+male & ru_male & plur & lok: Špancima | испанцах
+
+fem & ru_fem & sing & nom: Španjolka | испанка
+fem & ru_fem & sing & gen: Španjolke | испанки
+fem & ru_fem & sing & dat: Španjolki | испанке
+fem & ru_fem & sing & aku: Španjolku | испанку
+fem & ru_fem & sing & vok: Španjolka | испанка
+fem & ru_fem & sing & inst: Španjolkom | испанкой
+fem & ru_fem & sing & lok: Španjolki | испанке
+
+fem & ru_fem & plur & nom: Španjolke | испанки
+fem & ru_fem & plur & gen: Španjolkara | испанок
+fem & ru_fem & plur & dat: Španjolkama | испанкам
+fem & ru_fem & plur & aku: Španjolke | испанок
+fem & ru_fem & plur & vok: Španjolke | испанки
+fem & ru_fem & plur & inst: Španjolkama | испанками
+fem & ru_fem & plur & lok: Španjolkama | испанках
+
+---
+
+šef
+anim
+
+male & ru_male & sing & nom: šef | начальник
+male & ru_male & sing & gen: šefa | начальника
+male & ru_male & sing & dat: šefu | начальнику
+male & ru_male & sing & aku: šefa | начальника
+male & ru_male & sing & vok: šefe | начальник
+male & ru_male & sing & inst: šefom | начальником
+male & ru_male & sing & lok: šefu | начальнике
+
+male & ru_male & plur & nom: šefovi | начальники
+male & ru_male & plur & gen: šefova | начальников
+male & ru_male & plur & dat: šefovima | начальникам
+male & ru_male & plur & aku: šefove | начальников
+male & ru_male & plur & vok: šefovi | начальники
+male & ru_male & plur & inst: šefovima | начальниками
+male & ru_male & plur & lok: šefovima | начальниках
+
+fem & ru_fem & sing & nom: šefica | начальница
+fem & ru_fem & sing & gen: šefice | начальницы
+fem & ru_fem & sing & dat: šefici | начальнице
+fem & ru_fem & sing & aku: šeficu | начальницу
+fem & ru_fem & sing & vok: šefica | начальница
+fem & ru_fem & sing & inst: šeficom | начальницой
+fem & ru_fem & sing & lok: šefici | начальнице
+
+fem & ru_fem & plur & nom: šefice | начальницы
+fem & ru_fem & plur & gen: šeficara | начальниц
+fem & ru_fem & plur & dat: šeficama | начальницам
+fem & ru_fem & plur & aku: šefice | начальниц
+fem & ru_fem & plur & vok: šefice | начальницы
+fem & ru_fem & plur & inst: šeficama | начальницами
+fem & ru_fem & plur & lok: šeficama | начальницах
 
 ---
