@@ -946,18 +946,63 @@ class AkuzativEx(Excercise):
         noun = self.randomNounsPool.yieldElem().get(Declination.Parse('sing|plur & aku'))
 
         title = 'Переведите на сербский'
-
-        needClarify = decl.number == Number.plur
-        clarification = ''
-        if needClarify:
-            if decl.gender == Gender.male:
-                clarification = '(муж.)'
-            elif decl.gender == Gender.fem:
-                clarification = '(жен.)'
-            elif decl.gender == Gender.neu:
-                clarification = '(ср.)'
-
         question = '{}{}{} {}'.format(subject.rus, [' ', ' не '][negative], verb.rus, noun.rus)
         answer = '{}{} {}'.format(['', 'ne '][negative], verb.serb, noun.serb)
+
+        return ExcerciseYield(title, question, answer)
+
+class InstrumentalEx(Excercise):
+    randomVerbsPool: RandomPool
+    randomNounsPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        nouns = GetVocabulary('occupations').words + GetVocabulary('nouns').words
+        nouns = [w for w in nouns if w.metaDeclination.animality == Animality.anim]
+
+        self.randomNounsPool = RandomPool(nouns)
+
+        allowed_verbs = [
+            'slikati',
+            'biti',
+            'doručkovati',
+            'govoriti',
+            'igrati',
+            'jesti',
+            'odmarati',
+            'pevati',
+            'plivati',
+            'pričati',
+            'psovati',
+            'putovati',
+            'razgovarati',
+            'ručati',
+            'trčati',
+            'večerati',
+            'čitati',
+            'čekati',
+            'živeti',
+        ]
+
+        # combine verbs and modal_verbs and exclude `treba`
+        verbs = GetVocabulary('verbs').words
+        verbs = [w for w in verbs if w.title in allowed_verbs]
+
+        self.randomVerbsPool = RandomPool(verbs)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский с местоимением:
+        # question: Я бы читал.
+        # answer:   Ja bih čitao.
+
+        negative = random.randint(0, 1)
+
+        verb = self.randomVerbsPool.yieldElem().get(Declination.Parse('present & first & sing'))
+        noun = self.randomNounsPool.yieldElem().get(Declination.Parse('sing|plur & male|fem & inst'))
+
+        title = 'Переведите на сербский'
+        question = '{}{} с {}'.format(['', 'не '][negative], verb.rus, noun.rus)
+        answer = '{}{} sa {}'.format(['', 'ne '][negative], verb.serb, noun.serb)
 
         return ExcerciseYield(title, question, answer)

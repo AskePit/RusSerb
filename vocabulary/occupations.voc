@@ -242,20 +242,20 @@ male & ru_male & plur & inst: građanima | гражданами
 male & ru_male & plur & lok: građanima | гражданах
 
 fem & ru_fem & sing & nom: građanka | гражданка
-fem & ru_fem & sing & gen: građanke | гражданка
-fem & ru_fem & sing & dat: građanki | гражданка
-fem & ru_fem & sing & aku: građanku | гражданка
+fem & ru_fem & sing & gen: građanke | гражданки
+fem & ru_fem & sing & dat: građanki | гражданке
+fem & ru_fem & sing & aku: građanku | гражданку
 fem & ru_fem & sing & vok: građanka | гражданка
-fem & ru_fem & sing & inst: građankom | гражданка
-fem & ru_fem & sing & lok: građanki | гражданка
+fem & ru_fem & sing & inst: građankom | гражданкой
+fem & ru_fem & sing & lok: građanki | гражданке
 
 fem & ru_fem & plur & nom: građanke | гражданки
-fem & ru_fem & plur & gen: građankara | гражданки
-fem & ru_fem & plur & dat: građankama | гражданки
-fem & ru_fem & plur & aku: građanke | гражданки
+fem & ru_fem & plur & gen: građankara | гражданок
+fem & ru_fem & plur & dat: građankama | гражданкам
+fem & ru_fem & plur & aku: građanke | гражданок
 fem & ru_fem & plur & vok: građanke | гражданки
-fem & ru_fem & plur & inst: građankama | гражданки
-fem & ru_fem & plur & lok: građankama | гражданки
+fem & ru_fem & plur & inst: građankama | гражданками
+fem & ru_fem & plur & lok: građankama | гражданках
 
 ---
 
