@@ -1,5 +1,6 @@
 from ast import Num
 from msilib.schema import IniFile
+from typing import Callable
 from code.excercise_types import *
 
 class ToBeEx(Excercise):
@@ -898,41 +899,64 @@ class ConjunctiveQuestionsEx(Excercise):
 
         return ExcerciseYield(title, question, answer)
 
+@dataclass
 class CaseEx(Excercise):
-    randomVerbsPool: RandomPool
-    randomNounsPool: RandomPool
+    case: Case
     serbPreposition: str
     rusPreposition: str
-    case: Case
+    verbVocabularies: list[str]
+    verbFilter: Callable[[Word], bool]
+    subjectVocabularies: list[str]
+    subjectFilter: Callable[[Word], bool]
+
+    def __post_init__(self):
+        verbs = []
+        for voc in self.verbVocabularies:
+            verbs += GetVocabulary(voc).words
+        if self.verbFilter:
+            verbs = [w for w in verbs if self.verbFilter(w)]
+        self.randomVerbsPool = RandomPool(verbs)
+        
+        subjects = []
+        for voc in self.subjectVocabularies:
+            subjects += GetVocabulary(voc).words
+        if self.subjectFilter:
+            subjects = [w for w in subjects if self.subjectFilter(w)]
+        self.randomNounsPool = RandomPool(subjects)
 
     def __call__(self) -> ExcerciseYield:
-        negative = RandomPercent(25)
-
-        verb = self.randomVerbsPool.yieldElem().get(Declination.Parse('present & first & sing'))
-        noun = self.randomNounsPool.yieldElem().get(Declination.Parse('sing|plur & male|fem').override(self.case))
-
-        rusNe = 'не ' if negative else ''
-        serbNe = 'ne ' if negative else ''
-
-        rusPrep = ' {} '.format(self.rusPreposition) if len(self.rusPreposition)>0 else ' '
-        serbPrep = ' {} '.format(self.serbPreposition) if len(self.serbPreposition)>0 else ' '
-
         title = 'Переведите на сербский'
-        question = '{}{}{}{}'.format(rusNe, verb.rus, rusPrep, noun.rus)
-        answer = '{}{}{}{}'.format(serbNe, verb.serb, serbPrep, noun.serb)
+        number = Number.sing if RandomPercent(70) else Number.plur
+        gender = Gender.male if RandomPercent(50) else Gender.fem
+
+        noun = self.randomNounsPool.yieldElem().get(Declination.Make(gender, self.case, number))
+
+        rusPrep = ''
+        serbPrep = ''
+        if len(self.serbPreposition) > 0:
+            i = random.randint(0, len(self.serbPreposition)-1)
+            serbPrep = self.serbPreposition[i] + ' '
+            rusPrep = self.rusPreposition[i] + ' '
+
+        verbsSupport = len(self.randomVerbsPool.origList) > 0
+
+        if verbsSupport:
+            verb = self.randomVerbsPool.yieldElem().get(Declination.Make(Time.present, Person.first, Number.sing))
+            negative = RandomPercent(25)
+
+            rusNe = 'не ' if negative else ''
+            serbNe = 'ne ' if negative else ''
+
+            question = '{} {} {}{}'.format(rusNe, verb.rus, rusPrep, noun.rus)
+            answer = '{} {} {}{}'.format(serbNe, verb.serb, serbPrep, noun.serb)
+        else:
+            question = '{}{}'.format(rusPrep, noun.rus)
+            answer = '{}{}'.format(serbPrep, noun.serb)
 
         return ExcerciseYield(title, question, answer)
 
 class AkuzativEx(CaseEx):
     def __init__(self):
-        super().__init__()
-
-        self.case = Case.aku
-        self.serbPreposition = ''
-        self.rusPreposition = ''
-
-        self.randomNounsPool = RandomPool(GetVocabulary('nouns').words)
-
         allowed_verbs = [
             'imati',
             'hteti',
@@ -952,28 +976,28 @@ class AkuzativEx(CaseEx):
             'čuti',
         ]
 
-        # combine verbs and modal_verbs and exclude `treba`
-        l = GetVocabulary('verbs').words + GetVocabulary('modal_verbs').words
-        l = [w for w in l if w.title in allowed_verbs]
+        def verbFilter(w: Word) -> bool:
+            return w.title in allowed_verbs
+        
+        super().__init__(
+            case= Case.aku,
+            serbPreposition= [],
+            rusPreposition= [],
+            verbVocabularies= ['verbs', 'modal_verbs'],
+            verbFilter= verbFilter,
+            subjectVocabularies= ['nouns'],
+            subjectFilter= None 
+        )
 
-        self.randomVerbsPool = RandomPool(l)
+def AnimalityFilter(w: Word) -> bool:
+    if hasattr(w.metaDeclination, 'animality'):
+        return w.metaDeclination.animality == Animality.anim
+    return True
 
 class InstrumentalEx(CaseEx):
     def __init__(self):
-        super().__init__()
-
-        self.case = Case.inst
-        self.serbPreposition = 'sa'
-        self.rusPreposition = 'с'
-
-        nouns = GetVocabulary('occupations').words + GetVocabulary('nouns').words
-        nouns = [w for w in nouns if w.metaDeclination.animality == Animality.anim]
-
-        self.randomNounsPool = RandomPool(nouns)
-
         allowed_verbs = [
             'slikati',
-            'biti',
             'doručkovati',
             'govoriti',
             'igrati',
@@ -993,9 +1017,42 @@ class InstrumentalEx(CaseEx):
             'živeti',
         ]
 
-        # combine verbs and modal_verbs and exclude `treba`
-        verbs = GetVocabulary('verbs').words
-        verbs = [w for w in verbs if w.title in allowed_verbs]
+        def verbFilter(w: Word) -> bool:
+            return w.title in allowed_verbs
+        
+        super().__init__(
+            case= Case.inst,
+            serbPreposition= ['sa'],
+            rusPreposition= ['с'],
+            verbVocabularies= ['verbs'],
+            verbFilter= verbFilter,
+            subjectVocabularies= ['occupations', 'nouns', 'personal_pronouns'],
+            subjectFilter= AnimalityFilter
+        )
 
-        self.randomVerbsPool = RandomPool(verbs)
+class DativEx(CaseEx):
+    def __init__(self):
+        def verbFilter(w: Word) -> bool:
+            return w.title not in ['treba', 'biti'] 
+        
+        super().__init__(
+            case= Case.dat,
+            serbPreposition= ['zahvaljujući'],
+            rusPreposition= ['благодаря'],
+            verbVocabularies= ['verbs', 'modal_verbs'],
+            verbFilter= verbFilter,
+            subjectVocabularies= ['occupations', 'nouns', 'personal_pronouns'],
+            subjectFilter= AnimalityFilter
+        )
 
+class GenitivEx(CaseEx):
+    def __init__(self):
+        super().__init__(
+            case= Case.gen,
+            serbPreposition= ['nema', 'bez'],
+            rusPreposition= ['нет', 'без'],
+            verbVocabularies= [],
+            verbFilter= None,
+            subjectVocabularies= ['occupations', 'nouns', 'personal_pronouns'],
+            subjectFilter= None
+        )

@@ -1,6 +1,6 @@
 declined pronoun
 
-я
+ja
 first & sing & unisex
 nom: ja | я
 gen: mene | меня
@@ -12,7 +12,7 @@ lok: meni | мне
 
 ---
 
-ты
+ti
 second & sing & unisex
 nom: ti | ты
 gen: tebe | тебя
@@ -24,7 +24,7 @@ lok: tebi | тебе
 
 ---
 
-он
+on
 third & sing & male
 nom: on | он
 gen: njega | (н)его
@@ -36,7 +36,7 @@ lok: njemu | нем
 
 ---
 
-она
+ona
 third & sing & fem
 nom: ona | она
 gen: nje | (н)её
@@ -48,7 +48,7 @@ lok: njoj | ней
 
 ---
 
-оно
+ono
 third & sing & neu
 nom: ono | оно
 gen: njega | (н)его
@@ -60,7 +60,7 @@ lok: njemu | нем
 
 ---
 
-мы
+mi
 first & plur & unisex
 nom: mi | мы
 gen: nas | нас
@@ -72,7 +72,7 @@ lok: nama | нас
 
 ---
 
-вы
+vi
 second & plur & unisex
 nom: vi | вы
 gen: vas | вас
@@ -84,7 +84,7 @@ lok: vama | вас
 
 ---
 
-они (муж.)
+oni
 third & plur & male
 nom: oni | они
 gen: njih | (н)их
@@ -96,7 +96,7 @@ lok: njima | них
 
 ---
 
-они (жен.)
+one
 third & plur & fem
 nom: one | они
 gen: njih | (н)их
@@ -108,7 +108,7 @@ lok: njima | них
 
 ---
 
-они (ср.)
+ona
 third & plur & neu
 nom: ona | они
 gen: njih | (н)их
