@@ -3608,6 +3608,94 @@ imperfect & plur & third: ručahu | обедали
 
 ---
 
+sići
+e
+
+inf: sići | спускаться
+
+present & sing & first: siđem | спускаюсь
+present & sing & second: siđeš | спускаешься
+present & sing & third: siđe | спускается
+present & plur & first: siđemo | спускаемся
+present & plur & second: siđete | спускаетесь
+present & plur & third: siđu | спускаются
+
+perfect & sing & male: sišao | спускался
+perfect & sing & fem: sišla | спускалась
+perfect & sing & neu: sišlo | спускалось
+perfect & plur & male: sišli | спускались
+perfect & plur & fem: sišle | спускались
+perfect & plur & neu: sišla | спускались
+
+futur & sing & first:  | 
+futur & sing & second:  | 
+futur & sing & third:  | 
+futur & plur & first:  | 
+futur & plur & second:  | 
+futur & plur & third:  | 
+
+imperfect & sing & first:  | спускался
+imperfect & sing & second:  | спускалась
+imperfect & sing & third:  | спускалось
+imperfect & plur & first:  | спускались
+imperfect & plur & second:  | спускались
+imperfect & plur & third:  | спускались
+
+# participle & present:  | 
+# participle & past: sišavši | 
+# noun:  | 
+
+# futur & sing & first: sići | 
+# futur & sing & second: sići | 
+# futur & sing & third: sići | 
+# futur & plur & first: sići | 
+# futur & plur & second: sići | 
+# futur & plur & third: sići | 
+
+# futur2 & sing & first: budem | 
+# futur2 & sing & second: budeš | 
+# futur2 & sing & third: bude | 
+# futur2 & plur & first: budemo | 
+# futur2 & plur & second: budete | 
+# futur2 & plur & third: budu | 
+
+# aorist & sing & first: siđoh | 
+# aorist & sing & second: siđe | 
+# aorist & sing & third: siđe | 
+# aorist & plur & first: siđosmo | 
+# aorist & plur & second: siđoste | 
+# aorist & plur & third: siđoše | 
+
+# cond1 & sing & first: sišao | 
+# cond1 & sing & second: sišao | 
+# cond1 & sing & third: sišao | 
+# cond1 & plur & first: sišli | 
+# cond1 & plur & second: sišli | 
+# cond1 & plur & third: sišli | 
+
+# cond2 & sing & first: bio | 
+# cond2 & sing & second: bio | 
+# cond2 & sing & third: bio | 
+# cond2 & plur & first: bili | 
+# cond2 & plur & second: bili | 
+# cond2 & plur & third: bili | 
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: siđi | спускайся
+# imperativ & sing & third:  | 
+# imperativ & plur & first: siđimo | 
+# imperativ & plur & second: siđite | спускайтесь
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
+
+---
+
 skakati
 e & no_se
 
@@ -4576,6 +4664,182 @@ imperfect & plur & third: tuširahu |
 
 ---
 
+ustati
+e
+
+inf: ustati | подниматься
+
+present & sing & first: ustanem | поднимаюсь
+present & sing & second: ustaneš | поднимаешься
+present & sing & third: ustane | поднимается
+present & plur & first: ustanemo | поднимаемся
+present & plur & second: ustanete | поднимаетесь
+present & plur & third: ustanu | поднимаются
+
+perfect & sing & male: ustao | поднимался
+perfect & sing & fem: ustala | поднималась
+perfect & sing & neu: ustalo | поднималось
+perfect & plur & male: ustali | поднимались
+perfect & plur & fem: ustale | поднимались
+perfect & plur & neu: ustala | поднимались
+
+futur & sing & first: ustaću | 
+futur & sing & second: ustaćeš | 
+futur & sing & third: ustaće | 
+futur & plur & first: ustaćemo | 
+futur & plur & second: ustaćete | 
+futur & plur & third: ustaće | 
+
+imperfect & sing & first:  | поднимался
+imperfect & sing & second:  | поднималась
+imperfect & sing & third:  | поднималось
+imperfect & plur & first:  | поднимались
+imperfect & plur & second:  | поднимались
+imperfect & plur & third:  | поднимались
+
+# participle & present:  | 
+# participle & past: ustavši | 
+# noun:  | 
+
+# futur & sing & first: ustat | 
+# futur & sing & second: ustat | 
+# futur & sing & third: ustat | 
+# futur & plur & first: ustat | 
+# futur & plur & second: ustat | 
+# futur & plur & third: ustat | 
+
+# futur2 & sing & first: budem | 
+# futur2 & sing & second: budeš | 
+# futur2 & sing & third: bude | 
+# futur2 & plur & first: budemo | 
+# futur2 & plur & second: budete | 
+# futur2 & plur & third: budu | 
+
+# aorist & sing & first: ustah | 
+# aorist & sing & second: usta | 
+# aorist & sing & third: usta | 
+# aorist & plur & first: ustasmo | 
+# aorist & plur & second: ustaste | 
+# aorist & plur & third: ustaše | 
+
+# cond1 & sing & first: ustao | 
+# cond1 & sing & second: ustao | 
+# cond1 & sing & third: ustao | 
+# cond1 & plur & first: ustali | 
+# cond1 & plur & second: ustali | 
+# cond1 & plur & third: ustali | 
+
+# cond2 & sing & first: bio | 
+# cond2 & sing & second: bio | 
+# cond2 & sing & third: bio | 
+# cond2 & plur & first: bili | 
+# cond2 & plur & second: bili | 
+# cond2 & plur & third: bili | 
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: ustani | поднимайся
+# imperativ & sing & third:  | 
+# imperativ & plur & first: ustanimo | 
+# imperativ & plur & second: ustanite | поднимайтесь
+# imperativ & plur & third:  | 
+
+# passive & sing & male:  | 
+# passive & sing & fem:  | 
+# passive & sing & neu:  | 
+# passive & plur & male:  | 
+# passive & plur & fem:  | 
+# passive & plur & neu:  | 
+
+---
+
+uzeti
+e
+
+inf: uzeti | брать
+
+present & sing & first: uzmem | беру
+present & sing & second: uzmeš | берёшь
+present & sing & third: uzme | берёт
+present & plur & first: uzmemo | берём
+present & plur & second: uzmete | берёте
+present & plur & third: uzmu | берут
+
+perfect & sing & male: uzeo | брал
+perfect & sing & fem: uzela | брала
+perfect & sing & neu: uzelo | брало
+perfect & plur & male: uzeli | брали
+perfect & plur & fem: uzele | брали
+perfect & plur & neu: uzela | брали
+
+futur & sing & first: uzeću | 
+futur & sing & second: uzećeš | 
+futur & sing & third: uzeće | 
+futur & plur & first: uzećemo | 
+futur & plur & second: uzećete | 
+futur & plur & third: uzeće | 
+
+imperfect & sing & first:  | брал
+imperfect & sing & second:  | брала
+imperfect & sing & third:  | брало
+imperfect & plur & first:  | брали
+imperfect & plur & second:  | брали
+imperfect & plur & third:  | брали
+
+# participle & present:  | 
+# participle & past: uzevši | 
+# noun:  | 
+
+# futur & sing & first: uzet | 
+# futur & sing & second: uzet | 
+# futur & sing & third: uzet | 
+# futur & plur & first: uzet | 
+# futur & plur & second: uzet | 
+# futur & plur & third: uzet | 
+
+# futur2 & sing & first: budem | 
+# futur2 & sing & second: budeš | 
+# futur2 & sing & third: bude | 
+# futur2 & plur & first: budemo | 
+# futur2 & plur & second: budete | 
+# futur2 & plur & third: budu | 
+
+# aorist & sing & first: uzeh | 
+# aorist & sing & second: uze | 
+# aorist & sing & third: uze | 
+# aorist & plur & first: uzesmo | 
+# aorist & plur & second: uzeste | 
+# aorist & plur & third: uzeše | 
+
+# cond1 & sing & first: uzeo | 
+# cond1 & sing & second: uzeo | 
+# cond1 & sing & third: uzeo | 
+# cond1 & plur & first: uzeli | 
+# cond1 & plur & second: uzeli | 
+# cond1 & plur & third: uzeli | 
+
+# cond2 & sing & first: bio | 
+# cond2 & sing & second: bio | 
+# cond2 & sing & third: bio | 
+# cond2 & plur & first: bili | 
+# cond2 & plur & second: bili | 
+# cond2 & plur & third: bili | 
+
+# imperativ & sing & first:  | 
+# imperativ & sing & second: uzmi | бери
+# imperativ & sing & third:  | 
+# imperativ & plur & first: uzmimo | 
+# imperativ & plur & second: uzmite | берите
+# imperativ & plur & third:  | 
+
+# passive & sing & male: uzet | 
+# passive & sing & fem: uzeta | 
+# passive & sing & neu: uzeto | 
+# passive & plur & male: uzeti | 
+# passive & plur & fem: uzete | 
+# passive & plur & neu: uzeta | 
+
+---
+
 učiti
 i & no_se
 
@@ -5455,3 +5719,4 @@ imperfect & plur & third: življahu | жили
 # passive & plur & neu: |
 
 ---
+
