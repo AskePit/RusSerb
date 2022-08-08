@@ -63,9 +63,11 @@ class ExcerciseType(Enum):
     phrases = 0
     custom = 1
 
+EXC_SEPARATOR = ' > '
+
 class ExcerciseDesc:
     name: str
-    parent = None # ExcercisesDir
+    parent = None # ExcerciseDescsDir
     serialNumber: int
     type: ExcerciseType
     help = None # str
@@ -94,21 +96,29 @@ class ExcerciseDesc:
         ex.help = help
         return ex
 
-    def __str__(self):
+    def __repr__(self):
         res = 'parent: ' + (self.parent.name if self.parent != None else '<None>') + '\n'
         res = self.name
         if self.type == ExcerciseType.phrases:
             res += ' <-> ' + self.phrasesVoc
         elif self.type == ExcerciseType.custom:
-            res += ' <-> ' + self.customFunctions
+            res += ' <-> ' + repr(self.customFunctions)
         return res
+    
+    cachedName: str|None = None
+    def __str__(self):
+        if self.cachedName != None:
+            return self.cachedName
+        
+        self.cachedName = '{}{}{}'.format(str(self.parent), EXC_SEPARATOR, self.name)
+        return self.cachedName
 
 class ExcerciseDescsDir:
     name: str
-    parent = None # ExcercisesDir
+    parent = None # ExcerciseDescsDir
     serialNumber: int
-    children = [] # list[ExcercisesDir]
-    excercises = [] # list[Excercise]
+    children = [] # list[ExcerciseDesc]
+    excercises = [] # list[ExcerciseDesc]
 
     def __init__(self, parent, number: int):
         self.name = ''
@@ -117,14 +127,48 @@ class ExcerciseDescsDir:
         self.children = []
         self.excercises = []
     
-    def __str__(self):
+    def __repr__(self):
         res = self.name + '\n'
         res += 'parent: ' + (self.parent.name if self.parent != None else '<None>') + '\n'
         for ex in self.excercises:
-            res += '\n  ' + str(ex)
+            res += '\n  ' + repr(ex)
         for ch in self.children:
-            res += '\n' + str(ch)
+            res += '\n' + repr(ch)
         return res
+
+    cachedName: str|None = None
+    def __str__(self):
+        if self.cachedName != None:
+            return self.cachedName
+        
+        chain = []
+
+        curr = self
+        while curr != None:
+            chain.append(curr)
+            curr = curr.parent
+
+        if len(chain) == 0 or (len(chain) == 1 and (chain[0] == None or chain[0].name == '')):
+            self.cachedName = EXC_SEPARATOR
+            return self.cachedName
+        
+        chain.reverse()
+
+        res = ''
+
+        n = len(chain)
+        for i in range(n):
+            parent = chain[i]
+
+            if parent.name == '':
+                continue
+
+            res += '{}'.format(EXC_SEPARATOR)
+            res += parent.name
+        
+        self.cachedName = res
+        return self.cachedName
+
 
 class RandomPool:
     origList: list

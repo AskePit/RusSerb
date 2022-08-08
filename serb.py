@@ -49,6 +49,7 @@ def ExecuteExcercise(exc: ExcerciseDesc):
         ClrScr()
 
         screen = ''
+        screen += '\n  {}\n\n'.format(str(exc))
         screen += '\n{}.........................\n\n'.format(PAD)
         screen += '{}{}:\n\n'.format(PAD, exYield.title)
 
@@ -95,7 +96,8 @@ def main():
     while True:
         ClrScr()
 
-        print('\n{}.........................\n'.format(PAD))
+        print('\n  {}\n\n'.format(str(currentDir)))
+        print('{}.........................\n'.format(PAD))
         print('{}Выберите упражнение:'.format(PAD))
 
         files = []
