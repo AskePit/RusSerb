@@ -91,6 +91,59 @@ def ExecuteExcercise(exc: ExcerciseDesc):
             if TryExit(ans):
                 break
 
+def ExecuteQuiz(excs: list[ExcerciseDesc]):
+    while True:
+        exc = random.choice(excs)
+
+        excObjects = []
+
+        if exc.type == ExcerciseType.phrases:
+            excObjects.append(PhrasesEx(exc.phrasesVoc))
+        elif exc.type == ExcerciseType.custom:
+            for f in exc.customFunctions:
+                excercise = eval('{}()'.format(f))
+                excObjects.append(excercise)
+        
+        excercise = random.choice(excObjects)
+        exYield: ExcerciseYield = excercise()
+
+        ClrScr()
+
+        screen = BuildScreenTop(exc, exYield.title)
+
+        if type(exYield.question) is list:
+            screen.append('\n\n')
+            for q in exYield.question:
+                screen.append('{}{}\n'.format(PAD, q))
+        else:
+            screen.append('{}{}\n'.format(PAD, exYield.question))
+
+        print(''.join(screen))
+
+        ans = input()
+        while TryHelp(ans, exc.help, screen):
+            ans = input()
+
+        if TryExit(ans):
+            break
+        else:
+            if type(exYield.answer) is list:
+                screen += '\n\n'
+                for a in exYield.answer:
+                    screen.append('{}{}\n'.format(PAD, a))
+            else:
+                screen.append('{}{}\n'.format(PAD, exYield.answer))
+            screen.append('\n{}.........................\n\n'.format(PAD))
+
+            ClrScr()
+            print(''.join(screen))
+
+            ans = input()
+            while TryHelp(ans, exc.help, screen):
+                ans = input()
+            if TryExit(ans):
+                break
+
 def main():
     LoadVocabulary('./vocabulary')
     LoadManuals('./mans')
@@ -124,6 +177,7 @@ def main():
 
             i += 1
 
+        screen.append('{}0. Quiz\n'.format(PAD))
         screen.append('\n{}q. Назад'.format(PAD))
         screen.append('\n{}x. Выход\n'.format(PAD))
 
@@ -136,6 +190,8 @@ def main():
                 break
             else:
                 currentDir = currentDir.parent
+        elif ans == '0':
+            ExecuteQuiz(currentDir.getExcercisesRecursive())
         elif ans in numToEx:
             exc = numToEx[ans]
             if isinstance(exc, ExcerciseDescsDir):

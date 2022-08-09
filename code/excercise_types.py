@@ -117,7 +117,7 @@ class ExcerciseDescsDir:
     name: str
     parent = None # ExcerciseDescsDir
     serialNumber: int
-    children = [] # list[ExcerciseDesc]
+    children = [] # list[ExcerciseDescsDir]
     excercises = [] # list[ExcerciseDesc]
 
     def __init__(self, parent, number: int):
@@ -126,6 +126,22 @@ class ExcerciseDescsDir:
         self.serialNumber = number
         self.children = []
         self.excercises = []
+    
+    def getExcercisesRecursive(self) -> list[ExcerciseDesc]:
+        res: list[list[ExcerciseDesc]] = []
+        self._getExcercisesRecursive(res)
+
+        flatList = [item for sublist in res for item in sublist]
+        return flatList
+
+    def _getExcercisesRecursive(self, res: list[list[ExcerciseDesc]]) -> None:
+        res.append(self.excercises)
+        for child in self.children:
+            child._getExcercisesRecursive(res)
+
+    def getRandomExcercise(self) -> ExcerciseDesc:
+        candidates = self.getExcercisesRecursive()
+        return random.choice(candidates)
     
     def __repr__(self):
         res = self.name + '\n'
