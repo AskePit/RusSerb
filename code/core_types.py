@@ -3,6 +3,10 @@ from enum import Enum
 import copy
 import random
 
+class Language(Enum):
+    serb = 0,
+    rus = 1
+
 class SpeechPart(Enum):
     noun        = 0 # существительное
     pronoun     = 1 # местоимение

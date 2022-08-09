@@ -1056,3 +1056,85 @@ class GenitivEx(CaseEx):
             subjectVocabularies= ['occupations', 'nouns', 'personal_pronouns'],
             subjectFilter= None
         )
+
+class Futur2PositiveEx(Excercise):
+    randomVerbsPool: RandomPool
+    randomOccupationsPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        # combine verbs and modal_verbs and exclude `treba`
+        l = GetVocabulary('verbs').words + GetVocabulary('modal_verbs').words
+        l = [w for w in l if w.title != 'treba']
+
+        self.randomVerbsPool = RandomPool(l)
+        self.randomOccupationsPool = RandomPool(GetVocabulary('occupations').words)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский с местоимением:
+        # question: Я читал.
+        # answer:   Ja sam čitao.
+        #           Čitao sam.
+
+        flipParts = random.randint(0, 1)
+
+        class PartType(Enum):
+            Main = 0,
+            Depend = 1
+
+        class Part:
+            def __init__(self, exc: Futur2PositiveEx, type: PartType):
+                withOccupation = RandomPercent(30)
+                decl = Declination.Parse('{} & male|fem|neu & first|second|third & sing|plur & nom'.format('futur' if type == PartType.Main else 'perfect'))
+
+                if withOccupation:
+                    decl.parseOverride('male|fem & third')
+                    self.subject = exc.randomOccupationsPool.yieldElem().get(decl)
+                else:
+                    decl.humanizeNeutral()
+                    self.subject = GetVocabulary('personal_pronouns').getWordForm(decl)
+                
+                self.cu = GetVocabulary('cu' if type == PartType.Main else 'budem').get(decl)
+                self.verbWord = exc.randomVerbsPool.yieldElem()
+                self.decl = decl
+                self.type = type
+
+                particles = [
+                    ('ako', 'если'),
+                    ('čim', 'как только'),
+                    ('kad', 'когда'),
+                    ('ukoliko', 'в случае если'),
+                ]
+                self.particle = random.choice(particles)
+            
+            def __call__(self, lang: Language) -> str:
+                res = []
+
+                def getVer(elem):
+                    return elem.serb if lang == Language.serb else elem.rus
+
+                if self.type == PartType.Depend:
+                    res.append(self.particle[0] if lang == Language.serb else self.particle[1])
+                
+                res.append(' ')
+                res.append(getVer(self.subject))
+                res.append(' ')
+                res.append(getVer(self.cu))
+                res.append(' ')
+                res.append(getVer(self.verbWord.get(self.decl if self.type == PartType.Depend and lang == Language.serb else Infinitive)))
+
+                return ''.join(res)
+
+        firstPart = Part(self, PartType.Main)
+        secondPart = Part(self, PartType.Depend)
+
+        if flipParts:
+            firstPart, secondPart = secondPart, firstPart
+
+        title = 'Переведите на сербский'
+
+        question = '{}, {}'.format(firstPart(Language.rus), secondPart(Language.rus))
+        answer = '{}, {}'.format(firstPart(Language.serb), secondPart(Language.serb))
+
+        return ExcerciseYield(title, question, answer)
