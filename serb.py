@@ -8,7 +8,7 @@ def TryExit(anykey):
         quit()
     return anykey == 'q' or anykey == 'Q' or anykey == 'й' or anykey == 'Й'
 
-def TryHelp(anykey, manName, screen):
+def TryHelp(anykey, manName, screen: list[str]):
     help = anykey == 'h' or anykey == 'H' or anykey == 'р' or anykey == 'Р'
     if help:
         def yieldText(text: str):
@@ -16,7 +16,7 @@ def TryHelp(anykey, manName, screen):
             print(text)
             input()
             ClrScr()
-            print(screen)
+            print(''.join(screen))
 
         if manName == None or manName == '':
             yieldText('\n    NO HELP')
@@ -31,6 +31,14 @@ def ClrScr():
     os.system('clear')
 
 PAD = '  '
+
+def BuildScreenTop(excOrDir: ExcerciseDesc|ExcerciseDescsDir, title: str) -> list[str]:
+    screen: list[str] = []
+    screen.append('\n  {}\n\n'.format(str(excOrDir)))
+    screen.append('\n{}.........................\n\n'.format(PAD))
+    screen.append('{}{}:\n\n'.format(PAD, title))
+
+    return screen
 
 def ExecuteExcercise(exc: ExcerciseDesc):
     excObjects = []
@@ -48,19 +56,16 @@ def ExecuteExcercise(exc: ExcerciseDesc):
 
         ClrScr()
 
-        screen = ''
-        screen += '\n  {}\n\n'.format(str(exc))
-        screen += '\n{}.........................\n\n'.format(PAD)
-        screen += '{}{}:\n\n'.format(PAD, exYield.title)
+        screen = BuildScreenTop(exc, exYield.title)
 
         if type(exYield.question) is list:
-            screen += '\n\n'
+            screen.append('\n\n')
             for q in exYield.question:
-                screen += '{}{}\n'.format(PAD, q)
+                screen.append('{}{}\n'.format(PAD, q))
         else:
-            screen += '{}{}\n'.format(PAD, exYield.question)
+            screen.append('{}{}\n'.format(PAD, exYield.question))
 
-        print(screen)
+        print(''.join(screen))
 
         ans = input()
         while TryHelp(ans, exc.help, screen):
@@ -72,13 +77,13 @@ def ExecuteExcercise(exc: ExcerciseDesc):
             if type(exYield.answer) is list:
                 screen += '\n\n'
                 for a in exYield.answer:
-                    screen += '{}{}\n'.format(PAD, a)
+                    screen.append('{}{}\n'.format(PAD, a))
             else:
-                screen += '{}{}\n'.format(PAD, exYield.answer)
-            screen += '\n{}.........................\n\n'.format(PAD)
+                screen.append('{}{}\n'.format(PAD, exYield.answer))
+            screen.append('\n{}.........................\n\n'.format(PAD))
 
             ClrScr()
-            print(screen)
+            print(''.join(screen))
 
             ans = input()
             while TryHelp(ans, exc.help, screen):
@@ -96,9 +101,7 @@ def main():
     while True:
         ClrScr()
 
-        print('\n  {}\n\n'.format(str(currentDir)))
-        print('{}.........................\n'.format(PAD))
-        print('{}Выберите упражнение:'.format(PAD))
+        screen = BuildScreenTop(currentDir, 'Выберите упражнение')
 
         files = []
 
@@ -115,14 +118,16 @@ def main():
 
         for f in files:
             num = str(i+1)
-            print('{}{}. {}'.format(PAD, num, f.name))
+            screen.append('{}{}. {}\n'.format(PAD, num, f.name))
 
             numToEx[num] = f
 
             i += 1
 
-        print('\n{}q. Назад'.format(PAD), end='')
-        print('\n{}x. Выход'.format(PAD))
+        screen.append('\n{}q. Назад'.format(PAD))
+        screen.append('\n{}x. Выход\n'.format(PAD))
+
+        print(''.join(screen))
 
         ans = input()
 
