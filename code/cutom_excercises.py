@@ -29,14 +29,14 @@ class ToBeEx(Excercise):
 
         title = 'Переведите на сербский'
         rusNoParticle = [' ', ' не '][negative]
-        question = '{}{}{} ({})'.format(pronoun.rus, rusNoParticle, occ.rus, occ.serb)
+        question = f'{pronoun.rus}{rusNoParticle}{occ.rus} ({occ.serb})'
 
         answer = []
         if negative:
-            answer = '({}) {} {}'.format(pronoun.serb, tb.serb, occ.serb)
+            answer = f'({pronoun.serb}) {tb.serb} {occ.serb}'
         else:
-            answer.append('{} {} {}'.format(pronoun.serb, tb.serb, occ.serb))
-            answer.append('{} {}'.format(occ.serb, tb.serb))
+            answer.append(f'{pronoun.serb} {tb.serb} {occ.serb}')
+            answer.append(f'{occ.serb} {tb.serb}')
 
         return ExcerciseYield(title, question, answer)
 
@@ -61,14 +61,14 @@ class ToBeEx2(Excercise):
         occ = occupation.get(decl)
 
         title = 'Переведите на сербский'
-        question = '{} {} ({})?'.format(pronoun.rus, occ.rus, occ.serb)
+        question = f'{pronoun.rus} {occ.rus} ({occ.serb})?'
 
         answer = []
         tb = GetVocabulary('tobe').get(decl)
-        answer.append('Da li {} ({}) {}?'.format(tb.serb, pronoun.serb, occ.serb))
+        answer.append(f'Da li {tb.serb} ({pronoun.serb}) {occ.serb}?')
 
         tb = GetVocabulary('question_tobe').get(decl)
-        answer.append('{} li ({}) {}?'.format(tb.serb, pronoun.serb, occ.serb))
+        answer.append(f'{tb.serb} li ({pronoun.serb}) {occ.serb}?')
 
         return ExcerciseYield(title, question, answer)
 
@@ -98,13 +98,13 @@ class ToBeEx3(Excercise):
         occ = occupation.get(aDecl)
 
         title = 'Ответьте на вопрос'
-        question = '{} {} ({})?'.format(qPronoun.rus, occ.rus, occ.serb)
+        question = f'{qPronoun.rus} {occ.rus} ({occ.serb})?'
 
         answer = []
         aTb = GetVocabulary('positive_tobe').get(aDecl)
         answer.append(aTb.serb + '')
         aTb = GetVocabulary('tobe').get(aDecl)
-        answer.append('{} {} {}'.format(aPronoun.serb, aTb.serb, occ.serb))
+        answer.append(f'{aPronoun.serb} {aTb.serb} {occ.serb}')
 
         return ExcerciseYield(title, question, answer)
 
@@ -222,8 +222,8 @@ class PointingEx(Excercise):
             distClarif = '(дальн.)'
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
-        question = '{}{} {} {} - {}'.format(point.rus(), distClarif, adj.rus(), noun.rus(), possess.rus())
-        answer = '{} {} {} {} {}'.format(point.serb(), adj.serb(), noun.serb(), tobe.serb(), possess.serb())
+        question = f'{point.rus()}{distClarif} {adj.rus()} {noun.rus()} - {possess.rus()}'
+        answer = f'{point.serb()} {adj.serb()} {noun.serb()} {tobe.serb()} {possess.serb()}'
 
         if lang:
             question, answer = answer, question
@@ -275,8 +275,8 @@ class ImatiEx(Excercise):
 
         title = 'Переведите на сербский'
         rusParticle = ['есть', 'нет'][negative]
-        question = 'У {} {} {}'.format(rusPronounCorrected, rusParticle, rusNoun.rus)
-        answer = '{} {}'.format(imatiCorrected, serbNoun.serb)
+        question = f'У {rusPronounCorrected} {rusParticle} {rusNoun.rus}'
+        answer = f'{imatiCorrected} {serbNoun.serb}'
 
         return ExcerciseYield(title, question, answer)
 
@@ -314,8 +314,10 @@ class VerbsEx(Excercise):
         verb = self.randomVerbsPool.yieldElem().get(decl)
 
         title = 'Переведите на сербский'
-        question = '{}{}{}'.format(pronoun.rus, [' ', ' не '][negative], verb.rus)
-        answer = '{}{}{}'.format(pronoun.serb, [' ', ' ne '][negative], verb.serb)
+        rusNe = [' ', ' не '][negative]
+        serbNe = [' ', ' ne '][negative]
+        question = f'{pronoun.rus}{rusNe}{verb.rus}'
+        answer = f'{pronoun.serb}{serbNe}{verb.serb}'
 
         return ExcerciseYield(title, question, answer)
 
@@ -367,8 +369,10 @@ class ModalVerbsEx(Excercise):
 
         title = 'Переведите на сербский'
 
-        question = '{}{}{} {}'.format(rusPronoun.rus, [' ', ' не '][negative], modal.rus, rusVerb.rus)
-        answer = '{}{} da {}'.format(['', 'Ne '][negative], [modal.serb, modal.serb][negative], serbVerb.serb)
+        rusNe = [' ', ' не '][negative]
+        serbNe = ['', 'Ne '][negative]
+        question = f'{rusPronoun.rus}{rusNe}{modal.rus} {rusVerb.rus}'
+        answer = f'{serbNe}{[modal.serb, modal.serb][negative]} da {serbVerb.serb}'
 
         return ExcerciseYield(title, question, answer)
 
@@ -419,17 +423,18 @@ class PerfectPositiveEx(Excercise):
             elif decl.gender == Gender.neu:
                 clarification = '(ср.)'
 
-        question = '{}{}{}{}'.format(subject.rus, clarification,  [' ', ' не '][negative], verb.rus)
+        rusNe = [' ', ' не '][negative]
+        question = f'{subject.rus}{clarification}{rusNe}{verb.rus}'
 
         if withOccupation:
-            answer = '{} {} {}'.format(subject.serb, tb.serb, verb.serb)
+            answer = f'{subject.serb} {tb.serb} {verb.serb}'
         else:
             answer = []
-            answer.append('{} {} {}'.format(subject.serb, tb.serb, verb.serb))
+            answer.append(f'{subject.serb} {tb.serb} {verb.serb}')
             if negative:
-                answer.append('{} {}'.format(tb.serb, verb.serb))
+                answer.append(f'{tb.serb} {verb.serb}')
             else:
-                answer.append('{} {}'.format(verb.serb, tb.serb))
+                answer.append(f'{verb.serb} {tb.serb}')
 
         return ExcerciseYield(title, question, answer)
 
@@ -479,21 +484,21 @@ class PerfectQuestionsEx(Excercise):
             elif decl.gender == Gender.neu:
                 clarification = '(ср.)'
 
-        question = '{}{} {}?'.format(subject.rus, clarification, verb.rus)
+        question = f'{subject.rus}{clarification} {verb.rus}?'
 
         answer = []
 
         tb = GetVocabulary('tobe').get(decl)
         if withOccupation:
-            answer.append('Da li {} {} {}?'.format(tb.serb, subject.serb, verb.serb))
+            answer.append(f'Da li {tb.serb} {subject.serb} {verb.serb}?')
         else:
-            answer.append('Da li {} {}?'.format(tb.serb, verb.serb))
+            answer.append(f'Da li {tb.serb} {verb.serb}?')
 
         tb = GetVocabulary('question_tobe').get(decl)
         if withOccupation:
-            answer.append('{} li {} {}?'.format(tb.serb, subject.serb, verb.serb))
+            answer.append(f'{tb.serb} li {subject.serb} {verb.serb}?')
         else:
-            answer.append('{} li {}?'.format(tb.serb, verb.serb))
+            answer.append(f'{tb.serb} li {verb.serb}?')
 
         return ExcerciseYield(title, question, answer)
 
@@ -544,25 +549,25 @@ class FuturPositiveEx(Excercise):
             elif decl.gender == Gender.neu:
                 clarification = '(ср.)'
 
-        question = '{}{} {} {}'.format(pronoun.rus, clarification, cu.rus, verbWord.get(Infinitive).getRusReflexive(selfness))
+        question = f'{pronoun.rus}{clarification} {cu.rus} {verbWord.get(Infinitive).getRusReflexive(selfness)}'
 
         answer = []
 
         if not negative:
             verb = verbWord.get(decl.clone().override(Time.futur))
-            answer.append('{} {}'.format(verb.serb, verb.getSerbReflexive(selfness)))
+            answer.append(f'{verb.serb} {verb.getSerbReflexive(selfness)}')
 
             verb = verbWord.get(Infinitive)
-            answer.append('{} {} {} {}'.format(pronoun.serb, cu.serb, verb.getSerbReflexive(selfness), verb.serb))
+            answer.append(f'{pronoun.serb} {cu.serb} {verb.getSerbReflexive(selfness)} {verb.serb}')
             
             verb = verbWord.get(decl)
-            answer.append('{} {} {} da {}'.format(pronoun.serb, cu.serb, verb.getSerbReflexive(selfness), verb.serb))
+            answer.append(f'{pronoun.serb} {cu.serb} {verb.getSerbReflexive(selfness)} da {verb.serb}')
         else:
             verb = verbWord.get(Infinitive)
-            answer.append('({}) {} {} {}'.format(pronoun.serb, cu.serb, verb.getSerbReflexive(selfness), verb.serb))
+            answer.append(f'({pronoun.serb}) {cu.serb} {verb.getSerbReflexive(selfness)} {verb.serb}')
 
             verb = verbWord.get(decl)
-            answer.append('({}) {} {} da {}'.format(pronoun.serb, cu.serb, verb.getSerbReflexive(selfness), verb.serb))
+            answer.append(f'({pronoun.serb}) {cu.serb} {verb.getSerbReflexive(selfness)} da {verb.serb}')
 
         return ExcerciseYield(title, question, answer)
 
@@ -595,13 +600,13 @@ class FuturQuestionsEx(Excercise):
 
         title = 'Переведите на сербский'
 
-        question = '{} {} {}?'.format(pronoun.rus, cu.rus, verb.getRusReflexive(selfness))
+        question = f'{pronoun.rus} {cu.rus} {verb.getRusReflexive(selfness)}?'
         answer = []
 
-        answer.append('Da li {} {} {}?'.format(cu.serb, verb.getSerbReflexive(selfness), verb.serb))
+        answer.append(f'Da li {cu.serb} {verb.getSerbReflexive(selfness)} {verb.serb}?')
 
         cu = GetVocabulary('hocu').get(decl)
-        answer.append('{} li {} {}?'.format(cu.serb, verb.getSerbReflexive(selfness), verb.serb))
+        answer.append(f'{cu.serb} li {verb.getSerbReflexive(selfness)} {verb.serb}?')
 
         return ExcerciseYield(title, question, answer)
 
@@ -679,11 +684,11 @@ class PrepositionsCasesEx(Excercise):
             rusObject = GetVocabulary('personal_pronouns').getWordForm(rusDecl)
 
         if ',' in rusPreposition:
-            rusPreposition = '[{}]'.format(rusPreposition)
+            rusPreposition = f'[{rusPreposition}]'
 
         title = 'Переведите на сербский'
-        question = '{} {}'.format(rusPreposition, rusObject.rus)
-        answer = '{} {} ({})'.format(serbPreposition, serbObject.serb, str(serbCase))
+        question = f'{rusPreposition} {rusObject.rus}'
+        answer = f'{serbPreposition} {serbObject.serb} ({str(serbCase)})'
 
         return ExcerciseYield(title, question, answer)
 
@@ -725,8 +730,8 @@ class ComparativeEx(Excercise):
         tvoj.commonDecl.override(Case.gen)
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
-        question = '{} {} {} {}'.format(moj.rus(), noun.rus(), adj.rus(), tvoj.rus())
-        answer = '{} {} {} {} od {}'.format(moj.serb(), noun.serb(), tobe.serb(), adj.serb(), tvoj.serb())
+        question = f'{moj.rus()} {noun.rus()} {adj.rus()} {tvoj.rus()}'
+        answer = f'{moj.serb()} {noun.serb()} {tobe.serb()} {adj.serb()} od {tvoj.serb()}'
 
         if lang:
             question, answer = answer, question
@@ -766,8 +771,8 @@ class SuperlativeEx(Excercise):
         moj = noun.clone().setWord(pronounsVoc.getWord(mojDecl))
 
         title = ['Переведите на сербский', 'Переведите на русский'][lang]
-        question = '{} {} {}'.format(moj.rus(), noun.rus(), adj.rus())
-        answer = '{} {} {} {}'.format(moj.serb(), noun.serb(), tobe.serb(), adj.serb())
+        question = f'{moj.rus()} {noun.rus()} {adj.rus()}'
+        answer = f'{moj.serb()} {noun.serb()} {tobe.serb()} {adj.serb()}'
 
         if lang:
             question, answer = answer, question
@@ -820,7 +825,8 @@ class ConjunctivePositiveEx(Excercise):
             elif decl.gender == Gender.neu:
                 clarification = '(ср.)'
 
-        question = '{}{}{}{}'.format(subject.rus, clarification,  [' бы ', ' бы не '][negative], verb.rus)
+        rusBi = [' бы ', ' бы не '][negative]
+        question = f'{subject.rus}{clarification}{rusBi}{verb.rus}'
 
         bihSerb = bih.serb
         if negative:
@@ -829,16 +835,16 @@ class ConjunctivePositiveEx(Excercise):
         canOmitPronoun = decl.person == Person.first or (decl.person == Person.second and decl.number == Number.plur)
 
         if withOccupation:
-            answer = '{} {} {}'.format(subject.serb, bihSerb, verb.serb)
+            answer = f'{subject.serb} {bihSerb} {verb.serb}'
         else:
             answer = []
-            answer.append('{} {} {}'.format(subject.serb, bihSerb, verb.serb))
+            answer.append(f'{subject.serb} {bihSerb} {verb.serb}')
 
             if canOmitPronoun:
                 if negative:
-                    answer.append('{} {}'.format(bihSerb, verb.serb))
+                    answer.append(f'{bihSerb} {verb.serb}')
                 else:
-                    answer.append('{} {}'.format(verb.serb, bihSerb))
+                    answer.append(f'{verb.serb} {bihSerb}')
 
         return ExcerciseYield(title, question, answer)
 
@@ -887,15 +893,15 @@ class ConjunctiveQuestionsEx(Excercise):
             elif decl.gender == Gender.neu:
                 clarification = '(ср.)'
 
-        question = '{}{} бы {}?'.format(subject.rus, clarification, verb.rus)
+        question = f'{subject.rus}{clarification} бы {verb.rus}?'
 
         canOmitPronoun = decl.person == Person.first or (decl.person == Person.second and decl.number == Number.plur)
 
         tb = GetVocabulary('bih').get(decl)
         if withOccupation or not canOmitPronoun:
-            answer = 'Da li {} {} {}?'.format(tb.serb, subject.serb, verb.serb)
+            answer = f'Da li {tb.serb} {subject.serb} {verb.serb}?'
         else:
-            answer = 'Da li {} {}?'.format(tb.serb, verb.serb)
+            answer = f'Da li {tb.serb} {verb.serb}?'
 
         return ExcerciseYield(title, question, answer)
 
@@ -947,11 +953,11 @@ class CaseEx(Excercise):
             rusNe = 'не ' if negative else ''
             serbNe = 'ne ' if negative else ''
 
-            question = '{} {} {}{}'.format(rusNe, verb.rus, rusPrep, noun.rus)
-            answer = '{} {} {}{}'.format(serbNe, verb.serb, serbPrep, noun.serb)
+            question = f'{rusNe} {verb.rus} {rusPrep}{noun.rus}'
+            answer = f'{serbNe} {verb.serb} {serbPrep}{noun.serb}'
         else:
-            question = '{}{}'.format(rusPrep, noun.rus)
-            answer = '{}{}'.format(serbPrep, noun.serb)
+            question = f'{rusPrep}{noun.rus}'
+            answer = f'{serbPrep}{noun.serb}'
 
         return ExcerciseYield(title, question, answer)
 
@@ -1086,7 +1092,8 @@ class Futur2PositiveEx(Excercise):
         class Part:
             def __init__(self, exc: Futur2PositiveEx, type: PartType):
                 withOccupation = RandomPercent(30)
-                decl = Declination.Parse('{} & male|fem|neu & first|second|third & sing|plur & nom'.format('futur' if type == PartType.Main else 'perfect'))
+                tense = 'futur' if type == PartType.Main else 'perfect'
+                decl = Declination.Parse(f'{tense} & male|fem|neu & first|second|third & sing|plur & nom')
 
                 if withOccupation:
                     decl.parseOverride('male|fem & third')
@@ -1134,7 +1141,7 @@ class Futur2PositiveEx(Excercise):
 
         title = 'Переведите на сербский'
 
-        question = '{}, {}'.format(firstPart(Language.rus), secondPart(Language.rus))
-        answer = '{}, {}'.format(firstPart(Language.serb), secondPart(Language.serb))
+        question = f'{firstPart(Language.rus)}, {secondPart(Language.rus)}'
+        answer = f'{firstPart(Language.serb)}, {secondPart(Language.serb)}'
 
         return ExcerciseYield(title, question, answer)

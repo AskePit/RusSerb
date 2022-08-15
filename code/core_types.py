@@ -160,7 +160,7 @@ class Declination:
                     break
         
             if not got:
-                raise Exception("Could not parse Declination {}!".format(form))
+                raise Exception(f'Could not parse Declination {form}!')
 
         return res.normalize()
 
@@ -200,7 +200,7 @@ class Declination:
                     pass
 
                 if not got:
-                    raise Exception("Could not parse Declination {}!".format(form))
+                    raise Exception(f'Could not parse Declination {form}!')
         
         if 'gender' in attrs:
             genders = attrs['gender']
@@ -261,7 +261,7 @@ class Declination:
                     break
         
             if not got:
-                raise Exception("Could not set variable {}!".format(arg))
+                raise Exception(f'Could not set variable {arg}!')
         return res.normalize()
 
     def clone(self):
@@ -500,10 +500,10 @@ class Word:
         return None
 
     def __str__(self):
-        res = '{} {}\n'.format(self.speechPart.name, self.title)
-        res += '{}\n'.format(self.metaDeclination)
+        res = f'{self.speechPart.name} {self.title}\n'
+        res += f'{self.metaDeclination}\n'
         for word in self.forms:
-            res += '{}: {}|{}\n'.format(word.declination, word.serb, word.rus)
+            res += f'{word.declination}: {word.serb}|{word.rus}\n'
         return res
     
     def normalize(self):

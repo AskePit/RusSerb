@@ -165,7 +165,7 @@ class TableDownloader:
     table: list[str] = None
 
     def downloadSoup(self):
-        url = "{}/{}".format(self.urlBase, self.word)
+        url = f'{self.urlBase}/{self.word}'
         url = parse.urlparse(url)
         url = url.scheme + "://" + url.netloc + parse.quote(url.path)
         pagecontent = urlopen(url).read()
@@ -192,7 +192,7 @@ class TableDownloader:
         if len(tableTags) <= self.tagIdx:
             return (DownloadStatus.NoDeclTable, None)
         if len(tableTags) > self.tagIdx + 1:
-            print('multiple tables for `{}`! choosing the first one'.format(self.word))
+            print(f'multiple tables for `{self.word}`! choosing the first one')
 
         cells: list[str] = []
         for c in tableTags[self.tagIdx].find_all(["td", "th"]):
@@ -243,7 +243,7 @@ class Writer:
         rusForm = PostGarbageFilter(rusForm)
         serbForm = PostGarbageFilter(serbForm)
 
-        self.file.write('{}: {} | {}\n'.format(template, serbForm, rusForm))
+        self.file.write(f'{template}: {serbForm} | {rusForm}\n')
 
     def endl(self):
         self.file.write('\n')
@@ -357,7 +357,8 @@ class WordsFile:
 
         for w in self.words:
             failed = w[0] in self.failedWords
-            res += '{}{} | {}\n'.format('# ' if failed else '', w[0], w[1])
+            possibleComment = '# ' if failed else ''
+            res += f'{possibleComment}{w[0]} | {w[1]}\n'
         return res
     
     def markFailed(self, serbWord: str):
@@ -380,7 +381,7 @@ class WordsLists:
     def Load(dirname: str): # -> WordsLists
         res = WordsLists()
 
-        listRegex = '{}/**/*.{}'.format(dirname, 'list')
+        listRegex = f'{dirname}/**/*.list'
         for filename in glob.glob(listRegex, recursive=True):
             res.files.append(WordsFile.Load(filename))
 
@@ -422,7 +423,7 @@ def ExecuteMiner(
         
         # if no - just exit
         if allCovered:
-            print('{} is already up to date!'.format(wordsFile.listFilename))
+            print(f'{wordsFile.listFilename} is already up to date!')
             wordsFile.save()
             continue
         
@@ -431,7 +432,7 @@ def ExecuteMiner(
         desired.sort(key=lambda tup: tup[0])
 
         o = Writer(file)
-        o.file.write('declined {}\n\n'.format(speechPart))
+        o.file.write(f'declined {speechPart}\n\n')
 
         for word in desired:
             if word[0] in existed:
@@ -444,11 +445,11 @@ def ExecuteMiner(
             status = downloadFunc(word, o)
 
             if status == DownloadStatus.NoUrl:
-                print('ERROR: no URL for `{}`'.format(word))
+                print(f'ERROR: no URL for `{word}`')
             elif status == DownloadStatus.NoDeclTable:
-                print('ERROR: no declination table for `{}`'.format(word))
+                print(f'ERROR: no declination table for `{word}`')
             elif status == DownloadStatus.Fatal:
-                print('ERROR: FATAL for `{}`'.format(word))
+                print(f'ERROR: FATAL for `{word}`')
 
             if status != DownloadStatus.Ok:
                 res = generateFunc(word, o)

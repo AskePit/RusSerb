@@ -34,9 +34,9 @@ PAD = '  '
 
 def BuildScreenTop(excOrDir: ExcerciseDesc|ExcerciseDescsDir, title: str) -> list[str]:
     screen: list[str] = []
-    screen.append('\n  {}\n\n'.format(str(excOrDir)))
-    screen.append('\n{}.........................\n\n'.format(PAD))
-    screen.append('{}{}:\n\n'.format(PAD, title))
+    screen.append(f'\n  {str(excOrDir)}\n\n')
+    screen.append(f'\n{PAD}.........................\n\n')
+    screen.append(f'{PAD}{title}:\n\n')
 
     return screen
 
@@ -47,7 +47,7 @@ def ExecuteExcercise(exc: ExcerciseDesc):
         excObjects.append(PhrasesEx(exc.phrasesVoc))
     elif exc.type == ExcerciseType.custom:
         for f in exc.customFunctions:
-            excercise = eval('{}()'.format(f))
+            excercise = eval(f'{f}()')
             excObjects.append(excercise)
 
     while True:
@@ -61,9 +61,9 @@ def ExecuteExcercise(exc: ExcerciseDesc):
         if type(exYield.question) is list:
             screen.append('\n\n')
             for q in exYield.question:
-                screen.append('{}{}\n'.format(PAD, q))
+                screen.append(f'{PAD}{q}\n')
         else:
-            screen.append('{}{}\n'.format(PAD, exYield.question))
+            screen.append(f'{PAD}{exYield.question}\n')
 
         print(''.join(screen))
 
@@ -77,10 +77,10 @@ def ExecuteExcercise(exc: ExcerciseDesc):
             if type(exYield.answer) is list:
                 screen += '\n\n'
                 for a in exYield.answer:
-                    screen.append('{}{}\n'.format(PAD, a))
+                    screen.append(f'{PAD}{a}\n')
             else:
-                screen.append('{}{}\n'.format(PAD, exYield.answer))
-            screen.append('\n{}.........................\n\n'.format(PAD))
+                screen.append(f'{PAD}{exYield.answer}\n')
+            screen.append(f'\n{PAD}.........................\n\n')
 
             ClrScr()
             print(''.join(screen))
@@ -101,7 +101,7 @@ def ExecuteQuiz(excs: list[ExcerciseDesc]):
             excObjects.append(PhrasesEx(exc.phrasesVoc))
         elif exc.type == ExcerciseType.custom:
             for f in exc.customFunctions:
-                excercise = eval('{}()'.format(f))
+                excercise = eval(f'{f}()')
                 excObjects.append(excercise)
         
         excercise = random.choice(excObjects)
@@ -114,9 +114,9 @@ def ExecuteQuiz(excs: list[ExcerciseDesc]):
         if type(exYield.question) is list:
             screen.append('\n\n')
             for q in exYield.question:
-                screen.append('{}{}\n'.format(PAD, q))
+                screen.append(f'{PAD}{q}\n')
         else:
-            screen.append('{}{}\n'.format(PAD, exYield.question))
+            screen.append(f'{PAD}{exYield.question}\n')
 
         print(''.join(screen))
 
@@ -130,10 +130,10 @@ def ExecuteQuiz(excs: list[ExcerciseDesc]):
             if type(exYield.answer) is list:
                 screen += '\n\n'
                 for a in exYield.answer:
-                    screen.append('{}{}\n'.format(PAD, a))
+                    screen.append(f'{PAD}{a}\n')
             else:
-                screen.append('{}{}\n'.format(PAD, exYield.answer))
-            screen.append('\n{}.........................\n\n'.format(PAD))
+                screen.append(f'{PAD}{exYield.answer}\n')
+            screen.append(f'\n{PAD}.........................\n\n')
 
             ClrScr()
             print(''.join(screen))
@@ -171,15 +171,15 @@ def main():
 
         for f in files:
             num = str(i+1)
-            screen.append('{}{}. {}\n'.format(PAD, num, f.name))
+            screen.append(f'{PAD}{num}. {f.name}\n')
 
             numToEx[num] = f
 
             i += 1
 
-        screen.append('{}0. Quiz\n'.format(PAD))
-        screen.append('\n{}q. Назад'.format(PAD))
-        screen.append('\n{}x. Выход\n'.format(PAD))
+        screen.append(f'{PAD}0. Quiz\n')
+        screen.append(f'\n{PAD}q. Назад')
+        screen.append(f'\n{PAD}x. Выход\n')
 
         print(''.join(screen))
 

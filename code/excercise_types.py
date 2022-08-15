@@ -110,7 +110,7 @@ class ExcerciseDesc:
         if self.cachedName != None:
             return self.cachedName
         
-        self.cachedName = '{}{}{}'.format(str(self.parent), EXC_SEPARATOR, self.name)
+        self.cachedName = f'{str(self.parent)}{EXC_SEPARATOR}{self.name}'
         return self.cachedName
 
 class ExcerciseDescsDir:
@@ -179,7 +179,7 @@ class ExcerciseDescsDir:
             if parent.name == '':
                 continue
 
-            res += '{}'.format(EXC_SEPARATOR)
+            res += f'{EXC_SEPARATOR}'
             res += parent.name
         
         self.cachedName = res

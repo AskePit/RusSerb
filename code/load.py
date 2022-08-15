@@ -133,7 +133,7 @@ EXCERCISE_EXT = 'exc'
 EXCERCISE_TITLE_FILENAME = '_title'
 
 def LoadVocabulary(path='.'):
-    vocRegex = '{}/**/*.{}'.format(path, VOCABULARY_EXT)
+    vocRegex = f'{path}/**/*.{VOCABULARY_EXT}'
     for f in glob.glob(vocRegex, recursive=True):
         collectionName = os.path.splitext(os.path.basename(f))[0]
         data = LoadVocFile(f, collectionName)
@@ -146,7 +146,7 @@ def LoadVocabulary(path='.'):
         vocabulary[collectionName] = data
 
 def LoadManuals(path='.'):
-    manRegex = '{}/**/*.{}'.format(path, MAN_EXT)
+    manRegex = f'{path}/**/*.{MAN_EXT}'
     for f in glob.glob(manRegex, recursive=True):
         manName = os.path.splitext(os.path.basename(f))[0]
         with io.open(f, encoding='utf-8') as f:
@@ -158,7 +158,7 @@ def LoadExcercises():
         number = GetSerialNumber(dirname)
         excDir = ExcerciseDescsDir(parent, number)
 
-        for f in glob.glob('{}/**'.format(dirname)):
+        for f in glob.glob(f'{dirname}/**'):
             if os.path.isdir(f):
                 excDir.children.append(LoadDir(f, excDir))
             elif os.path.isfile(f):

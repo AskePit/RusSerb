@@ -72,7 +72,7 @@ def downloadNoun(nounPair: tuple[str, str], o: Writer) -> DownloadStatus:
     o.write(serbNoun)
     o.endl()
     if serb != None and serb.gender != None and rus != None and rus.gender != None:
-        o.write('{} & {}'.format(serb.gender, rus.gender))
+        o.write(f'{serb.gender} & {rus.gender}')
     elif serb != None and serb.gender != None:
         o.write(serb.gender)
     elif rus != None and rus.gender != None:

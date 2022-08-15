@@ -66,7 +66,7 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
     else:
         conjugation = 'none'
 
-    o.write('\n{}\n\n'.format(conjugation))
+    o.write(f'\n{conjugation}\n\n')
 
     o.writeLine('inf', rusVerb, serbVerb)
     o.endl()
