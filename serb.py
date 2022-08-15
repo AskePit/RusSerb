@@ -59,66 +59,26 @@ def TryHelp(anykey, manName, screen: Screen):
 
 PAD = '  '
 
-def ExecuteExcercise(exc: ExcerciseDesc, screen: Screen):
-    excObjects = []
-
-    if exc.type == ExcerciseType.phrases:
-        excObjects.append(PhrasesEx(exc.phrasesVoc))
-    elif exc.type == ExcerciseType.custom:
-        for f in exc.customFunctions:
-            excercise = eval(f'{f}()')
-            excObjects.append(excercise)
-
-    while True:
-        excercise = random.choice(excObjects)
-        exYield: ExcerciseYield = excercise()
-
-        screen.clear().clrScr().createHeader(exc, exYield.title)
-
-        if type(exYield.question) is list:
-            screen.append('\n\n')
-            for q in exYield.question:
-                screen.append(f'{PAD}{q}\n')
-        else:
-            screen.append(f'{PAD}{exYield.question}\n')
-
-        screen.print()
-
-        ans = input()
-        while TryHelp(ans, exc.help, screen):
-            ans = input()
-
-        if TryExit(ans):
-            break
-        else:
-            if type(exYield.answer) is list:
-                screen.append('\n\n')
-                for a in exYield.answer:
-                    screen.append(f'{PAD}{a}\n')
-            else:
-                screen.append(f'{PAD}{exYield.answer}\n')
-            screen.append(f'\n{PAD}.........................\n\n')
-
-            screen.clrScr().print()
-
-            ans = input()
-            while TryHelp(ans, exc.help, screen):
-                ans = input()
-            if TryExit(ans):
-                break
-
 def ExecuteQuiz(excs: list[ExcerciseDesc], screen: Screen):
+
+    excercisesCache: dict[ExcerciseDesc, list[Excercise]] = {}
+
     while True:
         exc = random.choice(excs)
 
-        excObjects = []
+        if exc in excercisesCache:
+            excObjects = excercisesCache[exc]
+        else:
+            excObjects = []
 
-        if exc.type == ExcerciseType.phrases:
-            excObjects.append(PhrasesEx(exc.phrasesVoc))
-        elif exc.type == ExcerciseType.custom:
-            for f in exc.customFunctions:
-                excercise = eval(f'{f}()')
-                excObjects.append(excercise)
+            if exc.type == ExcerciseType.phrases:
+                excObjects.append(PhrasesEx(exc.phrasesVoc))
+            elif exc.type == ExcerciseType.custom:
+                for f in exc.customFunctions:
+                    excercise = eval(f'{f}()')
+                    excObjects.append(excercise)
+            
+            excercisesCache[exc] = excObjects
         
         excercise = random.choice(excObjects)
         exYield: ExcerciseYield = excercise()
@@ -209,7 +169,7 @@ def main():
             if isinstance(exc, ExcerciseDescsDir):
                 currentDir = exc
             elif isinstance(exc, ExcerciseDesc):
-                ExecuteExcercise(exc, screen)
+                ExecuteQuiz([exc], screen)
             else:
                 continue
 
