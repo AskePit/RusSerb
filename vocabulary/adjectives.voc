@@ -927,231 +927,231 @@ plur & inst & neu  & super: najcrvenijim | наикраснейшими
 dalek
 none
 
-inf: dalek | далекий
+inf: dalek | далёкий
 
-sing & nom & male & indef: dalek | 
-sing & nom & fem  & indef: daleka | 
-sing & nom & neu  & indef: daleko | 
-plur & nom & male & indef: daleki | 
-plur & nom & fem  & indef: daleke | 
-plur & nom & neu  & indef: daleka | 
+sing & nom & male & indef: dalek | далёк
+sing & nom & fem  & indef: daleka | далека
+sing & nom & neu  & indef: daleko | далёко
+plur & nom & male & indef: daleki | далёки
+plur & nom & fem  & indef: daleke | далёки
+plur & nom & neu  & indef: daleka | далёки
 
-sing & gen & male & indef: daleka | 
-sing & gen & fem  & indef: daleke | 
-sing & gen & neu  & indef: daleka | 
-plur & gen & male & indef: dalekih | 
-plur & gen & fem  & indef: dalekih | 
-plur & gen & neu  & indef: dalekih | 
+sing & gen & male & indef: daleka | далёкого
+sing & gen & fem  & indef: daleke | далёкой
+sing & gen & neu  & indef: daleka | далёкого
+plur & gen & male & indef: dalekih | далёких
+plur & gen & fem  & indef: dalekih | далёких
+plur & gen & neu  & indef: dalekih | далёких
 
-sing & dat & male & indef: daleku | 
-sing & dat & fem  & indef: dalekoj | 
-sing & dat & neu  & indef: daleku | 
-plur & dat & male & indef: dalekim | 
-plur & dat & fem  & indef: dalekim | 
-plur & dat & neu  & indef: dalekim | 
+sing & dat & male & indef: daleku | далёкому
+sing & dat & fem  & indef: dalekoj | далёкой
+sing & dat & neu  & indef: daleku | далёкому
+plur & dat & male & indef: dalekim | далёким
+plur & dat & fem  & indef: dalekim | далёким
+plur & dat & neu  & indef: dalekim | далёким
 
-sing & aku & male & indef & anim: daleka | 
-sing & aku & fem  & indef & anim: daleku | 
-sing & aku & neu  & indef & anim: daleko | 
-plur & aku & male & indef & anim: daleke | 
-plur & aku & fem  & indef & anim: daleke | 
-plur & aku & neu  & indef & anim: daleka | 
+sing & aku & male & indef & anim: daleka | далёкого
+sing & aku & fem  & indef & anim: daleku | далёкую
+sing & aku & neu  & indef & anim: daleko | далёкое
+plur & aku & male & indef & anim: daleke | далёких
+plur & aku & fem  & indef & anim: daleke | далёких
+plur & aku & neu  & indef & anim: daleka | далёких
 
-sing & aku & male & indef & inanim: dalek | 
-sing & aku & fem  & indef & inanim: daleku | 
-sing & aku & neu  & indef & inanim: daleko | 
-plur & aku & male & indef & inanim: daleke | 
-plur & aku & fem  & indef & inanim: daleke | 
-plur & aku & neu  & indef & inanim: daleka | 
+sing & aku & male & indef & inanim: dalek | далёкий
+sing & aku & fem  & indef & inanim: daleku | далёкую
+sing & aku & neu  & indef & inanim: daleko | далёкое
+plur & aku & male & indef & inanim: daleke | далёким
+plur & aku & fem  & indef & inanim: daleke | далёким
+plur & aku & neu  & indef & inanim: daleka | далёким
 
-sing & vok & male & indef: dalek | 
-sing & vok & fem  & indef: daleka | 
-sing & vok & neu  & indef: daleko | 
-plur & vok & male & indef: daleki | 
-plur & vok & fem  & indef: daleke | 
-plur & vok & neu  & indef: daleka | 
+sing & vok & male & indef: dalek | далёк
+sing & vok & fem  & indef: daleka | далека
+sing & vok & neu  & indef: daleko | далёко
+plur & vok & male & indef: daleki | далёки
+plur & vok & fem  & indef: daleke | далёки
+plur & vok & neu  & indef: daleka | далёки
 
-sing & lok & male & indef: daleku | 
-sing & lok & fem  & indef: dalekoj | 
-sing & lok & neu  & indef: daleku | 
-plur & lok & male & indef: dalekim | 
-plur & lok & fem  & indef: dalekim | 
-plur & lok & neu  & indef: dalekim | 
+sing & lok & male & indef: daleku | далёком
+sing & lok & fem  & indef: dalekoj | далёкой
+sing & lok & neu  & indef: daleku | далёком
+plur & lok & male & indef: dalekim | далёких
+plur & lok & fem  & indef: dalekim | далёких
+plur & lok & neu  & indef: dalekim | далёких
 
-sing & inst & male & indef: dalekim | 
-sing & inst & fem  & indef: dalekom | 
-sing & inst & neu  & indef: dalekim | 
-plur & inst & male & indef: dalekim | 
-plur & inst & fem  & indef: dalekim | 
-plur & inst & neu  & indef: dalekim | 
+sing & inst & male & indef: dalekim | далёким
+sing & inst & fem  & indef: dalekom | далёкой
+sing & inst & neu  & indef: dalekim | далёким
+plur & inst & male & indef: dalekim | далёкими
+plur & inst & fem  & indef: dalekim | далёкими
+plur & inst & neu  & indef: dalekim | далёкими
 
-sing & nom & male & defined: daleki | 
-sing & nom & fem  & defined: daleka | 
-sing & nom & neu  & defined: daleko | 
-plur & nom & male & defined: daleki | 
-plur & nom & fem  & defined: daleke | 
-plur & nom & neu  & defined: daleka | 
+sing & nom & male & defined: daleki | далёкий
+sing & nom & fem  & defined: daleka | далёкая
+sing & nom & neu  & defined: daleko | далёкое
+plur & nom & male & defined: daleki | далёкие
+plur & nom & fem  & defined: daleke | далёкие
+plur & nom & neu  & defined: daleka | далёкие
 
-sing & gen & male & defined: dalekog | 
-sing & gen & fem  & defined: daleke | 
-sing & gen & neu  & defined: dalekog | 
-plur & gen & male & defined: dalekih | 
-plur & gen & fem  & defined: dalekih | 
-plur & gen & neu  & defined: dalekih | 
+sing & gen & male & defined: dalekog | далёкого
+sing & gen & fem  & defined: daleke | далёкой
+sing & gen & neu  & defined: dalekog | далёкого
+plur & gen & male & defined: dalekih | далёких
+plur & gen & fem  & defined: dalekih | далёких
+plur & gen & neu  & defined: dalekih | далёких
 
-sing & dat & male & defined: dalekom | 
-sing & dat & fem  & defined: dalekoj | 
-sing & dat & neu  & defined: dalekom | 
-plur & dat & male & defined: dalekim | 
-plur & dat & fem  & defined: dalekim | 
-plur & dat & neu  & defined: dalekim | 
+sing & dat & male & defined: dalekom | далёкому
+sing & dat & fem  & defined: dalekoj | далёкой
+sing & dat & neu  & defined: dalekom | далёкому
+plur & dat & male & defined: dalekim | далёким
+plur & dat & fem  & defined: dalekim | далёким
+plur & dat & neu  & defined: dalekim | далёким
 
-sing & aku & male & defined & anim: dalekog | 
-sing & aku & fem  & defined & anim: daleku | 
-sing & aku & neu  & defined & anim: daleko | 
-plur & aku & male & defined & anim: daleke | 
-plur & aku & fem  & defined & anim: daleke | 
-plur & aku & neu  & defined & anim: daleka | 
+sing & aku & male & defined & anim: dalekog | далёкого
+sing & aku & fem  & defined & anim: daleku | далёкую
+sing & aku & neu  & defined & anim: daleko | далёкое
+plur & aku & male & defined & anim: daleke | далёких
+plur & aku & fem  & defined & anim: daleke | далёких
+plur & aku & neu  & defined & anim: daleka | далёких
 
-sing & aku & male & defined & inanim: daleki | 
-sing & aku & fem  & defined & inanim: daleku | 
-sing & aku & neu  & defined & inanim: daleko | 
-plur & aku & male & defined & inanim: daleke | 
-plur & aku & fem  & defined & inanim: daleke | 
-plur & aku & neu  & defined & inanim: daleka | 
+sing & aku & male & defined & inanim: daleki | далёкий
+sing & aku & fem  & defined & inanim: daleku | далёкую
+sing & aku & neu  & defined & inanim: daleko | далёкое
+plur & aku & male & defined & inanim: daleke | далёким
+plur & aku & fem  & defined & inanim: daleke | далёким
+plur & aku & neu  & defined & inanim: daleka | далёким
 
-sing & vok & male & defined: daleki | 
-sing & vok & fem  & defined: daleka | 
-sing & vok & neu  & defined: daleko | 
-plur & vok & male & defined: daleki | 
-plur & vok & fem  & defined: daleke | 
-plur & vok & neu  & defined: daleka | 
+sing & vok & male & defined: daleki | далёкий
+sing & vok & fem  & defined: daleka | далёкая
+sing & vok & neu  & defined: daleko | далёкое
+plur & vok & male & defined: daleki | далёкие
+plur & vok & fem  & defined: daleke | далёкие
+plur & vok & neu  & defined: daleka | далёкие
 
-sing & lok & male & defined: dalekom | 
-sing & lok & fem  & defined: dalekoj | 
-sing & lok & neu  & defined: dalekom | 
-plur & lok & male & defined: dalekim | 
-plur & lok & fem  & defined: dalekim | 
-plur & lok & neu  & defined: dalekim | 
+sing & lok & male & defined: dalekom | далёком
+sing & lok & fem  & defined: dalekoj | далёкой
+sing & lok & neu  & defined: dalekom | далёком
+plur & lok & male & defined: dalekim | далёких
+plur & lok & fem  & defined: dalekim | далёких
+plur & lok & neu  & defined: dalekim | далёких
 
-sing & inst & male & defined: dalekim | 
-sing & inst & fem  & defined: dalekom | 
-sing & inst & neu  & defined: dalekim | 
-plur & inst & male & defined: dalekim | 
-plur & inst & fem  & defined: dalekim | 
-plur & inst & neu  & defined: dalekim | 
+sing & inst & male & defined: dalekim | далёким
+sing & inst & fem  & defined: dalekom | далёкой
+sing & inst & neu  & defined: dalekim | далёким
+plur & inst & male & defined: dalekim | далёкими
+plur & inst & fem  & defined: dalekim | далёкими
+plur & inst & neu  & defined: dalekim | далёкими
 
-sing & nom & male & comp: dalji | 
-sing & nom & fem  & comp: dalja | 
-sing & nom & neu  & comp: dalje | 
-plur & nom & male & comp: dalji | 
-plur & nom & fem  & comp: dalje | 
-plur & nom & neu  & comp: dalja | 
+sing & nom & male & comp: dalji | дальше
+sing & nom & fem  & comp: dalja | дальше
+sing & nom & neu  & comp: dalje | дальше
+plur & nom & male & comp: dalji | дальше
+plur & nom & fem  & comp: dalje | дальше
+plur & nom & neu  & comp: dalja | дальше
 
-sing & gen & male & comp: daljeg | 
-sing & gen & fem  & comp: dalje | 
-sing & gen & neu  & comp: daljeg | 
-plur & gen & male & comp: daljih | 
-plur & gen & fem  & comp: daljih | 
-plur & gen & neu  & comp: daljih | 
+sing & gen & male & comp: daljeg | дальше
+sing & gen & fem  & comp: dalje | дальше
+sing & gen & neu  & comp: daljeg | дальше
+plur & gen & male & comp: daljih | дальше
+plur & gen & fem  & comp: daljih | дальше
+plur & gen & neu  & comp: daljih | дальше
 
-sing & dat & male & comp: daljem | 
-sing & dat & fem  & comp: daljoj | 
-sing & dat & neu  & comp: daljem | 
-plur & dat & male & comp: daljim | 
-plur & dat & fem  & comp: daljim | 
-plur & dat & neu  & comp: daljim | 
+sing & dat & male & comp: daljem | дальше
+sing & dat & fem  & comp: daljoj | дальше
+sing & dat & neu  & comp: daljem | дальше
+plur & dat & male & comp: daljim | дальше
+plur & dat & fem  & comp: daljim | дальше
+plur & dat & neu  & comp: daljim | дальше
 
-sing & aku & male & comp & anim: daljeg | 
-sing & aku & fem  & comp & anim: dalju | 
-sing & aku & neu  & comp & anim: dalje | 
-plur & aku & male & comp & anim: dalje | 
-plur & aku & fem  & comp & anim: dalje | 
-plur & aku & neu  & comp & anim: dalja | 
+sing & aku & male & comp & anim: daljeg | дальше
+sing & aku & fem  & comp & anim: dalju | дальше
+sing & aku & neu  & comp & anim: dalje | дальше
+plur & aku & male & comp & anim: dalje | дальше
+plur & aku & fem  & comp & anim: dalje | дальше
+plur & aku & neu  & comp & anim: dalja | дальше
 
-sing & aku & male & comp & inanim: dalji | 
-sing & aku & fem  & comp & inanim: dalju | 
-sing & aku & neu  & comp & inanim: dalje | 
-plur & aku & male & comp & inanim: dalje | 
-plur & aku & fem  & comp & inanim: dalje | 
-plur & aku & neu  & comp & inanim: dalja | 
+sing & aku & male & comp & inanim: dalji | дальше
+sing & aku & fem  & comp & inanim: dalju | дальше
+sing & aku & neu  & comp & inanim: dalje | дальше
+plur & aku & male & comp & inanim: dalje | дальше
+plur & aku & fem  & comp & inanim: dalje | дальше
+plur & aku & neu  & comp & inanim: dalja | дальше
 
-sing & vok & male & comp: dalji | 
-sing & vok & fem  & comp: dalja | 
-sing & vok & neu  & comp: dalje | 
-plur & vok & male & comp: dalji | 
-plur & vok & fem  & comp: dalje | 
-plur & vok & neu  & comp: dalja | 
+sing & vok & male & comp: dalji | дальше
+sing & vok & fem  & comp: dalja | дальше
+sing & vok & neu  & comp: dalje | дальше
+plur & vok & male & comp: dalji | дальше
+plur & vok & fem  & comp: dalje | дальше
+plur & vok & neu  & comp: dalja | дальше
 
-sing & lok & male & comp: daljem | 
-sing & lok & fem  & comp: daljoj | 
-sing & lok & neu  & comp: daljem | 
-plur & lok & male & comp: daljim | 
-plur & lok & fem  & comp: daljim | 
-plur & lok & neu  & comp: daljim | 
+sing & lok & male & comp: daljem | дальше
+sing & lok & fem  & comp: daljoj | дальше
+sing & lok & neu  & comp: daljem | дальше
+plur & lok & male & comp: daljim | дальше
+plur & lok & fem  & comp: daljim | дальше
+plur & lok & neu  & comp: daljim | дальше
 
-sing & inst & male & comp: daljim | 
-sing & inst & fem  & comp: daljom | 
-sing & inst & neu  & comp: daljim | 
-plur & inst & male & comp: daljim | 
-plur & inst & fem  & comp: daljim | 
-plur & inst & neu  & comp: daljim | 
+sing & inst & male & comp: daljim | дальше
+sing & inst & fem  & comp: daljom | дальше
+sing & inst & neu  & comp: daljim | дальше
+plur & inst & male & comp: daljim | дальше
+plur & inst & fem  & comp: daljim | дальше
+plur & inst & neu  & comp: daljim | дальше
 
-sing & nom & male & super: najdalji | наиейший
-sing & nom & fem  & super: najdalja | наиейшее
-sing & nom & neu  & super: najdalje | наиейшая
-plur & nom & male & super: najdalji | наиейшие
-plur & nom & fem  & super: najdalje | наиейшие
-plur & nom & neu  & super: najdalja | наиейшие
+sing & nom & male & super: najdalji | наидалекейший
+sing & nom & fem  & super: najdalja | наидалекейшее
+sing & nom & neu  & super: najdalje | наидалекейшая
+plur & nom & male & super: najdalji | наидалекейшие
+plur & nom & fem  & super: najdalje | наидалекейшие
+plur & nom & neu  & super: najdalja | наидалекейшие
 
-sing & gen & male & super: najdaljeg | наиейшего
-sing & gen & fem  & super: najdalje | наиейшего
-sing & gen & neu  & super: najdaljeg | наиейшей
-plur & gen & male & super: najdaljih | наиейших
-plur & gen & fem  & super: najdaljih | наиейших
-plur & gen & neu  & super: najdaljih | наиейших
+sing & gen & male & super: najdaljeg | наидалекейшего
+sing & gen & fem  & super: najdalje | наидалекейшего
+sing & gen & neu  & super: najdaljeg | наидалекейшей
+plur & gen & male & super: najdaljih | наидалекейших
+plur & gen & fem  & super: najdaljih | наидалекейших
+plur & gen & neu  & super: najdaljih | наидалекейших
 
-sing & dat & male & super: najdaljem | наиейшему
-sing & dat & fem  & super: najdaljoj | наиейшему
-sing & dat & neu  & super: najdaljem | наиейшей
-plur & dat & male & super: najdaljim | наиейшим
-plur & dat & fem  & super: najdaljim | наиейшим
-plur & dat & neu  & super: najdaljim | наиейшим
+sing & dat & male & super: najdaljem | наидалекейшему
+sing & dat & fem  & super: najdaljoj | наидалекейшему
+sing & dat & neu  & super: najdaljem | наидалекейшей
+plur & dat & male & super: najdaljim | наидалекейшим
+plur & dat & fem  & super: najdaljim | наидалекейшим
+plur & dat & neu  & super: najdaljim | наидалекейшим
 
-sing & aku & male & super & anim: najdaljeg | наиейшего
-sing & aku & fem  & super & anim: najdalju | наиейшего
-sing & aku & neu  & super & anim: najdalje | наиейшую
-plur & aku & male & super & anim: najdalje | наиейших
-plur & aku & fem  & super & anim: najdalje | наиейших
-plur & aku & neu  & super & anim: najdalja | наиейших
+sing & aku & male & super & anim: najdaljeg | наидалекейшего
+sing & aku & fem  & super & anim: najdalju | наидалекейшего
+sing & aku & neu  & super & anim: najdalje | наидалекейшую
+plur & aku & male & super & anim: najdalje | наидалекейших
+plur & aku & fem  & super & anim: najdalje | наидалекейших
+plur & aku & neu  & super & anim: najdalja | наидалекейших
 
-sing & aku & male & super & inanim: najdalji | наиейший
-sing & aku & fem  & super & inanim: najdalju | наиейшего
-sing & aku & neu  & super & inanim: najdalje | наиейшая
-plur & aku & male & super & inanim: najdalje | наиейших
-plur & aku & fem  & super & inanim: najdalje | наиейших
-plur & aku & neu  & super & inanim: najdalja | наиейших
+sing & aku & male & super & inanim: najdalji | наидалекейший
+sing & aku & fem  & super & inanim: najdalju | наидалекейшего
+sing & aku & neu  & super & inanim: najdalje | наидалекейшая
+plur & aku & male & super & inanim: najdalje | наидалекейших
+plur & aku & fem  & super & inanim: najdalje | наидалекейших
+plur & aku & neu  & super & inanim: najdalja | наидалекейших
 
-sing & vok & male & super: najdalji | наиейший
-sing & vok & fem  & super: najdalja | наиейшее
-sing & vok & neu  & super: najdalje | наиейшая
-plur & vok & male & super: najdalji | наиейшие
-plur & vok & fem  & super: najdalje | наиейшие
-plur & vok & neu  & super: najdalja | наиейшие
+sing & vok & male & super: najdalji | наидалекейший
+sing & vok & fem  & super: najdalja | наидалекейшее
+sing & vok & neu  & super: najdalje | наидалекейшая
+plur & vok & male & super: najdalji | наидалекейшие
+plur & vok & fem  & super: najdalje | наидалекейшие
+plur & vok & neu  & super: najdalja | наидалекейшие
 
-sing & lok & male & super: najdaljem | наиейшем
-sing & lok & fem  & super: najdaljoj | наиейшем
-sing & lok & neu  & super: najdaljem | наиейшей
-plur & lok & male & super: najdaljim | наиейших
-plur & lok & fem  & super: najdaljim | наиейших
-plur & lok & neu  & super: najdaljim | наиейших
+sing & lok & male & super: najdaljem | наидалекейшем
+sing & lok & fem  & super: najdaljoj | наидалекейшем
+sing & lok & neu  & super: najdaljem | наидалекейшей
+plur & lok & male & super: najdaljim | наидалекейших
+plur & lok & fem  & super: najdaljim | наидалекейших
+plur & lok & neu  & super: najdaljim | наидалекейших
 
-sing & inst & male & super: najdaljim | наиейшим
-sing & inst & fem  & super: najdaljom | наиейшим
-sing & inst & neu  & super: najdaljim | наиейшей
-plur & inst & male & super: najdaljim | наиейшими
-plur & inst & fem  & super: najdaljim | наиейшими
-plur & inst & neu  & super: najdaljim | наиейшими
+sing & inst & male & super: najdaljim | наидалекейшим
+sing & inst & fem  & super: najdaljom | наидалекейшим
+sing & inst & neu  & super: najdaljim | наидалекейшей
+plur & inst & male & super: najdaljim | наидалекейшими
+plur & inst & fem  & super: najdaljim | наидалекейшими
+plur & inst & neu  & super: najdaljim | наидалекейшими
 
 ---
 
@@ -4386,237 +4386,6 @@ sing & inst & neu  & super: najmekšim | наимягкейшей
 plur & inst & male & super: najmekšim | наимягкейшими
 plur & inst & fem  & super: najmekšim | наимягкейшими
 plur & inst & neu  & super: najmekšim | наимягкейшими
-
----
-
-mlad
-none
-
-inf: mlad | молодой
-
-sing & nom & male & indef: mlad | молод
-sing & nom & fem  & indef: mlada | молода
-sing & nom & neu  & indef: mlado | молодо
-plur & nom & male & indef: mladi | молоды
-plur & nom & fem  & indef: mlade | молоды
-plur & nom & neu  & indef: mlada | молоды
-
-sing & gen & male & indef: mlada | молодого
-sing & gen & fem  & indef: mlade | молодой
-sing & gen & neu  & indef: mlada | молодого
-plur & gen & male & indef: mladih | молодых
-plur & gen & fem  & indef: mladih | молодых
-plur & gen & neu  & indef: mladih | молодых
-
-sing & dat & male & indef: mladu | молодому
-sing & dat & fem  & indef: mladoj | молодой
-sing & dat & neu  & indef: mladu | молодому
-plur & dat & male & indef: mladim | молодым
-plur & dat & fem  & indef: mladim | молодым
-plur & dat & neu  & indef: mladim | молодым
-
-sing & aku & male & indef & anim: mlada | молодого
-sing & aku & fem  & indef & anim: mladu | молодую
-sing & aku & neu  & indef & anim: mlado | молодое
-plur & aku & male & indef & anim: mlade | молодых
-plur & aku & fem  & indef & anim: mlade | молодых
-plur & aku & neu  & indef & anim: mlada | молодых
-
-sing & aku & male & indef & inanim: mlad | молодой
-sing & aku & fem  & indef & inanim: mladu | молодую
-sing & aku & neu  & indef & inanim: mlado | молодое
-plur & aku & male & indef & inanim: mlade | молодым
-plur & aku & fem  & indef & inanim: mlade | молодым
-plur & aku & neu  & indef & inanim: mlada | молодым
-
-sing & vok & male & indef: mlad | молод
-sing & vok & fem  & indef: mlada | молода
-sing & vok & neu  & indef: mlado | молодо
-plur & vok & male & indef: mladi | молоды
-plur & vok & fem  & indef: mlade | молоды
-plur & vok & neu  & indef: mlada | молоды
-
-sing & lok & male & indef: mladu | молодом
-sing & lok & fem  & indef: mladoj | молодой
-sing & lok & neu  & indef: mladu | молодом
-plur & lok & male & indef: mladim | молодых
-plur & lok & fem  & indef: mladim | молодых
-plur & lok & neu  & indef: mladim | молодых
-
-sing & inst & male & indef: mladim | молодым
-sing & inst & fem  & indef: mladom | молодой
-sing & inst & neu  & indef: mladim | молодым
-plur & inst & male & indef: mladim | молодыми
-plur & inst & fem  & indef: mladim | молодыми
-plur & inst & neu  & indef: mladim | молодыми
-
-sing & nom & male & defined: mladi | молодой
-sing & nom & fem  & defined: mlada | молодая
-sing & nom & neu  & defined: mlado | молодое
-plur & nom & male & defined: mladi | молодые
-plur & nom & fem  & defined: mlade | молодые
-plur & nom & neu  & defined: mlada | молодые
-
-sing & gen & male & defined: mladog | молодого
-sing & gen & fem  & defined: mlade | молодой
-sing & gen & neu  & defined: mladog | молодого
-plur & gen & male & defined: mladih | молодых
-plur & gen & fem  & defined: mladih | молодых
-plur & gen & neu  & defined: mladih | молодых
-
-sing & dat & male & defined: mladom | молодому
-sing & dat & fem  & defined: mladoj | молодой
-sing & dat & neu  & defined: mladom | молодому
-plur & dat & male & defined: mladim | молодым
-plur & dat & fem  & defined: mladim | молодым
-plur & dat & neu  & defined: mladim | молодым
-
-sing & aku & male & defined & anim: mladog | молодого
-sing & aku & fem  & defined & anim: mladu | молодую
-sing & aku & neu  & defined & anim: mlado | молодое
-plur & aku & male & defined & anim: mlade | молодых
-plur & aku & fem  & defined & anim: mlade | молодых
-plur & aku & neu  & defined & anim: mlada | молодых
-
-sing & aku & male & defined & inanim: mladi | молодой
-sing & aku & fem  & defined & inanim: mladu | молодую
-sing & aku & neu  & defined & inanim: mlado | молодое
-plur & aku & male & defined & inanim: mlade | молодым
-plur & aku & fem  & defined & inanim: mlade | молодым
-plur & aku & neu  & defined & inanim: mlada | молодым
-
-sing & vok & male & defined: mladi | молодой
-sing & vok & fem  & defined: mlada | молодая
-sing & vok & neu  & defined: mlado | молодое
-plur & vok & male & defined: mladi | молодые
-plur & vok & fem  & defined: mlade | молодые
-plur & vok & neu  & defined: mlada | молодые
-
-sing & lok & male & defined: mladom | молодом
-sing & lok & fem  & defined: mladoj | молодой
-sing & lok & neu  & defined: mladom | молодом
-plur & lok & male & defined: mladim | молодых
-plur & lok & fem  & defined: mladim | молодых
-plur & lok & neu  & defined: mladim | молодых
-
-sing & inst & male & defined: mladim | молодым
-sing & inst & fem  & defined: mladom | молодой
-sing & inst & neu  & defined: mladim | молодым
-plur & inst & male & defined: mladim | молодыми
-plur & inst & fem  & defined: mladim | молодыми
-plur & inst & neu  & defined: mladim | молодыми
-
-sing & nom & male & comp: mlađi | моложе
-sing & nom & fem  & comp: mlađa | моложе
-sing & nom & neu  & comp: mlađe | моложе
-plur & nom & male & comp: mlađi | моложе
-plur & nom & fem  & comp: mlađe | моложе
-plur & nom & neu  & comp: mlađa | моложе
-
-sing & gen & male & comp: mlađeg | моложе
-sing & gen & fem  & comp: mlađe | моложе
-sing & gen & neu  & comp: mlađeg | моложе
-plur & gen & male & comp: mlađih | моложе
-plur & gen & fem  & comp: mlađih | моложе
-plur & gen & neu  & comp: mlađih | моложе
-
-sing & dat & male & comp: mlađem | моложе
-sing & dat & fem  & comp: mlađoj | моложе
-sing & dat & neu  & comp: mlađem | моложе
-plur & dat & male & comp: mlađim | моложе
-plur & dat & fem  & comp: mlađim | моложе
-plur & dat & neu  & comp: mlađim | моложе
-
-sing & aku & male & comp & anim: mlađeg | моложе
-sing & aku & fem  & comp & anim: mlađu | моложе
-sing & aku & neu  & comp & anim: mlađe | моложе
-plur & aku & male & comp & anim: mlađe | моложе
-plur & aku & fem  & comp & anim: mlađe | моложе
-plur & aku & neu  & comp & anim: mlađa | моложе
-
-sing & aku & male & comp & inanim: mlađi | моложе
-sing & aku & fem  & comp & inanim: mlađu | моложе
-sing & aku & neu  & comp & inanim: mlađe | моложе
-plur & aku & male & comp & inanim: mlađe | моложе
-plur & aku & fem  & comp & inanim: mlađe | моложе
-plur & aku & neu  & comp & inanim: mlađa | моложе
-
-sing & vok & male & comp: mlađi | моложе
-sing & vok & fem  & comp: mlađa | моложе
-sing & vok & neu  & comp: mlađe | моложе
-plur & vok & male & comp: mlađi | моложе
-plur & vok & fem  & comp: mlađe | моложе
-plur & vok & neu  & comp: mlađa | моложе
-
-sing & lok & male & comp: mlađem | моложе
-sing & lok & fem  & comp: mlađoj | моложе
-sing & lok & neu  & comp: mlađem | моложе
-plur & lok & male & comp: mlađim | моложе
-plur & lok & fem  & comp: mlađim | моложе
-plur & lok & neu  & comp: mlađim | моложе
-
-sing & inst & male & comp: mlađim | моложе
-sing & inst & fem  & comp: mlađom | моложе
-sing & inst & neu  & comp: mlađim | моложе
-plur & inst & male & comp: mlađim | моложе
-plur & inst & fem  & comp: mlađim | моложе
-plur & inst & neu  & comp: mlađim | моложе
-
-sing & nom & male & super: najmlađi | наимолодейший
-sing & nom & fem  & super: najmlađa | наимолодейшее
-sing & nom & neu  & super: najmlađe | наимолодейшая
-plur & nom & male & super: najmlađi | наимолодейшие
-plur & nom & fem  & super: najmlađe | наимолодейшие
-plur & nom & neu  & super: najmlađa | наимолодейшие
-
-sing & gen & male & super: najmlađeg | наимолодейшего
-sing & gen & fem  & super: najmlađe | наимолодейшего
-sing & gen & neu  & super: najmlađeg | наимолодейшей
-plur & gen & male & super: najmlađih | наимолодейших
-plur & gen & fem  & super: najmlađih | наимолодейших
-plur & gen & neu  & super: najmlađih | наимолодейших
-
-sing & dat & male & super: najmlađem | наимолодейшему
-sing & dat & fem  & super: najmlađoj | наимолодейшему
-sing & dat & neu  & super: najmlađem | наимолодейшей
-plur & dat & male & super: najmlađim | наимолодейшим
-plur & dat & fem  & super: najmlađim | наимолодейшим
-plur & dat & neu  & super: najmlađim | наимолодейшим
-
-sing & aku & male & super & anim: najmlađeg | наимолодейшего
-sing & aku & fem  & super & anim: najmlađu | наимолодейшего
-sing & aku & neu  & super & anim: najmlađe | наимолодейшую
-plur & aku & male & super & anim: najmlađe | наимолодейших
-plur & aku & fem  & super & anim: najmlađe | наимолодейших
-plur & aku & neu  & super & anim: najmlađa | наимолодейших
-
-sing & aku & male & super & inanim: najmlađi | наимолодейший
-sing & aku & fem  & super & inanim: najmlađu | наимолодейшего
-sing & aku & neu  & super & inanim: najmlađe | наимолодейшая
-plur & aku & male & super & inanim: najmlađe | наимолодейших
-plur & aku & fem  & super & inanim: najmlađe | наимолодейших
-plur & aku & neu  & super & inanim: najmlađa | наимолодейших
-
-sing & vok & male & super: najmlađi | наимолодейший
-sing & vok & fem  & super: najmlađa | наимолодейшее
-sing & vok & neu  & super: najmlađe | наимолодейшая
-plur & vok & male & super: najmlađi | наимолодейшие
-plur & vok & fem  & super: najmlađe | наимолодейшие
-plur & vok & neu  & super: najmlađa | наимолодейшие
-
-sing & lok & male & super: najmlađem | наимолодейшем
-sing & lok & fem  & super: najmlađoj | наимолодейшем
-sing & lok & neu  & super: najmlađem | наимолодейшей
-plur & lok & male & super: najmlađim | наимолодейших
-plur & lok & fem  & super: najmlađim | наимолодейших
-plur & lok & neu  & super: najmlađim | наимолодейших
-
-sing & inst & male & super: najmlađim | наимолодейшим
-sing & inst & fem  & super: najmlađom | наимолодейшим
-sing & inst & neu  & super: najmlađim | наимолодейшей
-plur & inst & male & super: najmlađim | наимолодейшими
-plur & inst & fem  & super: najmlađim | наимолодейшими
-plur & inst & neu  & super: najmlađim | наимолодейшими
 
 ---
 
