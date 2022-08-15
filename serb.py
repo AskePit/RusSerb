@@ -2,45 +2,64 @@ from code.load import *
 from code.excercise_types import *
 from code.cutom_excercises import *
 
+class Screen:
+    buffer: list[str]
+    stashedBuffer: list[str]
+
+    def clear(self):
+        self.buffer = []
+        return self
+
+    def clrScr(self):
+        os.system('cls')
+        os.system('clear')
+        return self
+    
+    def print(self):
+        print(''.join(self.buffer))
+        return self
+
+    def createHeader(self, excOrDir: ExcerciseDesc|ExcerciseDescsDir, title: str) -> list[str]:
+        self.clear()
+        self.buffer.append(f'\n  {str(excOrDir)}\n\n')
+        self.buffer.append(f'\n{PAD}.........................\n\n')
+        self.buffer.append(f'{PAD}{title}:\n\n')
+        return self
+    
+    def append(self, txt: str):
+        self.buffer.append(txt)
+        return self
+
+    def stashBuffer(self):
+        self.stashedBuffer = self.buffer
+        self.buffer = []
+        return self
+    
+    def popBuffer(self):
+        self.buffer = self.stashedBuffer
+        return self
+
 def TryExit(anykey):
     term = anykey == 'x' or anykey == 'X' or anykey == 'ч' or anykey == 'Ч'
     if term:
         quit()
     return anykey == 'q' or anykey == 'Q' or anykey == 'й' or anykey == 'Й'
 
-def TryHelp(anykey, manName, screen: list[str]):
+def TryHelp(anykey, manName, screen: Screen):
     help = anykey == 'h' or anykey == 'H' or anykey == 'р' or anykey == 'Р'
     if help:
-        def yieldText(text: str):
-            ClrScr()
-            print(text)
-            input()
-            ClrScr()
-            print(''.join(screen))
+        text = '\n    NO HELP' if manName == None or manName == '' else GetMan(manName)
 
-        if manName == None or manName == '':
-            yieldText('\n    NO HELP')
-        else:
-            yieldText(GetMan(manName))
+        screen.clrScr().stashBuffer().append(text).print()
+        input()
+        screen.clrScr().popBuffer().print()
         return True
     else:
         return False
 
-def ClrScr():
-    os.system('cls')
-    os.system('clear')
-
 PAD = '  '
 
-def BuildScreenTop(excOrDir: ExcerciseDesc|ExcerciseDescsDir, title: str) -> list[str]:
-    screen: list[str] = []
-    screen.append(f'\n  {str(excOrDir)}\n\n')
-    screen.append(f'\n{PAD}.........................\n\n')
-    screen.append(f'{PAD}{title}:\n\n')
-
-    return screen
-
-def ExecuteExcercise(exc: ExcerciseDesc):
+def ExecuteExcercise(exc: ExcerciseDesc, screen: Screen):
     excObjects = []
 
     if exc.type == ExcerciseType.phrases:
@@ -54,9 +73,7 @@ def ExecuteExcercise(exc: ExcerciseDesc):
         excercise = random.choice(excObjects)
         exYield: ExcerciseYield = excercise()
 
-        ClrScr()
-
-        screen = BuildScreenTop(exc, exYield.title)
+        screen.clear().clrScr().createHeader(exc, exYield.title)
 
         if type(exYield.question) is list:
             screen.append('\n\n')
@@ -65,7 +82,7 @@ def ExecuteExcercise(exc: ExcerciseDesc):
         else:
             screen.append(f'{PAD}{exYield.question}\n')
 
-        print(''.join(screen))
+        screen.print()
 
         ans = input()
         while TryHelp(ans, exc.help, screen):
@@ -75,15 +92,14 @@ def ExecuteExcercise(exc: ExcerciseDesc):
             break
         else:
             if type(exYield.answer) is list:
-                screen += '\n\n'
+                screen.append('\n\n')
                 for a in exYield.answer:
                     screen.append(f'{PAD}{a}\n')
             else:
                 screen.append(f'{PAD}{exYield.answer}\n')
             screen.append(f'\n{PAD}.........................\n\n')
 
-            ClrScr()
-            print(''.join(screen))
+            screen.clrScr().print()
 
             ans = input()
             while TryHelp(ans, exc.help, screen):
@@ -91,7 +107,7 @@ def ExecuteExcercise(exc: ExcerciseDesc):
             if TryExit(ans):
                 break
 
-def ExecuteQuiz(excs: list[ExcerciseDesc]):
+def ExecuteQuiz(excs: list[ExcerciseDesc], screen: Screen):
     while True:
         exc = random.choice(excs)
 
@@ -107,9 +123,7 @@ def ExecuteQuiz(excs: list[ExcerciseDesc]):
         excercise = random.choice(excObjects)
         exYield: ExcerciseYield = excercise()
 
-        ClrScr()
-
-        screen = BuildScreenTop(exc, exYield.title)
+        screen.clear().clrScr().createHeader(exc, exYield.title)
 
         if type(exYield.question) is list:
             screen.append('\n\n')
@@ -118,7 +132,7 @@ def ExecuteQuiz(excs: list[ExcerciseDesc]):
         else:
             screen.append(f'{PAD}{exYield.question}\n')
 
-        print(''.join(screen))
+        screen.print()
 
         ans = input()
         while TryHelp(ans, exc.help, screen):
@@ -128,15 +142,14 @@ def ExecuteQuiz(excs: list[ExcerciseDesc]):
             break
         else:
             if type(exYield.answer) is list:
-                screen += '\n\n'
+                screen.append('\n\n')
                 for a in exYield.answer:
                     screen.append(f'{PAD}{a}\n')
             else:
                 screen.append(f'{PAD}{exYield.answer}\n')
             screen.append(f'\n{PAD}.........................\n\n')
 
-            ClrScr()
-            print(''.join(screen))
+            screen.clrScr().print()
 
             ans = input()
             while TryHelp(ans, exc.help, screen):
@@ -151,10 +164,10 @@ def main():
 
     currentDir = excercises
 
-    while True:
-        ClrScr()
+    screen = Screen()
 
-        screen = BuildScreenTop(currentDir, 'Выберите упражнение')
+    while True:
+        screen.clear().clrScr().createHeader(currentDir, 'Выберите упражнение')
 
         files = []
 
@@ -180,8 +193,7 @@ def main():
         screen.append(f'{PAD}0. Quiz\n')
         screen.append(f'\n{PAD}q. Назад')
         screen.append(f'\n{PAD}x. Выход\n')
-
-        print(''.join(screen))
+        screen.print()
 
         ans = input()
 
@@ -191,13 +203,13 @@ def main():
             else:
                 currentDir = currentDir.parent
         elif ans == '0':
-            ExecuteQuiz(currentDir.getExcercisesRecursive())
+            ExecuteQuiz(currentDir.getExcercisesRecursive(), screen)
         elif ans in numToEx:
             exc = numToEx[ans]
             if isinstance(exc, ExcerciseDescsDir):
                 currentDir = exc
             elif isinstance(exc, ExcerciseDesc):
-                ExecuteExcercise(exc)
+                ExecuteExcercise(exc, screen)
             else:
                 continue
 
