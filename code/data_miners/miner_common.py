@@ -234,14 +234,15 @@ class Writer:
     def write(self, s: str):
         self.file.write(s)
 
-    def writeLine(self, template, rusForm, serbForm):
+    def writeLine(self, template, rusForm, serbForm, postGarbage = True):
         if rusForm == None:
             rusForm = ''
         if serbForm == None:
             serbForm = ''
         
-        rusForm = PostGarbageFilter(rusForm)
-        serbForm = PostGarbageFilter(serbForm)
+        if postGarbage:
+            rusForm = PostGarbageFilter(rusForm)
+            serbForm = PostGarbageFilter(serbForm)
 
         self.file.write(f'{template}: {serbForm} | {rusForm}\n')
 
@@ -249,17 +250,21 @@ class Writer:
         self.file.write('\n')
 
     def writeDecl(self, decl: str, rusCell: Cell|str, serbCell: Cell|str):
+        postGarbage = True
+
         if type(rusCell) is Cell:
             ru = self.rus.get(rusCell) if self.rus != None else ''
         else:
             ru = rusCell
+            postGarbage = False
 
         if type(serbCell) is Cell:
             se = self.serb.get(serbCell) if self.serb != None else ''
         else:
             se = serbCell
+            postGarbage = False
 
-        self.writeLine(decl, ru, se)
+        self.writeLine(decl, ru, se, postGarbage)
     
     def dumpText(self, text: list[str]):
         for l in text:

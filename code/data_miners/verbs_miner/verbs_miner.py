@@ -4,6 +4,40 @@ from code.data_miners.miner_common import *
 
 class VerbDownloader(TableDownloader):
     def loadCustom(self) -> DownloadStatus:
+        aspect = 'impf'
+        selfness = 'no_se'
+
+        if 'en.' in self.urlBase: # serb page
+            aspectSpans = self.soup.find_all('span', {'class': 'gender'})
+            for aspectSpan in aspectSpans:
+                if aspectSpan != None:
+                    abbr = aspectSpan.find_all('abbr')[0]
+                    if abbr != None:
+                        txt = abbr.get_text()
+                        if txt == 'impf' or txt == 'pf':
+                            aspect = txt
+                    break
+            text = self.soup.find_all('div', {'class': 'mw-parser-output'})[0]
+            if text != None:
+                listElems = text.find_all('li')
+                for li in listElems:
+                    if 'reflexive' in li.get_text():
+                        selfness = 'opt_se'
+                        break
+        else: # ru page
+            ruText = self.soup.find_all('div', {'class': 'mw-parser-output'})[0]
+            if ruText != None:
+                ps = ruText.find_all('p')
+                for p in ps:
+                    if 'несовершенный вид' in p.get_text():
+                        aspect = 'impf'
+                        break
+                    elif 'совершенный вид' in p.get_text():
+                        aspect = 'pf'
+                        break
+        
+        self.table.aspect = aspect
+        self.table.selfness = selfness
         return DownloadStatus.Ok
 
 def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
@@ -32,15 +66,9 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
     Active        = ['Glagolski pridjev radni',    'Active past participle' ][serbPage]
     Passive       = ['Glagolski pridjev trpni',    'Passive past participle'][serbPage]
     FutureI       = ['Futur I',                    'Future I'               ][serbPage]
-    FutureII      = ['Futur II',                   'Future II'              ][serbPage]
     Imperfect     = ['Imperfekt',                  'Imperfect'              ][serbPage]
     Aorist        = ['Aorist',                     'Aorist'                 ][serbPage]
-    CondI         = ['Kondicional I',              'Conditional I'          ][serbPage]
-    CondII        = ['Kondicional II',             'Conditional II'         ][serbPage]
     Imperative    = ['Imperativ',                  'Imperative'             ][serbPage]
-    PresentAdverb = ['Glagolski prilog sadašnji:', 'Present verbal adverb:' ][serbPage]
-    PastAdverb    = ['Glagolski prilog prošli:',   'Past verbal adverb:'    ][serbPage]
-    VerbalNoun    = ['Glagolska imenica:',         'Verbal noun:'           ][serbPage]
 
     SING1 = 0
     SING2 = 1
@@ -60,15 +88,22 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
     o.setTables(serb, rus)
     o.write(serbVerb)
 
+    declination = ''
+
     thirdPresent = serb.get(Cell(Present, SING3))
     if thirdPresent != None and len(thirdPresent) > 1:
-        conjugation = PostGarbageFilter(serb.get(Cell(Present, SING3)))[-1]
-    else:
-        conjugation = 'none'
+        declination = PostGarbageFilter(serb.get(Cell(Present, SING3)))[-1]
 
-    o.write(f'\n{conjugation}\n\n')
+    if len(declination) > 0:
+        declination += ' & '
+    declination += serb.aspect + ' & ' + serb.selfness
+    
+    if len(declination) == 0:
+        declination = 'none'
 
-    o.writeLine('inf', rusVerb, serbVerb)
+    o.write(f'\n{declination}\n\n')
+
+    o.writeLine('inf', copy.copy(rusVerb), copy.copy(serbVerb))
     o.endl()
     
     o.writeDecl('present & sing & first',  Cell('Я', PRESENT), Cell(Present, SING1))
@@ -113,81 +148,53 @@ def downloadVerb(verbPair: tuple[str, str], o: Writer) -> DownloadStatus:
         #print([futur_1, futur_2])
         return [futur_1, futur_2][i]
 
-    o.writeDecl('futur & sing & first',  None, Cell(FutureI, SING1, SplitFutur1, 1))
-    o.writeDecl('futur & sing & second', None, Cell(FutureI, SING2, SplitFutur1, 1))
-    o.writeDecl('futur & sing & third',  None, Cell(FutureI, SING3, SplitFutur1, 1))
-    o.writeDecl('futur & plur & first',  None, Cell(FutureI, PLUR1, SplitFutur1, 1))
-    o.writeDecl('futur & plur & second', None, Cell(FutureI, PLUR2, SplitFutur1, 1))
-    o.writeDecl('futur & plur & third',  None, Cell(FutureI, PLUR3, SplitFutur1, 1))
+    o.writeDecl('futur & sing & first',  None if rus == None else f'буду {rusVerb}' if rus.aspect == 'impf' else Cell('Я', PRESENT), Cell(FutureI, SING1, SplitFutur1, 1))
+    o.writeDecl('futur & sing & second', None if rus == None else f'будешь {rusVerb}' if rus.aspect == 'impf' else Cell('Ты', PRESENT), Cell(FutureI, SING2, SplitFutur1, 1))
+    o.writeDecl('futur & sing & third',  None if rus == None else f'будет {rusVerb}' if rus.aspect == 'impf' else Cell('Он', PRESENT), Cell(FutureI, SING3, SplitFutur1, 1))
+    o.writeDecl('futur & plur & first',  None if rus == None else f'будем {rusVerb}' if rus.aspect == 'impf' else Cell('Мы', PRESENT), Cell(FutureI, PLUR1, SplitFutur1, 1))
+    o.writeDecl('futur & plur & second', None if rus == None else f'будете {rusVerb}' if rus.aspect == 'impf' else Cell('Вы', PRESENT), Cell(FutureI, PLUR2, SplitFutur1, 1))
+    o.writeDecl('futur & plur & third',  None if rus == None else f'будут {rusVerb}' if rus.aspect == 'impf' else Cell('Они', PRESENT), Cell(FutureI, PLUR3, SplitFutur1, 1))
     o.endl()
 
-    o.writeDecl('imperfect & sing & first',  Cell('Он', PAST, GetSinglePast, MALE), Cell(Imperfect, SING1))
-    o.writeDecl('imperfect & sing & second', Cell('Он', PAST, GetSinglePast, FEMALE), Cell(Imperfect, SING2))
-    o.writeDecl('imperfect & sing & third',  Cell('Он', PAST, GetSinglePast, NEUTRAL), Cell(Imperfect, SING3))
+    o.writeDecl('imperfect & sing & first & male',  Cell('Он', PAST, GetSinglePast, MALE), Cell(Imperfect, SING1))
+    o.writeDecl('imperfect & sing & first & fem',  Cell('Он', PAST, GetSinglePast, FEMALE), Cell(Imperfect, SING1))
+    o.writeDecl('imperfect & sing & first & neu',  Cell('Он', PAST, GetSinglePast, NEUTRAL), Cell(Imperfect, SING1))
+    o.writeDecl('imperfect & sing & second & male',  Cell('Он', PAST, GetSinglePast, MALE), Cell(Imperfect, SING2))
+    o.writeDecl('imperfect & sing & second & fem',  Cell('Он', PAST, GetSinglePast, FEMALE), Cell(Imperfect, SING2))
+    o.writeDecl('imperfect & sing & second & neu',  Cell('Он', PAST, GetSinglePast, NEUTRAL), Cell(Imperfect, SING2))
+    o.writeDecl('imperfect & sing & third & male',  Cell('Он', PAST, GetSinglePast, MALE), Cell(Imperfect, SING3))
+    o.writeDecl('imperfect & sing & third & fem',  Cell('Он', PAST, GetSinglePast, FEMALE), Cell(Imperfect, SING3))
+    o.writeDecl('imperfect & sing & third & neu',  Cell('Он', PAST, GetSinglePast, NEUTRAL), Cell(Imperfect, SING3))
     o.writeDecl('imperfect & plur & first',  Cell('Они', PAST), Cell(Imperfect, PLUR1))
     o.writeDecl('imperfect & plur & second', Cell('Они', PAST), Cell(Imperfect, PLUR2))
     o.writeDecl('imperfect & plur & third',  Cell('Они', PAST), Cell(Imperfect, PLUR3))
     o.endl()
 
-    o.writeLine('# participle & present', None, serb.parseColumnedCell(PresentAdverb))
-    o.writeLine('# participle & past', None, serb.parseColumnedCell(PastAdverb))
-    o.writeLine('# noun', None, serb.parseColumnedCell(VerbalNoun))
+    o.writeDecl('aorist & sing & first & male',  Cell('Он', PAST, GetSinglePast, MALE), Cell(Aorist, SING1))
+    o.writeDecl('aorist & sing & first & fem',  Cell('Он', PAST, GetSinglePast, FEMALE), Cell(Aorist, SING1))
+    o.writeDecl('aorist & sing & first & neu',  Cell('Он', PAST, GetSinglePast, NEUTRAL), Cell(Aorist, SING1))
+    o.writeDecl('aorist & sing & second & male',  Cell('Он', PAST, GetSinglePast, MALE), Cell(Aorist, SING2))
+    o.writeDecl('aorist & sing & second & fem',  Cell('Он', PAST, GetSinglePast, FEMALE), Cell(Aorist, SING2))
+    o.writeDecl('aorist & sing & second & neu',  Cell('Он', PAST, GetSinglePast, NEUTRAL), Cell(Aorist, SING2))
+    o.writeDecl('aorist & sing & third & male',  Cell('Он', PAST, GetSinglePast, MALE), Cell(Aorist, SING3))
+    o.writeDecl('aorist & sing & third & fem',  Cell('Он', PAST, GetSinglePast, FEMALE), Cell(Aorist, SING3))
+    o.writeDecl('aorist & sing & third & neu',  Cell('Он', PAST, GetSinglePast, NEUTRAL), Cell(Aorist, SING3))
+    o.writeDecl('aorist & plur & first',  Cell('Они', PAST), Cell(Aorist, PLUR1))
+    o.writeDecl('aorist & plur & second', Cell('Они', PAST), Cell(Aorist, PLUR2))
+    o.writeDecl('aorist & plur & third',  Cell('Они', PAST), Cell(Aorist, PLUR3))
     o.endl()
 
-    o.writeDecl('# futur & sing & first',  None, Cell(FutureI, SING1, SplitFutur1, 0))
-    o.writeDecl('# futur & sing & second', None, Cell(FutureI, SING2, SplitFutur1, 0))
-    o.writeDecl('# futur & sing & third',  None, Cell(FutureI, SING3, SplitFutur1, 0))
-    o.writeDecl('# futur & plur & first',  None, Cell(FutureI, PLUR1, SplitFutur1, 0))
-    o.writeDecl('# futur & plur & second', None, Cell(FutureI, PLUR2, SplitFutur1, 0))
-    o.writeDecl('# futur & plur & third',  None, Cell(FutureI, PLUR3, SplitFutur1, 0))
+    o.writeDecl('imperativ & sing & second', Cell('Ты', POVEL), Cell(Imperative, SING2))
+    o.writeDecl('imperativ & plur & first',  None, Cell(Imperative, PLUR1))
+    o.writeDecl('imperativ & plur & second', Cell('Вы', POVEL), Cell(Imperative, PLUR2))
     o.endl()
 
-    o.writeDecl('# futur2 & sing & first',  None, Cell(FutureII, SING1))
-    o.writeDecl('# futur2 & sing & second', None, Cell(FutureII, SING2))
-    o.writeDecl('# futur2 & sing & third',  None, Cell(FutureII, SING3))
-    o.writeDecl('# futur2 & plur & first',  None, Cell(FutureII, PLUR1))
-    o.writeDecl('# futur2 & plur & second', None, Cell(FutureII, PLUR2))
-    o.writeDecl('# futur2 & plur & third',  None, Cell(FutureII, PLUR3))
-    o.endl()
-
-    o.writeDecl('# aorist & sing & first',  None, Cell(Aorist, SING1))
-    o.writeDecl('# aorist & sing & second', None, Cell(Aorist, SING2))
-    o.writeDecl('# aorist & sing & third',  None, Cell(Aorist, SING3))
-    o.writeDecl('# aorist & plur & first',  None, Cell(Aorist, PLUR1))
-    o.writeDecl('# aorist & plur & second', None, Cell(Aorist, PLUR2))
-    o.writeDecl('# aorist & plur & third',  None, Cell(Aorist, PLUR3))
-    o.endl()
-
-    o.writeDecl('# cond1 & sing & first',  None, Cell(CondI, SING1))
-    o.writeDecl('# cond1 & sing & second', None, Cell(CondI, SING2))
-    o.writeDecl('# cond1 & sing & third',  None, Cell(CondI, SING3))
-    o.writeDecl('# cond1 & plur & first',  None, Cell(CondI, PLUR1))
-    o.writeDecl('# cond1 & plur & second', None, Cell(CondI, PLUR2))
-    o.writeDecl('# cond1 & plur & third',  None, Cell(CondI, PLUR3))
-    o.endl()
-
-    o.writeDecl('# cond2 & sing & first',  None, Cell(CondII, SING1))
-    o.writeDecl('# cond2 & sing & second', None, Cell(CondII, SING2))
-    o.writeDecl('# cond2 & sing & third',  None, Cell(CondII, SING3))
-    o.writeDecl('# cond2 & plur & first',  None, Cell(CondII, PLUR1))
-    o.writeDecl('# cond2 & plur & second', None, Cell(CondII, PLUR2))
-    o.writeDecl('# cond2 & plur & third',  None, Cell(CondII, PLUR3))
-    o.endl()
-
-    o.writeDecl('# imperativ & sing & first',  Cell('Я', POVEL), Cell(Imperative, SING1))
-    o.writeDecl('# imperativ & sing & second', Cell('Ты', POVEL), Cell(Imperative, SING2))
-    o.writeDecl('# imperativ & sing & third',  Cell('Он', POVEL), Cell(Imperative, SING3))
-    o.writeDecl('# imperativ & plur & first',  Cell('Мы', POVEL), Cell(Imperative, PLUR1))
-    o.writeDecl('# imperativ & plur & second', Cell('Вы', POVEL), Cell(Imperative, PLUR2))
-    o.writeDecl('# imperativ & plur & third',  Cell('Они', POVEL), Cell(Imperative, PLUR3))
-    o.endl()
-
-    o.writeDecl('# passive & sing & male', None, Cell(Passive, 0, SplitParticiple, MALE))
-    o.writeDecl('# passive & sing & fem',  None, Cell(Passive, 0, SplitParticiple, FEMALE))
-    o.writeDecl('# passive & sing & neu',  None, Cell(Passive, 0, SplitParticiple, NEUTRAL))
-    o.writeDecl('# passive & plur & male', None, Cell(Passive, 1, SplitParticiple, MALE))
-    o.writeDecl('# passive & plur & fem',  None, Cell(Passive, 1, SplitParticiple, FEMALE))
-    o.writeDecl('# passive & plur & neu',  None, Cell(Passive, 1, SplitParticiple, NEUTRAL))
+    o.writeDecl('passive & sing & male', None, Cell(Passive, 0, SplitParticiple, MALE))
+    o.writeDecl('passive & sing & fem',  None, Cell(Passive, 0, SplitParticiple, FEMALE))
+    o.writeDecl('passive & sing & neu',  None, Cell(Passive, 0, SplitParticiple, NEUTRAL))
+    o.writeDecl('passive & plur & male', None, Cell(Passive, 1, SplitParticiple, MALE))
+    o.writeDecl('passive & plur & fem',  None, Cell(Passive, 1, SplitParticiple, FEMALE))
+    o.writeDecl('passive & plur & neu',  None, Cell(Passive, 1, SplitParticiple, NEUTRAL))
     o.finishWord()
 
     return DownloadStatus.Ok

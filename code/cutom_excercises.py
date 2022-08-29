@@ -528,7 +528,7 @@ class FuturPositiveEx(Excercise):
 
         negative = random.randint(0, 1)
 
-        decl = Declination.Parse('present & male|fem|neu & first|second|third & sing|plur & nom')
+        decl = Declination.Parse('futur & male|fem|neu & first|second|third & sing|plur & nom')
 
         decl.humanizeNeutral()
         pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
@@ -549,24 +549,25 @@ class FuturPositiveEx(Excercise):
             elif decl.gender == Gender.neu:
                 clarification = '(ср.)'
 
-        question = f'{pronoun.rus}{clarification} {cu.rus} {verbWord.get(Infinitive).getRusReflexive(selfness)}'
+        rusNe = [' ', ' не '][negative]
+        question = f'{pronoun.rus}{clarification}{rusNe}{verbWord.get(decl).getRusReflexive(selfness)}'
 
         answer = []
 
         if not negative:
-            verb = verbWord.get(decl.clone().override(Time.futur))
+            verb = verbWord.get(decl)
             answer.append(f'{verb.serb} {verb.getSerbReflexive(selfness)}')
 
             verb = verbWord.get(Infinitive)
             answer.append(f'{pronoun.serb} {cu.serb} {verb.getSerbReflexive(selfness)} {verb.serb}')
             
-            verb = verbWord.get(decl)
+            verb = verbWord.get(decl.clone().override(Time.present))
             answer.append(f'{pronoun.serb} {cu.serb} {verb.getSerbReflexive(selfness)} da {verb.serb}')
         else:
             verb = verbWord.get(Infinitive)
             answer.append(f'({pronoun.serb}) {cu.serb} {verb.getSerbReflexive(selfness)} {verb.serb}')
 
-            verb = verbWord.get(decl)
+            verb = verbWord.get(decl.clone().override(Time.present))
             answer.append(f'({pronoun.serb}) {cu.serb} {verb.getSerbReflexive(selfness)} da {verb.serb}')
 
         return ExcerciseYield(title, question, answer)
@@ -589,20 +590,22 @@ class FuturQuestionsEx(Excercise):
         # answer:   Da li ćeš doći?
         #           Hoćeš li doći?
 
-        decl = Declination.Parse('present & male|fem|neu & first|second|third & sing|plur & nom')
+        decl = Declination.Parse('futur & male|fem|neu & first|second|third & sing|plur & nom')
 
         decl.humanizeNeutral()
         pronoun = GetVocabulary('personal_pronouns').getWordForm(decl)
 
         cu = GetVocabulary('cu').get(decl)
-        verb = self.randomVerbsPool.yieldElem().get(Infinitive)
+        verbWord = self.randomVerbsPool.yieldElem()
+        
         selfness = random.randint(0, 1)
 
         title = 'Переведите на сербский'
 
-        question = f'{pronoun.rus} {cu.rus} {verb.getRusReflexive(selfness)}?'
+        question = f'{pronoun.rus} {verbWord.get(decl).getRusReflexive(selfness)}?'
         answer = []
 
+        verb = verbWord.get(Infinitive)
         answer.append(f'Da li {cu.serb} {verb.getSerbReflexive(selfness)} {verb.serb}?')
 
         cu = GetVocabulary('hocu').get(decl)

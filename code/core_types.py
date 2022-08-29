@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from enum import Enum
 import copy
+import imp
 import random
 
 class Language(Enum):
@@ -74,15 +75,8 @@ class Time(Enum):
     imperfect = 2
     aorist    = 3
     futur     = 4
-
-    def isPresent(self):
-        return self == Time.present
-    
-    def isPast(self):
-        return self == Time.perfect or self == Time.imperfectmperf or self == Time.aorist
-
-    def isFuture(self):
-        return self.value == Time.futur
+    imperativ = 5
+    passive   = 6
 
 class Distance(Enum):
     close = 0 # этот
@@ -109,11 +103,9 @@ class Animality(Enum):
     anim = 0
     inanim = 1
 
-def RandomEnum(iterable):
-    return random.choice(list(iterable))
-
-def RandomPercent(percent: int) -> bool:
-    return random.randint(0, 100) <= percent
+class VerbAspect(Enum):
+    impf = 0 # несовешенный вид
+    pf = 1   # совершенный вид
 
 DeclinationAttributesMap = {
     'person': Person,
@@ -128,6 +120,7 @@ DeclinationAttributesMap = {
     'reflexiveness': Reflexiveness,
     'definition': Definition,
     'animality': Animality,
+    'verbAspect': VerbAspect,
 }
 
 class Declination:
@@ -382,9 +375,13 @@ class Declination:
 
 Infinitive = Declination.Parse('inf')
 
-def GetRusReflexive(rusWord: str, decl: Declination):
+def GetRusReflexive(rusWord: str, decl: Declination, meta: 'Word'):
     if rusWord.endswith('сь') or rusWord.endswith('ся'):
         return rusWord
+
+    if hasattr(decl, 'time') and hasattr(meta.metaDeclination, 'verbAspect'):
+        if decl.time == Time.futur and meta.metaDeclination == VerbAspect.impf:
+            return rusWord + 'ся'
     
     if hasattr(decl, 'number') and hasattr(decl, 'person'):
         firstSing  = decl.person == Person.first  and decl.number == Number.sing
@@ -418,7 +415,7 @@ class WordForm:
 
         if self.getSerbReflexive(reflection) == '':
             return self.rus
-        return GetRusReflexive(self.rus, self.declination)
+        return GetRusReflexive(self.rus, self.declination, self.meta)
     
     def getSerbReflexive(self, reflection: bool):
         return GetSerbReflexive(self.meta.metaDeclination) if reflection else ''
@@ -608,3 +605,9 @@ def GetVocabulary(name: str):
 
 def GetMan(name: str):
     return mans[name]
+
+def RandomEnum(iterable):
+    return random.choice(list(iterable))
+
+def RandomPercent(percent: int) -> bool:
+    return random.randint(0, 100) <= percent
