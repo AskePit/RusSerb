@@ -380,7 +380,7 @@ def GetRusReflexive(rusWord: str, decl: Declination, meta: 'Word'):
         return rusWord
 
     if hasattr(decl, 'time') and hasattr(meta.metaDeclination, 'verbAspect'):
-        if decl.time == Time.futur and meta.metaDeclination == VerbAspect.impf:
+        if decl.time == Time.futur and meta.metaDeclination.verbAspect == VerbAspect.impf:
             return rusWord + 'ся'
     
     if hasattr(decl, 'number') and hasattr(decl, 'person'):

@@ -70,19 +70,25 @@ a & impf & no_se
 
 inf: morati | должен
 
-present & sing & first: moram | 
-present & sing & second: moraš | 
-present & sing & third: mora | 
-present & plur & first: moramo | 
-present & plur & second: morate | 
-present & plur & third: moraju | 
+present & sing & first & male: moram | должен
+present & sing & first & fem: moram | должна
+present & sing & first & neu: moram | должно
+present & sing & second & male: moraš | должен
+present & sing & second & fem: moraš | должна
+present & sing & second & neu: moraš | должно
+present & sing & third & male: mora | должен
+present & sing & third & fem: mora | должна
+present & sing & third & neu: mora | должно
+present & plur & first: moramo | должны
+present & plur & second: morate | должны
+present & plur & third: moraju | должны
 
-perfect & sing & male: morao | 
-perfect & sing & fem: morala | 
-perfect & sing & neu: moralo | 
-perfect & plur & male: morali | 
-perfect & plur & fem: morale | 
-perfect & plur & neu: morala | 
+perfect & sing & male: morao | должен был
+perfect & sing & fem: morala | должна была
+perfect & sing & neu: moralo | должно было
+perfect & plur & male: morali | должны были
+perfect & plur & fem: morale | должны были
+perfect & plur & neu: morala | должны были
 
 futur & sing & first: moraću | буду должен
 futur & sing & second: moraćeš | будешь должен
@@ -91,31 +97,31 @@ futur & plur & first: moraćemo | будем должен
 futur & plur & second: moraćete | будете должен
 futur & plur & third: moraće | будут должен
 
-imperfect & sing & first & male: morah | 
-imperfect & sing & first & fem: morah | 
-imperfect & sing & first & neu: morah | 
-imperfect & sing & second & male: moraše | 
-imperfect & sing & second & fem: moraše | 
-imperfect & sing & second & neu: moraše | 
-imperfect & sing & third & male: moraše | 
-imperfect & sing & third & fem: moraše | 
-imperfect & sing & third & neu: moraše | 
-imperfect & plur & first: morasmo | 
-imperfect & plur & second: moraste | 
-imperfect & plur & third: morahu | 
+imperfect & sing & first & male: morah | должен был
+imperfect & sing & first & fem: morah | должна была
+imperfect & sing & first & neu: morah | должно было
+imperfect & sing & second & male: moraše | должен был
+imperfect & sing & second & fem: moraše | должна была
+imperfect & sing & second & neu: moraše | должно было
+imperfect & sing & third & male: moraše | должен был
+imperfect & sing & third & fem: moraše | должна была
+imperfect & sing & third & neu: moraše | должно было
+imperfect & plur & first: morasmo | должны были
+imperfect & plur & second: moraste | должны были
+imperfect & plur & third: morahu | должны были
 
-aorist & sing & first & male: morah | 
-aorist & sing & first & fem: morah | 
-aorist & sing & first & neu: morah | 
-aorist & sing & second & male: mora | 
-aorist & sing & second & fem: mora | 
-aorist & sing & second & neu: mora | 
-aorist & sing & third & male: mora | 
-aorist & sing & third & fem: mora | 
-aorist & sing & third & neu: mora | 
-aorist & plur & first: morasmo | 
-aorist & plur & second: moraste | 
-aorist & plur & third: moraše | 
+aorist & sing & first & male: morah | должен был
+aorist & sing & first & fem: morah | должна была
+aorist & sing & first & neu: morah | должно было
+aorist & sing & second & male: mora | должен был
+aorist & sing & second & fem: mora | должна была
+aorist & sing & second & neu: mora | должно было
+aorist & sing & third & male: mora | должен был
+aorist & sing & third & fem: mora | должна была
+aorist & sing & third & neu: mora | должно было
+aorist & plur & first: morasmo | должны были
+aorist & plur & second: moraste | должны были
+aorist & plur & third: moraše | должны были
 
 imperativ & sing & second: moraj | 
 imperativ & plur & first: morajmo | 
@@ -196,7 +202,7 @@ passive & plur & neu: moguća |
 ---
 
 mrzeti
-i & impf & opt_se
+i & impf & no_se
 
 inf: mrzeti | ненавидеть
 
@@ -395,52 +401,52 @@ impf & no_se
 
 inf: treba | надо
 
-present & sing & first:  | 
-present & sing & second:  | 
-present & sing & third:  | 
-present & plur & first:  | 
-present & plur & second:  | 
-present & plur & third:  | 
+present & sing & first: treba | надо
+present & sing & second: treba | надо
+present & sing & third: treba | надо
+present & plur & first: treba | надо
+present & plur & second: treba | надо
+present & plur & third: treba | надо
 
-perfect & sing & male:  | 
-perfect & sing & fem:  | 
-perfect & sing & neu:  | 
-perfect & plur & male:  | 
-perfect & plur & fem:  | 
-perfect & plur & neu:  | 
+perfect & sing & male: treba bio | надо было
+perfect & sing & fem: treba bio | надо было
+perfect & sing & neu: treba bio | надо было
+perfect & plur & male: treba bio | надо было
+perfect & plur & fem: treba bio | надо было
+perfect & plur & neu: treba bio | надо было
 
-futur & sing & first:  | 
-futur & sing & second:  | 
-futur & sing & third:  | 
-futur & plur & first:  | 
-futur & plur & second:  | 
-futur & plur & third:  | 
+futur & sing & first: treba | надо будет
+futur & sing & second: treba | надо будет
+futur & sing & third: treba | надо будет
+futur & plur & first: treba | надо будет
+futur & plur & second: treba | надо будет
+futur & plur & third: treba | надо будет
 
-imperfect & sing & first & male:  | 
-imperfect & sing & first & fem:  | 
-imperfect & sing & first & neu:  | 
-imperfect & sing & second & male:  | 
-imperfect & sing & second & fem:  | 
-imperfect & sing & second & neu:  | 
-imperfect & sing & third & male:  | 
-imperfect & sing & third & fem:  | 
-imperfect & sing & third & neu:  | 
-imperfect & plur & first:  | 
-imperfect & plur & second:  | 
-imperfect & plur & third:  | 
+imperfect & sing & first & male:  | надо было
+imperfect & sing & first & fem:  | надо было
+imperfect & sing & first & neu:  | надо было
+imperfect & sing & second & male:  | надо было
+imperfect & sing & second & fem:  | надо было
+imperfect & sing & second & neu:  | надо было
+imperfect & sing & third & male:  | надо было
+imperfect & sing & third & fem:  | надо было
+imperfect & sing & third & neu:  | надо было
+imperfect & plur & first:  | надо было
+imperfect & plur & second:  | надо было
+imperfect & plur & third:  | надо было
 
-aorist & sing & first & male:  | 
-aorist & sing & first & fem:  | 
-aorist & sing & first & neu:  | 
-aorist & sing & second & male:  | 
-aorist & sing & second & fem:  | 
-aorist & sing & second & neu:  | 
-aorist & sing & third & male:  | 
-aorist & sing & third & fem:  | 
-aorist & sing & third & neu:  | 
-aorist & plur & first:  | 
-aorist & plur & second:  | 
-aorist & plur & third:  | 
+aorist & sing & first & male:  | надо было
+aorist & sing & first & fem:  | надо было
+aorist & sing & first & neu:  | надо было
+aorist & sing & second & male:  | надо было
+aorist & sing & second & fem:  | надо было
+aorist & sing & second & neu:  | надо было
+aorist & sing & third & male:  | надо было
+aorist & sing & third & fem:  | надо было
+aorist & sing & third & neu:  | надо было
+aorist & plur & first:  | надо было
+aorist & plur & second:  | надо было
+aorist & plur & third:  | надо было
 
 imperativ & sing & second:  | 
 imperativ & plur & first:  | 
@@ -586,7 +592,7 @@ passive & plur & neu:  |
 ---
 
 voleti
-i & impf & opt_se
+i & impf & no_se
 
 inf: voleti | любить
 

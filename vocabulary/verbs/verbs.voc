@@ -70,52 +70,52 @@ e & impf & no_se
 
 inf: biti | быть
 
-present & sing & first: jesam | 
-present & sing & second: jesi | 
-present & sing & third: jeste | 
-present & plur & first: jesmo | 
-present & plur & second: jeste | 
-present & plur & third: jesu | 
+present & sing & first: jesam | есть
+present & sing & second: jesi | есть
+present & sing & third: jeste | есть
+present & plur & first: jesmo | есть
+present & plur & second: jeste | есть
+present & plur & third: jesu | есть
 
-perfect & sing & male: bio | 
-perfect & sing & fem: bila | 
-perfect & sing & neu: bilo | 
-perfect & plur & male: bili | 
-perfect & plur & fem: bile | 
-perfect & plur & neu: bila | 
+perfect & sing & male: bio | был
+perfect & sing & fem: bila | была
+perfect & sing & neu: bilo | было
+perfect & plur & male: bili | были
+perfect & plur & fem: bile | были
+perfect & plur & neu: bila | были
 
-futur & sing & first: biću | 
-futur & sing & second: bićeš | 
-futur & sing & third: biće | 
-futur & plur & first: bićemo | 
-futur & plur & second: bićete | 
-futur & plur & third: biće | 
+futur & sing & first: biću | буду
+futur & sing & second: bićeš | будешь
+futur & sing & third: biće | будет
+futur & plur & first: bićemo | будем
+futur & plur & second: bićete | будете
+futur & plur & third: biće | будут
 
-imperfect & sing & first & male: bijah | 
-imperfect & sing & first & fem: bijah | 
-imperfect & sing & first & neu: bijah | 
-imperfect & sing & second & male: bijaše | 
-imperfect & sing & second & fem: bijaše | 
-imperfect & sing & second & neu: bijaše | 
-imperfect & sing & third & male: bijaše | 
-imperfect & sing & third & fem: bijaše | 
-imperfect & sing & third & neu: bijaše | 
-imperfect & plur & first: bijasmo | 
-imperfect & plur & second: bijaste | 
-imperfect & plur & third: bijahu | 
+imperfect & sing & first & male: bijah | был
+imperfect & sing & first & fem: bijah | была
+imperfect & sing & first & neu: bijah | было
+imperfect & sing & second & male: bijaše | был
+imperfect & sing & second & fem: bijaše | была
+imperfect & sing & second & neu: bijaše | было
+imperfect & sing & third & male: bijaše | был
+imperfect & sing & third & fem: bijaše | была
+imperfect & sing & third & neu: bijaše | было
+imperfect & plur & first: bijasmo | были
+imperfect & plur & second: bijaste | были
+imperfect & plur & third: bijahu | были
 
-aorist & sing & first & male: bih | 
-aorist & sing & first & fem: bih | 
-aorist & sing & first & neu: bih | 
-aorist & sing & second & male: bi | 
-aorist & sing & second & fem: bi | 
-aorist & sing & second & neu: bi | 
-aorist & sing & third & male: bi | 
-aorist & sing & third & fem: bi | 
-aorist & sing & third & neu: bi | 
-aorist & plur & first: bismo | 
-aorist & plur & second: biste | 
-aorist & plur & third: biše | 
+aorist & sing & first & male: bih | был
+aorist & sing & first & fem: bih | была
+aorist & sing & first & neu: bih | было
+aorist & sing & second & male: bi | был
+aorist & sing & second & fem: bi | была
+aorist & sing & second & neu: bi | было
+aorist & sing & third & male: bi | был
+aorist & sing & third & fem: bi | была
+aorist & sing & third & neu: bi | было
+aorist & plur & first: bismo | были
+aorist & plur & second: biste | были
+aorist & plur & third: biše | были
 
 imperativ & sing & second: budi | 
 imperativ & plur & first: budimo | 
@@ -785,19 +785,19 @@ e & impf & no_se
 
 inf: jesti | есть
 
-present & sing & first: jedem | 
-present & sing & second: jedeš | 
-present & sing & third: jede | 
-present & plur & first: jedemo | 
-present & plur & second: jedete | 
-present & plur & third: jedu | 
+present & sing & first: jedem | ем
+present & sing & second: jedeš | ешь
+present & sing & third: jede | ест
+present & plur & first: jedemo | едим
+present & plur & second: jedete | едите
+present & plur & third: jedu | едят
 
-perfect & sing & male: jeo | 
-perfect & sing & fem: jela | 
-perfect & sing & neu: jelo | 
-perfect & plur & male: jeli | 
-perfect & plur & fem: jele | 
-perfect & plur & neu: jela | 
+perfect & sing & male: jeo | ел
+perfect & sing & fem: jela | ела
+perfect & sing & neu: jelo | ело
+perfect & plur & male: jeli | ели
+perfect & plur & fem: jele | ели
+perfect & plur & neu: jela | ели
 
 futur & sing & first: ješću | буду есть
 futur & sing & second: ješćeš | будешь есть
@@ -806,35 +806,35 @@ futur & plur & first: ješćemo | будем есть
 futur & plur & second: ješćete | будете есть
 futur & plur & third: ješće | будут есть
 
-imperfect & sing & first & male: jedijah | 
-imperfect & sing & first & fem: jedijah | 
-imperfect & sing & first & neu: jedijah | 
-imperfect & sing & second & male: jedijaše | 
-imperfect & sing & second & fem: jedijaše | 
-imperfect & sing & second & neu: jedijaše | 
-imperfect & sing & third & male: jedijaše | 
-imperfect & sing & third & fem: jedijaše | 
-imperfect & sing & third & neu: jedijaše | 
-imperfect & plur & first: jedijasmo | 
-imperfect & plur & second: jedijaste | 
-imperfect & plur & third: jedijahu | 
+imperfect & sing & first & male: jedijah | ел
+imperfect & sing & first & fem: jedijah | ела
+imperfect & sing & first & neu: jedijah | ело
+imperfect & sing & second & male: jedijaše | ел
+imperfect & sing & second & fem: jedijaše | ела
+imperfect & sing & second & neu: jedijaše | ело
+imperfect & sing & third & male: jedijaše | ел
+imperfect & sing & third & fem: jedijaše | ела
+imperfect & sing & third & neu: jedijaše | ело
+imperfect & plur & first: jedijasmo | ели
+imperfect & plur & second: jedijaste | ели
+imperfect & plur & third: jedijahu | ели
 
-aorist & sing & first & male: jedoh | 
-aorist & sing & first & fem: jedoh | 
-aorist & sing & first & neu: jedoh | 
-aorist & sing & second & male: jede | 
-aorist & sing & second & fem: jede | 
-aorist & sing & second & neu: jede | 
-aorist & sing & third & male: jede | 
-aorist & sing & third & fem: jede | 
-aorist & sing & third & neu: jede | 
-aorist & plur & first: jedosmo | 
-aorist & plur & second: jedoste | 
-aorist & plur & third: jedoše | 
+aorist & sing & first & male: jedoh | ел
+aorist & sing & first & fem: jedoh | ела
+aorist & sing & first & neu: jedoh | ело
+aorist & sing & second & male: jede | ел
+aorist & sing & second & fem: jede | ела
+aorist & sing & second & neu: jede | ело
+aorist & sing & third & male: jede | ел
+aorist & sing & third & fem: jede | ела
+aorist & sing & third & neu: jede | ело
+aorist & plur & first: jedosmo | ели
+aorist & plur & second: jedoste | ели
+aorist & plur & third: jedoše | ели
 
-imperativ & sing & second: jedi | 
+imperativ & sing & second: jedi | ешь
 imperativ & plur & first: jedimo | 
-imperativ & plur & second: jedite | 
+imperativ & plur & second: jedite | ешьте
 
 passive & sing & male: jeden | 
 passive & sing & fem: jedena | 
@@ -3255,56 +3255,56 @@ a & impf & no_se
 
 inf: trenirati | заниматься
 
-present & sing & first: treniram | 
-present & sing & second: treniraš | 
-present & sing & third: trenira | 
-present & plur & first: treniramo | 
-present & plur & second: trenirate | 
-present & plur & third: treniraju | 
+present & sing & first: treniram | занимаюсь
+present & sing & second: treniraš | занимаешься
+present & sing & third: trenira | занимается
+present & plur & first: treniramo | занимаемся
+present & plur & second: trenirate | занимаетесь
+present & plur & third: treniraju | занимаются
 
-perfect & sing & male: trenirao | 
-perfect & sing & fem: trenirala | 
-perfect & sing & neu: treniralo | 
-perfect & plur & male: trenirali | 
-perfect & plur & fem: trenirale | 
-perfect & plur & neu: trenirala | 
+perfect & sing & male: trenirao | занимался
+perfect & sing & fem: trenirala | занималась
+perfect & sing & neu: treniralo | занималось
+perfect & plur & male: trenirali | занимались
+perfect & plur & fem: trenirale | занимались
+perfect & plur & neu: trenirala | занимались
 
-futur & sing & first: treniraću | 
-futur & sing & second: treniraćeš | 
-futur & sing & third: treniraće | 
-futur & plur & first: treniraćemo | 
-futur & plur & second: treniraćete | 
-futur & plur & third: treniraće | 
+futur & sing & first: treniraću | буду заниматься
+futur & sing & second: treniraćeš | будешь заниматься
+futur & sing & third: treniraće | будет заниматься
+futur & plur & first: treniraćemo | будем заниматься
+futur & plur & second: treniraćete | будете заниматься
+futur & plur & third: treniraće | будут заниматься
 
-imperfect & sing & first & male: trenirah | 
-imperfect & sing & first & fem: trenirah | 
-imperfect & sing & first & neu: trenirah | 
-imperfect & sing & second & male: treniraše | 
-imperfect & sing & second & fem: treniraše | 
-imperfect & sing & second & neu: treniraše | 
-imperfect & sing & third & male: treniraše | 
-imperfect & sing & third & fem: treniraše | 
-imperfect & sing & third & neu: treniraše | 
-imperfect & plur & first: trenirasmo | 
-imperfect & plur & second: treniraste | 
-imperfect & plur & third: trenirahu | 
+imperfect & sing & first & male: trenirah | занимался
+imperfect & sing & first & fem: trenirah | занималась
+imperfect & sing & first & neu: trenirah | занималось
+imperfect & sing & second & male: treniraše | занимался
+imperfect & sing & second & fem: treniraše | занималась
+imperfect & sing & second & neu: treniraše | занималось
+imperfect & sing & third & male: treniraše | занимался
+imperfect & sing & third & fem: treniraše | занималась
+imperfect & sing & third & neu: treniraše | занималось
+imperfect & plur & first: trenirasmo | занимались
+imperfect & plur & second: treniraste | занимались
+imperfect & plur & third: trenirahu | занимались
 
-aorist & sing & first & male:  | 
-aorist & sing & first & fem:  | 
-aorist & sing & first & neu:  | 
-aorist & sing & second & male:  | 
-aorist & sing & second & fem:  | 
-aorist & sing & second & neu:  | 
-aorist & sing & third & male:  | 
-aorist & sing & third & fem:  | 
-aorist & sing & third & neu:  | 
-aorist & plur & first:  | 
-aorist & plur & second:  | 
-aorist & plur & third:  | 
+aorist & sing & first & male:  | занимался
+aorist & sing & first & fem:  | занималась
+aorist & sing & first & neu:  | занималось
+aorist & sing & second & male:  | занимался
+aorist & sing & second & fem:  | занималась
+aorist & sing & second & neu:  | занималось
+aorist & sing & third & male:  | занимался
+aorist & sing & third & fem:  | занималась
+aorist & sing & third & neu:  | занималось
+aorist & plur & first:  | занимались
+aorist & plur & second:  | занимались
+aorist & plur & third:  | занимались
 
-imperativ & sing & second: treniraj | 
+imperativ & sing & second: treniraj | занимайся
 imperativ & plur & first: trenirajmo | 
-imperativ & plur & second: trenirajte | 
+imperativ & plur & second: trenirajte | занимайтесь
 
 passive & sing & male: treniran | 
 passive & sing & fem: trenirana | 
@@ -3383,58 +3383,58 @@ passive & plur & neu:  |
 tuširati
 a & impf & opt_se
 
-inf: tuširati | принимать
+inf: tuširati | принимать душ
 
-present & sing & first: tuširam | 
-present & sing & second: tuširaš | 
-present & sing & third: tušira | 
-present & plur & first: tuširamo | 
-present & plur & second: tuširate | 
-present & plur & third: tuširaju | 
+present & sing & first: tuširam | принимаю душ
+present & sing & second: tuširaš | принимаешь душ
+present & sing & third: tušira | принимает душ
+present & plur & first: tuširamo | принимаем душ
+present & plur & second: tuširate | принимаете душ
+present & plur & third: tuširaju | принимают душ
 
-perfect & sing & male: tuširao | 
-perfect & sing & fem: tuširala | 
-perfect & sing & neu: tuširalo | 
-perfect & plur & male: tuširali | 
-perfect & plur & fem: tuširale | 
-perfect & plur & neu: tuširala | 
+perfect & sing & male: tuširao | принимал душ
+perfect & sing & fem: tuširala | принимала душ
+perfect & sing & neu: tuširalo | принимало душ
+perfect & plur & male: tuširali | принимали душ
+perfect & plur & fem: tuširale | принимали душ
+perfect & plur & neu: tuširala | принимали душ
 
-futur & sing & first: tuširaću | 
-futur & sing & second: tuširaćeš | 
-futur & sing & third: tuširaće | 
-futur & plur & first: tuširaćemo | 
-futur & plur & second: tuširaćete | 
-futur & plur & third: tuširaće | 
+futur & sing & first: tuširaću | буду принимать душ
+futur & sing & second: tuširaćeš | будешь принимать душ
+futur & sing & third: tuširaće | будет принимать душ
+futur & plur & first: tuširaćemo | будем принимать душ
+futur & plur & second: tuširaćete | будете принимать душ
+futur & plur & third: tuširaće | будут принимать душ
 
-imperfect & sing & first & male: tuširah | 
-imperfect & sing & first & fem: tuširah | 
-imperfect & sing & first & neu: tuširah | 
-imperfect & sing & second & male: tuširaše | 
-imperfect & sing & second & fem: tuširaše | 
-imperfect & sing & second & neu: tuširaše | 
-imperfect & sing & third & male: tuširaše | 
-imperfect & sing & third & fem: tuširaše | 
-imperfect & sing & third & neu: tuširaše | 
-imperfect & plur & first: tuširasmo | 
-imperfect & plur & second: tuširaste | 
-imperfect & plur & third: tuširahu | 
+imperfect & sing & first & male: tuširah | принимал душ
+imperfect & sing & first & fem: tuširah | принимала душ
+imperfect & sing & first & neu: tuširah | принимало душ
+imperfect & sing & second & male: tuširaše | принимал душ
+imperfect & sing & second & fem: tuširaše | принимала душ
+imperfect & sing & second & neu: tuširaše | принимало душ
+imperfect & sing & third & male: tuširaše | принимал душ
+imperfect & sing & third & fem: tuširaše | принимала душ
+imperfect & sing & third & neu: tuširaše | принимало душ
+imperfect & plur & first: tuširasmo | принимали душ
+imperfect & plur & second: tuširaste | принимали душ
+imperfect & plur & third: tuširahu | принимали душ
 
-aorist & sing & first & male:  | 
-aorist & sing & first & fem:  | 
-aorist & sing & first & neu:  | 
-aorist & sing & second & male:  | 
-aorist & sing & second & fem:  | 
-aorist & sing & second & neu:  | 
-aorist & sing & third & male:  | 
-aorist & sing & third & fem:  | 
-aorist & sing & third & neu:  | 
-aorist & plur & first:  | 
-aorist & plur & second:  | 
-aorist & plur & third:  | 
+aorist & sing & first & male:  | принимал душ
+aorist & sing & first & fem:  | принимала душ
+aorist & sing & first & neu:  | принимало душ
+aorist & sing & second & male:  | принимал душ
+aorist & sing & second & fem:  | принимала душ
+aorist & sing & second & neu:  | принимало душ
+aorist & sing & third & male:  | принимал душ
+aorist & sing & third & fem:  | принимала душ
+aorist & sing & third & neu:  | принимало душ
+aorist & plur & first:  | принимали душ
+aorist & plur & second:  | принимали душ
+aorist & plur & third:  | принимали душ
 
-imperativ & sing & second: tuširaj | 
+imperativ & sing & second: tuširaj | принимай душ
 imperativ & plur & first: tuširajmo | 
-imperativ & plur & second: tuširajte | 
+imperativ & plur & second: tuširajte | принимайте душ
 
 passive & sing & male: tuširan | 
 passive & sing & fem: tuširana | 
@@ -3775,52 +3775,52 @@ i & pf & no_se
 
 inf: zaboraviti | забыть
 
-present & sing & first: zaboravim | 
-present & sing & second: zaboraviš | 
-present & sing & third: zaboravi | 
-present & plur & first: zaboravimo | 
-present & plur & second: zaboravite | 
-present & plur & third: zaborave | 
+present & sing & first: zaboravim | забываю
+present & sing & second: zaboraviš | забываешь
+present & sing & third: zaboravi | забывает
+present & plur & first: zaboravimo | забываем
+present & plur & second: zaboravite | забываете
+present & plur & third: zaborave | забывают
 
-perfect & sing & male: zaboravio | 
-perfect & sing & fem: zaboravila | 
-perfect & sing & neu: zaboravilo | 
-perfect & plur & male: zaboravili | 
-perfect & plur & fem: zaboravile | 
-perfect & plur & neu: zaboravila | 
+perfect & sing & male: zaboravio | забыл
+perfect & sing & fem: zaboravila | забыла
+perfect & sing & neu: zaboravilo | забыло
+perfect & plur & male: zaboravili | забыли
+perfect & plur & fem: zaboravile | забыли
+perfect & plur & neu: zaboravila | забыли
 
-futur & sing & first: zaboraviću | 
-futur & sing & second: zaboravićeš | 
-futur & sing & third: zaboraviće | 
-futur & plur & first: zaboravićemo | 
-futur & plur & second: zaboravićete | 
-futur & plur & third: zaboraviće | 
+futur & sing & first: zaboraviću | забуду
+futur & sing & second: zaboravićeš | забудешь
+futur & sing & third: zaboraviće | забудет
+futur & plur & first: zaboravićemo | забудем
+futur & plur & second: zaboravićete | забудете
+futur & plur & third: zaboraviće | забудут
 
-imperfect & sing & first & male:  | 
-imperfect & sing & first & fem:  | 
-imperfect & sing & first & neu:  | 
-imperfect & sing & second & male:  | 
-imperfect & sing & second & fem:  | 
-imperfect & sing & second & neu:  | 
-imperfect & sing & third & male:  | 
-imperfect & sing & third & fem:  | 
-imperfect & sing & third & neu:  | 
-imperfect & plur & first:  | 
-imperfect & plur & second:  | 
-imperfect & plur & third:  | 
+imperfect & sing & first & male:  | забыл
+imperfect & sing & first & fem:  | забыла
+imperfect & sing & first & neu:  | забыло
+imperfect & sing & second & male:  | забыл
+imperfect & sing & second & fem:  | забыла
+imperfect & sing & second & neu:  | забыло
+imperfect & sing & third & male:  | забыл
+imperfect & sing & third & fem:  | забыла
+imperfect & sing & third & neu:  | забыло
+imperfect & plur & first:  | забыли
+imperfect & plur & second:  | забыли
+imperfect & plur & third:  | забыли
 
-aorist & sing & first & male: zaboravih | 
-aorist & sing & first & fem: zaboravih | 
-aorist & sing & first & neu: zaboravih | 
-aorist & sing & second & male: zaboravi | 
-aorist & sing & second & fem: zaboravi | 
-aorist & sing & second & neu: zaboravi | 
-aorist & sing & third & male: zaboravi | 
-aorist & sing & third & fem: zaboravi | 
-aorist & sing & third & neu: zaboravi | 
-aorist & plur & first: zaboravismo | 
-aorist & plur & second: zaboraviste | 
-aorist & plur & third: zaboraviše | 
+aorist & sing & first & male: zaboravih | забыл
+aorist & sing & first & fem: zaboravih | забыла
+aorist & sing & first & neu: zaboravih | забыло
+aorist & sing & second & male: zaboravi | забыл
+aorist & sing & second & fem: zaboravi | забыла
+aorist & sing & second & neu: zaboravi | забыло
+aorist & sing & third & male: zaboravi | забыл
+aorist & sing & third & fem: zaboravi | забыла
+aorist & sing & third & neu: zaboravi | забыло
+aorist & plur & first: zaboravismo | забыли
+aorist & plur & second: zaboraviste | забыли
+aorist & plur & third: zaboraviše | забыли
 
 imperativ & sing & second: zaboravi | 
 imperativ & plur & first: zaboravimo | 
@@ -4096,7 +4096,7 @@ passive & plur & neu: čuvena |
 ---
 
 šetati
-e & impf & opt_se
+e & impf & se
 
 inf: šetati | гулять
 
