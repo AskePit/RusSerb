@@ -1148,3 +1148,47 @@ class Futur2PositiveEx(Excercise):
         answer = f'{firstPart(Language.serb)}, {secondPart(Language.serb)}'
 
         return ExcerciseYield(title, question, answer)
+
+class PersonalPronounsDeclEx(Excercise):
+    personsPool: RandomPool
+    numberPool: RandomPool
+    gendersPool: RandomPool
+    casesPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        # combine verbs and modal_verbs and exclude `treba`
+        l = GetVocabulary('verbs').words + GetVocabulary('modal_verbs').words
+        l = [w for w in l if w.title != 'treba']
+
+        self.personsPool = RandomPool(list(Person))
+        self.numberPool = RandomPool(list(Number))
+        self.gendersPool = RandomPool([g for g in list(Gender) if g != Gender.unisex and g != Gender.neu])
+        self.casesPool = RandomPool([c for c in list(Case) if c != Case.vok])
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский:
+        # question: Меня
+        # answer:   Mene
+
+        lang = LangMode.GetLangBit()
+
+        thirdSing = RandomPercent(50)
+
+        if thirdSing:
+            decl = Declination.Make(Person.third, Number.sing, self.gendersPool.yieldElem(), self.casesPool.yieldElem())
+        else:
+            decl = Declination.Make(self.personsPool.yieldElem(), RandomEnum(Number), self.gendersPool.yieldElem(), self.casesPool.yieldElem())
+    
+        voc = GetVocabulary('personal_pronouns')
+        pronoun = voc.getWordForm(decl)
+
+        title = ['Переведите на сербский', 'Переведите на русский'][lang]
+        question = f'{pronoun.rus} ({decl.case}.)'
+        answer = f'{pronoun.serb}'
+
+        if lang:
+            question, answer = answer, question
+
+        return ExcerciseYield(title, question, answer)

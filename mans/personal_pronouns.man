@@ -1,0 +1,22 @@
+           PERSONAL PRONOUNS
+
+  =======================================
+           | Ja   | Ti    | On(o) | Ona  
+  =======================================
+   Nom     | ja   | ti    | on(o) | ona  
+   Gen/Aku | mene | tebe  | njega | nje  
+   Dat/Lok | meni | tebi  | njemu | njoj 
+   Inst    | mnom | tobom | njim  | njom 
+  =======================================
+
+
+  ==================================
+           | Mi   | Vi   | Oni(e/a) 
+  ==================================
+   Nom     | mi   | vi   | oni(e/a) 
+   Gen/Aku | nas  | vas  | njih     
+  ----------------------------------
+   Dat     |
+   Inst    | nama | vama | njima    
+   Lok     |
+  ==================================
