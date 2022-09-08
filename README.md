@@ -11,7 +11,7 @@
     - `<USER>\AppData\Local\Programs\Python\Python310\`
     - `<USER>\AppData\Local\Programs\Python\Python310\Scripts`
 
-## Запуск и спользование
+## Запуск и использование
 - Заходим в папку `serb` в эксплорере, кликаем ПКМ, выбираем `Git Bash Here`
 - В открытой консоли вводим `py serb.py`
 - Вводим в программу одноциферные или однобуквенные команды + Enter:
