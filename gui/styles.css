@@ -1,15 +1,203 @@
-
-html {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
 body {
-    margin: 70px 50px;
-    background-color: #282828;
-    color: #e0e0e0
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0px;
 }
 
-.excercise_item {
-    font-size: 22px;
-    margin: 10px;
+#page-container {
+	display: flex;
+	flex-direction: row;
+	min-height: 100vh;
+}
+
+#left-panel {
+	width: 26%;
+	background-color: #333;
+	display: flex;
+	flex-direction: column;
+	padding: 0px;
+}
+
+#left-panel-title {
+	width: 100%;
+	margin: 0px;
+	color: #7f7f7f;
+	padding: 36px 0px 18px 0px;
+	background-color: #333;
+	border-bottom: 2px solid #1c1c1c;
+	text-align: center;
+	font-size: 36px;
+	font-weight: 300;
+}
+
+#right-panel {
+	width: 74%;
+	background-color: #1c1c1c;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#excercise-title {
+	width: 25vw;
+	margin: 0px 400px;
+	color: #7f7f7f;
+	padding: 36px 0px 18px 0px;
+	background-color: #1c1c1c;
+	border-bottom: 2px solid #333;
+	text-align: center;
+	font-size: 36px;
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+#card {
+	margin: 44px 120px;
+	min-width: 50vw;
+	padding: 95px 60px 64px 60px;
+	background-color: #333;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#card-task {
+	font-size: 28px;
+	color: #7f7f7f;
+}
+
+#card-question {
+	font-size: 36px;
+	font-weight: 300;
+	color: #fff;
+	margin: 54px 0px 32px 0px;
+}
+
+#card-answer-switch {
+	min-height: 130px;
+}
+
+#card-answer {
+	font-size: 36px;
+	font-weight: 300;
+	color: #ae80cb;
+	margin: 0px 0px 0px 0px;
+	padding: 30px 0px 0px 0px;
+	border-top: 2px solid #000;
+}
+
+#card-button {
+	margin: 26px 0px 0px 0px;
+	width: 300px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 28px;
+	font-weight: 500;
+	background-color: #ae7fcd;
+	color: #fff;
+}
+
+#card-button:hover {
+	background-color: #734e9e;
+}
+
+#cards-counter {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+#counter {
+	font-size: 28px;
+	color: #7f7f7f;
+	margin: 0px 20px;
+}
+
+.arrow {
+	margin: 0px;
+	padding: 0px;
+}
+
+#left-arrow {
+	transform: rotate(180deg);
+}
+
+svg {
+	display: block;
+}
+
+#nav-container {
+	margin: 50px 0px 0px 60px;
+}
+
+.is-collapsed > * {
+	display: none;
+}
+
+.collapse-icon {
+	display: flex;
+	align-items: center;
+	width: 16px;
+}
+
+.collapse-icon svg.svg-icon {
+	color: #ababab;
+	stroke-width: 4px;
+	width: 10px;
+	height: 10px;
+}
+
+.is-collapsed .collapse-icon svg.svg-icon {
+	transform: rotate(-90deg);
+}
+
+.nav-folder > .nav-folder-children {
+    padding-left: 10px;
+    margin: 0 0 0 12px;
+    border-left: 1px solid #000;
+}
+
+.nav-file-title,
+.nav-folder-title {
+	padding: 4px 8px;
+	margin-bottom: 2px;
+	display: flex;
+	border-radius: 4px;
+	cursor: default;
+	color: #7f7f7f;
+	font-size: 22px;
+	font-weight: 450;
+	line-height: 1.4;
+}
+
+@media (hover: hover) {
+	body:not(.is-grabbing) .nav-file-title:hover,
+	body:not(.is-grabbing) .nav-folder-title:hover {
+		background-color: rgba(0, 0, 0, 0.075);
+		color: #7f7f7f;
+	}
+}
+
+.nav-file-title-content,
+.nav-folder-title-content {
+	overflow-wrap: anywhere;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.active > .nav-folder-title {
+	color: #cdcdcd;
+}
+
+.active > .nav-file-title {
+	color: #fff;
+}
+
+svg {
+	color: #7f7f7f;
+}
+
+svg:hover {
+	color: #fff;
 }

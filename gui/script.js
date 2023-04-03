@@ -1,7 +1,4 @@
 window.addEventListener('pywebviewready', function() {
-    var container = document.getElementById('catalogue')
-    container.innerHTML = '<i>pywebview</i> is ready'
-
     showCurrentDirContent()
 })
 
@@ -21,13 +18,17 @@ document.addEventListener('click', (e) =>
   }
 );
 
+var currentDir = {}
+
 function showCurrentDirContent() {
     pywebview.api.getCurrentDirContent().then(onCurrentDirContentReady)
 }
 
 function onCurrentDirContentReady(content) {
-    //console.log(content)
+    console.log("heyyyyyyy")
+    console.log(JSON.parse(content))
 
+    /*
     var catalogue = document.getElementById('catalogue')
 
     html = ''
@@ -43,4 +44,5 @@ function onCurrentDirContentReady(content) {
     }
 
     catalogue.innerHTML = html
+    */
 }

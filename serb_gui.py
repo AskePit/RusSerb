@@ -3,6 +3,7 @@ from code.excercise_types import *
 from code.cutom_excercises import *
 
 import webview
+import json
 
 class Api:
     def __init__(self, excercises) -> None:
@@ -13,6 +14,7 @@ class Api:
         self.window = window
 
     def getCurrentDirContent(self):
+        return json.dumps(self.currentDir.toJSON())
         files = []
 
         for d in self.currentDir.children:
@@ -52,7 +54,7 @@ def main():
     excercises = LoadExcercises()
 
     api = Api(excercises)
-    window = webview.create_window('Serb', 'gui/index.html', js_api=api)
+    window = webview.create_window('Serb', 'gui/index.html', js_api=api, width=1310, height=800)
     api.setWindow(window)
     webview.start(debug=True)
 

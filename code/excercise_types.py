@@ -112,6 +112,14 @@ class ExcerciseDesc:
         
         self.cachedName = f'{str(self.parent)}{EXC_SEPARATOR}{self.name}'
         return self.cachedName
+    
+    def toJSON(self):
+        obj = {}
+        obj['name'] = self.name
+        obj['serialNumber'] = self.serialNumber
+        obj['isExcercise'] = True
+
+        return obj
 
 class ExcerciseDescsDir:
     name: str
@@ -184,7 +192,22 @@ class ExcerciseDescsDir:
         
         self.cachedName = res
         return self.cachedName
+    
+    def toJSON(self):
+        obj = {}
+        obj['name'] = self.name
+        obj['serialNumber'] = self.serialNumber
+        obj['isExcercise'] = False
+        obj['children'] = []
+        obj['excercises'] = []
 
+        for ch in self.children:
+            obj['children'].append(ch.toJSON())
+        
+        for exc in self.excercises:
+            obj['excercises'].append(exc.toJSON())
+
+        return obj
 
 class RandomPool:
     origList: list
