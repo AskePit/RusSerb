@@ -184,6 +184,7 @@ svg {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+	text-transform: lowercase;
 }
 
 .active > .nav-folder-title {

@@ -7,46 +7,27 @@ import json
 
 class Api:
     def __init__(self, excercises) -> None:
-        self.currentDir = excercises
+        self.excercises = excercises
         self.numToEx = {}
     
     def setWindow(self, window):
         self.window = window
 
-    def getCurrentDirContent(self):
-        return json.dumps(self.currentDir.toJSON())
-        files = []
-
-        for d in self.currentDir.children:
-            files.append(d)
-
-        for e in self.currentDir.excercises:
-            files.append(e)
-        
-        files.sort(key=lambda x: x.serialNumber)
-
-        i = 0
-        self.numToEx = {}
-
-        response = []
-
-        for f in files:
-            response.append({"isDir": isinstance(f, ExcerciseDescsDir), "name": f.name})
-
-            self.numToEx[i] = f
-            i += 1
-
-        return response
+    def getExcercisesTree(self):
+        return json.dumps(self.excercises.toJSON())
     
     def onExcClicked(self, excIndex):
+        pass
+        '''
         if excIndex in self.numToEx:
             exc = self.numToEx[excIndex]
             if isinstance(exc, ExcerciseDescsDir):
-                self.currentDir = exc
+                self.excercises = exc
                 self.window.evaluate_js("showCurrentDirContent()")
             elif isinstance(exc, ExcerciseDesc):
                 #ExecuteExcercises([exc], screen, input)
                 print(f"execute excercise {exc.name}")
+        '''
 
 def main():
     LoadVocabulary('./vocabulary')
