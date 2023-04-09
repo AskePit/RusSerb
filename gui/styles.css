@@ -171,10 +171,15 @@ svg {
 }
 
 @media (hover: hover) {
-	body:not(.is-grabbing) .nav-file-title:hover,
-	body:not(.is-grabbing) .nav-folder-title:hover {
+	.nav-file-title:hover,
+	.nav-folder-title:hover {
 		background-color: rgba(0, 0, 0, 0.075);
 		color: #7f7f7f;
+	}
+
+	.active > .nav-folder-title:hover {
+		background-color: rgba(0, 0, 0, 0.075);
+		color: #fff;
 	}
 }
 

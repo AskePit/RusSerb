@@ -64,6 +64,7 @@ class ExcerciseType(Enum):
     custom = 1
 
 EXC_SEPARATOR = ' > '
+ID_SEPARATOR = '-'
 
 class ExcerciseDesc:
     name: str
@@ -112,11 +113,19 @@ class ExcerciseDesc:
         
         self.cachedName = f'{str(self.parent)}{EXC_SEPARATOR}{self.name}'
         return self.cachedName
+
+    cachedId: str|None = None
+    def getId(self):
+        if self.cachedId != None:
+            return self.cachedId
+        
+        self.cachedId = f'{self.parent.getId()}{ID_SEPARATOR}{str(self.serialNumber)}'
+        return self.cachedId
     
     def toJSON(self):
         obj = {}
         obj['name'] = self.name
-        obj['serialNumber'] = self.serialNumber
+        obj['id'] = self.getId()
         obj['isExcercise'] = True
 
         return obj
@@ -165,38 +174,29 @@ class ExcerciseDescsDir:
         if self.cachedName != None:
             return self.cachedName
         
-        chain = []
-
-        curr = self
-        while curr != None:
-            chain.append(curr)
-            curr = curr.parent
-
-        if len(chain) == 0 or (len(chain) == 1 and (chain[0] == None or chain[0].name == '')):
-            self.cachedName = EXC_SEPARATOR
-            return self.cachedName
+        if self.parent == None:
+            self.cachedId = EXC_SEPARATOR
+            return self.cachedId
         
-        chain.reverse()
-
-        res = ''
-
-        n = len(chain)
-        for i in range(n):
-            parent = chain[i]
-
-            if parent.name == '':
-                continue
-
-            res += f'{EXC_SEPARATOR}'
-            res += parent.name
-        
-        self.cachedName = res
-        return self.cachedName
+        self.cachedId = f'{str(self.parent) if self.parent.parent != None else ""}{EXC_SEPARATOR}{self.name}'
+        return self.cachedId
     
+    cachedId: str|None = None
+    def getId(self):
+        if self.cachedId != None:
+            return self.cachedId
+        
+        if self.parent == None:
+            self.cachedId = 'id'
+            return self.cachedId
+        
+        self.cachedId = f'{self.parent.getId()}{ID_SEPARATOR}{str(self.serialNumber)}'
+        return self.cachedId
+
     def toJSON(self):
         obj = {}
         obj['name'] = self.name
-        obj['serialNumber'] = self.serialNumber
+        obj['id'] = self.getId()
         obj['isExcercise'] = False
         obj['children'] = []
         obj['excercises'] = []

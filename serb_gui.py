@@ -16,7 +16,8 @@ class Api:
     def getExcercisesTree(self):
         return json.dumps(self.excercises.toJSON())
     
-    def onExcClicked(self, excIndex):
+    def onExcClicked(self, excId):
+        print(excId)
         pass
         '''
         if excIndex in self.numToEx:
