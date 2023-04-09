@@ -26,11 +26,16 @@ function onExcercisesTreeReady(treeString) {
 
     for (let file of files) {
         file.addEventListener("click", e => {
+            e.stopPropagation()
+            
+            if (e.currentTarget.classList.contains('active')) {
+                return
+            }
+
             for (let file of files) {
                 file.classList.remove('active')
             }
-            e.currentTarget.classList.toggle('active')
-            e.stopPropagation()
+            e.currentTarget.classList.add('active')
 
             pywebview.api.onExcClicked(e.currentTarget.id)
         });
@@ -90,4 +95,11 @@ function getExcerciseHtml(exc) {
             </div>
         </div>
     `
+}
+
+function updateCard(task, question, answer) {
+    document.getElementById('card').style.display = 'flex'
+    document.getElementById('card-task').innerText = task
+    document.getElementById('card-question').innerText = question
+    document.getElementById('card-answer').innerText = answer
 }
