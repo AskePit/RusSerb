@@ -2,6 +2,13 @@ window.addEventListener('pywebviewready', function() {
     loadExcercisesTree()
 })
 
+window.onkeydown = (event) => {
+    if(event.code === "Space" || event.code === "Enter" || event.code === "ArrowRight") {
+        event.stopPropagation()
+        pywebview.api.onNextClicked()
+    }
+};
+
 function loadExcercisesTree() {
     pywebview.api.getExcercisesTree().then(onExcercisesTreeReady)
 }

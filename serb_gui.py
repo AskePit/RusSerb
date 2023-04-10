@@ -14,6 +14,9 @@ class AppSession:
     def __init__(self, excercisesTree) -> None:
         self.excercisesTree = excercisesTree
 
+    def isExcersiseActive(self) -> bool:
+        return self.currExcercises != None
+
     def startNewExcercise(self, excerciseId: str):
         print(excerciseId)
         path = excerciseId.split('-')
@@ -81,8 +84,12 @@ class Api:
     
     def onExcClicked(self, excId):
         self.session.startNewExcercise(excId)
-        exYield = self.session.yieldTask()
-        self.window.evaluate_js(f"updateCard('{exYield.title}', '{exYield.question}', '{exYield.answer}')")
+        self.onNextClicked()
+    
+    def onNextClicked(self):
+        if self.session.isExcersiseActive():
+            exYield = self.session.yieldTask()
+            self.window.evaluate_js(f"updateCard('{exYield.title}', '{exYield.question}', '{exYield.answer}')")
 
 def main():
     LoadVocabulary('./vocabulary')
