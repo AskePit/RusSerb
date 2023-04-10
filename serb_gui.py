@@ -18,7 +18,6 @@ class AppSession:
         return self.currExcercises != None
 
     def startNewExcercise(self, excerciseId: str):
-        print(excerciseId)
         path = excerciseId.split('-')
         path = path[1:]
         
@@ -89,7 +88,14 @@ class Api:
     def onNextClicked(self):
         if self.session.isExcersiseActive():
             exYield = self.session.yieldTask()
-            self.window.evaluate_js(f"updateCard('{exYield.title}', '{exYield.question}', '{exYield.answer}')")
+
+            answer = ''
+            if type(exYield.answer) is list:
+                answer = '\\n'.join(exYield.answer)
+            else:
+                answer = exYield.answer
+            
+            self.window.evaluate_js(f"updateCard('{self.session.currExcercise.name}', '{exYield.title}', '{exYield.question}', '{answer}')")
 
 def main():
     LoadVocabulary('./vocabulary')
@@ -100,7 +106,7 @@ def main():
     api = Api(session)
     window = webview.create_window('Serb', 'gui/index.html', js_api=api, width=1310, height=800)
     api.setWindow(window)
-    webview.start(debug=True)
+    webview.start(debug=False)
 
 if __name__ == '__main__':
     main()

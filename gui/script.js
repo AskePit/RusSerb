@@ -2,10 +2,22 @@ window.addEventListener('pywebviewready', function() {
     loadExcercisesTree()
 })
 
+const NO_TASK = 0
+const TASK_GIVEN = 1
+const TASK_ANSWERED = 2
+
+cardState = NO_TASK
+
 window.onkeydown = (event) => {
     if(event.code === "Space" || event.code === "Enter" || event.code === "ArrowRight") {
         event.stopPropagation()
-        pywebview.api.onNextClicked()
+        event.preventDefault()
+
+        if(cardState === TASK_GIVEN) {
+            showAnswer()
+        } else if (cardState === TASK_ANSWERED) {
+            pywebview.api.onNextClicked()
+        }
     }
 };
 
@@ -15,8 +27,6 @@ function loadExcercisesTree() {
 
 function onExcercisesTreeReady(treeString) {
     let tree = JSON.parse(treeString)
-
-    console.log(tree)
 
     var navContainer = document.getElementById('nav-container')
     navContainer.innerHTML = getRootFolderHtml(tree)
@@ -104,9 +114,23 @@ function getExcerciseHtml(exc) {
     `
 }
 
-function updateCard(task, question, answer) {
+function updateCard(title, task, question, answer) {
+    cardState = TASK_GIVEN
     document.getElementById('card').style.display = 'flex'
+    document.getElementById('excercise-title').innerText = title
     document.getElementById('card-task').innerText = task
     document.getElementById('card-question').innerText = question
     document.getElementById('card-answer').innerText = answer
+    showAnswerButton()
+}
+
+function showAnswerButton() {
+    document.getElementById('card-button').removeAttribute('hidden')
+    document.getElementById('card-answer').setAttribute('hidden', '')
+}
+
+function showAnswer() {
+    document.getElementById('card-answer').removeAttribute('hidden')
+    document.getElementById('card-button').setAttribute('hidden', '')
+    cardState = TASK_ANSWERED
 }
