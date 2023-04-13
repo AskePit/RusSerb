@@ -54,9 +54,18 @@ function onExcercisesTreeReady(treeString) {
             }
             e.currentTarget.classList.add('active')
 
-            pywebview.api.onExcClicked(e.currentTarget.id)
+            hidePhrasesCounter()
+            pywebview.api.onExcClicked(e.currentTarget.id).then(onExcerciseReady)
         });
     }
+}
+
+function onExcerciseReady(phrasesCount) {
+    if (phrasesCount < 0) {
+        return
+    }
+
+    showPhrasesCounter(phrasesCount)
 }
 
 function getRootFolderHtml(folder) {
@@ -122,6 +131,8 @@ function updateCard(title, task, question, answer) {
     document.getElementById('card-question').innerText = question
     document.getElementById('card-answer').innerText = answer
     showAnswerButton()
+
+    incPhrasesCounter()
 }
 
 function showAnswerButton() {
@@ -133,4 +144,30 @@ function showAnswer() {
     document.getElementById('card-answer').removeAttribute('hidden')
     document.getElementById('card-button').setAttribute('hidden', '')
     cardState = TASK_ANSWERED
+}
+
+var currPhraseIndex = 1
+var phrasesCount = 0
+
+function hidePhrasesCounter() {
+    phrasesCount = -1
+    currPhraseIndex = 0
+    document.getElementById('cards-counter').style.display = 'none'
+}
+
+function showPhrasesCounter(count) {
+    phrasesCount = count
+    document.getElementById('cards-counter').style.display = 'flex'
+    document.getElementById('counter').innerText = `1/${phrasesCount}`
+}
+
+function incPhrasesCounter() {
+    if (phrasesCount < 0) {
+        return
+    }
+    currPhraseIndex += 1
+    if (currPhraseIndex > phrasesCount) {
+        currPhraseIndex = 1
+    }
+    document.getElementById('counter').innerText = `${currPhraseIndex}/${phrasesCount}`
 }

@@ -9,7 +9,9 @@ class AppSession:
     excercisesTree: ExcerciseDescsDir
     currExcercises: list[ExcerciseDesc] = None
     currExcercise: ExcerciseDesc = None
-    excercisesCache: dict[ExcerciseDesc, list[Excercise]] = {}
+    excerciseObjects: dict[ExcerciseDesc, list[Excercise]] = {}
+
+    phrasesCount: int = -1
 
     def __init__(self, excercisesTree) -> None:
         self.excercisesTree = excercisesTree
@@ -43,23 +45,33 @@ class AppSession:
             
         self.currExcercises = [exc]
 
-    def yieldTask(self) -> ExcerciseYield:
-        self.currExcercise = random.choice(self.currExcercises)
+        allPhrases = True
+        phrasesCount = 0
 
-        if self.currExcercise in self.excercisesCache:
-            excObjects = self.excercisesCache[self.currExcercise]
-        else:
+        for excDesc in self.currExcercises:
             excObjects = []
 
-            if self.currExcercise.type == ExcerciseType.phrases:
-                excObjects.append(PhrasesEx(self.currExcercise.phrasesVoc))
-            elif self.currExcercise.type == ExcerciseType.custom:
-                for f in self.currExcercise.customFunctions:
+            if excDesc.type == ExcerciseType.phrases:
+                phrasesEx = PhrasesEx(excDesc.phrasesVoc)
+                phrasesCount += len(phrasesEx.phrases)
+                excObjects.append(phrasesEx)
+                
+            elif excDesc.type == ExcerciseType.custom:
+                for f in excDesc.customFunctions:
                     excercise = eval(f'{f}()')
                     excObjects.append(excercise)
+                allPhrases = False
             
-            self.excercisesCache[self.currExcercise] = excObjects
+            self.excerciseObjects[excDesc] = excObjects
         
+        if allPhrases:
+            self.phrasesCount = phrasesCount
+        else:
+            self.phrasesCount = -1
+
+    def yieldTask(self) -> ExcerciseYield:
+        self.currExcercise = random.choice(self.currExcercises)
+        excObjects = self.excerciseObjects[self.currExcercise]
         excercise = random.choice(excObjects)
         return excercise()
     
@@ -81,9 +93,10 @@ class Api:
     def getExcercisesTree(self) -> str:
         return json.dumps(self.session.excercisesTree.toJSON())
     
-    def onExcClicked(self, excId):
+    def onExcClicked(self, excId) -> int:
         self.session.startNewExcercise(excId)
         self.onNextClicked()
+        return self.session.phrasesCount
     
     def onNextClicked(self):
         if self.session.isExcersiseActive():

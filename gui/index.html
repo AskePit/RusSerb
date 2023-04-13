@@ -53,13 +53,15 @@
             </div>
         </div>
         <div id="cards-counter" style="display: none;">
+            <!--
             <div id="left-arrow" class="arrow">
                 <svg width="40px" height="21px" stroke="currentColor" fill="none" stroke-width="2">
                     <path d="M0 10 H39 L30 1 M39 10 L30 19Z"/>
                 </svg>
             </div>
+            -->
             <div id="counter">2/20</div>
-            <div id="right-arrow" class="arrow">
+            <div id="right-arrow" class="arrow" onclick="pywebview.api.onNextClicked()">
                 <svg width="40px" height="21px" stroke="currentColor" fill="none" stroke-width="2">
                     <path d="M0 10 H39 L30 1 M39 10 L30 19Z"/>
                 </svg>
