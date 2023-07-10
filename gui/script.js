@@ -151,7 +151,7 @@ var phrasesCount = 0
 
 function hidePhrasesCounter() {
     phrasesCount = -1
-    currPhraseIndex = 0
+    currPhraseIndex = 1
     document.getElementById('cards-counter').style.display = 'none'
 }
 
