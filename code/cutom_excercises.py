@@ -72,42 +72,6 @@ class ToBeEx2(Excercise):
 
         return ExcerciseYield(title, question, answer)
 
-class ToBeEx3(Excercise):
-    randomOccupationsPool: RandomPool
-
-    def __init__(self):
-        super().__init__()
-        self.randomOccupationsPool = RandomPool(GetVocabulary('occupations').words)
-
-    def __call__(self) -> ExcerciseYield:
-        # title:    Ответьте на вопрос в короткой форме:
-        # question: Ты студент (student)?
-        # answer:   Jesam
-
-        # title:    Ответьте на вопрос в полной форме:
-        # question: Вы врачи (lekari)?
-        # answer:   Mi smo lekari
-
-        qDecl = Declination.Parse('male|fem & first|second|third & sing|plur & nom')
-        aDecl = qDecl.clone().mirrorPerson()
-
-        occupation = self.randomOccupationsPool.yieldElem()
-        qPronoun = GetVocabulary('personal_pronouns').getWordForm(qDecl)
-        aPronoun = GetVocabulary('personal_pronouns').getWordForm(aDecl)
-        
-        occ = occupation.get(aDecl)
-
-        title = 'Ответьте на вопрос'
-        question = f'{qPronoun.rus} {occ.rus} ({occ.serb})?'
-
-        answer = []
-        aTb = GetVocabulary('positive_tobe').get(aDecl)
-        answer.append(aTb.serb + '')
-        aTb = GetVocabulary('tobe').get(aDecl)
-        answer.append(f'{aPronoun.serb} {aTb.serb} {occ.serb}')
-
-        return ExcerciseYield(title, question, answer)
-
 class NumbersGeneratorEx(Excercise):
     numDict: dict[int, str]
     usedPool: list[int]
@@ -1065,6 +1029,61 @@ class GenitivEx(CaseEx):
             subjectVocabularies= ['occupations', 'nouns', 'personal_pronouns'],
             subjectFilter= None
         )
+
+class Futur2EasyEx(Excercise):
+    randomVerbsPool: RandomPool
+
+    def __init__(self):
+        super().__init__()
+
+        # combine verbs and modal_verbs and exclude `treba`
+        l = GetVocabulary('verbs').words + GetVocabulary('modal_verbs').words
+        l = [w for w in l if w.title != 'treba']
+
+        self.randomVerbsPool = RandomPool(l)
+
+    def __call__(self) -> ExcerciseYield:
+        # title:    Переведите на сербский с местоимением:
+        # question: Я читал.
+        # answer:   Ja sam čitao.
+        #           Čitao sam.
+
+        class Part:
+            def __init__(self, exc: Futur2EasyEx):
+                decl = Declination.Parse(f'perfect & male|fem|neu & first|second|third & sing|plur & nom')
+
+                decl.humanizeNeutral()
+                self.subject = GetVocabulary('personal_pronouns').getWordForm(decl)
+                
+                self.budem = GetVocabulary('budem').get(decl)
+                self.verbWord = exc.randomVerbsPool.yieldElem()
+                self.decl = decl
+                self.particle = ('ako', 'если')
+            
+            def __call__(self, lang: Language) -> str:
+                res = []
+
+                def getVer(elem):
+                    return elem.serb if lang == Language.serb else elem.rus
+
+                res.append(self.particle[0] if lang == Language.serb else self.particle[1])
+                res.append(' ')
+                res.append(getVer(self.subject))
+                res.append(' ')
+                res.append(getVer(self.budem))
+                res.append(' ')
+                res.append(getVer(self.verbWord.get(self.decl if lang == Language.serb else Infinitive)))
+
+                return ''.join(res)
+
+        part = Part(self)
+
+        title = 'Переведите на сербский'
+
+        question = f'{part(Language.rus)}'
+        answer = f'{part(Language.serb)}'
+
+        return ExcerciseYield(title, question, answer)
 
 class Futur2PositiveEx(Excercise):
     randomVerbsPool: RandomPool
