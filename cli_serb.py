@@ -144,7 +144,20 @@ def ExecuteExcercises(excs: list[ExcerciseDesc], screen: Screen, input: Input):
         if TryHelpOrQuit():
             break
 
+def checkForHelp():
+    if len(sys.argv) > 1:
+        first_arg = str(sys.argv[1]).lower()
+        if first_arg == '-h' or first_arg == '--help':
+            print('Usage: py serb.py <MODE>')
+            print('where <MODE> is:')
+            print('    russerb - translate phrases from russian to serbian')
+            print('    serbrus - translate phrases from serbian to russian')
+            print('    random  - give phrases in random language sequence')
+            exit()
+
 def main():
+    checkForHelp()
+
     LoadVocabulary('./vocabulary')
     LoadManuals('./mans')
     excercises = LoadExcercises()
